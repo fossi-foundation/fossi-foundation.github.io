@@ -10,7 +10,6 @@ highlighter: pygments
 #
 title : FOSSi Foundation 
 tagline: 
-author :
 
 # such as sitemap.txt 
 # Most places will/should use BASE_PATH to make the urls
