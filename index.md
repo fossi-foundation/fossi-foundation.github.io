@@ -1,7 +1,6 @@
 ---
 layout: page
-title: Hello World!
-tagline: Supporting tagline
+title: FOSSi: The Free and Open Source Silicion Foundation
 ---
 {% include JB/setup %}
 
