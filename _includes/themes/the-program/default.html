@@ -21,15 +21,22 @@
 				<nav class="nav-global">
 					<ul>
 						<li class="logo"><a href="/">{{ site.title }}</a></li>
+						<li class="page"><a href="/manifesto.html">manifesto</a></li>
+						<li class="page"><a href="/events/fossi-weekend-2015.html">FOSSi weekend 2015</a></li>
 						<li class="archive"><a href="/archive.html">archive</a></li>
 						<li class="page"><a href="/pages.html">pages</a></li>
 						<li class="category"><a href="/categories.html">categories</a></li>
 						<li class="tag"><a href="/tags.html">tags</a></li>
-						<li class="forkme"><div><iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=plusjade&repo=jekyll-bootstrap&type=fork&count=true"
-									allowtransparency="true" frameborder="0" scrolling="0" width="95px" height="20px"></iframe></div></li>
 					</ul>
 				</nav>
 			</div><!-- unit-inner -->
+			<div class="unit-inner unit-head-inner">
+			  <p class="licence">
+			    Theme: <a href="http://layouts-the.me">the_minimum</a> based on <a href="http://jekyllbootstrap.com/">Jekyll-bootstrap</a>.<br>
+			    Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>.
+			  </p>
+			</div>
+
 		</div><!-- unit-head -->
 	</header>
 	<div class="body" role="main">
@@ -43,21 +50,21 @@
 	</div><!-- body -->
 	<footer class="the-footer">
 		<div class="unit-foot">
-			<div class="unit-inner unit-foot-inner">
-				<div class="misc vcard">
-					<h4>about</h4>
-					<ul>
-						<li class="contact"><address><span class="author fn n">{{ site.author.name }}</span> - <span class="fn email">{{ site.author.email }}</span></address></li>
-						<li class="github"><a href="http://github.com/{{ site.author.github }}/" rel="me">github.com/{{ site.author.github }}</a></li>
-						<li class="twitter"><a href="http://twitter.com/{{ site.author.twitter }}/" rel="me">twitter.com/{{ site.author.twitter }}</a></li>
-						<li class="rss"><a href="http://feeds.feedburner.com/{{ site.author.feedname }}">Subscribe to RSS Feed</a></li>
-					</ul>
-				</div><!-- misc -->
-				<p class="licence">
-					Theme: <a href="http://layouts-the.me">the_minimum</a> based on <a href="http://jekyllbootstrap.com/">Jekyll-bootstrap</a>.<br>
-					Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>.
-				</p>
-			</div><!-- unit-foot-inner -->
+		  <div class="unit-inner unit-foot-inner">
+		    <h3>Latest posts</h3>
+		    <ul class="posts">  
+		      {% for post in site.posts limit:5 %}  
+		      <li>  
+			<span><b>{{ post.date | date_to_string }}</b></span> &raquo;  
+			<a href="{{ BASE_PATH }}{{ post.url }}">  
+			  <b>{{post.title}}</b></a><br/>
+			{% if post.author %}<i>({{post.author}})</i> {% endif %}{{ post.content | strip_html | truncatewords: 50 }}..
+			<a href="{{ BASE_PATH }}{{ post.url }}">  
+			  more</a><br/>
+		      </li>
+		      {% endfor %}  
+		    </ul>
+		  </div><!-- unit-foot-inner -->
 		</div><!-- unit-foot -->
 	</footer>
 </div><!-- page -->

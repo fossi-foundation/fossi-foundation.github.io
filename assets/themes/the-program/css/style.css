@@ -236,6 +236,17 @@ legend {
   *margin-left: -7px;
   padding: 0;
 }
+
+.licence {
+    margin-top: 50px;
+    font-size: 70%;
+    line-height: 1;
+}
+
+.posts {
+    font-size: 90%;
+}
+
 /*
  * 1. Correct font-size not inheriting in all browsers
  * 2. Remove margins in FF3/4 S5 Chrome
