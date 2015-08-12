@@ -58,7 +58,7 @@
 			<span><b>{{ post.date | date_to_string }}</b></span> &raquo;  
 			<a href="{{ BASE_PATH }}{{ post.url }}">  
 			  <b>{{post.title}}</b></a><br/>
-			{% if post.author %}<i>({{post.author}})</i> {% endif %}{{ post.content | strip_html | truncatewords: 50 }}..
+			{% if post.author %}<i>({{post.author}})</i> {% endif %}{{ post.content | strip_html | truncatewords: 20 }}..
 			<a href="{{ BASE_PATH }}{{ post.url }}">  
 			  more</a><br/>
 		      </li>
