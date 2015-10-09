@@ -170,11 +170,11 @@ Lists from [HTML5 Boilerplate](http://j.mp/rP0wmY)
 
 No styleguide reference.
 */
-ul,
+/*ul,
 ol {
   margin: 0;
   padding: 0 0 0 40px;
-}
+}*/
 dd {
   margin: 0 0 0 40px;
 }
@@ -531,7 +531,7 @@ List modules
 
 No styleguide reference.
 */
-.list-linear {
+/*.list-linear {
   letter-spacing: -0.31em;
   *letter-spacing: normal;
   word-spacing: -0.43em;
@@ -550,7 +550,7 @@ No styleguide reference.
 }
 .list-linear li:last-child {
   margin-right: 0;
-}
+}*/
 /* LESS VARIABLES
 --------------------------------------------------------------------------------- */
 /* GLOBAL
@@ -683,17 +683,7 @@ pre {
   margin-left: 0;
   margin-right: 0;
 }
-.unit-article ul,
-.unit-article ol,
-.unit-article dl {
-  padding-left: 0;
-}
-.unit-article ul {
-  list-style: square;
-}
-.unit-article ol {
-  list-style: decimal;
-}
+
 .unit-article li h1,
 .unit-article dt h1,
 .unit-article dd h1,
