@@ -16,9 +16,9 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="fossi.svg"
-   inkscape:export-filename="/home/wallento/fossi.png"
-   inkscape:export-xdpi="299"
-   inkscape:export-ydpi="299">
+   inkscape:export-filename="/home/wallento/fossi/fossi-foundation.github.com/assets/fossi.png"
+   inkscape:export-xdpi="600.11035"
+   inkscape:export-ydpi="600.11035">
   <defs
      id="defs4">
     <inkscape:perspective
@@ -36,9 +36,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.6203867"
-     inkscape:cx="19.918111"
-     inkscape:cy="45.702445"
+     inkscape:zoom="9.5495016"
+     inkscape:cx="-1.4067404"
+     inkscape:cy="27.64472"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -62,7 +62,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
