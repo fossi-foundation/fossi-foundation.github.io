@@ -608,7 +608,7 @@ pre {
   color: #2d2d2d;
 }
 .the-header .nav-global {
-  text-transform: uppercase;
+//  text-transform: uppercase;
 }
 .the-header .nav-global .logo {
   text-transform: none;
