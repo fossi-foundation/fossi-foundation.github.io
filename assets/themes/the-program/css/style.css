@@ -11,7 +11,7 @@ figure,
 footer,
 header,
 hgroup,
-nav,
+nav
 section {
   display: block;
 }
@@ -601,14 +601,15 @@ pre {
 /* HEADER
 --------------------------------------------------------------------------------- */
 .the-header .logo {
-  font-family: UbuntuMono-B, consolas, monaco, monospace;
+ // font-family: UbuntuMono-B, consolas, monaco, monospace;
   margin: 0;
 }
 .the-header .logo a:visited {
   color: #2d2d2d;
 }
 .the-header .nav-global {
-//  text-transform: uppercase;
+    //  text-transform: uppercase;
+      font-weight: bold;
 }
 .the-header .nav-global .logo {
   text-transform: none;
