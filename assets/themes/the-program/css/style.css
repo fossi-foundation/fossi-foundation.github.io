@@ -412,7 +412,7 @@ Calculation should be done via  http://j.mp/rNg5uA
 No styleguide reference.
 */
 body {
-  font-family: consolas, monaco, monospace;
+    font-family: sans-serif;
   font-size: 1em;
   line-height: 1.625em;
 }
@@ -429,7 +429,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: UbuntuMono-B, consolas, monaco, monospace;
+    font-family: sans-serif;
 }
 h1,
 .h1 {
