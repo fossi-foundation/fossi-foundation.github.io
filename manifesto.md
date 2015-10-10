@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Manifesto of the Free and Open Source Silicion Foundation"
+title: "Manifesto of the Free and Open Source Silicon Foundation"
 ---
 {% include JB/setup %}
 
