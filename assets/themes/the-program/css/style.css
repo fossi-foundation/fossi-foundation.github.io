@@ -947,6 +947,10 @@ pre {
   img {
     max-width: 100%;
   }
+
+  .logo-img:after {
+      content:url("/assets/fossi_logo_medium.png");
+  }
 }
 /*
 	Tablet
@@ -954,6 +958,9 @@ pre {
 @media only screen and (min-width: 768px) {
   .the-header .unit-head {
     padding: 0;
+  }
+  .logo-img:after {
+      content:url("/assets/fossi_logo_medium.png");
   }
   .the-header .unit-head .nav-global li {
     float: left;
@@ -999,6 +1006,9 @@ pre {
     display: block;
     width: auto;
   }
+  .logo-img:after {
+      content:url("/assets/fossi_logo_medium.png");
+  }
   .the-header .unit-head .nav-global .logo a {
     line-height: 18px;
     margin-bottom: 0;
@@ -1032,6 +1042,12 @@ pre {
   .the-header {
     float: left;
     width: 19%;
+  }
+  .logo-img {
+      padding-bottom: 20px;
+  }
+  .logo-img:after {
+      content:url("/assets/fossi_logo_large.png");
   }
   .the-header .unit-head {
     padding: 26px;
