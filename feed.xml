@@ -4,23 +4,22 @@ layout: null
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.name | xml_escape }} - Articles</title>
-    <description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
+    <title>FOSSi Foundation - News &amp; Posts</title>
+    <description>FOSSi is a non-profit foundation with the mission to
+    promote and assist free and open digital hardware designs and
+    their related ecosystems. FOSSi operates as an open, inclusive,
+    vendor-independent group. Follow our news &amp;
+    posts.</description>
     <link>
     {{ site.url }}</link>
     {% for post in site.posts %}
       {% unless post.link %}
       <item>
         <title>{{ post.title | xml_escape }}</title>
-        {% if post.excerpt %}
-          <description>{{ post.excerpt | xml_escape }}</description>
-        {% else %}
-          <description>{{ post.content | xml_escape }}</description>
-        {% endif %}
+        <description>{{ post.content | xml_escape }}</description>
         <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-        <link>
-        {{ site.url }}{{ post.url }}</link>
-        <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+        <link>{{ site.production_url }}{{ post.url }}</link>
+        <guid isPermaLink="true">{{ site.production_url }}{{ post.url }}</guid>
       </item>
       {% endunless %}
     {% endfor %}
