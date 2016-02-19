@@ -80,7 +80,7 @@ points for a proposal.
 
 *Mentor:* [Sebastian Macke](mailto:sebastian@macke.de)
 
-## QEMU port of OpenRISC
+### QEMU port of OpenRISC
 
 [QEMU](http://wiki.qemu.org/Main_Page) is a generic and open source
 machine emulator and virtualizer and contains a lot of features which
@@ -90,12 +90,25 @@ be to rewrite and improve the current port and upstream the
 patches. Test cases, device support and a working image running Linux
 with proper device support should be provided as well.
 
-*Skill Level:* intermediate
+*Skill Level:* Intermediate
 
 *Language/Tools:* C
 
 *Mentor:* [Sebastian Macke](mailto:sebastian@macke.de)
 
+### OpenRISC: Improved OpenOCD support for transports and SMP
+
+[OpenOCD](http://openocd.org/) supports the OpenRISC processor, but
+the current backend is tailored to the needs of JTAG. Hence, we want
+to improve the backend to allow other physical transports, which is
+generally possible with OpenOCD. If time permits, the student may also
+add multi-thread (SMP) support to the OpenRISC backend.
+
+*Skill Level:* Intermediate
+
+*Language/Tools:* C, Tcl
+
+*Mentor:* [Stefan Wallentowitz](mailto:stefan@wallentowitz.de)
 
 ### OpenRISC Port of the ROMCC (ROM C Compiler)
 
