@@ -19,6 +19,8 @@ dependency handling are improved.
 More details will
 follow. [Questions?](mailto:gsoc@fossi-foundation.org)
 
+*Language/Tools:* Python
+
 ### Constrained randomised testing with coverage tracking in Cocotb
 
 *Goal:* Extend the [Cocotb](http://potential.ventures/cocotb/) co-simulation
@@ -120,6 +122,19 @@ therefore, no initialized RAM. This compiler is used in the
 More details will
 follow. [Questions?](mailto:gsoc@fossi-foundation.org)
 
+### Your LibreCore
+
+Our core ambition is to grow the community projects around open source
+components. LibreCores are IP cores, but they are free and open. If
+you have a great idea for such a LibreCore, we are happy to mentor
+you, but it is important that it is re-usable and contains everything
+needed for simple and flexible integration, like testbenches, the
+required software drivers etc. So, it is important that you discuss a
+proposal intensively.
+
+More details will
+follow. [Questions?](mailto:gsoc@fossi-foundation.org)
+
 ### OpenRISC GCC Port
 
 There is a GCC port for OpenRISC, but it lacks the potential to become
@@ -130,4 +145,3 @@ implementations.
 
 More details will
 follow. [Questions?](mailto:gsoc@fossi-foundation.org)
-
