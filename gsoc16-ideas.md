@@ -56,7 +56,7 @@ software development
 
 *Language/Tools:* Python
 
-*Mentor:* [Chris Higgs](chris.higgs@potentialventures.com)
+*Mentor:* [Chris Higgs](mailto:chris.higgs@potentialventures.com)
 
 ### Visualization and Debugging Interface for jor1k
 
@@ -74,11 +74,28 @@ student would have a lot of freedom for improving jor1k, issues
 (#110)[https://github.com/s-macke/jor1k/issues/110] are good starting
 points for a proposal.
 
-*Skill level:* Intermediate
+*Skill Level:* Intermediate
 
 *Language/Tools:* Javascript and HTML
 
-*Mentor:* [Sebastian Macke](sebastian@macke.de)
+*Mentor:* [Sebastian Macke](mailto:sebastian@macke.de)
+
+## QEMU port of OpenRISC
+
+[QEMU](http://wiki.qemu.org/Main_Page) is a generic and open source
+machine emulator and virtualizer and contains a lot of features which
+would be very helpful for the OpenRISC community. There exists an old
+port but it is outdated and very slow.  The goal of this project would
+be to rewrite and improve the current port and upstream the
+patches. Test cases, device support and a working image running Linux
+with proper device support should be provided as well.
+
+*Skill Level:* intermediate
+
+*Language/Tools:* C
+
+*Mentor:* [Sebastian Macke](mailto:sebastian@macke.de)
+
 
 ### OpenRISC Port of the ROMCC (ROM C Compiler)
 
