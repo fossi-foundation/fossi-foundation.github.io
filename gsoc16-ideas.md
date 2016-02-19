@@ -58,6 +58,28 @@ software development
 
 *Mentor:* [Chris Higgs](chris.higgs@potentialventures.com)
 
+### Visualization and Debugging Interface for jor1k
+
+[jor1k](https://github.com/s-macke/jor1k) is an emulator for the
+OpenRISC and RISC-V platform and is the fastest emulator which runs in
+the web browser and boots Linux. It comes with a working underlying
+framework and a comprehensive library for hardware devices such as a
+framebuffer and network support. It would be nice for teaching and for
+a broader audience to give the user a much more advanced user
+interface with debugging capabilities (disaassembler, breakpoints,
+...) and further visualization features (status screens). Hence the
+student would have a lot of freedom for improving jor1k, issues
+(#24)[https://github.com/s-macke/jor1k/issues/24],
+(#107)[https://github.com/s-macke/jor1k/issues/107] and
+(#110)[https://github.com/s-macke/jor1k/issues/110] are good starting
+points for a proposal.
+
+*Skill level:* Intermediate
+
+*Language/Tools:* Javascript and HTML
+
+*Mentor:* [Sebastian Macke](sebastian@macke.de)
+
 ### OpenRISC Port of the ROMCC (ROM C Compiler)
 
 ROMCC, created by Eric Biederman, generates machine code from C that
