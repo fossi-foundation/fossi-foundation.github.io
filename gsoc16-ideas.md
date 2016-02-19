@@ -145,3 +145,18 @@ implementations.
 
 More details will
 follow. [Questions?](mailto:gsoc@fossi-foundation.org)
+
+### Reference Implementation fo a Leakage Aware Compiler Optimization
+
+More details will
+follow. [Questions?](mailto:gsoc@fossi-foundation.org)
+
+### GNU Superoptimizer 2.0: Reference Implementation for the AAP
+
+More details will
+follow. [Questions?](mailto:gsoc@fossi-foundation.org)
+
+### An Altruistic Processor (AAP): Reference Implementation
+
+More details will
+follow. [Questions?](mailto:gsoc@fossi-foundation.org)
