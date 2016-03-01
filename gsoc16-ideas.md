@@ -28,7 +28,7 @@ follow. [Questions?](mailto:gsoc@fossi-foundation.org)
 
 *Goal:* Extend the [Cocotb](http://potential.ventures/cocotb/) co-simulation
 library to support constrained randomised testing (e.g. via Google
-[https://code.google.com/p/or-tools/](or-tools)) and to track achieved
+[or-tools](https://code.google.com/p/or-tools/)) and to track achieved
 coverage of the tested HDL.
 
 *Details:* Cocotb is a Python framework for testing VHDL and
