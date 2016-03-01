@@ -4,10 +4,13 @@ title: "Google Summer of Code 2016 - Ideas for Projects"
 ---
 {% include JB/setup %}
 
-We are applying as an organization in this years Google Summer of
-Code. Once accepted, students can apply with proposals and we have
-collected some ideas. This list will be extended and more details
-added to the ideas in the next weeks.
+We are accepted as an organization in this years Google Summer of
+Code. Students can apply with proposals in the time frame from March
+14 to March 25. We have collected some ideas in the following, but we
+encourage you to send your own ideas to
+[gsoc@fossi-foundation.org](mailto:gsoc@fossi-foundation.org) or post
+to our
+[mailing list](https://lists.fossi-foundation.org/listinfo/discussion).
 
 ### Dependency Handling in the FuseSoC Package Manager
 
