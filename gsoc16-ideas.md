@@ -71,9 +71,9 @@ a broader audience to give the user a much more advanced user
 interface with debugging capabilities (disaassembler, breakpoints,
 ...) and further visualization features (status screens). Hence the
 student would have a lot of freedom for improving jor1k, issues
-(#24)[https://github.com/s-macke/jor1k/issues/24],
-(#107)[https://github.com/s-macke/jor1k/issues/107] and
-(#110)[https://github.com/s-macke/jor1k/issues/110] are good starting
+[#24](https://github.com/s-macke/jor1k/issues/24),
+[#107](https://github.com/s-macke/jor1k/issues/107) and
+[#110](https://github.com/s-macke/jor1k/issues/110) are good starting
 points for a proposal.
 
 *Skill Level:* Intermediate
@@ -135,6 +135,18 @@ proposal intensively.
 More details will
 follow. [Questions?](mailto:gsoc@fossi-foundation.org)
 
+### Extend LibreCores.org
+[LibreCores](http://www.librecores.org) is a community web site with the goal of providing an overview of IP cores and the corresponding ecosystem, similar to the now abandoned OpenCores.org site. For further information on our goals, see the [FOSDEM Presentation slides](https://fosdem.org/2016/schedule/event/digital_hardware_design/attachments/slides/1037/export/events/attachments/digital_hardware_design/slides/1037/fossi_fosdem.pdf) announcing LibreCores. The full site source code is available on [GitHub](https://github.com/librecores/librecores-web). The issues also contain some plans and tasks to be taken on.
+
+Please talk to Philpp for a full description of available tasks and a discussion what can/should be done, also based on your existing experience.
+
+*Skill Level:* Intermediate
+
+*Language/Tools:* PHP with the Symfony Framework, MySQL, HTML/JS
+
+*Mentor:* [Philipp Wagner](mailto:mail@philipp-wagner.com)
+
+
 ### OpenRISC GCC Port
 
 There is a GCC port for OpenRISC, but it lacks the potential to become
@@ -146,7 +158,7 @@ implementations.
 More details will
 follow. [Questions?](mailto:gsoc@fossi-foundation.org)
 
-### Reference Implementation fo a Leakage Aware Compiler Optimization
+### Reference Implementation for a Leakage Aware Compiler Optimization
 
 More details will
 follow. [Questions?](mailto:gsoc@fossi-foundation.org)
