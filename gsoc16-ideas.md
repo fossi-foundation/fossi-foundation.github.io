@@ -26,10 +26,10 @@ follow. [Questions?](mailto:gsoc@fossi-foundation.org)
 
 ### Constrained randomised testing with coverage tracking in Cocotb
 
-*Goal:* Extend the [Cocotb](http://potential.ventures/cocotb/) co-simulation
-library to support constrained randomised testing (e.g. via Google
-[or-tools](https://code.google.com/p/or-tools/)) and to track achieved
-coverage of the tested HDL.
+*Goal:* Extend the [Cocotb](http://potential.ventures/cocotb/)
+co-simulation library to support constrained randomised testing
+(e.g. via Google [or-tools](https://code.google.com/p/or-tools/)) and
+to track achieved coverage of the tested HDL.
 
 *Details:* Cocotb is a Python framework for testing VHDL and
  [System]Verilog hardware designs. Although various open source
@@ -148,6 +148,40 @@ implementations.
 
 More details will
 follow. [Questions?](mailto:gsoc@fossi-foundation.org)
+
+### Port RISC-V core to Parallella
+
+The RISC-V is an exciting new open source processor architecture
+founded at UC Berkeley. A test environment has been created for the
+Zynq based Zedboard development platform. Given that there are over
+10,000 Parallellas in the field in 75 countries and 200 universities,
+it would be a great services to computer architecture researchers if
+there was a ready to run
+[reference implementation](https://github.com/ucb-bar/fpga-zynq) of
+the RISC-V rocket core running in the Zynq FPGA on the open source
+Parallella board.
+
+*Language/Tools:* Verilog, C, Chisel
+
+*Mentor:* [Andreas Olofsson](mailto:andreas@adapteva.com)
+
+### Create a Parallella acceleration framework for GNU radio
+
+GNU radio is an immensly powerful framework for software defined
+radio, but it’s only as good as its built in hardware
+support. Currently, there is support for SIMD, GPUs, and FPGAs, but
+there is no support for manycore array accelerators like Epiphany. The
+project involves creating the equivalent of an
+[accelerator](https://gnuradio.org/redmine/projects/gnuradio/wiki/Zynq/35)
+(done in an FPGA) for the Epiphany manycore accelerator. All code
+should be written in "high level" C to maximize portability between
+manycore architecture.
+
+*Language:* Python/C
+
+*License:* GPL/MIT
+
+*Mentor:* [Andreas Olofsson](mailto:andreas@adapteva.com)
 
 ### Reference Implementation fo a Leakage Aware Compiler Optimization
 
