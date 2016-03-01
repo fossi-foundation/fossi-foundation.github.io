@@ -19,10 +19,27 @@ digital design blocks. It fetches IP blocks from different sources and
 as part of this project the handling of the cores and especially
 dependency handling are improved.
 
-More details will
-follow. [Questions?](mailto:gsoc@fossi-foundation.org)
+The dependency handling in FuseSoC is currently limited to specifying
+an exact version of a dependency. For this project we want to extend
+this so that cores can have a dependency on a range of versions. We
+also want to support alternative dependencies for cores with similar
+interfaces. The dependency handler also need to be able to resolve
+conflicts and produce a minimal set of dependencies.
+
+Much of the inspiration for the dependency handling comes from Gentoo's
+ebuild format, and the format used for the DEPEND and RDEPEND lists
+could serve as a good starting point.  If time permits it would also be
+very interesting to add support for Gentoo style useflags to the cores
+as well.
+
+Hopefully this project will produce a general-purpose python dependency
+management library which can be used in other projects as well.
+
+*Skill Level:* Intermediate
 
 *Language/Tools:* Python
+
+*Mentor:* [Olof Kindgren](mailto:olof.kindgren@gmail.com)
 
 ### Constrained randomised testing with coverage tracking in Cocotb
 
