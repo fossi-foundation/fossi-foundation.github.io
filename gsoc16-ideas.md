@@ -12,6 +12,10 @@ encourage you to send your own ideas to
 to our
 [mailing list](https://lists.fossi-foundation.org/listinfo/discussion).
 
+We also recommend you to have a look at the ideas of our close friends
+at [lowRISC](http://www.lowrisc.org/docs/gsoc-2016-ideas/) and
+[MyHDL](http://dev.myhdl.org/gsoc/gsoc_2016.html).
+
 ### Ideas Overview
 
  * [Dependency Handling in the FuseSoC Package Manager](#dependency-handling-in-the-fusesoc-package-manager) (Python)
