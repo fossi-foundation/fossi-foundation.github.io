@@ -17,14 +17,14 @@ to our
  * [Dependency Handling in the FuseSoC Package Manager](#dependency-handling-in-the-fusesoc-package-manager) (Python)
  * [Constrained randomised testing with coverage tracking in Cocotb](#constrained-randomised-testing-with-coverage-tracking-in-cocotb) (Python)
  * [Visualization and Debugging Interface for jor1k](#visualization-and-debugging-interface-for-jor1k) (JavaScript, HTML)
+ * [Extend LibreCores.org](#extend-librecoresorg) (PHP, Symfony, MySQL, HTML, Javascript)
+ * [Create a Parallella acceleration framework for GNU radio](#create-a-parallella-acceleration-framework-for-gnu-radio) (Python, C)
+ * [Your LibreCore](#your-librecore) (Verilog, VHDL, Chisel)
+ * [Port RISC-V core to Parallella](#port-risc-v-core-to-parallella) (Verilog, C, Chisel)
  * [QEMU port of OpenRISC](#qemu-port-of-openrisc) (C)
  * [OpenRISC: Improved OpenOCD support for transports and SMP](#openrisc-improved-openocd-support-for-transports-and-smp) (C, Tcl)
  * [OpenRISC Port of the ROMCC (ROM C Compiler)](#openrisc-port-of-the-romcc-rom-c-compiler) (C)
- * [Your LibreCore](#your-librecore) (Verilog, VHDL, Chisel)
- * [Extend LibreCores.org](#extend-librecoresorg) (PHP, Symfony, MySQL, HTML, Javascript)
  * [OpenRISC GCC Port](#openrisc-gcc-port) (C)
- * [Port RISC-V core to Parallella](#port-risc-v-core-to-parallella) (Verilog, C, Chisel)
- * [Create a Parallella acceleration framework for GNU radio](#create-a-parallella-acceleration-framework-for-gnu-radio) (Python, C)
  * [Reference Implementation for a Leakage Aware Compiler Optimization](#reference-implementation-for-a-leakage-aware-compiler-optimization)
  * [GNU Superoptimizer 2.0: Reference Implementation for the AAP](#gnu-superoptimizer-20-reference-implementation-for-the-aap)
  * [An Altruistic Processor (AAP): Reference Implementation](#an-altruistic-processor-aap-reference-implementation)
@@ -119,6 +119,64 @@ points for a proposal.
 
 *Mentor:* [Sebastian Macke](mailto:sebastian@macke.de)
 
+### Extend LibreCores.org
+[LibreCores](http://www.librecores.org) is a community web site with the goal of providing an overview of IP cores and the corresponding ecosystem, similar to the now abandoned OpenCores.org site. For further information on our goals, see the [FOSDEM Presentation slides](https://fosdem.org/2016/schedule/event/digital_hardware_design/attachments/slides/1037/export/events/attachments/digital_hardware_design/slides/1037/fossi_fosdem.pdf) announcing LibreCores. The full site source code is available on [GitHub](https://github.com/librecores/librecores-web). The issues also contain some plans and tasks to be taken on.
+
+Please talk to Philpp for a full description of available tasks and a discussion what can/should be done, also based on your existing experience.
+
+*Skill Level:* Intermediate
+
+*Language/Tools:* PHP with the Symfony Framework, MySQL, HTML/JS
+
+*Mentor:* [Philipp Wagner](mailto:mail@philipp-wagner.com)
+
+### Create a Parallella acceleration framework for GNU radio
+
+GNU radio is an immensly powerful framework for software defined
+radio, but it’s only as good as its built in hardware
+support. Currently, there is support for SIMD, GPUs, and FPGAs, but
+there is no support for manycore array accelerators like Epiphany. The
+project involves creating the equivalent of an
+[accelerator](https://gnuradio.org/redmine/projects/gnuradio/wiki/Zynq/35)
+(done in an FPGA) for the Epiphany manycore accelerator. All code
+should be written in "high level" C to maximize portability between
+manycore architecture.
+
+*Language:* Python/C
+
+*License:* GPL/MIT
+
+*Mentor:* [Andreas Olofsson](mailto:andreas@adapteva.com)
+
+### Your LibreCore
+
+Our core ambition is to grow the community projects around open source
+components. LibreCores are IP cores, but they are free and open. If
+you have a great idea for such a LibreCore, we are happy to mentor
+you, but it is important that it is re-usable and contains everything
+needed for simple and flexible integration, like testbenches, the
+required software drivers etc. So, it is important that you discuss a
+proposal intensively.
+
+More details will
+follow. [Questions?](mailto:gsoc@fossi-foundation.org)
+
+### Port RISC-V core to Parallella
+
+The RISC-V is an exciting new open source processor architecture
+founded at UC Berkeley. A test environment has been created for the
+Zynq based Zedboard development platform. Given that there are over
+10,000 Parallellas in the field in 75 countries and 200 universities,
+it would be a great services to computer architecture researchers if
+there was a ready to run
+[reference implementation](https://github.com/ucb-bar/fpga-zynq) of
+the RISC-V rocket core running in the Zynq FPGA on the open source
+Parallella board.
+
+*Language/Tools:* Verilog, C, Chisel
+
+*Mentor:* [Andreas Olofsson](mailto:andreas@adapteva.com)
+
 ### QEMU port of OpenRISC
 
 [QEMU](http://wiki.qemu.org/Main_Page) is a generic and open source
@@ -159,31 +217,6 @@ therefore, no initialized RAM. This compiler is used in the
 More details will
 follow. [Questions?](mailto:gsoc@fossi-foundation.org)
 
-### Your LibreCore
-
-Our core ambition is to grow the community projects around open source
-components. LibreCores are IP cores, but they are free and open. If
-you have a great idea for such a LibreCore, we are happy to mentor
-you, but it is important that it is re-usable and contains everything
-needed for simple and flexible integration, like testbenches, the
-required software drivers etc. So, it is important that you discuss a
-proposal intensively.
-
-More details will
-follow. [Questions?](mailto:gsoc@fossi-foundation.org)
-
-### Extend LibreCores.org
-[LibreCores](http://www.librecores.org) is a community web site with the goal of providing an overview of IP cores and the corresponding ecosystem, similar to the now abandoned OpenCores.org site. For further information on our goals, see the [FOSDEM Presentation slides](https://fosdem.org/2016/schedule/event/digital_hardware_design/attachments/slides/1037/export/events/attachments/digital_hardware_design/slides/1037/fossi_fosdem.pdf) announcing LibreCores. The full site source code is available on [GitHub](https://github.com/librecores/librecores-web). The issues also contain some plans and tasks to be taken on.
-
-Please talk to Philpp for a full description of available tasks and a discussion what can/should be done, also based on your existing experience.
-
-*Skill Level:* Intermediate
-
-*Language/Tools:* PHP with the Symfony Framework, MySQL, HTML/JS
-
-*Mentor:* [Philipp Wagner](mailto:mail@philipp-wagner.com)
-
-
 ### OpenRISC GCC Port
 
 There is a GCC port for OpenRISC, but it lacks the potential to become
@@ -194,40 +227,6 @@ implementations.
 
 More details will
 follow. [Questions?](mailto:gsoc@fossi-foundation.org)
-
-### Port RISC-V core to Parallella
-
-The RISC-V is an exciting new open source processor architecture
-founded at UC Berkeley. A test environment has been created for the
-Zynq based Zedboard development platform. Given that there are over
-10,000 Parallellas in the field in 75 countries and 200 universities,
-it would be a great services to computer architecture researchers if
-there was a ready to run
-[reference implementation](https://github.com/ucb-bar/fpga-zynq) of
-the RISC-V rocket core running in the Zynq FPGA on the open source
-Parallella board.
-
-*Language/Tools:* Verilog, C, Chisel
-
-*Mentor:* [Andreas Olofsson](mailto:andreas@adapteva.com)
-
-### Create a Parallella acceleration framework for GNU radio
-
-GNU radio is an immensly powerful framework for software defined
-radio, but it’s only as good as its built in hardware
-support. Currently, there is support for SIMD, GPUs, and FPGAs, but
-there is no support for manycore array accelerators like Epiphany. The
-project involves creating the equivalent of an
-[accelerator](https://gnuradio.org/redmine/projects/gnuradio/wiki/Zynq/35)
-(done in an FPGA) for the Epiphany manycore accelerator. All code
-should be written in "high level" C to maximize portability between
-manycore architecture.
-
-*Language:* Python/C
-
-*License:* GPL/MIT
-
-*Mentor:* [Andreas Olofsson](mailto:andreas@adapteva.com)
 
 ### Reference Implementation for a Leakage Aware Compiler Optimization
 
