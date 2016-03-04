@@ -12,6 +12,23 @@ encourage you to send your own ideas to
 to our
 [mailing list](https://lists.fossi-foundation.org/listinfo/discussion).
 
+### Ideas Overview
+
+ * [Dependency Handling in the FuseSoC Package Manager](#dependency-handling-in-the-fusesoc-package-manager) (Python)
+ * [Constrained randomised testing with coverage tracking in Cocotb](#constrained-randomised-testing-with-coverage-tracking-in-cocotb) (Python)
+ * [Visualization and Debugging Interface for jor1k](#visualization-and-debugging-interface-for-jor1k) (JavaScript, HTML)
+ * [QEMU port of OpenRISC](#qemu-port-of-openrisc) (C)
+ * [OpenRISC: Improved OpenOCD support for transports and SMP](#openrisc-improved-openocd-support-for-transports-and-smp) (C, Tcl)
+ * [OpenRISC Port of the ROMCC (ROM C Compiler)](#openrisc-port-of-the-romcc-rom-c-compiler) (C)
+ * [Your LibreCore](#your-librecore) (Verilog, VHDL, Chisel)
+ * [Extend LibreCores.org](#extend-librecoresorg) (PHP, Symfony, MySQL, HTML, Javascript)
+ * [OpenRISC GCC Port](#openrisc-gcc-port) (C)
+ * [Port RISC-V core to Parallella](#port-risc-v-core-to-parallella) (Verilog, C, Chisel)
+ * [Create a Parallella acceleration framework for GNU radio](#create-a-parallella-acceleration-framework-for-gnu-radio) (Python, C)
+ * [Reference Implementation for a Leakage Aware Compiler Optimization](#reference-implementation-for-a-leakage-aware-compiler-optimization)
+ * [GNU Superoptimizer 2.0: Reference Implementation for the AAP](#gnu-superoptimizer-20-reference-implementation-for-the-aap)
+ * [An Altruistic Processor (AAP): Reference Implementation](#an-altruistic-processor-aap-reference-implementation)
+
 ### Dependency Handling in the FuseSoC Package Manager
 
 [FuseSoC](https://github.com/olofk/fusesoc) is a package manager for
