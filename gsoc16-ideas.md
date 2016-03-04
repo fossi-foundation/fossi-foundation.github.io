@@ -20,6 +20,7 @@ at [lowRISC](http://www.lowrisc.org/docs/gsoc-2016-ideas/) and
 
  * [Dependency Handling in the FuseSoC Package Manager](#dependency-handling-in-the-fusesoc-package-manager) (Python)
  * [Constrained randomised testing with coverage tracking in Cocotb](#constrained-randomised-testing-with-coverage-tracking-in-cocotb) (Python)
+ * [Contributions to Yosys Ecosystem](#contributions-to-yosys-ecosystem)
  * [Visualization and Debugging Interface for jor1k](#visualization-and-debugging-interface-for-jor1k) (JavaScript, HTML)
  * [Extend LibreCores.org](#extend-librecoresorg) (PHP, Symfony, MySQL, HTML, Javascript)
  * [Create a Parallella acceleration framework for GNU radio](#create-a-parallella-acceleration-framework-for-gnu-radio) (Python, C)
@@ -100,6 +101,47 @@ software development
 *Language/Tools:* Python
 
 *Mentor:* [Chris Higgs](mailto:chris.higgs@potentialventures.com)
+
+### Contributions to Yosys Ecosystem
+
+[YoSys](http://www.clifford.at/yosys/) is a framework for Verilog RTL
+synthesis. The following list is incomplete and is meant to inspire
+student proposals. Do not simply pick one of the projects on this
+list! We are interested in genuinely original student
+proposals. Please contact [Clifford Wolf](mailto:clifford@clifford.at)
+early in the process to discuss your ideas.
+
+*Ideas regarding [Project IceStorm](http://www.clifford.at/icestorm)
+ (the FOSS iCE40 FPGA flow)*
+
+* Improvements in [Arachne-pnr](https://github.com/cseed/arachne-pnr)
+  place & route tool, such as
+  * Analytical (e.g. quadratic wirelength) placement
+  * Support for LUT cascade feature
+  * Support for BRAM cascade feature
+  * Improved inference of SB_IO cells
+  * Timing driven place and route
+  * Speedups (OpenCL?)
+* Alternative iCE40 place and route flow (e.g. using VPR/VTR)
+* Additional support for more iCE40 devices (e.g. UltraLite)
+* In-hardware validation flow for chip databases
+
+*Ideas regarding Yosys*
+
+* Additional front- and back-ends
+* New architectures (e.g. additional FPGA families)
+* New non-synthesis flows (verification, etc.)
+* New yosys commands and other features
+
+*Ideas regarding [YosysJS](http://www.clifford.at/yosys/yosysjs.html)*
+
+* Interactive schematic viewer running in the web browser
+* Puzzle games and other web-based Verilog training tools
+* Port of Icarus Verilog to JavaScript (using EMCC)
+
+*Skill Level:* Intermediate/Advanced
+
+*Mentor:* [Clifford Wolf](mailto:clifford@clifford.at)
 
 ### Visualization and Debugging Interface for jor1k
 
