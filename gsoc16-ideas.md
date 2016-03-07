@@ -335,5 +335,5 @@ DE0-Nano.
 
 *Language/Tools:* Verilog, FPGA synthesis tool flow
 
-*Mentors:* [Jeremy Bennett, Simon Cook](mailto:jeremy.bennett@embecosm.com)
+*Mentors:* [Jeremy Bennett, Simon Cook, Andrew Burgess](mailto:jeremy.bennett@embecosm.com)
 
