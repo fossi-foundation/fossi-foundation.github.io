@@ -30,9 +30,9 @@ at [lowRISC](http://www.lowrisc.org/docs/gsoc-2016-ideas/) and
  * [OpenRISC: Improved OpenOCD support for transports and SMP](#openrisc-improved-openocd-support-for-transports-and-smp) (C, Tcl)
  * [OpenRISC Port of the ROMCC (ROM C Compiler)](#openrisc-port-of-the-romcc-rom-c-compiler) (C)
  * [OpenRISC GCC Port](#openrisc-gcc-port) (C)
- * [Reference Implementation for a Leakage Aware Compiler Optimization](#reference-implementation-for-a-leakage-aware-compiler-optimization)
- * [GNU Superoptimizer 2.0: Reference Implementation for the AAP](#gnu-superoptimizer-20-reference-implementation-for-the-aap)
- * [An Altruistic Processor (AAP): Reference Implementation](#an-altruistic-processor-aap-reference-implementation)
+ * [Reference Implementation for a Leakage Aware Compiler Optimization](#reference-implementation-for-a-leakage-aware-compiler-optimization) (Verilog, C/C++)
+ * [GNU Superoptimizer 2.0: Reference Implementation for the AAP](#gnu-superoptimizer-20-reference-implementation-for-the-aap) (C/C++, AAP Assembler)
+ * [An Altruistic Processor (AAP): Reference Implementation](#an-altruistic-processor-aap-reference-implementation) (Verilog, FPGA)
 
 ### Dependency Handling in the FuseSoC Package Manager
 
@@ -276,15 +276,64 @@ follow. [Questions?](mailto:gsoc@fossi-foundation.org)
 
 ### Reference Implementation for a Leakage Aware Compiler Optimization
 
-More details will
-follow. [Questions?](mailto:gsoc@fossi-foundation.org)
+The
+[Leakage Aware Design Automation Project (LADA)](http://www.bristol.ac.uk/news/2015/october/leaky-device.html)
+is led by Dr Elisabeth Oswald at Bristol University and funded over
+four years by the UK EPSRC.
+
+Embecosm is industrial partner to this project, charged with applying
+the research to the next generations of free and open source compilers,
+such as GCC and LLVM. Many of these innovations involve hardware changes
+that the compiler can leverage (e.g. checksumming code on the fly).
+
+In this project you will work to add appropriate hardware functionality
+to your favorite open hardware processor design (AAP, OpenRISC, RISC-V
+etc), and then extend either GCC or LLVM to support that hardware
+functionality. You will need both Verilog and Compiler skills, as well
+as some grasp of side-channel attacks in cryptography.
+
+*Skill Level:* Advanced
+
+*Language/Tools:* Verilog, C/C++
+
+Mentors: [Jeremy Bennett, Simon Cook](mailto:jeremy.bennett@embecosm.com)
 
 ### GNU Superoptimizer 2.0: Reference Implementation for the AAP
 
-More details will
-follow. [Questions?](mailto:gsoc@fossi-foundation.org)
+
+James Pallister presented the design and initial implementation for GSO
+2.0 and GNU Tools Cauldron in 2015:
+[Youtube](https://www.youtube.com/watch?v=DC2nhBkgmP0)
+
+In this GSoC project you will implement GSO 2.0 for the AAP instruction
+set and demonstrate its effectiveness over code generate using LLVM for
+AAP. An advanced student would implement stochastic superoptimization to
+allow longer code sequences to be tackled.
+
+*Skill Level:* Intermediate/Advanced
+
+*Language/Tools:* C/C++. AAP assembler
+
+*Mentors:* [Jeremy Bennett, Ed Jones](mailto:jeremy.bennett@embecosm.com)
 
 ### An Altruistic Processor (AAP): Reference Implementation
 
-More details will
-follow. [Questions?](mailto:gsoc@fossi-foundation.org)
+AAP is the compiler writer's architecture from hell. It was created to
+advance compiler support for common deeply embedded architectures, and
+includes many features that cause great difficulty when compiling.
+
+In order to be credible, we must show that AAP can be implemented on
+real silicon. A student implementation was created by Dan Gorringe in
+2015 and presented at ORConf 2015 at CERN:
+[Youtube](https://www.youtube.com/watch?v=HKWS85b6PAU)
+
+This GSOC project is to provide a full implementation, complete with
+debug interface to run on an appropriate small FPGA board such as a
+DE0-Nano.
+
+*Skill Level:* Advanced
+
+*Language/Tools:* Verilog, FPGA synthesis tool flow
+
+*Mentors:* [Jeremy Bennett, Simon Cook](mailto:jeremy.bennett@embecosm.com)
+
