@@ -57,10 +57,6 @@ TBA
 
 * Chaired by: Philipp Wagner
 
-### Fundraising
-
-* Chaired by: Julius Baxter
-
 ### Conference
 
 * Chaired by: Olof Kindgren & Julius Baxter
