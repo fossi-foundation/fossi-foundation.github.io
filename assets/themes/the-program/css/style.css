@@ -992,7 +992,7 @@ pre {
   }
 }
 /*
-	Not that old computer layout 
+	Not that old computer layout
 */
 @media only screen and (min-width: 1280px) {
   .the-header .unit-head .nav-global .logo {
@@ -1027,7 +1027,7 @@ pre {
   }
 }
 /*
-	Huge-screen layout 
+	Huge-screen layout
 */
 @media only screen and (min-width: 1410px) {
   .the-header {
@@ -1504,4 +1504,13 @@ ul.share-buttons{
 
 ul.share-buttons li{
   display: inline;
-} 
+}
+ul.share-buttons img{
+  display: inline;
+  margin:0;
+}
+ul.share-buttons a{
+  text-decoration:none;
+  border-bottom:0 !important;
+  margin:0;
+}
