@@ -112,6 +112,8 @@ TBA
 ### Conference
 
 * Chaired by: Olof Kindgren & Julius Baxter
+* Alex Bradbury, University of Cambridge, United Kingdom
+* Davide Rossi, Università di Bologna, Italy
 
 ### LibreCores Student Contest
 
