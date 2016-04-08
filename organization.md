@@ -53,7 +53,7 @@ help us reaching our goals, please don't hesitate to
 	</ul></td>
 	<td>
 	<h4>Philipp Wagner</h4>
-	For almost as long as he can type, Philipp has been involved in software development, from web to embedded. During his Masters he got interested in hardware design. Today he combines both worlds to make software development easier through better debugging support. Philipp currently works as research assistant at Technical University of Munich.
+	A long-time free and open source veteran, Philipp has been involved in various projects over the last decade. With interests from web development to hardware architectures, he loves to bring together different communities and approaches.
 	</td></tr>
 </table>
 
