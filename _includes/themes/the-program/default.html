@@ -9,7 +9,8 @@
 	<title>{{ page.title }}</title>
 	<meta name="author" content="{{ site.author.name }}">
 	<link href='{{ ASSET_PATH }}/css/style.css' rel="stylesheet" media="all">
-	<link href="http://feeds.feedburner.com/{{ site.author.feedbaname }}" rel="alternate" title="{{ page.title }}" type="application/atom+xml">
+	<link rel="alternate" type="application/rss+xml" title="{{ page.title }}" href="{{ site.production_url }}{{ site.JB.rss_path }}" />
+	<link rel="alternate" type="application/atom+xml" title="{{ page.title }}" href="{{ site.production_url }}{{ site.JB.atom_path }}" />
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
 </head>
 <body>
@@ -47,17 +48,17 @@
 		<div class="unit-foot">
 		  <div class="unit-inner unit-foot-inner">
 		    <h3>Latest posts</h3>
-		    <ul class="posts">  
-		      {% for post in site.posts limit:5 %}  
-		      <li>  
-			<span><b>{{ post.date | date_to_string }}</b></span> &raquo;  
-			<a href="{{ BASE_PATH }}{{ post.url }}">  
+		    <ul class="posts">
+		      {% for post in site.posts limit:5 %}
+		      <li>
+			<span><b>{{ post.date | date_to_string }}</b></span> &raquo;
+			<a href="{{ BASE_PATH }}{{ post.url }}">
 			  <b>{{post.title}}</b></a><br/>
 			{{ post.content | strip_html | truncatewords: 20 }}..
-			<a href="{{ BASE_PATH }}{{ post.url }}">  
+			<a href="{{ BASE_PATH }}{{ post.url }}">
 			  more</a><br/>
 		      </li>
-		      {% endfor %}  
+		      {% endfor %}
 		    </ul>
 		  </div><!-- unit-foot-inner -->
 		</div><!-- unit-foot -->

@@ -1,5 +1,6 @@
 ---
 layout: null
+title : RSS 2.0 Feed
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
@@ -10,6 +11,11 @@ layout: null
     their related ecosystems. FOSSi operates as an open, inclusive,
     vendor-independent group. Follow our news &amp;
     posts.</description>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+    <ttl>60</ttl>
+    <atom:link href="{{ site.production_url }}{{ site.JB.rss_path }}" rel="self" type="application/rss+xml" />
+
     <link>
     {{ site.url }}</link>
     {% for post in site.posts %}
@@ -17,7 +23,7 @@ layout: null
       <item>
         <title>{{ post.title | xml_escape }}</title>
         <description>{{ post.content | xml_escape }}</description>
-        <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
         <link>{{ site.production_url }}{{ post.url }}</link>
         <guid isPermaLink="true">{{ site.production_url }}{{ post.url }}</guid>
       </item>
