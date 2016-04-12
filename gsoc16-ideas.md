@@ -10,7 +10,7 @@ Code. Students can apply with proposals in the time frame from March
 encourage you to send your own ideas to
 [gsoc@fossi-foundation.org](mailto:gsoc@fossi-foundation.org) or post
 to our
-[mailing list](https://lists.fossi-foundation.org/listinfo/discussion).
+[mailing list](https://lists.librecores.org/listinfo/discussion).
 
 We also recommend you to have a look at the ideas of our close friends
 at [lowRISC](http://www.lowrisc.org/docs/gsoc-2016-ideas/) and
