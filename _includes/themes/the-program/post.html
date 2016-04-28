@@ -18,8 +18,10 @@
 							<date class="date-pub" title="{{ page.date | date_to_xmlschema }}" datetime="{{ page.date | date_to_xmlschema }}" pubdate>
 							<span class="month"><abbr>{{ page.date | date: '%B' }}</abbr></span>
 							<span class="day">{{ page.date | date: '%d' }}</span>
-							<span class="year">{{ page.date | date: '%Y' }}</span>
-							</date>
+							<span class="year">{{ page.date | date: '%Y' }}</span></date>, Author:
+							{% if page.author == "wallento" %}<a href="/organization#wallento">Stefan Wallentowitz</a>
+							{% else %}{{ page.author }}
+							{% endif %}
 						</p>
 <!--						<ul class="list-category list-linear">
 							<li class="list-head">category: </li>

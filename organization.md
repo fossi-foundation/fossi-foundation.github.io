@@ -23,6 +23,7 @@ help us reaching our goals, please don't hesitate to
 
 ## Directors
 
+<a name="julius"/>
 <table cellpadding="10">
 	<tr><td><img src="/assets/people/JuliusBaxter.jpg" align="left" width="120px">
 	<ul class="share-buttons">
@@ -34,6 +35,7 @@ help us reaching our goals, please don't hesitate to
 	</td></tr>
 </table>
 
+<a name="olof"/>
 <table cellpadding="10">
 	<tr><td><img src="/assets/people/OlofKindgren.jpg" align="left" width="120px">
 	<ul class="share-buttons">
@@ -45,6 +47,7 @@ help us reaching our goals, please don't hesitate to
 	</td></tr>
 </table>
 
+<a name="philipp"/>
 <table cellpadding="10">
 	<tr><td><img src="/assets/people/PhilippWagner.jpg" align="left" width="120px">
 	<ul class="share-buttons">
@@ -58,6 +61,7 @@ help us reaching our goals, please don't hesitate to
 	</td></tr>
 </table>
 
+<a name="raul"/>
 <table cellpadding="10">
 	<tr><td><img src="/assets/people/RaulSchmidlin.jpg" align="left" width="120px">
 	<ul class="share-buttons">
@@ -66,6 +70,7 @@ help us reaching our goals, please don't hesitate to
 	<td><h4>Raul Schmidlin</h4></td></tr>
 </table>
 
+<a name="wallento"/>
 <table cellpadding="10">
 	<tr><td><img src="/assets/people/StefanWallentowitz.png" align="left" width="120px">
 	<ul class="share-buttons">
