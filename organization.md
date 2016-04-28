@@ -44,6 +44,7 @@ help us reaching our goals, please don't hesitate to
 	<li><a href="https://twitter.com/OlofKindgren"><img title="Visit my Twitter account" src="/assets/flat_web_icon_set/color/Twitter.png"></a></li>
 	</ul></td>
 	<td><h4>Olof Kindgren</h4>
+	Olof loves open source hardware. He has been around in the OpenRISC community for a long time now and is the maintainer of the [FuseSoC](https://github.com/olofk/fusesoc) project, a package manager for IP cores.
 	</td></tr>
 </table>
 
@@ -67,7 +68,9 @@ help us reaching our goals, please don't hesitate to
 	<ul class="share-buttons">
 	<li><a href="https://www.linkedin.com/in/raul-schmidlin-5205367"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
 	</ul></td>
-	<td><h4>Raul Schmidlin</h4></td></tr>
+	<td><h4>Raul Schmidlin</h4>
+	Raul is the maintainer of MinSoC, an OpenRISC-based SoC, which he had developed during his PhD.
+	</td></tr>
 </table>
 
 <a name="wallento"/>
