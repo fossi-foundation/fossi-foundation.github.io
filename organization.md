@@ -30,7 +30,9 @@ help us reaching our goals, please don't hesitate to
 	<li><a href="https://www.linkedin.com/in/julius-baxter-78840223"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
 	<li><a href="https://github.com/juliusbaxter"><img title="Visit my GitHub account" src="/assets/flat_web_icon_set/color/Github.png"></a></li>
 	</ul></td>
-	<td><h4>Julius Baxter</h4></td></tr>
+	<td><h4>Julius Baxter</h4>
+	Julius' interests in the open source hardware arena range from RTL to licensing. He began his involvement with work on the OpenRISC project and saw the value that fostering a community of like-minded developers brings to a project, and aims to bring similar enthusiasm and interest to the field of open source digital deisgn through his work with the FOSSi foundation.
+	</td></tr>
 </table>
 
 <table cellpadding="10">
