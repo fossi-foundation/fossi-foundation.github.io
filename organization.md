@@ -25,87 +25,87 @@ help us reaching our goals, please don't hesitate to
 
 <a name="julius"/>
 <table cellpadding="10">
-	<tr><td><img src="/assets/people/JuliusBaxter.jpg" align="left" width="120px">
-	<ul class="share-buttons">
-	<li><a href="https://www.linkedin.com/in/julius-baxter-78840223"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
-	<li><a href="https://github.com/juliusbaxter"><img title="Visit my GitHub account" src="/assets/flat_web_icon_set/color/Github.png"></a></li>
-	</ul></td>
-	<td><h4>Julius Baxter</h4>
-	Julius' interests in the open source hardware arena range from RTL to licensing. He began his involvement with work on the OpenRISC project and saw the value that fostering a community of like-minded developers brings to a project, and aims to bring similar enthusiasm and interest to the field of open source digital deisgn through his work with the FOSSi foundation.
-	</td></tr>
+  <tr><td><img src="/assets/people/JuliusBaxter.jpg" align="left" width="120px">
+  <ul class="share-buttons">
+  <li><a href="https://www.linkedin.com/in/julius-baxter-78840223"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
+  <li><a href="https://github.com/juliusbaxter"><img title="Visit my GitHub account" src="/assets/flat_web_icon_set/color/Github.png"></a></li>
+  </ul></td>
+  <td><h4>Julius Baxter</h4>
+  Julius' interests in the open source hardware arena range from RTL to licensing. He began his involvement with work on the OpenRISC project and saw the value that fostering a community of like-minded developers brings to a project, and aims to bring similar enthusiasm and interest to the field of open source digital deisgn through his work with the FOSSi foundation.
+  </td></tr>
 </table>
 
 <a name="olof"/>
 <table cellpadding="10">
-	<tr><td><img src="/assets/people/OlofKindgren.jpg" align="left" width="120px">
-	<ul class="share-buttons">
-	<li><a href="https://www.linkedin.com/in/olofkindgren"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
-	<li><a href="https://github.com/olofk/"><img title="Visit my GitHub account" src="/assets/flat_web_icon_set/color/Github.png"></a></li>
-	<li><a href="https://twitter.com/OlofKindgren"><img title="Visit my Twitter account" src="/assets/flat_web_icon_set/color/Twitter.png"></a></li>
-	</ul></td>
-	<td><h4>Olof Kindgren</h4>
-	Olof loves open source hardware. He has been around in the OpenRISC community for a long time now and is the maintainer of the [FuseSoC](https://github.com/olofk/fusesoc) project, a package manager for IP cores.
-	</td></tr>
+  <tr><td><img src="/assets/people/OlofKindgren.jpg" align="left" width="120px">
+  <ul class="share-buttons">
+  <li><a href="https://www.linkedin.com/in/olofkindgren"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
+  <li><a href="https://github.com/olofk/"><img title="Visit my GitHub account" src="/assets/flat_web_icon_set/color/Github.png"></a></li>
+  <li><a href="https://twitter.com/OlofKindgren"><img title="Visit my Twitter account" src="/assets/flat_web_icon_set/color/Twitter.png"></a></li>
+  </ul></td>
+  <td><h4>Olof Kindgren</h4>
+  Olof loves open source hardware. He has been around in the OpenRISC community for a long time now and is the maintainer of the [FuseSoC](https://github.com/olofk/fusesoc) project, a package manager for IP cores.
+  </td></tr>
 </table>
 
 <a name="philipp"/>
 <table cellpadding="10">
-	<tr><td><img src="/assets/people/PhilippWagner.jpg" align="left" width="120px">
-	<ul class="share-buttons">
-	<li><a href="mailto:mail@philipp-wagner.com"><img title="Send me an email" src="/assets/flat_web_icon_set/color/Email.png"/></a></li>
-	<li><a href="https://www.linkedin.com/in/imphil"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"/></a></li>
-	<li><a href="https://github.com/imphil"><img title="Visit my GitHub account" src="/assets/flat_web_icon_set/color/Github.png"/></a></li>
-	</ul></td>
-	<td>
-	<h4>Philipp Wagner</h4>
-	A long-time free and open source veteran, Philipp has been involved in various projects over the last decade. With interests from web development to hardware architectures, he loves to bring together different communities and approaches.
-	</td></tr>
+  <tr><td><img src="/assets/people/PhilippWagner.jpg" align="left" width="120px">
+  <ul class="share-buttons">
+  <li><a href="mailto:mail@philipp-wagner.com"><img title="Send me an email" src="/assets/flat_web_icon_set/color/Email.png"/></a></li>
+  <li><a href="https://www.linkedin.com/in/imphil"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"/></a></li>
+  <li><a href="https://github.com/imphil"><img title="Visit my GitHub account" src="/assets/flat_web_icon_set/color/Github.png"/></a></li>
+  </ul></td>
+  <td>
+  <h4>Philipp Wagner</h4>
+  A long-time free and open source veteran, Philipp has been involved in various projects over the last decade. With interests from web development to hardware architectures, he loves to bring together different communities and approaches.
+  </td></tr>
 </table>
 
 <a name="raul"/>
 <table cellpadding="10">
-	<tr><td><img src="/assets/people/RaulSchmidlin.jpg" align="left" width="120px">
-	<ul class="share-buttons">
-	<li><a href="https://www.linkedin.com/in/raul-schmidlin-5205367"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
-	</ul></td>
-	<td><h4>Raul Schmidlin</h4>
-	Raul is the maintainer of MinSoC, an OpenRISC-based SoC, which he had developed during his PhD.
-	</td></tr>
+  <tr><td><img src="/assets/people/RaulSchmidlin.jpg" align="left" width="120px">
+  <ul class="share-buttons">
+  <li><a href="https://www.linkedin.com/in/raul-schmidlin-5205367"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
+  </ul></td>
+  <td><h4>Raul Schmidlin</h4>
+  Raul is a passionate embedded developer and an open source enthusiast. He is the maintainer of MinSoC, an OpenRISC-based SoC.
+  </td></tr>
 </table>
 
 <a name="wallento"/>
 <table cellpadding="10">
-	<tr><td><img src="/assets/people/StefanWallentowitz.png" align="left" width="120px">
-	<ul class="share-buttons">
-	<li><a href="https://www.linkedin.com/in/wallento"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
-	<li><a href="https://github.com/wallento/"><img title="Visit my GitHub account" src="/assets/flat_web_icon_set/color/Github.png"></a></li>
-	<li><a href="https://twitter.com/wallento"><img title="Visit my Twitter account" src="/assets/flat_web_icon_set/color/Twitter.png"></a></li>
-	</ul></td>
-	<td><h4>Stefan Wallentowitz</h4>
+  <tr><td><img src="/assets/people/StefanWallentowitz.png" align="left" width="120px">
+  <ul class="share-buttons">
+  <li><a href="https://www.linkedin.com/in/wallento"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
+  <li><a href="https://github.com/wallento/"><img title="Visit my GitHub account" src="/assets/flat_web_icon_set/color/Github.png"></a></li>
+  <li><a href="https://twitter.com/wallento"><img title="Visit my Twitter account" src="/assets/flat_web_icon_set/color/Twitter.png"></a></li>
+  </ul></td>
+  <td><h4>Stefan Wallentowitz</h4>
 
-	Stefan is a curious developer and has been involved in the
+  Stefan is a curious developer and has been involved in the
     OpenRISC project for many years and is contributor to several
     other open source projects around SoC design.
 
-	</td></tr>
+  </td></tr>
 </table>
 
 ## Secretary
 
 <table cellpadding="10">
-	<tr><td><img src="/assets/people/RobTaylor.jpg" align="left" width="120px">
-	<ul class="share-buttons">
-	<li><a href="https://www.linkedin.com/in/robtaylor78"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
-	<li><a href="https://twitter.com/robtaylor78"><img title="Visit my Twitter account" src="/assets/flat_web_icon_set/color/Twitter.png"></a></li>
-	</ul></td>
-	<td><h4>Rob Taylor</h4>
+  <tr><td><img src="/assets/people/RobTaylor.jpg" align="left" width="120px">
+  <ul class="share-buttons">
+  <li><a href="https://www.linkedin.com/in/robtaylor78"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
+  <li><a href="https://twitter.com/robtaylor78"><img title="Visit my Twitter account" src="/assets/flat_web_icon_set/color/Twitter.png"></a></li>
+  </ul></td>
+  <td><h4>Rob Taylor</h4>
 
-	Rob Taylor has been working commercially with Linux and Open
+  Rob Taylor has been working commercially with Linux and Open
     Source technologies since the late 90's. He has founded three
     companies based around Open Source development and loves
     supporting cutting edge technology communities.
 
-	</td></tr>
+  </td></tr>
 </table>
 
 ## Treasurer
