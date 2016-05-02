@@ -110,7 +110,21 @@ help us reaching our goals, please don't hesitate to
 
 ## Treasurer
 
-TBA
+<table cellpadding="10">
+  <tr><td><img src="/assets/people/AndrewBack.jpg" align="left" width="120px">
+  <ul class="share-buttons">
+  <li><a href="https://uk.linkedin.com/in/andrewback"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
+  <li><a href="https://twitter.com/9600"><img title="Visit my Twitter account" src="/assets/flat_web_icon_set/color/Twitter.png"></a></li>
+  </ul></td>
+  <td><h4>Andrew Back</h4>
+
+	Andrew Back is convener for the UK Open Source Hardware User Group
+    and co-organises the annual Wuthering Bytes technology
+    festival. He is a long time proponent of open source hardware,
+    with a keen interest in licensing and community building.
+
+  </td></tr>
+</table>
 
 ## Committees
 
