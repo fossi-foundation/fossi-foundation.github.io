@@ -92,6 +92,7 @@ help us reaching our goals, please don't hesitate to
 
 ## Secretary
 
+<a name="rob"/>
 <table cellpadding="10">
   <tr><td><img src="/assets/people/RobTaylor.jpg" align="left" width="120px">
   <ul class="share-buttons">
@@ -110,6 +111,7 @@ help us reaching our goals, please don't hesitate to
 
 ## Treasurer
 
+<a name="andrew"/>
 <table cellpadding="10">
   <tr><td><img src="/assets/people/AndrewBack.jpg" align="left" width="120px">
   <ul class="share-buttons">
