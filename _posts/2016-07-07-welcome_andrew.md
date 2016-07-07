@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Andrew Back added to Board of Directors"
+title: "Andrew Back added to the Board of Directors"
 description: ""
 category: 
 tags: []
-author: olofk
+author: Olof Kindgren
 ---
 {% include JB/setup %}
 
