@@ -37,8 +37,8 @@ Finally we got a <b>winner</b> and it is:
 RISC-V implementation</a> by Rob Eady (Univ. of Cambridge, UK)</li>
 </ul>
 
-Beside that we decided for a <b>special price</b> for the "best open
-source EDA tool:
+Beside that we decided for a "<b>special price</b> for an open source
+EDA tool":
 
 <ul>
 <li> <a
