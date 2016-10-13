@@ -47,7 +47,7 @@ A High-performance Timing Analysis Tool</a> by Tsung-Wei Huang
 (Univ. of Illinois, USA)</li>
 </ul>
 
-We congratulate the winners! It has been a hard decision as the other
+We congratulate the students! It has been a hard decision as the other
 submissions have been of an equally high quality:
 
 <ul>
