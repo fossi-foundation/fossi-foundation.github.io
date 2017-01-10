@@ -62,17 +62,6 @@ help us reaching our goals, please don't hesitate to
   </td></tr>
 </table>
 
-<a name="raul"/>
-<table cellpadding="10">
-  <tr><td><img src="/assets/people/RaulSchmidlin.jpg" align="left" width="120px">
-  <ul class="share-buttons">
-  <li><a href="https://www.linkedin.com/in/raul-schmidlin-5205367"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
-  </ul></td>
-  <td><h4>Raul Schmidlin</h4>
-  Raul is a passionate embedded developer and an open source enthusiast. He is the maintainer of MinSoC, an OpenRISC-based SoC.
-  </td></tr>
-</table>
-
 <a name="wallento"/>
 <table cellpadding="10">
   <tr><td><img src="/assets/people/StefanWallentowitz.png" align="left" width="120px">
@@ -92,19 +81,14 @@ help us reaching our goals, please don't hesitate to
 
 ## Secretary
 
-<a name="rob"/>
+<a name="simon"/>
 <table cellpadding="10">
-  <tr><td><img src="/assets/people/RobTaylor.jpg" align="left" width="120px">
+  <tr><td><!--<img src="/assets/people/RobTaylor.jpg" align="left" width="120px">
   <ul class="share-buttons">
   <li><a href="https://www.linkedin.com/in/robtaylor78"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
   <li><a href="https://twitter.com/robtaylor78"><img title="Visit my Twitter account" src="/assets/flat_web_icon_set/color/Twitter.png"></a></li>
-  </ul></td>
-  <td><h4>Rob Taylor</h4>
-
-  Rob Taylor has been working commercially with Linux and Open
-    Source technologies since the late 90's. He has founded three
-    companies based around Open Source development and loves
-    supporting cutting edge technology communities.
+  </ul>--></td>
+  <td><h4>Simon Cook</h4>
 
   </td></tr>
 </table>
@@ -133,6 +117,8 @@ help us reaching our goals, please don't hesitate to
 ### LibreCores
 
 * Chaired by: Philipp Wagner
+* Oleg Nenashev, Jenkins Project
+* Elias Kouskoumvekakis
 
 ### Conference
 
@@ -140,10 +126,11 @@ help us reaching our goals, please don't hesitate to
 * Alex Bradbury, University of Cambridge, United Kingdom
 * Davide Rossi, Università di Bologna, Italy
 
-### LibreCores Student Contest
+### Licensing
 
-* Chaired by: Stefan Wallentowitz
-* Alex Bradbury, University of Cambridge, United Kingdom
-* Davide Rossi, Università di Bologna, Italy
-* Frank K. Gurkaynak, ETH Zürich, Switzerland
-* Philipp Wagner, Technische Universität München, Germany
+* Chaired by: Stefan Wallentowitz & Julius Baxter
+* Javier Serrano, CERN
+
+### Fundraising
+
+* Chaired by: Julius Baxter & Stefan Wallentowitz
