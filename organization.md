@@ -83,12 +83,17 @@ help us reaching our goals, please don't hesitate to
 
 <a name="simon"/>
 <table cellpadding="10">
-  <tr><td><!--<img src="/assets/people/RobTaylor.jpg" align="left" width="120px">
+  <tr><td><img src="/assets/people/SimonCook.jpg" align="left" width="120px">
   <ul class="share-buttons">
-  <li><a href="https://www.linkedin.com/in/robtaylor78"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
-  <li><a href="https://twitter.com/robtaylor78"><img title="Visit my Twitter account" src="/assets/flat_web_icon_set/color/Twitter.png"></a></li>
-  </ul>--></td>
+  <li><a href="https://www.linkedin.com/in/spcookuk"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
+  <li><a href="https://github.com/simonpcook"><img title="Visit my GitHub account" src="/assets/flat_web_icon_set/color/Github.png"></a></li>
+  <li><a href="https://twitter.com/simonpcook"><img title="Visit my Twitter account" src="/assets/flat_web_icon_set/color/Twitter.png"></a></li>
+  </ul></td>
   <td><h4>Simon Cook</h4>
+
+    Simon has keen interests in open source hardware and software. He
+	maintains the AAP project, an open source processor designed to
+	improve software tooling for all hardware architectures.
 
   </td></tr>
 </table>
