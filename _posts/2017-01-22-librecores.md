@@ -11,7 +11,7 @@ author: Stefan Wallentowitz and Philipp Wagner
 One of our main projects is [LibreCores.org](https://librecores.org), a
 community portal for open source digital designs.
 
-[LibreCores.org](http://librecores.org) is currently under development
+[LibreCores.org](https://librecores.org) is currently under development
 and needs constant improvement. We are always searching for developers
 that are interested to contribute to the development of
 [LibreCores.org](https://librecores.org). From designing, to writing of
@@ -22,9 +22,8 @@ Right now we're especially looking for people who have experience with the
 design of web sites using the [Symfony PHP framework](http://symfony.com/),
 and associated frontend technolgies such as HTML and JavaScript.
 
-If you are interested to contribute, please have a look at our contribution
-documentation at
-http://librecores-web.readthedocs.io/en/latest/contributing.html.
+If you are interested and want to contribute, please have a look at our
+[contribution guide](http://librecores-web.readthedocs.io/en/latest/contributing.html).
 
 *Job Offer* We have funds allocated for the development and search for
  contractors for the aforementioned tasks. If you want to work for us
