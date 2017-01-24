@@ -8,7 +8,7 @@ The Foundation's goals can be achieved with your support in a couple of ways.
 
 1. Sponsorship packages - if you'd like to support the FOSSi Foundation by becoming a tiered sponsor, get in touch via <a href="mailto:fossi-fundraising@lists.librecores.org?subject=FOSSi sponsorship enquiry">fossi-fundraising@lists.librecores.org</a> and the details on our sponsorship packages.
 
-2. Developers - setting up our infrastructure takes work and we're interested in having more people to lend a hand. See our News &amp; Posts section for the latest requests, or contact us at  <a
+2. Developers - setting up our infrastructure takes work and we're interested in having more people to lend a hand. See our <a href="/archive.html">News &amp; Posts</a> section for the latest requests, or contact us at  <a
 href="mailto:info@fossi-foundation.org">info@fossi-foundation.org</a> to offer your help maintaining and developing our sites like <a href="https://librecores.org">LibreCores</a>.
 
 3. Talk. We encourage discussion on all things open source digital design and FOSSi on the LibreCores discussion mailing list: <a
