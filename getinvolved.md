@@ -11,12 +11,17 @@ The Foundation's goals can be achieved with your support in a couple of ways.
 2. Developers - setting up our infrastructure takes work and we're interested in having more people to lend a hand. See our News &amp; Posts section for the latest requests, or contact us at  <a
 href="mailto:info@fossi-foundation.org">info@fossi-foundation.org</a> to offer your help maintaining and developing our sites like <a href="https://librecores.org">LibreCores</a>.
 
-3. Individual donations.
+3. Talk. We encourage discussion on all things open source digital design and FOSSi on the LibreCores discussion mailing list: <a
+href="mailto:discussion@lists.librecores.org">discussion@lists.librecores.org</a>
+(<a href="https://lists.librecores.org/listinfo/discussion">subscribe
+here</a>). A few of us are also hanging out on IRC (#librecores at
+freenode).
+
+4. Individual donations. You can also support us with small donations via Paypal:
 
 <center>
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post"
 target="_top">
-<p>You can also support us with small donations via Paypal:</p>
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="QHKDZY6XM44YN">
 <input type="image"
@@ -28,10 +33,4 @@ src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1"
 height="1">
 </form>
 </center>
-
-4. Talk. We encourage discussion on all things open source digital design and FOSSi on the LibreCores discussion mailing list: <a
-href="mailto:discussion@lists.librecores.org">discussion@lists.librecores.org</a>
-(<a href="https://lists.librecores.org/listinfo/discussion">subscribe
-here</a>). A few of us are also hanging out on IRC (#librecores at
-freenode).
 
