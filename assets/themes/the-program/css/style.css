@@ -676,6 +676,16 @@ pre {
 .unit-article a:hover {
   border-bottom: 1px dashed #d08688;
 }
+.unit-imglnk a:link {
+  border-bottom: 0px;
+}
+.unit-imglnk a:visited {
+  border-bottom: 0px;
+}
+.unit-imglnk a:visited {
+  border-bottom: 0px;
+}
+
 .unit-article blockquote {
   border-left: 1em solid rgba(21, 25, 25, 0.8);
   padding-left: 1em;
@@ -728,8 +738,7 @@ pre {
   background-color: #fff04a;
 }
 .unit-article img {
-  display: block;
-  margin-left: auto;
+  display: inline;
   margin-left: auto;
 }
 .unit-article img.left {
