@@ -135,10 +135,10 @@ help us reaching our goals, please don't hesitate to
 
 * Chaired by: Stefan Wallentowitz & Julius Baxter
 * Javier Serrano, CERN
-* Andrew Back, ABOpen and FOSSi
+* Andrew Back, ABOpen and FOSSi Foundation
 
 ### Fundraising
 
 * Chaired by: Julius Baxter & Stefan Wallentowitz
 * Michael Gielda, Antmicro
-* Andrew Back, ABOpen and FOSSi
+* Andrew Back, ABOpen and FOSSi Foundation
