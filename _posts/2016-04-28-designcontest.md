@@ -4,9 +4,8 @@ title: "LibreCores Design Contest"
 description: ""
 category: 
 tags: []
-author: wallento
+author: Stefan Wallentowitz
 ---
-{% include JB/setup %}
 
 The FOSSi foundation launches an annual student design contest, which
 will run for the first time this year. You can find the full

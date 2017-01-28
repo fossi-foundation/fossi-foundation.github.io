@@ -6,7 +6,6 @@ category:
 tags: []
 author: Stefan Wallentowitz
 ---
-{% include JB/setup %}
 
 This year we held the <a
 href="https://librecores.org/designcontest">LibreCores Student Design

@@ -6,7 +6,6 @@ category:
 tags: []
 author: Olof Kindgren
 ---
-{% include JB/setup %}
 
 We have just released the first batch of speakers for the upcoming orconf 2016 iin Bologna, Italy on October 7-9. The presentations include new Open Source CPU implementations, formal verification tools and platforms for verification and continous integration.
 

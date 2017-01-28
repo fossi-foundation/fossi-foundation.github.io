@@ -6,7 +6,6 @@ category:
 tags: []
 author: Olof Kindgren
 ---
-{% include JB/setup %}
 
 We are delighted to announce that well-known Open Source evangelist [Andrew Back](/organization#andrew) has joined the FOSSi Foundation board of directors.
 

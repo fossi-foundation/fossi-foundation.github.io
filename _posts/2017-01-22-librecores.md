@@ -6,7 +6,6 @@ category:
 tags: []
 author: Stefan Wallentowitz and Philipp Wagner
 ---
-{% include JB/setup %}
 
 One of our main projects is [LibreCores.org](https://librecores.org), a
 community portal for open source digital designs.

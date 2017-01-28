@@ -4,9 +4,8 @@ title: "Google Summer of Code - Update"
 description: ""
 category:
 tags: []
-author: wallento
+author: Stefan Wallentowitz
 ---
-{% include JB/setup %}
 
 We host three students this year during Google's Summer of Code. The
 midterm is over and they are fastly approaching the end of the
