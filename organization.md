@@ -134,8 +134,10 @@ help us reaching our goals, please don't hesitate to
 ### Licensing
 
 * Chaired by: Stefan Wallentowitz & Julius Baxter
-* Javier Serrano, CERN
 * Andrew Back, ABOpen and FOSSi Foundation
+* Ben Hilburn, GNURadio
+* Javier Serrano, CERN
+* Josh Triplett
 
 ### Fundraising
 
