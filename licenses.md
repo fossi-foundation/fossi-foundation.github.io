@@ -116,6 +116,7 @@ progresses.
 
 ## Further reading (not all FOSSi/HDL-oriented)
 
+ * [Our planned activities](2017/02/10/licensing-roadmap)
  * [http://www.ladyada.net/library/openhardware/license.html](http://www.ladyada.net/library/openhardware/license.html)
  * [https://github.com/ewa/free-hdl-license/wiki](https://github.com/ewa/free-hdl-license/wiki)
  * [http://www.inmojo.com/licenses/](http://www.inmojo.com/licenses/)
@@ -133,5 +134,6 @@ progresses.
 ### Copyleft
 
  * [CERN OHL](http://www.ohwr.org/projects/cernohl/wiki)
+ * [OHDL](http://juliusbaxter.net/ohdl/)
 
 
