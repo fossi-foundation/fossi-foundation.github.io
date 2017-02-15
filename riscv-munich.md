@@ -24,7 +24,7 @@ Foundation will give a brief overview of open-source digital hardware
 and its related activities.
 
 *Location: TU München, Lecture Hall N1179,
-[Theresienstraße 90, 80333 München](http://www.openstreetmap.org/#map=13/48.1506/11.5444&layers=T)*
+[Theresienstraße 90, 80333 München](http://www.openstreetmap.org/?mlat=48.1502&mlon=11.5685#map=15/48.1502/11.5685&layers=T)*
 
 *The event is free to attend, but please [register here](https://goo.gl/forms/WHhJnlvftof3riXn2)*
 
