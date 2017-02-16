@@ -1,10 +1,11 @@
 ---
 layout: page
-title: "RISC-V and Open Source Silicon"
+title: "Open Source Silicon with RISC-V"
 ---
 {% include JB/setup %}
 
-FOSSi Foundation organizes a community event in
+In cooperation with the Technical University of Munich, FOSSi
+Foundation organizes a community event in
 *Munich, 23.3.2017, 16.00h - 19.00h*
 
 The RISC-V instruction set architecture (ISA) has gained a lot of
