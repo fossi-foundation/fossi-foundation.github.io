@@ -16,7 +16,7 @@ ecosystem were welcome very much. It was an interesting event and I
 had some great discussions. Please find my slides
 [here](https://speakerdeck.com/wallento/the-state-of-open-source-processors-and-open-source-silicon).
 
-Another great thing is I can announce an event organized by us in
+As another great update we announce an event organized by us in
 Munich, Germany, on March 23:
 [Open Source Silicon with RISC-V](/riscv-munich). Krste Asanovic will
 speak about [RISC-V](http://riscv.org), Rob Mullins and Alex Bradbury
