@@ -30,7 +30,7 @@ and its related activities.
 *The event is free to attend, but please [register here](https://goo.gl/forms/WHhJnlvftof3riXn2)*
 
 ### RISC-V: Instruction Sets Want to Be Free
-*Krste Asanovic, University of California, Berkeley*
+*Krste Asanović, University of California, Berkeley*
 
 The free and open RISC-V ISA has seen recent uptake around the
 world. This talk will cover the technical features of the RISC-V ISA
