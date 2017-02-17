@@ -665,7 +665,7 @@ pre {
 .unit-article .entry-content:first-child h4,
 .unit-article .entry-content:first-child h5,
 .unit-article .entry-content:first-child h6 {
-  margin-top: 0;
+  margin-top: 25px;
 }
 .unit-article a:link {
   border-bottom: 1px dashed #c26164;
