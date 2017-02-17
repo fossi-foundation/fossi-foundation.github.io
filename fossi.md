@@ -95,7 +95,7 @@ is on the one hand the cost and difficulty of production and on the
 other hand the reluctance of companies from this field as it still
 seen critical.
 
-# The FOSSi ecosystem
+## The FOSSi ecosystem
 
 Beside fostering the development of Free and Open Source Silicon we
 encourage the open source development of the FOSSi ecosystem. This
