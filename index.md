@@ -1,14 +1,13 @@
 ---
 layout: page
-title: "FOSSi: The Free and Open Source Silicon Foundation"
+title: "The Free and Open Source Silicon Foundation"
 ---
-{% include JB/setup %}
 
-Welcome to the Free and Open Source Silicon (FOSSi) Foundation.
-FOSSi is a non-profit foundation with the mission to promote and
+Welcome to the Free and Open Source Silicon (FOSSi) Foundation.  FOSSi
+Foundationis a non-profit foundation with the mission to promote and
 assist free and open digital hardware designs and their related
-ecosystems. FOSSi operates as an open, inclusive, vendor-independent
-group.
+ecosystems. FOSSi Foundation operates as an open, inclusive,
+vendor-independent group.
 
 ### What is Free and Open Source Silicon?
 
@@ -35,4 +34,4 @@ sponsors
    providing a platform for free and open source silicon
 
 Further details about our values and goals can be found in the FOSSi
-[manifesto](manifesto)
+Foundation [manifesto](manifesto)

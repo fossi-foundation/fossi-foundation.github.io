@@ -2,11 +2,10 @@
 layout: page
 title: "Open Source Silicon with RISC-V"
 ---
-{% include JB/setup %}
 
 In cooperation with the Technical University of Munich, FOSSi
 Foundation organizes a community event in
-*Munich, 23.3.2017, 16.00h - 19.00h*
+**Munich, 23.3.2017, 16.00h - 19.00h**
 
 The RISC-V instruction set architecture (ISA) has gained a lot of
 attention recently, for example as the "Analyst's Choice: Technology
@@ -24,13 +23,15 @@ provide an overview of their projects. Beside that the FOSSi
 Foundation will give a brief overview of open-source digital hardware
 and its related activities.
 
-*Location: TU München, Lecture Hall N1179,
-[Theresienstraße 90, 80333 München](http://www.openstreetmap.org/?mlat=48.1502&mlon=11.5685#map=15/48.1502/11.5685&layers=T)*
+**Location: TU München, Lecture Hall N1179,
+[Theresienstraße 90, 80333 München](http://www.openstreetmap.org/?mlat=48.1502&mlon=11.5685#map=15/48.1502/11.5685&layers=T)**
 
-*The event is free to attend, but please [register here](https://goo.gl/forms/WHhJnlvftof3riXn2)*
+<div class="alert alert-info"><b>The event is free to attend, but
+please <a href="https://goo.gl/forms/WHhJnlvftof3riXn2">register
+here</a> for better planning.</b></div>
 
 ### RISC-V: Instruction Sets Want to Be Free
-*Krste Asanović, University of California, Berkeley*
+**Krste Asanović, University of California, Berkeley**
 
 The free and open RISC-V ISA has seen recent uptake around the
 world. This talk will cover the technical features of the RISC-V ISA
@@ -41,7 +42,7 @@ governance of the RISC-V ISA, in particular the setup of the RISC-V
 Foundation. More information [http://riscv.org](http://riscv.org)
 
 ### lowRISC
-*Rob Mullins, Alex Bradbury, University of Cambridge*
+**Rob Mullins, Alex Bradbury, University of Cambridge**
 
 The lowRISC platform aims to be the "Linux of the hardware world",
 providing a high quality, secure, and open base for derivative
@@ -54,7 +55,7 @@ features such as tagged memory and minion cores. More information:
 [http://lowrisc.org](http://lowrisc.org)
 
 ### Free and Open Source Silicon
-*Stefan Wallentowitz, Free and Open Source Silicon Foundation*
+**Stefan Wallentowitz, Free and Open Source Silicon Foundation**
 
 The FOSSi Foundation is a community-controlled not-for-profit
 organization with the mission to promote and assist free and open

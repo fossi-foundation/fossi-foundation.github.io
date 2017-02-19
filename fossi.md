@@ -2,7 +2,6 @@
 layout: page
 title: "What is Free and Open Source Silicon (FOSSi)?"
 ---
-{% include JB/setup %}
 
 Free and Open Source Silicon (FOSSi) are components and systems that
 are inside silicon devices (‘chips’). It is our core belief that

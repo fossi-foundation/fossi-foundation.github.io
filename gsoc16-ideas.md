@@ -2,7 +2,6 @@
 layout: page
 title: "Google Summer of Code 2016 - Ideas for Projects"
 ---
-{% include JB/setup %}
 
 We are accepted as an organization in this years Google Summer of
 Code. Students can apply with proposals in the time frame from March

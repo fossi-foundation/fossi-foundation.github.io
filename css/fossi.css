@@ -1,0 +1,82 @@
+.fossi-navbar {
+  background-color: #e2e2de;
+  border-radius: 0px;
+}
+
+.fossi-logo-large {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+  flex-wrap: wrap;
+}
+.row > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
+
+.fossi-sidebar {
+    background-color: #e2e2de;
+    padding: 0;
+}
+
+.fossi-recent {
+    background-color: #e2e2de;
+    padding-top: 30px
+}
+
+.fossi-title {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.fossi-navlink {
+    font-weight: bold;
+}
+
+/* make sidebar nav vertical */ 
+@media (min-width: 992px) {
+  .sidebar-nav .navbar .navbar-collapse {
+    padding: 0;
+    max-height: none;
+  }
+  .sidebar-nav .navbar ul {
+    float: none;
+    display: block;
+  }
+  .sidebar-nav .navbar li {
+    float: none;
+    display: block;
+  }
+  .sidebar-nav .navbar li a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+
+/* social media */
+ul.share-buttons{
+  list-style: none;
+  padding: 5px;
+}
+
+ul.share-buttons li{
+  display: inline;
+}
+ul.share-buttons img{
+  display: inline;
+  margin:0;
+}
+ul.share-buttons a{
+  text-decoration:none;
+  border-bottom:0 !important;
+  margin:0;
+}

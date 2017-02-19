@@ -2,7 +2,6 @@
 layout: page
 title: "Manifesto of the Free and Open Source Silicon Foundation"
 ---
-{% include JB/setup %}
 
 The Free and Open Source Silicon Foundation, hereinafter referred to
 as FOSSi, is a non-profit foundation with the mission to promote and

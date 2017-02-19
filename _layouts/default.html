@@ -1,6 +1,37 @@
----
-theme :
-  name : the-program
----
-{% include JB/setup %}
-{% include themes/the-program/default.html %}
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+    <div class="container">
+      <div class="row">
+	<div class="col-md-2 fossi-sidebar">
+	    {% include header.html %}
+	</div>
+	<div class="col-md-7" style="border-left: 2px solid lightgrey; border-right: 2px solid lightgrey;">
+          {{ content }}
+	</div>
+	<div class="col-md-3 fossi-recent">
+	  <h4>Recent activity</h4>
+	    {% for post in site.posts limit:5 %}
+	  <p><b>{{ post.date | date_to_string }}</b> &raquo;
+	      <a href="{{ BASE_PATH }}{{ post.url }}">
+		<b>{{post.title}}</b></a><br/>
+	      {{ post.content | strip_html | truncatewords: 20 }}..
+	      <a href="{{ BASE_PATH }}{{ post.url }}">
+		more</a></p>
+	    {% endfor %}
+	</div>
+      </div>
+    </div>
+
+<!--    {% include footer.html %} -->
+
+  </body>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</html>

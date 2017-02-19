@@ -2,7 +2,6 @@
 layout: page
 title: "Licenses for Free and Open Source Silicon"
 ---
-{% include JB/setup %}
 
 This text briefly introduces the reader to open source licensing,
 attempt to explain the FOSSi licensing situation at present, and

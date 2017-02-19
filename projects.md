@@ -2,7 +2,6 @@
 layout: page
 title: "Foundation Projects"
 ---
-{% include JB/setup %}
 
 In the following you can find a list of our projects that we run or we
 are involved in.

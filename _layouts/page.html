@@ -1,7 +1,12 @@
 ---
-theme :
-  name : the-program
 layout: default
 ---
-{% include JB/setup %}
-{% include themes/the-program/page.html %}
+<article>
+
+  <h1 class="fossi-title">{{ page.title }}</h1>
+
+  <div>
+    {{ content }}
+  </div>
+
+</article>

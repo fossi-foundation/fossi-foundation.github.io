@@ -2,7 +2,6 @@
 layout: page
 title: "Support Us, Get Involved"
 ---
-{% include JB/setup %}
 
 The Foundation's goals can be achieved with your support in a couple of ways.
 

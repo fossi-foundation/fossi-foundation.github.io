@@ -2,7 +2,6 @@
 layout: page
 title: "Sponsors"
 ---
-{% include JB/setup %}
 
 We are currently fundraising for 2017 which is our first full year and
 we are scaling up committees, development efforts and resources. We
