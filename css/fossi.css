@@ -63,6 +63,13 @@
   }
 }
 
+.fossi-navbar-logo {
+    max-width: -webkit-calc(100% - 65px);
+    max-width:    -moz-calc(100% - 65px);
+    max-width:         calc(100% - 65px);
+    padding: 5px;
+}​
+
 /* social media */
 ul.share-buttons{
   list-style: none;
