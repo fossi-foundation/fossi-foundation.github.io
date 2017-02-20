@@ -25,8 +25,8 @@ help us reaching our goals, please don't hesitate to
 <a name="julius"/>
 <div class="row">
 <div class="col-lg-3 col-md-4 col-sm-3">
-	<img src="/assets/people/JuliusBaxter.jpg" align="left" width="150px">
-  <ul class="share-buttons">
+  <img src="/assets/people/JuliusBaxter.jpg" align="left" width="150px">
+  <ul class="share-buttons" style="padding-left: 0">
   <li><a href="https://www.linkedin.com/in/julius-baxter-78840223"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
   <li><a href="https://github.com/juliusbaxter"><img title="Visit my GitHub account" src="/assets/flat_web_icon_set/color/Github.png"></a></li>
   </ul>
@@ -41,7 +41,7 @@ help us reaching our goals, please don't hesitate to
 <div class="row">
 <div class="col-lg-3 col-md-4 col-sm-3">
   <img src="/assets/people/OlofKindgren.jpg" align="left" width="150px">
-  <ul class="share-buttons">
+  <ul class="share-buttons" style="padding-left: 0">
   <li><a href="https://www.linkedin.com/in/olofkindgren"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
   <li><a href="https://github.com/olofk/"><img title="Visit my GitHub account" src="/assets/flat_web_icon_set/color/Github.png"></a></li>
   <li><a href="https://twitter.com/OlofKindgren"><img title="Visit my Twitter account" src="/assets/flat_web_icon_set/color/Twitter.png"></a></li>
@@ -57,7 +57,7 @@ help us reaching our goals, please don't hesitate to
 <div class="row">
 <div class="col-lg-3 col-md-4 col-sm-3">
   <img src="/assets/people/PhilippWagner.jpg" align="left" width="150px">
-  <ul class="share-buttons">
+  <ul class="share-buttons" style="padding-left: 0">
   <li><a href="mailto:mail@philipp-wagner.com"><img title="Send me an email" src="/assets/flat_web_icon_set/color/Email.png"/></a></li>
   <li><a href="https://www.linkedin.com/in/imphil"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"/></a></li>
   <li><a href="https://github.com/imphil"><img title="Visit my GitHub account" src="/assets/flat_web_icon_set/color/Github.png"/></a></li>
@@ -73,7 +73,7 @@ help us reaching our goals, please don't hesitate to
 <div class="row">
 <div class="col-lg-3 col-md-4 col-sm-3">
   <img src="/assets/people/StefanWallentowitz.png" align="left" width="150px">
-  <ul class="share-buttons">
+  <ul class="share-buttons" style="padding-left: 0">
   <li><a href="https://www.linkedin.com/in/wallento"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
   <li><a href="https://github.com/wallento/"><img title="Visit my GitHub account" src="/assets/flat_web_icon_set/color/Github.png"></a></li>
   <li><a href="https://twitter.com/wallento"><img title="Visit my Twitter account" src="/assets/flat_web_icon_set/color/Twitter.png"></a></li>
@@ -95,7 +95,7 @@ help us reaching our goals, please don't hesitate to
 <div class="row">
 <div class="col-lg-3 col-md-4 col-sm-3">
   <img src="/assets/people/SimonCook.jpg" align="left" width="150px">
-  <ul class="share-buttons">
+  <ul class="share-buttons" style="padding-left: 0">
   <li><a href="https://www.linkedin.com/in/spcookuk"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
   <li><a href="https://github.com/simonpcook"><img title="Visit my GitHub account" src="/assets/flat_web_icon_set/color/Github.png"></a></li>
   <li><a href="https://twitter.com/simonpcook"><img title="Visit my Twitter account" src="/assets/flat_web_icon_set/color/Twitter.png"></a></li>
@@ -117,7 +117,7 @@ help us reaching our goals, please don't hesitate to
 <div class="row">
 <div class="col-lg-3 col-md-4 col-sm-3">
   <img src="/assets/people/AndrewBack.jpg" align="left" width="150px">
-  <ul class="share-buttons">
+  <ul class="share-buttons" style="padding-left: 0">
   <li><a href="https://uk.linkedin.com/in/andrewback"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
   <li><a href="https://twitter.com/9600"><img title="Visit my Twitter account" src="/assets/flat_web_icon_set/color/Twitter.png"></a></li>
   </ul>

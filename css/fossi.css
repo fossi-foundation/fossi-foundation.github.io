@@ -74,8 +74,7 @@
 
 /* social media */
 ul.share-buttons{
-  list-style: none;
-  padding: 5px;
+    list-style: none;
 }
 
 ul.share-buttons li{
@@ -83,7 +82,8 @@ ul.share-buttons li{
 }
 ul.share-buttons img{
   display: inline;
-  margin:0;
+  margin: 0;
+  padding-top: 5px;
 }
 ul.share-buttons a{
   text-decoration:none;
