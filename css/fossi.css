@@ -90,3 +90,26 @@ ul.share-buttons a{
   border-bottom:0 !important;
   margin:0;
 }
+
+.panel-platinum {
+    background-color: #E5E4E2;
+}
+
+.panel-gold {
+    background-color: #FFD700;
+}
+
+.panel-silver {
+    background-color: #C0C0C0;
+}
+
+.panel-bronze {
+    background-color: #8C7853;
+}
+
+.panel-sponsors {
+    padding: 3px;
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+}

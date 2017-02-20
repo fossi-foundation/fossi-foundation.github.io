@@ -9,16 +9,23 @@ are searching for sponsors to support our efforts. If you are
 interested, please contact us at
 [sponsoring@fossi-foundation.org](mailto:sponsoring@fossi-foundation.org).
 
-We gratefully thank our sponsors that supported our ramp up in 2015
-and 2016:
+<!--<div class="panel panel-sponsors panel-platinum">Platinum (> €20,000)</div>
 
-<center>
- <div class="unit-imglnk">
-  <a target="_blank" href="http://www.embecosm.com/">
-   <img src="http://www.embecosm.com/app/uploads/embecosm-logo.png" style="margin: 10px"/>
-  </a>
-  <a target="_blank" href="http://www.southpole.se/">
-   <img src="https://www.southpole.se/gfx/southpole_logo.gif" style="margin: 10px"/>
-  </a>
- </div>
-</center>
+<div class="panel panel-sponsors panel-gold">Gold (€10,000 - €20,000)</div>-->
+
+<div class="panel panel-sponsors panel-silver">Silver (€5,000 - €10,000)</div>
+
+<div class="row">
+  <div class="col-sm-3 col-xs-6">
+    <a target="_blank" href="https://www.cadence.com/content/cadence-www/global/en_US/home/services/cadence-academic-network.html">
+      <img src="/assets/Cadence.jpg" class="img-responsive" />
+	  </a>
+  </div>
+</div>
+
+<div class="panel panel-sponsors panel-bronze">Bronze (€1,000 - €5,000)</div>
+
+<div class="row">
+<div class="col-sm-3"><a target="_blank" href="http://www.embecosm.com/">Embecosm Ltd.</a></div>
+</div>
+
