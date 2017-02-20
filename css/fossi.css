@@ -26,11 +26,13 @@
 .fossi-sidebar {
     background-color: #e2e2de;
     padding: 0;
+    border: 2px solid lightgrey;
 }
 
 .fossi-recent {
     background-color: #e2e2de;
-    padding-top: 30px
+    padding-top: 30px;
+    border: 2px solid lightgrey;
 }
 
 .fossi-title {
