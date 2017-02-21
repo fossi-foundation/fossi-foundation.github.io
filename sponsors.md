@@ -9,6 +9,8 @@ are searching for sponsors to support our efforts. If you are
 interested, please contact us at
 [sponsoring@fossi-foundation.org](mailto:sponsoring@fossi-foundation.org).
 
+We are very grateful to the companies that support our work!
+
 <!--<div class="panel panel-sponsors panel-platinum">Platinum (> €20,000)</div>
 
 <div class="panel panel-sponsors panel-gold">Gold (€10,000 - €20,000)</div>-->
