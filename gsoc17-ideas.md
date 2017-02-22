@@ -28,6 +28,7 @@ in Google Summer for Code 2017.
  * [Reference Implementation for a Leakage Aware Compiler Optimization](#reference-implementation-for-a-leakage-aware-compiler-optimization) (Verilog, C/C++)
  * [GNU Superoptimizer 2.0: Reference Implementation for the AAP](#gnu-superoptimizer-20-reference-implementation-for-the-aap) (C/C++, AAP Assembler)
  * [An Altruistic Processor (AAP): Reference Implementation](#an-altruistic-processor-aap-reference-implementation) (Verilog, FPGA)
+ * [A SystemVerilog Preprocessor](#a-systemverilog-preprocessor) (Java/C++)
  * [Open SoC Debug: Nexus Trace Format](#open-soc-debug-nexus-trace-format) (SystemVerilog)
  * [Open SoC Debug: Trace Visualization and Configuration](#open-soc-debug-trace-visualization-and-configuration)
    (C++/Java/JS)
@@ -480,6 +481,26 @@ DE0-Nano.
 *Language/Tools:* Verilog, Yosys FPGA synthesis tool flow
 
 *Mentors:* [Jeremy Bennett, Simon Cook, Andrew Burgess](mailto:jeremy.bennett@embecosm.com)
+
+### A SystemVerilog Preprocessor
+
+The SystemVerilog hardware description language has an extensive
+set of preprocessor features, and [antlr](http://antlr.org) has
+established itself as one of the best tools for building lexers
+and parsers. However it is not possible to parse SystemVerilog
+with **antlr** (or any other toolkit) unless the preprocessor
+directives have been processed. The preprocessor directives
+include among other things, parameterized macros, token pasting,
+conditionals, includes, etc. The goal of this project is to write
+this preprocessor. This will enable the creation, in the future,
+of [antlr](http://antlr.org) based SystemVerilog tools
+(code analyzers, compilers, simulators, synthesizers, etc).
+
+*Skill Level:* Advanced
+
+*Language/Tools:* [Antlr](http://antlr.org), Java or C++, [SystemVerilog](https://standards.ieee.org/getieee/1800/download/1800-2012.pdf)
+
+*Mentors:* [Martin d'Anjou](mailto:martin.danjou14@gmail.com)
 
 ### Open SoC Debug: Nexus Trace Format
 
