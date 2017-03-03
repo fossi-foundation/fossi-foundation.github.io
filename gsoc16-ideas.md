@@ -19,6 +19,7 @@ at [lowRISC](http://www.lowrisc.org/docs/gsoc-2016-ideas/) and
 
  * [Dependency Handling in the FuseSoC Package Manager](#dependency-handling-in-the-fusesoc-package-manager) (Python)
  * [Constrained randomised testing with coverage tracking in Cocotb](#constrained-randomised-testing-with-coverage-tracking-in-cocotb) (Python)
+ * [Constrained randomised testing with coverage tracking in Cocotb](#constrained-randomised-testing-with-coverage-tracking-in-cocotb) (Python)
  * [Contributions to Yosys Ecosystem](#contributions-to-yosys-ecosystem)
  * [Visualization and Debugging Interface for jor1k](#visualization-and-debugging-interface-for-jor1k) (JavaScript, HTML)
  * [Extend LibreCores.org](#extend-librecoresorg) (PHP, Symfony, MySQL, HTML, Javascript)

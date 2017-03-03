@@ -10,7 +10,7 @@ in Google Summer for Code 2017.
 
  * [Your LibreCore](#your-librecore) (Verilog, VHDL, Chisel)
  * [GPIO Switchbox](#gpio-switchbox) (Verilog)
- * [Museum on FPGA](#museum-on-fpga) (Verilog, VHDL)
+ * [Museum on FPGA](#first-generation-museum-on-fpga) (Verilog, VHDL)
  * [FuseSoC Generators](#fusesoc-generators) (Python)
  * [FuseSoC Provider for LibreCores API](#fusesoc-provider-for-librecores-api) (Python)
  * [Open Source Allure Test Report Adapter for UVM](#open-source-allure-test-report-adapter-for-uvm)
@@ -36,6 +36,11 @@ in Google Summer for Code 2017.
  * [LimeSDR: Integrate RISC-V Core](#limesdr-integrate-risc-v-core) (FPGA, HDL)
  * [LimeSDR: Switch to a FuseSoC-based Development Flow](#limesdr-switch-to-a-fusesoc-based-development-flow) (FPGA)
  * [OpTiMSoC: Linux Port](#optimsoc-linux-port) (C)
+ * [SystemC generator plugin for Kactus2](#systemc-generator-plugin-for-kactus2) (C++, SystemC)
+ * [3D browser for IP-XACT library for Kactus2](#3d-browser-for-ip-xact-library-for-kactus2) (C++, UI)
+ * [Pin Entry Device (PED) for Cryptech HSM](#pin-entry-device-ped-for-cryptech-hsm) (PCB, C)
+ * [Ethernet Interface Addon Board for the Cryptech HSM](#ethernet-interface-addon-board-for-the-cryptech-hsm) (PCB, Verilog, C)
+
 
 ### Your LibreCore
 
@@ -574,9 +579,11 @@ with trace compression and circular buffering.
 ### LimeSDR: Integrate RISC-V Core
 
 *Details:* [LimeSDR](https://myriadrf.org/projects/limesdr/) is a
-flexible software-defined platform that integrates an FPGA and a Lime
-Microsystems LMS7002 field-programmable RF frontned. The software is
-executed on softcores on the FPGA.
+flexible software-defined platform, that integrates an FPGA and a Lime
+Microsystems LMS7002M field-programmable RF transceiver, that is 2x2
+MIMO and can be tuned anywhere from 100KHz to 3.8GHz. The FPGA is
+presently used to take care of things such as interfacing, digital
+down-conversion and tuning, and sample time-stamping.
 
 Currently the Altera NIOS-II processor is used and in this project the
 goal is to replace it with an open source softcore implementing the
@@ -597,18 +604,19 @@ It consists of three parts:
 ### LimeSDR: Switch to a FuseSoC-based Development Flow
 
 *Details:* The [LimeSDR-USB](https://myriadrf.org/projects/limesdr/)
-platform integrates an FPGA that contains a System-on-Chip. The
-System-on-Chip employs a softcore and hardware blocks to perform
-signal processing tasks.
+platform integrates an FPGA that contains a System-on-Chip and DSP. The
+System-on-Chip employs a softcore for interfacing with the programming
+interface of RF transceiver, while hardware blocks take care of
+streaming, DSP and sample time-stamping.
 
 With the integration of more and more blocks and a varying number of
-FPGA implementations for different users a structured way of managing
-the dependencies and composition of hardware blocks. For that we want
-to provide a [FuseSoC](http://github.com/olofk/fusesoc)-based
-environment.
+FPGA implementations for different users, a structured way of managing
+the dependencies and composition of hardware blocks is needed. For that
+we would like to provide a
+[FuseSoC](http://github.com/olofk/fusesoc)-based environment.
 
 The goal of this project is to structure the repositories and add the
-infrastructure files for FuseSoC along with a proof-of-concept
+infrastructure files for FuseSoC, along with a proof-of-concept
 demonstration and a tutorial.
 
 *Skill level*: Beginner, Intermediate
@@ -638,3 +646,75 @@ explore different communication patterns.
 
 *Mentors:* [Stefan Wallentowitz](mailto:stefan@wallentowitz.de),
  [Philipp Wagner](mailto:mail@philipp-wagner.com)
+
+### SystemC generator plugin for Kactus2
+
+The project objective is to implement a [SystemC](http://systemc.org)
+generator for [Kactus2](http://funbase.cs.tut.fi/), an open-source
+IP-XACT tool. IP-XACT captures designs and components independent of
+implementation language, but the ability to generate SystemC from
+IP-XACT would enable designers to leverage SystemC for simulation and
+verification of their IP.
+
+*Skill level:* Intermediate
+
+*Language/Tools*: C++/Qt, SystemC
+
+*Mentor:* [Esko Pekkarinen](mailto:esko.pekkarinen@tut.fi)
+
+### 3D browser for IP-XACT library for Kactus2
+
+Browsing lists and tree structures in a graphical user interface is
+often tedious and relations between the objects may not be
+intuitive. Recently 3D visualization has become a rich alternative to
+traditional navigation. The project objective is to implement 3D
+browsing for IP-XACT objects in [Kactus2](http://funbase.cs.tut.fi/)
+tool.
+
+*Skill level:* Advanced
+
+*Language/Tools*: 3D graphics, C++/Qt, User interface design
+
+*Mentor:* [Esko Pekkarinen](mailto:esko.pekkarinen@tut.fi)
+
+### Pin Entry Device (PED) for Cryptech HSM
+
+The [Cryptech](http://cryptech.is) Open HSM currently provides a USB
+management interface only. For many HSM use cases, a local Pin Entry
+Device is preferred.  There is a header on the Cryptech Alpha board
+that would allow a PED to be connected to the CPU on the board.
+
+A PED would contain some sort of keypad and a simple display. The PED
+would probably contain the processing required to drive the display
+and the UI including commands and then talk to the HSM with a suitable
+protocol (similar to what is sent over the USB management interface).
+
+*Skill level:* Advanced
+
+*Language/Tools*: PCB design, Embededd SW development, UI design
+
+*Mentor:* [Joachim Strömbergson](mailto:joachim.strombergson@assured.se)
+
+
+### Ethernet Interface Addon Board for the Cryptech HSM
+
+Currently the Crypytech Open HSM Alpha board only provides
+connectivity for via USB (at serial port speeds). There are however
+interest in providing at least one Ethernet interface. This would
+allow the use of the Alpha board as a network connected HSM, and also
+provide higher throughput.
+
+The Alpha board contains headers where serveral FPGA I/Os are routed.
+The assignment would be to develop an addon board that contains at
+least PHY, but possibly MAC and PHY functionality for Fast or possibly
+Gbit Ethernet. The assigment also includes developing the interface
+core needed in the FPGA to connect the board to the rest of the
+FPGA. And finally to develop at least test SW for the ARM CPU on the
+Alpha board needed to talk to a host via the Ethernet interface
+
+*Skill level:* Advanced
+
+*Language/Tools*: PCB design, Ethernet networking, FPGA design
+(Verilog), Embedded SW design (C)
+
+*Mentor:* [Joachim Strömbergson](mailto:joachim.strombergson@assured.se)
