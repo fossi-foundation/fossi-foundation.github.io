@@ -40,8 +40,8 @@ in Google Summer for Code 2017.
  * [3D browser for IP-XACT library for Kactus2](#3d-browser-for-ip-xact-library-for-kactus2) (C++, UI)
  * [Pin Entry Device (PED) for Cryptech HSM](#pin-entry-device-ped-for-cryptech-hsm) (PCB, C)
  * [Ethernet Interface Addon Board for the Cryptech HSM](#ethernet-interface-addon-board-for-the-cryptech-hsm) (PCB, Verilog, C)
-
-
+ * [RISC-V DSP library on the Pulpino platform](#risc-v-dsp-library-on-the-pulpino-platform) (C, C++)
+ * [Adding support for Pulpino platform on ARM mbed IoT Device Platform](#adding-support-for-pulpino-platform-on-arm-mbed-iot-device-platform) (C, C++, Python)
 ### Your LibreCore
 
 *Details:* Our main goal is to grow the community around open source silicon
@@ -718,3 +718,48 @@ Alpha board needed to talk to a host via the Ethernet interface
 (Verilog), Embedded SW design (C)
 
 *Mentor:* [Joachim Strömbergson](mailto:joachim.strombergson@assured.se)
+
+### RISC-V DSP library on the Pulpino platform
+
+Pulpino is an open-source design containing a 32-bit RISC-V implementation
+enhanced with DSP extensions. Pulpino is part of the PULP project, an
+ecosystem of open-source hardware and software targeting a new generation of
+parallel ultra-low-power IoT devices.
+
+The goal of this project is to develop a RISC-V DSP library for the Pulpino
+platform. The implementation will consist in selecting a reasonable set of
+common signal processing functions, implementing it on Pulpino, optimizing it
+to take advantage of the RISC-V DSP extensions, and finally benchmarking it.
+This will help measuring the impact of the existing extensions and drive future
+extensions. Work could also be extended to the parallelization of this subset
+on the Pulp platform.
+
+*Skill level:* Intermediate
+
+*Language/Tools:* C/C++
+
+*Mentor:* [Davide Rossi](mailto:davide.rossi@unibo.it)
+
+### Adding support for Pulpino platform on ARM mbed IoT Device Platform
+
+Pulpino is an open-source design containing a 32-bit RISC-V implementation
+enhanced with DSP extensions. Pulpino is part of the PULP project, an ecosystem
+of open-source hardware and software targeting a new generation of parallel
+ultra-low-power IoT devices. The ARM mbed IoT Device Platform provides the OS,
+cloud services, tools and developer ecosystem to make the creation and
+deployment of IoT solutions fast and portable.
+The goal of this project is to extend the ARM mbed IoT Device Platform
+components to target the Pulpino platform. During the project the ARM mbed OS
+should be adapted to support the new target, and a proper support at IDE level
+should be developed.
+
+Links:
+http://www.pulp-platform.org
+https://github.com/pulp-platform/pulpino
+https://github.com/ARMmbed/
+
+*Skill level:* Advanced
+
+*Language/Tools:* C/C++, Python
+
+*Mentor:* [Davide Rossi](mailto:davide.rossi@unibo.it)
