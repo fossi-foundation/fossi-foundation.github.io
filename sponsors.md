@@ -42,6 +42,12 @@ We are very grateful to the companies that support our work!
 <div class="col-sm-2">Julius Baxter</div>
 </div>
 
+<div class="panel panel-sponsors panel-individual">Individual Donations (€100 - €500)</div>
+
+<div class="row">
+<div class="col-sm-2">Stefan Wallentowitz</div>
+</div>
+
 <div class="row" style="margin-top: 20px">
 <div class="col-sm-12">
 <center>
