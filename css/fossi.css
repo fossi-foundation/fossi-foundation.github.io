@@ -107,6 +107,12 @@ ul.share-buttons a{
     background-color: #8C7853;
 }
 
+.panel-individual {
+    background-color: #FFFFFF;
+    border-width: 1px;
+    border-color: #999999;
+}
+
 .panel-sponsors {
     padding: 3px;
     margin-top: 15px;

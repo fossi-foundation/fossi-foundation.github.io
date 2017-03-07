@@ -36,3 +36,27 @@ We are very grateful to the companies that support our work!
 <div class="col-sm-3"><a target="_blank" href="http://www.embecosm.com/">Embecosm Ltd.</a></div>
 </div>-->
 
+<div class="panel panel-sponsors panel-individual">Individual Donations (€500 - €1,000)</div>
+
+<div class="row">
+<div class="col-sm-2">Julius Baxter</div>
+</div>
+
+<div class="row" style="margin-top: 20px">
+<div class="col-sm-12">
+<center>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post"
+target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="QHKDZY6XM44YN">
+<input type="image"
+src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif"
+border="0" name="submit" alt="PayPal – The safer, easier way to pay
+online!">
+<img alt="" border="0"
+src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1"
+height="1">
+</form>
+</center>
+</div>
+</div>
