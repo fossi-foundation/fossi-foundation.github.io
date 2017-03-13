@@ -38,8 +38,6 @@ in Google Summer for Code 2017.
  * [OpTiMSoC: Linux Port](#optimsoc-linux-port) (C)
  * [SystemC generator plugin for Kactus2](#systemc-generator-plugin-for-kactus2) (C++, SystemC)
  * [3D browser for IP-XACT library for Kactus2](#3d-browser-for-ip-xact-library-for-kactus2) (C++, UI)
- * [Pin Entry Device (PED) for Cryptech HSM](#pin-entry-device-ped-for-cryptech-hsm) (PCB, C)
- * [Ethernet Interface Addon Board for the Cryptech HSM](#ethernet-interface-addon-board-for-the-cryptech-hsm) (PCB, Verilog, C)
  * [RISC-V DSP library on the Pulpino platform](#risc-v-dsp-library-on-the-pulpino-platform) (C, C++)
  * [Adding support for Pulpino platform on ARM mbed IoT Device Platform](#adding-support-for-pulpino-platform-on-arm-mbed-iot-device-platform) (C, C++, Python)
 ### Your LibreCore
@@ -676,48 +674,6 @@ tool.
 *Language/Tools*: 3D graphics, C++/Qt, User interface design
 
 *Mentor:* [Esko Pekkarinen](mailto:esko.pekkarinen@tut.fi)
-
-### Pin Entry Device (PED) for Cryptech HSM
-
-The [Cryptech](http://cryptech.is) Open HSM currently provides a USB
-management interface only. For many HSM use cases, a local Pin Entry
-Device is preferred.  There is a header on the Cryptech Alpha board
-that would allow a PED to be connected to the CPU on the board.
-
-A PED would contain some sort of keypad and a simple display. The PED
-would probably contain the processing required to drive the display
-and the UI including commands and then talk to the HSM with a suitable
-protocol (similar to what is sent over the USB management interface).
-
-*Skill level:* Advanced
-
-*Language/Tools*: PCB design, Embededd SW development, UI design
-
-*Mentor:* [Joachim Strömbergson](mailto:joachim.strombergson@assured.se)
-
-
-### Ethernet Interface Addon Board for the Cryptech HSM
-
-Currently the Crypytech Open HSM Alpha board only provides
-connectivity for via USB (at serial port speeds). There are however
-interest in providing at least one Ethernet interface. This would
-allow the use of the Alpha board as a network connected HSM, and also
-provide higher throughput.
-
-The Alpha board contains headers where serveral FPGA I/Os are routed.
-The assignment would be to develop an addon board that contains at
-least PHY, but possibly MAC and PHY functionality for Fast or possibly
-Gbit Ethernet. The assigment also includes developing the interface
-core needed in the FPGA to connect the board to the rest of the
-FPGA. And finally to develop at least test SW for the ARM CPU on the
-Alpha board needed to talk to a host via the Ethernet interface
-
-*Skill level:* Advanced
-
-*Language/Tools*: PCB design, Ethernet networking, FPGA design
-(Verilog), Embedded SW design (C)
-
-*Mentor:* [Joachim Strömbergson](mailto:joachim.strombergson@assured.se)
 
 ### RISC-V DSP library on the Pulpino platform
 
