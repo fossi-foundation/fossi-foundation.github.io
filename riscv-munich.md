@@ -62,3 +62,19 @@ organization with the mission to promote and assist free and open
 digital hardware design and their ecosystem. In this presentation you
 will learn about our goals and activities. More information:
 [http://fossi-foundation.org/](http://fossi-foundation.org/)
+
+## Birds of a Feather Sessions
+
+
+We want to announce we plan to hold a few "Birds of a Feather"
+sessions on Friday, March 24. The idea is to have some more in-depth
+60-minute discussions and gather your ideas and opinions. Based on the
+feedback we received so far about your interests we have the following
+sessions in mind:
+
+ * Open Source ASICs
+ * RISC-V Foundation and the RISC-V standards evolution
+ * RISC-V software ecosystem
+
+Please [get in touch](mailto:stefan@fossi-foundation.org) with us if
+you have ideas for other sessions.
