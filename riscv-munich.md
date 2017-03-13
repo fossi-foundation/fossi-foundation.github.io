@@ -26,6 +26,9 @@ and its related activities.
 **Location: TU München, Lecture Hall N1179,
 [Theresienstraße 90, 80333 München](http://www.openstreetmap.org/?mlat=48.1502&mlon=11.5685#map=15/48.1502/11.5685&layers=T)**
 
+There also are **"Birds of a Feather" sessions on
+[Friday](#birds-of-a-feather-sessions)**.
+
 <div class="alert alert-info"><b>The event is free to attend, but
 please <a href="https://goo.gl/forms/WHhJnlvftof3riXn2">register
 here</a> for better planning.</b></div>
