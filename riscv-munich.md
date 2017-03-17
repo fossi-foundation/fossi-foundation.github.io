@@ -82,5 +82,9 @@ in mind:
 
 **12.00-13.00** RISC-V security
 
+There will be sufficient time for discussions and coffee breaks, the
+timeframes are only a general guidance if you want to drop in for a
+specific topic.
+
 Please [get in touch](mailto:stefan@fossi-foundation.org) with us if
 you have ideas for other sessions.
