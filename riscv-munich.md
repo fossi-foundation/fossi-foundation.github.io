@@ -68,16 +68,19 @@ will learn about our goals and activities. More information:
 
 ## Birds of a Feather Sessions
 
+On Friday, March 24, we will hold "Birds of a Feather" sessions at TU
+Munich in room N2128. The idea is to have some more in-depth 60-minute
+discussions and gather your ideas and opinions. Based on the feedback
+we received so far about your interests we have the following sessions
+in mind:
 
-We want to announce we plan to hold a few "Birds of a Feather"
-sessions on Friday, March 24. The idea is to have some more in-depth
-60-minute discussions and gather your ideas and opinions. Based on the
-feedback we received so far about your interests we have the following
-sessions in mind:
+**9.00-10.00** Open Source ASICs (How can they happen? Challenges and opportunities)
 
- * Open Source ASICs
- * RISC-V Foundation and the RISC-V standards evolution
- * RISC-V software ecosystem
+**10.00-11.00** RISC-V Foundation and the RISC-V standards evolution (Governance framework, privileged spec, debug spec)
+
+**11.00-12.00** RISC-V software ecosystem (State of the ecosystem, compiler customization)
+
+**12.00-13.00** RISC-V security
 
 Please [get in touch](mailto:stefan@fossi-foundation.org) with us if
 you have ideas for other sessions.
