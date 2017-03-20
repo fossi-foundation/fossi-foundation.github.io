@@ -6,7 +6,7 @@ title: "Google Summer of Code 2017 - Ideas for Projects"
 We are happy to [announce](2017/03/02/gsoc) that we have been selected to participate in Google Summer of Code 2017!
 
 Whether you’re an aspiring student or mentor, feel free to contact us,
-either through the private GSoC-specific mailing list [gsoc@fossi-foundation.org](gsoc@fossi-foundation.org),
+either through the private GSoC-specific mailing list [mailto:gsoc@fossi-foundation.org](gsoc@fossi-foundation.org),
 through the public [discussion mailing list](https://lists.librecores.org/listinfo/discussion),
 or through the mentors listed for each project below.
 We are also available at #librecores on freenode if you’re an IRC user.
@@ -115,7 +115,7 @@ setup.
 
 *Language/Tool:* Verilog, VHDL, (Yosys) FPGA synthesis flow
 
-*Mentor:* [Andrew Back](andrew@abopen.com), [Jeremy Bennett](jeremy.bennett@embecosm.com)
+*Mentor:* [Andrew Back](mailto:andrew@abopen.com), [Jeremy Bennett](mailto:jeremy.bennett@embecosm.com)
 
 ### FuseSoC Generators
 
@@ -146,7 +146,7 @@ Examples of tasks that could make good use of generators
 
 *Language/Tool:* Python, basic knowledge of EDA tools
 
-*Mentor:* [Olof Kindgren](olof.kindgren@gmail.com)
+*Mentor:* [Olof Kindgren](mailto:olof.kindgren@gmail.com)
 
 ### FuseSoC Provider for LibreCores API
 
@@ -165,7 +165,7 @@ the (recursive) fetching of core files.
 *Language/Tool:* Python
 
 *Mentors:* [Stefan Wallentowitz](mailto:stefan@wallentowitz.de),
- [Olof Kindgren](olof.kindgren@gmail.com)
+ [Olof Kindgren](mailto:olof.kindgren@gmail.com)
 
 ### Open Source Allure Test Report Adapter for UVM
 
@@ -191,7 +191,7 @@ existing automation tools.
 
 *Language/Tool:* SystemVerilog, Simulator
 
-*Mentor:* [Martin d'Anjou](martin.danjou14@gmail.com)
+*Mentor:* [Martin d'Anjou](mailto:martin.danjou14@gmail.com)
 
 ### Constrained randomised testing with coverage tracking in Cocotb
 
@@ -249,8 +249,8 @@ of a simple mixed-language design.
 
 *Language/Tool:* C++, Flex/Bison, Understand the tool flow
 
-*Mentor:* [Tristan Gingold](tgingold@free.fr),
- [Olof Kindgren](olof.kindgren@gmail.com)
+*Mentor:* [Tristan Gingold](mailto:tgingold@free.fr),
+ [Olof Kindgren](mailto:olof.kindgren@gmail.com)
 
 ### Open Source HDL Micro-Benchmark Suite
 
@@ -372,7 +372,7 @@ Prerequisites:
 
 *Language/Tools:* Verilog/VHDL/.../Python, Jenkins, Groovy
 
-*Mentors:* [Oleg Nenashev](o.v.nenashev@gmail.com),
+*Mentors:* [Oleg Nenashev](mailto:o.v.nenashev@gmail.com),
 [Stefan Wallentowitz](mailto:stefan@wallentowitz.de)
 
 ### EDA Tool plugin for Jenkins and LibreCores CI
@@ -399,8 +399,8 @@ Prerequisites:
 
 *Language/Tool:* Jenkins, one of EDA tools, Java
 
-*Mentors:* [Oleg Nenashev](o.v.nenashev@gmail.com),
- [Martin d'Anjou](martin.danjou14@gmail.com)
+*Mentors:* [Oleg Nenashev](mailto:o.v.nenashev@gmail.com),
+ [Martin d'Anjou](mailto:martin.danjou14@gmail.com)
 
 ### OpenRISC or RISC-V Port of the ROMCC (ROM C Compiler)
 
@@ -604,7 +604,7 @@ It consists of three parts:
 
 *Language/Tools*: HDL, FPGA synthesis
 
-*Mentor:* [Andrew Back](andrew@abopen.com)
+*Mentor:* [Andrew Back](mailto:andrew@abopen.com)
 
 ### LimeSDR: Switch to a FuseSoC-based Development Flow
 
@@ -628,7 +628,7 @@ demonstration and a tutorial.
 
 *Language/Tools*: Understanding of HDL Synthesis
 
-*Mentor:* [Andrew Back](andrew@abopen.com)
+*Mentor:* [Andrew Back](mailto:andrew@abopen.com)
 
 ### OpTiMSoC: Linux Port
 
