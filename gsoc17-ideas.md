@@ -6,7 +6,7 @@ title: "Google Summer of Code 2017 - Ideas for Projects"
 We are happy to [announce](2017/03/02/gsoc) that we have been selected to participate in Google Summer of Code 2017!
 
 Whether you’re an aspiring student or mentor, feel free to contact us,
-either through the private GSoC-specific mailing list [mailto:gsoc@fossi-foundation.org](gsoc@fossi-foundation.org),
+either through the private GSoC-specific mailing list [gsoc@fossi-foundation.org](mailto:gsoc@fossi-foundation.org),
 through the public [discussion mailing list](https://lists.librecores.org/listinfo/discussion),
 or through the mentors listed for each project below.
 We are also available at #librecores on freenode if you’re an IRC user.
