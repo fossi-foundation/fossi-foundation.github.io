@@ -108,8 +108,9 @@ software development
 synthesis. The following list is incomplete and is meant to inspire
 student proposals. Do not simply pick one of the projects on this
 list! We are interested in genuinely original student
-proposals. Please contact [Clifford Wolf](mailto:clifford@clifford.at)
-early in the process to discuss your ideas.
+proposals. Please contact
+[FOSSi GSoC team](mailto:gsoc@fossi-foundation.org) early in the
+process to discuss your ideas.
 
 *Ideas regarding [Project IceStorm](http://www.clifford.at/icestorm)
  (the FOSS iCE40 FPGA flow)*
@@ -141,7 +142,7 @@ early in the process to discuss your ideas.
 
 *Skill Level:* Intermediate/Advanced
 
-*Mentor:* [Clifford Wolf](mailto:clifford@clifford.at)
+*Mentor:* [FOSSi GSoC team](mailto:gsoc@fossi-foundation.org)
 
 ### Visualization and Debugging Interface for jor1k
 
