@@ -5,9 +5,9 @@ title: "Sponsors"
 
 We are currently fundraising for 2017 which is our first full year and
 we are scaling up committees, development efforts and resources. We
-are searching for sponsors to support our efforts. If you are
-interested, please contact us at
-[sponsoring@fossi-foundation.org](mailto:sponsoring@fossi-foundation.org).
+are searching for sponsors to support our efforts. Please find more
+details and why sponsoring us helps you and the community
+[here](sponsoring).
 
 We are very grateful to the companies that support our work!
 
