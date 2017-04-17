@@ -64,5 +64,5 @@ ecosystem.
 Overall, I think the event was a great success and I had the
 impression the attendants really enjoyed it too.
 
-**Update:** Our friends of AntMicro also have
+**Update:** Our friends of Antmicro also have
   [blogged about the event](http://antmicro.com/blog/2017/04/risc-v-munich/).
