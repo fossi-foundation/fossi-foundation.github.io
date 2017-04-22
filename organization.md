@@ -33,7 +33,11 @@ help us reaching our goals, please don't hesitate to
 </div>
 <div class="col-lg-9 col-md-8 col-sm-9">
   <h4>Julius Baxter</h4>
-  Julius' interests in the open source hardware arena range from RTL to licensing. He began his involvement with work on the OpenRISC project and saw the value that fostering a community of like-minded developers brings to a project, and aims to bring similar enthusiasm and interest to the field of open source digital design through his work with the FOSSi foundation.
+  Julius' involvement with free and open source semiconductor design began with
+  his work as part of the OpenRISC community in 2008. After initial technical
+  contributions, he's since focused on promoting greater community coordination,
+  finding a solution for copyleft semiconductor design licensing, and encouraging
+  greater uptake of the technology by the wider semiconductor industry.
   </div>
 </div>
 
