@@ -30,9 +30,15 @@ We are very grateful to the companies that support our work!
   </div>
 </div>
 
-<!--<div class="panel panel-sponsors panel-bronze">Bronze (€1,000 - €5,000)</div>
-
+<div class="panel panel-sponsors panel-bronze">Bronze (€1,000 - €5,000)</div>
 <div class="row">
+  <div class="col-sm-3 col-xs-6">
+    <a target="_blank" href="https://oshpark.com/">
+      OSH Park<img src="/assets/osh-park.png" class="img-responsive" />
+	  </a>
+  </div>
+</div>
+<!--<div class="row">
 <div class="col-sm-3"><a target="_blank" href="http://www.embecosm.com/">Embecosm Ltd.</a></div>
 </div>-->
 
