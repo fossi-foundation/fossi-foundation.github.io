@@ -34,7 +34,7 @@ We are very grateful to the companies that support our work!
 <div class="row">
   <div class="col-sm-3 col-xs-6">
     <a target="_blank" href="https://oshpark.com/">
-      OSH Park<img src="/assets/osh-park.png" class="img-responsive" />
+      <img src="/assets/osh-park.png" class="img-responsive" style="max-height:50px; max-width: 50px;"/>OSH Park
 	  </a>
   </div>
 </div>
