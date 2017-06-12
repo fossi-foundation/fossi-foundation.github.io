@@ -50,6 +50,7 @@ We are very grateful to the companies that support our work!
 
 <div class="row">
 <div class="col-sm-3">Stefan Wallentowitz</div>
+<div class="col-sm-3">Chris Higgs</div>
 </div>
 
 <div class="row" style="margin-top: 20px">

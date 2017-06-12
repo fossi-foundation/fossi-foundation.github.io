@@ -14,10 +14,14 @@ and would like to recognize this by listing them on
 our [Sponsors page](/sponsors.html) at the Bronze tier.
 
 We are actively looking for sponsors for the Foundation, if you're
-interested please visit our [sponsorship page](/sponsoring.html) and
+interested in learning more about our activities and why we are looking
+for sponsorship, then please visit our [sponsorship page](/sponsoring.html) and
 for more, see our 
 [detailed sponsorship proposal](assets/SponsorshipProposal-Feb17.pdf)
 document.
+
+You can also support us through individual payments via PayPal, see our
+[Sponsors page](/sponsors.html).
 
 Once again, a big thanks to [OSH Park](https://oshpark.com/) for becoming
 sponsors of the Foundation. 
