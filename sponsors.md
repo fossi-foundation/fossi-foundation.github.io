@@ -33,9 +33,7 @@ We are very grateful to the companies that support our work!
 <div class="panel panel-sponsors panel-bronze">Bronze (€1,000 - €5,000)</div>
 <div class="row">
   <div class="col-sm-3 col-xs-6">
-    <a target="_blank" href="https://oshpark.com/">
-      <img src="/assets/osh-park.png" class="img-responsive" style="max-height:50px; max-width: 50px;"/>OSH Park
-	  </a>
+    <a target="_blank" href="https://oshpark.com/">OSH Park</a>
   </div>
 </div>
 <!--<div class="row">
