@@ -69,7 +69,7 @@ the following articles on the
 and
 [Kunal Ghosh's Linkedin](https://www.linkedin.com/pulse/orconf2017-unexplored-territory-world-semi-conductors-kunal/?published=t).
 
-Photos of the event are available [here](https://drive.google.com/drive/folders/0B2jCibIHD-lyaVB4UGNTYjZCZHM), courtesy of Craig Shaw Photography. If you have any on of your own you'd like to share [please let us know](emailto:orconf@fossi-foundation.org).
+Photos of the event are available [here](https://drive.google.com/drive/folders/0B2jCibIHD-lyaVB4UGNTYjZCZHM), courtesy of Craig Shaw Photography. If you have any of your own you'd like to share [please let us know](emailto:orconf@fossi-foundation.org).
 
 A big thank you once again to our [sponsors](https://orconf.org/#sponsors)
 this year, and to Judith Jones, Sarah Cook, Simon Cook and rest of the crew
