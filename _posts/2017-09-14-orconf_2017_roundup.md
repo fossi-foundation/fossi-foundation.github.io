@@ -81,7 +81,9 @@ from [Embecosm](http://www.embecosm.com/) who made things a breeze this year.
 Don't forget to check [the ORConf site](https://orconf.org) for links to
 videos when they're available, and slide decks from the presentations.
 
-We're looking forward to seeing you all again for ORConf 2018!
+We're looking forward to seeing everyone at ORConf 2018!
+
+(To stay in the loop, subscribe to [the orconf-announce list](https://lists.librecores.org/listinfo/orconf-announce).)
 
 
 
