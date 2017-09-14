@@ -50,7 +50,10 @@ As always it was a pleasure to see so many new faces and hear about
 projects we didn't really know about, and also how much interest from
 industry there is in this area. A licensing update from Andrew Katz
 was also encouraging, showing the efforts of CERN and the FOSSi Foundation
-in the area of HDL licensing are beginning to take shape.
+in the area of HDL licensing are beginning to take shape. Another
+great moment was Richard Herveille talking about the early days
+of OpenCores.org and his involvement with the project, fascinating stuff
+to many of us who were only involved later.
 
 The Saturday evening dinner event, which was sponsored by
 [RS Components](http://uk.rs-online.com/web/), was thoroughly enjoyed
