@@ -35,6 +35,9 @@ We are very grateful to the companies that support our work!
   <div class="col-sm-3 col-xs-6">
     <a target="_blank" href="https://oshpark.com/">OSH Park</a>
   </div>
+  <div class="col-sm-3 col-xs-6">
+    <a target="_blank" href="https://imec.be/">IMEC</a>
+  </div>
 </div>
 <!--<div class="row">
 <div class="col-sm-3"><a target="_blank" href="http://www.embecosm.com/">Embecosm Ltd.</a></div>
