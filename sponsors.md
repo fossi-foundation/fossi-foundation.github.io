@@ -11,11 +11,20 @@ details and why sponsoring us helps you and the community
 
 We are very grateful to the companies that support our work!
 
-<!--<div class="panel panel-sponsors panel-platinum">Platinum (> €20,000)</div>
+<!--<div class="panel panel-sponsors panel-platinum">Platinum (> €20,000)</div>-->
 
-<div class="panel panel-sponsors panel-gold">Gold (€10,000 - €20,000)</div>-->
+<div class="panel panel-sponsors panel-gold">Gold (€10,000 - €20,000)</div>
+
+<div class="row">
+  <div class="col-sm-4 col-xs-8">
+    <a target="_blank" href="http://embecosm.com">
+      <img src="/assets/Embecosm.png" class="img-responsive" />
+    </a>
+  </div>
+</div>
 
 <div class="panel panel-sponsors panel-silver">Silver (€5,000 - €10,000)</div>
+
 
 <div class="row">
   <div class="col-sm-3 col-xs-6">
@@ -23,20 +32,19 @@ We are very grateful to the companies that support our work!
       <img src="/assets/Cadence.jpg" class="img-responsive" />
 	  </a>
   </div>
-  <div class="col-sm-3 col-xs-6">
-    <a target="_blank" href="http://embecosm.com">
-      <img src="/assets/Embecosm.png" class="img-responsive" />
-	  </a>
-  </div>
 </div>
 
 <div class="panel panel-sponsors panel-bronze">Bronze (€1,000 - €5,000)</div>
 <div class="row">
-  <div class="col-sm-3 col-xs-6">
-    <a target="_blank" href="https://oshpark.com/">OSH Park</a>
+  <div class="col-sm-2 col-xs-4">
+    <a target="_blank" href="https://oshpark.com/">
+      <img src="/assets/osh-park.png" class="img-responsive" />
+    </a>
   </div>
-  <div class="col-sm-3 col-xs-6">
-    <a target="_blank" href="https://imec.be/">IMEC</a>
+  <div class="col-sm-2 col-xs-4">
+    <a target="_blank" href="https://imec.be/">
+      <img src="/assets/imec.png" class="img-responsive" />
+    </a>
   </div>
 </div>
 <!--<div class="row">
