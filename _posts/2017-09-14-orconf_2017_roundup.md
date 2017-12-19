@@ -7,6 +7,8 @@ tags: []
 author: Julius Baxter
 ---
 
+<img src="https://orconf.org/2017/images/orconf-2017-group-photo.jpg" class="img-responsive" />
+
 [ORConf](https://orconf.org) 2017 came to a close last Sunday, and on
 behalf of the FOSSi Foundation I'd like to thank all who attended,
 [presented](https://orconf.org/#presentations) and
