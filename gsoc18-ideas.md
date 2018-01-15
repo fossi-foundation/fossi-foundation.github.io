@@ -163,3 +163,29 @@ In order to support these operations from GDB, the goal of this project is to cr
 *Language/Tools*: System Verilog, C
 
 *Mentor:* [Philipp Wagner](mailto:mail@philipp-wagner.com)
+
+### OpTiMSoC: Extend the Linux Port
+
+*Details:* The
+[Open Tiled Manycore System-on-Chip](http://optimsoc.org) is a
+prototyping platform for massively parallel multicore
+system-on-chip. The main runtime environments we employ so far are
+baremetal and a very lean operating system ("compute node OS").
+
+In last year's GSoC [Pedro created an initial Linux port for OpTiMSoC](https://www.optimsoc.org/blog/2017/09/04/gsoc2917.html).
+He solved all the hard problems of getting Linux up and running, and paved the path to continue with more high-level features of Linux.
+By now the OpenRISC port of Linux is upstreamed and [extended to provide multi-core support (SMP)](https://lkml.org/lkml/2017/9/10/24).
+
+The goal of this GSoC project is to extend the OpTiMSoC Linux port.
+What extensions, you might ask? It's up to you!
+How about enabling multi-core support? Or creating an extended device driver for our Network-on-Chip (NoC)? Or writing an accelerator interface to trigger computations in the compute grid of OpTiMSoC from software running on Linux? There's an endless stream of opportunities to choose from -- bring your own idea or get in touch with us to discuss ideas we have.
+
+No matter which task you choose, you get unique insights into hardware (you can actually view the waveform of most signals in OpTiMSoC!) and Linux internals.
+
+*Skill level:* Intermediate, Advanced
+
+*Language/Tools*: Linux Kernel development (C), optional: FPGA synthesis flow
+
+*Mentors:* [Stefan Wallentowitz](mailto:stefan@wallentowitz.de),
+ [Philipp Wagner](mailto:mail@philipp-wagner.com),
+ [Stafford Horne](mailto:shorne@gmail.com)
