@@ -24,10 +24,10 @@ sudo apt-get install ruby-dev zlib1g-dev
 
 # Install Jekyll with all dependencies used by GitHub pages
 # (inside the directory where this README is)
-bundle install
+bundle install --path vendor/bundle
 
 # Build and continuously update site
-jekyll serve
+bundle exec jekyll serve
 ~~~
 
 You can now view the site in your browser at http://localhost:4000.
