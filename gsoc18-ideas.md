@@ -189,3 +189,21 @@ No matter which task you choose, you get unique insights into hardware (you can 
 *Mentors:* [Stefan Wallentowitz](mailto:stefan@wallentowitz.de),
  [Philipp Wagner](mailto:mail@philipp-wagner.com),
  [Stafford Horne](mailto:shorne@gmail.com)
+
+
+### OpenRISC GCC Port
+
+[OpenRISC](https://openrisc.io/) is a processor architecture which is simple, yet widely used for soft cores and in deeply embedded scenarios.
+For a long time a [port of the GCC compiler for OpenRISC](https://github.com/openrisc/or1k-gcc) has been in existence.
+However, this port cannot be submitted upstream due to [FSF copyright assignment issues](https://lists.librecores.org/pipermail/openrisc/2018-January/000958.html).
+Hence a clean room rewrite of the basic compiler architecture is required.
+
+This work gives you great insight into the backend of a compiler and the OpenRISC Instruction Set Architecture.
+To be successful in this project, you should have an understanding of compilers and be able to work in a very structured way.
+You will be mentored by an OpenRISC expert, with the help of a seasoned GCC developer.
+
+*Skill Level*: Advanced
+
+*Language/Tools:* C, Compilers
+
+*Mentor:* [Stafford Horne](mailto:shorne@gmail.com)
