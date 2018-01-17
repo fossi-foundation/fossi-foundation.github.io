@@ -207,3 +207,35 @@ You will be mentored by an OpenRISC expert, with the help of a seasoned GCC deve
 *Language/Tools:* C, Compilers
 
 *Mentor:* [Stafford Horne](mailto:shorne@gmail.com)
+
+### GHDL profiling support
+
+[GHDL](https://github.com/ghdl/ghdl) is a compiled VHDL simulator. This project would aim to profile and/or implement a profiler to improve speed of simulation and/or to detect hotspot in user design
+
+*Skill level:* Intermediate
+
+*Language/Tools:* ADA, VHDL
+
+*Mentor:* [Tristan Gingold](mailto:tgingold@free.fr)
+
+### GHDL: Improve LLVM backend
+
+This project would aim to improve the LLVM backend of [GHDL](https://github.com/ghdl/ghdl), a compiled VHDL simulator.
+
+Currently, llvm can be used as a backend, but this could be improved.  In particular, there is no generation of debugging information, the C++ API should be used instead of the C API, and there was no real try to find the best order of optimization passes.
+
+*Skill level:* Intermediate
+
+*Language/Tools:* ADA, C++, VHDL
+
+*Mentor:* [Tristan Gingold](mailto:tgingold@free.fr)
+
+### GHDL: Support 64-bit with mcode on Windows
+
+GHDL has its own code generator (named mcode), which is light and fast but doesn't try to optimize.  Although x86-64 is supported on linux, win64 isn't.
+
+*Skill level:* Intermediate
+
+*Language/Tools:* ADA, C++, VHDL
+
+*Mentor:* [Tristan Gingold](mailto:tgingold@free.fr)
