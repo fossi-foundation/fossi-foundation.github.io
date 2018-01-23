@@ -621,3 +621,44 @@ tool.
 
 *Mentor:* [Tim Ansell](mailto:mithro@mithis.com),
  [Stefan Wallentowitz](mailto:stefan@wallentowitz.de)
+
+### Solar Cell Simulation
+
+DEVSIM is simulation software which uses the finite volume method to
+solve electrical behavior for semiconductor devices on a microscopic
+level. It solves partial differential equations on a mesh. The Python
+interface allows users to specify their own equations.
+
+DEVSIM is a simulator capable of solving for the behavior of
+individual semiconductor devices due to external voltage boundary
+conditions. To simulate a solar cell, it is necessary to simulate the
+propagation of light into the structure and the resulting electrical
+current. This would require:
+
+1. Reading in the existing structure from an external mesh tool tailored toward solar cell structure generation.
+
+2. Modeling the propagation of light through the semiconductor structure using one of these methods:
+
+ * Ray tracing
+ * Transfer matrix method
+ * Beam propagation method
+ * Finite difference time domain
+
+3. Implementing the equations coupling light intensity and the generation of current in the semiconductor.
+
+4. Simulate figures of merit: Isc, Voc, Jsc, Pmax, Power curve, Fill Factor and IV curve.
+
+Based on the scope of this project, a student should be able to tackle
+reading in the structure, and solving for the propagation of light
+using one of the listed methods.  In an initial implementation this
+would be for 1D and 2D structures.  Based on the student's interest,
+they may choose to tackle the problem for a 3D structure.
+Alternatively, they may choose to address the models for generation of
+current from light.  The system would then be well suited for
+analyzing the device performance.
+
+*Skill Level:* Advanced
+
+*Languages/Tools:* C++, Python
+
+*Mentor:* [Juan Sanchez](mailto:jsanchez@devsim.com)
