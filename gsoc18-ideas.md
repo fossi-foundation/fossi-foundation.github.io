@@ -239,3 +239,235 @@ GHDL has its own code generator (named mcode), which is light and fast but doesn
 *Language/Tools:* ADA, C++, VHDL
 
 *Mentor:* [Tristan Gingold](mailto:tgingold@free.fr)
+
+### GPIO Switchbox
+
+*Details:* FPGA boards are equipped with manyfold IO interfaces. Most
+of those IO interfaces are general purpose IO (GPIO) that are
+connected to standardized headers. One example are
+[PMOD](http://store.digilentinc.com/pmod-modules/) connectors or the
+[Arduino](https://www.arduino.cc/) shield connector.
+
+If you build a system-on-chip nowadays the IO functions, such as GPIO,
+UART or SPI, are hard-wired to pins on those headers. Connecting for
+example other PMODs required re-synthesizing the design. I have
+started [PMOD switchbox](https://github.com/wallento/pmod_switchbox)
+to allow the programmer to dynamically configure the IO functions at
+runtime. The goal is to generalize this approach and build an
+interesting prototype.
+
+*Skill level:* Beginner, Intermediate
+
+*Language/Tool:* Verilog
+
+*Mentor:* [Stefan Wallentowitz](mailto:stefan@wallentowitz.de)
+
+### FuseSoC Generators
+
+*Goal:* Create a way to run external tools that generates files
+on-the-fly in a FuseSoC workflow
+
+*Details:* When running a simulation or a synthesis flow it is often
+desirable to generate some files on-the-fly. This can be for
+generating RTL files from vendor-specific IP core descriptions,
+IP-XACT files or create an ELF file from C sources.
+
+While FuseSoC already has support for calling external scripts at
+different parts of the toolflow, and many EDA tools have built in
+support for TCL scripting, it lacks a deeper integration into FuseSoC
+that is needed to efficiently perform some of these tasks.
+
+The task includes both support for allowing cores to register
+themselves as generators as well as support for other cores to use
+them.
+
+Examples of tasks that could make good use of generators
+* Xilinx CoreGen (replaces coregen provider)
+* Altera Qsys
+* Generate Wishbone interconnects (by running `wb_intercon_gen` in https://github.com/olofk/wb_intercon
+* Create verilog from Chisel/Migen/IP-Xact descriptions... etc
+
+*Skill level:* *Intermediate*
+
+*Language/Tool:* Python, basic knowledge of EDA tools
+
+*Mentor:* [Olof Kindgren](mailto:olof.kindgren@gmail.com)
+
+### FuseSoC Provider for LibreCores API
+
+*Details:* Currently, [FuseSoC](http://github.com/olofk/fusesoc)
+fetches the core description files from local copies of
+repositories. The goal of this project is to fetch the core
+descriptions from the LibreCores website instead.
+
+In a first step, you must first coordinate with our LibreCores team to
+define the additional requirements for the API. Then FuseSoC should be
+extended to provide core files from other sources and then implement
+the (recursive) fetching of core files.
+
+*Skill Level:* Intermediate
+
+*Language/Tool:* Python
+
+*Mentors:* [Stefan Wallentowitz](mailto:stefan@wallentowitz.de),
+ [Olof Kindgren](mailto:olof.kindgren@gmail.com)
+
+### Constrained randomised testing with coverage tracking in Cocotb
+
+*Goal:* Extend the [Cocotb](http://potential.ventures/cocotb/)
+co-simulation library to support constrained randomised testing
+(e.g. via Google [or-tools](https://code.google.com/p/or-tools/)) and
+to track achieved coverage of the tested HDL.
+
+*Details:* Cocotb is a Python framework for testing VHDL and
+ [System]Verilog hardware designs. Although various open source
+ simulators are available, none of them provide the advanced
+ verification features of expensive proprietary simulators. This
+ project will implement constrained randomisation and functional
+ coverage collection in Cocotb, giving open source projects these
+ capabilities.
+
+Constrained Randomisation is a similar concept to fuzz testing;
+generating random stimulus transactions according to certain
+constraints in order to exercise a hardware design. To understand how
+well the randomly generated inputs are testing design the we also need
+to instrument the code to track metrics on which scenarios have been
+exercised (known as functional coverage).
+
+The goal of this project is to provide a convenient interface to an
+existing constraint solver from Cocotb and create and manage a
+database of functional coverage points. To facilitate processing of
+the coverage data we’ll need to export to various formats for
+consumption by other tools. We can also integrate coverage information
+with existing software development services such as coveralls.io.
+
+By undertaking this project you will learn about latest ASIC/FPGA
+verification practices and the interaction between hardware and
+software development
+
+*Skill Level:* Intermediate
+
+*Language/Tools:* Python
+
+*Mentor:* [Chris Higgs](mailto:chris.higgs@potentialventures.com)
+
+### Firrtlator Extensions
+
+*Details:*
+[firrtlator](https://github.com/SiliconSemantics/firrtlator) is a C++
+library and tool to work on the
+[Flexible Intermediate Representation for RTL (FIRRTL)](https://github.com/ucb-bar/firrtl). The
+goal is to have a common library to interact with FIRRTL files, to
+integrate it with other tools, and to elaborate and optimize on the
+IR.
+
+The project is at the beginning and I am open to all ideas around
+it. Here are some suggetions:
+
+* Integration with [Verilator](http://verilator.org)
+* Integration with the [YoSys](http://www.clifford.at/yosys/) RTL-IR
+* Automatic injection of debug probes
+* Injection of logic to improve fault tolerance
+
+*Skill Level:* Intermediate/Advanced
+
+*Mentor:* [Stefan Wallentowitz](mailto:stefan@wallentowitz.de)
+
+### A SystemVerilog Preprocessor
+
+The SystemVerilog hardware description language has an extensive
+set of preprocessor features, and [antlr](http://antlr.org) has
+established itself as one of the best tools for building lexers
+and parsers. However it is not possible to parse SystemVerilog
+with **antlr** (or any other toolkit) unless the preprocessor
+directives have been processed. The preprocessor directives
+include among other things, parameterized macros, token pasting,
+conditionals, includes, etc. The goal of this project is to write
+this preprocessor. This will enable the creation, in the future,
+of [antlr](http://antlr.org) based SystemVerilog tools
+(code analyzers, compilers, simulators, synthesizers, etc).
+
+*Skill Level:* Advanced
+
+*Language/Tools:* [Antlr](http://antlr.org), Java or C++, [SystemVerilog](https://standards.ieee.org/getieee/1800/download/1800-2012.pdf)
+
+*Mentors:* [Martin d'Anjou](mailto:martin.danjou14@gmail.com)
+
+### LimeSDR: Integrate RISC-V Core
+
+*Details:* [LimeSDR](https://myriadrf.org/projects/limesdr/) is a
+flexible software-defined platform, that integrates an FPGA and a Lime
+Microsystems LMS7002M field-programmable RF transceiver, that is 2x2
+MIMO and can be tuned anywhere from 100KHz to 3.8GHz. The FPGA is
+presently used to take care of things such as interfacing, digital
+down-conversion and tuning, and sample time-stamping.
+
+Currently the Altera NIOS-II processor is used and in this project the
+goal is to replace it with an open source softcore implementing the
+RISC-V instruction set.
+
+It consists of three parts:
+
+* Identify a suitable RISC-V processor core
+* Integrate the RISC-V processor core
+* Proof-of-concept of the updated software environment
+
+*Skill level*: Intermediate
+
+*Language/Tools*: HDL, FPGA synthesis
+
+*Mentor:* [Andrew Back](mailto:andrew@abopen.com)
+
+### LimeSDR: Switch to a FuseSoC-based Development Flow
+
+*Details:* The [LimeSDR-USB](https://myriadrf.org/projects/limesdr/)
+platform integrates an FPGA that contains a System-on-Chip and DSP. The
+System-on-Chip employs a softcore for interfacing with the programming
+interface of RF transceiver, while hardware blocks take care of
+streaming, DSP and sample time-stamping.
+
+With the integration of more and more blocks and a varying number of
+FPGA implementations for different users, a structured way of managing
+the dependencies and composition of hardware blocks is needed. For that
+we would like to provide a
+[FuseSoC](http://github.com/olofk/fusesoc)-based environment.
+
+The goal of this project is to structure the repositories and add the
+infrastructure files for FuseSoC, along with a proof-of-concept
+demonstration and a tutorial.
+
+*Skill level*: Beginner, Intermediate
+
+*Language/Tools*: Understanding of HDL Synthesis
+
+*Mentor:* [Andrew Back](mailto:andrew@abopen.com)
+
+### SystemC generator plugin for Kactus2
+
+The project objective is to implement a [SystemC](http://systemc.org)
+generator for [Kactus2](http://funbase.cs.tut.fi/), an open-source
+IP-XACT tool. IP-XACT captures designs and components independent of
+implementation language, but the ability to generate SystemC from
+IP-XACT would enable designers to leverage SystemC for simulation and
+verification of their IP.
+
+*Skill level:* Intermediate
+
+*Language/Tools*: C++/Qt, SystemC
+
+*Mentor:* [Esko Pekkarinen](mailto:esko.pekkarinen@tut.fi)
+
+### 3D browser for IP-XACT library for Kactus2
+
+Browsing lists and tree structures in a graphical user interface is
+often tedious and relations between the objects may not be
+intuitive. Recently 3D visualization has become a rich alternative to
+traditional navigation. The project objective is to implement 3D
+browsing for IP-XACT objects in [Kactus2](http://funbase.cs.tut.fi/)
+tool.
+
+*Skill level:* Advanced
+
+*Language/Tools*: 3D graphics, C++/Qt, User interface design
+
+*Mentor:* [Esko Pekkarinen](mailto:esko.pekkarinen@tut.fi)
