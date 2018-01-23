@@ -565,3 +565,29 @@ as a complete on-chip network!
 *Language/Tools:* TL-Verilog, Makerchip IDE
 
 *Mentor:* [Steve Hoover](mailto:steve.hoover@redwoodeda.com)
+
+### Chisel learning journey
+
+Implementing support for standard debugger(gdb), fpu and caches in
+sodor and teach important chisel concepts through it. All of this
+while keeping documentation as first priority
+
+*Skill Level:* Intermediate
+
+*Language:* Chisel, Scala and Verilog
+
+*Mentor:* [Kritik Bhimani](mailto:bhimanikritik@gmail.com)
+
+### Capturing the dynamic rocket
+
+Find and implement some effective way to capture rocket-chip ecosystem
+which includes rocket, boom, uncore and hardfloat into
+micro-architecture diagrams/schematics (possibly using draw.io) and
+what makes it tough is parameterizable nature of this ecosystem, which
+also needs to be captured
+
+*Skill Level:* Advanced
+
+*Language:* Chisel, Scala, Verilog
+
+*Mentor:* [Kritik Bhimani](mailto:bhimanikritik@gmail.com)
