@@ -662,3 +662,64 @@ analyzing the device performance.
 *Languages/Tools:* C++, Python
 
 *Mentor:* [Juan Sanchez](mailto:jsanchez@devsim.com)
+
+
+### Pinmux Switchbox
+
+The goal is to create, test and document a working pinmux (switchbox),
+with extended goals, time permitting, to add actual multiplexed
+peripherals to a pre-existing working core (lowRISC, ZipCPU, OR1k) and
+a further goal to get actual linux kernel drivers up and running. This
+could be part of an existing team, or a single-person project, or a
+team project. All communication will be carried out on a public
+mailing list at all times, as part of the goal is to allow absolutely
+anyone to help if they feel so inclined.  Details
+
+Starting from a known-good working pre-existing SoC running well on a
+standard FPGA platform and having a few pre-existing proven
+peripherals working, the idea is to add a multiplexer so that the
+actual I/O pins can switch to different functions, just like any
+Embedded STM32F, or any Texas Instruments OMAP Series processor.
+
+A pre-existing multiplexer already exists which may provide a good
+starting point: https://github.com/wallento/pmod_switchbox. Additional
+peripherals in the form of PWM, UART, I2C, SPI, SD/MMC and RGB/TTL
+already exist on https://librecores.org and http://opencores.org, so
+there will be no need to develop those.
+
+If RISC-V is chosen (for example the lowRISC ethernet-0.5 branch
+https://github.com/lowRISC/lowrisc-chip/tree/ethernet-v0.5) then the
+first task will be to move the MicroSD and Ethernet peripherals aside
+and place the GPIO pinmux in between. This should be a relatively
+straightforward task that on its own is a significant contribution,
+and the project could be declared to be a success even if this was the
+only task that was completed.
+
+The next phase, where it gets interesting, would be to track down a
+suitable linux kernel driver for GPIO and rewrite it (or the pmod
+switchbox VHDL) to match precisely a pre-existing memory-mapped linux
+kernel GPIO driver. This would then need to be tested, demonstrating
+that the pins formerly used for MicroSD for example can now be
+switched to Input or Output.
+
+The next phase after that, again if time permits, would be to
+incorporate further peripherals such as PWM, I2C, UART, SPI and
+others, as desired. Recommended priority here will be on saving time
+by tracking down code that already has pre-existing linux kernel
+drivers that match up with the associated Verilog / VHDL, so that time
+is not spent exclusively writing c code or exclusively writing Verilog
+/ VHDL.
+
+This project is therefore primarily about cross-skill integration and
+communication, and learning to work and collaborate "in the public
+eye", which takes either quite a lot of confidence, or just a
+particularly honest and open mind-set.
+
+*Skill level:* varies from Beginner to Advanced.
+
+*Language/Tool:* varied. VHDL/Verilog/Chisel essential, c optional,
+ git, mailing lists, wikis, good written communication skills in
+ English absolutely essential.
+
+*Mentor:* [Luke Kenneth Casson Leighton](mailto:lkcl@lkcl.net),
+ [Stefan Wallentowitz](mailto:stefan@wallentowitz.de)
