@@ -591,3 +591,33 @@ also needs to be captured
 *Language:* Chisel, Scala, Verilog
 
 *Mentor:* [Kritik Bhimani](mailto:bhimanikritik@gmail.com)
+
+### SystemVerilog Support in Yosys
+
+[YoSys](http://www.clifford.at/yosys/) is a framework for Verilog RTL
+synthesis. It does not support SystemVerilog so far. This requires
+extension of the frontend of Yosys and a good understanding of how to
+map System Verilog constructs to the IR.
+
+*Skill Level:* Advanced
+
+*Language:* C
+
+*Mentor:* [Tim Ansell](mailto:mithro@mithis.com)
+
+### Common EDA tool output format
+
+Proprietary and open source EDA synthesis and implementation tools all
+have different output formats for warnings, error and synthesis
+results. A translator tool that converts all outputs to a common
+format is of high value for integration with other tool flows or
+continuous integration. The goals are a definition of the format in
+coordination with the community and then the implementation of this
+tool.
+
+*Skill Level:* Beginner, Intermediate
+
+*Language:* tbd
+
+*Mentor:* [Tim Ansell](mailto:mithro@mithis.com),
+ [Stefan Wallentowitz](mailto:stefan@wallentowitz.de)
