@@ -471,3 +471,97 @@ tool.
 *Language/Tools*: 3D graphics, C++/Qt, User interface design
 
 *Mentor:* [Esko Pekkarinen](mailto:esko.pekkarinen@tut.fi)
+
+
+### Integration of Cloud FPGAs with JavaScript
+
+The incorporation of FPGAs into the cloud, opens many possibilities
+for new compute models. Hardware acceleration can become an integral
+and ubiquitous part of cloud computing. This project will support
+hardware acceleration of web applications by creating a communication
+channel between JavaScript, running in a web browser, and FPGA
+hardware, running on Amazon F1 FPGA instances. Imagine the
+possibilities for web pages with access to hardware-acceleration!
+
+An F1 instance is a cloud CPU (host machine) with attached FPGAs. The
+host will be used as a web server. It will serve JavaScript content
+that includes functions that communicate via a websocket back to the
+server. The server/host will relay this data stream to the attached
+FPGA. A return path from FPGA to host to client will also be created.
+
+Communication between host and FPGA will be implemented using a
+High-Level Synthesis flow in the CAOS framework, or using a
+Verilog-based flow with the F1 Hardware Development Kit plus C++ code
+in the F1 Software Development Kit. Successful completion will include
+demonstration of a round-trip communication from web client to FPGA
+and back. Success also requires clear documentation of the APIs and
+hardware configuration steps.
+
+*Skill level:* Advanced
+
+*Languages/Tools:* Amazon F1, CAOS (C/C++/OpenCL) or F1 HDK/SDK, JavaScript, HTML5, Web Sockets, Node.js.
+
+*Mentor:* [Steve Hoover](mailto:steve.hoover@redwoodeda.com)
+
+CPU Components in Transaction-Level Verilog
+
+The RISC-V ISA has been the subject of massive interest in its short
+history due to its open nature. RISC-V CPU implementations in Chisel
+and BlueSpec Verilog show a degree of flexibility that is impractical
+in RTL design. But this is nothing compared to the flexibility that is
+possible with a new extension to Verilog, called Transaction-Level
+Verilog (TL-Verilog). Here's your chance to develop open-source CPU
+components for the most-configurable, most-adaptable RISC-V CPU core
+generator, WARP-V. WARP-V can be configured as a low-power,
+slow-clock, single stage pipeline, a high-frequency seven-stage
+pipeline, or anywhere in between. You can even swap out the RISC-V ISA
+for a completely different ISA altogether.
+
+You will implement CPU components, such as branch predictors, caches,
+etc., and add support for RISC-V ISA extensions to provide a rich set
+of selectable components for WARP-V. You will learn advanced design
+practices and CPU microarchitecture. TL-Verilog tutorials are
+available at makerchip.com. You'll find WARP-V in the Makerchip IDE
+under "Tutorials"/"Examples"/"CPUs".
+
+*Skill level:* Intermediate/Advanced
+
+*Language/Tools:* TL-Verilog, Makerchip IDE
+
+*Mentor:* [Steve Hoover](mailto:steve.hoover@redwoodeda.com)
+
+### Formally Verify the WARP-V RISC-V CPU Core
+
+WARP-V is an emerging open-source CPU core generator for RISC-V
+CPUs. It benefits from the flexibility of Transaction-Level Verilog
+(TL-Verilog) to support a wide range of implementations from simple
+CPUs for FPGAs through high-frequency ASIC implementations. You'll use
+open-source formal verification tools to prove that WARP-V implements
+the RISC-V specification. You'll debug and complete missing elements
+of the microarchitecture. Find WARP-V in the Makerchip IDE under
+"Tutorials"/"Examples"/"CPUs".
+
+*Skill level:* Intermediate
+
+*Language/Tools:* Yosys, riscv-formal, TL-Verilog, Makerchip IDE
+
+*Mentor:* [Steve Hoover](mailto:steve.hoover@redwoodeda.com)
+
+### Develop a Transaction-Level Verilog Component Library
+
+Transaction-Level Verilog (TL-Verilog) is an emerging language
+extension to SystemVerilog that is introducing a number of
+game-changing capabilities. Among them is the ability to define
+flexible reusable components. For this project, you will develop a
+library of compatible components such as FIFOs, queues, arbiters,
+elastic buffers, etc. that could form the basis of a new era of
+hardware design. You will demonstrate the ease of composing these
+components into sophisticated transaction flows and quickly
+implementing what are currently considered to be complex designs, such
+as a complete on-chip network!
+
+*Skill level:* Intermediate/Advanced
+
+*Language/Tools:* TL-Verilog, Makerchip IDE
+
+*Mentor:* [Steve Hoover](mailto:steve.hoover@redwoodeda.com)
