@@ -592,6 +592,25 @@ also needs to be captured
 
 *Mentor:* [Kritik Bhimani](mailto:bhimanikritik@gmail.com)
 
+### Yosys Test Suite
+
+Yosys is a framework for HDL synthesis and formal verification. This
+project is about extending the Yosys test suite to comprehensively
+cover the language constructs in Verilog 2001 and to comprehensively
+cover all script commands available in Yosys, and integrate the test
+suite with a CI infrastructure.
+
+A comprehensive test suite can help development of Yosys by providing
+a high degree of confidence that pull requests that pass the test
+suite do not introduce new bugs. Therefore this project is vital to
+opening Yosys to a larger community of open source developpers.
+
+*Skill Level:* Intermediate
+
+*Language/Tools:* Yosys, Verilog, GNU Make, Python
+
+*Mentor:* [Clifford Wolf](mailto:clifford@clifford.at)
+
 ### SystemVerilog Support in Yosys
 
 [YoSys](http://www.clifford.at/yosys/) is a framework for Verilog RTL
