@@ -503,7 +503,7 @@ hardware configuration steps.
 
 *Mentor:* [Steve Hoover](mailto:steve.hoover@redwoodeda.com)
 
-CPU Components in Transaction-Level Verilog
+### CPU Components in Transaction-Level Verilog
 
 The RISC-V ISA has been the subject of massive interest in its short
 history due to its open nature. RISC-V CPU implementations in Chisel
