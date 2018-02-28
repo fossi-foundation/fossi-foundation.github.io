@@ -742,3 +742,43 @@ particularly honest and open mind-set.
 
 *Mentor:* [Luke Kenneth Casson Leighton](mailto:lkcl@lkcl.net),
  [Stefan Wallentowitz](mailto:stefan@wallentowitz.de)
+
+### Digital filter blocks
+
+This project includes developing various digital filters with
+MyHDL and integrating the filter-blocks with
+[PyFDA](https://github.com/chipmuenk/pyfda). The filter-blocks
+will be added to the
+[`filter-blocks`](https://github.com/cfelton/filter-blocks)
+repository.  The student is encourage to start with simple digital
+filters and use the tools to verify and demonstrate the
+performance for the filters. 
+
+After a basic filter or two is completed it
+is expected the student will complete a more complex digital
+filter, examples: systolic structure, non-linear estimation filters,
+modular shared-resource structures, etc.
+
+*Skill level:* Intermediate, Advanced
+
+*language/Tool:* MyHDL
+
+*Mentor:* [Christopher L. Felton ](https://www.fpgarelated.com/blogs-1/nf/Christopher_Felton.php), [@chipmuenk on github](https://github.com/chipmuenk)
+
+### Interface driven design, Ethernet core
+
+This project involves extending the Ethernet core that was
+developed in a previous GSoC to be an "interface driven"
+design.  The core is to be updated and extended with the
+interfaces provided in the `rhea` or `crux` packages.
+The following example illustrates the idea of the interface
+driven design - the details will be developed with the student.
+
+It is desirable, but not required, that the student have a
+development board with an tri-mode (10/100/1000) Ethernet phy.
+
+*Skill level:* Intermediate, Advanced
+
+*language/Tool:* MyHDL
+
+*Mentor:* [Christopher L. Felton ](https://www.fpgarelated.com/blogs-1/nf/Christopher_Felton.php)
