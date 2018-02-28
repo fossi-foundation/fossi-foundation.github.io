@@ -774,6 +774,30 @@ interfaces provided in the `rhea` or `crux` packages.
 The following example illustrates the idea of the interface
 driven design - the details will be developed with the student.
 
+
+
+```python
+def example(...)
+    glbl = Global()         # clock and resets
+    ethcfg = EthConfig()    # contains all the setup info
+    ethc = EthController()  # main data interface to the eth
+ 
+    # In this example, there are three blocks that are interfacing
+    # with the Ethernet controller.
+    b1 = ethc.get_branch()
+    pkt1_inst = packet_type_a_handler(...)
+ 
+    b2 = ethc.get_branch()
+    pkt2_inst = packet_type_b_handler(...)
+
+    b3 = ethc.get_branch()
+    pkt3_inst = packet_type_c_handler(...)
+ 
+    eth_inst = eth_core(glbl, ethc, ethcfg)
+    # get the arbitration logic, handles
+    arb_inst = ethc.arbitrate()   
+```
+
 It is desirable, but not required, that the student have a
 development board with an tri-mode (10/100/1000) Ethernet phy.
 
