@@ -576,7 +576,7 @@ while keeping documentation as first priority
 
 *Language:* Chisel, Scala and Verilog
 
-*Mentor:* [Kritik Bhimani](mailto:bhimanikritik@gmail.com)
+*Mentor:* [Stefan Wallentowitz](mailto:stefan.wallentowitz@fossi-foundation.org)
 
 ### Capturing the dynamic rocket
 
@@ -590,7 +590,7 @@ also needs to be captured
 
 *Language:* Chisel, Scala, Verilog
 
-*Mentor:* [Kritik Bhimani](mailto:bhimanikritik@gmail.com)
+*Mentor:* [Stefan Wallentowitz](mailto:stefan.wallentowitz@fossi-foundation.org)
 
 ### Yosys Test Suite
 
