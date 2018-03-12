@@ -795,7 +795,7 @@ def example(...)
  
     eth_inst = eth_core(glbl, ethc, ethcfg)
     # get the arbitration logic, handles
-    arb_inst = ethc.arbitrate()   
+    arb_inst = ethc.arbitrate()  
 ```
 
 It is desirable, but not required, that the student have a
@@ -806,3 +806,60 @@ development board with an tri-mode (10/100/1000) Ethernet phy.
 *language/Tool:* MyHDL
 
 *Mentor:* [Christopher L. Felton ](https://www.fpgarelated.com/blogs-1/nf/Christopher_Felton.php)
+
+### Rocket versus Ariane RISC-V "Deathmatch" and Analysis
+
+The RISC-V ISA will transform the world. Recently, two Linux-capable
+cores, one produced by SiFive/Berkeley, and one produced by ETH Zurich
+have been produced. The goal of this project is to do a detailed
+performance analysis of these two cores, and provide recommendations
+and best practices back to those efforts for the path to increase
+performance.
+
+This group will be performed in conjunction with the Bespoke Silicon
+Group team at U. Washington (which architected the 16nm 511-core
+RISC-V core processor, Celerity.)
+
+*Skills:* Knowledgable of both in-order and out-order processor
+architecture. Hardware design skills.
+
+*Language/Tools:* SystemVerilog, Comfortable with Unix Programming and
+Scripting
+
+*Mentor:* [Prof. Michael Taylor and the Basejump Team](mailto:prof.taylor@gmail.com)
+
+### BaseJump RISC-V Manycore CUDA Design
+
+The RISC-V ISA will transform the world. Recently, U. Washington taped
+out an open source RISC-V manycore processor with 496 cores that hits
+500 Billion RISC-V instructions per second in one chip.
+
+We have silicon up and running in our lab and will be taping out a
+second generation based on results from the first generation. Our goal
+is to make this the defacto open source GPGPU design. (See
+bjump.org/manycore.) You will work to help design the CUDA-like
+programming environment and make recommends for future versions of the
+architecture.
+
+*Skills:* Knowledgeable of CUDA programming; Compiler or PL interests a plus.
+
+*Language/Tools:* C, Comfortable with Unix Programming and Scripting
+
+*Mentor:* [Prof. Michael Taylor and the Basejump Team](mailto:prof.taylor@gmail.com)
+
+### BaseJump STL Hacker
+
+We are prototyping new features for the SystemVerilog language,
+including the equivalent of the C++ Standard Template Library, which
+we intend to deploy into the SystemVerilog standard.
+
+Our initial results show that HW productivity is dramatically improved
+with this library. An initial version of this is up and running, and
+we are looking for folks with an outside perspective to take it to the
+next level.
+
+*Skills:* Hardware Design Experience, Interest in HDL (hardware description language) design
+
+*Language/Tools:*  SystemVerilog
+
+*Mentor:* [Prof. Michael Taylor and the Basejump Team](mailto:prof.taylor@gmail.com)
