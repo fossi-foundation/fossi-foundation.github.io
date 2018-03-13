@@ -763,7 +763,7 @@ modular shared-resource structures, etc.
 
 *language/Tool:* MyHDL
 
-*Mentor:* [Christopher L. Felton ](https://www.fpgarelated.com/blogs-1/nf/Christopher_Felton.php), [@chipmuenk on github](https://github.com/chipmuenk)
+*Mentor:* [Christopher L. Felton](mailto:chris.felton@gmail.com), [Christian Münker](mailto:mail@chipmuenk.de)
 
 ### Interface driven design, Ethernet core
 
@@ -773,7 +773,6 @@ design.  The core is to be updated and extended with the
 interfaces provided in the `rhea` or `crux` packages.
 The following example illustrates the idea of the interface
 driven design - the details will be developed with the student.
-
 
 
 ```python
@@ -805,7 +804,7 @@ development board with an tri-mode (10/100/1000) Ethernet phy.
 
 *language/Tool:* MyHDL
 
-*Mentor:* [Christopher L. Felton ](https://www.fpgarelated.com/blogs-1/nf/Christopher_Felton.php)
+*Mentor:* [Christopher L. Felton ](mailto:chris.felton@gmail.com)
 
 ### Rocket versus Ariane RISC-V "Deathmatch" and Analysis
 
