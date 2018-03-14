@@ -351,6 +351,43 @@ software development
 
 *Mentor:* [Chris Higgs](mailto:chris.higgs@potentialventures.com)
 
+### PCIe bus functional model (BFM) using Cocotb
+
+*Goal:* Develop a [PCIe](https://en.wikipedia.org/wiki/PCI_Express)
+bus functional model ([BFM](https://en.wikipedia.org/wiki/Bus_Functional_Model))
+in Python for use with hardware simulations via
+[Cocotb](http://potential.ventures/cocotb/).
+
+*Details:* PCIe is a high-speed serial bus interface and is widely
+used in modern computing systems. It is commonly used to interface
+FPGAs and other ASICs to PCs or other host controller devices. The
+protocol is reasonably complex, and a good open source bus functional
+model (BFM) which can be used in hardware simulations of these FPGAs
+or ASICs is lacking.
+
+Cocotb is a set of libraries which provide access to hardware
+simulation and essentially allows us to write testbench code in Python.
+
+Given the complexity of the PCIe standard and the ease-of-use of Python
+with the cocotb libraries to interface to a hardware simulation, it is
+proposed that a PCIe BFM developed in cocotb-compatible Python.
+
+The work in this project would be to, at first, develop a reasonably
+simple PCIe-capable BFM and simple API for driving it. This would be
+tested against a simulation of a simple FPGA design using the Xilinx
+PCIe endpoint IP. Proving configuration writes and basic memory-mapped
+accesses can be performed will be sufficient to begin with.
+
+This work will expose the student to the concepts of writing behavioural
+hardware models in Cocotb-compliant Python, and simulating them against
+real designs.
+
+*Skill Level:* Intermediate to Advanced
+
+*Language/Tools:* Python, Verilog
+
+*Mentors:* [Luke Darnell](mailto:luke.darnell@broadcom.com), [Julius Baxter](mailto:julius@fossi-foundation.org)
+
 ### Firrtlator Extensions
 
 *Details:*
