@@ -780,7 +780,7 @@ development board with an tri-mode (10/100/1000) Ethernet phy.
 
 *language/Tool:* MyHDL
 
-*Mentor:* [Christopher L. Felton ](mailto:chris.felton@gmail.com)
+*Mentor:* [Christopher L. Felton ](mailto:chris.felton@gmail.com), [Tom Dillon](mailto:tompdillon@dillonlogic.com)
 
 ### Rocket versus Ariane RISC-V "Deathmatch" and Analysis
 
