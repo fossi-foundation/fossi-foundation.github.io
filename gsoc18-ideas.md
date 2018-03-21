@@ -838,3 +838,58 @@ next level.
 *Language/Tools:*  SystemVerilog
 
 *Mentor:* [Prof. Michael Taylor and the Basejump Team](mailto:prof.taylor@gmail.com)
+
+### VHDL Frontend for Yosys
+
+VHDL is one of the "major" hardware description languages alongside Verilog.
+Yosys is an open-source HDL synthesis tool, and it currently only supports
+Verilog (it supports VHDL only via the proprietary Verific frontend). The goal
+of this project is to write an open-source VHDL frontend for Yosys.
+
+There are currently a number of open-source tools that support VHDL that can be
+leveraged as a base. For example, there is [GHDL](https://github.com/ghdl/ghdl),
+a VHDL simulation tool written in Ada; [NVC](https://github.com/nickg/nvc), a
+VHDL simulation tool written in C; [vhdlpp](https://github.com/steveicarus/iverilog/tree/master/vhdlpp),
+a VHDL frontend for the Icarus Verilog simulator; and
+[Robert Ou's stalled project](https://github.com/rqou/yavhdl), a VHDL
+parser written in mostly Bison and Rust. You may choose to start with any one of
+these existing projects or any other projects you may discover (starting from
+scratch is likely to be too difficult given the time limitations).
+
+*Skill Level:* Advanced
+
+*Language/Tools:* VHDL, C, C++, Ada(?), Flex/Bison(?), Rust(?)
+
+*Mentor:* [Robert Ou](mailto:rqou@berkeley.edu)
+
+### Framework for Mixed-Language Simulation
+
+There are a number of open-source HDL simulators currently available. For
+example, [Icarus Verilog](https://github.com/steveicarus/iverilog) and 
+[Verilator](https://www.veripool.org/wiki/verilator) support Verilog, and
+[GHDL](https://github.com/ghdl/ghdl), [NVC](https://github.com/nickg/nvc), and 
+[Icarus Verilog (via vhdlpp)](https://github.com/steveicarus/iverilog/tree/master/vhdlpp)
+support VHDL. However, most of these support only one of VHDL or Verilog 
+(Icarus supports both, but its VHDL support is incomplete), and it is very
+difficult to simulate projects using a mix of both languages. The goal of this
+project is to design some method for doing mixed-language HDL simulation
+with open-source tools that has good support for the features of all of the
+HDLs.
+
+Some possible solutions to this problem include:
+* Write a program that uses the procedural interfaces (i.e. VPI, VHPI) of each
+  simulator and somehow "glue" them together (one such hack that does so is 
+  [here](https://github.com/rqou/myhdl-vhdl-verilog-test))
+* Lower all of the HDLs into a common intermediate representation and then
+  write/modify a simulator to simulate that
+
+Some other things that you should consider include support for HDLs other than
+Verilog and VHDL (e.g. MyHDL, Migen, Chisel, etc.) and cosimulation 
+(e.g. simulation including external software, simulation with hardware in the
+loop).
+
+*Skill Level:* Intermediate/Advanced
+
+*Language/Tools:* VHDL, Verilog, C, C++
+
+*Mentor:* [Robert Ou](mailto:rqou@berkeley.edu)
