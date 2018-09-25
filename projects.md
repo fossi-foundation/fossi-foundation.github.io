@@ -8,12 +8,41 @@ are involved in.
 
 <table width="80%" align="center">
 <tr>
-<td style="padding: 10px"><a href="https://librecores.org"><img src="/assets/librecores_logo.png" width="120px" /></a></td>
-<td><b>LibreCores</b> is a community hub for FOSSi. We have recently started the development of the interactive functionality and have many plans for this project. It was one of the original reasons we started the FOSSi Foundation.</td>
+  <td style="padding: 10px">
+    <a href="https://www.librecores.org"><img src="/assets/librecores_logo.png" width="120px" /></a>
+  </td>
+  <td>
+    <b>LibreCores</b> is a community hub for FOSSi.
+    Centered around the theme of "sharing," LibreCores features documentation, ways for the communicate to interact, and most importantly, a project repository with free and open source digital hardware ("IP cores") and associated projects.
+  </td>
 </tr>
 <tr>
-<td style="padding: 15px"><a href="https://orconf.org"><img src="https://orconf.org/images/orconf201502.png" width="120px"></a></td>
-<td><b>ORCONF</b> is the annual conference we organize. It originally started as an OpenRISC user meeting in Stockholm in 2012 and Cambridge in 2013. The covered topics have broadened in Munich in 2014, where we also had first talks from the RISC-V community. In 2015 at Cern in Geneva it has then grown to an even larger event with nearly 100 attendees and covered OpenRISC, RISC-V/lowRISC, other cool FOSSi projects and EDA tools. ORCONF 2016 was hosted in Bologna and attracted 120 attendees presenting a large variety of projects.</td>
+  <td style="padding: 15px">
+    <a href="https://orconf.org"><img src="/assets/orconf_logo.png" width="120px"></a>
+  </td>
+  <td>
+    <b>ORConf</b> is <i>the</i> open source digital design conference.
+    FOSSi Foundation organizes this conference yearly in varying places.
+    It originally started as an OpenRISC user meeting in Stockholm in 2012 it has grown since considerably not only in attendance, but also in scope.
+    Today, talks cover everything from RISC-V based CPU designs, to EDA tools, verification and testing, and other cool project our community comes up with.
+  </td>
+</tr>
+<tr>
+  <td style="padding: 15px">
+    <img src="/assets/licensing_logo.png" width="120px">
+  </td>
+  <td>
+    Finding a suitable license for contributions in the open source world can sometimes be tricky.
+    The FOSSi Foundation is actively involved in helping users choose licenses which suit their needs.
+    We realize, that for some scenarios existing licenses are not sufficient.
+    We are working with lawyers to extend existing licenses, or to create new one as necessary.
+  </td>
 </tr>
 </table>
 
+
+Join our efforts!
+-----------------
+
+FOSSi Foundation is community-driven, we encourage all interested parties to join our efforts, or to suggests new areas where work is needed.
+Do not hesitate to contact us, you can find contact information at the [organization and commitees page](https://fossi-foundation.org/organization#committees).
