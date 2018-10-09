@@ -23,17 +23,19 @@ The event is free of charge, but you need to register [here](https://docs.google
 
 Attendees are welcome to present their work and there will also be plenty of time for discussions. Below is a list of current presentations
 
-## LibreCores CI
-**Oleg Nenashev**
+## MyHDL
+**Christopher Felton**
+An introduction to MyHDL
 
 ## FuseSoC
 **Olof Kindgren, FOSSi Foundation**
+A crash course on FuseSoC, the award-winning package manager and build system for HDL code
 
 ## Certifiable Silicon
 **Murali Vijayaraghavan, SiFive**
 
-## Tim Ansell
-**FuPy**
+## FuPy
+**Tim Ansell**
 
 After the event closes, anyone who wants to stay around a bit longer is encouraged to join for dinner.
 
