@@ -33,6 +33,14 @@ A crash course on FuseSoC, the award-winning package manager and build system fo
 
 ## Certifiable Silicon
 **Murali Vijayaraghavan, SiFive**
+An introduction to Kami - designing certifiable silicon using proof assistants
+
+## OpenOCD for RISC-V
+**Jeremy Bennett, Embecosm**
+
+## Designing an ASIC for Less Than $5K
+**Mohamed Kassem, efabless**
+Designing an ASIC for Less Than $5K Using Open Source EDA for Industrial ASIC design
 
 ## FuPy
 **Tim Ansell**
