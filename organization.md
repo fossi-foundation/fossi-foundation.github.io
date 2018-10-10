@@ -86,7 +86,7 @@ help us reaching our goals, please don't hesitate to
 <div class="col-lg-9 col-md-8 col-sm-9">
   <h4>Stefan Wallentowitz</h4>
 
-  Stefan is a curious developer and has been involved in the
+  Dr. Wallentowitz is a curious developer and has been involved in the
     OpenRISC project for many years and is contributor to several
     other open source projects around SoC design.
 
