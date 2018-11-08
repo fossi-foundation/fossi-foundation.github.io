@@ -14,6 +14,6 @@ If you couldn't attend, or if you need a refresher on how great the talks were, 
 
 Thanks to the hard work of Simon Cook who did all the video editing, you can watch (almost) all talks [on our YouTube channel](https://www.youtube.com/playlist?list=PLUg3wIOWD8yoZLznLfhXjlICGlx2tuwvT). 
 
-The slides are also available online for most talks, find them next to the talk descriptions on the [ORConf page](https://www.orconf.org).
+The slides are also available online for most talks, find them next to the talk descriptions on the [ORConf page](https://orconf.org).
 
 That's it for the moment, enjoy! We are currently in the process of collecting location proposals for the next ORConf, so if you have an intersting location available and would like to host ORConf next year please get in touch with us!
