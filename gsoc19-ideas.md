@@ -35,7 +35,7 @@ etc. So, it is important that you discuss a proposal intensively.
 
 *Skill level:* All
 
-*Language/Tool:* Verilog, VHDL, Chisel, ...
+*Language/Tool:* Verilog, VHDL, Chisel, TL-Verilog, ...
 
 *Mentor:* We will find the mentor with you,
  [LibreCores GSoC team](mailto:gsoc@fossi-foundation.org)
@@ -163,4 +163,139 @@ No matter which task you choose, you get unique insights into hardware (you can 
 *Mentors:* [Stefan Wallentowitz](mailto:stefan@wallentowitz.de),
  [Philipp Wagner](mailto:mail@philipp-wagner.com),
  [Stafford Horne](mailto:shorne@gmail.com)
+
+ 
+### Hardware Accelerated Web Applications
+ 
+*Details:* The incorporation of FPGAs into the cloud makes it possible to combine the maturity of web and cloud infrastructure with the performance benefits of FPGA hardware acceleration. A web-based video game could provide live video chat where players are in character, with real-time voice and video processing in FPGAs. Or, maybe you'd like to quickly slap a web front-end on your graduate research project that uses FPGAs. The hardware infrastructure exists today to support this, but the software infrastructure is in it's infancy. In other words, there is HUGE opportunity to have impact in this space.
+
+This project supports hardware acceleration of web applications by providing a communication channel between JavaScript, running in a web browser, and FPGA hardware, running on Amazon F1 FPGA instances or other FPGA hardware. [The project](https://github.com/alessandrocomodi/fpga-webserver) is off to a good start with a proof-of-concept implementation and a demo application hosted at [fractalvalley.net](http://fractalvalley.net).
+
+*Mentor:* [Steve Hoover](https://www.linkedin.com/in/steve-hoover-a44b607/) ([email](steve.hoover@redwoodeda.com))
+
+Within this effort there are several possible summer project:
+ 
+#### Evolve the demo application into a generic framework
+
+This project, in it's current form, implements the complete communication framework, but in a proof-of-concept form entangled with the demo application. This summer project will cleanly refactor the code into a generic framework separate from the demo application.
+
+Several technologies are involved. An F1 instance is a cloud CPU (host machine) with attached FPGAs. The host acts as a web server implemented using Python and [Tornado](https://www.tornadoweb.org/en/stable/). Client JavaScript code communicates via REST or WebSockets with the server. The server relays the data stream to the attached FPGA where a custom hardware kernel processes the data. Output data is returned to the web client along a reverse path.
+
+You're focus could be the hardware and/or software components of this communication. There may be an option of leveraging [Fletcher](https://github.com/johanpel/fletcher) for the host to FPGA kernel communication.
+
+*Skill level:* Advanced
+
+*Languages/Tools:* Amazon F1 infrastructure, C++, OpenCL, Python, JavaScript, HTML5, sockets/Web Sockets
+
+#### Port to other FPGA platforms
+
+Amazon F1 is accessible to everyone, but there are downsides to the platform as well. Provisioning is complicated, and although there is no up-front cost, the hardware can get expensive after a while. If you have access and experience with other FPGA hardware, let's give it a try.
+
+*Skill level:* Advanced
+
+*Languages/Tools:* FPGA expertise and access, C++, sockets.
+
+#### Evolving fractalvalley.net
+
+Fractals are endless fun. If you are excited about FPGA acceleration, but prefer front-end development, you can help the cause without touching the FPGA. The client code is a hack that grew. You can use the existing code as a point of reference for a re-write using a proper framework like Angular or React and code management with Node.js. Improve video capture and playback and incorporate a database of user-generated fractals. It's a well-sized fun summer project to play with various modern web technologies. Or, if you are a math geek, you can play with the fractal algorithms.
+ 
+*Skill level:* Intermediate
+
+*Languages/Tools:* JavaScript, HTML5, Angular/React, Node.js, OR C++, math, algorithms
+
+#### Virtual Reality Fractals
+
+There's a test feature enabling 3-D fractal navigation in a Google Cardboard VR viewer. It's pretty damn cool. There are many VR platforms that could be used to display FPGA-generated 3-D fractal navigations. You should be good with math and algorithms to be able to apply the Mandelbrot fractals to each platform.
+
+*Skill level:* Intermediate
+
+*Languages/Tools:* C++, VR platforms
+
+
+### WARP-V RISC-V Core Generator
+
+The WARP-V RISC-V core generator was developed in 2018, and was formally verified using open-source tools in last summer's GSoC.
+
+WARP-V is the most-configurable, most-adaptable open-source RISC-V CPU core generator, taking advantage of advanced digital design features of TL-Verilog (see [makerchip.com](http://www.makerchip.com)). It can be configured as a low-power, slow-clock, single stage pipeline, a high-frequency seven-stage pipeline, or anywhere in between. You can even swap out the RISC-V ISA for a completely different ISA altogether.
+
+As a participant in GSoC 2018, Akos Hadnagy formally verified all standard configurations of this design using open-source tools, in particular, Clifford Wolf's [riscv-formal](https://github.com/SymbioticEDA/riscv-formal). He subsequently presented his work at ORConf and VSD Open. There is plenty of information available from the [WARP-V repository](https://github.com/stevehoover/warp-v).
+
+GSoC is your chance to be a part of this exciting effort which has received so much attention in so little time.
+
+*Mentor:* [Steve Hoover](https://www.linkedin.com/in/steve-hoover-a44b607/) ([email](steve.hoover@redwoodeda.com))
+
+Within this effort, several areas of focus are possible:
+
+#### CPU Components in Transaction-Level Verilog
+
+WARP-V microarchtectural options can be extended. You can implement CPU components like branch predictors, caches, etc., and add support for RISC-V ISA extensions to provide rich configurability. You will learn CPU microarchitecture and advanced design practices with TL-Verilog.
+
+*Skill level:* Advanced
+
+*Languages/Tools:* TL-Verilog, Makerchip IDE
+
+#### Physical Implementation of the WARP-V CPU
+
+At this point, little focus has been placed on the physical implementation of WARP-V. Early data looks comparable to other RISC-V implementations, but better characterization is needed. This project is for a student with access and experience with FPGAs to implement and optimize various configurations of WARP-V.
+
+*Skill level:* Intermediate/Advanced
+
+*Languages/Tools:* TL-Verilog, Makerchip IDE, FPGA
+
+#### Integration of WARP-V, Ariane, and OpenPiton
+
+WARP-V provides the CPU core only. It does not include a memory subsystem, I/O, etc. This project will integrate WARP-V with an existing RISC-V SoC, such as Ariane+OpenPiton.
+
+*Skill level:* Intermediate/Advanced
+
+*Languages/Tools:* Verilog, TL-Verilog
+
+*Additional Mentor:* Jonathan Balkind
+
+#### Implement MIPS ISA in WARP-V
+
+The MIPS ISA is in the process of becoming open. Licensing details are not yet fully available, but assuming details come to light and the ISA is truly open, MIPS can be implemented in WARP-V. Steve Hoover will lead the initial implementation (which should take a week or two), and the student will work out corner cases, verify the implementation, and qualify it through channels currently taking shape in the new MIPS ecosystem.
+
+*Skill level:* Intermediate
+
+*Languages/Tools:* TL-Verilog
+
+
+### Extend a Transaction-Level Verilog Component Library
+
+Transaction-Level Verilog (TL-Verilog) is an emerging language extension to SystemVerilog that is introducing a number of game-changing capabilities. Among them is the ability to define flexible, reusable components--way more flexible than Verilog. For this project, you will extend [a library of compatible components](https://github.com/stevehoover/tlv_flow_lib) including FIFOs, queues, and arbiters that was developed as part of last year's GSoC by Ahmed Salman. This library has the potential to form the basis of a new era of hardware design. Ahmed presented his work at VSDOpen and published this [paper](https://arxiv.org/pdf/1811.01780.pdf). In addition to developing components, you will demonstrate the ease of composing these components into sophisticated transaction flows and quickly implementing what are currently considered to be complex designs, such as a complete on-chip network!
+
+*Skill level:* Advanced
+
+*Language/Tools:* TL-Verilog, Makerchip IDE
+
+
+### TL-Verilog Timing Reports
+
+TL-Verilog improves the design process by providing high-level context for design details. There are benefits to relating information from down-stream (RTL and below) tools, back to TL-Verilog's higher-level context (hierarchy, pipelines, and transactions).
+
+You'll build scripts to map RTL signal names to their original TL-Verilog names. You'll apply this to timing reports from open source synthesis tools so timing information can be reported with respect to TL-Verilog source code. You're contributions will help to elevate open-source design to a level above current industry practice.
+
+*Skill level:* Intermediate
+
+*Language/Tools:* QFlow, yosys, Perl/Python/other
+
+*Additional Mentors:* Tim Edwards (to be confirmed--was interested last year)
+
+
+### TL-Clash/TL-Chisel/TL-VHDL Definition
+
+The TL-X specification defines “transaction-level” language extensions that can, in theory, be applied to any underlying hardware description language. Today there is only support for Verilog as TL-Verilog. Others, such as TL-Clash, TL-Chisel, and TL-VHDL could also be supported. The first step is to define them in more detail.
+
+This project would provide a unique opportunity to write open source code that cannot be compiled! This will help to define the support required in compilers for these language variants, and it will expose the benefits. While it would be possible to implement support in [TLV-Comp](https://github.com/ypyatnychko/tlv-comp), this step may be left as a future project.
+
+There is particular interest in TL-Clash, as it would combine the best of TL-X and Clash. TL-X is strong with sequential logic through its timing abstract modeling, and Clash is strong with combinational logic because of its advanced type system.
+
+This is an advanced project requiring skills with hardware modeling and hardware and software language theory.
+
+*Skill level:* Advanced
+
+*Language/Tools:* TL-Verilog, Clash/Haskell, Chisel/Scala, VHDL
+
+*Mentors:* Steve Hoover, Jan Kuper(?)
 
