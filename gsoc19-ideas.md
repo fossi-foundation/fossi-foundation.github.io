@@ -327,3 +327,51 @@ Our initial results show that HW productivity is dramatically improved with this
 *Language/Tools:* SystemVerilog, Computer Architecture
 
 *Mentors:* Michael Taylor
+
+### PRGA + FASM: Open-source Bitgen for FPGAs
+[Princeton Reconfigurable Gate Array (PRGA)](https://prga.readthedocs.io/en/latest/) is an open-source framework for building and using custom FPGAs. It consists of a Python front-end API (the PRGA Builder) for building custom FPGAs, and a CAD flow (the PRGA Tool Chain) for implementing target RTL designs on those custom FPGAs. The PRGA Tool Chain uses [Yosys](http://www.clifford.at/yosys/) for synthesis, [VPR](https://verilogtorouting.org/) for place & route, and the PRGA Bitgen for bitstream generation. The goal of this project is to add support for [FPGA Assembly (FASM)](https://github.com/SymbiFlow/fasm), a generic bitstream file format and part of the [SymbiFlow](https://symbiflow.github.io/) project, to PRGA. Specifically:
+
+1. Enable the PRGA Builder to output a FASM schema which describes all of the available logic resources in the FPGA. The PRGA Builder supports different types of configuration memories, and the FASM schema should be independent of that.
+2. Replace the inputs to the PRGA Bitgen, namely *.blif (synthesis result), *.net (packing result), *.place (placing result) and *.route (routing result), with one FASM file.
+
+*Skill level:* Intermediate
+
+*Language/Tools:* Python, C++, basic knowledge of FPGA CAD tools
+
+*Mentors:* Ang Li
+
+### Architectural Improvements to OpenPiton+Ariane
+[OpenPiton+Ariane](https://openpiton-blog.princeton.edu/2018/11/announcing-openpiton-with-ariane/) is a permissively-licensed RISC-V manycore processor, built as a collaboration between the [PULP Platform](https://www.pulp-platform.org/) from ETH Zürich and the [OpenPiton Platform](http://www.openpiton.org/) from Princeton University. We would like to co-optimise OpenPiton and Ariane in their combined platform, to improve performance of the processor both in FPGA emulation systems and for eventual silicon chips. Possible improvements include: adding a global branch predictor, introducing a multi-level TLB, supporting multiple outstanding memory transactions in the P-Mesh memory system, and widening the P-Mesh cache interface. We are also open to other projects aimed at improving the performance of aspects of either Ariane or OpenPiton.
+
+*Skill level:* Intermediate
+
+*Language/Tools:* Verilog, SystemVerilog, RISC-V
+
+*Mentor:* Jonathan Balkind
+
+### Enhancing JuxtaPiton with X86 Support
+[JuxtaPiton](https://openpiton-blog.princeton.edu/2018/11/juxtapiton-taking-openpiton-heterogeneous-with-risc-v/) is the world's first open-source, general-purpose, heterogeneous-ISA processor. It is built on [OpenPiton](http://www.openpiton.org/) and is designed to provide a platform for answering questions about heterogeneous-ISA systems. JuxtaPiton supports both the [OpenSPARC](https://www.oracle.com/technetwork/systems/opensparc/index.html) T1 core and the [PicoRV32](https://github.com/cliffordwolf/picorv32) RISC-V core in a single system, but needs support for more ISAs to enable systems-level research. This project would entail integrating the open-source [ao486](https://github.com/alfikpl/ao486) core, which implements the 486 version of the x86 instruction set, into JuxtaPiton. This would enable running standard x86 Linux or other operating systems and start to untangle the unique issues that come with building a heterogeneous-ISA system.
+
+*Skill level:* Intermediate
+
+*Language/Tools:* Verilog, x86 assembly
+
+*Mentor:* Jonathan Balkind
+
+### Integrating the AnyCore Processor into OpenPiton
+[AnyCore](https://people.engr.ncsu.edu/ericro/research/anycore.htm) is an advanced superscalar processor developed at NC State University, designed to be highly configurable across parameters like issue width and pipeline depth. [OpenPiton](http://www.openpiton.org/) is a research platform for designing advanced chips from 1 core to 500 million cores, with a focus on providing a highly scalable cache-coherent memory system. This project would entail connecting the high performance AnyCore processor with OpenPiton's scalable P-Mesh memory system to build a completely new manycore processor, which runs the RISC-V ISA. The integration would involve writing an interface from AnyCore to P-Mesh, enhancing P-Mesh for higher performance, and implementing virtual memory in AnyCore.
+
+*Skill level:* Intermediate/Advanced
+
+*Language/Tools:* Verilog, SystemVerilog, RISC-V
+
+*Mentor:* Jonathan Balkind
+
+### 1000-core Behavioural Simulation of a Tiled Manycore
+The [OpenPiton](http://www.openpiton.org/) platform is designed to scale from 1 core to 500 million cores, but we must rely on slow behavioural simulation infrastructure to validate very large-scale designs. Existing verilog simulators don't scale well with such large designs, but tiled manycore processors which rely on networks-on-chip (NoCs) can use those NoCs to partition the simulation. This project would involve implementing a verilog simulation infrastructure (using Verilator) which is partitioned into multiple simulation instances which communicate using OpenMPI, to enable verilog simulation of a 1000-core processor.
+
+*Skill level:* Intermediate
+
+*Language/Tools:* Verilog, C++, OpenMPI
+
+*Mentor:* Jonathan Balkind
