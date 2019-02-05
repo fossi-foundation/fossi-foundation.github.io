@@ -375,3 +375,13 @@ The [OpenPiton](http://www.openpiton.org/) platform is designed to scale from 1 
 *Language/Tools:* Verilog, C++, OpenMPI
 
 *Mentor:* Jonathan Balkind
+
+### VHDL front-end  for Yosys
+
+Yosys is a logic synthesis tool used is several open source ASIC implementation flows. Currently modern VHDL support is only available through a proprietary plugin. This work can likely build on earlier development work in this regard. First part of the project consists of investigating the current state and determine how to implement/complete the VHDL front-end. Second part is then execution of this plan.
+
+*Skill level:* Intermediate
+
+*Language/Tools:* VHDL, C++, Yosys
+
+*Mentor:* [Staf Verhaegen](mailto:staf@fibraservi.eu)
