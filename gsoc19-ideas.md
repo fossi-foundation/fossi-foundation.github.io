@@ -3,6 +3,8 @@ layout: page
 title: "Google Summer of Code 2019 - Ideas for Projects"
 ---
 
+FOSSi Foundation is applying as an umbrella organization in Google Summer of Code 2019. That means, that we give small projects the chance to participate in the program. Below you can find a list of ideas that the projects had, but students are encouraged to propose their own ideas.
+
 <!--
 We are happy to [announce](2017/03/02/gsoc) that we have been selected to participate in Google Summer of Code 2017!
 -->
