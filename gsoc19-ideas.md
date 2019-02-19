@@ -387,3 +387,25 @@ Yosys is a logic synthesis tool used is several open source ASIC implementation 
 *Language/Tools:* VHDL, C++, Yosys
 
 *Mentor:* [Staf Verhaegen](mailto:staf@fibraservi.eu)
+
+### Continuous Integration for OpenRISC mor1kx
+
+The [OpenRISC](http://openrisc.io/) project dates back to 2000 and defines an open source RISC architecture.  The current implementation of the architecture [mor1kx](https://github.com/openrisc/mor1kx) has a constantly evolving code base which is sometimes found to have bugs.  This project would be to extend the continuous integration (CI) system to test changes to mor1kx to ensure there are no regressions.  The CI should verify the core by running [or1k-tests](https://github.com/openrisc/or1k-tests), check that debugging features work with OpenOCD/GDB and monitor resource usages by running yosys synthesis.  The tests should also run with different options enabled for the codebase, i.e. caches enabled/disabled, load store buffers, pipelines CAPPUCCINO, MAROCCHINO, ESPRESSO.
+
+*Skill level:* Beginner
+
+*Language/Tools:* Verilog, Shell, Travis CI
+
+*Mentor:* [Stafford Horne](mailto:shorne@gmail.com)
+
+### OpenRISC formal
+
+The [OpenRISC](http://openrisc.io/) project dates back to 2000 and defines an open source RISC architecture.  With the recent developments with [Yosys formal](http://www.clifford.at/papers/2016/yosys-synth-formal/) it is now possible for us to provide formal verification for the OpenRISC cores like [mor1kx](https://github.com/openrisc/mor1kx).  This project will be to start to formally verify the subsystems of the [mor1kx](https://github.com/openrisc/mor1kx) OpenRISC implementation.  This will help generate interest from companies that know of OpenRISC but haven't chosen it due to unknowns about stability.
+
+*Skill level:* Intermediate
+
+*Language/Tools:* Verilog, OpenRISC, yosys
+
+*Mentor:* [Stafford Horne](mailto:shorne@gmail.com)
+
+
