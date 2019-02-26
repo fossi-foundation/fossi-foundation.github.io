@@ -9,7 +9,7 @@ author: Olof Kindgren
 
 <center><img src="https://fossi-foundation.org/latchup/images/latchup_logo.png" class="img-responsive" /></center>
 
-*The FOSSi Foundation is proud to announce Latch-Up, a conference dedicated to free and open source silicon to be held over the weekend of May 4th and 5th in Portland, Oregon, USA.*
+*The FOSSi Foundation is proud to announce Latch-Up (<a href="http://latchup.io" target="_blank">latchup.io</a>), a conference dedicated to free and open source silicon to be held over the weekend of May 4th and 5th in Portland, Oregon, USA.*
 
 Latch-Up opens a new chapter for the FOSSi Foundation, with it being the first event in the spirit of [ORConf](http://orconf.org/) held in North America. Latch-Up is a community-focused conference for open source semiconductor, digital design and embedded systems professionals and enthusiasts. Expect presentations on a wide range of topics; open source IP blocks and SoCs, open source simulators, compilers, synthesis and physical implementation tools for both FPGA and ASIC.
 
@@ -51,3 +51,5 @@ We also need folks on the ground to lend a hand - so if you have any expertise i
 
 ## When and where
 The conference will be held during the weekend May 4-5 2019 in Portland, Oregon USA. The exact times and venue are still to be confirmed.
+
+All event information will be available at <a href="http://latchup.io" target="_blank">latchup.io</a>
