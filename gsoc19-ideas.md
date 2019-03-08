@@ -408,4 +408,16 @@ The [OpenRISC](http://openrisc.io/) project dates back to 2000 and defines an op
 
 *Mentor:* [Stafford Horne](mailto:shorne@gmail.com)
 
+### SystemVerilog Language Processing Framework
+SystemVerilog is a well-established language in the design and verification space. The ultimate goal of this project is to have a
+SystemVerilog language-processing framework that can be used from C++, Java, and Python (three language bindings supported by ANTLR4). 
+This framework should support parsing, linking (connecting references to declarations), and semantic checks. This framework could be
+used by tools (eg synthesis, lint, documentation, etc) that need to extract information from SystemVerilog sources.
+
+The scope for this project, with respect to GSoC 2019, is open for discussion. Perhaps we focus on getting a pre-processor 
+in place. Perhaps we focus on getting pre-processing and an abstract syntax tree (AST) created. 
+
+*Skill level:* Intermediate
+*Language/Tools:* ANTLR4, Java/C++/Python, SystemVerilog
+*Mentor:* [Matthew Ballance](mailto:matt.ballance@gmail.com)
 
