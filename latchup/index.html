@@ -275,6 +275,7 @@
             <div class="card-body">
               <p class="card-text">
                 <ul>
+                  <li><a href="#emu">Emulation of vintage integrated circuits through die analysis and reverse-EDA</a> by Cole Johnson</li>
                   <li><a href="#osvvm">OSVVM, VHDL's #1 FPGA Verification Library</a> by Jim Lewis</li>
                   <li><a href="#lgraph">Live Graph infrastructure for Synthesis and Simulation</a> by Jose Renau</li>
                   <li><a href="#syzygy">SYZYGY: An Open Standard For Semiconductor Evaluation</a> by Tom McLeod</li>
@@ -295,7 +296,34 @@
               <!-- <p> -->
               <!-- </p> -->
                 
-                <h4>
+              <h4>
+                <a name="emu" href="#emu"></a>Emulation of vintage integrated circuits through die analysis and reverse-EDA</h4>
+              <p>
+                Despite being sold in the millions, video games based on discrete game ICs have had minimal emulation developed.
+                This is primarily due to the circuitry being a literal "black box" as only the manufacturer possessed the designs.
+                In addition, much of the documentation surrounding these games has disappeared over the years.
+              </p>
+              <p>
+                Cole has been developing a process to re-implement these stubborn circuits in modern FPGAs as well as software.
+                It involves extracting a transistor-level netlist from high-resolution photographs of the exposed silicon die.
+                Reverse-engineering and slow simulation is achieved using tools pioneered by the visual6502 project. This is followed
+                by reverse-EDA performed by custom tools being developed. The transistor-level design is automatically converted into
+                a more abstract RTL circuit description.
+              </p>
+              <p>
+                Verilog obtained from the above process will be ported to the tinyFPGA board, the
+                <a href="https://github.com/MiSTer-devel/Main_MiSTer/wiki" target="_blank">MiSTer hardware emulation project</a>,
+                and the MAME software emulator. The intermediate files will be open-source in the spirit of the target projects.
+	      </p>
+              
+              <h6>Presenter: <a href="https://twitter.com/ColeJ71909899" target="_blank">Cole Johnson</a></h6>
+              <p>
+                Cole has only recently joined hardware design circles as a result of
+                <a href="https://nerdstuffbycole.blogspot.com/" target="_blank">his reverse-engineering project</a>, which
+                began over two years ago. He looks forward to potential work on RISC-V and ASIC design in the future.
+              </p>
+
+              <h4>
                   <a name="osvvm" href="#osvvm"></a>OSVVM, VHDL's #1 FPGA Verification Library
                 </h4>
               <p>
