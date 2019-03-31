@@ -21,7 +21,7 @@ Latch-Up will be held in the 101 space of [Revolution Hall](https://www.revoluti
 
 ## Sponsorship announcement
 
-We're pleased to announce [SiFive](https://www.sifive.com) as Major Sponsors of the event. SiFive unwavering in their support of the open source digital design community and it's an honur for the first Latch-Up to receive their support.
+We're pleased to announce [SiFive](https://www.sifive.com) as Major Sponsors of the event. SiFive are unwavering in their support of the open source digital design community and it's an honour for the first Latch-Up to receive their support.
 
 ## Conference dinner
 
