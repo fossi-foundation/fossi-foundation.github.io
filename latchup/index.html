@@ -340,6 +340,8 @@
               <p class="card-text">
                 <ul>
                   <li><a href="#emu">Emulation of vintage integrated circuits through die analysis and reverse-EDA</a> by Cole Johnson</li>
+                  <li><a href="#verilogboy">How I started learning FPGA: My journey writing a GameBoy in Verilog</a> by Wenting Zhang</li>
+                  <li><a href="#wavedrom">Diagrams and system visualisation in chip design</a> by Aliaksei Chapyzhenka</li>
                   <li><a href="#osvvm">OSVVM, VHDL's #1 FPGA Verification Library</a> by Jim Lewis</li>
                   <li><a href="#lgraph">Live Graph infrastructure for Synthesis and Simulation</a> by Jose Renau</li>
                   <li><a href="#syzygy">SYZYGY: An Open Standard For Semiconductor Evaluation</a> by Tom McLeod</li>
@@ -350,6 +352,7 @@
                   <li><a href="#edapack">Managing EDA Tools the Easy Way with EDAPack</a> by Matthew Ballance</li>
                   <li><a href="#pylcars">Python for Electrical Engineering Education</a> by Steven K Armour</li>
                   <li><a href="#riscvdebian">RISC-V in Debian</a> by Vagrant Cascadian</li>
+                  <li><a href="#dvkit">DVKit: An Integrated Development Environment for Design and Verification Engineers</a> by Matthew Ballance</li>
                   <!-- <li><a href=""></a> by </li> -->
                 </ul>
                 <hr/>
@@ -387,6 +390,52 @@
                 Cole has only recently joined hardware design circles as a result of
                 <a href="https://nerdstuffbycole.blogspot.com/" target="_blank">his reverse-engineering project</a>, which
                 began over two years ago. He looks forward to potential work on RISC-V and ASIC design in the future.
+              </p>
+
+              <h4>
+                <a name="verilogboy" href="#verilogboy"></a>How I started learning FPGA: My journey writing a GameBoy in Verilog</h4>
+              <p>
+                Coding can be fun, there are many people coding in their free time just for fun. FPGA's unique features and capabilities makes it
+                an attractive target for enthusiasms. VerilogBoy is such an FPGA project, that is built simply for fun. The
+                <a href="https://github.com/zephray/VerilogBoy" target="_blank">VerilogBoy</a> project consists of two parts. The first part is
+                implementing a GameBoy compatible machine in Verilog. The second part is building an FPGA-based handheld game console.
+              </p>
+              <p>
+                This presentation will run through the process of the creation of the project, share some of the experience along the way,
+                also provide some future prospects of the project.
+	      </p>
+              <h6>Presenter: <a href="https://twitter.com/zephray_wenting" target="_blank">Wenting Zhang</a></h6>
+              <p>
+                Wenting Zhang is a undergraduate student of Computer Science and Electrical Engineer major, who has just started learning
+                digital logic 1 year ago. He has built several open source projects such as E-Ink software timing controller and LCD scan
+                doubler before. He is trying to learn more and get more involved in both open source community and semiconductor industry.                
+              </p>
+
+              
+              <h4>
+                <a name="wavedrom" href="#wavedrom"></a>Diagrams and system visualisation in chip design</h4>
+              <p>
+                Chip designers use multiple forms of illustrations to present information of technical nature quickly and clearly. Illustrations
+                employed to mobilize human visual system ability to recognize trends, patterns and differences. Some forms of illustrations are
+                universally accepted. Data tables, plots, line charts, mechanical drawings can be used to communicate information to the general public.
+                Specialized diagram types (like UML) can be reused from software or system design practice. Such diagrams are capable of describing
+                complex structure or behavior and convey this information to the broad science and engineering community.
+              </p>
+              <p>
+                Like any other specific field of science / engineering -- chip designers developed own specialized visual language to communicate
+                complex ideas with clarity, precision and efficiency. Schematic symbols; timing, circuit, layout diagrams were originally developed
+                for paper medium, now migrated into electronic documentation. Many design tools exists to create illustrations and diagrams.
+                From generic to specialized. Some require freehand drawing skills, some perform automatic layout.
+              </p>
+              <p>
+                This talk is about ideas, principles and tools that would help you to create good diagrams.
+	      </p>
+
+              <h6>Presenter: <a href="https://twitter.com/wavedrom" target="_blank">Aliaksei Chapyzhenka</a></h6>
+              <p>
+                Aliaksei Chapyzhenka is an engineer at <a href="https://www.sifive.com">SiFive Inc.</a> The author of
+                <a href="https://wavedrom.com" target="_blank">WaveDrom</a> and project and OSS contributor
+                <a href="http://github.com/drom" target="_blank">github.com/drom</a> since 2011.
               </p>
 
               <h4>
@@ -568,7 +617,7 @@
                 <a href="http://github.com/EDAPack/edapack" target="_blank">EDAPack</a> provides a framework to make these tasks easy.
                 This talk will explore the motivation behind EDAPack, and how EDAPack simplifies EDA tool management.
 	      </p>
-              <h6>Presenter: <a href="https://twitter.com/bitsbytesgates" target="_blank">Matthew Ballance</a></h6>
+              <h6><a name="matthewballance" href="#matthewballance"></a>Presenter: <a href="https://twitter.com/bitsbytesgates" target="_blank">Matthew Ballance</a></h6>
               <p>
                 Matthew Ballance is a Product Engineer at Mentor, A Siemens Business working with Portable Stimulus.
                 Over the past 20 years in the EDA industry, he has worked in product development, marketing, and management
@@ -607,6 +656,27 @@
                 under 300 watts. A RISC-V cheerleader and enthusiast, looking forward to a future with auditable hardware.
               </p>
 
+
+              <h4>
+                <a name="dvkit" href="#dvit"></a>DVKit: An Integrated Development Environment for Design and Verification Engineers</h4>
+              <p>
+                Design and Verification engineers develop code using a plethora of languages -- Verilog, SystemVerilog, C/C++, Python, Perl, etc.
+                Whether developing commercial or open source IP, reuse is critical, which means that DV engineers need to efficiently
+                comprehend and work with code written by others. <a href="http://dvkit.org" target="_blank">DVKit</a> is an Eclipse-based
+                Integrated Development Environment (IDE) that supports developing in a wide variety of software and hardware description
+                languages much more efficiently than can be done with a text editor.
+              </p>
+              <p>
+                This talk will introduce you to the differences between a text editor and an IDE. We will look at features of DVKit that
+                boost productivity on any type of text file, and focus on features that make navigating and developing SystemVerilog and
+                Verilog designs and testbench environments more efficient and effective.
+              </p>
+
+	      </p>
+              <h6>Presenter: <a href="#matthewballance">Matthew Ballance</a></h6>
+              <p>
+              </p>
+              
 	    </div>
 	  </div>
         </div>
