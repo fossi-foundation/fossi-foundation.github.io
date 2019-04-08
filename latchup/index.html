@@ -350,7 +350,10 @@
                   <li><a href="#pylcars">Python for Electrical Engineering Education</a> by Steven K Armour</li>
                   <li><a href="#riscvdebian">RISC-V in Debian</a> by Vagrant Cascadian</li>
                   <li><a href="#dvkit">DVKit: An Integrated Development Environment for Design and Verification Engineers</a> by Matthew Ballance</li>
-                  <!-- <li><a href=""></a> by </li> -->
+                  <li><a href="#nyuzi">Nyuzi: An Open Source GPGPU Processor</a> by Jeff Bush</li>
+                  <li><a href="#openpiton">OpenPiton+Ariane: Making Ariane Multicore with OpenPiton’s P-Mesh</a> by Jonathan Balkind</li>
+                  <li><a href="#juxtapiton">JuxtaPiton: The First Open-Source, Heterogeneous-ISA Processor</a> by Katie Lim</li>
+                  <!-- <li><a href="#"></a> by </li> -->
                 </ul>
                 <hr/>
 
@@ -430,9 +433,9 @@
 
               <h6>Presenter: <a href="https://twitter.com/wavedrom" target="_blank">Aliaksei Chapyzhenka</a></h6>
               <p>
-                Aliaksei Chapyzhenka is an engineer at <a href="https://www.sifive.com">SiFive Inc.</a> The author of
-                <a href="https://wavedrom.com" target="_blank">WaveDrom</a> and project and OSS contributor
-                <a href="http://github.com/drom" target="_blank">github.com/drom</a> since 2011.
+                Aliaksei Chapyzhenka is an engineer at <a href="https://www.sifive.com">SiFive Inc.</a>, author of the
+                <a href="https://wavedrom.com" target="_blank">WaveDrom</a> project and
+                <a href="http://github.com/drom" target="_blank">OSS contributor</a> since 2011.
               </p>
 
               <h4>
@@ -673,7 +676,68 @@
               <h6>Presenter: <a href="#matthewballance">Matthew Ballance</a></h6>
               <p>
               </p>
-              
+
+              <h4>
+                <a name="nyuzi" href="#nyuzi"></a>Nyuzi: An Open Source GPGPU Processor</h4>
+              <p>
+                <a href="https://github.com/jbush001/NyuziProcessor" target="_blank">Nyuzi</a> began as a way to explore tradeoffs
+                between general purpose and fixed function hardware. This presentation will talk about the original goals of the project,
+                the process of building a new microarchitecture, and some learnings from it.
+	      </p>
+              <h6>Presenter: <a href="https://github.com/jbush001" target="_blank">Jeff Bush</a></h6>
+              <p>
+                Jeff Bush has spent most of his professional career building software for consumer electronics products.
+                Nyuzi is a personal project.                
+              </p>
+
+              <h4>
+                <a name="openpiton" href="#openpiton"></a>OpenPiton+Ariane: Making Ariane Multicore with OpenPiton’s P-Mesh</h4>
+              <p>
+                You may have heard of <a href="https://github.com/pulp-platform/ariane" target="_blank">Ariane</a> from ETH Zurich,
+                or of <a href="http://openpiton.org" target="_blank">OpenPiton</a> from Princeton University, but now from the makers
+                of both, comes
+                <a href="https://openpiton-blog.princeton.edu/2018/11/announcing-openpiton-with-ariane/" target="_blank">OpenPiton+Ariane</a>!
+              </p>
+              <p>
+                By modifying the Ariane RISC-V (RV64GC) core’s L1 cache interface to support the P-Mesh cache-coherence protocol, we replaced
+                OpenPiton’s original OpenSPARC T1 core and then enhanced P-Mesh to support RISC-V atomic operations.
+              </p>
+              <p>
+                Since bringing up SMP Linux on FPGA, OpenPiton+Ariane is the first open-source, Linux-booting, RISC-V system that scales
+                from single-core to manycore. OpenPiton+Ariane inherits all of the capabilities of OpenPiton and of Ariane, bringing them
+                together in a single scalable, configurable, and easy-to-use platform ideal for rapid prototyping. This is all available
+                under permissive licences from our <a href="https://github.com/PrincetonUniversity/openpiton" target="_blank">GitHub repositories</a>.
+	      </p>
+              <h6>Presenter: <a href="https://jbalkind.github.io" target="_blank">Jonathan Balkind</a></h6>
+              <p>
+                Jonathan Balkind is a sixth year PhD Candidate at Princeton University, working with David Wentzlaff. He has led the
+                development of OpenPiton since its first release in 2015 and has given ten tutorials at universities and conferences
+                worldwide. His research currently focuses on open-source hardware and Function-as-a-Service Serverless Computing.                
+              </p>
+
+              <h4>
+                <a name="juxtapiton" href="#juxtapiton"></a>JuxtaPiton: The First Open-Source, Heterogeneous-ISA Processor</h4>
+              <p>
+                Heterogeneous-ISA processors have become a topic of research interest due to the increasing need for energy efficiency.
+                Without a fully open-source implementation of a heterogeneous-ISA processor, it is difficult to test full-stack modifications.
+                By connecting <a href="https://github.com/cliffordwolf/picorv32" target="_blank">PicoRV32</a> to the
+                <a href="http://openpiton.org" target="_blank">OpenPiton</a> cache system, we created
+                <a href="https://abopen.com/news/juxtapiton-merges-opensparc-risc-v-soft-cores/" target="_blank">JuxtaPiton</a>,
+                a heterogeneous-ISA platform with both OpenPiton’s original OpenSPARC T1 cores and PicoRV32 cores.
+              </p>
+              <p>
+                This project was the first time a new core was integrated into OpenPiton, so I will describe the process I developed
+                to integrate PicoRV32 and which has since been used to connect five other cores to OpenPiton. I will also describe
+                the runtime system we use to offload binaries from Linux on the SPARC core to the bare-metal environment on PicoRV32
+                core and to proxy syscalls from the running binary.
+	      </p>
+              <h6>Presenter: <a href="https://homes.cs.washington.edu/~katielim/" target="_blank">Katie Lim</a></h6>
+              <p>
+                Katie Lim is a first-year PhD student at University of Washington working with Michael Taylor and Tom Anderson.
+                During her undergrad at Princeton University, she contributed to OpenPiton, created JuxtaPiton as her senior thesis
+                project, and interned at lowRISC. Her research interests are in abstractions for heterogeneous architectures.
+              </p>
+
 	    </div>
 	  </div>
         </div>
