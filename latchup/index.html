@@ -353,7 +353,9 @@
                   <li><a href="#nyuzi">Nyuzi: An Open Source GPGPU Processor</a> by Jeff Bush</li>
                   <li><a href="#openpiton">OpenPiton+Ariane: Making Ariane Multicore with OpenPiton’s P-Mesh</a> by Jonathan Balkind</li>
                   <li><a href="#juxtapiton">JuxtaPiton: The First Open-Source, Heterogeneous-ISA Processor</a> by Katie Lim</li>
-                  <!-- <li><a href="#"></a> by </li> -->
+                  <li><a href="#firesim">FireSim: Open-Source Easy-to-use FPGA-Accelerated Cycle-Exact Hardware Simulation in the Cloud</a> by David Biancolin and Alon Amid</li>
+                  <li><a href="#myhdl">The fusion of high-level synthesis with event-oriented hardware description (myhdl)</a> by Christopher Felton</li>
+                  <!-- <li><a href="#!!!">!!!</a> by !!!</li> -->
                 </ul>
                 <hr/>
 
@@ -730,7 +732,7 @@
                 to integrate PicoRV32 and which has since been used to connect five other cores to OpenPiton. I will also describe
                 the runtime system we use to offload binaries from Linux on the SPARC core to the bare-metal environment on PicoRV32
                 core and to proxy syscalls from the running binary.
-	      </p>
+              </p>
               <h6>Presenter: <a href="https://homes.cs.washington.edu/~katielim/" target="_blank">Katie Lim</a></h6>
               <p>
                 Katie Lim is a first-year PhD student at University of Washington working with Michael Taylor and Tom Anderson.
@@ -738,8 +740,71 @@
                 project, and interned at lowRISC. Her research interests are in abstractions for heterogeneous architectures.
               </p>
 
-	    </div>
-	  </div>
+              <h4>
+                <a name="firesim" href="#firesim"></a>FireSim: Open-Source Easy-to-use FPGA-Accelerated Cycle-Exact Hardware Simulation in the Cloud</h4>
+              <p>
+                We present <a href="https://fires.im" target="_blank">FireSim</a> , an easy-to-use, open-source, FPGA-accelerated
+                cycle-accurate hardware simulation platform that runs on Amazon EC2 F1. FireSim automatically transforms and
+                instruments open-hardware designs (e.g. RISC-V
+                <a href="https://github.com/freechipsproject/rocket-chip" target="_blank">Rocket Chip</a>,
+                <a href="https://github.com/riscv-boom/riscv-boom" target="_blank">BOOM</a>,
+                <a href="https://github.com/ucb-bar/hwacha" target="_blank">Hwacha</a>,
+                <a href="https://github.com/nvdla" target="_blank">NVDLA</a>, etc.) with the MIDAS framework
+                into fast (10s-100s MHz), deterministic, FPGA-based simulators that enable productive pre-silicon verification
+                and performance validation.
+              </p>
+              <p>
+                To model I/O, FireSim includes synthesizeable and timing-accurate models for standard
+                interfaces like DRAM, Ethernet, UART, and others. By providing a framework to automate the management of FPGA
+                infrastructure, FireSim also lets software developers get a head-start on building software for a novel hardware
+                design, by letting these developers interact with the pre-silicon hardware design as they would a virtual machine.
+                In effect, both hardware and software developers work from a single source of truth: the RTL for the hardware design.
+              </p>
+              <p>
+                Originally developed to simulate new datacenter architectures, FireSim is capable of scaling to simulating thousands
+                of multi-core compute nodes, with an optional cycle-accurate network simulation tying them together. Leveraging
+                AWS EC2 F1, FireSim removes the high capex traditionally involved in large-scale FPGA-based simulation, democratizing
+                access to realistic pre-silicon hardware modeling of new designs. For designs that contain RISC-V SoCs,
+                FireSim also provides compatible Linux distributions (Buildroot, Fedora) and automates the process of building complex
+                workloads on top of these Linux distributions. By harnessing a standardized host platform and providing a large amount
+                of automation/tooling, FireSim drastically simplifies the process of building and deploying large-scale FPGA-based
+                hardware simulations.
+              </p>
+              <p>
+                In this talk, we cover the open-source FireSim framework, explore how users can use and modify
+                the existing designs available in FireSim, and show how users can integrate and measure their own hardware designs.
+              </p>
+              <h6>Presenter: <a href="https://people.eecs.berkeley.edu/~biancolin/" target="_blank">David Biancolin</a>, Alon Amid</h6>
+              <p>
+                David Biancolin is a fifth-year Ph.D. student in the Berkeley Architecture Research (BAR) Group, part of the ADEPT
+                lab at UC Berkeley, where he is co-advised by Jonathan Bachrach and Krste Asanovic.  David received his BASc.
+                in Engineering Science in the Electrical and Computer Engineering Option at the University of Toronto in 2014
+                (1T3 + PEY). David is a developer of FireSim and maintainer of MIDAS.
+              </p>
+              <p>
+                Alon Amid is a Ph.D. student in the Electrical Engineering and Computer Sciences department in UC Berkeley, advised
+                by Borivoje Nikolic and Krste Asanovic. His research focus is in full-system co-design and evaluation of data-parallel
+                architectures and large-scale distributed systems. Alon is a contributor to the FireSim project for FPGA-accelerated
+                scalable cycle-accurate simulation, as well as a contributor to the RISC-V based chip-prototyping efforts at UC Berkeley.
+              </p>
+
+              <h4>
+                <a name="myhdl" href="#myhdl"></a>The fusion of high-level synthesis with event-oriented hardware description</h4>
+              <p>
+                Many of the high-level synthesis (HLS) approaches take existing procedural programming languages, such as the
+                C programming language, and add extensions to the language (e.g. pragmas) to accommodate high-level synthesis.
+                An alternate approach is to use the <a href="http://www.myhdl.org" target="_blank">myhdl</a> design patterns to
+                describe HLS chunks and integrate them with existing
+                event-oriented (simulation-oriented, a.k.a RTL) hardware description languages (HDL).  This approach allows a
+                designer to seamlessly move between HDL and HLS levels of abstractions and use both descriptions in a single
+                programming environment.
+              </p>
+              <h6>Presenter: <a href="https://twitter.com/FeltonChris" target="_blank">Christopher Felton</a></h6>
+              <p>
+                Christopher L. Felton is a senior design engineer at the Mayo Clinic, a myhdl user and contributor since 2005.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div class="row">
