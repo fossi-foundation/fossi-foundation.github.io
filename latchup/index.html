@@ -416,7 +416,9 @@
                   <li><a href="#firesim">FireSim: Open-Source Easy-to-use FPGA-Accelerated Cycle-Exact Hardware Simulation in the Cloud</a> by David Biancolin and Alon Amid</li>
                   <li><a href="#myhdl">The fusion of high-level synthesis with event-oriented hardware description (myhdl)</a> by Christopher Felton</li>
                   <li><a href="#boom">The Berkeley-Out-of-Order-Machine: An Open Source Synthesizable High-Performance RISC-V Processor</a> by Jerry Zhao, Abe Gonzalez and Ben Korpan</li>
-                  
+                  <li><a href="#chisel">Higher-Order Hardware Design with Chisel 3</a> by Jack Koenig</li>
+                  <li><a href="#duh">DUH: document and tools for HW design reuse</a> by Aliaksei</li>
+                  <li><a href="#basejump">BaseJump STL: a Standard Template Library for Hardware Design</a> by Daniel Petrisko</li>
                   <!-- <li><a href="#!!!">!!!</a> by !!!</li> -->
                 </ul>
                 <hr/>
@@ -495,7 +497,7 @@
                 This talk is about ideas, principles and tools that would help you to create good diagrams.
 	      </p>
 
-              <h6>Presenter: <a href="https://twitter.com/wavedrom" target="_blank">Aliaksei Chapyzhenka</a></h6>
+              <h6>Presenter: <a name="aliaksei" href="#aliaksei"></a><a href="https://twitter.com/wavedrom" target="_blank">Aliaksei Chapyzhenka</a></h6>
               <p>
                 Aliaksei Chapyzhenka is an engineer at <a href="https://www.sifive.com">SiFive Inc.</a>, author of the
                 <a href="https://wavedrom.com" target="_blank">WaveDrom</a> project and
@@ -894,6 +896,67 @@
                 Ben is a first-year Ph.D student in the ADEPT Lab at UC Berkeley, advised by Krste Asanovic. His research interests are in high
                 performance microarchitectures. Ben received a B.A.Sc in Electronics Engineering from Simon Fraser University in 2018.
               </p>
+
+
+              <h4>
+                <a name="chisel" href="#chisel"></a>Higher-Order Hardware Design with Chisel 3</h4>
+              <p>
+                <a href="http://chisel-lang.org" target="_blank">Chisel 3</a> is a hardware construction language embedded in Scala that enables
+                digital designers to write parameterized generators using object-oriented and functional programming abstractions. The power of
+                Chisel is not the language itself, but rather the abstractions one can create to make hardware design more productive, more reusable,
+                and less error-prone. Sophisticated hardware generators like Rocket-Chip, BOOM, Hwacha, and even the Google Edge TPU are implemented using Chisel.
+              </p>
+              <p>
+                One of the most common challenges for new users is bridging the gap between toy examples and these complex, powerful generators. This
+                talk is an attempt to help build that bridge. Let's use higher-level abstractions and higher-order programming to build better, reusable hardware.
+	      </p>
+              <h6>Presenter: <a href="https://github.com/jackkoenig" target="_blank">Jack Koenig</a></h6>
+              <p>
+                Jack became involved in the Chisel project as a graduate student at UC Berkeley. He is now a software engineer at SiFive and a maintainer of the
+                Chisel3 and FIRRTL projects. His interests include hardware design, simulation, and programming languages.
+              </p>
+
+              <h4>
+                <a name="duh" href="#duh"></a>DUH: document and tools for HW design reuse</h4>
+              <p>
+                SoC integration is a complex process requiring integration of multiple design components together. Typical “reusable” Soft / Hard core component
+                comes with the intricate integration story hopefully described in some human readable User Guide document. Connecting all ports, parameters,
+                registers, bus interfaces, clocks, resets, sideband signals, etc. becoming a very tedious, error prone process. Multiple attempts were made
+                to introduce some sort of standard metadata exchange format to express this integration intent. Most of these formats are proprietary or EDA
+                vendor specific and are semi-useful in the world of open source silicon tools.
+              </p>
+              <p>
+                DUH defines a JSON5-based document format and provides a suite of tools for handling reusable hardware components. Import tools allow extraction
+                of ports, parameters, and other important integration information from available sources like Verilog, IP-XACT, SystemRDL, etc. Inference tools
+                helps to reason about structure of the ports, standard bus interfaces, clocks, resets. Validation tools helps document author to maintain complete
+                and consistent DUH document describing specific hardware component. Integration tools can read DUH documents to understand and satisfy an integration
+                needs of these components.
+	      </p>
+              <h6>Presenter: <a href="#aliaksei">Aliaksei Chapyzhenka</a></h6>
+              <p>
+              </p>
+
+              <h4>
+                <a name="basejump" href="#basejump"></a>BaseJump STL: a Standard Template Library for Hardware Design</h4>
+              <p>
+                SystemVerilog is widely used for hardware design in both academia and industry.
+                <a href="https://github.com/bespoke-silicon-group/basejump_stl" target="_blank">BaseJump STL</a> is a open-source Standard Template Library
+                for synthesizable SystemVerilog that sharply reduces the time required to design
+                digital circuits. This talk will overview the principles that underly the design
+                of the BaseJump STL, including light-weight latency-insensitive interfaces that yield fast microarchitectures and low bug
+                density; thin handshaking rules; fast porting of hardened chip regions across nodes; pervasive parameterization and specialization,
+                and static error checking.
+              </p>
+              <p>
+                We then suggest extensions to SystemVerilog to make it a more functional design language, and briefly discuss validation
+                of BaseJump STL through its use in past and ongoing projects.
+	      </p>
+              <h6>Presenter: <a href="https://www.linkedin.com/in/danpetrisko/" target="_blank">Daniel Petrisko</a></h6>
+              <p>
+                Daniel Petrisko is a PhD student at the Paul G. Allen School of Computer Science and Engineering at the University of Washington, working with
+                Profs Michael Taylor and Mark Oskin.  His research interests focus on accelerating hardware design through open-source software engineering principles.
+              </p>
+              
 
             </div>
           </div>
