@@ -412,7 +412,7 @@
                   <li><a href="#rocketlessons">Lessons learned customising the Rocket RISC-V core</a> by Julius Baxter</li>
                   <li><a href="#netlistsvg">Netlistsvg: How to Draw a Better Schematic than Graphviz</a> by Neil Turley</li>
                   <li><a href="#openram">OpenRAM: An Open Source Memory Compiler</a> by Matthew Guthaus</li>
-                  <li><a href="#edapack">Managing EDA Tools the Easy Way with EDAPack</a> by Matthew Ballance</li>
+                  <li><a href="#uvm">Verifying Open-Source Silicon with SystemVerilog: Getting in on the Ground Floor</a> by Matthew Ballance</li>
                   <li><a href="#pylcars">Python for Electrical Engineering Education</a> by Steven K Armour</li>
                   <li><a href="#riscvdebian">RISC-V in Debian</a> by Vagrant Cascadian</li>
                   <li><a href="#dvkit">DVKit: An Integrated Development Environment for Design and Verification Engineers</a> by Matthew Ballance</li>
@@ -683,16 +683,24 @@
 
 
               <h4>
-                <a name="edapack" href="#edapack"></a>Managing EDA Tools the Easy Way with EDAPack</h4>
+                <a name="uvm" href="#uvm"></a>Verifying Open-Source Silicon with SystemVerilog: Getting in on the Ground Floor</h4>
               <p>
-                FPGA (and ASIC) hardware development requires EDA tools for simulation, debugging, embedded software development,
-                synthesis, and a host of other tasks. Installing, configuring, and managing this software -- whether or not it's
-                open source software -- can be time consuming, and makes it more difficult to get started developing open-source
-                silicon.
-              </p>
-              <p>
-                <a href="http://github.com/EDAPack/edapack" target="_blank">EDAPack</a> provides a framework to make these tasks easy.
-                This talk will explore the motivation behind EDAPack, and how EDAPack simplifies EDA tool management.
+		Open source and industry have a long history of overlapping in the software space. Engineers from industry often
+		work on open-source software in their free time, open source software is used in commercial applications, and
+		students use open-source software to learn about how real software is designed, developed, and tested. A key
+		enabler is that open-source software is largely developed and tested in the same way that commercial software is.
+		Commercial software development often uses commercial tools with features beyond what is available to open-source
+		developers, but the large degree to which techniques and methodologies are aligned facilitates collaboration.
+	      </p>
+	      <p>
+		What of open source silicon? We certainly use standard design languages (Verilog and VHDL). But verification in
+		the industry is typically done with SystemVerilog and UVM, and SystemVerilog tools are out-of-reach for the
+		open-source silicon developer. Or, are they? As it turns out, there are both open-source and freely-available
+		tools, and educational resources, to help open-source silicon developers create verification environments that
+		align with commercial verification practices. This talk will present tools and educational resources for creating
+		SystemVerilog and UVM testbench environments, as well as techniques for creating SystemVerilog and UVM testbenches
+		for open-source silicon that both work with freely-available tools and scale to take advantage of the features of
+		commercial simulation tools.
 	      </p>
               <h6><a name="matthewballance" href="#matthewballance"></a>Presenter: <a href="https://twitter.com/bitsbytesgates" target="_blank">Matthew Ballance</a></h6>
               <p>
@@ -700,8 +708,6 @@
                 Over the past 20 years in the EDA industry, he has worked in product development, marketing, and management
                 roles in the areas of hardware/software co-verification, transaction-level modeling, IP encapsulation and reuse,
                 and Portable Test and Stimulus. Nights and weekends, Matthew works on open-source hardware and software projects.
-                Matthew launched EDAPack in frustration when faced with the task of configuring yet another machine with his
-                favorite EDA tools.
               </p>
               
               <h4>
