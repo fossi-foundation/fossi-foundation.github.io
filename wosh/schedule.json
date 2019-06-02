@@ -1,0 +1,308 @@
+[
+  {
+    "start": "2019-06-13 08:50",
+    "end": "2019-06-13 09:00",
+    "speaker": "WOSH Organizers",
+    "affiliation": "",
+    "title": "Welcome to WOSH and the first session",
+    "category": "licensing",
+    "abstract": ""
+  },
+  {
+    "start": "2019-06-13 09:00",
+    "end": "2019-06-13 09:20",
+    "speaker": "Andrew Katz",
+    "affiliation": "Moorcrofts LLP",
+    "title": "TBD",
+    "category": "licensing",
+    "abstract": ""
+  },
+  {
+    "start": "2019-06-13 09:20",
+    "end": "2019-06-13 09:40",
+    "speaker": "Anton Klotz",
+    "affiliation": "Cadence Design Systems",
+    "title": "Cadence University Program and Open Source Hardware",
+    "category": "licensing",
+    "abstract": "Cadence University Program is used worldwide by more than 1000 universities. Cadence is providing around 162 tools within the program to the students and academic staff for very low membership fee. The academic licenses, which are provided, have certain legal restrictions, which are currently not compatible with the creation of Open Source Hardware. In the talk Cadence University Program Manager EMEA, Anton Klotz, will propose a way, how the academic terms and conditions can be changed in order to become compatible with Open Source Hardware, while protecting Cadence commercial interests."
+  },
+  {
+    "start": "2019-06-13 09:40",
+    "end": "2019-06-13 10:00",
+    "speaker": "Luis Felipe R. Murillo",
+    "affiliation": "Data Science Institute, University of Virginia",
+    "title": "HOWTO create a culture of hardware sharing in academia",
+    "category": "licensing",
+    "abstract": "In this presentation I will introduce the \"Journal of Open Hardware\" to\ndiscuss the promises and challenges of creating a culture of hardware\nsharing in academia. First, I will describe the publication format we\ndevised (\"HW metapaper\") for documenting open scientific instruments.\nThen, I will explain the importance of creating a library of \"prior art\"\nfor future hardware projects. For the conclusion, I will examine the\nchallenges of documenting and publishing hardware based on actual papers\nfrom various disciplines, including but not limited to bioengineering,\nmanagement, economics, and education."
+  },
+  {
+    "start": "2019-06-13 10:30",
+    "end": "2019-06-13 10:50",
+    "speaker": "Tim Edwards",
+    "affiliation": "efabless",
+    "title": "Protecting proprietary data in an open environment",
+    "category": "licensing",
+    "abstract": "There is a clear disconnect between \"open hardware\" visible to all,\nand all the foundry and EDA tool proprietary data and formats that\ncomprise the final, fabricated design.  This raises the serious\nquestion of whether it is even possible to have \"open hardware\"\nbeyond RTL.  I will discuss the efabless, Inc. model, the challenge\nof protecting proprietary information on an otherwise open platform,\nand what measures we have taken to secure the blessing of foundries. "
+  },
+  {
+    "start": "2019-06-13 10:50",
+    "end": "2019-06-13 11:10",
+    "speaker": "Alex Bradbury",
+    "affiliation": "lowRISC",
+    "title": "Open source hardware licensing: a lowRISC experience report",
+    "category": "licensing",
+    "abstract": ""
+  },
+  {
+    "start": "2019-06-13 11:10",
+    "end": "2019-06-13 12:00",
+    "speaker": "Panel",
+    "affiliation": "",
+    "title": "Panel discussion: Open Source Licensing. All presenters, moderation: Stefan Wallentowitz",
+    "category": "licensing",
+    "abstract": ""
+  },
+  {
+    "start": "2019-06-13 13:30",
+    "end": "2019-06-13 13:35",
+    "speaker": "Prof. Avi Mendelson",
+    "affiliation": "Technion",
+    "title": "Opening remarks",
+    "category": "eurolab",
+    "abstract": ""
+  },
+  {
+    "start": "2019-06-13 13:35",
+    "end": "2019-06-13 14:00",
+    "speaker": "Rick O'Connor",
+    "affiliation": "",
+    "title": "RISC-V Adoption in open source implementations, a personal perspective",
+    "category": "eurolab",
+    "abstract": ""
+  },
+  {
+    "start": "2019-06-13 14:00",
+    "end": "2019-06-13 14:25",
+    "speaker": "Mario Kova\u010d",
+    "affiliation": "EPI",
+    "title": "European Processor Initiative",
+    "category": "eurolab",
+    "abstract": ""
+  },
+  {
+    "start": "2019-06-13 14:25",
+    "end": "2019-06-13 14:50",
+    "speaker": "Mauro Olivieri",
+    "affiliation": "BSC",
+    "title": "EPI and beyond: perspectives of a European supercomputing center on open-source hardware and software",
+    "category": "eurolab",
+    "abstract": ""
+  },
+  {
+    "start": "2019-06-13 14:50",
+    "end": "2019-06-13 15:00",
+    "speaker": "Avi Mendelson/Per Stenstrom",
+    "affiliation": "Eurolab4HPC",
+    "title": "Awards for the Open Source HW competition",
+    "category": "eurolab",
+    "abstract": ""
+  },
+  {
+    "start": "2019-06-13 15:30",
+    "end": "2019-06-13 15:50",
+    "speaker": "Per Stenstrom",
+    "affiliation": "Chalmers",
+    "title": "From Research Idea to Business: The ZeroPoint Story",
+    "category": "eurolab",
+    "abstract": ""
+  },
+  {
+    "start": "2019-06-13 15:50",
+    "end": "2019-06-13 16:10",
+    "speaker": "Anupam Chattopadhyay",
+    "affiliation": "NTU",
+    "title": "Developing a secure core",
+    "category": "eurolab",
+    "abstract": ""
+  },
+  {
+    "start": "2019-06-13 16:10",
+    "end": "2019-06-13 16:30",
+    "speaker": "Dom Rizzo",
+    "affiliation": "Google",
+    "title": "Google and the Free and Open Source Hardware Community",
+    "category": "eurolab",
+    "abstract": ""
+  },
+  {
+    "start": "2019-06-13 16:30",
+    "end": "2019-06-13 16:50",
+    "speaker": "Sylvain Guilley",
+    "affiliation": "Secure IC",
+    "title": "Control Flow Integrity on RISC-V",
+    "category": "eurolab",
+    "abstract": ""
+  },
+  {
+    "start": "2019-06-13 16:50",
+    "end": "2019-06-13 17:10",
+    "speaker": "Zdenek Prikryl",
+    "affiliation": "Codasip",
+    "title": "Challenges in open-source RISC-V implementations: Differentiation & Customization",
+    "category": "eurolab",
+    "abstract": ""
+  },
+  {
+    "start": "2019-06-13 17:10",
+    "end": "2019-06-13 17:30",
+    "speaker": "Zvonimir Bandic",
+    "affiliation": "Western Digital Corporation",
+    "title": "TBD",
+    "category": "eurolab",
+    "abstract": ""
+  },
+  {
+    "start": "2019-06-13 17:30",
+    "end": "2019-06-13 18:30",
+    "speaker": "Prof. Avi Mendelson",
+    "affiliation": "Technion",
+    "title": "Round Table Discussion",
+    "category": "eurolab",
+    "abstract": ""
+  },
+  {
+    "start": "2019-06-13 19:00",
+    "end": "2019-06-13 23:00",
+    "speaker": "",
+    "affiliation": "",
+    "title": "DINNER at Dozentenfoyer",
+    "category": "",
+    "abstract": ""
+  },
+  {
+    "start": "2019-06-14 08:50",
+    "end": "2019-06-14 09:00",
+    "speaker": "WOSH Organizers",
+    "affiliation": "",
+    "title": "Welcome to WOSH, Day 2, and the session",
+    "category": "ip",
+    "abstract": ""
+  },
+  {
+    "start": "2019-06-14 09:00",
+    "end": "2019-06-14 09:20",
+    "speaker": "Fabian Schuiki",
+    "affiliation": "ETH Z\u00fcrich",
+    "title": "Bender: A dependency maganement tool for hardware design projects",
+    "category": "ip",
+    "abstract": ""
+  },
+  {
+    "start": "2019-06-14 09:20",
+    "end": "2019-06-14 09:40",
+    "speaker": "Philipp Wagner",
+    "affiliation": "lowRISC",
+    "title": "Ibex and The Mountain of Open Participation: How lowRISC develops its Ibex CPU core and lets everyone participate",
+    "category": "ip",
+    "abstract": ""
+  },
+  {
+    "start": "2019-06-14 09:40",
+    "end": "2019-06-14 10:00",
+    "speaker": "Michael Gielda",
+    "affiliation": "Antmicro",
+    "title": "Complex system simulation and HW/SW co-design with Renode open source simulation framework",
+    "category": "ip",
+    "abstract": ""
+  },
+  {
+    "start": "2019-06-14 10:30",
+    "end": "2019-06-14 10:50",
+    "speaker": "Jonathan Balkind",
+    "affiliation": "Princeton University",
+    "title": "Enabling Research Productivity With OpenPiton",
+    "category": "ip",
+    "abstract": ""
+  },
+  {
+    "start": "2019-06-14 10:50",
+    "end": "2019-06-14 11:10",
+    "speaker": "Yunsup Lee",
+    "affiliation": "SiFive",
+    "title": "TBD",
+    "category": "ip",
+    "abstract": ""
+  },
+  {
+    "start": "2019-06-14 11:10",
+    "end": "2019-06-14 11:30",
+    "speaker": "Jeremy Bennett",
+    "affiliation": "Embecosm",
+    "title": "TBD",
+    "category": "ip",
+    "abstract": ""
+  },
+  {
+    "start": "2019-06-14 11:30",
+    "end": "2019-06-14 11:50",
+    "speaker": "Olof Kindgren",
+    "affiliation": "Qamcom",
+    "title": "Being awesome, the story of a modest genius on the way of winning multiple awards with FuseSoC",
+    "category": "ip",
+    "abstract": ""
+  },
+  {
+    "start": "2019-06-14 13:30",
+    "end": "2019-06-14 13:40",
+    "speaker": "WOSH Organizers",
+    "affiliation": "",
+    "title": "Welcome to the session",
+    "category": "edatools",
+    "abstract": ""
+  },
+  {
+    "start": "2019-06-14 13:40",
+    "end": "2019-06-14 14:00",
+    "speaker": "Charles Papon",
+    "affiliation": "",
+    "title": "SpinalHDL : Paradigm introduction",
+    "category": "edatools",
+    "abstract": ""
+  },
+  {
+    "start": "2019-06-14 14:00",
+    "end": "2019-06-14 14:20",
+    "speaker": "Heinz Riener",
+    "affiliation": "EPFL",
+    "title": "Design Automation in Wonderland: EPFL Logic Synthesis Libraries",
+    "category": "edatools",
+    "abstract": ""
+  },
+  {
+    "start": "2019-06-14 14:20",
+    "end": "2019-06-14 14:40",
+    "speaker": "Tim Edwards",
+    "affiliation": "efabless",
+    "title": "Bootstrapping a real working design flow",
+    "category": "edatools",
+    "abstract": "The Open Circuit Design tool \"qflow\" is considered by some to be the\nonly real, working, completely open source verilog-to-GDS flow available\ntoday, for all its limitations and dependence on legacy software.  I\nwill describe the history of qflow, how this working tool flow has been\nbootstrapped from bits and pieces of open source software, and where\nit will be going in the (near) future.\n"
+  },
+  {
+    "start": "2019-06-14 14:40",
+    "end": "2019-06-14 15:00",
+    "speaker": "Philipp Wagner",
+    "affiliation": "FOSSi Foundation",
+    "title": "Cocotb: Python-powered hardware verification",
+    "category": "edatools",
+    "abstract": ""
+  },
+  {
+    "start": "2019-06-14 15:30",
+    "end": "2019-06-14 17:00",
+    "speaker": "Matt Venn, Clifford Wolf",
+    "affiliation": "SymbioticEDA",
+    "title": "Introduction to Formal Verification with Symbiotic EDA Open Source Tools",
+    "category": "edatools",
+    "abstract": "Experience some of the benefits of formal verification with this presentation and demo. You will\nbe introduced to the concept of formal verification and learn the basics of how to use the Open Source Tools\nto verify your designs. We will go on to demonstrate using formal properties to validate a bus peripheral and a pipeline."
+  }
+]

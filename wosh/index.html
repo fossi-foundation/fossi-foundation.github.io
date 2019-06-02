@@ -1,410 +1,447 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- FontAwesome CSS -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+  <!-- FontAwesome CSS -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
-    <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
 
-    <title>WOSH: Week of Open Source Hardware</title>
-  </head>
-  <body style="background: #e7e7e7">
+  <link rel="shortcut icon" type="image/png" href="images/favicon.png">
 
-    <div class="container" style="background: transparent url(images/highlight-bg.jpg) 50% 0 no-repeat;">
-      <!-- Content here -->
-      <div class="row">
-        <div class="col-sm-3 mt-5" style="text-align: center">
-            <img src="images/wosh_logo.png" alt="Logo" class="img-fluid"/>
-        </div><!-- col -->
-        <div class="col-sm-6 mt-5" style="text-align: center">
-            <h3 style="text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); color: #003366; font-weight: bold">Week of Open Source Hardware</h3>
-            <p><strong>June 11 to 14, 2019</strong> in <a href="https://en.wikipedia.org/wiki/Zurich" target="_blank">Zurich, Switzerland</a>, at
-              ETH Zurich</p>
+  <style>
+    .event {
+      padding-bottom: 15px;
+      font-size: 16px;
+    }
+    .event-time {
+      font-size: small;
+    }
 
-        </div><!-- col -->
-        <div class="col-sm-3 mt-5" style="text-align: center">
-          <figure class="figure">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/ETH_Z%C3%BCrich_im_Abendlicht.jpg/320px-ETH_Z%C3%BCrich_im_Abendlicht.jpg" class="figure-img img-fluid rounded" alt="University">
-            <figcaption class="figure-caption">(c) ETH-Bibliothek CC BY-SA 4.0</figcaption>
-          </figure>
-        </div><!-- col -->
-      </div><!-- row -->
-      <div class="row">
-        <div class="col-sm-8 mt-3">
-          <div class="row">
-            <div class="col-sm">
-              <div class="card">
-                <h5 class="card-header">
-                  About
-                </h5>
-                <div class="card-body">
-                  <p class="card-text">
-		            The Week of Open Source Hardware (WOSH) will take
-                    place in Zurich, Switzerland, from June 11 to June
-                    14, 2019. During the first two days
-                    the <a href="https://tmt.knect365.com/risc-v-workshop-zurich/">RISC-V
+    .event-title {
+      font-weight: bold;
+    }
+
+    .event-affiliation {
+      color: gray;
+      font-size: 90%;
+    }
+
+    .event-abstract {
+      padding-left: 5px;
+      margin-left: 5px;
+      border-left: 3px solid gray;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+
+  <title>WOSH: Week of Open Source Hardware</title>
+</head>
+
+<body style="background: #e7e7e7">
+
+  <div class="container" style="background: transparent url(images/highlight-bg.jpg) 50% 0 no-repeat;">
+    <!-- Content here -->
+    <div class="row">
+      <div class="col-sm-3 mt-5" style="text-align: center">
+        <img src="images/wosh_logo.png" alt="Logo" class="img-fluid" />
+      </div><!-- col -->
+      <div class="col-sm-6 mt-5" style="text-align: center">
+        <h3 style="text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); color: #003366; font-weight: bold">Week of Open Source
+          Hardware</h3>
+        <p><strong>June 11 to 14, 2019</strong> in <a href="https://en.wikipedia.org/wiki/Zurich"
+            target="_blank">Zurich, Switzerland</a>, at
+          ETH Zurich</p>
+
+      </div><!-- col -->
+      <div class="col-sm-3 mt-5" style="text-align: center">
+        <figure class="figure">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/ETH_Z%C3%BCrich_im_Abendlicht.jpg/320px-ETH_Z%C3%BCrich_im_Abendlicht.jpg"
+            class="figure-img img-fluid rounded" alt="University">
+          <figcaption class="figure-caption">&copy; ETH-Bibliothek CC BY-SA 4.0</figcaption>
+        </figure>
+      </div><!-- col -->
+    </div><!-- row -->
+    <div class="row">
+      <div class="col-sm-8 mt-3">
+        <div class="row">
+          <div class="col-sm">
+            <div class="card">
+              <h5 class="card-header">
+                About
+              </h5>
+              <div class="card-body">
+                <p class="card-text">
+                  The Week of Open Source Hardware (WOSH) will take
+                  place in Zurich, Switzerland, from June 11 to June
+                  14, 2019. During the first two days
+                  the <a href="https://tmt.knect365.com/risc-v-workshop-zurich/">RISC-V
                     workshop</a> takes places and focuses on the free
-                    and open RISC-V instruction set architecture.
-                    The <a href="https://fossi-foundation.org">FOSSi
+                  and open RISC-V instruction set architecture.
+                  The <a href="https://fossi-foundation.org">FOSSi
                     Foundation</a> and
-                    the <a href="https://pulp-platform.org/">Pulp
+                  the <a href="https://pulp-platform.org/">Pulp
                     team</a>, with the support of H2020 projects
-                      <a href="https://www.eurolab4hpc.eu/">Eurolab4HPC</a> and
-                      <a href="http://oprecomp.eu/">OPRECOMP</a>
-                      are organizing a <i>FREE</i> complementary program that
-                    covers topics around free and open source silicon,
-                    its licensing and open source EDA tools. While
-                    those events are organizationally decoupled from
-                    the RISC-V workshop, it gives free and open source
-                    silicon enthusiasts the chance to gather and
-                    discuss throughout an entire week.
-                  </p>
+                  <a href="https://www.eurolab4hpc.eu/">Eurolab4HPC</a> and
+                  <a href="http://oprecomp.eu/">OPRECOMP</a>
+                  are organizing a <i>FREE</i> complementary program that
+                  covers topics around free and open source silicon,
+                  its licensing and open source EDA tools. While
+                  those events are organizationally decoupled from
+                  the RISC-V workshop, it gives free and open source
+                  silicon enthusiasts the chance to gather and
+                  discuss throughout an entire week.
+                </p>
 
-		  <table class="table table-sm">
-                    <tbody>
-		      <tr>
-			<td rowspan="1"><b>Tuesday,&nbsp;June&nbsp;11</b>
-			<td>all-day</td>
-			<td><a href="https://tmt.knect365.com/risc-v-workshop-zurich/">RISC-V workshop</a></td>
-		      </tr>
-		      <tr>
-			<td rowspan="1"><b>Wednesday,&nbsp;June&nbsp;12</b>
-			<td>all-day</td>
-			<td><a href="https://tmt.knect365.com/risc-v-workshop-zurich/">RISC-V workshop</a></td>
-		      </tr>
-		      <tr>
-			<td rowspan="6"><b>Thursday,&nbsp;June&nbsp;13</b>
-			<td>all-day</td>
-			<td><a href="https://tmt.knect365.com/risc-v-workshop-zurich/">RISC-V membership meetings</a></td>
-		      </tr>
-		      <tr>
-			<td rowspan="2">morning</td>
-			<td><a href="#licensing">Open Source Licensing</a></td>
-		      </tr>
-		      <tr>
-			<td>Tutorial: Understanding and working with PULP</td>
-		      </tr>
-		      <tr>
-			<td rowspan="2">afternoon</td>
-			<td><a href="#Eurolab4HPC">Challenges and opportunities for using Open Source Hardware in the academia and in the industry</a> (by <a href="https://www.eurolab4hpc.eu/">Eurolab4HPC</a>)</td>
-		      </tr>
-		      <tr>
-                  <td>Workshop: <a href="http://parallel.princeton.edu/openpiton/WOSH19_tutorial.html">OpenPiton+Ariane</a> by <a href="http://parallel.princeton.edu/">Princeton Parallel Group</a></td>
-		      </tr>
-      <tr>
-        <td rowspan="1">evening</td>
-        <td>Fantastic standing dinner at the Faculty Restaurant of ETH Zürich with ample opportunity for networking.</td>
-      </tr>
-		      <tr>
-			<td rowspan="8"><b>Friday,&nbsp;June&nbsp;14</b>
-			<td rowspan="3">morning</td>
-			<td><a href="#ip">The path towards high quality FOSSi IP</a></td>
-		      </tr>
-		      <tr>
-                  <td>Tutorial: <a href="https://open-isa.org/">Open-ISA.org</a></td>
-		      </tr>
-		      <tr>
-                  <td>Tutorial: <a href="https://pulp-platform.org/hero.html">Pulp HERO</a></td>
-		      </tr>
-		      <tr>
-			<td rowspan="2">afternoon</td>
-			<td><a href="#eda">Open Source EDA tools</a></td>
-		      </tr>
-		      <tr>
-                  <td>Tutorial: GAP8 by <a href="https://greenwaves-technologies.com/">Greenwaves</a></td>
-		      </tr>
-                    </tbody>
-		  </table>
+                <table class="table table-sm">
+                  <tbody>
+                    <tr>
+                      <td rowspan="1"><b>Tuesday,&nbsp;June&nbsp;11</b>
+                      <td>all-day</td>
+                      <td><a href="https://tmt.knect365.com/risc-v-workshop-zurich/">RISC-V workshop</a></td>
+                    </tr>
+                    <tr>
+                      <td rowspan="1"><b>Wednesday,&nbsp;June&nbsp;12</b>
+                      <td>all-day</td>
+                      <td><a href="https://tmt.knect365.com/risc-v-workshop-zurich/">RISC-V workshop</a></td>
+                    </tr>
+                    <tr>
+                      <td rowspan="6"><b>Thursday,&nbsp;June&nbsp;13</b>
+                      <td>all-day</td>
+                      <td><a href="https://tmt.knect365.com/risc-v-workshop-zurich/">RISC-V membership meetings</a></td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2">morning</td>
+                      <td><a href="#licensing">Open Source Licensing</a></td>
+                    </tr>
+                    <tr>
+                      <td>Tutorial: Understanding and working with PULP</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2">afternoon</td>
+                      <td><a href="#Eurolab4HPC">Challenges and opportunities for using Open Source Hardware in the
+                          academia and in the industry</a> (by <a href="https://www.eurolab4hpc.eu/">Eurolab4HPC</a>)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Workshop: <a
+                          href="http://parallel.princeton.edu/openpiton/WOSH19_tutorial.html">OpenPiton+Ariane</a> by <a
+                          href="http://parallel.princeton.edu/">Princeton Parallel Group</a></td>
+                    </tr>
+                    <tr>
+                      <td rowspan="1">evening</td>
+                      <td>Fantastic standing dinner at the Faculty Restaurant of ETH Zürich with ample opportunity for
+                        networking.</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="8"><b>Friday,&nbsp;June&nbsp;14</b>
+                      <td rowspan="3">morning</td>
+                      <td><a href="#ip">The path towards high quality FOSSi IP</a></td>
+                    </tr>
+                    <tr>
+                      <td>Tutorial: <a href="https://open-isa.org/">Open-ISA.org</a></td>
+                    </tr>
+                    <tr>
+                      <td>Tutorial: <a href="https://pulp-platform.org/hero.html">Pulp HERO</a></td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2">afternoon</td>
+                      <td><a href="#eda">Open Source EDA tools</a></td>
+                    </tr>
+                    <tr>
+                      <td>Tutorial: GAP8 by <a href="https://greenwaves-technologies.com/">Greenwaves</a></td>
+                    </tr>
+                  </tbody>
+                </table>
 
-                  <p>Questions? Contact
-                    <a target="_blank" href="mailto:info@fossi-foundation.org?Subject=WOSH%20Question">the organisers</a>.
-		  </p>
-                </div> <!-- card-body -->
-              </div> <!-- card -->
-            </div> <!-- col-sm -->
-          </div> <!-- row -->
+                <p>Questions? Contact
+                  <a target="_blank" href="mailto:info@fossi-foundation.org?Subject=WOSH%20Question">the organisers</a>.
+                </p>
+              </div> <!-- card-body -->
+            </div> <!-- card -->
+          </div> <!-- col-sm -->
+        </div> <!-- row -->
 
 
-          <div class="row">
-            <!-- Card: Registration -->
-            <a name="register" href="#register"></a>
-            <div class="col-sm-12 mt-3">
-              <div class="card">
-                <h5 class="card-header">Registration</h5>
-                <div class="card-body">
-                  <p class="card-text">The FOSSi events are <strong>free to attend</strong>! Anyhow, you must register, so that we can plan better. We expect all participants of FOSSi events to follow the <a href="https://www.fossi-foundation.org/code-of-conduct">FOSSi Foundation code of conduct</a>.</p>
+        <div class="row">
+          <!-- Card: Registration -->
+          <a name="register" href="#register"></a>
+          <div class="col-sm-12 mt-3">
+            <div class="card">
+              <h5 class="card-header">Registration</h5>
+              <div class="card-body">
+                <p class="card-text">FOSSi Foundation events are <strong>free to attend</strong>! Anyhow, you must
+                  register, so that we
+                  can plan better.</p>
 
-                  <div class="d-flex justify-content-center mb-2 mt-2">
-                    <form action="https://goo.gl/forms/FJGRB2JU07GiVgfE3">
-                       <input type="submit" class="btn btn-primary" value="Register here"/>
-                     </form>
-                  </div>
-		  <p>Important: The RISC-V workshop is not free of
-		  charge and you must buy tickets from the website!</p>
-                  <p>
-                    We ask all WOSH participants to adhere to the the
-                    <a href="https://www.fossi-foundation.org/code-of-conduct">FOSSi Foundation code of conduct</a> throughout the event.
-                  </p>
-
-		  <h5><a name="tickets" href="#tickets"></a>Professional Tickets</h5>
-                  <p class="card-text">
-		    Attendees who are joining us at WOSH on behalf of their company and/or can claim the conference as professional
-                    training expense are encouraged to purchase a professional ticket. These ticket sales help us provide all that we do
-                    at WOSH and keep the event accessible to all members of the community.<!-- Professional ticket holders are able to
-                    get their company name printed on their name badge. -->
-		  </p>
-
-                  <p class="card-text">
-		    Professional tickets are &pound;250 (+sales tax
-		    if applicable) and can by bought here via the PayPal button below
-		    or
-		    by <a href="mailto:info@fossi-foundation.org?Subject=ORConf%20Professional%20Ticket">email</a>.
-		  </p>
-
-                  <div class="d-flex justify-content-center mb-2 mt-2">
-		    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-		      <input type="hidden" name="cmd" value="_s-xclick">
-		      <input type="hidden" name="hosted_button_id" value="WXUMH759XDKJG">
-		      <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
-		    </form>
-                  </div>
+                <div class="d-flex justify-content-center mb-2 mt-2">
+                  <form action="https://goo.gl/forms/FJGRB2JU07GiVgfE3">
+                    <input type="submit" class="btn btn-primary" value="Register here" />
+                  </form>
                 </div>
-              </div><!-- card -->
-            </div><!-- col -->
-	  </div>
-	  <div class="row">
-            <div class="col-sm-12 mt-3">
-              <div class="card">
-		<a name="licensing" href="#licensing"></a>
-		<h5 class="card-header">Open Source Licensing</h5>
-		<div class="card-body">
-		  <p>
-		    The licensing of free and open source silicon IP has
-		    been a major discussion throughout the past 20
-		    years. While the basic principles of free and open
-		    source software licenses are transferrable to
-		    silicon, there are also many differences. The
-		    proprietary nature of the design process and
-		    commercial IP in this field is a burden that we want
-		    to discuss in this session.
-		  </p>
-		  <p><i>The detailed program will be announced soon! Speakers include:</i><p>
-      <p><ul>
-         <li>Andrew Katz, Moorcrofts LLP<br>
-         	<i>TBD</i></li>
-         <li>Anton Klotz, Cadence Design Systems<br>
-         	<i>Cadence University Program and Open Source Hardware</i></li>
-         <li>Luis Felipe Murillo, CERN<br>
-         	<i>HOWTO create a culture of hardware sharing in academia</i></li>
-         <li>Tim Edwards, Open Circuit Design<br>
-         	<i>Protecting proprietary data in an open environment</i></li>
-         <li>Alex Bradbury, LowRISC<br>
-         	<i>Open source hardware licensing: a lowRISC experience report</i></li>
-         <li>Followed by a discussion round with all participants</li>
-       </ul></p>
-		</div>
+                <p>Important: The RISC-V workshop is not free of
+                  charge and you must buy tickets from the website!</p>
+                <p>
+                  We ask all WOSH participants to adhere to the the
+                  <a href="https://www.fossi-foundation.org/code-of-conduct">FOSSi Foundation code of conduct</a>
+                  throughout the event.
+                </p>
+
+                <h5><a name="tickets" href="#tickets"></a>Professional Tickets</h5>
+                <p class="card-text">
+                  Attendees who are joining us at WOSH on behalf of their company and/or can claim the conference as
+                  professional
+                  training expense are encouraged to purchase a professional ticket. These ticket sales help us provide
+                  all that we do
+                  at WOSH and keep the event accessible to all members of the community.
+                  <!-- Professional ticket holders are able to
+                    get their company name printed on their name badge. -->
+                </p>
+
+                <p class="card-text">
+                  Professional tickets are &pound;250 (+sales tax
+                  if applicable) and can by bought here via the PayPal button below
+                  or
+                  by <a href="mailto:info@fossi-foundation.org?Subject=ORConf%20Professional%20Ticket">email</a>.
+                </p>
+
+                <div class="d-flex justify-content-center mb-2 mt-2">
+                  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="WXUMH759XDKJG">
+                    <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif"
+                      border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+                  </form>
+                </div>
               </div>
-            </div>
-          </div> <!-- row -->
-	  <div class="row">
-            <div class="col-sm-12 mt-3">
-              <div class="card">
-		<a name="Eurolab4HPC" href="#Eurolab4HPC"></a>
-		<h5 class="card-header">Challenges and opportunities for using Open Source Hardware in the academia and in the industry</h5>
-		<div class="card-body">
-		  <p>RISC-V has been getting a lot of attention recently and has been a great driving force behind the recent resurgence of open source hardware. Companies love the idea to have a royalty-free processor and academia likes it since it serves as an excellent vehicle for teaching, student projects and research. However, RISC-V only defines the ISA, and more is needed to use it successfully in a system. Particularly there are questions about</p>
-		  <ol>
-        <li>Availability of interconnect solutions and peripherals for RISC-V cores</li>
-        <li>Compatibility between different implementations</li>
-        <li>Design environment to develop applications on RISC-V systems</li>
-        <li>How to make a business case around open source hardware</li>
-      </ol>
-      <p><a href="https://www.eurolab4hpc.eu/">Eurolab4HPC-2</a> consortium aims to advocate and help using open source hardware and software for education, innovation and in industry. For that purpose, this workshop put together people from the academia, industry and the business world in order to present and discuss the pros and cons of using open source hardware and how we can help its success.</p>
+            </div><!-- card -->
+          </div><!-- col -->
+        </div>
+        <div class="row">
+          <div class="col-sm-12 mt-3">
+            <div class="card">
+              <a name="licensing" href="#licensing"></a>
+              <h5 class="card-header">Open Source Licensing</h5>
+              <div class="card-body">
+                <p>
+                  The licensing of free and open source silicon IP has
+                  been a major discussion throughout the past 20
+                  years. While the basic principles of free and open
+                  source software licenses are transferrable to
+                  silicon, there are also many differences. The
+                  proprietary nature of the design process and
+                  commercial IP in this field is a burden that we want
+                  to discuss in this session.
+                </p>
 
-      <p><b>Program</b><p>
-      <p><ul>
-         <li> Prof. Avi Mendelson, Technion<br>
-          <i>Opening remarks</i>
-         <li>Rick O'Connor, former executive director RISC-V foundation<BR>
-          <I>RISC-V Adoption in open source implementations, a personal perspective</I>
-         <li>Mario Kovač, EPI Chief Communication Officer,<br><I>European Processor Initiative</I></li>
-         <li>The Academia Perspective (including startups driven by Academia)
-           <ul>
-             <li>Frank K. Gürkaynak, ETH Zürich,<br>
-               <i>What we learned from PULP: Challenges of maintaining Open Source Hardware projects in academia</i>
-             <li>Per Stenstrom, Chalmers,<BR><I>From Research Idea to Business: The ZeroPoint Story</I></li>
-             <li>Anupam Chattopadhyay, NTU,<BR><I>Developing a secure core</I></li>
-             <li>IIT-Madras,<br><i>The SHAKTI processor program</i></li>
-             <li>Barcelona Super Computing Center,<br><i>TBD</i></li>
-          </ul>
-         </li>The Industry and Business Perspective
-           <ul>
-             <li>Zvonimir Bandic, Western Digital Corporation,<br><i>TBD</i></li>
-             <li>Sylvain Guilley, Secure IC,<br><i>Control Flow Integrity on RISC-V</i>
-             <li>Zdenek Prikryl, Codasip,<br>
-         	    <i>Challenges in open-source RISC-V implementations: Differentiation & Customization</i></li>
-             <li>Dom Rizzo, Google,<br><i>Google and the Free and Open Source Hardware Community</i></li>
-          </ul>
-         <li>Round table discussion led by Prof. Avi Mendelson, Technion</li>
-       </ul></p>
-		</div>
-              </div>
-            </div>
-          </div> <!-- row -->
-	  <div class="row">
-            <div class="col-sm-12 mt-3">
-              <div class="card">
-		<a name="ip" href="#ip"></a>
-		<h5 class="card-header">The path towards high quality FOSSi IP</h5>
-		<div class="card-body">
-		  <p>
-		    Free and Open Source Silicon IP has been developed
-		    and deployed for over two decades now. But yet, it
-		    can be observed that there are still only a
-		    realtively small number of projects that attract
-		    permanent attention and are able to sustainably
-		    deliver high-quality IP. In this session we want
-		    to discuss what factors are the most important to
-		    foster and grow the community. This covers
-		    technical and organizational topics, such as
-		    continuous integration, documentation, community
-		    building and growth, and marketing.
-		  </p>
-      <p><i>The detailed program will be announced soon! Speakers include:</i><p>
-      <p><ul>
-         <li>Fabian Schuiki, ETH Zürich, <br><i><a href="https://github.com/fabianschuiki/bender">Bender</a>: A dependency maganement tool for hardware design projects</i></li>
-         <li>Philipp Wagner, LowRISC<br>
-         	<i>Ibex and The Mountain of Open Participation:
-             How lowRISC develops its Ibex CPU core and lets everyone participate</i></li>
-         <li>Michael Gielda, Antmicro<br/>
-           <i>Complex system simulation and HW/SW co-design with Renode open source simulation framework</i>
-           <!--
-          The presentation will focus on fast simulation of configurable systems, new FPGA softcores support and the ability to co-simulate HDL with Verilator recently added to Renode, the open source simulation framework from Antmicro. A use case will be presented for co-design of hardware and software using Renode, an increasing focus with Renode's users.
-          -->
-         </li>
-	     <li>Jonathan Balkind, OpenPiton/Princeton University<br>
-              <i>Enabling Research Productivity With OpenPiton</i></li>
-	     <li>Yunsup Lee, SiFive<br>
-           <i>TBD</i></li>
-	     <li>Jeremy Bennett, Embecosm<br>
-           <i>TBD</i></li>
-         <li>Olof Kindgren, Qamcom<br>
-           <i>Being awesome, the story of a modest genius on the way of winning multiple awards with FuseSoC</i></li>
-         <li>... and more</li>
-       </ul></p>
-		</div>
-              </div>
-            </div>
-          </div> <!-- row -->
-	  <div class="row">
-            <div class="col-sm-12 mt-3">
-              <div class="card">
-		<a name="eda" href="#eda"></a>
-		<h5 class="card-header">Open Source EDA Tools</h5>
-		<div class="card-body">
-		  <p>
-		    Design tools are important for the development and
-		    implementation of free and open source
-		    silicon. Over the last years a boom of open source
-		    EDA tools has been an important factor in the
-		    adoption and growth of the community. In this
-		    session you will learn about the latest
-		    developments and participate in the discussion
-		    about future directions of this important field.
-		  </p>
-      <p><i>The detailed program will be announced soon! Speakers include:</i><p>
-      <p><ul>
-          <li>Charles Papon, SpinalHDL<br>
-              <i><a href="https://github.com/SpinalHDL/SpinalHDL">SpinalHDL</a> : Paradigm introduction</i></li>
-          <li>Heinz Riener, EPFL<br>
-          	<i>Design Automation in Wonderland: <a href="https://github.com/lsils/lstools-showcase">EPFL Logic Synthesis Libraries</a></i></li>
-	        <li>Tim Edwards, Open Circuit Design/eFabless,<br>
-            <i>Bootstrapping a real working design flow</i></li>
-          <li>Philipp Wagner, LowRISC, <br>
-            <i>Cocotb: Python-powered hardware verification</i></li>
-          <li>Clifford Wolf,<br>
-            <i>TBD</i></li>
-          <li>... and more</li>
-       </ul></p>
-		</div>
-              </div>
-            </div>
-          </div> <!-- row -->
-        </div> <!-- col -->
-        <div class="col-sm-4 mt-3">
-          <div class="row">
-            <div class="col-sm-12 mt-3">
-              <div class="card">
-                <h5 class="card-header">Sponsors</h5>
-                <div class="card-body">
-                  <p class="card-text">
-		            <h5>Major Sponsors</h5>
+                <div class="fossi-schedule-subset" data-category="licensing"></div>
 
-                    <div class="row">
-                      <div class="col-sm-6 mx-auto mt-3">
-			            <a target="_blank" href="https://www.eurolab4hpc.eu/"><img src="images/logo-eurolab.png" alt="Eurolab4HPC" title="Eurolab4HPC" class="img-fluid"/></a>
-                      </div>
-		            </div>
-
-                    <div class="row">
-                      <div class="col-sm-6 mx-auto mt-3">
-                        <a href="https://www.lowrisc.org"><img src="images/lowrisc_sticker_no_strapline.svg" title="lowRISC" alt="lowRISC" class="img-fluid"/></a>
-                      </div>
-		            </div>
-
-                    <div class="row">
-                      <div class="mx-auto mt-3">
-			            <a target="_blank" href="https://www.risc-v.org/"><img src="images/riscv-logo.png" alt="RISC-V Foundation" title="RISC-V Foundation" class="img-fluid"/></a>
-                      </div>
-		            </div>
-
-		            <hr/>
-		            <h5>Sponsors</h5>
-                    <div class="row">
-                      <div class="col-sm-6 mx-auto mt-3">
-			            <a target="_blank" href="https://www.antmicro.com/"><img src="images/logo_antmicro.png" title="Antmicro" alt="Antmicro" class="img-fluid"/></a>
-                      </div>
-		            </div>
-                    <div class="row">
-                      <div class="col-sm-6 mx-auto mt-3">
-			            <a target="_blank" href="https://www.bluespec.com/"><img src="images/bluespec-2.svg" title="Bluespec" alt="Bluespec" class="img-fluid"/></a>
-                      </div>
-		            </div>
-                    <div class="row">
-                      <div class="col-sm-6 mx-auto mt-3">
-			            <a target="_blank" href="https://www.ethz.ch/"><img src="images/eth_logo.png" title="ETH Zürich" alt="ETH Zürich" class="img-fluid"/></a>
-                      </div>
-		            </div>
-                    <div class="row">
-                      <div class="col-sm-8 mx-auto mt-3">
-                        <a target="_blank" href="https://fossi-foundation.org"><img src="https://fossi-foundation.org/assets/fossi_logo_medium.png" alt="FOSSi Foundation" title="Free and Open Source Silicon Foundation" class="img-fluid"/></a>
-                      </div>
-		            </div>
-
-                    <div class="row">
-                      <div class="col-sm-12 mt-5">
-			            <a class="btn btn-primary btn-block" href="mailto:info@fossi-foundation.org?Subject=WOSH%202019%20Sponsorship">Become a sponsor</a>
-		              </div>
+                <!--<div class="container-fluid">
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <div id="calendar"></div>
                     </div>
-                </div><!-- card-body -->
-              </div><!-- card -->
-            </div><!-- col -->
-          </div><!-- row -->
-          <div class="row">
-            <div class="col-sm-12 mt-3">
-              <div class="card">
-                <h5 class="card-header">Donate</h5>
-                <div class="card-body">
-                  <p class="card-text">
+                  </div>
+                </div>-->
+              </div>
+            </div>
+          </div>
+        </div> <!-- row -->
+        <div class="row">
+          <div class="col-sm-12 mt-3">
+            <div class="card">
+              <a name="Eurolab4HPC" href="#Eurolab4HPC"></a>
+              <h5 class="card-header">Challenges and opportunities for using Open Source Hardware in the academia and in
+                the industry</h5>
+              <div class="card-body">
+                <p>RISC-V has been getting a lot of attention recently and has been a great driving force behind the
+                  recent resurgence of open source hardware. Companies love the idea to have a royalty-free processor
+                  and academia likes it since it serves as an excellent vehicle for teaching, student projects and
+                  research. However, RISC-V only defines the ISA, and more is needed to use it successfully in a system.
+                  Particularly there are questions about</p>
+                <ol>
+                  <li>Availability of interconnect solutions and peripherals for RISC-V cores</li>
+                  <li>Compatibility between different implementations</li>
+                  <li>Design environment to develop applications on RISC-V systems</li>
+                  <li>How to make a business case around open source hardware</li>
+                </ol>
+                <p><a href="https://www.eurolab4hpc.eu/">Eurolab4HPC-2</a> consortium aims to advocate and help using
+                  open source hardware and software for education, innovation and in industry. For that purpose, this
+                  workshop put together people from the academia, industry and the business world in order to present
+                  and discuss the pros and cons of using open source hardware and how we can help its success.</p>
+
+
+
+                <div class="fossi-schedule-subset" data-category="eurolab"></div>
+
+                <!--<p><b>Program</b>
+                  <p>
+                    <p>
+                      <ul>
+                        <li> Prof. Avi Mendelson, Technion<br>
+                          <i>Opening remarks</i>
+                        <li>Rick O'Connor, former executive director RISC-V foundation<BR>
+                          <I>RISC-V Adoption in open source implementations, a personal perspective</I>
+                        <li>Mario Kovač, EPI Chief Communication Officer,<br><I>European Processor Initiative</I></li>
+                        <li>The Academia Perspective (including startups driven by Academia)
+                          <ul>
+                            <li>Frank K. Gürkaynak, ETH Zürich,<br>
+                              <i>What we learned from PULP: Challenges of maintaining Open Source Hardware projects in
+                                academia</i>
+                            <li>Per Stenstrom, Chalmers,<BR><I>From Research Idea to Business: The ZeroPoint Story</I>
+                            </li>
+                            <li>Anupam Chattopadhyay, NTU,<BR><I>Developing a secure core</I></li>
+                            <li>IIT-Madras,<br><i>The SHAKTI processor program</i></li>
+                            <li>Barcelona Super Computing Center,<br><i>TBD</i></li>
+                          </ul>
+                        </li>The Industry and Business Perspective
+                        <ul>
+                          <li>Zvonimir Bandic, Western Digital Corporation,<br><i>TBD</i></li>
+                          <li>Sylvain Guilley, Secure IC,<br><i>Control Flow Integrity on RISC-V</i>
+                          <li>Zdenek Prikryl, Codasip,<br>
+                            <i>Challenges in open-source RISC-V implementations: Differentiation & Customization</i>
+                          </li>
+                          <li>Dom Rizzo, Google,<br><i>Google and the Free and Open Source Hardware Community</i></li>
+                        </ul>
+                        <li>Round table discussion led by Prof. Avi Mendelson, Technion</li>
+                      </ul>
+                    </p>-->
+              </div>
+            </div>
+          </div>
+        </div> <!-- row -->
+        <div class="row">
+          <div class="col-sm-12 mt-3">
+            <div class="card">
+              <a name="ip" href="#ip"></a>
+              <h5 class="card-header">The path towards high quality FOSSi IP</h5>
+              <div class="card-body">
+                <p>
+                  Free and Open Source Silicon IP has been developed
+                  and deployed for over two decades now. But yet, it
+                  can be observed that there are still only a
+                  relatively small number of projects that attract
+                  permanent attention and are able to sustainably
+                  deliver high-quality IP. In this session we want
+                  to discuss what factors are the most important to
+                  foster and grow the community. This covers
+                  technical and organizational topics, such as
+                  continuous integration, documentation, community
+                  building and growth, and marketing.
+                </p>
+
+                <div class="fossi-schedule-subset" data-category="ip"></div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- row -->
+        <div class="row">
+          <div class="col-sm-12 mt-3">
+            <div class="card">
+              <a name="eda" href="#eda"></a>
+              <h5 class="card-header">Open Source EDA Tools</h5>
+              <div class="card-body">
+                <p>
+                  Design tools are important for the development and
+                  implementation of free and open source
+                  silicon. Over the last years a boom of open source
+                  EDA tools has been an important factor in the
+                  adoption and growth of the community. In this
+                  session you will learn about the latest
+                  developments and participate in the discussion
+                  about future directions of this important field.
+                </p>
+                <div class="fossi-schedule-subset" data-category="edatools"></div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- row -->
+      </div> <!-- col -->
+      <div class="col-sm-4 mt-3">
+        <div class="row">
+          <div class="col-sm-12 mt-3">
+            <div class="card">
+              <h5 class="card-header">Sponsors</h5>
+              <div class="card-body">
+                <p class="card-text">
+                  <h5>Major Sponsors</h5>
+
+                  <div class="row">
+                    <div class="col-sm-6 mx-auto mt-3">
+                      <a target="_blank" href="https://www.eurolab4hpc.eu/"><img src="images/logo-eurolab.png"
+                          alt="Eurolab4HPC" title="Eurolab4HPC" class="img-fluid" /></a>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-6 mx-auto mt-3">
+                      <a href="https://www.lowrisc.org"><img src="images/lowrisc_sticker_no_strapline.svg"
+                          title="lowRISC" alt="lowRISC" class="img-fluid" /></a>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="mx-auto mt-3">
+                      <a target="_blank" href="https://www.risc-v.org/"><img src="images/riscv-logo.png"
+                          alt="RISC-V Foundation" title="RISC-V Foundation" class="img-fluid" /></a>
+                    </div>
+                  </div>
+
+                  <hr />
+                  <h5>Sponsors</h5>
+                  <div class="row">
+                    <div class="col-sm-6 mx-auto mt-3">
+                      <a target="_blank" href="https://www.antmicro.com/"><img src="images/logo_antmicro.png"
+                          title="Antmicro" alt="Antmicro" class="img-fluid" /></a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6 mx-auto mt-3">
+                      <a target="_blank" href="https://www.bluespec.com/"><img src="images/bluespec-2.svg"
+                          title="Bluespec" alt="Bluespec" class="img-fluid" /></a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6 mx-auto mt-3">
+                      <a target="_blank" href="https://www.ethz.ch/"><img src="images/eth_logo.png" title="ETH Zürich"
+                          alt="ETH Zürich" class="img-fluid" /></a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-8 mx-auto mt-3">
+                      <a target="_blank" href="https://fossi-foundation.org"><img
+                          src="https://fossi-foundation.org/assets/fossi_logo_medium.png" alt="FOSSi Foundation"
+                          title="Free and Open Source Silicon Foundation" class="img-fluid" /></a>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-12 mt-5">
+                      <a class="btn btn-primary btn-block"
+                        href="mailto:info@fossi-foundation.org?Subject=WOSH%202019%20Sponsorship">Become a sponsor</a>
+                    </div>
+                  </div>
+              </div><!-- card-body -->
+            </div><!-- card -->
+          </div><!-- col -->
+        </div><!-- row -->
+        <div class="row">
+          <div class="col-sm-12 mt-3">
+            <div class="card">
+              <h5 class="card-header">Donate</h5>
+              <div class="card-body">
+                <p class="card-text">
 
                   <p>You can also support us with small donations via Paypal:</p>
 
@@ -412,8 +449,7 @@
                     <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 
                       <!-- Identify your business so that you can collect the payments. -->
-                      <input type="hidden" name="business"
-                             value="paypal@fossi-foundation.org">
+                      <input type="hidden" name="business" value="paypal@fossi-foundation.org">
 
                       <!-- Specify a Donate button. -->
                       <input type="hidden" name="cmd" value="_donations">
@@ -425,57 +461,100 @@
 
                       <!-- Display the payment button. -->
                       <input type="image" name="submit"
-                             src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif"
-                             alt="Donate">
-                      <img alt="" width="1" height="1"
-                           src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
+                        src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" alt="Donate">
+                      <img alt="" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
 
                     </form>
                   </div>
-                </div><!-- card-body -->
-              </div><!-- card -->
-            </div> <!-- col -->
-          </div> <!-- row -->
-          <div class="row">
-            <div class="col-sm-12 mt-3">
-              <div class="card">
-                <h5 class="card-header">
-                  Stay updated!
-                </h5>
-                <div class="card-body">
-                  <form method="post" action="https://lists.librecores.org/mailman/subscribe/orconf-announce">
-                    <div class="input-group mb-3">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon1">@</span>
-                      </div>
-                      <input name="email" type="text" class="form-control" placeholder="by E-Mail" aria-label="by E-Mail" aria-describedby="basic-addon1">
-                      <input name="email-button" type="submit" class="btn btn-primary" value="Subscribe"/>
+              </div><!-- card-body -->
+            </div><!-- card -->
+          </div> <!-- col -->
+        </div> <!-- row -->
+        <div class="row">
+          <div class="col-sm-12 mt-3">
+            <div class="card">
+              <h5 class="card-header">
+                Stay updated!
+              </h5>
+              <div class="card-body">
+                <form method="post" action="https://lists.librecores.org/mailman/subscribe/orconf-announce">
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">@</span>
                     </div>
-                  </form>
-                  <hr/>
-                  <a href="https://twitter.com/FOSSiFoundation"><i class="fab fa-twitter-square fa-3x" style="color: #00aced"></i></a>
-                  <span style="display:inline-block; width: 5px;"></span>
-                  <a href="https://youtube.com/FOSSiFoundation"><i class="fab fa-youtube fa-3x" style="color: #bb0000"></i></a>
-                  <span style="display:inline-block; width: 5px;"></span>
-                  <a href="https://www.linkedin.com/company/fossi-foundation/"><i class="fab fa-linkedin fa-3x" style="color: #007bb6"></i></a>
-                </div><!-- card-body -->
-              </div><!-- card -->
-            </div><!-- col -->
-          </div><!-- row -->
-        </div> <!-- col -->
-      </div><!-- row -->
-      <div class="row">
-        <div class="col-sm-12 mt-3 mb-5" style="text-align: center">
-          <footer style="font-size: 80%">(c) 2019, Free and Open Source Silicon Foundation and the presenters</footer>
-        </div>
+                    <input name="email" type="text" class="form-control" placeholder="by E-Mail" aria-label="by E-Mail"
+                      aria-describedby="basic-addon1">
+                    <input name="email-button" type="submit" class="btn btn-primary" value="Subscribe" />
+                  </div>
+                </form>
+                <hr />
+                <a href="https://twitter.com/FOSSiFoundation"><i class="fab fa-twitter-square fa-3x"
+                    style="color: #00aced"></i></a>
+                <span style="display:inline-block; width: 5px;"></span>
+                <a href="https://youtube.com/FOSSiFoundation"><i class="fab fa-youtube fa-3x"
+                    style="color: #bb0000"></i></a>
+                <span style="display:inline-block; width: 5px;"></span>
+                <a href="https://www.linkedin.com/company/fossi-foundation/"><i class="fab fa-linkedin fa-3x"
+                    style="color: #007bb6"></i></a>
+              </div><!-- card-body -->
+            </div><!-- card -->
+          </div><!-- col -->
+        </div><!-- row -->
+      </div> <!-- col -->
+    </div><!-- row -->
+    <div class="row">
+      <div class="col-sm-12 mt-3 mb-5" style="text-align: center">
+        <footer style="font-size: 80%">&copy; 2019, Free and Open Source Silicon Foundation and the presenters</footer>
       </div>
-    </div><!-- container -->
+    </div>
+  </div><!-- container -->
 
 
-            <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  </body>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/moment@2.18.1/min/moment.min.js"></script>
+
+
+  <script>
+    $.getJSON("schedule.json", function (events) {
+      $('.fossi-schedule-subset').each(function() {
+        let filterCategory = $(this).data('category');
+
+        html = '';
+        let eventCnt = 0;
+        for (let ev of events) {
+          if (ev.category != filterCategory) {
+            continue;
+          }
+
+          html += [
+            '<div class="list-group event">',
+              '<div class="event-time">' + moment(ev.start).format('D.MM. HH:mm') + ' - ' + moment(ev.end).format('HH:mm') + '</div>',
+              '<a class="event-title" data-toggle="collapse" href="#event-abstract-' + eventCnt + '">' + ev.title + '</a>',
+              '<div class="event-speaker">',
+                ev.speaker,
+                '<span class="event-affiliation">' + ev.affiliation + '</span>',
+              '</div>',
+              '<div id="event-abstract-'+eventCnt+'" class="event-abstract collapse">',
+                ev.abstract,
+              '</div>',
+            '</div>',
+          ].join('\n');
+          eventCnt++;
+        }
+
+        $(this).html(html);
+      });
+    });
+  </script>
+</body>
+
 </html>
