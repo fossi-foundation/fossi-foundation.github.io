@@ -56,9 +56,9 @@
   {
     "start": "2019-06-13 11:10",
     "end": "2019-06-13 12:00",
-    "speaker": "Panel",
+    "speaker": "all presenters of this session. Moderation: Stefan Wallentowitz",
     "affiliation": "",
-    "title": "Panel discussion: Open Source Licensing. All presenters, moderation: Stefan Wallentowitz",
+    "title": "Panel discussion: Open Source Licensing",
     "category": "licensing",
     "abstract": ""
   },
@@ -267,7 +267,7 @@
     "affiliation": "",
     "title": "SpinalHDL : Paradigm introduction",
     "category": "edatools",
-    "abstract": ""
+    "abstract": "SpinalHDL was initially made to be a good alternative to VHDL/Verilog, But with years and practice, new methodologies and paradigms emerged from it. This talk will be about introducing them to look further the traditional HDL paradigms."
   },
   {
     "start": "2019-06-14 14:00",
