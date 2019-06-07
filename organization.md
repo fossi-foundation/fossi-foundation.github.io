@@ -41,19 +41,19 @@ help us reaching our goals, please don't hesitate to
   </div>
 </div>
 
-<a name="olof"/>
+<a name="peter"/>
 <div class="row">
 <div class="col-lg-3 col-md-4 col-sm-3">
-  <img src="/assets/people/OlofKindgren.jpg" align="left" width="150px">
+  <!--<img src="/assets/people/Peter.jpg" align="left" width="150px">-->
   <ul class="share-buttons" style="padding-left: 0">
-  <li><a href="https://www.linkedin.com/in/olofkindgren"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
-  <li><a href="https://github.com/olofk/"><img title="Visit my GitHub account" src="/assets/flat_web_icon_set/color/Github.png"></a></li>
-  <li><a href="https://twitter.com/OlofKindgren"><img title="Visit my Twitter account" src="/assets/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="mailto:peter@fossi-foundation.org"><img title="Send me an email" src="/assets/flat_web_icon_set/color/Email.png"/></a></li>
+<!--  <li><a href="https://www.linkedin.com/in/frank-kagan-gurkaynak-8793b41/"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
+  <li><a href="https://github.com/gurkaynak "><img title="Visit my GitHub account" src="/assets/flat_web_icon_set/color/Github.png"></a></li>-->
   </ul>
 </div>
 <div class="col-lg-9 col-md-8 col-sm-9">
-  <h4>Olof Kindgren</h4>
-  Olof became actively involved with free and open source silicon through the OpenRISC project in 2011. He has since then worked in many areas with a special interest in tools and collaborations. Also known as the maintainer of the <a href="https://github.com/olofk/fusesoc">FuseSoc</a> IP core package manager - a tool for collaborations.
+  <h4>Peter Gielda</h4>
+
 </div>
 </div>
 
@@ -70,6 +70,22 @@ help us reaching our goals, please don't hesitate to
 <div class="col-lg-9 col-md-8 col-sm-9">
   <h4>Frank K. Gürkaynak</h4>
   Everybody just calls him Frank. He has been actively involved with open source hardware through the PULP project since its start in 2013 and has been working within academic environments for more than 25 years
+</div>
+</div>
+
+<a name="olof"/>
+<div class="row">
+<div class="col-lg-3 col-md-4 col-sm-3">
+  <img src="/assets/people/OlofKindgren.jpg" align="left" width="150px">
+  <ul class="share-buttons" style="padding-left: 0">
+  <li><a href="https://www.linkedin.com/in/olofkindgren"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
+  <li><a href="https://github.com/olofk/"><img title="Visit my GitHub account" src="/assets/flat_web_icon_set/color/Github.png"></a></li>
+  <li><a href="https://twitter.com/OlofKindgren"><img title="Visit my Twitter account" src="/assets/flat_web_icon_set/color/Twitter.png"></a></li>
+  </ul>
+</div>
+<div class="col-lg-9 col-md-8 col-sm-9">
+  <h4>Olof Kindgren</h4>
+  Olof became actively involved with free and open source silicon through the OpenRISC project in 2011. He has since then worked in many areas with a special interest in tools and collaborations. Also known as the maintainer of the <a href="https://github.com/olofk/fusesoc">FuseSoc</a> IP core package manager - a tool for collaborations.
 </div>
 </div>
 
@@ -102,9 +118,10 @@ help us reaching our goals, please don't hesitate to
 <div class="col-lg-9 col-md-8 col-sm-9">
   <h4>Stefan Wallentowitz</h4>
 
-  Stefan is a curious developer and has been involved in the
-    OpenRISC project for many years and is contributor to several
-    other open source projects around SoC design.
+  Stefan is a curious developer and has been involved in the OpenRISC
+    project for many years and is contributor and maintainer of
+    several free and open source projects around SoC design. He is
+    professor at Munich University of Applied Sciences.
 
 </div>
 </div>
