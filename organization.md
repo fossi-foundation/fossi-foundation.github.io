@@ -83,7 +83,7 @@ help us reaching our goals, please don't hesitate to
   <li><a href="https://twitter.com/OlofKindgren"><img title="Visit my Twitter account" src="/assets/flat_web_icon_set/color/Twitter.png"></a></li>
   </ul>
 </div>
-<div class="col-lg-9 col-md-8 col-sm-9">
+<div class="col-lg-9 col-md-8 col-sm-9" style="display: inline">
   <h4>Olof Kindgren</h4>
   Olof became actively involved with free and open source silicon through the OpenRISC project in 2011. He has since then worked in many areas with a special interest in tools and collaborations. Also known as the maintainer of the <a href="https://github.com/olofk/fusesoc">FuseSoc</a> IP core package manager - a tool for collaborations.
 </div>
