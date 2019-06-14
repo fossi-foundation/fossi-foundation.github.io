@@ -227,9 +227,9 @@
   {
     "start": "2019-06-14 10:50",
     "end": "2019-06-14 11:10",
-    "speaker": "Yunsup Lee",
-    "affiliation": "SiFive",
-    "title": "TBD",
+    "speaker": "Olof Kindgren",
+    "affiliation": "Qamcom",
+    "title": "Being awesome, the story of a modest genius on the way of winning multiple awards with FuseSoC",
     "category": "ip",
     "abstract": ""
   },
@@ -245,9 +245,9 @@
   {
     "start": "2019-06-14 11:30",
     "end": "2019-06-14 11:50",
-    "speaker": "Olof Kindgren",
-    "affiliation": "Qamcom",
-    "title": "Being awesome, the story of a modest genius on the way of winning multiple awards with FuseSoC",
+    "speaker": "Yunsup Lee",
+    "affiliation": "SiFive",
+    "title": "Enabling an Open-Source SoC Design Methodology with Federation Tools",
     "category": "ip",
     "abstract": ""
   },
