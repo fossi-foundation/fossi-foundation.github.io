@@ -114,7 +114,14 @@
 		  here</a>. You can also find some help
 		  on <a href="https://pulp-platform.org/zrh.html">getting
 		  around in Zürich</a>.
-		</p>
+    </p>
+    
+    <p>
+      Videos from WOSH are now available on our YouTube channel in the
+      <a href="https://www.youtube.com/playlist?list=PLUg3wIOWD8ypSlbAhaAL19lFma6vIdZ8F">Week
+      of Open Source Hardware</a> playlist. Links to recordings of each talk is
+      with their titles and abstracts.
+    </p>
 
 		<table class="table table-sm">
                   <tbody>
@@ -554,6 +561,12 @@
               '<div class="event-speaker">',
                 ev.speaker,
                 '<span class="event-affiliation">' + ev.affiliation + '</span>',
+          ].join('\n');
+          if (ev.video !== undefined && ev.video != '')
+            html += ' <span class="event-video"><a href="' + ev.video + '">video</a></span>';
+          if (ev.slides !== undefined && ev.slides != '')
+            html += ' <span class="event-slides"><a href="' + ev.slides + '">slides</a></span>';
+          html += [
               '</div>',
               '<div id="event-abstract-'+eventCnt+'" class="event-abstract collapse">',
                 ev.abstract,
