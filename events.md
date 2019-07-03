@@ -21,22 +21,22 @@ we are happy to talk to you.
 
 We hope to see you at some of our future events!
 
-### Latch-Up
-* May 4-5, 2019
-* Portland OR, USA
-* [More information](http://latchup.io)
+### ORConf 2019
+* September 27-29 2019
+* Bordeaux, France
+* [More information](https://orconf.org)
+
+## Past events
 
 ### FOSSi @ WOSH
 * June 13-14, 2019
 * Zürich, Switzerland
 * [More information](https://fossi-foundation.org/wosh)
 
-### ORConf 2019
-* TBD
-* TBD
-* [More information (coming soon)](https://orconf.org)
-
-## Past events
+### Latch-Up
+* May 4-5, 2019
+* Portland OR, USA
+* [More information](http://latchup.io)
 
 ### FOSSi Fiesta San Jose
 * October 14, 2018
