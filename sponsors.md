@@ -3,13 +3,16 @@ layout: page
 title: "Sponsors"
 ---
 
-We are currently fundraising for 2017 which is our first full year and
-we are scaling up committees, development efforts and resources. We
-are searching for sponsors to support our efforts. Please find more
-details and why sponsoring us helps you and the community
-[here](sponsoring).
+The FOSSi Foundation seeks sponsors of our foundation to help our
+mission of supporting the community, open source design reuse, standards,
+and licensing.
 
-We are very grateful to the companies that support our work!
+We are continually aiming to improve and scale up our activities as LibreCores, our
+conferences, our GSoC mentorship participation, and our committees.
+
+You can find more information [here](sponsoring) about sponsoring The FOSSi Foundation.
+
+We extend an enormous thanks to everyone who has contributed to our mission.
 
 <!--<div class="panel panel-sponsors panel-platinum">Platinum (> €20,000)</div>-->
 
