@@ -3,7 +3,7 @@ layout: page
 title: "Sponsors"
 ---
 
-The FOSSi Foundation seeks sponsors of our foundation to help our
+The FOSSi Foundation seeks sponsors to help our
 mission of supporting the community, open source design reuse, standards,
 and licensing.
 
