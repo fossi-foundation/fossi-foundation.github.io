@@ -57,6 +57,7 @@ We extend an enormous thanks to everyone who has contributed to our mission.
 <div class="panel panel-sponsors panel-individual">Individual Donations (€500 - €1,000)</div>
 
 <div class="row">
+<div class="col-sm-3">Peter Gielda</div>
 <div class="col-sm-3">Julius Baxter</div>
 </div>
 
