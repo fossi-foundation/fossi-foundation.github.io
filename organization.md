@@ -44,15 +44,21 @@ help us reaching our goals, please don't hesitate to
 <a name="peter"/>
 <div class="row">
 <div class="col-lg-3 col-md-4 col-sm-3">
-  <!--<img src="/assets/people/Peter.jpg" align="left" width="150px">-->
+  <img src="/assets/people/PeterGielda.jpg" align="left" width="150px">
   <ul class="share-buttons" style="padding-left: 0">
   <li><a href="mailto:peter@fossi-foundation.org"><img title="Send me an email" src="/assets/flat_web_icon_set/color/Email.png"/></a></li>
-<!--  <li><a href="https://www.linkedin.com/in/frank-kagan-gurkaynak-8793b41/"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
-  <li><a href="https://github.com/gurkaynak "><img title="Visit my GitHub account" src="/assets/flat_web_icon_set/color/Github.png"></a></li>-->
+  <li><a href="https://www.linkedin.com/in/peter-gielda/"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
+  <li><a href="https://github.com/pgielda"><img title="Visit my GitHub account" src="/assets/flat_web_icon_set/color/Github.png"></a></li>
   </ul>
 </div>
 <div class="col-lg-9 col-md-8 col-sm-9">
   <h4>Peter Gielda</h4>
+
+  Peter has always been involved with open source and made spreading
+  the adoption of open software, hardware and silicon lay at the
+  foundations of Antmicro back in 2009. A member of the RISC-V
+  Foundation's Technical Committee, he is also active in CHIPS
+  Alliance, the Linux Foundation and the Zephyr Project.
 
 </div>
 </div>
