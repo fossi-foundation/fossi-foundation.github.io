@@ -63,7 +63,7 @@ In the second phase, we started working on enhancing CI pipelines. We completed 
 
 ### Third Phase
 
-In the third month, we completed Yosys Synthesis and published its result [LibreCoresCI Jenkins server][lcciopenrisc] with plot plugin which also led to the release of new version _0.5.0_ of _Librecores CI base_ docker image.
+In the third month, we completed Yosys Synthesis and published its result [LibreCoresCI Jenkins server][lcciopenrisc] with plot plugin which also led to the release of [new version][changelog] _0.5.0_ of _Librecores CI base_ docker image.
 
 I also worked on exporting OpenRISC test results to TAP Format and published on Jenkins with TAP plugin.
 
@@ -114,6 +114,7 @@ Thank you Oleg Nenashev, Stafford Horne, Olofk Kindgren for helping me complete 
 
 Please send in your feedback at nancychn1@gmail.com
 
+[changelog]:https://github.com/librecores/docker-images/releases
 [mor1kx]:https://github.com/openrisc/mor1kx
 [edalize]:https://github.com/olofk/edalize
 [librecores-openrisc]:https://github.com/librecores/docker-images/tree/master/librecores-ci-openrisc
