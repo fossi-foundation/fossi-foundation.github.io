@@ -4,9 +4,9 @@ title: "Manifesto of the Free and Open Source Silicon Foundation"
 ---
 
 The Free and Open Source Silicon Foundation, hereinafter referred to
-as FOSSi, is a non-profit foundation with the mission to promote and
+as FOSSi Foundation, is a non-profit foundation with the mission to promote and
 assist free and open digital hardware designs and their related
-ecosystems. FOSSi operates as an open, inclusive, vendor-independent
+ecosystems. FOSSi Foundation operates as an open, inclusive, vendor-independent
 group.
 
 ## Values
@@ -20,7 +20,7 @@ We identify great value in promoting collaborative free and open source digital 
 
 ## Goals
 
-The above values are imbued in the following goals of the FOSSi foundation. The foundation shall
+The above values are imbued in the following goals of the FOSSi Foundation. The foundation shall
 
  * support and promote open standards development and their use in digital hardware designs and their related ecosystems
  * support community events and organize regular events relating to free and open digital hardware design and their ecosystems
