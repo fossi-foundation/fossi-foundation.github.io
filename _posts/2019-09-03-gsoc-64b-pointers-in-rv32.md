@@ -7,6 +7,8 @@ tags: ['GSoC', 'basejump', 'RISCV', 'LLVM']
 author: Reshabh Sharma
 ---
 
+*This is a guest post by Reshabh Sharma, who worked this summer on a Google Summer of Code (GSoC) project under the umbrella of the FOSSi Foundation.*
+
 RISC-V will change the world. Prof Taylor's [Bespoke Silicon Group][bespoke-silicon-group] is contributing by developing a GP-GPU based on RISC-V 32 bit ISA (RV32), after the huge success of their Open-Source RISC-V Tiered Accelerator Fabric SoC, [Celerity][celerity] which holds the world record for RISC-V performance; 500B RISC-V instructions per second, beating prior records by 100X.
 
 For compute 32 bit is common for requirements like very high energy efficiency and density. Since GPGPUs often requires 4GB+ of memory, we need 64 bit addresses to access DRAM. This summer I worked under the vision of Prof. Taylor to initiate the support for custom instructions specifically designed for [RISC-V based GP-GPU][basejump]. We started with supporting 64 bit pointers using custom load and store instructions in address space 1 inside the RISC-V LLVM backend.
