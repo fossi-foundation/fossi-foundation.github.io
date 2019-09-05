@@ -38,7 +38,7 @@ He added the ability to inform its users about problems when analyzing a project
 With this new notification system in place, we now have a feedback channel to our project owners, helping them to get the most of of LibreCores.
 Read more about Aquib's work in his [summarizing blog post](https://www.aquibbaig.in/gsoc-2019-project-report/).
 
-Aquib was mentored by Philipp Wagner with support from Amithosh Swain.
+Aquib was mentored by Philipp Wagner with support from Amitosh Swain.
 
 
 **Kunal Gulati** worked on integrating the [ao486 processor](https://github.com/alfikpl/ao486) into the [OpenPiton manycore research framework](http://parallel.princeton.edu/openpiton/). Recently, OpenPiton was extended as JuxtaPiton, which brought together cores of two different ISAs (SPARC + RISC-V) to explore how to build such a heterogeneous ISA system. Kunal's project was to connect an X86 core to bring a new form of ISA heterogeneity. Over the summer, he wrote a new memory transducer from the core's Avalon memory interface to OpenPiton's P-Mesh memory system and an I/O transducer to handle several of the legacy peripherals (timers, clock, interrupt controller). He modified the BIOS distributed with the Bochs X86 emulator to remove unused peripherals and was able to run this BIOS on ao486 connected to P-Mesh. On top of the BIOS, he built assembly tests in a boot sector which can access the standard peripherals (UART, SD, etc) in OpenPiton using memory-mapped I/O. Kunal did an amazing job to get all this working and we both learned a lot of low-level X86 details along the way. Thanks Kunal!
