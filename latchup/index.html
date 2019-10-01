@@ -1,250 +1,139 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- FontAwesome CSS -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+  <!-- FontAwesome CSS -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
-    <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
 
-    <title>Latchup</title>
-  </head>
-  <body style="background: #e7e7e7">
+  <link rel="shortcut icon" type="image/png" href="images/favicon.png">
 
-    <div class="container" style="background: transparent url(images/highlight-bg.jpg) 50% 0 no-repeat;">
-      <!-- Content here -->
-      <div class="row">
-        <div class="col-sm-9 mt-5" style="text-align: center">
-            <img src="images/latchup_logo.png" width="500" alt="Logo" class="img-fluid rounded"/>
-        </div><!-- col -->
-        <div class="col-sm-3 mt-5" style="text-align: center">
-          <figure class="figure">
-            <img src="images/portlandcityscape.jpg" class="figure-img img-fluid rounded" alt="Portland">
-            <figcaption class="figure-caption">Portland and Mount Hood (c) Steven Pavlov CC BY-SA 4.0</figcaption>
-          </figure>
-        </div><!-- col -->
-      </div><!-- row -->
+  <style>
+    .event {
+      padding-bottom: 15px;
+      font-size: 16px;
+    }
+    .event-time {
+      font-size: small;
+    }
 
+    .event-title {
+      font-weight: bold;
+    }
 
-      <div class="row">
-        <div class="col-sm-8 mt-3">
-          <div class="row">
-            <div class="col-sm">
-              <div class="card">
-                <h5 class="card-header">
-                  About
-                </h5>
-                <div class="card-body">
-                  <p class="card-text">The <a href="https://fossi-foundation.org">FOSSi Foundation</a> is proud to announce
-		    Latch-Up, a conference dedicated to free and open source
-		    silicon to be held over the weekend of May 4th and 5th in
-		    Portland, Oregon, USA.
-		  </p>
+    .event-affiliation {
+      color: gray;
+      font-size: 90%;
+    }
 
-                  <p>
-                    Latch-Up is a weekend of <a href="#presentations">presentations</a> and networking for the open source digital
-                    design community, much like
-                    its European sister conference <a href="https://orconf.org">ORConf</a>.
-                  </p>
-                  <p>
-                    Latch-Up in Portland is now over. the FOSSi Foundation would like to extend a massive thank you to all
-                    presenters, participants, and sponsors of the event.
-                  </p>
-                  <p>
-                    Plenty of photos of the action can be found on the
-                    <a href="https://twitter.com/LatchUpConf" target="_blank">@LatchUpConf twitter feed</a>. Find the
-                    group photo <a href="images/latchup-groupshot.jpg" target="_blank">here</a> - thanks to
-                    <a href="https://twitter.com/@zebular13" target="_blank">>Monica Houston of Hackster.io</a>!
-                  </p>
-                  
-                  <p>
-                    Videos of the event are becoming available on the
-                    <a href="https://www.youtube.com/playlist?list=PLUg3wIOWD8yoZx3W8JfSMn4tiHXELmgMT" target="_blank">Latch-Up 2019 playlist</a>
-                    on the FOSSi Foundation's YouTube channel.
-                  </p>
-                  <!-- <p> -->
-                  <!--   The event is now fully subscribed, we're very much looking forward to a fantastic few days in Portland. The <a href="#schedule">schedule</a> is now up. -->
-                  <!-- </p> -->
-                  <!-- <p> -->
-                  <!--   If you'd like to get involved, you can still attend the <a href="#timvideoshackfest">hackfest on Friday May 3rd</a>. -->
-                  <!-- </p> -->
-                  <!-- <p> -->
-                  <!--   So save the date, <a href="https://goo.gl/forms/aE999vNIXzHkJrw23" target="_blank">register to attend</a> -->
-                  <!--   and we encourage you to <a href="https://goo.gl/forms/HiOj4g1HDzwnkcUM2" target="_blank">submit a presentation a proposal</a> -->
-                  <!--   if you have a project or idea on the topic to share! -->
-                  <!-- </p> -->
+    .event-abstract {
+      padding-left: 5px;
+      margin-left: 5px;
+      border-left: 3px solid gray;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
 
-                  <p>Questions? Ping the organizers via <a href="https://twitter.com/LatchUpConf" target="_blank">@LatchUpConf</a> or
-                    <a target="_blank" href="mailto:info@latchup.io?Subject=Latchup%20Question">email</a>.
-		  </p>
-                </div> <!-- card-body -->
-              </div> <!-- card -->
-            </div> <!-- col-sm -->
-          </div> <!-- row -->
+  <title>Latch-Up Boston</title>
+</head>
 
+<body style="background: #e7e7e7">
 
-          <div class="row">
-            <!-- Card: Registration -->
-            <a name="register" href="#register"></a>
-            <div class="col-sm-12 mt-3">
-              <div class="card">
-                <h5 class="card-header">Registration</h5>
-                <div class="card-body">
-                  <!-- <p class="card-text">Latch-Up is <strong>free to attend</strong> - however please register so that we can plan better! We expect -->
-                  <!--   all participants of FOSSi events to follow the <a href="https://www.fossi-foundation.org/code-of-conduct">FOSSi Foundation code -->
-                  <!--     of conduct</a>. -->
-                  <!-- </p> -->
+  <div class="container" style="background: transparent url(images/highlight-bg.jpg) 50% 0 no-repeat;">
+    <!-- Content here -->
+    <div class="row">
+<!--      <div class="col-sm-3 mt-5" style="text-align: center">
+        <img src="images/FOSSistanbul-lg.png" alt="Logo" class="img-fluid" />
+      </div>--><!-- col -->
+      <div class="col-sm-6 mt-5" style="text-align: center">
+        <h3 style="text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); color: #003366; font-weight: bold">Latch-Up</h3>
+        <p><strong>11-12 April 2020</strong> in <a href="https://en.wikipedia.org/wiki/Cambridge,_Massachusetts"
+            target="_blank">Cambridge MA, USA</a>, at MIT</p>
 
-                  <!-- <div class="d-flex justify-content-center mb-2 mt-2"> -->
-                  <!--   <form action="https://goo.gl/forms/aE999vNIXzHkJrw23"> -->
-                  <!--      <input type="submit" class="btn btn-primary" value="Register here"/> -->
-                  <!--   </form> -->
-		  <!--  </div> -->
+      </div><!-- col -->
+      <div class="col-sm-3 mt-5" style="text-align: center">
+        <figure class="figure">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/e/eb/MIT_Strata_Center.jpg"
+            class="figure-img img-fluid rounded" alt="Stata center">
+          <figcaption class="figure-caption">&copy; Tafyrn CC BY 3.0</figcaption>
+        </figure>
+      </div><!-- col -->
+    </div><!-- row -->
+    <div class="row">
+      <div class="col-sm-8 mt-3">
+        <div class="row">
+          <div class="col-sm">
+            <div class="card">
+              <h5 class="card-header">
+                About
+              </h5>
+              <div class="card-body">
+                <p class="card-text">
+                  Latch-Up will take place at MIT in Cambridge MA, USA from April 11 to April 12, 2020.
+                </p>
 
-                  <p class="card-text">
-                    We're sorry to say that Latch-Up is fully subscribed and registration is now closed.
-                  </p>
-                  <p>
-                    We ask all Latch-Up participants to adhere to the the
-                    <a href="https://www.fossi-foundation.org/code-of-conduct">FOSSi Foundation code of conduct</a> throughout the event.
+		<p>
+		  Location info
+		</p>
+                  <p style="text-align: center">
+                    Previous Latch-Ups:
+                    <a href="2019/">2019 Portland</a>
                   </p>
 
-		  <h5><a name="tickets" href="#tickets"></a>Professional Tickets</h5>
-                  <p class="card-text">
-		    Attendees who are joining us at Latch-Up on behalf of their company and/or can claim the conference as professional
-                    training expense are encouraged to purchase a professional ticket. These ticket sales help us provide all that we do
-                    at Latch-Up and keep the event accessible to all members of the community.<!-- Professional ticket holders are able to
-                    get their company name printed on their name badge. -->
-		  </p>
+              </div> <!-- card-body -->
+            </div> <!-- card -->
+          </div> <!-- col-sm -->
+        </div> <!-- row -->
 
-                  <p class="card-text">
-		    Professional tickets are &pound;500 (+sales tax
-		    if applicable) and can by bought here via the PayPal button below
-		    or
-		    by <a href="mailto:info@fossi-foundation.org?Subject=Latch-Up%20Professional%20Ticket">email</a>.
-		  </p>
 
-                  <div class="d-flex justify-content-center mb-2 mt-2">
-		    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-		      <input type="hidden" name="cmd" value="_s-xclick">
-		      <input type="hidden" name="hosted_button_id" value="2PHWXZXTWXTES">
-		      <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
-		    </form>
-                  </div>
-                </div>
-              </div><!-- card -->
-            </div><!-- col -->
-	  </div>
-
-	  <div class="row">
-            <!-- Card: Submit talk -->
-            <div class="col-sm-12 mt-3">
-              <div class="card">
-                <h5 class="card-header">Submit a talk</h5>
-                <div class="card-body">
-                  <p>Latch-Up is no longer open for talk submissions. If you'd like to submit a lightning talk, do so here: <a href="https://forms.gle/g6BcnTSmrS22Znzu6">https://forms.gle/g6BcnTSmrS22Znzu6</a>.
-                  <!-- <p class="card-text"> -->
-                  <!--   We encourage anybody involved in the open source semiconductor engineering space to come along and give share your work or experience. Presentations slots as short as 3 minute lightning-talks up to 30 minute talks with Q and A are available. -->
-                  <!-- </p> -->
-                  <!-- <p class="card-text"> -->
-                  <!--   So if you've designed, worked on or even just used open source IP cores and/or management systems, verification IP, build flows, SoCs, simulators, synthesis tools, FPGA and ASIC implementation tools, languages and DSLs, compilers, or anything related we'd love to have you join us to share your experience. -->
-                  <!-- </p> -->
-                  <!-- <div class="d-flex justify-content-center"> -->
-                  <!--   <form action="https://goo.gl/forms/HiOj4g1HDzwnkcUM2"> -->
-                  <!--     <input type="submit" class="btn btn-primary" value="Submit Talk" /> -->
-                  <!--   </form> -->
-                  <!-- </div> -->
-                </div>
-              </div><!-- card -->
-            </div><!-- col -->
-          </div><!-- row -->
-
-          <div class="row">
-            <div class="col-sm-12 mt-3">
-              <div class="card">
-                <h5 class="card-header">
-                  Sponsorship and Volunteering at Latch-Up
-                </h5>
-                <div class="card-body">
-                  <p>
-                    Latch-Up is free to attend, but we aim to provide catering and the like during the event. Latch-Up is also a great way to get your
-                    company or brand in front of lots of engineers and hackers on the day, and thousands more through recordings of the event. So please
-                    <a target="_blank" href="mailto:info@latchup.io?Subject=Latchup%20sponsorship">get in touch</a> if you'd like to explore sponsorship
-                    opportunities.
-		  </p>
-
-                  <p>
-                    Latch-Up is organized by volunteers on behalf of the FOSSi Foundation. We are currently looking for more people to help
-                    out with arrangements and putting on the event, so please do <a target="_blank" href="mailto:info@latchup.io?Subject=Latchup%20volunteering">email us</a>
-                    if you would like to voltuneer for during the event with setup, AV, or even just local knowledge so we can plan the weekend better.
-		  </p>
-                </div> <!-- card-body -->
-              </div> <!-- card -->
-            </div> <!-- col-sm -->
-          </div> <!-- row -->
-
-	  <div class="row">
-            <a name="venue" href="#venue"></a>
-            <div class="col-sm-12 mt-3">
-              <div class="card">
-                <h5 class="card-header">Venue</h5>
-                <div class="card-body">
-                  <p class="card-text">We are pleased to announce that Latch-Up 2019 will be held in the "101" space of Portland's
-                    <a href="https://www.revolutionhall.com/" target="_blank">Revolution Hall</a>. The venue's address is
-                    <a href="https://goo.gl/maps/pFPGsCdLugQ2" target="_blank">1300 SE Stark St, Portland, OR 97214</a></p>
-                  <img src="images/revhallfront.jpg" width="200" alt="Logo" class="img-fluid rounded"/>
-                  <img src="images/101space.png" width="200" alt="Logo" class="img-fluid rounded"/>
-                </div>
-              </div><!-- card -->
-            </div><!-- col -->
-	  </div>
-
-	</div>
-
-        <div class="col-sm-4 mt-3">
-          <div class="row">
-            <div class="col-sm-12 mt-0">
-              <div class="card">
-                <h5 class="card-header">Sponsors</h5>
-                <div class="card-body">
-                  <p class="card-text">
-                    <div class="col-sm-12 mx-auto mt-3">
-                      <a target="_blank" href="https://www.sifive.com/"><img src="https://content.riscv.org/wp-content/uploads/2017/10/SiFive-Logo-500x262.png" alt="SiFive" class="img-fluid"/></a>
-                    </div>
-
-                    <div class="col-sm-8 mx-auto mt-4">
-                      <a target="_blank" href="https://www.mentor.com/"><img src="images/Mentor-ASB-Logo-Black-Hires.png" alt="Mentor, A Siemens Business" class="img-fluid"/></a>
-                    </div>
-
-                    <div class="col-sm-8 mx-auto mt-4">
-                      <a target="_blank" href="https://www.crowdsupply.com/"><img src="https://www.crowdsupply.com/_teal/images/crowd-supply-logo-dark.svg" alt="Crowd Supply" class="img-fluid"/></a>
-                    </div>
-                    
-                    <div class="col-sm-8 mx-auto mt-4">
-                      <a target="_blank" href="https://fossi-foundation.org"><img src="https://fossi-foundation.org/assets/fossi_logo_medium.png" alt="fossi" class="img-fluid"/></a>
-                    </div>
-                    
+        <div class="row">
+          <!-- Card: Registration -->
+          <a name="register" href="#register"></a>
+          <div class="col-sm-12 mt-3">
+            <div class="card">
+              <h5 class="card-header">Registration</h5>
+              <div class="card-body">
+		Please check back later for registration and more info
+	      </div>
+            </div><!-- card -->
+          </div><!-- col -->
+        </div>
+      </div> <!-- col -->
+      <div class="col-sm-4 mt-3">
+        <div class="row">
+          <div class="col-sm-12 mt-3">
+            <div class="card">
+              <h5 class="card-header">Sponsors</h5>
+              <div class="card-body">
+                <p class="card-text">
+                  <div class="row">
                     <div class="col-sm-12 mt-5">
-                      <a href="mailto:info@latchup.io?Subject=Latch-Up%202019%20Sponsorship" class="btn btn-primary btn-block">Become a sponsor</a>
+                      <a class="btn btn-primary btn-block"
+                        href="mailto:info@fossi-foundation.org?Subject=WOSH%202019%20Sponsorship">Become a sponsor</a>
                     </div>
-                </div><!-- card-body -->
-              </div><!-- card -->
-            </div><!-- col -->
-          </div><!-- row -->
-          <div class="row">
-            <div class="col-sm-12 mt-3">
-              <div class="card">
-                <h5 class="card-header">Donate</h5>
-                <div class="card-body">
-                  <p class="card-text">
+                  </div>
+              </div><!-- card-body -->
+            </div><!-- card -->
+          </div><!-- col -->
+        </div><!-- row -->
+        <div class="row">
+          <div class="col-sm-12 mt-3">
+            <div class="card">
+              <h5 class="card-header">Donate</h5>
+              <div class="card-body">
+                <p class="card-text">
 
                   <p>You can also support us with small donations via Paypal:</p>
 
@@ -252,888 +141,118 @@
                     <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 
                       <!-- Identify your business so that you can collect the payments. -->
-                      <input type="hidden" name="business"
-                             value="paypal@fossi-foundation.org">
+                      <input type="hidden" name="business" value="paypal@fossi-foundation.org">
 
                       <!-- Specify a Donate button. -->
                       <input type="hidden" name="cmd" value="_donations">
 
                       <!-- Specify details about the contribution -->
                       <input type="hidden" name="item_name" value="Free and Open Source Silicon Foundation">
-                      <input type="hidden" name="item_number" value="Latch-Up">
+                      <input type="hidden" name="item_number" value="ORConf">
                       <input type="hidden" name="currency_code" value="EUR">
 
                       <!-- Display the payment button. -->
                       <input type="image" name="submit"
-                             src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif"
-                             alt="Donate">
+                        src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" alt="Donate">
+                      <img alt="" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+
                     </form>
                   </div>
-                </div><!-- card-body -->
-              </div><!-- card -->
-            </div> <!-- col -->
-          </div> <!-- row -->
-          <div class="row">
-            <div class="col-sm-12 mt-3">
-              <div class="card">
-                <h5 class="card-header">
-                  Stay updated!
-                </h5>
-                <div class="card-body">
-                  <form method="post" action="https://lists.librecores.org/mailman/subscribe/orconf-announce">
-                    <div class="input-group mb-3">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon1">@</span>
-                      </div>
-                      <input name="email" type="text" class="form-control" placeholder="by E-Mail" aria-label="by E-Mail" aria-describedby="basic-addon1">
-                      <input name="email-button" type="submit" class="btn btn-primary" value="Subscribe"/>
-                    </div>
-                  </form>
-                  <hr/>
-                  <a href="https://twitter.com/LatchUpConf"><i class="fab fa-twitter-square fa-3x" style="color: #00aced"></i></a>
-                  <span style="display:inline-block; width: 5px;"></span>
-                  <a href="https://youtube.com/FOSSiFoundation"><i class="fab fa-youtube fa-3x" style="color: #bb0000"></i></a>
-                  <span style="display:inline-block; width: 5px;"></span>
-                  <a href="https://www.linkedin.com/company/fossi-foundation/"><i class="fab fa-linkedin fa-3x" style="color: #007bb6"></i></a>
-                </div><!-- card-body -->
-              </div><!-- card -->
-            </div><!-- col -->
-          </div><!-- row -->
-        </div> <!-- col -->
-      </div><!-- row -->
-
-      <div class="row">
-        <div class="col-sm-12 mt-3">
-        <div class="card">
-          <a name="dinner" href="#dinner"></a>
-          <h5 class="card-header">Conference Dinner</h5>
-          <div class="card-body">
-            <figure class="figure" style="width: 25%; float: right">
-              <figcaption><strong>Sponsored by</strong></figcaption>
-              <a href="https://www.sifive.com" target="_blank"><img src="https://content.riscv.org/wp-content/uploads/2017/10/SiFive-Logo-500x262.png" class="figure-img img-fluid rounded" alt="SiFive"></a>
-            </figure>
-            <p class="card-text">
-              A dinner will be arranged for the Saturday evening of the conference, as is tradition at our sister event, ORConf. All attendees are encouraged to join us for a relaxed dinner and a few drinks after Saturday's proceedings.
-            </p>
-            <p>We're pleased to announced that the fantastic folks at <a href="https://www.sifive.com/">SiFive</a> are the sponsors of this year's conference dinner.</p>
-            <p>The dinner will be held at <a href="https://rockbottom.com/locations/portland/" target="_blank">Rock Bottom Brewery</a> (<a href="https://www.google.com/maps/place/Rock+Bottom+Restaurant+%26+Brewery/@45.517902,-122.6769245,17z/data=!3m1!4b1!4m5!3m4!1s0x54950a058b110dfd:0x4f6a1126b5bf9775!8m2!3d45.5178983!4d-122.6747359" target="_blank">map</a>).
-            </p>
-          </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="row">
-        <div class="col-sm-12 mt-3">
-        <div class="card">
-          <a name="timvideoshackfest" href="#timvideoshackfest"></a>
-          <h5 class="card-header">Patch-Up at Latch-Up: Tim Videos Hackfest</h5>
-          <div class="card-body">
-            <figure class="figure" style="width: 25%; float: right">
-              <figcaption><strong>Sponsored by</strong></figcaption>
-              <a href="https://pdxhackerspace.org/" target="_blank"><img src="https://pdxhackerspace.org/img/logo256x256.png" width="200" class="figure-img img-fluid rounded" alt="^H - PDX Hackerspace"></a>
-            </figure>
-
-            <a href="https://code.timvideos.us/home/" target="_blank"><img src="images/TimVideosLogo.jpg" width="250" hspace="10" vspace="10" align="left" class="figure-img img-fluid rounded" alt="TimVideos"></a>
-
-            <p class="card-text">
-              On Friday May 3rd, prior to the weekend of Latch-Up, we will host a hackfest for
-              <a href="https://code.timvideos.us/home/" target="_blank">Tim Videos</a>, a live video recording project built entirely out of open source hardware, gateware and software.
-            </p>
-            <p>
-              This will be suitable for users, developers and anyone curious about getting involved with the <a href="https://code.timvideos.us/home/" target="_blank">Tim Videos</a> project.
-              Helping out on the day will be the man himself, <a href="https://twitter.com/mithro" target="_blank">Tim Ansell</a> and Carl Karsten of
-              <a href="http://nextdayvideo.com/" target="_blank">Next Day Video</a>.
-            </p>
-            <p>
-              The day will center around hacking on <a href="https://github.com/timvideos/litex-buildenv/wiki" target="_blank">litex-buildenv</a> with a focus on
-              the <a href="https://hdmi2usb.tv/home/" target="_blank">HDMI2USB firmware</a>. The <a href="https://github.com/timvideos/litex-buildenv/wiki" target="_blank">litex-buildenv</a>
-              project is an SoC with 3 architectural flavours of micrprocessor to choose from; LM32 (lm32), RISC-V (3 implementations!) and OpenRISC 1000 (mor1kx).
-              As for software, you can run code bare metal, in <a href="https://micropython.org/" target="_blank">micropython</a>, and on OSes such as
-              <a href="https://www.zephyrproject.org/" target="_blank">Zephyr</a> and Linux. The system builds with
-              <a href="http://www.clifford.at/icestorm/" target="_blank">open source FPGA tools</a> and runs on
-              <a href="https://www.latticesemi.com/Products/FPGAandCPLD/iCE40" target="_blank">iCE40 FPGAs</a>. In addition, Tim will have
-              <a href="https://github.com/im-tomu/fomu-hardware" target="_blank">Fomu</a> hardware to disseminate, and
-              <a href="https://www.crowdsupply.com/numato-lab/opsis" target="_blank">Opsis and NeTV2 hardware</a> for people to hack on.
-            </p>
-            <p>
-              For more info on the project, check these videos out: <a href="https://www.youtube.com/watch?v=8CHd54et2F8&authuser=2" target="_blank">1</a>,
-              <a href="https://www.youtube.com/watch?v=181-roBM0tI&authuser=2" target="_blank">2</a>.
-            <p>
-               So if you're proficient (or near enough!) in HDLs, software, and debugging embedded systems and
-               would like to get involved, or exposed to some new tools, then come on down! Or even if you just want to drop by and say hi and look over people's
-               shoulders, that's fine too.
-            </p>
-            <h5>Where and when</h5>
-            <p>
-              The event will run from 2 - 8PM, Friday May 3rd at <a href="https://pdxhackerspace.org/" target="_blank">CTRL-H (^H) / the PDX Hackerspace</a>,
-              <a href="https://www.google.com/maps/place/Ctrl-H+%2F+PDX+Hackerspace/@45.5781156,-122.6840495,17z/data=!3m1!4b1!4m5!3m4!1s0x5495a7afce02ef3f:0x8f320cc9e2be81ca!8m2!3d45.5781156!4d-122.6818608" target="_blank">7608 N Interstate Ave, Portland, OR 97217</a>.
-              Bring your laptop, any suitable hardware and a willingess to get your hands "dirty" on an active
-              open source video hardware project. A dinner barbecue will be put on by the fine folks at ^H.
-            </p>
-            <h5>Register</h5>
-            <p>
-              In order to help us plan the day, we ask that you register that you're intending to come - even if you're just coming to hang out. Please fill in <a href="https://forms.gle/sSkXuoTvRyMqhqca8" target="_blank">this short form</a> to register.
-              This isn't necessary, please do turn up even if you haven't registered, but it does help us.
-            </p>
-            <p>
-              A big thanks to <a href="https://pdxhackerspace.org/" target="_blank">^H / PDX Hackerspace</a> for hosting and sponsoring Patch-Up at Latch-Up: Tim Videos Hackfest
-              
-          </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-12 mt-3">
-          <div class="card">
-            <h5 class="card-header">
-              More about Latch-Up
-            </h5>
-            <div class="card-body">
-	      <p>
-		Technically speaking, latch-up is a short circuit, an inadvertent path of low-impedance. We have co-opted this word to represent what we’d like to encourage among members of the community: paths of communication leading to collaboration, inadvertent or not.
-	      </p>
-	      <p>
-		Latch-Up 2019 in Portland opens a new chapter for the FOSSi Foundation, with it being the first event in the spirit of <a href="https://orconf.org">ORConf</a> held in North America. Latch-Up is a community-focused conference for open source semiconductor, digital design and embedded systems professionals and enthusiasts. Expect presentations on a wide range of topics; open source IP blocks and SoCs, open source simulators, compilers, synthesis and physical implementation tools for both FPGA and ASIC.
-	      </p>
-	      <p>
-		Latch-Up aims to bring together the North American open source digital design community for an event in the mould of ORConf - the FOSSi Foundation’s annual European community conference. Like ORConf, Latch-Up will be will be free to attend and consist of a relaxed format of presentations and discussions throughout a weekend, with plenty of time for networking. A dinner on the Saturday evening will be arranged and all attendees are invited to attend.
-	      </p>
-	      <p>
-		These events go to the FOSSi Foundation's goal of lowering barriers of entry to the digital design field, whilst encouraging the open source development model and promoting open collaboration.
-	      </p>
-	      <p>
-		We recognise the keen interest in this area in the Americas and this year are putting effort into organizing an event which will encourage wider awareness amongst enthusiasts of the projects that we’ve been hearing about at ORConf since 2012.
-	      </p>
-
-              <p>Don't forget to follow <a href="https://twitter.com/LatchUpConf" target="_blank">@LatchUpConf</a> or
-                <a target="_blank" href="mailto:info@latchup.io?Subject=Latchup%20Question">email us</a>/DM
-                us if you have any questions.
-	      </p>
-
-            </div> <!-- card-body -->
-          </div> <!-- card -->
-        </div> <!-- col-sm -->
-      </div> <!-- row -->
-
-      <div class="row">
-        <div class="col-sm-12 mt-3">
-          <div class="card">
-            <a name="schedule" href="#schedule"></a>
-            <h5 class="card-header">Schedule</h5>
-            <div class="card-body">
-              <p class="card-text">
-                <h6>Saturday</h6>
-                <table style="width:100%">
-                  <tr> <td><b>08:00</b></td> <td></td> <td>Registration open at <a href="#venue">venue</a></td></tr>
-                  <tr> <td><b>09:00</b></td> <td>(10)</td> <td>Welcome</td></tr>
-                  <tr> <td><b>09:10</b></td> <td>(10/10)</td> <td>FOSSi Foundation Update</td></tr>
-                  <tr> <td><b>09:30</b></td> <td>(20/10)</td> <td> <a href="#wavedrom">Diagrams and system visualisation in chip design</a> by Aliaksei Chapyzhenka</td></tr>
-                  <tr> <td><b>10:00</b></td> <td>(20/10)</td> <td> <a href="#netlistsvg">Netlistsvg: How to Draw a Better Schematic than Graphviz</a> by Neil Turley</td></tr>
-                  <tr> <td><b>10:30</b></td> <td>(20)</td> <td>Break</td></tr>
-                  <tr> <td><b>10:50</b></td> <td>(15/5)</td> <td> <a href="#rocketlessons">Lessons learned customising the Rocket RISC-V core</a> by Julius Baxter</td></tr>
-                  <tr> <td><b>11:10</b></td> <td>(20/10)</td> <td> <a href="#chisel">Higher-Order Hardware Design with Chisel 3</a> by Jack Koenig</td></tr>
-                  <tr> <td><b>11:40</b></td> <td>(20/10)</td> <td> <a href="#myhdl">The fusion of high-level synthesis with event-oriented hardware description (myhdl)</a> by Christopher Felton</td></tr>
-                  <tr> <td><b>12:10</b></td> <td>(1h20)</td> <td>Lunch</td></tr>
-                  <tr> <td><b>13:30</b></td> <td>(15/5)</td> <td> <a href="#juxtapiton">JuxtaPiton: The First Open-Source, Heterogeneous-ISA Processor</a> by Katie Lim</td></tr>
-                  <tr> <td><b>13:50</b></td> <td>(15/5)</td> <td> <a href="#openpiton">OpenPiton+Ariane: Making Ariane Multicore with OpenPiton’s P-Mesh</a> by Jonathan Balkind</td></tr>
-                  <tr> <td><b>14:10</b></td> <td>(15/5)</td> <td> <a href="#nvdla">Lessons Learned from Open-Sourcing NVDLA</a> by Joshua Wise </td></tr>
-                  <tr> <td><b>14:30</b></td> <td>(15/5)</td> <td> <a href="#dvkit">DVKit: An Integrated Development Environment for Design and Verification Engineers</a> by Matthew Ballance</td></tr>
-                  <tr> <td><b>14:50</b></td> <td>(40)</td> <td>Break</td></tr>
-                  <tr> <td><b>15:30</b></td> <td>(20/10)</td> <td> <a href="#lgraph">Live Graph infrastructure for Synthesis and Simulation</a> by Jose Renau</td></tr>
-                  <tr> <td><b>16:00</b></td> <td>(20/10)</td> <td> <a href="#boom">The Berkeley-Out-of-Order-Machine: An Open Source Synthesizable High-Performance RISC-V Processor</a> by Jerry Zhao, Abe Gonzalez and Ben Korpan</td></tr>
-                  <tr> <td><b>16:30</b></td> <td>(20/10)</td> <td> <a href="#firesim">FireSim: Open-Source Easy-to-use FPGA-Accelerated Cycle-Exact Hardware Simulation in the Cloud</a> by David Biancolin and Alon Amid</td></tr>
-                  <tr> <td><b>17:00</b></td> <td>(30)</td> <td>Break</td></tr>
-                  <tr> <td><b>17:30</b></td> <td>(20/10)</td> <td> <a href="#verilogboy">How I started learning FPGA: My journey writing a GameBoy in Verilog</a> by Wenting Zhang</td></tr>
-                  <tr> <td><b>18:00</b></td> <td>(20/10)</td> <td> <a href="#emu">Emulation of vintage integrated circuits through die analysis and reverse-EDA</a> by Cole Johnson</td></tr>
-                  <tr> <td><b>18:20</b></td> <td>(30)</td> <td>Mingle, drinks</td></tr>
-                  <tr> <td><b>19:00</b></td> <td></td> <td> <a href="#dinner">Dinner</a> at <a href="https://rockbottom.com/locations/portland/" target="_blank">Rock Bottom Brewery</a> (<a href="https://www.google.com/maps/place/Rock+Bottom+Restaurant+%26+Brewery/@45.517902,-122.6769245,17z/data=!3m1!4b1!4m5!3m4!1s0x54950a058b110dfd:0x4f6a1126b5bf9775!8m2!3d45.5178983!4d-122.6747359" target="_blank">map</a>), sponsored by <a href="https://www.sifive.com" target="_blank">SiFive</a> </td></tr>
-                </table>
-                <hr/>
-
-                <h6>Sunday</h6>
-                <table style="width:100%">
-                  <tr> <td><b>09:00</b></td> <td></td> <td>Registration open</td></tr>
-                  <tr> <td><b>09:30</b></td> <td>(20/10)</td> <td> <a href="#basejump">BaseJump STL: a Standard Template Library for Hardware Design</a> by Daniel Petrisko</td></tr>
-                  <tr> <td><b>10:00</b></td> <td>(20/10)</td> <td> <a href="#osvvm">OSVVM, VHDL's #1 FPGA Verification Library</a> by Jim Lewis</td></tr>
-                  <tr> <td><b>10:30</b></td> <td>(20/10)</td> <td> <a href="#uvm">Verifying Open-Source Silicon with SystemVerilog: Getting in on the Ground Floor</a> by Matthew Ballance</td></tr>
-                  <tr> <td><b>11:00</b></td> <td>(20)</td> <td>Break</td></tr>
-                  <tr> <td><b>11:20</b></td> <td>(15/5)</td> <td> <a href="#riscvdebian">RISC-V in Debian</a> by Vagrant Cascadian</td></tr>
-                  <tr> <td><b>11:40</b></td> <td>(30)</td> <td> Lightning Talks </td></tr>
-                  <tr> <td><b>12:10</b></td> <td>(1h10)</td> <td>Lunch</td></tr>
-                  <tr> <td><b>13:20</b></td> <td>(20/10)</td> <td> <a href="#fusesoc">FuseSoC - Cores have never been so much fun</a> by Olof Kindgren</td></tr>
-                  <tr> <td><b>13:50</b></td> <td>(20/10)</td> <td> <a href="#duh">DUH: document and tools for HW design reuse</a> by Aliaksei Chapyzhenka</td></tr>
-                  <tr> <td><b>14:20</b></td> <td>(20/10)</td> <td> <a href="#nyuzi">Nyuzi: An Open Source GPGPU Processor</a> by Jeff Bush</td></tr>
-                  <tr> <td><b>14:50</b></td> <td>(20)</td> <td>Break</td></tr>
-                  <tr> <td><b>15:10</b></td> <td>(20/10)</td> <td> <a href="#openram">OpenRAM: An Open Source Memory Compiler</a> by Matthew Guthaus</td></tr>
-                  <tr> <td><b>15:40</b></td> <td>(20/10)</td> <td> <a href="#syzygy">SYZYGY: An Open Standard For Semiconductor Evaluation</a> by Tom McLeod</td></tr>
-                  <tr> <td><b>16:00</b></td> <td>(20)</td> <td> <a href="#opensourcefpga">Open-Source FPGA tools, how and why?</a> by Piotr Esden-Tempski</td></tr>
-                  <tr> <td><b>16:30</b></td> <td></td> <td> Close</td></tr>
-                </table>
-                <hr/>
-              <p>
-                Key: (20/10) - presentation with 20 minutes + 10 minutes Q&amp;A
-              </p>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="row">
-        <div class="col-sm-12 mt-3">
-          <div class="card">
-            <a name="presentations" href="#presentations"></a>
-            <h5 class="card-header">Presentations</h5>
-            <div class="card-body">
-              <p class="card-text">
-        
-              <!-- <h4> -->
-              <!--   <a name="!!!" href="#!!!"></a>!!!</h4> -->
-              <!-- <p> -->
-	      <!-- </p> -->
-              <!-- <h6>Presenter: </h6> -->
-              <!-- <p> -->
-              <!-- </p> -->
-                
-              <h4>
-                <a name="emu" href="#emu"></a>Emulation of vintage integrated circuits through die analysis and reverse-EDA</h4>
-              <p>
-                Despite being sold in the millions, video games based on discrete game ICs have had minimal emulation developed.
-                This is primarily due to the circuitry being a literal "black box" as only the manufacturer possessed the designs.
-                In addition, much of the documentation surrounding these games has disappeared over the years.
-              </p>
-              <p>
-                Cole has been developing a process to re-implement these stubborn circuits in modern FPGAs as well as software.
-                It involves extracting a transistor-level netlist from high-resolution photographs of the exposed silicon die.
-                Reverse-engineering and slow simulation is achieved using tools pioneered by the visual6502 project. This is followed
-                by reverse-EDA performed by custom tools being developed. The transistor-level design is automatically converted into
-                a more abstract RTL circuit description.
-              </p>
-              <p>
-                Verilog obtained from the above process will be ported to the tinyFPGA board, the
-                <a href="https://github.com/MiSTer-devel/Main_MiSTer/wiki" target="_blank">MiSTer hardware emulation project</a>,
-                and the MAME software emulator. The intermediate files will be open-source in the spirit of the target projects.
-	      </p>
-              
-              <h6>Presenter: <a href="https://twitter.com/ColeJ71909899" target="_blank">Cole Johnson</a></h6>
-              <p>
-                Cole has only recently joined hardware design circles as a result of
-                <a href="https://nerdstuffbycole.blogspot.com/" target="_blank">his reverse-engineering project</a>, which
-                began over two years ago. He looks forward to potential work on RISC-V and ASIC design in the future.
-              </p>
-
-              <h4>
-                <a name="verilogboy" href="#verilogboy"></a>How I started learning FPGA: My journey writing a GameBoy in Verilog</h4>
-              <p>
-                Coding can be fun, there are many people coding in their free time just for fun. FPGA's unique features and capabilities makes it
-                an attractive target for enthusiasms. VerilogBoy is such an FPGA project, that is built simply for fun. The
-                <a href="https://github.com/zephray/VerilogBoy" target="_blank">VerilogBoy</a> project consists of two parts. The first part is
-                implementing a GameBoy compatible machine in Verilog. The second part is building an FPGA-based handheld game console.
-              </p>
-              <p>
-                This presentation will run through the process of the creation of the project, share some of the experience along the way,
-                also provide some future prospects of the project.
-	      </p>
-              <h6>Presenter: <a href="https://twitter.com/zephray_wenting" target="_blank">Wenting Zhang</a></h6>
-              <p>
-                Wenting Zhang is a undergraduate student of Computer Science and Electrical Engineer major, who has just started learning
-                digital logic 1 year ago. He has built several open source projects such as E-Ink software timing controller and LCD scan
-                doubler before. He is trying to learn more and get more involved in both open source community and semiconductor industry.                
-              </p>
-
-              
-              <h4>
-                <a name="wavedrom" href="#wavedrom"></a>Diagrams and system visualisation in chip design</h4>
-              <p>
-                Chip designers use multiple forms of illustrations to present information of technical nature quickly and clearly. Illustrations
-                employed to mobilize human visual system ability to recognize trends, patterns and differences. Some forms of illustrations are
-                universally accepted. Data tables, plots, line charts, mechanical drawings can be used to communicate information to the general public.
-                Specialized diagram types (like UML) can be reused from software or system design practice. Such diagrams are capable of describing
-                complex structure or behavior and convey this information to the broad science and engineering community.
-              </p>
-              <p>
-                Like any other specific field of science / engineering -- chip designers developed own specialized visual language to communicate
-                complex ideas with clarity, precision and efficiency. Schematic symbols; timing, circuit, layout diagrams were originally developed
-                for paper medium, now migrated into electronic documentation. Many design tools exists to create illustrations and diagrams.
-                From generic to specialized. Some require freehand drawing skills, some perform automatic layout.
-              </p>
-              <p>
-                This talk is about ideas, principles and tools that would help you to create good diagrams.
-	      </p>
-
-              <h6>Presenter: <a name="aliaksei" href="#aliaksei"></a><a href="https://twitter.com/wavedrom" target="_blank">Aliaksei Chapyzhenka</a></h6>
-              <p>
-                Aliaksei Chapyzhenka is an engineer at <a href="https://www.sifive.com">SiFive Inc.</a>, author of the
-                <a href="https://wavedrom.com" target="_blank">WaveDrom</a> project and
-                <a href="http://github.com/drom" target="_blank">OSS contributor</a> since 2011.
-              </p>
-
-              <h4>
-                  <a name="osvvm" href="#osvvm"></a>OSVVM, VHDL's #1 FPGA Verification Library
-                </h4>
-              <p>
-		Open Source VHDL Verification Methodology (OSVVM) is an ASIC
-		level VHDL verification methodology that is simple enough to use
-		even on small FPGA projects. OSVVM offers the same capabilities
-		as other verification languages such as SystemVerilog and UVM.
-	      </p>
-	      <p>
-		This presentation provides an overview of OSVVM's capabilities, including:
-		<li>Transaction-Based Modeling</li>
-		<li>Constrained Random test generation</li>
-		<li>Functional Coverage with hooks for UCIS coverage database integration</li>
-		<li>Intelligent Coverage Random test generation</li>
-		<li>Utilities for testbench process synchronization</li>
-		<li>Transcript files</li>
-		<li>Error logging and reporting – Alerts and Affirmations</li>
-		<li>Message filtering – Logs</li>
-		<li>Scoreboards and FIFOs (data structures for verification)</li>
-		<li>Memory models</li>
-	      </p>
-	      <p>
-		OSVVM is implemented as a library of free, open-source packages.
-		It uses these packages to create features that rival language
-		based implementations in both conciseness, simplicity, and capability.
-	      </p>
-	      <p>
-		In exciting news, The 2018 Wilson Research Group ASIC and FPGA
-		Functional Verification Study, which is sponsored by one of the
-		EDA vendors revealed that OSVVM is the number 1 VHDL FPGA verification library.
-	      </p>
-	      <p>
-		Looking to improve your VHDL FPGA verification methodology?
-		OSVVM provides a complete solution for VHDL ASIC or FPGA
-		verification. There is no new language to learn. It is simple,
-		powerful, and concise. Each piece can be used separately. Hence,
-		you can learn and adopt pieces as you need them."
-              </p>
-              <h6>Presenter: <a href="https://www.linkedin.com/in/jimwilliamlewis/" target="_blank">Jim Lewis</a></h6>
-              <p>
-		Jim Lewis has over 30+ years of design, teaching, and
-		problem solving experience and is well known within the
-		VHDL community. He is a co-founder of the Open Source
-		VHDL Verification Methodology (OSVVM) and the chief
-		architect of the packages and methodology.  He is the
-		Chair of the IEEE 1076 VHDL Standards Working Group.
-		He is an expert VHDL trainer for SynthWorks Design Inc.
-		In his design practice, he has created designs for print
-		servers, IMA E1/T1 networking, fighter jets, video
-		phones, and space craft.
-              </p>
-
-              <h4>
-                <a name="lgraph" href="#lgraph"></a>Live Graph infrastructure for Synthesis and Simulation</h4>
-              <p>
-		<a href="https://github.com/masc-ucsc/lgraph" target="_blank">LGraph</a>
-                is compiler infrastructure to support hardware languages.
-		The goal is to become the LLVM of hardware. LGraph is a graph
-		optimized for live synthesis and simulation (Live Synthesizes
-		Graph or LGraph for short). By live, we mean that small changes
-		in the design should have results in few seconds. The goal is
-		that any code change can have its synthesis and simulation setup
-		ready under 30 seconds with a goal of under 4 seconds in most cases.
-	      </p>
-              <h6>Presenter: <a href="https://users.soe.ucsc.edu/~renau/" target="_blank">Jose Renau</a></h6>
-              <p>
-		Jose is the lead designer coordinating several students at UCSC on LGraph
-              </p>
-
-              <h4>
-                <a name="syzygy" href="#syzygy"></a>SYZYGY: An Open Standard For Semiconductor Evaluation</h4>
-              <p>
-		So you've designed and built an amazing new piece of silicon. No doubt customers are lining up to try
-		it out, but how do you go about providing an evaluation platform for them?
-	      </p>
-	      <p>
-		<A href="https://syzygyfpga.io/" target="_blank">SYZYGY</a> provides the answer with an open standard
-		for high performance connectivity to an FPGA.
-		SYZYGY was designed to economize FPGA pin usage without compromising per-pin performance. Built with a focus
-		on FPGA-specific requirements, SYZYGY fits comfortably between Digilent Pmod and VITA-57 FMC standards.
-		Developing a SYZYGY-based evaluation peripheral opens up support for numerous host platforms as well as
-		easier integration into your customer's product. This presentation will provide an overview on the SYZYGY
-		standard, why it's needed, and what it offers.
-	      </p>
-              <h6>Presenter: <a href="https://github.com/emusan" target="_blank">Tom McLeod</a></h6>
-              <p>
-                Tom McLeod is a design engineer at Opal Kelly Inc., the publishers of the SYZYGY specification. He was a
-                member of the group that wrote the SYZYGY specification and has participated in the design of a number
-                of products implementing the specification.
-              </p>
-
-              <h4>
-                <a name="fusesoc" href="#fusesoc"></a>FuseSoC - Cores have never been so much fun</h4>
-              <p>
-                In many ways, HDL developers have been many years behind their counterparts in the software world.
-                One such area is core management. Where the software developers simply specify which libraries they
-                depend on, HDL developers rely on copying around source code. Where software developers can select
-                their build tool with a flick of a switch, HDL developers use tool-specific project files powered by
-                custom makefiles.
-              </p>
-              <p>
-                <a href="https://github.com/olofk/fusesoc" target="_blank">FuseSoC</a> rectifies this by bringing a modern
-                package manager and a uniform build system to HDL developers, making it easy to reuse existing code,
-                change tools and move projects between FPGAs from different vendors. Having been around for seven years
-                there are now hundreds of FuseSoC-compatible cores and 14 different simulation, synthesis and lint tools
-                supported. This presentation will give an overview of where FuseSoC can help spending less time on the
-                cores, and more time on the core business    
-	      </p>
-              <h6>Presenter: <a href="https://twitter.com/OlofKindgren" target="_blank">Olof Kindgren</a></h6>
-              <p>
-                Olof is a senior digital design engineer
-                working for <a href="https://www.qamcom.se/" target="_blank">Qamcom Research & Technology</a>. He became actively
-                involved with free and open source silicon through the <a href="https://openrisc.io">OpenRISC</a> project in 2011
-                and has since then worked on many FOSSi projects with a special interest in tools and collaborations.
-              </p>
-              <p>
-                Notable work include the FuseSoc IP core package manager; <a href="https://github.com/olofk/serv" target="_blank">SERV</a>,
-                the award-winning RISC-V CPU and <a href="https://github.com/olofk/ipyxact" target="_blank">ipyxact</a>, the IP-XACT Python library.
-                In 2015, he also co-founded <a href="https://fossi-foundation.org" target="_blank">FOSSi Foundation</a>, a vendor-independent
-                organization with the mission to promote and assist Open Source Silicon in academia, the industry and for hobbyists alike.
-              </p>
-              
-              <h4>
-                <a name="rocketlessons" href="#rocketlessons"></a>Lessons learned customising the Rocket RISC-V core</h4>
-              <p>
-                This presentation will cover <a href="https://morsemicro.com" target="_blank">Morse Micro</a>'s adaptation of the
-                Berkeley/SiFive Rocket chip generator in developing single-chip 802.11ah solutions. We will discuss the pros and
-                cons of Chisel, Rocket's architecture, and aspects of our work in taking the Rocket project and implementing
-                multiple deeply-embedded-class micro-controllers.
-	      </p>
-              <h6>Presenter: <a href="https://linkedin.com/in/julius-baxter" target="_blank">Julius Baxter</a></h6>
-              <p>
-                <a href="https://linkedin.com/in/julius-baxter" target="_blank">Julius</a> has a decade of open source hardware
-                experience through his involvement with the OpenRISC project and later the
-                <a href="https://fossi-foundation.org" target="_blank">FOSSi Foundation</a>. Aside from evangelizing for open source digital
-                  design, he works as a digital design engineer on mixed signal wireless chips.
-              </p>
-		
-              <h4>
-                <a name="netlistsvg" href="#netlistsvg"></a>Netlistsvg: How to Draw a Better Schematic than Graphviz</h4>
-              <p>
-                Taking a description of components and the connections between them and converting it into a reasonable
-                looking image is a surprisingly complicated problem. Digital netlist visualization is useful for pedagogy,
-                documentation, and debugging and is commonly integrated into proprietary FPGA toolchains such as Vivado
-                or Quartus. <a href="https://github.com/nturley/netlistsvg" target="_blank">Netlistsvg</a> is a simple
-                tool that takes yosys netlists in JSON format, and attempts to create an easily understandable image in
-                SVG format.
-	      </p>
-              <h6>Presenter: <a href="https://twitter.com/nturley47" target="_blank">Neil Turley</a></h6>
-              <p>
-                Neil is a Software Engineer at National Instruments on the CompactRIO team. Netlistsvg has been a personal
-                project of his for a few years.
-              </p>
-
-              <h4>
-                <a name="openram" href="#openram"></a>OpenRAM: An Open Source Memory Compiler</h4>
-              <p>
-                <a href="https://github.com/VLSIDA/OpenRAM" target="_blank">OpenRAM</a> is an open-source Python framework
-                to create the layout, netlists, timing and power models, placement and routing models, and other views necessary
-                to use SRAMs in ASIC design. OpenRAM supports integration in both commercial and open-source flows with both
-                predictive and fabricable technology.
-	      </p>
-              <h6>Presenter: <a href="https://twitter.com/mguthaus" target="_blank">Matthew Guthaus</a></h6>
-              <p>
-                Matthew Guthaus is a <a href="https://www.soe.ucsc.edu/people/mrg" target="_blank">Professor at the University
-                  of California Santa Cruz</a> in the Computer Science and Engineering department. His research interests are in
-                low-power computing and computer-aided design. This includes new circuits, architectures, and software to address
-                integration in modern design flows.
-              </p>
-
-
-              <h4>
-                <a name="uvm" href="#uvm"></a>Verifying Open-Source Silicon with SystemVerilog: Getting in on the Ground Floor</h4>
-              <p>
-		Open source and industry have a long history of overlapping in the software space. Engineers from industry often
-		work on open-source software in their free time, open source software is used in commercial applications, and
-		students use open-source software to learn about how real software is designed, developed, and tested. A key
-		enabler is that open-source software is largely developed and tested in the same way that commercial software is.
-		Commercial software development often uses commercial tools with features beyond what is available to open-source
-		developers, but the large degree to which techniques and methodologies are aligned facilitates collaboration.
-	      </p>
-	      <p>
-		What of open source silicon? We certainly use standard design languages (Verilog and VHDL). But verification in
-		the industry is typically done with SystemVerilog and UVM, and SystemVerilog tools are out-of-reach for the
-		open-source silicon developer. Or, are they? As it turns out, there are both open-source and freely-available
-		tools, and educational resources, to help open-source silicon developers create verification environments that
-		align with commercial verification practices. This talk will present tools and educational resources for creating
-		SystemVerilog and UVM testbench environments, as well as techniques for creating SystemVerilog and UVM testbenches
-		for open-source silicon that both work with freely-available tools and scale to take advantage of the features of
-		commercial simulation tools.
-	      </p>
-              <h6><a name="matthewballance" href="#matthewballance"></a>Presenter: <a href="https://twitter.com/bitsbytesgates" target="_blank">Matthew Ballance</a></h6>
-              <p>
-                Matthew Ballance is a Product Engineer at Mentor, A Siemens Business working with Portable Stimulus.
-                Over the past 20 years in the EDA industry, he has worked in product development, marketing, and management
-                roles in the areas of hardware/software co-verification, transaction-level modeling, IP encapsulation and reuse,
-                and Portable Test and Stimulus. Nights and weekends, Matthew works on open-source hardware and software projects.
-              </p>
-              
-              <!-- <h4> -->
-              <!--   <a name="pylcars" href="#pylcars"></a>Python for Electrical Engineering Education</h4> -->
-              <!-- <p> -->
-              <!--   This presentation will provide a rundown of how to use Python for Signal and Systems, HDL, and SPICE. -->
-              <!--   It'll be showcasing how Python is becoming an evermore attractive tool in Electrical Engineering both for -->
-              <!--   Education and as an Open Source  alternative to traditional expensive and closed source software. -->
-	      <!-- </p> -->
-              <!-- <h6>Presenter: <a href="https://twitter.com/ArmourMSG" target="_blank">Steven K Armour</a></h6> -->
-              <!-- <p> -->
-              <!--   Steven Armour is an Engineering Physicist who's worked on Open Source utilization and education of Python -->
-              <!--   in EE, ME, and other fields. Since graduating with a Physics degree that was rather lacking, he has taught -->
-              <!--   himself Python and how to utilize it for engineering applications.  -->
-              <!-- </p> -->
-
-              <h4>
-                <a name="riscvdebian" href="#riscvdebian"></a>RISC-V in Debian</h4>
-              <p>
-                Debian's <a href="https://wiki.debian.org/RISC-V" target="_blank">port for 64-bit RISC-V</a>, riscv64, already builds
-                88&percnt; of Debian's available packages. It's possible to build a
-                foreign-architecture chroot with qemu, or a fully virtualized riscv64 system. What are the remaining blockers to
-                include riscv64 in a Debian release?
-	      </p>
-              <h6>Presenter: <a href="https://www.aikidev.net/about/story/" target="_blank">Vagrant Cascadian</a></h6>
-              <p>
-                Vagrant Cascadian is a Debian developer since 2010 and maintains packages in Debian such as U-boot and
-                arm-trusted-firmware, as well as maintaining a build farm for the Reproducible Builds project of 24 boards in
-                under 300 watts. A RISC-V cheerleader and enthusiast, looking forward to a future with auditable hardware.
-              </p>
-
-
-              <h4>
-                <a name="dvkit" href="#dvit"></a>DVKit: An Integrated Development Environment for Design and Verification Engineers</h4>
-              <p>
-                Design and Verification engineers develop code using a plethora of languages -- Verilog, SystemVerilog, C/C++, Python, Perl, etc.
-                Whether developing commercial or open source IP, reuse is critical, which means that DV engineers need to efficiently
-                comprehend and work with code written by others. <a href="http://dvkit.org" target="_blank">DVKit</a> is an Eclipse-based
-                Integrated Development Environment (IDE) that supports developing in a wide variety of software and hardware description
-                languages much more efficiently than can be done with a text editor.
-              </p>
-              <p>
-                This talk will introduce you to the differences between a text editor and an IDE. We will look at features of DVKit that
-                boost productivity on any type of text file, and focus on features that make navigating and developing SystemVerilog and
-                Verilog designs and testbench environments more efficient and effective.
-              </p>
-
-	      </p>
-              <h6>Presenter: <a href="#matthewballance">Matthew Ballance</a></h6>
-              <p>
-              </p>
-
-              <h4>
-                <a name="nyuzi" href="#nyuzi"></a>Nyuzi: An Open Source GPGPU Processor</h4>
-              <p>
-                <a href="https://github.com/jbush001/NyuziProcessor" target="_blank">Nyuzi</a> began as a way to explore tradeoffs
-                between general purpose and fixed function hardware. This presentation will talk about the original goals of the project,
-                the process of building a new microarchitecture, and some learnings from it.
-	      </p>
-              <h6>Presenter: <a href="https://github.com/jbush001" target="_blank">Jeff Bush</a></h6>
-              <p>
-                Jeff Bush has spent most of his professional career building software for consumer electronics products.
-                Nyuzi is a personal project.                
-              </p>
-
-              <h4>
-                <a name="openpiton" href="#openpiton"></a>OpenPiton+Ariane: Making Ariane Multicore with OpenPiton’s P-Mesh</h4>
-              <p>
-                You may have heard of <a href="https://github.com/pulp-platform/ariane" target="_blank">Ariane</a> from ETH Zurich,
-                or of <a href="http://openpiton.org" target="_blank">OpenPiton</a> from Princeton University, but now from the makers
-                of both, comes
-                <a href="https://openpiton-blog.princeton.edu/2018/11/announcing-openpiton-with-ariane/" target="_blank">OpenPiton+Ariane</a>!
-              </p>
-              <p>
-                By modifying the Ariane RISC-V (RV64GC) core’s L1 cache interface to support the P-Mesh cache-coherence protocol, we replaced
-                OpenPiton’s original OpenSPARC T1 core and then enhanced P-Mesh to support RISC-V atomic operations.
-              </p>
-              <p>
-                Since bringing up SMP Linux on FPGA, OpenPiton+Ariane is the first open-source, Linux-booting, RISC-V system that scales
-                from single-core to manycore. OpenPiton+Ariane inherits all of the capabilities of OpenPiton and of Ariane, bringing them
-                together in a single scalable, configurable, and easy-to-use platform ideal for rapid prototyping. This is all available
-                under permissive licences from our <a href="https://github.com/PrincetonUniversity/openpiton" target="_blank">GitHub repositories</a>.
-	      </p>
-              <h6>Presenter: <a href="https://jbalkind.github.io" target="_blank">Jonathan Balkind</a></h6>
-              <p>
-                Jonathan Balkind is a sixth year PhD Candidate at Princeton University, working with David Wentzlaff. He has led the
-                development of OpenPiton since its first release in 2015 and has given ten tutorials at universities and conferences
-                worldwide. His research currently focuses on open-source hardware and Function-as-a-Service Serverless Computing.                
-              </p>
-
-              <h4>
-                <a name="juxtapiton" href="#juxtapiton"></a>JuxtaPiton: The First Open-Source, Heterogeneous-ISA Processor</h4>
-              <p>
-                Heterogeneous-ISA processors have become a topic of research interest due to the increasing need for energy efficiency.
-                Without a fully open-source implementation of a heterogeneous-ISA processor, it is difficult to test full-stack modifications.
-                By connecting <a href="https://github.com/cliffordwolf/picorv32" target="_blank">PicoRV32</a> to the
-                <a href="http://openpiton.org" target="_blank">OpenPiton</a> cache system, we created
-                <a href="https://abopen.com/news/juxtapiton-merges-opensparc-risc-v-soft-cores/" target="_blank">JuxtaPiton</a>,
-                a heterogeneous-ISA platform with both OpenPiton’s original OpenSPARC T1 cores and PicoRV32 cores.
-              </p>
-              <p>
-                This project was the first time a new core was integrated into OpenPiton, so I will describe the process I developed
-                to integrate PicoRV32 and which has since been used to connect five other cores to OpenPiton. I will also describe
-                the runtime system we use to offload binaries from Linux on the SPARC core to the bare-metal environment on PicoRV32
-                core and to proxy syscalls from the running binary.
-              </p>
-              <h6>Presenter: <a href="https://homes.cs.washington.edu/~katielim/" target="_blank">Katie Lim</a></h6>
-              <p>
-                Katie Lim is a first-year PhD student at University of Washington working with Michael Taylor and Tom Anderson.
-                During her undergrad at Princeton University, she contributed to OpenPiton, created JuxtaPiton as her senior thesis
-                project, and interned at lowRISC. Her research interests are in abstractions for heterogeneous architectures.
-              </p>
-
-              <h4>
-                <a name="firesim" href="#firesim"></a>FireSim: Open-Source Easy-to-use FPGA-Accelerated Cycle-Exact Hardware Simulation in the Cloud</h4>
-              <p>
-                We present <a href="https://fires.im" target="_blank">FireSim</a> , an easy-to-use, open-source, FPGA-accelerated
-                cycle-accurate hardware simulation platform that runs on Amazon EC2 F1. FireSim automatically transforms and
-                instruments open-hardware designs (e.g. RISC-V
-                <a href="https://github.com/freechipsproject/rocket-chip" target="_blank">Rocket Chip</a>,
-                <a href="https://github.com/riscv-boom/riscv-boom" target="_blank">BOOM</a>,
-                <a href="https://github.com/ucb-bar/hwacha" target="_blank">Hwacha</a>,
-                <a href="https://github.com/nvdla" target="_blank">NVDLA</a>, etc.) with the MIDAS framework
-                into fast (10s-100s MHz), deterministic, FPGA-based simulators that enable productive pre-silicon verification
-                and performance validation.
-              </p>
-              <p>
-                To model I/O, FireSim includes synthesizeable and timing-accurate models for standard
-                interfaces like DRAM, Ethernet, UART, and others. By providing a framework to automate the management of FPGA
-                infrastructure, FireSim also lets software developers get a head-start on building software for a novel hardware
-                design, by letting these developers interact with the pre-silicon hardware design as they would a virtual machine.
-                In effect, both hardware and software developers work from a single source of truth: the RTL for the hardware design.
-              </p>
-              <p>
-                Originally developed to simulate new datacenter architectures, FireSim is capable of scaling to simulating thousands
-                of multi-core compute nodes, with an optional cycle-accurate network simulation tying them together. Leveraging
-                AWS EC2 F1, FireSim removes the high capex traditionally involved in large-scale FPGA-based simulation, democratizing
-                access to realistic pre-silicon hardware modeling of new designs. For designs that contain RISC-V SoCs,
-                FireSim also provides compatible Linux distributions (Buildroot, Fedora) and automates the process of building complex
-                workloads on top of these Linux distributions. By harnessing a standardized host platform and providing a large amount
-                of automation/tooling, FireSim drastically simplifies the process of building and deploying large-scale FPGA-based
-                hardware simulations.
-              </p>
-              <p>
-                In this talk, we cover the open-source FireSim framework, explore how users can use and modify
-                the existing designs available in FireSim, and show how users can integrate and measure their own hardware designs.
-              </p>
-              <h6>Presenter: <a href="https://people.eecs.berkeley.edu/~biancolin/" target="_blank">David Biancolin</a>, Alon Amid</h6>
-              <p>
-                David Biancolin is a fifth-year Ph.D. student in the Berkeley Architecture Research (BAR) Group, part of the ADEPT
-                lab at UC Berkeley, where he is co-advised by Jonathan Bachrach and Krste Asanovic.  David received his BASc.
-                in Engineering Science in the Electrical and Computer Engineering Option at the University of Toronto in 2014
-                (1T3 + PEY). David is a developer of FireSim and maintainer of MIDAS.
-              </p>
-              <p>
-                Alon Amid is a Ph.D. student in the Electrical Engineering and Computer Sciences department in UC Berkeley, advised
-                by Borivoje Nikolic and Krste Asanovic. His research focus is in full-system co-design and evaluation of data-parallel
-                architectures and large-scale distributed systems. Alon is a contributor to the FireSim project for FPGA-accelerated
-                scalable cycle-accurate simulation, as well as a contributor to the RISC-V based chip-prototyping efforts at UC Berkeley.
-              </p>
-
-              <h4>
-                <a name="myhdl" href="#myhdl"></a>The fusion of high-level synthesis with event-oriented hardware description</h4>
-              <p>
-                Many of the high-level synthesis (HLS) approaches take existing procedural programming languages, such as the
-                C programming language, and add extensions to the language (e.g. pragmas) to accommodate high-level synthesis.
-                An alternate approach is to use the <a href="http://www.myhdl.org" target="_blank">myhdl</a> design patterns to
-                describe HLS chunks and integrate them with existing
-                event-oriented (simulation-oriented, a.k.a RTL) hardware description languages (HDL).  This approach allows a
-                designer to seamlessly move between HDL and HLS levels of abstractions and use both descriptions in a single
-                programming environment.
-              </p>
-              <h6>Presenter: <a href="https://twitter.com/FeltonChris" target="_blank">Christopher Felton</a></h6>
-              <p>
-                Christopher L. Felton is a senior design engineer at the Mayo Clinic, a myhdl user and contributor since 2005.
-              </p>
-
-              <h4>
-                <a name="boom" href="#boom"></a>The Berkeley-Out-of-Order-Machine: An Open Source Synthesizable High-Performance RISC-V Processor</h4>
-              <p>
-                We present <a href="http://www.boom-core.org" target="_blank">BOOM, the Berkeley Out-of-Order Machine</a>, a synthesizable and
-                parameterizable open source RV64GC RISC-V processor written in the Chisel hardware construction language. BOOM is able to
-                run Linux, Fedora, and other workloads both in the cloud using the FireSim FPGA simulation platform and on a taped-out academic
-                chip. For researchers, BOOM serves as a highly productive platform for implementing and evaluating new high performance designs
-                and accelerators.
-              </p>
-              <p>
-                In this talk, we briefly cover BOOM, and some of its features that make it amenable to research and integration with other projects.
-                We discuss integration with the FireSim, results from hardware security research tackling Spectre-like vulnerabilities, and
-                opportunities for specialization with custom accelerators.
-	      </p>
-              <h6>Presenters: <a href="http://jzhao.me" target="_blank">Jerry Zhao</a>, <a href="http://abejgonzalez.github.io" target="_blank">Abe Gonzalez</a> and Ben Korpan</h6>
-              <p>
-                Jerry is a zeroth-year Ph.D. student in the Berkeley Architecture Research (BAR) group, part of the ADEPT lab, advised by
-                Krste Asanovic. Jerry is a developer of BOOM, and has contributed to other open-source hardware projects, including Hwacha and FireSim.
-              </p>
-              <p>
-                Abraham is a first-year Ph.D student in the ADEPT Lab at UC Berkeley. His research interests are in warehouse-scale computing and
-                high performance microarchitectures. He currently works on the BOOM project and the FireSim project for research. Abraham received
-                a B.S. in Electrical and Computer Engineering from the University of Texas at Austin in 2018.
-              </p>
-              <p>
-                Ben is a first-year Ph.D student in the ADEPT Lab at UC Berkeley, advised by Krste Asanovic. His research interests are in high
-                performance microarchitectures. Ben received a B.A.Sc in Electronics Engineering from Simon Fraser University in 2018.
-              </p>
-
-
-              <h4>
-                <a name="chisel" href="#chisel"></a>Higher-Order Hardware Design with Chisel 3</h4>
-              <p>
-                <a href="http://chisel-lang.org" target="_blank">Chisel 3</a> is a hardware construction language embedded in Scala that enables
-                digital designers to write parameterized generators using object-oriented and functional programming abstractions. The power of
-                Chisel is not the language itself, but rather the abstractions one can create to make hardware design more productive, more reusable,
-                and less error-prone. Sophisticated hardware generators like Rocket-Chip, BOOM, Hwacha, and even the Google Edge TPU are implemented using Chisel.
-              </p>
-              <p>
-                One of the most common challenges for new users is bridging the gap between toy examples and these complex, powerful generators. This
-                talk is an attempt to help build that bridge. Let's use higher-level abstractions and higher-order programming to build better, reusable hardware.
-	      </p>
-              <h6>Presenter: <a href="https://github.com/jackkoenig" target="_blank">Jack Koenig</a></h6>
-              <p>
-                Jack became involved in the Chisel project as a graduate student at UC Berkeley. He is now a software engineer at SiFive and a maintainer of the
-                Chisel3 and FIRRTL projects. His interests include hardware design, simulation, and programming languages.
-              </p>
-
-              <h4>
-                <a name="duh" href="#duh"></a>DUH: document and tools for HW design reuse</h4>
-              <p>
-                SoC integration is a complex process requiring integration of multiple design components together. Typical “reusable” Soft / Hard core component
-                comes with the intricate integration story hopefully described in some human readable User Guide document. Connecting all ports, parameters,
-                registers, bus interfaces, clocks, resets, sideband signals, etc. becoming a very tedious, error prone process. Multiple attempts were made
-                to introduce some sort of standard metadata exchange format to express this integration intent. Most of these formats are proprietary or EDA
-                vendor specific and are semi-useful in the world of open source silicon tools.
-              </p>
-              <p>
-                DUH defines a JSON5-based document format and provides a suite of tools for handling reusable hardware components. Import tools allow extraction
-                of ports, parameters, and other important integration information from available sources like Verilog, IP-XACT, SystemRDL, etc. Inference tools
-                helps to reason about structure of the ports, standard bus interfaces, clocks, resets. Validation tools helps document author to maintain complete
-                and consistent DUH document describing specific hardware component. Integration tools can read DUH documents to understand and satisfy an integration
-                needs of these components.
-	      </p>
-              <h6>Presenter: <a href="#aliaksei">Aliaksei Chapyzhenka</a></h6>
-              <p>
-              </p>
-
-              <h4>
-                <a name="basejump" href="#basejump"></a>BaseJump STL: a Standard Template Library for Hardware Design</h4>
-              <p>
-                SystemVerilog is widely used for hardware design in both academia and industry.
-                <a href="https://github.com/bespoke-silicon-group/basejump_stl" target="_blank">BaseJump STL</a> is an open-source Standard Template Library
-                for synthesizable SystemVerilog that sharply reduces the time required to design
-                digital circuits. This talk will overview the principles that underly the design
-                of the BaseJump STL, including light-weight latency-insensitive interfaces that yield fast microarchitectures and low bug
-                density; thin handshaking rules; fast porting of hardened chip regions across nodes; pervasive parameterization and specialization,
-                and static error checking.
-              </p>
-              <p>
-                We then suggest extensions to SystemVerilog to make it a more functional design language, and briefly discuss validation
-                of BaseJump STL through its use in past and ongoing projects.
-	      </p>
-              <h6>Presenter: <a href="https://www.linkedin.com/in/danpetrisko/" target="_blank">Daniel Petrisko</a></h6>
-              <p>
-                Daniel Petrisko is a PhD student at the Paul G. Allen School of Computer Science and Engineering at the University of Washington, working with
-                Professors Michael Taylor and Mark Oskin.  His research interests focus on accelerating hardware design through open-source software engineering principles.
-              </p>
-
-
-              <h4>
-                <a name="nvdla" href="#nvdla"></a>Lessons Learned from Open-Sourcing NVDLA</h4>
-              <p>
-                In 2017, NVIDIA released their formerly-proprietary "NVDLA" deep learning accelerator IP as open source hardware.
-                The process of transitioning from a closed IP model, backed by all the tooling available at a large company, to a
-                community-available IP with the intent of being built "outside the walls" of NVIDIA, was unsurprisingly challenging,
-                and the logistics of packaging hardware up for outside distribution modification was more difficult than we had
-                originally anticipated.
-              </p>
-              <p>
-                In this discussion, I will talk some about things that went well, and things that I wish we
-                had been prepared for at the start; additionally, I'll provide some tips and tricks for other organizations that may be
-                interested in releasing their own IP as open source.
-	      </p>
-              <h6>Presenter: <a href="http://www.joshuawise.com/" target="_blank">Joshua Wise</a></h6>
-              <p>
-                Joshua is Senior Engineer and Vice President of <a href="https://accelerated.tech/" target="_blank">Accelerated Tech, Inc</a>,
-                where he looks forward to helping you build high-quality hardware and software solutions to meet your low-level system design
-                problems.
-              </p>
-              <p>
-                Previously, he was an ASIC architect at NVIDIA, working on -- among other things -- the image signal processor subsystem on
-                Tegra, and the open-source effort for NVDLA.
-              </p>
-
-
-              <!-- <h4> -->
-              <!--   <a name="efabless" href="#efabless"></a>Commercialization of Open Source Silicon - Possibilities and Challenges</h4> -->
-              <!-- <p> -->
-              <!--   To cross the bridge to semiconductor products, there is “AND” gate of multiple factors that have to exist to truly complete a full SoC -->
-              <!--   that has the potential to become a marketable product. In addition to a processor core,  the EDA tools, IP’s (Digital libraries, Memory, -->
-              <!--   IO’s & Analog Interfaces) and foundry technology PDK all of which are surrounded by a confidentiality and proprietary licensing structures. -->
-              <!--   All are high barriers to cross for semiconductor innovators which slows down the open source chip movement especially with the consolidation -->
-              <!--   of the semiconductor industry. -->
-              <!-- </p> -->
-              <!-- <p> -->
-              <!--   We present <a href="https://ef.link/Foxme" target="_blank">Raven</a>, a first-time-right open source RISC-V Microcontroller for deeply embedded -->
-              <!--   applications, including key digital and analog peripherals. Many of the open source RISC-V cores are available through public repositories, yet -->
-              <!--   there is a wide gap between their availability and the creation of commercial semiconductor products like what happened before in the realm of -->
-              <!--   software for Linux. -->
-              <!-- </p> -->
-              <!-- <p> -->
-              <!--   Raven was was built for two main purposes, first to be a customizable reference design by commercial customers. Second is to demonstrate a new -->
-              <!--   industry model that meets the goals of open innovation while meeting the specific licensing and confidentiality requirements of the stake holders. -->
-              <!--   By using a fully open community-supported EDA design flow with the right open source license, only the PDK availability becomes the challenge for a -->
-              <!--   range of process technologies up to 130nm nodes. By obfuscating the foundry components, digital cells, IO libraries, mixed-signal Interfaces and -->
-              <!--   memories, it becomes possible to provide open models that accurately represent the process that do not restrain the innovation by the open source -->
-              <!--   chip community yet meets in the middle with foundry information protection and allows the community to access design and low cost shuttle runs -->
-              <!--   without a Non Disclosure Agreement (NDA). -->
-              <!-- </p> -->
-              <!-- <p> -->
-              <!--   Although the presentation will cover the Raven chip features and its fit to the needs of the IoT market, we will present the approach that allowed -->
-              <!--   us to create the design within an open framework that fosters innovation. Raven is now released on both the RISC-V Foundation’s inventory of chips -->
-              <!--   based on RISC-V and on <a href="https://github.com/efabless/raven-picorv32" target="_blank">GitHub</a> with a complete set of models that correspond -->
-              <!--   to equivalent. The design is available for cloning and customization by the community and for prototyping at efabless.com for &#60; $8,000 -->
-	      <!-- </p> -->
-              <!-- <h6>Presenter: <a href="https://www.linkedin.com/in/mkkassem" target="_blank">Mohamed Kassem</a></h6> -->
-              <!-- <p> -->
-              <!--   Mohamed Kassem is the co-founder and CTO of <a href="efabless.com" target="_blank">efabless.com</a>. The company simplifies the process of developing -->
-              <!--   smart hardware and opens it to anyone. Prior to launching efabless in 2014, Mohamed held several technical and global leadership positions within Texas -->
-              <!--   Instruments’ Wireless Business Unit. He joined TI in 2000 at the beginning of the digital telephony revolution fueled by the unprecedented integration -->
-              <!--   of major phone functions on a single SoC. He led the first development of 45nm, 28nm analog & mixed-signal IP for wireless applications processors.                 -->
-              <!-- </p> -->
-
-              <h4>
-                <a name="opensourcefpga" href="#opensourcefpga"></a>Open-Source FPGA tools, how and why?</h4>
-              <p>
-                In this talk Piotr presents the OpenSource FPGA tool stack. Which devices are currently supported and which
-                ones are being worked on. Also he talks about how these tools revived his interest in FPGA in general, and
-                why they are important.
-	      </p>
-              <h6>Presenter: <a href="https://twitter.com/esden" target="_blank">Piotr Esden-Tempski</a></h6>
-              <p>
-                Piotr Esden-Tempski, is the founder of 1BitSquared and longtime Embedded Systems Engineer and hardware
-                developer with an extensive history developing Open-Source and Open-Hardware Systems. He has a long
-                history developing and manufacturing UAV autopilot hardware for the Paparazzi UAV framework, manufacturer
-                of the 1Bitsy ARM development platform, the Black Magic Probe JTAG/SWD programmer/debugger hardware and the
-                <a href="https://www.crowdsupply.com/1bitsquared/icebreaker-fpga" target="_blank">iCEBreaker FPGA development and teaching platform</a>.
-                Piotr is passionate about introducing new people to embedded hardware development using open-source tools and solutions that can also
-                be used by professionals for production applications!
-              </p>
-
-              
-            </div>
-          </div>
-        </div>
-
+              </div><!-- card-body -->
+            </div><!-- card -->
+          </div> <!-- col -->
+        </div> <!-- row -->
         <div class="row">
-          <div class="col-sm-12 mt-3 mb-5" style="text-align: center">
-            <footer style="font-size: 80%">(c) 2019, Free and Open Source Silicon Foundation and the presenters</footer>
-          </div>
-        </div>
-      </div><!-- container -->
+          <div class="col-sm-12 mt-3">
+            <div class="card">
+              <h5 class="card-header">
+                Stay updated!
+              </h5>
+              <div class="card-body">
+                <form method="post" action="https://lists.librecores.org/mailman/subscribe/orconf-announce">
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">@</span>
+                    </div>
+                    <input name="email" type="text" class="form-control" placeholder="by E-Mail" aria-label="by E-Mail"
+                      aria-describedby="basic-addon1">
+                    <input name="email-button" type="submit" class="btn btn-primary" value="Subscribe" />
+                  </div>
+                </form>
+                <hr />
+                <a href="https://twitter.com/FOSSiFoundation"><i class="fab fa-twitter-square fa-3x"
+                    style="color: #00aced"></i></a>
+                <span style="display:inline-block; width: 5px;"></span>
+                <a href="https://youtube.com/FOSSiFoundation"><i class="fab fa-youtube fa-3x"
+                    style="color: #bb0000"></i></a>
+                <span style="display:inline-block; width: 5px;"></span>
+                <a href="https://www.linkedin.com/company/fossi-foundation/"><i class="fab fa-linkedin fa-3x"
+                    style="color: #007bb6"></i></a>
+              </div><!-- card-body -->
+            </div><!-- card -->
+          </div><!-- col -->
+        </div><!-- row -->
+      </div> <!-- col -->
+    </div><!-- row -->
+    <div class="row">
+      <div class="col-sm-12 mt-3 mb-5" style="text-align: center">
+        <footer style="font-size: 80%">&copy; 2019, Free and Open Source Silicon Foundation and the presenters</footer>
+      </div>
+    </div>
+  </div><!-- container -->
 
 
-      <!-- Optional JavaScript -->
-      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  </body>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/moment@2.18.1/min/moment.min.js"></script>
+
+
+  <script>
+    $.getJSON("schedule.json", function (events) {
+      $('.fossi-schedule-subset').each(function() {
+        let filterCategory = $(this).data('category');
+
+        html = '';
+        let eventCnt = 0;
+        for (let ev of events) {
+          if (ev.category != filterCategory) {
+            continue;
+          }
+
+          html += [
+            '<div class="list-group event">',
+              '<div class="event-time">' + moment(ev.start).format('D.MM. HH:mm') + ' - ' + moment(ev.end).format('HH:mm') + '</div>',
+              '<a class="event-title" data-toggle="collapse" href="#event-abstract-' + eventCnt + '">' + ev.title + '</a>',
+              '<div class="event-speaker">',
+                ev.speaker,
+                '<span class="event-affiliation">' + ev.affiliation + '</span>',
+          ].join('\n');
+          if (ev.video !== undefined && ev.video != '')
+            html += ' <span class="event-video"><a href="' + ev.video + '">video</a></span>';
+          if (ev.slides !== undefined && ev.slides != '')
+            html += ' <span class="event-slides"><a href="' + ev.slides + '">slides</a></span>';
+          html += [
+              '</div>',
+              '<div id="event-abstract-'+eventCnt+'" class="event-abstract collapse">',
+                ev.abstract,
+              '</div>',
+            '</div>',
+          ].join('\n');
+          eventCnt++;
+        }
+
+        $(this).html(html);
+      });
+    });
+  </script>
+</body>
+
 </html>
