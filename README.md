@@ -22,6 +22,10 @@ sudo zypper install ruby2.5-devel zlib-devel ruby2.5-rubygem-bundler
 # for Ubuntu > 14.04 (Ruby > 2.0 is required)
 sudo apt-get install ruby-dev zlib1g-dev ruby-bundler
 
+# Update bundler
+gem update --system
+gem install bundler
+
 # Install Jekyll with all dependencies used by GitHub pages
 # (inside the directory where this README is)
 bundle install --path vendor/bundle
