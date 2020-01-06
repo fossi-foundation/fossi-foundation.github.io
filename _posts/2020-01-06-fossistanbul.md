@@ -39,4 +39,4 @@ by the FOSSi Foundation in addition to its regular meetings OrCONF in Europe (fa
 We rely on the generous support of companies and individuals
 to help put the event on. At this stage all sponsorship opportunities
 are available - so if you'd like to help the FOSSi Foundation fund the
-event, and get a great bit of recognition for it, contact us using the links on the [FOSSistanbul](https://fossi-foundation.org/fossistanbul) page. 
+event, and get a great bit of recognition for it, [contact us](mailto:info@fossi-foundation.org) using the links on the [FOSSistanbul](https://fossi-foundation.org/fossistanbul) page. 
