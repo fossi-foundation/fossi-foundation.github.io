@@ -7,7 +7,7 @@ tags: []
 author: Frank K. Gürkaynak
 ---
 
-<center><img src="https://fossi-foundation.org/fossistanbul/images/FOSSistanbul-lg.png"> </center>
+<img src="https://fossi-foundation.org/fossistanbul/images/FOSSistanbul-lg.png" class="img-fluid" alt="Responsive image">
 
 FOSSi Foundation is inviting everyone interested in Free and Open Source
 Silicon to meet in Istanbul, Turkey, between 13th of March and 15th of
