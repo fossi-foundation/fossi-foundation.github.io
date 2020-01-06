@@ -21,12 +21,27 @@ we are happy to talk to you.
 
 We hope to see you at some of our future events!
 
+### FOSSistanbul
+* March 13-15 2020
+* Istanbul, Turkey
+* [More information](https://fossi-foundation.org/fossistanbul)
+
+### LatchUp 2020
+* April 11-12 2020
+* Cambridge MA, USA
+* [More information](https://fossi-foundation.org/latchup/)
+
+### ORConf 2020
+* Fall 2020
+* tbd
+* [More information](https://orconf.org)
+
+## Past events
+
 ### ORConf 2019
 * September 27-29 2019
 * Bordeaux, France
 * [More information](https://orconf.org)
-
-## Past events
 
 ### FOSSi @ WOSH
 * June 13-14, 2019
