@@ -4,7 +4,7 @@ title: "Announcing FOSSistanbul"
 description:
 category:
 tags: []
-author: Frank K. Gürkaynak
+author: Frank K. Gurkaynak
 ---
 
 <div class="row">
@@ -39,4 +39,4 @@ by the FOSSi Foundation in addition to its regular meetings OrCONF in Europe (fa
 We rely on the generous support of companies and individuals
 to help put the event on. At this stage all sponsorship opportunities
 are available - so if you'd like to help the FOSSi Foundation fund the
-event, and get a great bit of recognition for it, [contact us](info@fossi-foundation.org). 
+event, and get a great bit of recognition for it, contact us using the links on the [FOSSistanbul](https://fossi-foundation.org/fossistanbul) page. 
