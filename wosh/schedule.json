@@ -321,6 +321,15 @@
     "abstract": "",
     "video": "https://youtu.be/GUcKJ5zXgPA"
   },
+    {
+    "start": "2019-06-14 15:00",
+    "end": "2019-06-14 15:10",
+    "speaker": "Boris Shingarov",
+    "affiliation": "Labware",
+    "abstract": "Last year at the RISC-V Workshop in Barcelona, we presented a two-phase strategy for language VMs on RISC-V.  The long-term vision language-neutral abstractions, the JIT backend is mechanically inferred from the processor's formal spec.  In the short term, the Eclipse OMR JIT compiler on RISC-V has progressed from \"preliminary results\" to passing over 33500 tests, therefore OMR consumers such as OpenJ9 or specific Smalltalk or Ruby implementations can start benefiting from it today.",
+    "category": "edatools",
+    "title": "Status Update: Dynamic Language Runtimes on RISC-V"
+  },
   {
     "start": "2019-06-14 15:30",
     "end": "2019-06-14 17:00",
