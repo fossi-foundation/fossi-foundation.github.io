@@ -7,7 +7,7 @@ tags: []
 author: Olof Kindgren
 ---
 
-<center><a href="http://latchup.io" target="_blank"><img src="https://fossi-foundation.org/latchup/images/latchup_logo.png" class="img-responsive" /></a></center>
+<center><a href="http://latchup.io" target="_blank"><img src="https://fossi-foundation.org/latchup/images/latchupnoloc.png" class="img-responsive" /></a></center>
 
 *The FOSSi Foundation is proud to announce Latch-Up (<a href="http://latchup.io" target="_blank">latchup.io</a>), a conference dedicated to free and open source silicon to be held over the weekend of April 11th and 12th in Cambridge, Massachusetts, USA.*
 
