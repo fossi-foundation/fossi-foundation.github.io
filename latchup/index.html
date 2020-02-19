@@ -194,7 +194,7 @@
 		<p>
 		  <a href="https://goo.gl/maps/K63MqjoWm6EZEDpQ"> Walking Directions from the Kendall / MIT T stop </A> which is at 350 Main St. The Stata Center is on the corner of Main and Vassar right next to 401 Main street. So it is only a 5 minute walk north up Main street. The Cambrdge Marriott hotel is also right there at the T stop in case you came by taxi.
 		</p>
-              </div>
+	      </div>
 	    </div>
 	  </div>
 	</div>
@@ -217,7 +217,7 @@
 	    <div class="card">
 	      <h5 class="card-header"> More about Latch-Up </h5>
 	      <div class="card-body">
-		<p>
+		<p class="card-text">
 		  Technically speaking, latch-up is a short circuit, an inadvertent path of low-impedance. We have co-opted this word to represent what we’d like to encourage among members of the community: paths of communication leading to collaboration, inadvertent or not.
 		</p>
 		<p>
@@ -225,7 +225,7 @@
 		</p>
 		<p>
 		  Latch-Up aims to bring together the North American open source digital design community for an event in the mould of ORConf - the FOSSi Foundation’s annual European community conference. Like ORConf, Latch-Up will be will be free to attend and consist of a relaxed format of presentations and discussions throughout a weekend, with plenty of time for networking. A dinner on the Saturday evening will be arranged and all attendees are invited to attend.
-		</p>
+	      </p>
 		<p>
 		  These events go to the FOSSi Foundation's goal of lowering barriers of entry to the digital design field, whilst encouraging the open source
 		  development model and promoting open collaboration.
@@ -244,6 +244,199 @@
 	  </div>
 	</div>
 
+	<div class="row">
+          <div class="col-sm-12 mt-3">
+            <div class="card">
+              <a name="presentations" href="#presentations"></a>
+              <h5 class="card-header">Presentations</h5>
+              <div class="card-body">
+		<p class="card-text">
+        
+		  <!-- <h4> -->
+		    <!--   <a name="!!!" href="#!!!"></a>!!!</h4> -->
+		  <!-- <p> -->
+		  <!-- </p> -->
+		<!-- <h6>Presenter: </h6> -->
+		<!-- <p> -->
+		  <!-- </p> -->
+                
+		<h4>
+                  <a name="verilator" href="#verilator"></a>Accelerating Verilated design runtimes</h4>
+		<p>
+		  We'll look at some off-the-shelf designs and techniques to have them simulate faster.
+		</p>
+		
+		<h6>Presenter: Wilson Snyder</h6>
+		<p>
+		</p>
+
+		<h4>
+                  <a name="lowpower" href="#lowpower"></a>Designing Low-power Circuit with Open-Source Hardware: Opportunities and Challenges</h4>
+		<p>
+		  Reducing power consumption has always been a primary design goal
+		  for circuit designer and the driving force behind a variety of
+		  products ranging from server-class chips to battery-operated
+		  IoT devices. Recently, the advent of open-source concept in
+		  various stages of circuit design promises great portability,
+		  flexibility and customizability. Meanwhile, open-source also
+		  introduces new design challenges.
+		</p>
+		<p>
+		  I argue that with increasing demands from application space,
+		  the interaction between low-power design with open-source
+		  availability offers a bright future in terms of development cost
+		  and enables broader collaborative efforts.
+		</p>
+		<p>
+		  In this talk, I will overview the opportunities and challenges
+		  specifically in low power design with various levels of open-source
+		  hardware.
+		</p>
+		
+		<h6>Presenter: Xinfei Guo</h6>
+		<p>
+		</p>
+
+		<h4>
+                  <a name="cocotbtask" href="#cocotbtask"></a>Speeding up cocotb Verification with Task-Based BFMs</h4>
+		<p>
+		  Cocotb provides a framework for cosimulating a testbench written
+		  in Python with an HDL design and design written in SystemVerilog,
+		  Verilog, or VHDL. Cocotb provides APIs for interacting with the
+		  HDL environment at the signal level, and will soon provide the
+		  ability to interact with the HDL environment via task calls.
+		</p>
+		<p>
+		  Interacting with the HDL environment via task calls can improve
+		  overall performance by an order of magnitude. This talk provides
+		  an introduction to task-based bus functional models (BFMs) for
+		  the cocotb environment, and provides a tutorial on writing task-based BFMs. 		  
+		</p>
+		
+		<h6>Presenter: Matthew Ballance</h6>
+		<p>
+		</p>
+		
+		<h4>
+                  <a name="linuxonriscv" href="#linuxonriscv"></a>How to run Linux on RISC-V (with open hardware and open source FPGA tools)</h4>
+		<p>
+		  Want to run Linux with RISC-V on Open Source Hardware?
+		  This talk will explore the current options including how open
+		  source FPGA tools can be leveraged to build open Linux-capable systems.
+		</p>
+		<p>
+		  I will explain how myself and others at Hackaday Supercon teamed
+		  up to get Linux running on RISC-V core in the ECP5 FPGA badge
+		  using only open source tools thanks to Project Trellis, yosys
+		  and nextpnr.  I will explain what migen and LiteX are, and how
+		  it enabled us to quickly build a System-on-Chip (SoC) capable of
+		  running Linux on VexRiscv.
+		</p>
+		<p>
+		  In conclusion, I will explore the landscape of open source chip
+		  design projects and the Linux-capable RISC-V silicon chips on
+		  horizon for 2020, and talk about my desire to collaborate on an
+		  affordable (&lt;$100?) OSHW Linux RISC-V board.
+		</p>
+
+		<h6>Presenter: Drew Fustini</h6>
+		<p>
+		</p>
+		
+		<h4>
+                  <a name="fossicompiler" href="#fossicompiler"></a>Building an open source silicon compiler</h4>
+		<p>
+		  In 2018 DARPA stood up research programs in EDA (IDEA) and
+		  open source hardware (POSH) to address the exploding cost and
+		  complexity of modern chip design. The goal of these programs
+		  is to create an intelligent hardware compiler capable of
+		  automatically generating tapeout ready GDSII databases directly
+		  from source code and schematics.
+		</p>
+		<p>
+		  This talk will give an overview of these research programs and
+		  give a status update on the many open source tools that have
+		  come out of the program to date.
+		</p>
+
+		<h6>Presenter: Andreas D olofsson</h6>
+		<p>
+		</p>
+		
+		<h4>
+                  <a name="formalriscv" href="#formalriscv"></a>Formal methods for hardware-software integration on RISC-V embedded systems</h4>
+		<p>
+		  Traditional systems integration of software, compilers and
+		  hardware into an embedded systems stack relies on documentation
+		  which is often imprecise and incomplete, and on extensive testing,
+		  which can never cover all possible scenarios.
+		</p>
+		<p>
+		  We propose a way to improve this tedious and error-prone process:
+		  For each interface in an embedded systems stack, we write down a
+		  formal, machine-readable interface specification, and using a
+		  proof checker called Coq, we exhaustively verify that each layer
+		  in our stack conforms to its interface specifications.
+		  This allows us to prove an end to end correctness theorem about
+		  our systems stack describing the behavior of the complete system
+		  in terms of just the specification of the highest and the lowest layer.
+		</p>
+		<p>
+		  We used this methodology to develop from scratch a simple systems
+		  stack consisting of a high-level language to describe IO behavior,
+		  a compiler for a C-like language, and a pipelined RISC-V processor.
+		  Using this stack, we developed a protype IoT device running on
+		  an FPGA connected to a lightbulb and a network card to demonstrate
+		  the feasability of our approach.
+		</p>
+
+		<h6>Presenter: Samuel Gruetter</h6>
+		<p>
+		</p>
+		
+		<h4>
+                  <a name="pdvl" href="#pdvl"></a>Converting an Executable Spec from PDVL to SystemVerilog</h4>
+		<p>
+		  First, an open source tool is introduced, which converts a
+		  grammar into an executable parser and writer (based on a grammar
+		  for PDVL or SystemVerilog for instance). The resulting
+		  database-structure can be accessed by C++ routines.
+		</p>
+		<p>
+		  This tool is used for the PDVL to SystemVerilog Converter which
+		  is introduced in the second part. It shows how executable specs
+		  (e.g. RISC-V) written in PDVL can be automatically converted
+		  and merged to an SoC in SystemVerilog.
+		</p>
+		<p>
+		  The projects can be seen at https://github.com/cloudxcc
+		</p>
+
+		<h6>Presenter: Tobias Strauch</h6>
+		<p>
+		</p>
+		
+		<h4>
+                  <a name="hammer" href="#hammer"></a>Hammer: Enabling Re-usability in Physical Design</h4>
+		<p>
+		  Physical designers spend a non-trivial amount of time because
+		  traditional physical design methodologies do not enable designers
+		  on different projects to efficiently share effort with each other.
+		  We present an open-source library and framework, Hammer, to
+		  enable designers to share effort with each other through
+		  separation of concerns. Hammer provides APIs and abstractions
+		  to enable designs to share effort across projects with different
+		  CAD tools, technologies, and architectures.		  
+		</p>
+
+		<h6>Presenter: Edward Wang</h6>
+		<p>
+		</p>
+		
+	      </div>
+            </div>
+	  </div>
+	</div>
       </div>
       <div class="col-sm-4 mt-3">
         <div class="row">
