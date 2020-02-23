@@ -102,6 +102,7 @@
                   <p style="text-align: center">
                     FOSSistanbul quicklinks:
                     <a href="#register">Registration</a> |
+                    <a href="#presentations">Presentations</a> |
                     <a href="#travel">Travel Information</a> |
                     <a href="#venue">Venue</a> |
                     <a href="#schedule">Schedule</a> |
@@ -185,10 +186,246 @@
 
               <p class="card-text mt-3"> We expect all participants of FOSSistanbul to follow the <a href="https://www.fossi-foundation.org/code-of-conduct">FOSSi Foundation code of conduct</a>.</p>
 
+                  <p style="text-align: center">
+                    <a href="#register">Registration</a> |
+                    <a href="#presentations">Presentations</a> |
+                    <a href="#travel">Travel Information</a> |
+                    <a href="#venue">Venue</a> |
+                    <a href="#schedule">Schedule</a> |
+                    <a href="#dinner">Dinner</a>
+                  </p>
+
+
 	      </div>
             </div><!-- card -->
           </div><!-- col -->
         </div>
+
+      <div class="row">
+          <div class="col-sm-12 mt-3">
+            <div class="card">
+              <a name="presentations" href="#presentations"></a>
+              <h5 class="card-header">Presentations</h5>
+              <div class="card-body">
+                <p class="card-text">
+                 Below you can see a list of submitted presentation proposals. The exact <a href="#schedule">schedule</a> will be available shortly after 1st of March 2020. For corrections/updates  <a target="_blank" href="mailto:istanbul@fossi-foundation.org?Subject=FOSSistanbul%20Program">please contact us</a>.</p>
+
+                </p>
+
+
+<!-- ============================================================ -->
+
+
+            <h4> The impact of Open Source Hardware on European economy: a European Commission study and call for input </h4>           
+            <p>Open Source Hardware has come to the attention of policymakers. This year, OpenForum Europe and Fraunhofer ISI are working on the study on the impact of Open Source Software and Hardware in Europe, during which we want to engage several OSS and OSH communities and experts to shape the scientific basis for future policies. I will present the project, its goals and methods, as well as ways of possible engagement.</p>
+            <h6> Presenter: Paula Grzegorzewska, <I>OpenForum Europe</I></h6>
+            <br>
+
+<!-- ============================================================ -->
+
+          
+            <h4>Licensing - CERN OHL and Solderpad</h4>           
+            <p>While open silicon is dominated by permissive licensing, redrafted CERN-OHL presents two copyleft options which now address some of the specific issued raised by the ASIC and FPGA design. Andrew's talk will bring you up to speed with these developments, and also highlight plans for the Solderpad Hardware Licence.</p>
+            <h6> Presenter: Andrew Katz, <I>Moorcrofts LLP</I></h6>
+            <br>
+
+
+<!-- ============================================================ -->
+
+          
+            <h4>Quick Overview of the RISC-V Bitmanipulation extension </h4>           
+            <p>Latest updates on the proposed RISC-V Bitmanipulation extension.</p>
+            <h6> Presenter: Claire Wolf, <I>Symbiotic EDA</I></h6>
+            <br>
+
+<!-- ============================================================ -->
+
+            <h4>PDK Master, an open source tool for managing process design kits</h4>           
+            <p>One of the problems when wanting to develop open source silicon is having access to the foundry design kit compatible with the open source design tools. PDK Master is a NLNet funded project to develop a tool for managing PDKs for different EDA tools. One of the goals is to be able to transform foundry PDKs for proprietary EDA tools into PDKs usable by open source tools. Another goal is to in the future manage PDKs for different open source tools (analog) design tools.</p>
+
+            <p>In the presentation the current state of the tool will be presented together with a request for feedback and cooperation to make the tool as widely applicable as possible.</p>
+            <h6> Presenter: Staf Verhaegen,<I> Chips4Makers </I></h6>
+            <br>
+
+<!-- ============================================================ -->
+
+            <h4>Python for Verification with cocotb</h4>            
+
+            <p>cocotb is a COroutine based COsimulation TestBench environment for verifying VHDL/Verilog RTL using Python.</p>
+
+            <p>This talk will give a very quick introduction to cocotb, and then split into two parts: first, I'll introduce the new functionalities introduced in the most recent cocotb releases. Second, I'll present case studies which showcase how cocotb can be used most effectively.</p>
+            <h6> Presenter: Philipp Wagner,<I> FOSSi Foundation / lowRISC</I></h6>
+            <br>
+
+<!-- ============================================================ -->
+
+            <h4>MicroTESK: Open-Source Test Program Generator for Microprocessors</h4>            
+            <p>In this talk, we present MicroTESK, an open-source specification-based test program generator for microprocessors. The tool consists of two main parts: (1) formal specifications of the target instruction set architecture(s) and (2) an architecture-independent generation core. Test programs are automatically constructed from high-level descriptions of verification scenarios, so-called test templates. Specifications are written in nML and describe microprocessor registers, memory, addressing modes, and instructions. Test templates are written in Ruby and define how to compose instruction sequences and how to generate test data. A basic set of tests, so-called architecture validation suite (AVS), is automatically generated based on information extracted from the specifications. Currently, we have test program generators for RISC-V, MIPS, and ARM.</p>
+            <h6> Presenter: Alexander Kamkin, <I>ISP RAS</I></h6>
+            <br>
+            
+<!-- ============================================================ -->
+
+            <h4>Retrascope: Open-Source Model Checker for HDL Descriptions</h4>           
+            <p>Retrascope is an open-source model checker that verifies Verilog descriptions against SVA properties. The primary application domain of the toolkit is functional verification of Verilog or VHDL modules. The toolkit allows analyzing of HDL descriptions, reconstructing and visualization of the underlying models and using the derived models for test generation and property checking.</p>
+            <h6> Presenter: Mikhail Lebedev,<I> ISP RAS</I></h6>
+            <br>
+
+<!-- ============================================================ -->
+
+            <h4>Instruction-level Test Coverage Estimation for Microprocessors</h4>           
+            <p>This MicroTESK update allows to write instruction paths in a trace (optionally) and build the report (using aspectrace) afterwards showing, which instructions have been reached and the hit count - how many times every instruction has been reached. The goal is to show Instruction-level Test Coverage in a clear and user-friendly way.</p>
+            <h6> Presenter: Ivan, <I>ISP RAS </I></h6>
+            <br>
+
+<!-- ============================================================ -->
+
+            <h4>SCE-MI based co-emulation library for different software environments</h4>            
+            <p>This presentation discusses an open co-emulation library under development, which implements the SCE-MI macro-based interface, and related tools.
+            The main goal of this library is to provide a convenient interface for organizing co-emulation between HDL description and C/C++ programs in hosted and freestanding environments.
+            The presentation will discuss current shortcomings of the SCE-MI standard and implementation workarounds.</p>
+            <h6> Presenter: Nikita Chertok,<I>  ISP RAS </I></h6>
+            <br>
+
+<!-- ============================================================ -->
+
+            <h4>Mitigating Microarchitectural Timing Channels</h4>            
+            <p>Microarchitectural timing channels enable unintended communication between application domains across security boundaries. They have now been measured on a simple open source RISC-V core. How can they be mitigated?</p>
+            <h6> Presenter: Nils Wistoff</I></h6>
+            <br>
+
+<!-- ============================================================ -->
+
+            <h4>RISC-V memory tagging</h4>            
+            <p>As part of RISC-V softcore CPU contest 2019 we started an activity of bringing memory tagging to RISC-V architecture. Today we have reached some milestones and would like to share the progress we have in this field.</p>
+            <h6> Presenter: Alexey Baturo</h6>
+            <br>
+
+
+<!-- ============================================================ -->
+
+
+            <h4>Improving the performance of Ibex</h4>            
+            <p>Ibex implements RISC-V 32-bit I/E MC M-Mode, U-Mode and PMP. It uses an in order
+            2 stage pipe and is best suited for area and power sensitive rather than high
+            performance applications. However there is scope for meaningful performance
+            gains without major impact to area. This talk describes work done at
+            lowRISC to analyse and improve the performance of Ibex. The RTL of an Ibex
+            system is simulated using Verilator to run CoreMark and Embench and the traces
+            analysed to identify the major sources of stalls within them. This informs where
+            improvements should be targeted. The open source implementation tools Yosys and
+            openSTA are used to assess potential timing and area impacts of these
+            improvements.</p>
+            <h6> Presenter: Greg Chadwick,<I> lowRISC</I></h6>
+            <br>
+
+<!-- ============================================================ -->
+    
+            <h4>PulpEnix, An advanced embedded RISC-V CORE and SOC platform Forked from Pulp/RI5CY open source design</h4>            
+            <p>We will present our PulpEnix/Hamsa-DI research design, an enhanced extendable embedded core and SOC platform, forked from the PULP/Ri5cy. The design includes a Dual-Issue implementation, Level-0 cache, generic function approximation accelerator, DSP and security accelerators, cost effective multipliers implementation and additional features.</p>
+            <h6> Presenter: Ori Steinberg,<I> Bar-Ilan University</I></h6>
+            <br>
+
+<!-- ============================================================ -->
+
+            <h4>CanAir.io</h4>            
+            <p>Open Source initiative that uses a ESP32 module and PM2.5 sensors, interfaced with an Android client app to have static (WiFi) or mobile (Bluetooth) air quality stations.
+
+            CanAirio is a citizen science initiative that not only aims to generate an air quality network of fixed monitoring stations, but also to measure what occurs with pedestrians, drivers and passengers in their daily lives considering that in some cities the highest density of affected people is moving. For this reason, we have a mobile application that is able to set a PM2.5 sensor, and other related sensors, as a fixed station using WiFi or mobile data from the smartphone by using a Bluetooth connection.</p>
+            <h6> Presenter: Alvaro Antonio Vanegas P.,<I> CanAir.io</I></h6>
+            <br>
+
+<!-- ============================================================ -->
+
+            <h4>Open Source SCR1 core</h4>            
+            <p>SCR1 is a silicon-proven an open-source MCU-class RISC-V core for deeply embedded applications and accelerator control, developed and maintained by Syntacore. Over the four years of its existence, the processor has found significant traction both in industry and in academia around the world. SCR1 continues to thrive with regular updates from its highly experienced core team and it offers workload-specific customization and software support.
+            In our brief presentation, we will introduce you to the SCR1 and its key features.</p>
+            <h6> Presenter: Enes Topcu,<I> Syntacore</I></h6>
+            <br>
+
+<!-- ============================================================ -->
+
+            <h4>Extending the Instruction Set of a RISC-V Processor for NTRU Algorithm</h4>           
+            <p>Creating a custom instruction and implementing a custom module inside the processor for array multiplication. Accomplishing this using 32-bit RV32IMC Architecture Ibex Core.</p>
+            <h6> Presenter: Canberk Topal</h6>
+            <br>
+            
+<!-- ============================================================ -->
+
+            <h4>Instruction Set Extension for Post Quantum Cryptography Algorithms on RISC-V</h4>       
+            <p>Implementing the New Hope post-quantum cryptography algorithm on lowrisc Ibex core and designing a custom instruction in order to accelerate the algorithm.</p>
+            <h6> Presenter: Musa Antike, Batuhan Ates, Ali Ustun<I> </I></h6>
+            <br>
+
+<!-- ============================================================ -->
+
+            <h4>EIC Academy - Engineer Training Programme</h4>            
+            <p>EIC Academy Engineer Training Programme is a probation period programme for new
+            recruits in ElectraIC. A group of 3 to 6 new engineers goes through an 8 weeks intensive
+            programme which includes trainings on different topics, hands-on project practices,
+            presentation of what has been studied for during the trainings and a detailed evaluation
+            feedback is given by expert engineers in their fields. The trainings are delivered by Certified
+            Training Instructors, projects are mentored by expert engineers and the assessments are
+            conducted by a group of at least 3 experts. To complete the programme, candidates must
+            successfully pass the overall assessments.</p>
+            <h6> Presenter: Ates Berna, <I>ElectraIC </I></h6>
+            <br>
+
+<!-- ============================================================ -->
+
+            <h4> Being awesome, the story of a modest genius on the way of winning multiple awards with FuseSoC : part II </h4>           
+            <p> t.b.d. </p>
+            <h6> Presenter: Olof Kindgren, <I>FOSSi Foundation</I></h6>
+            <br>
+
+
+<!-- ============================================================ -->
+
+            <h4> A Comprehensive Verification Platform for RISC-V based Processors </h4>            
+            <p> t.b.d. </p>
+            <h6> Presenter: Abdullah YILDIZ, <I>Yonga Technology Microelectronics R&D</I></h6>
+            <br>
+
+<!-- ============================================================ -->
+
+            <h4>Asic Implementation Of AES  Accelerated RISC-V Core</h4>            
+            <p>t.b.d.</p>
+            <h6> Presenter: Emre</h6>
+            <br>
+<!-- ============================================================ -->
+
+            <h4> Open Source HW initiatives of the Eurolab4HPC project</h4>           
+            <p> In this short presentation, I will give a summary of open source hardware support efforts by the H2020 Project Eurolab4HPC and offer perspectives on how to continue </p>
+            <h6> Presenter: Frank K. Gurkaynak, <I>ETH Zurich</I></h6>
+            <br>
+
+<!-- ============================================================ -->
+
+            <h4> OpenHW Group, migrating RI5CY to CV32E40P, next steps </h4>            
+            <p> One by one cores (and related IP) developed by the PULP platform are finding new homes, to continue their growth. In this talk I am going to give a first hand account of this process, explain what is happening, why is it good for us, the community and the industrial backers of teh OpenHW group. </p>
+            <h6> Presenter: Frank K. Gurkaynak, <I>ETH Zurich</I></h6>
+            <br>
+
+<!-- ============================================================ -->
+
+                  <p style="text-align: center">
+                    <a href="#register">Registration</a> |
+                    <a href="#presentations">Presentations</a> |
+                    <a href="#travel">Travel Information</a> |
+                    <a href="#venue">Venue</a> |
+                    <a href="#schedule">Schedule</a> |
+                    <a href="#dinner">Dinner</a>
+                  </p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
 
           <div class="row">
             <!-- Card: venue -->
@@ -224,10 +461,21 @@
                     </figure>
                   </p>
 
+                  <p style="text-align: center">
+                    <a href="#register">Registration</a> |
+                    <a href="#presentations">Presentations</a> |
+                    <a href="#travel">Travel Information</a> |
+                    <a href="#venue">Venue</a> |
+                    <a href="#schedule">Schedule</a> |
+                    <a href="#dinner">Dinner</a>
+                  </p>
+
+
                 </div><!-- card-body -->
               </div><!-- card -->
             </div><!-- col -->
           </div> <!-- row -->
+
 
 
           <div class="row">
@@ -389,6 +637,17 @@
                       <img src="images/istanbul_band3.JPG" class="figure-img img-fluid rounded" alt="View of the Golden Horn and the Galata Tower">
                       <figcaption class="figure-caption">View of the Golden Horn and the Galata Tower, (c) Frank K. Gürkaynak, CC BY-SA 3.0</figcaption>
                     </figure>
+
+                  <p style="text-align: center">
+                    <a href="#register">Registration</a> |
+                    <a href="#presentations">Presentations</a> |
+                    <a href="#travel">Travel Information</a> |
+                    <a href="#venue">Venue</a> |
+                    <a href="#schedule">Schedule</a> |
+                    <a href="#dinner">Dinner</a>
+                  </p>
+
+
 
 
                 </div><!-- card-body -->
@@ -611,6 +870,18 @@
                   <img src="images/yenikapi.JPG" class="figure-img img-fluid rounded" alt="Sponsor">
               </div>
             </div>
+
+                  <p style="text-align: center">
+                    <a href="#register">Registration</a> |
+                    <a href="#presentations">Presentations</a> |
+                    <a href="#travel">Travel Information</a> |
+                    <a href="#venue">Venue</a> |
+                    <a href="#schedule">Schedule</a> |
+                    <a href="#dinner">Dinner</a>
+                  </p>
+
+
+
             </div>
           </div>
         </div>
