@@ -8,27 +8,50 @@ are involved in.
 
 <table width="80%" align="center">
 <tr>
-  <td style="padding: 10px">
+  <td style="padding: 15px; vertical-align: top">
+    <a href="https://orconf.org"><img src="/assets/orconf_logo.png" width="120px"></a>
+  </td>
+  <td>
+    <p>Even though FOSSi communities are used to communicate over the internet, meeting in person from time to time to share ideas, learn, and dream up crazy things is very valuable.
+    The FOSSi Foundation conferences are the prime venue in the free and open source silicon community for this kind of exchange.</p>
+
+    <p>Our oldest and largest conference is <b><a href="https://orconf.org/">ORConf</a></b>, <i>the</i> open source digital design conference.
+    FOSSi Foundation organizes this conference yearly in September or October in varying places around Europe.
+    It originally started as an OpenRISC user meeting in Stockholm in 2012 it has grown since considerably not only in attendance, but also in scope.
+    Today, talks cover everything from RISC-V based CPU designs, to EDA tools, verification and testing, and other cool project our community comes up with.</p>
+  </td>
+</tr>
+<tr>
+  <td style="padding: 15px; vertical-align: top">
+    <img src="/latchup/images/latchupnoloc.png" width="120px">
+  </td>
+  <td>
+    <p>In addition to ORConf, we organize various <b>spin-off conferences</b> in different places of the world.
+    Examples include <a href="https://fossi-foundation.org/latchup/">Latch-Up</a>, or one-off events like the <a href="https://fossi-foundation.org/wosh/">Week of Open Source Hardware (WOSH)</a> in Zurich or <a href="https://fossi-foundation.org/fossistanbul/">FOSSistanbul</a> (guess where).</p>
+  </td>
+</tr>
+<tr>
+  <td style="padding: 15px; vertical-align: top">
+    <img src="/assets/cocotb_logo_unofficial.png" width="120px">
+  </td>
+  <td>
+    <p><b><a href="https://www.cocotb.org">cocotb</a></b> is a COroutine based COsimulation TestBench environment for verifying VHDL/Verilog RTL using Python.
+    cocotb is completely free, open source (under the BSD License) and hosted on <a href="https://github.com/cocotb/cocotb">GitHub</a>).</p>
+
+    <p>The FOSSi Foundation ensures that the cocotb community can focus on improving cocotb by safeguarding cocotb assets (like domain names), handling finances, and helping out with maintaining cocotb.</p>
+  </td>
+</tr>
+<tr>
+  <td style="padding: 10px; vertical-align: top">
     <a href="https://www.librecores.org"><img src="/assets/librecores_logo.png" width="120px" /></a>
   </td>
   <td>
-    <b>LibreCores</b> is a community hub for FOSSi.
+    <b><a href="https://www.librecores.org">LibreCores</a></b> is a community hub for FOSSi.
     Centered around the theme of "sharing," LibreCores features documentation, ways for the communicate to interact, and most importantly, a project repository with free and open source digital hardware ("IP cores") and associated projects.
   </td>
 </tr>
 <tr>
-  <td style="padding: 15px">
-    <a href="https://orconf.org"><img src="/assets/orconf_logo.png" width="120px"></a>
-  </td>
-  <td>
-    <b>ORConf</b> is <i>the</i> open source digital design conference.
-    FOSSi Foundation organizes this conference yearly in varying places.
-    It originally started as an OpenRISC user meeting in Stockholm in 2012 it has grown since considerably not only in attendance, but also in scope.
-    Today, talks cover everything from RISC-V based CPU designs, to EDA tools, verification and testing, and other cool project our community comes up with.
-  </td>
-</tr>
-<tr>
-  <td style="padding: 15px">
+  <td style="padding: 15px; vertical-align: top">
     <img src="/assets/licensing_logo.png" width="120px">
   </td>
   <td>
