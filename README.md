@@ -17,12 +17,10 @@ To see the final page locally, you need to install Jekyll as described in the
 ~~~
 # Install dependencies
 # for OpenSUSE
-sudo zypper install ruby2.5-devel zlib-devel ruby2.5-rubygem-bundler
+sudo zypper install ruby2.6-devel zlib-devel ruby2.6-rubygem-bundler
 
 # for Ubuntu > 14.04 (Ruby > 2.0 is required)
 sudo apt-get install ruby-dev zlib1g-dev ruby-bundler
-
-# Update bundler
 gem update --system
 gem install bundler
 
