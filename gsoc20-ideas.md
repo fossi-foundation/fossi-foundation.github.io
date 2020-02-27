@@ -82,8 +82,7 @@ Prerequisites:
 
 *Language/Tools:* Verilog/VHDL/.../Python, Jenkins, Groovy
 
-*Mentors:* [Oleg Nenashev](mailto:o.v.nenashev@gmail.com),
-[Stefan Wallentowitz](mailto:stefan@wallentowitz.de)
+*Mentors:* [Stefan Wallentowitz](mailto:stefan@wallentowitz.de)
 
 
 ### Open SoC Debug: Efficient Control-Flow Traces
