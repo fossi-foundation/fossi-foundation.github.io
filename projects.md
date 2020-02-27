@@ -51,6 +51,17 @@ are involved in.
   </td>
 </tr>
 <tr>
+  <td style="padding: 10px; vertical-align: top">
+    <a href="https://www.embench.org"><img src="/assets/embench_logo.png" width="120px" /></a>
+  </td>
+  <td>
+    <p><b><a href="https://embench.org">Embench</a></b> is a Modern Embedded Benchmark Suite.
+    Dhrystone and Coremark have been the defacto standard microcontroller benchmark suites for the last thirty years, but these benchmarks no longer reflect the needs of modern embedded systems.
+    Embench was explicitly designed to meet the requirements of modern connected embedded systems.
+    The benchmarks are relevant, portable, and well implemented.</p>
+  </td>
+</tr>
+<tr>
   <td style="padding: 15px; vertical-align: top">
     <img src="/assets/licensing_logo.png" width="120px">
   </td>
