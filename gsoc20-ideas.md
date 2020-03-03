@@ -351,5 +351,26 @@ The scope for this project, with respect to GSoC 2019, is open for discussion. P
 in place. Perhaps we focus on getting pre-processing and an abstract syntax tree (AST) created.
 
 *Skill level:* Intermediate
+
 *Language/Tools:* ANTLR4, Java/C++/Python, SystemVerilog
+
 *Mentor:* [Matthew Ballance](mailto:matt.ballance@gmail.com)
+
+### Design and Integration of (n)Migen IIR Fixpoint Filters into pyFDA
+
+[Python Filter Design and Analysis Tool (pyFDA)](https://github.com/chipmuenk/pyfda) is a modular open source tool for designing and simulating FIR and IIR digital filters. 
+
+The recent integration of [migen](https://github.com/m-labs/migen) allows simulation of fixpoint filters and export of Verilog netlists that can be used e.g. in an FPGA design flow. Currently, only a direct form FIR filter topology is implemented
+in migen as a proof of concept. Simulation and design of IIR fixpoint filters would be highly desirable as these filters require careful scaling and verification with fixpoint arithmetics.
+
+The goal of this project is to implement more IIR fixpoint filters in [migen](https://github.com/m-labs/migen) or, preferrably, its successor [nMigen](https://github.com/m-labs/nmigen), and integrate them into pyFDA.
+
+The student should first implement a basic IIR (direct form) filter in (n)Migen with a python testbench to become acquainted with (n)Migen. In the next step, this filter is integrated into pyFDA. Depending on the speed of progress, more advanced filters like cascaded IIR, LDI, state-variable ... filters and their testbenches can be implemented and integrated. Quality is more important than quantity, well documented and structured code is a main project objective.
+
+*Skill level:* intermediate
+
+*Language/Tools:* Python, some knowledge of fixpoint arithmetics and DSP and Verilog or VHDL. Basic knowledge of (n)migen would be great but can be acquired during the project.
+
+*Mentors:*
+[Christian Muenker](mailto:chipmuenk@gmail.com), [@chipmuenk on github](https://github.com/chipmuenk)
+and [Sébastien Bourdeauducq](mailto:sb@m-labs.hk), [@sbourdeauducq on github](https://github.com/sbourdeauducq)
