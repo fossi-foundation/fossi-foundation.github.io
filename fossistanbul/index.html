@@ -793,13 +793,6 @@
                      Microarchitectural timing channels enable unintended communication between application domains across security boundaries. They have now been measured on a simple open source RISC-V core. How can they be mitigated?
                    </div>
                 </div>
-                <div class="list-group event">
-                   <a class="event-title" data-toggle="collapse" href="#event-abstract-25"> FPnew and FlexFloat: Open-Source Multi-Precision FP Hardware and Emulation</a>
-                   <div class="event-speaker">Stefan Mach <span class="event-affiliation">ETH Zurich</span> </div>
-                   <div id="event-abstract-25" class="event-abstract collapse">
-                     Floating-Point computation is ubiquitous from embedded edge devices to high-performance computing platforms. Rapidly evolving precision requirements in modern workloads render traditional IEEE FP formats alone insufficient, leading to a paradigm-shift towards tunable precision. Such systems often require hardware support for multiple (nonstandard) FP formats, sometimes even with mixed-precision operations. To this end, we show FPnew, an open-source FPU configurable to support arbitrary FP types and written in SystemVerilog. Furthermore, designing systems with non-standard FP formats requires bit-true emulation for design-space explorations and to verify correctness of FP operations. We show FlexFloat, a C library providing fast emulation of operations on custom FP formats.
-                   </div>
-                </div>
 
                 <div class="list-group event">
                    <a class="event-title" data-toggle="collapse" href="#event-abstract-24"> Working with Verilator</a>
@@ -884,7 +877,16 @@
                      Ibex implements RISC-V 32-bit I/E MC M-Mode, U-Mode and PMP. It uses an in order 2 stage pipe and is best suited for area and power sensitive rather than high performance applications. However there is scope for meaningful performance gains without major impact to area. This talk describes work done at lowRISC to analyse and improve the performance of Ibex. The RTL of an Ibex system is simulated using Verilator to run CoreMark and Embench and the traces analysed to identify the major sources of stalls within them. This informs where improvements should be targeted. The open source implementation tools Yosys and openSTA are used to assess potential timing and area impacts of these improvements. Precise content will be informed by length of the talk.
                    </div>
                 </div>
+
                 <div class="list-group event">
+                   <a class="event-title" data-toggle="collapse" href="#event-abstract-25"> FPnew and FlexFloat: Open-Source Multi-Precision FP Hardware and Emulation</a>
+                   <div class="event-speaker">Stefan Mach <span class="event-affiliation">ETH Zurich</span> </div>
+                   <div id="event-abstract-25" class="event-abstract collapse">
+                     Floating-Point computation is ubiquitous from embedded edge devices to high-performance computing platforms. Rapidly evolving precision requirements in modern workloads render traditional IEEE FP formats alone insufficient, leading to a paradigm-shift towards tunable precision. Such systems often require hardware support for multiple (nonstandard) FP formats, sometimes even with mixed-precision operations. To this end, we show FPnew, an open-source FPU configurable to support arbitrary FP types and written in SystemVerilog. Furthermore, designing systems with non-standard FP formats requires bit-true emulation for design-space explorations and to verify correctness of FP operations. We show FlexFloat, a C library providing fast emulation of operations on custom FP formats.
+                   </div>
+                </div>
+
+<!--                <div class="list-group event">
                    <a class="event-title" data-toggle="collapse" href="#event-abstract-16"> PulpEnix, An advanced embedded RISC-V CORE and SOC platform Forked from Pulp/RI5CY open source design</a>
 
                    <div class="event-speaker">Ori Steinberg <span class="event-affiliation">Bar-Ilan University</span> </div>
@@ -892,6 +894,8 @@
                      We will present our PulpEnix/Hamsa-DI research design, an enhanced extendable embedded core and SOC platform, forked from the PULP/Ri5cy. The design includes a Dual-Issue implementation, Level-0 cache, generic function approximation accelerator, DSP and security accelerators, cost effective multipliers implementation and additional features.
                    </div>
                 </div>
+--->
+
                 <div class="list-group event">
                    <a class="event-title" data-toggle="collapse" href="#event-abstract-14"> ASIC Implementation of AES  sccelerated RISC-V core</a>
 
