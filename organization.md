@@ -63,22 +63,6 @@ help us reaching our goals, please don't hesitate to
 </div>
 </div>
 
-<a name="frank"/>
-<div class="row">
-<div class="col-lg-3 col-md-4 col-sm-3">
-  <img src="/assets/people/Frank.jpg" align="left" width="150px">
-  <ul class="share-buttons" style="padding-left: 0">
-  <li><a href="mailto:kgf@ee.ethz.ch"><img title="Send me an email" src="/assets/flat_web_icon_set/color/Email.png"/></a></li>
-  <li><a href="https://www.linkedin.com/in/frank-kagan-gurkaynak-8793b41/"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
-  <li><a href="https://github.com/gurkaynak "><img title="Visit my GitHub account" src="/assets/flat_web_icon_set/color/Github.png"></a></li>
-  </ul>
-</div>
-<div class="col-lg-9 col-md-8 col-sm-9">
-  <h4>Frank K. Gürkaynak</h4>
-  Everybody just calls him Frank. He has been actively involved with open source hardware through the PULP project since its start in 2013 and has been working within academic environments for more than 25 years
-</div>
-</div>
-
 <a name="olof"/>
 <div class="row">
 <div class="col-lg-3 col-md-4 col-sm-3">
