@@ -26,6 +26,7 @@ gem install bundler
 
 # Install Jekyll with all dependencies used by GitHub pages
 # (inside the directory where this README is)
+bundle config set path 'vendor/bundle'
 bundle install --path vendor/bundle
 
 # Build and continuously update site
