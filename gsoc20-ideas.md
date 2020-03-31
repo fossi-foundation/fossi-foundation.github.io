@@ -373,4 +373,3 @@ The student should first implement a basic IIR (direct form) filter in (n)Migen 
 
 *Mentors:*
 [Christian Muenker](mailto:chipmuenk@gmail.com), [@chipmuenk on github](https://github.com/chipmuenk)
-and [Sébastien Bourdeauducq](mailto:sb@m-labs.hk), [@sbourdeauducq on github](https://github.com/sbourdeauducq)
