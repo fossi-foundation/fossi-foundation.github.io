@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <!-- FontAwesome CSS -->
+  <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+
+  <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+
+  <style>
+    .event {
+      padding-bottom: 15px;
+      font-size: 16px;
+    }
+    .event-time {
+      font-size: small;
+    }
+
+    .event-title {
+      font-weight: bold;
+    }
+
+    .event-affiliation {
+      color: gray;
+      font-size: 90%;
+    }
+
+    .event-abstract {
+      padding-left: 5px;
+      margin-left: 5px;
+      border-left: 3px solid gray;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+
+  <title>FOSSi Dial-Up</title>
+</head>
+
+<body style="background: #e7e7e7">
+
+  <div class="container">
+    <!-- Content here -->
+    <div class="row">
+      <div class="col-sm-3 mt-3" style="text-align: center">
+        <img src="logo.svg" alt="Logo" class="img-fluid" width="300px" />
+      </div><!-- col -->
+      <div class="col-sm-6 mt-5" style="text-align: center">
+        <p><strong>FOSSi Dial-Up</strong> is the premier online event around
+        Free and Open Source Silicon and EDA tools. It features selected
+        speakers from the rapidly developing FOSSi ecosystem.
+
+      </div><!-- col -->
+      <div class="col-sm-3 mt-5" style="text-align: center">
+
+      </div><!-- col -->
+    </div><!-- row -->
+
+
+    <div class="row">
+      <div class="col-sm-8 mt-5">
+        <div class="card">
+          <h5 class="card-header">
+            Tim Ansell - Fully open source manufacturable PDK for a 130nm process
+          </h5>
+          <div class="card-body">
+            <p class="card-text">
+              <b>Date: June 11, 2020</b><br/>
+              <b>Time: 17:00 GMT</b> (<a href="https://www.thetimezoneconverter.com/?t=17%3A00&tz=GMT&">time zone converter</a>)
+            </p>
+            <p class="card-text">
+              Abstract: tbd
+            </p>
+            <p>
+              <i>You will receive the connection details before the event.</i>
+            </p>
+            <div class="d-flex justify-content-center mb-2 mt-2">
+              <form action="https://forms.gle/wRmGsrUoBHRxc8q16">
+                <input type="submit" class="btn btn-primary" value="Register here" />
+              </form>
+            </div>
+          </div> <!-- card-body -->
+        </div> <!-- card -->
+        <div class="card mt-2">
+          <h5 class="card-header">
+            Upcoming
+          </h5>
+          <div class="card-body">
+            <p class="card-text">
+                We will soon announce further events.
+            </p>
+          </div> <!-- card-body -->
+        </div> <!-- card -->
+      </div>
+      <div class="col-sm-4 mt-5">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="card">
+              <h5 class="card-header">Sponsors</h5>
+              <div class="card-body">
+                <p class="card-text">
+                  <div class="col-sm-12">
+                    <a class="btn btn-primary btn-block"
+                      href="mailto:info@fossi-foundation.org?Subject=Dial-Up%202020%20Sponsorship">Become a sponsor</a>
+                  </div>
+              </div><!-- card-body -->
+            </div><!-- card -->
+          </div><!-- col -->
+        </div><!-- row -->
+      </div> <!-- col -->
+    </div><!-- row -->
+    <div class="row">
+      <div class="col-sm-12 mt-3 mb-5" style="text-align: center">
+        <footer style="font-size: 80%">&copy; 2020, Free and Open Source Silicon Foundation and the presenters</footer>
+      </div>
+    </div>
+  </div><!-- container -->
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/moment@2.18.1/min/moment.min.js"></script>
+
+
+  <script>
+    $.getJSON("schedule.json", function (events) {
+      $('.fossi-schedule-subset').each(function() {
+        let filterCategory = $(this).data('category');
+
+        html = '';
+        let eventCnt = 0;
+        for (let ev of events) {
+          if (ev.category != filterCategory) {
+            continue;
+          }
+
+          html += [
+            '<div class="list-group event">',
+              '<div class="event-time">' + moment(ev.start).format('D.MM. HH:mm') + ' - ' + moment(ev.end).format('HH:mm') + '</div>',
+              '<a class="event-title" data-toggle="collapse" href="#event-abstract-' + eventCnt + '">' + ev.title + '</a>',
+              '<div class="event-speaker">',
+                ev.speaker,
+                '<span class="event-affiliation">' + ev.affiliation + '</span>',
+          ].join('\n');
+          if (ev.video !== undefined && ev.video != '')
+            html += ' <span class="event-video"><a href="' + ev.video + '">video</a></span>';
+          if (ev.slides !== undefined && ev.slides != '')
+            html += ' <span class="event-slides"><a href="' + ev.slides + '">slides</a></span>';
+          html += [
+              '</div>',
+              '<div id="event-abstract-'+eventCnt+'" class="event-abstract collapse">',
+                ev.abstract,
+              '</div>',
+            '</div>',
+          ].join('\n');
+          eventCnt++;
+        }
+
+        $(this).html(html);
+      });
+    });
+  </script>
+</body>
+
+</html>
