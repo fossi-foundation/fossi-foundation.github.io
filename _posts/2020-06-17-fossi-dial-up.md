@@ -38,4 +38,4 @@ SkyWater 130nm), Tim Edwards (EDA tool Magic for DRC checks on SkyWater 130nm)
 and James Stine (Standard cells for SkyWater 130nm). More talks will follow!
 
 You can find more information and details to join the event on our website:
-[https://dial-up.fossi.foundation](https://dial-up.fossi.foundation).
+[http://dial-up.fossi.foundation](http://dial-up.fossi.foundation).
