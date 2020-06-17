@@ -13,10 +13,10 @@ community. By dedicating one hour of presentation plus time for questions, it is
 set up to become the premier event for major announcements and focused in-depth
 technical content from all areas of the community.
 
-The "first season" of the series covers an impressive project: Skywater - a
-production-ready open source process development kit (PDK) for 130 nm. The
-availability of an open PDK along with standard cells, RAMs, etc. is one of the
-last missing links for an entirely open source chip design flow.
+The "first season" of the series covers an impressive project: A production
+130nm process, now with FOSS PDK. The availability of an open PDK along with
+standard cells, RAMs, etc. is one of the last missing links for an entirely open
+source chip design flow.
 
 In the inaugural event, Tim Ansell of Google will present the current state of
 the PDK and its roadmap.
