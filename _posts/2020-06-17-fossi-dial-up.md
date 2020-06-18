@@ -28,7 +28,7 @@ The first FOSSi Dial-up 2020-06 will be live streamed on Youtube, followed by a
 Q&A session. It will take place on
 
 <p style="text-align: center;">
-<b>Thursday June 30 at 16:00 GMT</b>
+<b>Tuesday June 30 at 16:00 GMT</b>
 </p>
 
 The event is free-to-attend, of course.
