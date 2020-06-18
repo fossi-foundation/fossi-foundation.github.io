@@ -13,13 +13,16 @@ community. By dedicating one hour of presentation plus time for questions, it is
 set up to become the premier event for major announcements and focused in-depth
 technical content from all areas of the community.
 
-The "first season" of the series covers an impressive project: A production
-130nm process, now with FOSS PDK. The availability of an open PDK along with
-standard cells, RAMs, etc. is one of the last missing links for an entirely open
-source chip design flow.
+The series starts with a walk through the new project between Google and
+SkyWater Technology Foundry to provide a fully open source PDK! The following
+months will have focused talks on various aspects of using and interfacing with
+the newly open sourced PDK.
 
-In the inaugural event, Tim Ansell of Google will present the current state of
-the PDK and its roadmap.
+In the first talk, Tim Ansell will outline the collaboration and the goals of
+the join project. He will present the current state of the PDK and the roadmap
+going forward. A production-ready open source process development kit (PDK) and
+standard library is an integral part of creating true open source chip designs
+and was previously missing from the ecosystem. Find out what is happening next!
 
 The first FOSSi Dial-up 2020-06 will be live streamed on Youtube, followed by a
 Q&A session. It will take place on
@@ -30,12 +33,13 @@ Q&A session. It will take place on
 
 The event is free-to-attend, of course.
 
-The schedule following the inaugural presentation will for another couple of
-sessions be focused on presentations around the efforts to make the SkyWater
-130nm PDK a viable alternative for truly open source chip production. Speakers
-will be Matt Guthaus (OpenRAM for SkyWater 130nm), Mohamed Shalan (OpenROAD for
-SkyWater 130nm), Tim Edwards (EDA tool Magic for DRC checks on SkyWater 130nm)
-and James Stine (Standard cells for SkyWater 130nm). More talks will follow!
+The schedule following the inaugural presentation will focus on presentations
+around the efforts to use the SkyWater 130nm PDK as a viable alternative for
+truly open source chip production. Speakers will be Matt Guthaus (OpenRAM for
+SkyWater 130nm), Mohamed Shalan (OpenROAD for SkyWater 130nm), Tim Edwards (EDA
+tool Magic for DRC checks on SkyWater 130nm) and James Stine (Standard cells for
+SkyWater 130nm). More talks will follow!
 
 You can find more information and details to join the event on our website:
-[http://dial-up.fossi.foundation](http://dial-up.fossi.foundation).
+[http://dial-up.fossi.foundation](http://dial-up.fossi.foundation). Get your
+audio couplers out and let's free the last nanometer!
