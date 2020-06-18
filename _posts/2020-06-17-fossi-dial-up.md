@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "FOSSi Dial-Up Launches with Big Bang: Open Source Skywater PDK"
+title: "FOSSi Dial-Up Launches with Big Bang: Production-ready Open Source PDK"
 description: ""
 category:
 tags: []
@@ -19,7 +19,7 @@ months will have focused talks on various aspects of using and interfacing with
 the newly open sourced PDK.
 
 In the first talk, Tim Ansell will outline the collaboration and the goals of
-the join project. He will present the current state of the PDK and the roadmap
+the joint project. He will present the current state of the PDK and the roadmap
 going forward. A production-ready open source process development kit (PDK) and
 standard library is an integral part of creating true open source chip designs
 and was previously missing from the ecosystem. Find out what is happening next!
@@ -27,9 +27,9 @@ and was previously missing from the ecosystem. Find out what is happening next!
 The first FOSSi Dial-up 2020-06 will be live streamed on Youtube, followed by a
 Q&A session. It will take place on
 
-<center>
+<p style="text-align: center;">
 <b>Thursday June 30 at 16:00 GMT</b>
-</center>
+</p>
 
 The event is free-to-attend, of course.
 
