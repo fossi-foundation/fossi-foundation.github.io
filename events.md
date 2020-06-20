@@ -21,22 +21,30 @@ we are happy to talk to you.
 
 We hope to see you at some of our future events!
 
-### FOSSistanbul
-* March 13-15 2020
-* Istanbul, Turkey
-* [More information](https://fossi-foundation.org/fossistanbul)
-
-### LatchUp 2020
-* April 11-12 2020
-* Cambridge MA, USA
-* [More information](https://fossi-foundation.org/latchup/)
+### FOSSi Dial-Up:  Tim Ansell - Fully open source manufacturable PDK for a 130nm process
+* June 30 2020
+* Online
+* [More information](https://fossi-foundation.org/dial-up/)
 
 ### ORConf 2020
 * Fall 2020
 * tbd
 * [More information](https://orconf.org)
+* **Cancelled**
 
 ## Past events
+
+### LatchUp 2020
+* April 11-12 2020
+* Cambridge MA, USA
+* [More information](https://fossi-foundation.org/latchup/)
+* **Cancelled**
+
+### FOSSistanbul
+* March 13-15 2020
+* Istanbul, Turkey
+* [More information](https://fossi-foundation.org/fossistanbul)
+* **Cancelled**
 
 ### ORConf 2019
 * September 27-29 2019
