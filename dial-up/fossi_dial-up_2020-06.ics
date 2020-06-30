@@ -1,11 +1,23 @@
 BEGIN:VCALENDAR
+PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
 VERSION:2.0
+METHOD:PUBLISH
 BEGIN:VEVENT
-CLASS:PUBLIC
-DESCRIPTION:[FOSSi Dial-Up] Tim Ansell - Fully open source manufacturable PDK for a 130nm process\nDate and Time - Jun 30\, 2020 4:00 PM to 5:30 PM\nVenue - https://youtu.be/EczW2IWdnOM\nThe SkyWater Open Source Process Design Kit (PDK) is a joint project of Google and SkyWater Technology Foundry to provide a fully open source PDK.\n\nIn this event\, Tim Ansell will outline the collaboration and the goals of the project. He will get into the technical details of the PDK and outline the roadmap of the project.\n
+LAST-MODIFIED:20200623T131619Z
+DTSTAMP:20200623T131619Z
+UID:c01a61fb-f7d8-4edd-8357-eca82b4823fc
+SUMMARY:[FOSSi Dial-Up] Tim Ansell - Fully open source manufacturable PDK 
+ for a 130nm process
 DTSTART:20200630T160000Z
 DTEND:20200630T173000Z
+CLASS:PUBLIC
+DESCRIPTION:[FOSSi Dial-Up] Tim Ansell - Fully open source manufacturable 
+ PDK for a 130nm process\nDate and Time - Jun 30\, 2020 4:00 PM to 5:30 PM\
+ nVenue - https://youtu.be/EczW2IWdnOM\nThe SkyWater Open Source Process De
+ sign Kit (PDK) is a joint project of Google and SkyWater Technology Foundr
+ y to provide a fully open source PDK.\n\nIn this event\, Tim Ansell will o
+ utline the collaboration and the goals of the project. He will get into th
+ e technical details of the PDK and outline the roadmap of the project.\n
 LOCATION:https://youtu.be/EczW2IWdnOM
-SUMMARY;LANGUAGE=en-us:[FOSSi Dial-Up] Tim Ansell - Fully open source manufacturable PDK for a 130nm process
 END:VEVENT
 END:VCALENDAR
