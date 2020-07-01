@@ -29,7 +29,7 @@ All open source chip designs qualify, no further strings attached!
 Learn more about all of that by re-watching [Tim's Dial-Up talk](https://www.youtube.com/watch?v=EczW2IWdnOM) or click through the [slides](https://docs.google.com/presentation/d/e/2PACX-1vRtwZPc8ykkkgtUkHkoJZrP9jKOo3FYdKqbg-So0ic6_kx7ha1vHnxrWmuxWkTc9GfC8xl0TfEpMLwK/pub?start=false&loop=false&delayms=3000).
 
 This is certainly a dream come true for us at the FOSSi Foundation.
-We helped the Free and Open Source Silicon, our community, grow and tackle huge challenges over the years.
+We helped the Free and Open Source Silicon community, our community, grow and tackle huge challenges over the years.
 An open, manufacturable PDK was the main blocker in a fully open flow between RTL and a physical chip, and we're extremely excited to see that blocker removed.
 
 As always, removing one roadblock only highlights more challenges:
