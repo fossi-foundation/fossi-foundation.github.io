@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+PRODID:-//Mozilla.org/NONSGML Mozilla Calendar V1.1//EN
+VERSION:2.0
+METHOD:PUBLISH
+BEGIN:VEVENT
+SUMMARY:[FOSSi Dial-Up] Mohamed Kassem - The striVe RISC-V SoC Family on SkyWater 130nm
+DTSTART:20200825T160000Z
+DTEND:20200825T173000Z
+CLASS:PUBLIC
+DESCRIPTION:[FOSSi Dial-Up] Mohamed Kassem - The striVe RISC-V SoC Family on SkyWater 130nm\nDate and Time - Aug 25\, 2020 4:00 PM to 5:30 PM\
+ nVenue - https://youtu.be/ZqBxh13KYlA
+LOCATION:https://youtu.be/ZqBxh13KYlA
+END:VEVENT
+END:VCALENDAR
