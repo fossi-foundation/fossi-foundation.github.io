@@ -4,8 +4,8 @@ VERSION:2.0
 METHOD:PUBLISH
 BEGIN:VEVENT
 SUMMARY:[FOSSi Dial-Up]  James Stine - Designing new 130nm cells for SkyWater 130nm
-DTSTART:20200922T160000Z
-DTEND:20200922T173000Z
+DTSTART:20200922T170000Z
+DTEND:20200922T183000Z
 CLASS:PUBLIC
 DESCRIPTION:[FOSSi Dial-Up]  James Stine - Designing new 130nm cells for SkyWater 130nm\nDate and Time - Sep 22\, 2020 4:00 PM to 5:30 PM\
  nVenue - https://www.youtube.com/watch?v=Svus4uQ_CAA
