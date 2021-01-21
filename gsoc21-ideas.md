@@ -311,16 +311,6 @@ The [OpenPiton](http://www.openpiton.org/) platform is designed to scale from 1 
 
 *Mentor:* Jonathan Balkind
 
-### VHDL front-end  for Yosys
-
-Yosys is a logic synthesis tool used is several open source ASIC implementation flows. Currently modern VHDL support is only available through a proprietary plugin. This work can likely build on earlier development work in this regard. First part of the project consists of investigating the current state and determine how to implement/complete the VHDL front-end. Second part is then execution of this plan.
-
-*Skill level:* Intermediate
-
-*Language/Tools:* VHDL, C++, Yosys
-
-*Mentor:* [Staf Verhaegen](mailto:staf@fibraservi.eu)
-
 ### Continuous Integration for OpenRISC mor1kx
 
 The [OpenRISC](http://openrisc.io/) project dates back to 2000 and defines an open source RISC architecture.  The current implementation of the architecture [mor1kx](https://github.com/openrisc/mor1kx) has a constantly evolving code base which is sometimes found to have bugs.  This project would be to extend the continuous integration (CI) system to test changes to mor1kx to ensure there are no regressions.  The CI should verify the core by running [or1k-tests](https://github.com/openrisc/or1k-tests), check that debugging features work with OpenOCD/GDB and monitor resource usages by running yosys synthesis.  The tests should also run with different options enabled for the codebase, i.e. caches enabled/disabled, load store buffers, pipelines CAPPUCCINO, MAROCCHINO, ESPRESSO.
@@ -373,3 +363,18 @@ The student should first implement a basic IIR (direct form) filter in (n)Migen 
 
 *Mentors:*
 [Christian Muenker](mailto:chipmuenk@gmail.com), [@chipmuenk on github](https://github.com/chipmuenk)
+
+### Compressed instruction support for SERV
+
+The award-winning [SERV](https://github.com/olofk/serv) is the world's smallest RISC-V CPU
+
+SERV currently implements the RISC-V RV32I base instruction set and a small part of the privileged specification to support timer interrupts which are required for running an RTOS such as Zephyr. While the CPU core is small, it does not support the RISC-V compressed (C) instruction set extension. Adding support for this would reduce code size for applications running on SERV.
+
+The goal of this project is to add support for the RISC-V compressed instruction set extension in SERV
+
+*Skill level:* intermediate
+
+*Language/Tools:* Verilog
+
+*Mentors:*
+[Olof Kindgren](mailto:olof.kindgren@gmail.com), [@olofk on github](https://github.com/olofk)
