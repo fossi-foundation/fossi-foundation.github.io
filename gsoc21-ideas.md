@@ -276,7 +276,7 @@ The RISC-V ISA will transform the world. U. Washington has received funding from
 *Mentors:* Ang Li
 
 ### Architectural Improvements to OpenPiton+Ariane
-[OpenPiton+Ariane](https://openpiton-blog.princeton.edu/2018/11/announcing-openpiton-with-ariane/) is a permissively-licensed RISC-V manycore processor, built as a collaboration between the [PULP Platform](https://www.pulp-platform.org/) from ETH Zürich and the [OpenPiton Platform](http://www.openpiton.org/) from Princeton University. We would like to co-optimise OpenPiton and Ariane in their combined platform, to improve performance of the processor both in FPGA emulation systems and for eventual silicon chips. Possible improvements include: adding a global branch predictor, introducing a multi-level TLB, supporting multiple outstanding memory transactions in the P-Mesh memory system, and widening the P-Mesh cache interface. We are also open to other projects aimed at improving the performance of aspects of either Ariane or OpenPiton.
+[OpenPiton+Ariane](https://openpiton-blog.princeton.edu/2018/11/announcing-openpiton-with-ariane/) is a permissively-licensed RISC-V manycore processor, built as a collaboration between the [PULP Platform](https://www.pulp-platform.org/) from ETH Zürich and the [OpenPiton Platform](http://www.openpiton.org/) from Princeton University. We would like to co-optimise OpenPiton and Ariane in their combined platform, to improve performance of the processor both in FPGA emulation systems and for eventual silicon chips. Possible improvements could be along the lines of: adding a global branch predictor, introducing a multi-level TLB, etc. We are also open to other projects aimed at improving the performance of aspects of either Ariane or OpenPiton.
 
 *Skill level:* Intermediate
 
@@ -284,26 +284,26 @@ The RISC-V ISA will transform the world. U. Washington has received funding from
 
 *Mentor:* Jonathan Balkind
 
-### Enhancing JuxtaPiton with X86 Support
-[JuxtaPiton](https://openpiton-blog.princeton.edu/2018/11/juxtapiton-taking-openpiton-heterogeneous-with-risc-v/) is the world's first open-source, general-purpose, heterogeneous-ISA processor. It is built on [OpenPiton](http://www.openpiton.org/) and is designed to provide a platform for answering questions about heterogeneous-ISA systems. JuxtaPiton supports both the [OpenSPARC](https://www.oracle.com/technetwork/systems/opensparc/index.html) T1 core and the [PicoRV32](https://github.com/cliffordwolf/picorv32) RISC-V core in a single system, but needs support for more ISAs to enable systems-level research. This project would entail integrating the open-source [ao486](https://github.com/alfikpl/ao486) core, which implements the 486 version of the x86 instruction set, into JuxtaPiton. This would enable running standard x86 Linux or other operating systems and start to untangle the unique issues that come with building a heterogeneous-ISA system.
+### Building Manycore SoCs with OpenPiton + LiteX
+[LiteX](https://github.com/enjoy-digital/litex) makes building FPGA-based SoCs easy. Using the Python hardware design library Migen, LiteX provides a variety of peripherals to enable users to build a complex SoC around a core of their choice. For this project, we would like to connect a manycore [OpenPiton](http://www.openpiton.org/) processor design in order to build a new manycore LiteX SoC.
 
 *Skill level:* Intermediate
 
-*Language/Tools:* Verilog, x86 assembly
+*Language/Tools:* Python (Migen), Verilog
 
 *Mentor:* Jonathan Balkind
 
-### Integrating the AnyCore Processor into OpenPiton
-[AnyCore](https://people.engr.ncsu.edu/ericro/research/anycore.htm) is an advanced superscalar processor developed at NC State University, designed to be highly configurable across parameters like issue width and pipeline depth. [OpenPiton](http://www.openpiton.org/) is a research platform for designing advanced chips from 1 core to 500 million cores, with a focus on providing a highly scalable cache-coherent memory system. This project would entail connecting the high performance AnyCore processor with OpenPiton's scalable P-Mesh memory system to build a completely new manycore processor, which runs the RISC-V ISA. The integration would involve writing an interface from AnyCore to P-Mesh, enhancing P-Mesh for higher performance, and implementing virtual memory in AnyCore.
+### Giving AnyCore an Open-Source FPU
+[AnyCore](https://people.engr.ncsu.edu/ericro/research/anycore.htm) is an advanced superscalar processor developed at NC State University, designed to be highly configurable across parameters like issue width and pipeline depth. This project would entail connecting an open-source Floating Point Unit (FPU) to the high performance AnyCore processor, which runs the RISC-V ISA.
 
-*Skill level:* Intermediate/Advanced
+*Skill level:* Beginner/Intermediate
 
-*Language/Tools:* Verilog, SystemVerilog, RISC-V
+*Language/Tools:* Verilog/SystemVerilog, RISC-V
 
 *Mentor:* Jonathan Balkind
 
-### 1000-core Behavioural Simulation of a Tiled Manycore
-The [OpenPiton](http://www.openpiton.org/) platform is designed to scale from 1 core to 500 million cores, but we must rely on slow behavioural simulation infrastructure to validate very large-scale designs. Existing verilog simulators don't scale well with such large designs, but tiled manycore processors which rely on networks-on-chip (NoCs) can use those NoCs to partition the simulation. This project would involve implementing a verilog simulation infrastructure (using Verilator) which is partitioned into multiple simulation instances which communicate using OpenMPI, to enable verilog simulation of a 1000-core processor.
+### Parallelising Verilog RTL Simulation Using MPI
+Verilog simulators don’t scale well in speed when hardware designs become very large, but modern processors rely on networks-on-chip (NoCs) which could be used to partition the simulation. This project would involve implementing a verilog simulation infrastructure (using [Verilator](https://www.veripool.org/wiki/verilator)) which is partitioned into multiple simulation instances which communicate using OpenMPI, to enable verilog simulation of a large design (like a 1000-core processor).
 
 *Skill level:* Intermediate
 
