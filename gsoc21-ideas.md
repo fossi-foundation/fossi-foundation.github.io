@@ -96,7 +96,7 @@ Control Flow tracing (or instruction tracing) is the process of observing a prog
 
 To transmit traces efficiently from the chip to the host PC, trace compression must be applied. This compression reduces all non-essential parts of the trace, reducing it to (typically) only jump instructions where the target cannot be determined using the program binary.
 
-The goal of this project is to (a) find a good trace compression algorithm for instruction traces, and (b) implement it in System Verilog (on the hardware side) and C (on the software side) for the Open SoC Debug system.
+The goal of this project is to (a) find a good trace compression algorithm for instruction traces, and (b) implement it in SystemVerilog (on the hardware side) and C (on the software side) for the Open SoC Debug system.
 
 *Skill Level*: Intermediate
 
@@ -122,7 +122,7 @@ with trace compression and circular buffering.
 
 *Skill level*: Intermediate
 
-*Language/Tools*: System Verilog
+*Language/Tools*: SystemVerilog
 
 *Mentor:* [Stefan Wallentowitz](mailto:stefan@wallentowitz.de)
 
@@ -169,82 +169,112 @@ No matter which task you choose, you get unique insights into hardware (you can 
 
 ### WARP-V Many-Core in the Cloud
 
-*Details:* In the past two GSoCs, Akos Hadnagy, Ahmed Salman, and Alaa Salman helped to mature three ground-breaking projects that have received a good deal of attention:
+*Details:* In the past GSoCs, Akos Hadnagy, Ahmed Salman, Alaa Salman, Vineet Jain, and Shivam Potdar helped to mature three ground-breaking projects that have received a good deal of attention:
 
   1. [WARP-V](https://github.com/stevehoover/warp-v): a flexible TL-Verilog CPU core generator
   2. a library of [TL-Verilog "flow" components](https://github.com/stevehoover/tlv_flow_lib) (think STL for TL-Verilog)
   3. [1st CLaaS](https://github.com/stevehoover/1st-CLaaS): a framework for hardware acceleration of web/cloud applications using cloud FPGAs
 
-This year, these projects come together. A basic implementation of WARP-V on cloud FPGAs is in place using 1st CLaaS that utilizes the flow library. This project will evolve this single-core implementation to various many-core implementations.
+This year, these projects can come together as an accelerator microservice running on cloud FPGAs! WARP-V is our CPU core. The flow library provides a network-on-chip (NoC) (that is not well tested). And 1st-CLaaS gives us our cloud FPGA infrastructure. We already have a basic single-core implementation of [WARP-V in 1st CLaaS](https://github.com/stevehoover/1st-CLaaS/tree/master/apps/warpv) capable of loading a program from a web client, executing it, and returning a result value. And WARP-V already supports multiple cores using a simple NoC from the flow library (with one known remaining bug). This project will produce a functional multi-core running in the cloud.
 
-The remaining TL-Verilog code development is minimal and can be provided by the mentor. The main challenges will be:
+The first half of this project will demonstrate the three pieces coming together in "hello-world" fashion in simulation. The web client will load a program on a specified core and run that program which reads a status register containing the core ID, and returns it to the web client.
 
-  - debugging the design in simulation
-  - using Xilinx FPGA tools to constrain the implementations to reduce synthesis run time
-  - developing the FPGA many-core accelerator RISC-V (and/or other ISAs) assembly code
-  - developing the front-end web application to interface with the FPGA many-core (if student is capable)
+The remainder of the project can focus on any of the following, depending on the interests of the student:
 
-This project will no only produce many-core hardware accelerator PaaS's; it will also serve as a proof-point for TL-Verilog, WARP-V, 1st CLaaS, and the flow library and will help to mature them. It will help to introduce better design methodology and new compute models to the open-source silicon community and the industry.
+  - the maturity of the hardware functionality
+  - characterization and optimization of implementation(s) using Xilinx FPGA tools
+  - constraining the implementation using Xilinx FPGA tools to reduce synthesis run time
+  - developing test programs in RISC-V assembly language
+  - developing the front-end web application to interface with the FPGA many-core
 
-*Mentor:* [Steve Hoover](https://www.linkedin.com/in/steve-hoover-a44b607/) ([email](steve.hoover@redwoodeda.com))
+This project will not only lead to a highly-configurable many-core hardware accelerator PaaS; it will also:
 
-*Skill level:* Intermediate, Advanced
+  - serve to motivate the industry toward FPGA-accelerated web applications and FPGA-accelerated cloud computing
+  - demonstrate the flexibility of TL-Verilog and WARP-V to motivate the industry toward better design methodology
 
-*Languages/Tools:* TL-Verilog, Vivado (logic synthesis and simulation debug), GTKWave, Makerchip.com, AWS F1, and optionally: JavaScript, HTML5, sockets/Web Sockets
-
-
-### Evolving fractalvalley.net
-
-If you are excited about FPGA acceleration, but prefer web development, you can showcase the potential of cloud FPGAs without touching them. The current web front-end for <http://fractalvalley.net> is a quick-and-dirty hack that grew. It's time for a re-write with a proper framework. The back-end utilizes a Python webserver and would benefit from a Node.js implementation of server-side functions like video capture and playback and 3-D VR capabilities that are not currently robust enough to deploy.
- 
-*Skill level:* Intermediate
-
-*Languages/Tools:* JavaScript, HTML5, Angular/React, Node.js, database
-
-*Mentor:* [Steve Hoover](https://www.linkedin.com/in/steve-hoover-a44b607/) ([email](steve.hoover@redwoodeda.com))
-
-
-### Integration of WARP-V with RISC-V SoC
-
-WARP-V provides the CPU core only. It does not include a memory subsystem, I/O, etc. This project will integrate WARP-V with an existing RISC-V SoC, such as Rocket (written in Chisel), Ariane+OpenPiton, or DRAC.
-
-The corresponding RISC-V SoC tools would be used to simulate, debug, and characterize the design. The flexibility of WARP-V will enable an optimized implementation that matches the frequency of the surrounding logic.
-
-*Skill level:* Intermediate/Advanced
-
-*Languages/Tools:* Verilog, TL-Verilog, a RISC-V SoC platform
-
-*Mentor:* [Steve Hoover](https://www.linkedin.com/in/steve-hoover-a44b607/) ([email](steve.hoover@redwoodeda.com)), (maybe) Jonathan Balkind, (maybe) Guillem Cabo
-
-
-### TL-Verilog Timing Reports
-
-This project is an opportunity to build infrastructure that will elevate open-source silicon practices. TL-Verilog improves the design process by providing high-level context for design details. This project will help designers to relate timing information from synthesis tools back to TL-Verilog's higher-level context (hierarchy, pipelines, and transactions).
-
-You'll build scripts to map RTL signal names to their original TL-Verilog names. You'll apply this to timing reports from open source synthesis tools so timing information can be reported with respect to TL-Verilog source code.
-
-*Skill level:* Intermediate
-
-*Language/Tools:* QFlow, yosys, Perl/Python/other
-
-*Mentors:* Steve Hoover and possibly Tim Edwards (to be confirmed)
-
-
-### TL-Clash/TL-Chisel/TL-VHDL Definition
-
-The TL-X specification defines “transaction-level” language extensions that can, in theory, be applied to any underlying hardware description language. Today there is only support for Verilog as TL-Verilog. Others, such as TL-Clash, TL-Chisel, and TL-VHDL could also be supported. The first step is to define them in more detail.
-
-This project would provide a unique opportunity to write open source code that cannot be compiled :). This will help to define the support required in compilers for these language variants, and it will expose the benefits. While it would be possible to implement support in [TLV-Comp](https://github.com/ypyatnychko/tlv-comp), this step may be left as a future project.
-
-There is particular interest in TL-Clash, as it would combine the best of TL-X and Clash. TL-X is strong with sequential logic through its timing abstract modeling, and Clash is strong with combinational logic because of its advanced type system.
-
-This is an advanced project requiring skills with hardware modeling and hardware and software language theory.
+*Primary Mentor:* [Akos Hadnagy](https://www.linkedin.com/in/akos-hadnagy/) ([email](mailto:akos.hadnagy@gmail.com)), Secondary: [Steve Hoover](https://www.linkedin.com/in/steve-hoover-a44b607/) ([email](mailto:steve.hoover@redwoodeda.com))
 
 *Skill level:* Advanced
 
-*Language/Tools:* TL-Verilog, Clash/Haskell, Chisel/Scala, VHDL
+*Languages/Tools:* TL-Verilog, Vivado (logic synthesis and simulation debug), GTKWave, Makerchip.com, AWS F1, and optionally: JavaScript, HTML5
 
-*Mentors:* Steve Hoover, Jan Kuper(?)
+*Discussion:* [WARP-V LibreCores Gitter Room](https://gitter.im/librecores/warp-v), [1st CLaaS Gitter Room](https://gitter.im/librecores/fpga-webserver)
+
+
+### Integration of WARP-V with OpenPiton
+
+*Details:* In GSoC 2020, one of Shivam Potdar's accomplishments was to prepare the [WARP-V](https://github.com/stevehoover/warp-v) CPU core for integration with the [OpenPiton](https://parallel.princeton.edu/openpiton/) heterogeneous many-core framework. This project would aim to complete that integration.
+
+This will enable academic exploration of the combined flexibility benefits of OpenPiton and WARP-V. OpenPiton provides flexibility through the integration of different CPU cores. WARP-V provides flexibility of the CPU core itself. WARP-V can be optimized for the cycle-time of OpenPiton, and differently-configured WARP-V cores could be run within the same system along with other CPU cores.
+
+*Skill level:* Advanced
+
+*Languages/Tools:* Verilog, TL-Verilog
+
+*Co-mentors:* [Steve Hoover](https://www.linkedin.com/in/steve-hoover-a44b607/) ([email](mailto:steve.hoover@redwoodeda.com)), [Jonathan Balkind](https://www.linkedin.com/in/jbalkind/) ([email](mailtojbalkind@ucsb.edu)), [Akos Hadnagy](https://www.linkedin.com/in/akos-hadnagy/) ([email](mailto:akos.hadnagy@gmail.com))
+
+*Discussion:* [WARP-V LibreCores Gitter Room](https://gitter.im/librecores/warp-v), [OpenPiton LibreCores Gitter Room](https://gitter.im/librecores/openpiton)
+
+
+### WARP-V TensorCore Extension for Deep Learning
+
+*Details:* Deep Learning continues to be a key application for custom processors. The core operation in high-performance implementations are fused dot products and matrix multiply. This project will add a tensor core to the WARP-V RISC-V processor. The main challenges will be:
+
+  - developing the tensor core ISA
+  - debugging the design in simulation
+  - using Xilinx FPGA tools to optimize the implementation(s) (optionally)
+  - developing the integration with TVM or TensorFlow (optionally)
+
+This project will not only produce a Deep Learning hardware accelerator, it will also serve as a proof-point for a Deep Learning research platform to experiment with tensor operators and custom number systems.
+
+*Skill level:* Advanced
+
+*Language/Tools:* TL-Verilog, Makerchip, Xilinx tools
+
+*Mentor:* [Theodore Omtzigt](https://www.linkedin.com/in/theodoreomtzigt/) ([email](mailto:theo@stillwater-sc.com)), Secondary: [Akos Hadnagy](https://www.linkedin.com/in/akos-hadnagy/) ([email](mailto:akos.hadnagy@gmail.com))
+
+
+### Circuit Visualization
+
+*Details:* The Makerchip platform for open-source circuit design has introduced support for custom visualization of circuit simulations. This has been used to great success in RISC-V training and has other applicability as well. In fact, any circuit can be visualized in useful ways. A few examples can be opened from [this repo](https://github.com/stevehoover/makerchip_examples). Some circuits we would like to provide visibility into include:
+
+  - SweRV
+  - SERV
+  - TL-Verilog flow library
+  - BaseJump STL
+  - basic circuits for instructional purposes
+  - virtualized FPGA boards
+
+Visualization is written in (very straight-forward) JavaScript that has access to trace data from simulation and a canvas to draw on. A bit more detail on these ideas can be found [here](https://github.com/stevehoover/TL-V_Projects)
+
+*Skill level:* Beginner
+
+*Language/Tools:* JavaScript, Verilog/SystemVerilog/TL-Verilog
+
+*Mentor:* [Steve Hoover](https://www.linkedin.com/in/steve-hoover-a44b607/) ([email](mailto:steve.hoover@redwoodeda.com)), Secondary: [Akos Hadnagy](https://www.linkedin.com/in/akos-hadnagy/)
+
+
+### Block-Based Circuit Design
+
+*Details:* Two of the benefits of TL-Verilog are:
+
+  1. that it is far simpler syntactically than Verilog or VHDL (sure, it's an extension, but it obviates much of Verilog)
+  2. that you can do more with less
+
+We have already witnessed a [12-year-old coding a RISC-V core](https://riscv.org/blog/2020/12/risc-v-microarchitecture-for-kids-steve-hoover-redwood-eda/) using TL-Verilog. There is a real opportunity to introduce students to circuit design at a younger age.
+
+The [Scratch](https://scratch.mit.edu/) platform has gotten younger kids interested in programming through the use of block-based programming. Can we apply block-based programming to TL-Verilog?? It seems like.. maybe.. yes. This project will attempt to do so using [Blockly](https://developers.google.com/blockly).
+
+*Skill level:* Beginner
+
+*Language/Tools:* TL-Verilog, Blockly
+
+*Mentor:* [Steve Hoover](https://www.linkedin.com/in/steve-hoover-a44b607/) ([email](mailto:steve.hoover@redwoodeda.com))
+
+
+### Other TL-Verilog-Related Projects
+
+If you are interested in the TL-Verilog ecosystem, you might also consider any of these [TL-Verilog project ideas](https://github.com/stevehoover/TL-V_Projects). All would make excellent GSoC projects and mentors can be identified.
 
 
 ### LLVM Code Generation for RISC-V Open Source GPU
