@@ -216,6 +216,24 @@ This will enable academic exploration of the combined flexibility benefits of Op
 *Discussion:* [WARP-V LibreCores Gitter Room](https://gitter.im/librecores/warp-v), [OpenPiton LibreCores Gitter Room](https://gitter.im/librecores/openpiton)
 
 
+### WARP-V TensorCore Extension for Deep Learning
+
+*Details:* Deep Learning continues to be a key application for custom processors. The core operation in high-performance implementations are fused dot products and matrix multiply. This project will add a tensor core to the WARP-V RISC-V processor. The main challenges will be:
+
+  - developing the tensor core ISA
+  - debugging the design in simulation
+  - using Xilinx FPGA tools to optimize the implementation(s) (optionally)
+  - developing the integration with TVM or TensorFlow (optionally)
+
+This project will not only produce a Deep Learning hardware accelerator, it will also serve as a proof-point for a Deep Learning research platform to experiment with tensor operators and custom number systems.
+
+*Skill level:* Advanced
+
+*Language/Tools:* TL-Verilog, Makerchip, Xilinx tools
+
+*Mentor:* [Theodore Omtzigt](https://www.linkedin.com/in/theodoreomtzigt/) ([email](mailto:theo@stillwater-sc.com)), Secondary: [Akos Hadnagy](https://www.linkedin.com/in/akos-hadnagy/) ([email](mailto:akos.hadnagy@gmail.com))
+
+
 ### Circuit Visualization
 
 *Details:* The Makerchip platform for open-source circuit design has introduced support for custom visualization of circuit simulations. This has been used to great success in RISC-V training and has other applicability as well. In fact, any circuit can be visualized in useful ways. A few examples can be opened from [this repo](https://github.com/stevehoover/makerchip_examples). Some circuits we would like to provide visibility into include:
@@ -238,7 +256,7 @@ Visualization is written in (very straight-forward) JavaScript that has access t
 
 ### Block-Based Circuit Design
 
-Two of the benefits of TL-Verilog are:
+*Details:* Two of the benefits of TL-Verilog are:
 
   1. that it is far simpler syntactically than Verilog or VHDL (sure, it's an extension, but it obviates much of Verilog)
   2. that you can do more with less
