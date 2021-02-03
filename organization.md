@@ -90,7 +90,7 @@ help us reaching our goals, please don't hesitate to
   </ul>
 </div>
 <div class="col-lg-9 col-md-8 col-sm-9">
-  <h4>Philipp Wagner</h4>
+  <h4>Dr. Philipp Wagner</h4>
   A long-time free and open source veteran, Philipp has been involved in various projects over the last decade. With interests from web development to hardware architectures, he loves to bring together different communities and approaches.
   </div>
 </div>
