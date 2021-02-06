@@ -269,7 +269,7 @@ The [Scratch](https://scratch.mit.edu/) platform has gotten younger kids interes
 
 *Language/Tools:* TL-Verilog, Blockly
 
-*Mentor:* [Steve Hoover](https://www.linkedin.com/in/steve-hoover-a44b607/) ([email](mailto:steve.hoover@redwoodeda.com))
+*Mentors:* [Prof. Gayatri Mehta, UNT](https://electrical.engineering.unt.edu/people/gayatri-mehta) ([email](mailto:gayatri.mehta@unt.edu)) [Steve Hoover](https://www.linkedin.com/in/steve-hoover-a44b607/) ([email](mailto:steve.hoover@redwoodeda.com))
 
 
 ### Other TL-Verilog-Related Projects
