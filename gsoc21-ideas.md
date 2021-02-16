@@ -181,6 +181,15 @@ The [Scratch](https://scratch.mit.edu/) platform has gotten younger kids interes
 
 If you are interested in the TL-Verilog ecosystem, you might also consider any of these [TL-Verilog project ideas](https://github.com/stevehoover/TL-V_Projects). All would make excellent GSoC projects and mentors can be identified.
 
+
+### LLVM Code Generation for RISC-V Open Source GPU
+
+The RISC-V ISA will transform the world. Recently, U. Washington taped out an open source RISC-V manycore processor with 496 cores that hits 500 Billion RISC-V instructions per second in one chip. We have silicon up and running in our lab and are developing a second generation design based on results from the first generation, with a target of improving programmability. Our goal is to make this the defacto open source GPGPU design. (See bjump.org/manycore.) You will work to help design the CUDA-light programming environment using LLVM and make recommends for future versions of the architecture. For the second version, the design is hosted on Amazon F1, which allows us to simulate having the real chip even as we develop new features.
+
+*Skills:* Knowledgeable of LLVM
+
+*Mentors:* Michael Taylor
+
 ### Optimization of the BlackParrot Linux-Capable RISC-V Multicore
 
 The RISC-V ISA will transform the world. U. Washington has received funding from DARPA to develop the world's first truly open RISC-V Linux-capable multicore implementation. In contrast to prior projects, our SystemVerilog-based design is truly open and we encourage external contributors, and ultimately intend to hand the design off to the world to maintain.  By this summer, we will have the "genesis release" of the core ready, but the focus is on functionality rather than extreme performance or energy efficiency. We are looking for folks to help optimize parts of the design and take it to the next level.
