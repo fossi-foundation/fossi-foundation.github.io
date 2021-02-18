@@ -11,6 +11,7 @@ In this way we enable experienced community members to mentor students while the
 Around January each year we ask our community members for project ideas they'd like to mentor.
 These ideas are then collected and published.
 
+* [GSoC 2021](gsoc21-ideas.md)
 * [GSoC 2020](gsoc20-ideas.md)
 * [GSoC 2019](gsoc19-ideas.md)
 * [GSoC 2018](gsoc18-ideas.md)
