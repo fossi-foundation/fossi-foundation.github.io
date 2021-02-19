@@ -4,10 +4,12 @@ title: "Google Summer of Code 2021 - Ideas for Projects"
 ---
 
 FOSSi Foundation is applying as an umbrella organization in Google
-Summer of Code 2021. That means, that we give small projects the
+Summer of Code 2021. That means that we give small projects the
 chance to participate in the program. Below you can find a list of
 ideas that the projects had, but students are encouraged to propose
-their own ideas.
+their own ideas. These projects are mostly open-ended and can be
+tailored to your level of experience, assuming that you have the 
+appropriate set of required skills for the particular project idea.
 
 Whether you’re an aspiring student or mentor, feel free to contact us,
 either through the private GSoC-specific mailing list [gsoc@fossi-foundation.org](mailto:gsoc@fossi-foundation.org),
@@ -20,6 +22,60 @@ Looking forward to meet you all!
 * TOC
 {:toc}
 
+
+### Compressed instruction support for SERV
+
+The award-winning [SERV](https://github.com/olofk/serv) is the world's smallest RISC-V CPU
+
+SERV currently implements the RISC-V RV32I base instruction set and a small part of the privileged specification to support timer interrupts which are required for running an RTOS such as Zephyr. While the CPU core is small, it does not support the RISC-V compressed (C) instruction set extension. Adding support for this would reduce code size for applications running on SERV.
+
+The goal of this project is to add support for the RISC-V compressed instruction set extension in SERV
+
+*Skill level:* intermediate
+
+*Language/Tools:* Verilog
+
+*Mentors:*
+[Olof Kindgren](mailto:olof.kindgren@gmail.com), [@olofk on github](https://github.com/olofk)
+
+
+### Logical Equivalence Checks with LLHD
+
+The Low Level Hardware Description language, or [LLHD](https://llhd.io/) in short, is simple intermediate representation that is able to capture the semantics of today's hardware description languages *including* their behavioral, verification, and testing features. The IR has been developed alongside the [Moore](https://github.com/fabianschuiki/moore) compiler and published as a [paper](https://arxiv.org/pdf/2004.03494) at PLDI 2020. Since then, we have been busy merging LLHD into the [CIRCT](https://github.com/llvm/circt) project, a larger joint effort to develop Circuit IR Compilers and Tools.
+
+When working with LLHD, you can assume that all the nasty parts of languages like SystemVerilog or VHDL have already been taken care of by a language frontend, and you are dealing with a much simpler but still complete representation of a circuit. As of today there are already a basic reference simulator as well as a faster LLVM-JIT-compilation-based simulator available for LLHD.
+
+As a proof of concept for LLHD's verification prowess we would like you to implement a basic Logical Equivalence Check (LEC) for LLHD designs. This is essentially the process of taking two circuits and formally proving (or disproving) that they logically do the same thing, even if they use a different combination of logic gates to do so. This is a crucial step in chip design flows, to ensure that a synthesizer has properly translated RTL into a gate-level implementation, and that further place-and-route work did not violate the operation of a design.
+
+In this project you will take two LLHD designs, translate them into the fundamental boolean equations, and formulate a satisfiability problem for an existing optimized SAT/SMT solver with them. You can scale this project's complexity to your liking, for example simplifying by looking only at combinational circuits, or complicating by finding ways to use registers as invariant anchor points in a circuit.
+
+SAT/SMT solvers are tools that are extremely fun and satisfying to work with, but generally don't get the love they deserve in the circuit design community. With this project you'll be able to contribute to a key process in the ASIC design flow and generally show that, with good existing abstractions such as LLHD and the standardized solver file formats, it is very easy to create seemingly daunting formal tools for an open ASIC world.
+
+*Skill Level:* Intermediate to Advanced
+
+*Language/Tools:* C++, SAT/SMT Solver (e.g. Z3, Boolector, Bitwuzla, or others)
+
+*Mentor:* [Fabian Schuiki](mailto:fschuiki@iis.ee.ethz.ch)
+
+
+### Circuit Visualization
+
+*Details:* The Makerchip platform for open-source circuit design has introduced support for custom visualization of circuit simulations. This has been used to great success in RISC-V training and has other applicability as well. In fact, any circuit can be visualized in useful ways. A few examples can be opened from [this repo](https://github.com/stevehoover/makerchip_examples). Some circuits we would like to provide visibility into include:
+
+  - SweRV
+  - SERV
+  - TL-Verilog flow library
+  - BaseJump STL
+  - basic circuits for instructional purposes
+  - virtualized FPGA boards
+
+Visualization is written in (very straight-forward) JavaScript that has access to trace data from simulation and a canvas to draw on. A bit more detail on these ideas can be found [here](https://github.com/stevehoover/TL-V_Projects)
+
+*Skill level:* Beginner
+
+*Language/Tools:* JavaScript, Verilog/SystemVerilog/TL-Verilog
+
+*Mentor:* [Steve Hoover](https://www.linkedin.com/in/steve-hoover-a44b607/) ([email](mailto:steve.hoover@redwoodeda.com)), Secondary: [Akos Hadnagy](https://www.linkedin.com/in/akos-hadnagy/)
 
 
 ### Create your own LibreCores, or contribute to an existing one
@@ -42,6 +98,24 @@ etc. So, it is important that you discuss a proposal intensively.
 
 *Mentor:* We will find the mentor with you,
  [LibreCores GSoC team](mailto:gsoc@fossi-foundation.org)
+
+
+### WARP-V TensorCore Extension for Deep Learning
+
+*Details:* Deep Learning continues to be a key application for custom processors. The core operation in high-performance implementations are fused dot products and matrix multiply. This project will add a tensor core to the WARP-V RISC-V processor. The main challenges will be:
+
+  - developing the tensor core ISA
+  - debugging the design in simulation
+  - using Xilinx FPGA tools to optimize the implementation(s) (optionally)
+  - developing the integration with TVM or TensorFlow (optionally)
+
+This project will not only produce a Deep Learning hardware accelerator, it will also serve as a proof-point for a Deep Learning research platform to experiment with tensor operators and custom number systems.
+
+*Skill level:* Advanced
+
+*Language/Tools:* TL-Verilog, Makerchip, Xilinx tools
+
+*Mentor:* [Theodore Omtzigt](https://www.linkedin.com/in/theodoreomtzigt/) ([email](mailto:theo@stillwater-sc.com)), Secondary: [Akos Hadnagy](https://www.linkedin.com/in/akos-hadnagy/) ([email](mailto:akos.hadnagy@gmail.com))
 
 
 ### Continuous Integration for Hardware Projects on LibreCores CI
@@ -70,6 +144,16 @@ Prerequisites:
 *Language/Tools:* Verilog/VHDL/.../Python, Jenkins, Groovy
 
 *Mentors:* [Stefan Wallentowitz](mailto:stefan@wallentowitz.de)
+
+
+### Building Manycore SoCs with OpenPiton + LiteX
+[LiteX](https://github.com/enjoy-digital/litex) makes building FPGA-based SoCs easy. Using the Python hardware design library Migen, LiteX provides a variety of peripherals to enable users to build a complex SoC around a core of their choice. For this project, we would like to connect a manycore [OpenPiton](http://www.openpiton.org/) processor design in order to build a new manycore LiteX SoC.
+
+*Skill level:* Intermediate
+
+*Language/Tools:* Python (Migen), Verilog
+
+*Mentor:* [Jonathan Balkind](mailto:jbalkind@ucsb.edu)
 
 
 ### WARP-V Many-Core in the Cloud
@@ -106,6 +190,26 @@ This project will not only lead to a highly-configurable many-core hardware acce
 *Discussion:* [WARP-V LibreCores Gitter Room](https://gitter.im/librecores/warp-v), [1st CLaaS Gitter Room](https://gitter.im/librecores/fpga-webserver)
 
 
+### Embench IoT OpenRISC port
+
+The [Embench](https://www.embench.org/news.html) benchmark suite is a modern tool used to measure embedded processor and compiler toolchain performance.  The [Embench IoT project](https://github.com/embench/embench-iot) has ports for ARM, RISC-V and other embedded processors.  The goal of this project will be to port Embench to run the OpenRISC toolchain and collect benchmarks.  The benchmarks should be recorded at [Embench IoT results](https://github.com/embench/embench-iot-results) to be able to compare OpenRISC vs other popular CPUs.
+
+*Skill level:* Easy
+
+*Language/Tools:* Shell scripting, C, Makefile, Python
+
+*Mentor:* [Stafford Horne](mailto:shorne@gmail.com)
+
+
+### Optimization of the BlackParrot Linux-Capable RISC-V Multicore
+
+The RISC-V ISA will transform the world. U. Washington has received funding from DARPA to develop the world's first truly open RISC-V Linux-capable multicore implementation. In contrast to prior projects, our SystemVerilog-based design is truly open and we encourage external contributors, and ultimately intend to hand the design off to the world to maintain.  By this summer, we will have the "genesis release" of the core ready, but the focus is on functionality rather than extreme performance or energy efficiency. We are looking for folks to help optimize parts of the design and take it to the next level.
+
+*Skills:* Knowledgeable of SystemVerilog and Computer Architecture.
+
+*Mentors:* [Dan Petrisko](mailto:petrisko@cs.washington.edu)
+
+
 ### Integration of WARP-V with OpenPiton
 
 *Details:* In GSoC 2020, one of Shivam Potdar's accomplishments was to prepare the [WARP-V](https://github.com/stevehoover/warp-v) CPU core for integration with the [OpenPiton](https://parallel.princeton.edu/openpiton/) heterogeneous many-core framework. This project would aim to complete that integration.
@@ -121,42 +225,29 @@ This will enable academic exploration of the combined flexibility benefits of Op
 *Discussion:* [WARP-V LibreCores Gitter Room](https://gitter.im/librecores/warp-v), [OpenPiton LibreCores Gitter Room](https://gitter.im/librecores/openpiton)
 
 
-### WARP-V TensorCore Extension for Deep Learning
+### Improve Test Coverage of the Moore HDL Compiler
 
-*Details:* Deep Learning continues to be a key application for custom processors. The core operation in high-performance implementations are fused dot products and matrix multiply. This project will add a tensor core to the WARP-V RISC-V processor. The main challenges will be:
+[Moore](https://github.com/fabianschuiki/moore) is a compiler for SystemVerilog and VHDL hardware designs. Its goal is world domination by finally moving the burden of implementing SV and VHDL out of tools like synthesizers and simulators and into a separate frontend, very much like what Clang and LLVM did for the software world. In contrast to other projects that focus on specific use cases such as synthesis or netlists processing, Moore strives to support the entirety of the SV and VHDL languages. As output the compiler produces [LLHD IR](https://llhd.io/), a simple intermediate representation that is able to capture the semantics of today's hardware description languages *including* their behavioral, verification, and testing features. (See also the [LLHD paper](https://arxiv.org/pdf/2004.03494) from PLDI 2020 for details.)
 
-  - developing the tensor core ISA
-  - debugging the design in simulation
-  - using Xilinx FPGA tools to optimize the implementation(s) (optionally)
-  - developing the integration with TVM or TensorFlow (optionally)
+We would love to have you help make Moore even better! Since the input languages are very complex, a key aspect of Moore is to perform well on existing test suites and benchmarks. The [SymbiFlow](https://github.com/SymbiFlow) project maintains a [large suite of SystemVerilog tests](https://symbiflow.github.io/sv-tests-results/) where Moore is also represented. The goal of this project is to go into these tests and extend and improve the Moore compiler to support more of the use cases that are currently failing. You'll be able to look for juicy optimization targets and common reasons of failure, fix them, and reap the benefits of seeing a lot more green on this dashboard!
 
-This project will not only produce a Deep Learning hardware accelerator, it will also serve as a proof-point for a Deep Learning research platform to experiment with tensor operators and custom number systems.
+The Moore compiler is written in Rust. Don't be scared if you haven't touched Rust before -- if you know C or C++ you'll feel right at home. The main language we're currently tackling with Moore right now is SystemVerilog, so either knowing the language a bit or not being scared of looking into language reference manual will be useful.
 
-*Skill level:* Advanced
+*Skill Level:* Advanced
 
-*Language/Tools:* TL-Verilog, Makerchip, Xilinx tools
+*Language/Tools:* Rust, SystemVerilog
 
-*Mentor:* [Theodore Omtzigt](https://www.linkedin.com/in/theodoreomtzigt/) ([email](mailto:theo@stillwater-sc.com)), Secondary: [Akos Hadnagy](https://www.linkedin.com/in/akos-hadnagy/) ([email](mailto:akos.hadnagy@gmail.com))
+*Mentor:* [Fabian Schuiki](mailto:fschuiki@iis.ee.ethz.ch)
 
 
-### Circuit Visualization
+### Giving AnyCore an Open-Source FPU
+[AnyCore](https://people.engr.ncsu.edu/ericro/research/anycore.htm) is an advanced superscalar processor developed at NC State University, designed to be highly configurable across parameters like issue width and pipeline depth. This project would entail connecting an open-source Floating Point Unit (FPU) to the high performance AnyCore processor, which runs the RISC-V ISA.
 
-*Details:* The Makerchip platform for open-source circuit design has introduced support for custom visualization of circuit simulations. This has been used to great success in RISC-V training and has other applicability as well. In fact, any circuit can be visualized in useful ways. A few examples can be opened from [this repo](https://github.com/stevehoover/makerchip_examples). Some circuits we would like to provide visibility into include:
+*Skill level:* Beginner/Intermediate
 
-  - SweRV
-  - SERV
-  - TL-Verilog flow library
-  - BaseJump STL
-  - basic circuits for instructional purposes
-  - virtualized FPGA boards
+*Language/Tools:* Verilog/SystemVerilog, RISC-V
 
-Visualization is written in (very straight-forward) JavaScript that has access to trace data from simulation and a canvas to draw on. A bit more detail on these ideas can be found [here](https://github.com/stevehoover/TL-V_Projects)
-
-*Skill level:* Beginner
-
-*Language/Tools:* JavaScript, Verilog/SystemVerilog/TL-Verilog
-
-*Mentor:* [Steve Hoover](https://www.linkedin.com/in/steve-hoover-a44b607/) ([email](mailto:steve.hoover@redwoodeda.com)), Secondary: [Akos Hadnagy](https://www.linkedin.com/in/akos-hadnagy/)
+*Mentor:* [Jonathan Balkind](mailto:jbalkind@ucsb.edu)
 
 
 ### Block-Based Circuit Design
@@ -177,17 +268,20 @@ The [Scratch](https://scratch.mit.edu/) platform has gotten younger kids interes
 *Mentors:* [Prof. Gayatri Mehta, UNT](https://electrical.engineering.unt.edu/people/gayatri-mehta) ([email](mailto:gayatri.mehta@unt.edu)) [Steve Hoover](https://www.linkedin.com/in/steve-hoover-a44b607/) ([email](mailto:steve.hoover@redwoodeda.com))
 
 
+### Parallelising Verilog RTL Simulation Using MPI
+Verilog simulators don’t scale well in speed when hardware designs become very large, but modern processors rely on networks-on-chip (NoCs) which could be used to partition the simulation. This project would involve implementing a verilog simulation infrastructure (using [Verilator](https://www.veripool.org/wiki/verilator)) which is partitioned into multiple simulation instances which communicate using OpenMPI, to enable verilog simulation of a large design (like a 1000-core processor).
+
+*Skill level:* Intermediate
+
+*Language/Tools:* Verilog, C++, OpenMPI
+
+*Mentor:* [Jonathan Balkind](mailto:jbalkind@ucsb.edu)
+
+
 ### Other TL-Verilog-Related Projects
 
 If you are interested in the TL-Verilog ecosystem, you might also consider any of these [TL-Verilog project ideas](https://github.com/stevehoover/TL-V_Projects). All would make excellent GSoC projects and mentors can be identified.
 
-### Optimization of the BlackParrot Linux-Capable RISC-V Multicore
-
-The RISC-V ISA will transform the world. U. Washington has received funding from DARPA to develop the world's first truly open RISC-V Linux-capable multicore implementation. In contrast to prior projects, our SystemVerilog-based design is truly open and we encourage external contributors, and ultimately intend to hand the design off to the world to maintain.  By this summer, we will have the "genesis release" of the core ready, but the focus is on functionality rather than extreme performance or energy efficiency. We are looking for folks to help optimize parts of the design and take it to the next level.
-
-*Skills:* Knowledgeable of SystemVerilog and Computer Architecture.
-
-*Mentors:* Michael Taylor
 
 ### Architectural Improvements to OpenPiton+Ariane
 [OpenPiton+Ariane](https://openpiton-blog.princeton.edu/2018/11/announcing-openpiton-with-ariane/) is a permissively-licensed RISC-V manycore processor, built as a collaboration between the [PULP Platform](https://www.pulp-platform.org/) from ETH Zürich and the [OpenPiton Platform](http://www.openpiton.org/) from Princeton University. We would like to co-optimise OpenPiton and Ariane in their combined platform, to improve performance of the processor both in FPGA emulation systems and for eventual silicon chips. Possible improvements could be along the lines of: adding a global branch predictor, introducing a multi-level TLB, etc. We are also open to other projects aimed at improving the performance of aspects of either Ariane or OpenPiton.
@@ -196,34 +290,8 @@ The RISC-V ISA will transform the world. U. Washington has received funding from
 
 *Language/Tools:* Verilog, SystemVerilog, RISC-V
 
-*Mentor:* Jonathan Balkind
+*Mentor:* [Jonathan Balkind](mailto:jbalkind@ucsb.edu)
 
-### Building Manycore SoCs with OpenPiton + LiteX
-[LiteX](https://github.com/enjoy-digital/litex) makes building FPGA-based SoCs easy. Using the Python hardware design library Migen, LiteX provides a variety of peripherals to enable users to build a complex SoC around a core of their choice. For this project, we would like to connect a manycore [OpenPiton](http://www.openpiton.org/) processor design in order to build a new manycore LiteX SoC.
-
-*Skill level:* Intermediate
-
-*Language/Tools:* Python (Migen), Verilog
-
-*Mentor:* Jonathan Balkind
-
-### Giving AnyCore an Open-Source FPU
-[AnyCore](https://people.engr.ncsu.edu/ericro/research/anycore.htm) is an advanced superscalar processor developed at NC State University, designed to be highly configurable across parameters like issue width and pipeline depth. This project would entail connecting an open-source Floating Point Unit (FPU) to the high performance AnyCore processor, which runs the RISC-V ISA.
-
-*Skill level:* Beginner/Intermediate
-
-*Language/Tools:* Verilog/SystemVerilog, RISC-V
-
-*Mentor:* Jonathan Balkind
-
-### Parallelising Verilog RTL Simulation Using MPI
-Verilog simulators don’t scale well in speed when hardware designs become very large, but modern processors rely on networks-on-chip (NoCs) which could be used to partition the simulation. This project would involve implementing a verilog simulation infrastructure (using [Verilator](https://www.veripool.org/wiki/verilator)) which is partitioned into multiple simulation instances which communicate using OpenMPI, to enable verilog simulation of a large design (like a 1000-core processor).
-
-*Skill level:* Intermediate
-
-*Language/Tools:* Verilog, C++, OpenMPI
-
-*Mentor:* Jonathan Balkind
 
 ### OpenRISC formal
 
@@ -235,48 +303,6 @@ The [OpenRISC](http://openrisc.io/) project dates back to 2000 and defines an op
 
 *Mentor:* [Stafford Horne](mailto:shorne@gmail.com)
 
-### Embench IoT OpenRISC port
-
-The [Embench](https://www.embench.org/news.html) benchmark suite is a modern tool used to measure embedded processor and compiler toolchain performance.  The [Embench IoT project](https://github.com/embench/embench-iot) has ports for ARM, RISC-V and other embedded processors.  The goal of this project will be to port Embench to run the OpenRISC toolchain and collect benchmarks.  The benchmarks should be recorded at [Embench IoT results](https://github.com/embench/embench-iot-results) to be able to compare OpenRISC vs other popular CPUs.
-
-*Skill level:* Easy
-
-*Language/Tools:* Shell scripting, C, Makefile, Python
-
-*Mentor:* [Stafford Horne](mailto:shorne@gmail.com)
-
-### Design and Integration of (n)Migen IIR Fixpoint Filters into pyFDA
-
-[Python Filter Design and Analysis Tool (pyFDA)](https://github.com/chipmuenk/pyfda) is a modular open source tool for designing and simulating FIR and IIR digital filters.
-
-The recent integration of [migen](https://github.com/m-labs/migen) allows simulation of fixpoint filters and export of Verilog netlists that can be used e.g. in an FPGA design flow. Currently, only a direct form FIR filter topology is implemented
-in migen as a proof of concept. Simulation and design of IIR fixpoint filters would be highly desirable as these filters require careful scaling and verification with fixpoint arithmetics.
-
-The goal of this project is to implement more IIR fixpoint filters in [migen](https://github.com/m-labs/migen) or, preferrably, its successor [nMigen](https://github.com/m-labs/nmigen), and integrate them into pyFDA.
-
-The student should first implement a basic IIR (direct form) filter in (n)Migen with a python testbench to become acquainted with (n)Migen. In the next step, this filter is integrated into pyFDA. Depending on the speed of progress, more advanced filters like cascaded IIR, LDI, state-variable ... filters and their testbenches can be implemented and integrated. Quality is more important than quantity, well documented and structured code is a main project objective.
-
-*Skill level:* intermediate
-
-*Language/Tools:* Python, some knowledge of fixpoint arithmetics and DSP and Verilog or VHDL. Basic knowledge of (n)migen would be great but can be acquired during the project.
-
-*Mentors:*
-[Christian Muenker](mailto:chipmuenk@gmail.com), [@chipmuenk on github](https://github.com/chipmuenk)
-
-### Compressed instruction support for SERV
-
-The award-winning [SERV](https://github.com/olofk/serv) is the world's smallest RISC-V CPU
-
-SERV currently implements the RISC-V RV32I base instruction set and a small part of the privileged specification to support timer interrupts which are required for running an RTOS such as Zephyr. While the CPU core is small, it does not support the RISC-V compressed (C) instruction set extension. Adding support for this would reduce code size for applications running on SERV.
-
-The goal of this project is to add support for the RISC-V compressed instruction set extension in SERV
-
-*Skill level:* intermediate
-
-*Language/Tools:* Verilog
-
-*Mentors:*
-[Olof Kindgren](mailto:olof.kindgren@gmail.com), [@olofk on github](https://github.com/olofk)
 
 ### Extend LibreCores.org
 
@@ -290,19 +316,6 @@ You can find a non-exhaustive [list of available tasks in our documentation](htt
 
 *Mentor:* [Philipp Wagner](mailto:mail@philipp-wagner.com)
 
-### Improve Test Coverage of the Moore HDL Compiler
-
-[Moore](https://github.com/fabianschuiki/moore) is a compiler for SystemVerilog and VHDL hardware designs. Its goal is world domination by finally moving the burden of implementing SV and VHDL out of tools like synthesizers and simulators and into a separate frontend, very much like what Clang and LLVM did for the software world. In contrast to other projects that focus on specific use cases such as synthesis or netlists processing, Moore strives to support the entirety of the SV and VHDL languages. As output the compiler produces [LLHD IR](https://llhd.io/), a simple intermediate representation that is able to capture the semantics of today's hardware description languages *including* their behavioral, verification, and testing features. (See also the [LLHD paper](https://arxiv.org/pdf/2004.03494) from PLDI 2020 for details.)
-
-We would love to have you help make Moore even better! Since the input languages are very complex, a key aspect of Moore is to perform well on existing test suites and benchmarks. The [SymbiFlow](https://github.com/SymbiFlow) project maintains a [large suite of SystemVerilog tests](https://symbiflow.github.io/sv-tests-results/) where Moore is also represented. The goal of this project is to go into these tests and extend and improve the Moore compiler to support more of the use cases that are currently failing. You'll be able to look for juicy optimization targets and common reasons of failure, fix them, and reap the benefits of seeing a lot more green on this dashboard!
-
-The Moore compiler is written in Rust. Don't be scared if you haven't touched Rust before -- if you know C or C++ you'll feel right at home. The main language we're currently tackling with Moore right now is SystemVerilog, so either knowing the language a bit or not being scared of looking into language reference manual will be useful.
-
-*Skill Level:* Advanced
-
-*Language/Tools:* Rust, SystemVerilog
-
-*Mentor:* [Fabian Schuiki](mailto:fschuiki@iis.ee.ethz.ch)
 
 ### Push a Design through the Moore HDL Compiler
 
@@ -318,20 +331,4 @@ The Moore compiler is written in Rust. Don't be scared if you haven't touched Ru
 
 *Mentor:* [Fabian Schuiki](mailto:fschuiki@iis.ee.ethz.ch)
 
-### Logical Equivalence Checks with LLHD
 
-The Low Level Hardware Description language, or [LLHD](https://llhd.io/) in short, is simple intermediate representation that is able to capture the semantics of today's hardware description languages *including* their behavioral, verification, and testing features. The IR has been developed alongside the [Moore](https://github.com/fabianschuiki/moore) compiler and published as a [paper](https://arxiv.org/pdf/2004.03494) at PLDI 2020. Since then, we have been busy merging LLHD into the [CIRCT](https://github.com/llvm/circt) project, a larger joint effort to develop Circuit IR Compilers and Tools.
-
-When working with LLHD, you can assume that all the nasty parts of languages like SystemVerilog or VHDL have already been taken care of by a language frontend, and you are dealing with a much simpler but still complete representation of a circuit. As of today there are already a basic reference simulator as well as a faster LLVM-JIT-compilation-based simulator available for LLHD.
-
-As a proof of concept for LLHD's verification prowess we would like you to implement a basic Logical Equivalence Check (LEC) for LLHD designs. This is essentially the process of taking two circuits and formally proving (or disproving) that they logically do the same thing, even if they use a different combination of logic gates to do so. This is a crucial step in chip design flows, to ensure that a synthesizer has properly translated RTL into a gate-level implementation, and that further place-and-route work did not violate the operation of a design.
-
-In this project you will take two LLHD designs, translate them into the fundamental boolean equations, and formulate a satisfiability problem for an existing optimized SAT/SMT solver with them. You can scale this project's complexity to your liking, for example simplifying by looking only at combinational circuits, or complicating by finding ways to use registers as invariant anchor points in a circuit.
-
-SAT/SMT solvers are tools that are extremely fun and satisfying to work with, but generally don't get the love they deserve in the circuit design community. With this project you'll be able to contribute to a key process in the ASIC design flow and generally show that, with good existing abstractions such as LLHD and the standardized solver file formats, it is very easy to create seemingly daunting formal tools for an open ASIC world.
-
-*Skill Level:* Intermediate to Advanced
-
-*Language/Tools:* C++, SAT/SMT Solver (e.g. Z3, Boolector, Bitwuzla, or others)
-
-*Mentor:* [Fabian Schuiki](mailto:fschuiki@iis.ee.ethz.ch)
