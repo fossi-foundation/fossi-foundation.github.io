@@ -40,7 +40,7 @@ We expect all students and mentors to adhere to them.
   </div>
   <div class="col-md-6">
     <p>
-    Students are <a href="https://developers.google.com/open-source/gsoc/faq#how_much_time_does_gsoc_participation_take">expected to work full-time, at least 30 hours a week,</a> on their project for the whole GSoC duration.
+    Students are <a href="https://developers.google.com/open-source/gsoc/faq#how_much_time_does_gsoc_participation_take">expected to work on average, at least 18 hours a week,</a> on their project for the GSoC duration.
     </p>
     <p>
     Each proposed project needs to have two mentors with at least
