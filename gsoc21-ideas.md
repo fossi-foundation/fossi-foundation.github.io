@@ -39,6 +39,17 @@ The goal of this project is to add support for the RISC-V compressed instruction
 [Olof Kindgren](mailto:olof.kindgren@gmail.com), [@olofk on github](https://github.com/olofk)
 
 
+### Porting BaseJump STL to FuseSoc
+
+*Details:* FuseSoC is a package manager and set of build tools for reusable hardware building blocks, which makes it easy to share designs between projects and reuse open IP. BaseJump STL is a comprehensive hardware library for SystemVerilog that seeks to contain all of the commonly used hardware primitives, much as the C++ Standard Template Library does with software primitives. This project is to port BaseJumpSTL to FuseSoC so that new hardware projects can hit the ground running and reuse hand-optimized IP cores rather than re-designing and re-debugging.
+
+*Skill level:* Beginner
+
+*Language/Tool:* SystemVerilog, Python
+
+*Mentor:* [Michael Taylor](mailto:prof.taylor@gmail.com)
+
+
 ### Logical Equivalence Checks with LLHD
 
 The Low Level Hardware Description language, or [LLHD](https://llhd.io/) in short, is simple intermediate representation that is able to capture the semantics of today's hardware description languages *including* their behavioral, verification, and testing features. The IR has been developed alongside the [Moore](https://github.com/fabianschuiki/moore) compiler and published as a [paper](https://arxiv.org/pdf/2004.03494) at PLDI 2020. Since then, we have been busy merging LLHD into the [CIRCT](https://github.com/llvm/circt) project, a larger joint effort to develop Circuit IR Compilers and Tools.
@@ -201,16 +212,6 @@ The [Embench](https://www.embench.org/news.html) benchmark suite is a modern too
 *Mentor:* [Stafford Horne](mailto:shorne@gmail.com)
 
 
-### Porting BaseJump STL to FuseSoc
-
-*Details:* FuseSoC is a package manager and set of build tools for reusable hardware building blocks, which makes it easy to share designs between projects and reuse open IP. BaseJump STL is a comprehensive hardware library for SystemVerilog that seeks to contain all of the commonly used hardware primitives, much as the C++ Standard Template Library does with software primitives. This project is to port BaseJumpSTL to FuseSoC so that new hardware projects can hit the ground running and reuse hand-optimized IP cores rather than re-designing and re-debugging.
-
-*Skill level:* Beginner
-
-*Language/Tool:* SystemVerilog, Python
-
-*Mentor:* [Michael Taylor](mailto:prof.taylor@gmail.com)
-
 ### Architectural Enhancement of the BlackParrot Linux-Capable RISC-V Multicore
 
 *Details:* BlackParrot aims to be the default open-source, Linux-capable, cache-coherent, RV64GC multicore used by the world. It has been FPGA and Silicon-validated as an industry-strength design with leading efficiency. But we need your help to make it even better! We have projects in arithmetic/logic design, FPGA optimization, additional parameterizations, memory system enhancements… For newer hardware designers or those just looking to get their feet wet, simply trying out BlackParrot in a new environment to shake out setup or documentation bugs is a great help.
@@ -223,15 +224,6 @@ The [Embench](https://www.embench.org/news.html) benchmark suite is a modern too
 
 *Mentor:* [Dan Petrisko](mailto:petrisko@cs.washington.edu)
 
-### Co-optimizing Debian with BlackParrot
-
-*Details:* The RISC-V ISA is transforming the world of computing. While much research has goes into optimizing RISC-V cores for generally accepted industry and academic benchmarks, little research has been done to study applications running on these cores in their normal environment: running on a full OS like Debian. This project is to profile the Debian OS running on a Linux-capable RISC-V multicore, BlackParrot, to determine where bottlenecks exist, how to tweak software and hardwares parameters and examine the impact of the presence or omittance of various RISC-V extensions.
-
-*Skill level:* Intermediate to Advanced
-
-*Language/Tool:* C, Makefile, Bash, SystemVerilog
-
-*Mentors:* [Dan Petrisko](mailto:petrisko@cs.washington.edu), [Farzam Gilani](mailto:farzamgl@uw.edu)
 
 ### Integration of WARP-V with OpenPiton
 
@@ -261,6 +253,17 @@ The Moore compiler is written in Rust. Don't be scared if you haven't touched Ru
 *Language/Tools:* Rust, SystemVerilog
 
 *Mentor:* [Fabian Schuiki](mailto:fschuiki@iis.ee.ethz.ch)
+
+
+### Co-optimizing Debian with BlackParrot
+
+*Details:* The RISC-V ISA is transforming the world of computing. While much research has goes into optimizing RISC-V cores for generally accepted industry and academic benchmarks, little research has been done to study applications running on these cores in their normal environment: running on a full OS like Debian. This project is to profile the Debian OS running on a Linux-capable RISC-V multicore, BlackParrot, to determine where bottlenecks exist, how to tweak software and hardwares parameters and examine the impact of the presence or omittance of various RISC-V extensions.
+
+*Skill level:* Intermediate to Advanced
+
+*Language/Tool:* C, Makefile, Bash, SystemVerilog
+
+*Mentors:* [Dan Petrisko](mailto:petrisko@cs.washington.edu), [Farzam Gilani](mailto:farzamgl@uw.edu)
 
 
 ### Giving AnyCore an Open-Source FPU
