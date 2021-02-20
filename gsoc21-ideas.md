@@ -201,14 +201,37 @@ The [Embench](https://www.embench.org/news.html) benchmark suite is a modern too
 *Mentor:* [Stafford Horne](mailto:shorne@gmail.com)
 
 
-### Optimization of the BlackParrot Linux-Capable RISC-V Multicore
+### Porting BaseJump STL to FuseSoc
 
-The RISC-V ISA will transform the world. U. Washington has received funding from DARPA to develop the world's first truly open RISC-V Linux-capable multicore implementation. In contrast to prior projects, our SystemVerilog-based design is truly open and we encourage external contributors, and ultimately intend to hand the design off to the world to maintain.  By this summer, we will have the "genesis release" of the core ready, but the focus is on functionality rather than extreme performance or energy efficiency. We are looking for folks to help optimize parts of the design and take it to the next level.
+*Details:* FuseSoC is a package manager and set of build tools for reusable hardware building blocks, which makes it easy to share designs between projects and reuse open IP. BaseJump STL is a comprehensive hardware library for SystemVerilog that seeks to contain all of the commonly used hardware primitives, much as the C++ Standard Template Library does with software primitives. This project is to port BaseJumpSTL to FuseSoC so that new hardware projects can hit the ground running and reuse hand-optimized IP cores rather than re-designing and re-debugging.
 
-*Skills:* Knowledgeable of SystemVerilog and Computer Architecture.
+*Skill level:* Beginner
 
-*Mentors:* [Dan Petrisko](mailto:petrisko@cs.washington.edu)
+*Language/Tool:* SystemVerilog, Python
 
+*Mentor:* [Michael Taylor](mailto:prof.taylor@gmail.com)
+
+### Architectural Enhancement of the BlackParrot Linux-Capable RISC-V Multicore
+
+*Details:* BlackParrot aims to be the default open-source, Linux-capable, cache-coherent, RV64GC multicore used by the world. It has been FPGA and Silicon-validated as an industry-strength design with leading efficiency. But we need your help to make it even better! We have projects in arithmetic/logic design, FPGA optimization, additional parameterizations, memory system enhancements… For newer hardware designers or those just looking to get their feet wet, simply trying out BlackParrot in a new environment to shake out setup or documentation bugs is a great help.
+
+*Skill level:* All
+
+*Prerequisite:* Basic knowledge of Computer Architecture
+
+*Language/Tool:* Any/all of SystemVerilog, C, linker scripts, Makefile
+
+*Mentor:* [Dan Petrisko](mailto:petrisko@cs.washington.edu)
+
+### Co-optimizing Debian with BlackParrot
+
+*Details:* The RISC-V ISA is transforming the world of computing. While much research has goes into optimizing RISC-V cores for generally accepted industry and academic benchmarks, little research has been done to study applications running on these cores in their normal environment: running on a full OS like Debian. This project is to profile the Debian OS running on a Linux-capable RISC-V multicore, BlackParrot, to determine where bottlenecks exist, how to tweak software and hardwares parameters and examine the impact of the presence or omittance of various RISC-V extensions.
+
+*Skill level:* Intermediate to Advanced
+
+*Language/Tool:* C, Makefile, Bash, SystemVerilog
+
+*Mentors:* [Dan Petrisko](mailto:petrisko@cs.washington.edu), [Farzam Gilani](mailto:farzamgl@uw.edu)
 
 ### Integration of WARP-V with OpenPiton
 
