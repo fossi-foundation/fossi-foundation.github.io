@@ -361,15 +361,16 @@ The Moore compiler is written in Rust. Don't be scared if you haven't touched Ru
 ### Extend AI Inference to FPGA
 In collaboration with Embecosm, students at Southampton university recently developed an ISA for the CV32E40P, based on the RISC-V vector extension, for neural network inference acceleration. In 12 weeks, the group of students were able to demonstrate a 5 fold increase in performance. The GitHub repository can be found [here](https://github.com/AI-Vector-Accelerator) and a video discussing the project can be found [here](https://www.youtube.com/watch?v=t0Fpy4TzLUE).
 
-While the project saw excellent results, the current implementation exists only as a verilator model. A natural next step is to synthesise the model on an FPGA, and compare its performance versus the raw CV32E40P, and that is what this project aims to do. More precisely, the scope of this project is as follows:
+While the project saw excellent results, the current implementation exists only as a verilator model. A natural next step is to synthesise the model on an FPGA, and compare its performance versus the unmodified CV32E40P, and that is what this project aims to do. More precisely, the scope of this project is as follows:
 
  - Synthesise an implementation of this work in an FPGA, using standard tools 
- - Measure the performance against vanilla CV32E40P
- - Add further instructions (not necessarily from the RISC-V ‘V’” extension, and measure the performance impact of these
+ - Measure the impact of the changes on clock speed versus vanilla CV32E40P
+ - Measure the impact of the changes on the performance of AI algorithms versus the vanilla CV32E40P
+ - Add further instructions (not necessarily from the RISC-V ‘V’” extension) and measure the performance impact of these
 
 Depending on the success of the earlier stages of the project, useful directions the work might be taken further in may be to examine how the addition of further instructions accelerates other machine learning algorithms or Neural Network training, for example. 
 
-*Primary Mentor:* [Jeremy Bennett](https://github.com/jeremybennett) ([email](jeremy.bennett@gmail.com)), *Secondary Mentor: * TBD
+*Primary Mentor:* [Jeremy Bennett](https://github.com/jeremybennett) ([email](mailto:jeremy.bennett@embecosm.com)), *Secondary Mentors:* [William Jones](https://github.com/william-r-jones) ([email](mailto:william.jones@embecosm.com)), TBD
 
 *Skill level:* Advanced
 
@@ -378,16 +379,17 @@ Depending on the success of the earlier stages of the project, useful directions
 ### AI Acceleration Hardware FPGA with yosys
 In collaboration with Embecosm, students at Southampton university recently developed an ISA for the CV32E40P, based on the RISC-V vector extension, for neural network inference acceleration. In 12 weeks, the group of students were able to demonstrate a 5 fold increase in performance. The GitHub repository can be found [here](https://github.com/AI-Vector-Accelerator) and a video discussing the project can be found [here](https://www.youtube.com/watch?v=t0Fpy4TzLUE).
 
-Currently the project is limited to a verilator model. One direction to take this work would be to synthesise what has already been done in an FPGA, however most of the tools for achieving this are proprietary. We therefore propose a different direction in this project: Already, there exist RISC-V cores that can be synthesised in yosys, an open source tool. Is it possible to extend one of these cores in a similar way? The scope of this project would be as follows:
+Currently the project is limited to a verilator model. One direction to take this work would be to synthesise what has already been done in an FPGA, however most of the tools for achieving this are proprietary. We therefore propose a different direction in this project: Already, there exist RISC-V cores that can be synthesised in yosys, an open source suite of tools. Is it possible to extend one of these cores in a similar way? The scope of this project would be as follows:
 
  - Extend a RISC-V core synthesisable with yosys for the purpose of Neural Network inference
  - Synthesise this core in an FPGA using yosys
- - Measure the performance of this against a baseline version of the core. 
+ - Measure the impact of the changes on clock speed versus a baseline version of the core
+ - Measure the impact of the changes on the performance of AI algorithms versus a baseline version of the core
 
 Depending on the success of the earlier stages of the project, one direction the work might be taken in (time permitting) is as a tutorial, carefully documenting and explaining the steps needed.
 
-*Primary Mentor:* [Jeremy Bennett](https://github.com/jeremybennett)([email](jeremy.bennett@gmail.com)), *Secondary Mentor: * TBD
+*Primary Mentor:* [Jeremy Bennett](https://github.com/jeremybennett) ([email](mailto:jeremy.bennett@embecosm.com)), *Secondary Mentors:* [William Jones](https://github.com/william-r-jones) ([email](mailto:william.jones@embecosm.com)), TBD
 
 *Skill level:* Advanced
 
-*Language/Tools:* Verilog, SystemVerilog, RISC-V, yosys
+*Language/Tools:* Verilog, SystemVerilog, RISC-V, Yosys open source tool suite
