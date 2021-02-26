@@ -358,3 +358,38 @@ The Moore compiler is written in Rust. Don't be scared if you haven't touched Ru
 *Mentor:* [Fabian Schuiki](mailto:fschuiki@iis.ee.ethz.ch)
 
 
+### Bring up CV32E40P AI accelerator on FPGA
+A joint project between Embecosm and Southampton university recently developed an open source ISA extension for the CV32E40P RISC-V core to accelerate neural network inference acceleration.  The project [GitHub](https://github.com/AI-Vector-Accelerator) demonstrated a 5 fold increase in inference performance.   [YouTube](https://youtu.be/t0Fpy4TzLUE) has a short presentation of the project, given at the London Open Source RISC-V meetup in January 2021.
+
+However the project exists only as a verilator model, and speed ups are based on cycle counts, with no insight to any impact on clock speed in actual silicon This project is to take the existing work and bring it up on a FPGA platform of the student’s choice.  The project should use the tools which come with the FPGA, and if necessary, Embecosm can provide a suitable board for the students to work with.
+
+The deliverables of this project are:
+
+ - An implementation of this work in an FPGA, using standard EDA tools 
+ - Measurement of the impact of the changes on CV32E40P maximum clock speed
+ - Real world performance measurement of the speed up for AI inference, as measured with TinyMLPerf.
+
+
+*Primary Mentor:* [Jeremy Bennett](https://github.com/jeremybennett) ([email](mailto:jeremy.bennett@embecosm.com)), *Secondary Mentor:* [William Jones](https://github.com/william-r-jones) ([email](mailto:william.jones@embecosm.com))
+
+*Skill level:* Advanced (specifically experience with FPGA synthesis)
+
+*Language/Tools:* Verilog, SystemVerilog, RISC-V, FPGA Synthesis
+
+### RISC-V core with AI Acceleration synthesizable with open source tools.
+A joint project between Embecosm and Southampton university recently developed an open source ISA extension for the CV32E40P RISC-V core to accelerate neural network inference acceleration.  The project [GitHub](https://github.com/AI-Vector-Accelerator) demonstrated a 5 fold increase in inference performance.   [YouTube](https://youtu.be/t0Fpy4TzLUE) has a short presentation of the project, given at the London Open Source RISC-V meetup in January 2021.
+
+This demonstrated the potential benefit of this approach, but relied on a core which can only be synthesized using proprietary FPGA synthesis tools.  This project proposes trying to repeat the approach using a RISC-V core (such as PicoRV or Fomu) which can be synthesized using the Yosys open source tool suite.
+
+The deliverables of this project would be
+
+ - A RISC-V core synthesisable with Yosys extended to accelerate AI inference
+ - Bring up of the extended core on a suitable FPGA platform.
+ - Measurement of the impact on AI inference using TinyMLPerf.
+
+*Primary Mentor:* [Jeremy Bennett](https://github.com/jeremybennett) ([email](mailto:jeremy.bennett@embecosm.com)), *Secondary Mentor:* [William Jones](https://github.com/william-r-jones) ([email](mailto:william.jones@embecosm.com))
+
+*Skill level:* Advanced (particularly FPGA synthesis using Yosys)
+
+*Language/Tools:* Verilog, SystemVerilog, RISC-V, Yosys open source tool suite
+
