@@ -5,10 +5,7 @@
 
 .fossi-logo-large {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin: 10px auto 20px auto; 
 }
 
 .row {
@@ -41,7 +38,7 @@
 }
 
 .fossi-navlink {
-    font-weight: bold;
+    font-weight: 700;
     font-size: 16px;
 }
 
@@ -121,5 +118,5 @@ ul.share-buttons a{
     padding: 3px;
     margin-top: 15px;
     text-align: center;
-    font-weight: bold;
+    font-weight: 700;
 }
