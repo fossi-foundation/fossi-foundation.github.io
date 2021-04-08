@@ -393,3 +393,15 @@ The deliverables of this project would be
 
 *Language/Tools:* Verilog, SystemVerilog, RISC-V, Yosys open source tool suite
 
+### VPI based fst digital simulation waveform dumping
+
+Most digital simulators use a proprietary binary data format for storing the simulation waveforms. This makes it impossible to access these waveforms for post processing. The only waveform format which is supported by all simulators is vcd. But the vcd waveform format is very limited as it does not support complex data structures and stores the waveform data in ASCII format resulting in very large waveform data files. The fst file format provided by GTKWave is an alternative. It is open available and represents an efficient binary file format overcoming the vcd file limitations.
+
+The goal of the project is to develop VPI based functions to dump digital simulation waveforms in fst format. 
+
+*Primary Mentor:* Klaus Strohmayer / semify e.U. [email]()
+
+*Skill level:* intermediate
+
+*Language/Tools:* Verilog / SystemVerilog, C/C++
+
