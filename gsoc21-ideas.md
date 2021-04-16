@@ -399,7 +399,7 @@ Most digital simulators use a proprietary binary data format for storing the sim
 
 The goal of the project is to develop VPI based functions to dump digital simulation waveforms in fst format. 
 
-*Primary Mentor:* Klaus Strohmayer / semify e.U. [email](office@semify.com)
+*Primary Mentor:* Klaus Strohmayer / semify e.U. [email](mailto:office@semify.com)
 
 *Skill level:* intermediate
 
