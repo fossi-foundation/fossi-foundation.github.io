@@ -22,6 +22,21 @@ help us reaching our goals, please don't hesitate to
 
 ## Directors
 
+<a name="jon"/>
+<div class="row">
+<div class="col-lg-3 col-md-4 col-sm-3">
+  <img src="/assets/people/JonathanBalkind.jpg" align="left" width="150px">
+  <ul class="share-buttons" style="padding-left: 0">
+  <li><a href="https://www.linkedin.com/in/jbalkind/"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
+  <li><a href="https://github.com/jbalkind"><img title="Visit my GitHub account" src="/assets/flat_web_icon_set/color/Github.png"></a></li>
+  </ul>
+</div>
+<div class="col-lg-9 col-md-8 col-sm-9">
+  <h4>Jonathan Balkind</h4>
+  Jonathan has been a trusted member of the FOSSi community for many years, where he has shown great skill in solving challenging technical problems, as well as teaching hardware design, and communicating the benefits of doing so openly.
+  </div>
+</div>
+
 <a name="julius"/>
 <div class="row">
 <div class="col-lg-3 col-md-4 col-sm-3">
