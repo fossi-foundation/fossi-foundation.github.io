@@ -4,20 +4,15 @@ title: "Organization"
 ---
 
 The FOSSi Foundation is
-[registered](https://beta.companieshouse.gov.uk/company/09848956) as a
+[registered](https://find-and-update.company-information.service.gov.uk/company/09848956) as a
 not-for-profit in the UK (as a Community Interest Company). The
 foundation is formed by the members and backed by sponsors.
 
-At the formation meeting we have appointed five directors in our first
-board of directors, along with a secretary. For our first year we have
-defined the [projects](/projects.html) to bring forward the goals
-formulated in our [manifesto](/manifesto.html). We have set up
-[committees](#committees) to structure the progress of our projects,
-mainly the LibreCores committee and the ORCONF committee.
+The FOSSi Foundation is managed by a board of directors, along with a secretary.
+The foundation is working on various [projects](/projects.html) to bring forward the goals formulated in our [manifesto](/manifesto.html).
+We have set up [committees](#committees) to structure the progress of our projects.
 
-If you are interested to become a part of the FOSSi Foundation and
-help us reaching our goals, please don't hesitate to
-[get in touch with us](/getinvolved.html).
+If you are interested to become a part of the FOSSi Foundation and help us reaching our goals, please don't hesitate to [get in touch with us](/getinvolved.html).
 
 
 ## Directors
