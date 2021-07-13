@@ -170,17 +170,39 @@ If you are interested to become a part of the FOSSi Foundation and help us reach
 
 ## Committees
 
-### LibreCores
+### Cocotb
 
 * Chaired by: Philipp Wagner
-* Oleg Nenashev, Jenkins Project
-* Elias Kouskoumvekakis
+* The decision making in the cocotb project is done by the [maintainers](https://github.com/cocotb/cocotb/blob/master/CONTRIBUTING.md#maintainers).
 
 ### Conference
 
 * Chaired by: Olof Kindgren & Julius Baxter
 * Alex Bradbury, University of Cambridge, United Kingdom
 * Davide Rossi, Università di Bologna, Italy
+
+### Embench
+
+* Jeremy Bennett
+* David Patterson
+
+### Fundraising
+
+* Chaired by: Julius Baxter & Stefan Wallentowitz
+* Michael Gielda, Antmicro
+* Andrew Back, ABOpen and FOSSi Foundation
+
+
+### Google Summer of Code
+
+* Chaired by: Jonathan Balkind
+* Students are mentored by a trusted community members.
+
+### LibreCores
+
+* Chaired by: Philipp Wagner
+* Oleg Nenashev, Jenkins Project
+
 
 ### Licensing
 
@@ -189,9 +211,3 @@ If you are interested to become a part of the FOSSi Foundation and help us reach
 * Ben Hilburn, GNURadio
 * Javier Serrano, CERN
 * Josh Triplett
-
-### Fundraising
-
-* Chaired by: Julius Baxter & Stefan Wallentowitz
-* Michael Gielda, Antmicro
-* Andrew Back, ABOpen and FOSSi Foundation
