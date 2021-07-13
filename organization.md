@@ -30,8 +30,26 @@ If you are interested to become a part of the FOSSi Foundation and help us reach
   <h4>Jonathan Balkind</h4>
   Jonathan has been a trusted member of the FOSSi community for many years, where he has shown great skill in solving challenging technical problems, as well as teaching hardware design, and communicating the benefits of doing so openly.
   </div>
+<a name="andrew"/>
+<div class="row">
+<div class="col-lg-3 col-md-4 col-sm-3">
+  <img src="/assets/people/AndrewBack.jpg" align="left" width="150px">
+  <ul class="share-buttons" style="padding-left: 0">
+  <li><a href="https://uk.linkedin.com/in/andrewback"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
+  <li><a href="https://twitter.com/9600"><img title="Visit my Twitter account" src="/assets/flat_web_icon_set/color/Twitter.png"></a></li>
+  </ul>
 </div>
+<div class="col-lg-9 col-md-8 col-sm-9">
+  <h4>Andrew Back</h4>
 
+	Andrew Back is convener for the UK Open Source Hardware User Group
+    and co-organises the annual Wuthering Bytes technology
+    festival. He is a long time proponent of open source hardware,
+    with a keen interest in licensing and community building.
+
+  Andrew acts as treasurer for the FOSSi Foundation.
+</div>
+</div>
 <a name="julius"/>
 <div class="row">
 <div class="col-lg-3 col-md-4 col-sm-3">
@@ -49,28 +67,6 @@ If you are interested to become a part of the FOSSi Foundation and help us reach
   finding a solution for copyleft semiconductor design licensing, and encouraging
   greater uptake of the technology by the wider semiconductor industry.
   </div>
-</div>
-
-<a name="peter"/>
-<div class="row">
-<div class="col-lg-3 col-md-4 col-sm-3">
-  <img src="/assets/people/PeterGielda.jpg" align="left" width="150px">
-  <ul class="share-buttons" style="padding-left: 0">
-  <li><a href="mailto:peter@fossi-foundation.org"><img title="Send me an email" src="/assets/flat_web_icon_set/color/Email.png"/></a></li>
-  <li><a href="https://www.linkedin.com/in/peter-gielda/"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
-  <li><a href="https://github.com/pgielda"><img title="Visit my GitHub account" src="/assets/flat_web_icon_set/color/Github.png"></a></li>
-  </ul>
-</div>
-<div class="col-lg-9 col-md-8 col-sm-9">
-  <h4>Peter Gielda</h4>
-
-  Peter has always been involved with open source and made spreading
-  the adoption of open software, hardware and silicon lay at the
-  foundations of Antmicro back in 2009. A member of the RISC-V
-  Foundation's Technical Committee, he is also active in CHIPS
-  Alliance, the Linux Foundation and the Zephyr Project.
-
-</div>
 </div>
 
 <a name="olof"/>
@@ -126,7 +122,29 @@ If you are interested to become a part of the FOSSi Foundation and help us reach
 </div>
 </div>
 
-## Secretary
+## Advisors to the board
+
+<a name="peter"/>
+<div class="row">
+<div class="col-lg-3 col-md-4 col-sm-3">
+  <img src="/assets/people/PeterGielda.jpg" align="left" width="150px">
+  <ul class="share-buttons" style="padding-left: 0">
+  <li><a href="mailto:peter@fossi-foundation.org"><img title="Send me an email" src="/assets/flat_web_icon_set/color/Email.png"/></a></li>
+  <li><a href="https://www.linkedin.com/in/peter-gielda/"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
+  <li><a href="https://github.com/pgielda"><img title="Visit my GitHub account" src="/assets/flat_web_icon_set/color/Github.png"></a></li>
+  </ul>
+</div>
+<div class="col-lg-9 col-md-8 col-sm-9">
+  <h4>Peter Gielda</h4>
+
+  Peter has always been involved with open source and made spreading
+  the adoption of open software, hardware and silicon lay at the
+  foundations of Antmicro back in 2009. A member of the RISC-V
+  Foundation's Technical Committee, he is also active in CHIPS
+  Alliance, the Linux Foundation and the Zephyr Project.
+
+</div>
+</div>
 
 <a name="simon"/>
 <div class="row">
@@ -145,27 +163,8 @@ If you are interested to become a part of the FOSSi Foundation and help us reach
 	maintains the AAP project, an open source processor designed to
 	improve software tooling for all hardware architectures.
 
-</div>
-</div>
+  Simon acts as secretary to the FOSSi Foundation.
 
-## Treasurer
-
-<a name="andrew"/>
-<div class="row">
-<div class="col-lg-3 col-md-4 col-sm-3">
-  <img src="/assets/people/AndrewBack.jpg" align="left" width="150px">
-  <ul class="share-buttons" style="padding-left: 0">
-  <li><a href="https://uk.linkedin.com/in/andrewback"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
-  <li><a href="https://twitter.com/9600"><img title="Visit my Twitter account" src="/assets/flat_web_icon_set/color/Twitter.png"></a></li>
-  </ul>
-</div>
-<div class="col-lg-9 col-md-8 col-sm-9">
-  <h4>Andrew Back</h4>
-
-	Andrew Back is convener for the UK Open Source Hardware User Group
-    and co-organises the annual Wuthering Bytes technology
-    festival. He is a long time proponent of open source hardware,
-    with a keen interest in licensing and community building.
 </div>
 </div>
 
