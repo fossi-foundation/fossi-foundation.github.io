@@ -19,107 +19,109 @@ If you are interested to become a part of the FOSSi Foundation and help us reach
 
 <a name="jon"/>
 <div class="row">
-<div class="col-lg-3 col-md-4 col-sm-3">
-  <img src="/assets/people/JonathanBalkind.jpg" align="left" width="150px">
-  <ul class="share-buttons" style="padding-left: 0">
-  <li><a href="https://www.linkedin.com/in/jbalkind/"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
-  <li><a href="https://github.com/jbalkind"><img title="Visit my GitHub account" src="/assets/flat_web_icon_set/color/Github.png"></a></li>
-  </ul>
-</div>
-<div class="col-lg-9 col-md-8 col-sm-9">
-  <h4>Jonathan Balkind</h4>
-  Jonathan has been a trusted member of the FOSSi community for many years, where he has shown great skill in solving challenging technical problems, as well as teaching hardware design, and communicating the benefits of doing so openly.
+  <div class="col-lg-3 col-md-4 col-sm-3">
+    <img src="/assets/people/JonathanBalkind.jpg" align="left" width="150px">
+    <ul class="share-buttons" style="padding-left: 0">
+    <li><a href="https://www.linkedin.com/in/jbalkind/"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
+    <li><a href="https://github.com/jbalkind"><img title="Visit my GitHub account" src="/assets/flat_web_icon_set/color/Github.png"></a></li>
+    </ul>
   </div>
+  <div class="col-lg-9 col-md-8 col-sm-9">
+    <h4>Jonathan Balkind</h4>
+    Jonathan has been a trusted member of the FOSSi community for many years, where he has shown great skill in solving challenging technical problems, as well as teaching hardware design, and communicating the benefits of doing so openly.
+  </div>
+</div>
+
 <a name="andrew"/>
 <div class="row">
-<div class="col-lg-3 col-md-4 col-sm-3">
-  <img src="/assets/people/AndrewBack.jpg" align="left" width="150px">
-  <ul class="share-buttons" style="padding-left: 0">
-  <li><a href="https://uk.linkedin.com/in/andrewback"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
-  <li><a href="https://twitter.com/9600"><img title="Visit my Twitter account" src="/assets/flat_web_icon_set/color/Twitter.png"></a></li>
-  </ul>
-</div>
-<div class="col-lg-9 col-md-8 col-sm-9">
-  <h4>Andrew Back</h4>
+  <div class="col-lg-3 col-md-4 col-sm-3">
+    <img src="/assets/people/AndrewBack.jpg" align="left" width="150px">
+    <ul class="share-buttons" style="padding-left: 0">
+    <li><a href="https://uk.linkedin.com/in/andrewback"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
+    <li><a href="https://twitter.com/9600"><img title="Visit my Twitter account" src="/assets/flat_web_icon_set/color/Twitter.png"></a></li>
+    </ul>
+  </div>
+  <div class="col-lg-9 col-md-8 col-sm-9">
+    <h4>Andrew Back</h4>
 
-	Andrew Back is convener for the UK Open Source Hardware User Group
-    and co-organises the annual Wuthering Bytes technology
-    festival. He is a long time proponent of open source hardware,
-    with a keen interest in licensing and community building.
+    Andrew Back is convener for the UK Open Source Hardware User Group
+      and co-organises the annual Wuthering Bytes technology
+      festival. He is a long time proponent of open source hardware,
+      with a keen interest in licensing and community building.
 
-  Andrew acts as treasurer for the FOSSi Foundation.
+    Andrew acts as treasurer for the FOSSi Foundation.
+  </div>
 </div>
-</div>
+
 <a name="julius"/>
 <div class="row">
-<div class="col-lg-3 col-md-4 col-sm-3">
-  <img src="/assets/people/JuliusBaxter.jpg" align="left" width="150px">
-  <ul class="share-buttons" style="padding-left: 0">
-  <li><a href="https://www.linkedin.com/in/julius-baxter-78840223"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
-  <li><a href="https://github.com/juliusbaxter"><img title="Visit my GitHub account" src="/assets/flat_web_icon_set/color/Github.png"></a></li>
-  </ul>
-</div>
-<div class="col-lg-9 col-md-8 col-sm-9">
-  <h4>Julius Baxter</h4>
-  Julius' involvement with free and open source semiconductor design began with
-  his work as part of the OpenRISC community in 2008. After initial technical
-  contributions, he's since focused on promoting greater community coordination,
-  finding a solution for copyleft semiconductor design licensing, and encouraging
-  greater uptake of the technology by the wider semiconductor industry.
+  <div class="col-lg-3 col-md-4 col-sm-3">
+    <img src="/assets/people/JuliusBaxter.jpg" align="left" width="150px">
+    <ul class="share-buttons" style="padding-left: 0">
+    <li><a href="https://www.linkedin.com/in/julius-baxter-78840223"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
+    <li><a href="https://github.com/juliusbaxter"><img title="Visit my GitHub account" src="/assets/flat_web_icon_set/color/Github.png"></a></li>
+    </ul>
+  </div>
+  <div class="col-lg-9 col-md-8 col-sm-9">
+    <h4>Julius Baxter</h4>
+    Julius' involvement with free and open source semiconductor design began with
+    his work as part of the OpenRISC community in 2008. After initial technical
+    contributions, he's since focused on promoting greater community coordination,
+    finding a solution for copyleft semiconductor design licensing, and encouraging
+    greater uptake of the technology by the wider semiconductor industry.
   </div>
 </div>
 
 <a name="olof"/>
 <div class="row">
-<div class="col-lg-3 col-md-4 col-sm-3">
-  <img src="/assets/people/OlofKindgren.jpg" align="left" width="150px">
-  <ul class="share-buttons" style="padding-left: 0">
-  <li><a href="https://www.linkedin.com/in/olofkindgren"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
-  <li><a href="https://github.com/olofk/"><img title="Visit my GitHub account" src="/assets/flat_web_icon_set/color/Github.png"></a></li>
-  <li><a href="https://twitter.com/OlofKindgren"><img title="Visit my Twitter account" src="/assets/flat_web_icon_set/color/Twitter.png"></a></li>
-  </ul>
-</div>
-<div class="col-lg-9 col-md-8 col-sm-9" style="display: inline">
-  <h4>Olof Kindgren</h4>
-  Olof became actively involved with free and open source silicon through the OpenRISC project in 2011. He has since then worked in many areas with a special interest in tools and collaborations. Also known as the maintainer of the <a href="https://github.com/olofk/fusesoc">FuseSoc</a> IP core package manager - a tool for collaborations.
-</div>
+  <div class="col-lg-3 col-md-4 col-sm-3">
+    <img src="/assets/people/OlofKindgren.jpg" align="left" width="150px">
+    <ul class="share-buttons" style="padding-left: 0">
+    <li><a href="https://www.linkedin.com/in/olofkindgren"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
+    <li><a href="https://github.com/olofk/"><img title="Visit my GitHub account" src="/assets/flat_web_icon_set/color/Github.png"></a></li>
+    <li><a href="https://twitter.com/OlofKindgren"><img title="Visit my Twitter account" src="/assets/flat_web_icon_set/color/Twitter.png"></a></li>
+    </ul>
+  </div>
+  <div class="col-lg-9 col-md-8 col-sm-9" style="display: inline">
+    <h4>Olof Kindgren</h4>
+    Olof became actively involved with free and open source silicon through the OpenRISC project in 2011. He has since then worked in many areas with a special interest in tools and collaborations. Also known as the maintainer of the <a href="https://github.com/olofk/fusesoc">FuseSoc</a> IP core package manager - a tool for collaborations.
+  </div>
 </div>
 
 <a name="philipp"/>
 <div class="row">
-<div class="col-lg-3 col-md-4 col-sm-3">
-  <img src="/assets/people/PhilippWagner.jpg" align="left" width="150px">
-  <ul class="share-buttons" style="padding-left: 0">
-  <li><a href="mailto:mail@philipp-wagner.com"><img title="Send me an email" src="/assets/flat_web_icon_set/color/Email.png"/></a></li>
-  <li><a href="https://www.linkedin.com/in/imphil"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"/></a></li>
-  <li><a href="https://github.com/imphil"><img title="Visit my GitHub account" src="/assets/flat_web_icon_set/color/Github.png"/></a></li>
-  </ul>
-</div>
-<div class="col-lg-9 col-md-8 col-sm-9">
-  <h4>Philipp Wagner</h4>
-  A long-time free and open source veteran, Philipp has been involved in various projects over the last decade. With interests from web development to hardware architectures, he loves to bring together different communities and approaches.
+  <div class="col-lg-3 col-md-4 col-sm-3">
+    <img src="/assets/people/PhilippWagner.jpg" align="left" width="150px">
+    <ul class="share-buttons" style="padding-left: 0">
+    <li><a href="mailto:mail@philipp-wagner.com"><img title="Send me an email" src="/assets/flat_web_icon_set/color/Email.png"/></a></li>
+    <li><a href="https://www.linkedin.com/in/imphil"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"/></a></li>
+    <li><a href="https://github.com/imphil"><img title="Visit my GitHub account" src="/assets/flat_web_icon_set/color/Github.png"/></a></li>
+    </ul>
+  </div>
+  <div class="col-lg-9 col-md-8 col-sm-9">
+    <h4>Philipp Wagner</h4>
+    A long-time free and open source veteran, Philipp has been involved in various projects over the last decade. With interests from web development to hardware architectures, he loves to bring together different communities and approaches.
   </div>
 </div>
 
 <a name="wallento"/>
 <div class="row">
-<div class="col-lg-3 col-md-4 col-sm-3">
-  <img src="/assets/people/StefanWallentowitz.png" align="left" width="150px">
-  <ul class="share-buttons" style="padding-left: 0">
-  <li><a href="https://www.linkedin.com/in/wallento"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
-  <li><a href="https://github.com/wallento/"><img title="Visit my GitHub account" src="/assets/flat_web_icon_set/color/Github.png"></a></li>
-  <li><a href="https://twitter.com/wallento"><img title="Visit my Twitter account" src="/assets/flat_web_icon_set/color/Twitter.png"></a></li>
-  </ul>
-</div>
-<div class="col-lg-9 col-md-8 col-sm-9">
-  <h4>Stefan Wallentowitz</h4>
+  <div class="col-lg-3 col-md-4 col-sm-3">
+    <img src="/assets/people/StefanWallentowitz.png" align="left" width="150px">
+    <ul class="share-buttons" style="padding-left: 0">
+    <li><a href="https://www.linkedin.com/in/wallento"><img title="Visit my LinkedIn profile" src="/assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
+    <li><a href="https://github.com/wallento/"><img title="Visit my GitHub account" src="/assets/flat_web_icon_set/color/Github.png"></a></li>
+    <li><a href="https://twitter.com/wallento"><img title="Visit my Twitter account" src="/assets/flat_web_icon_set/color/Twitter.png"></a></li>
+    </ul>
+  </div>
+  <div class="col-lg-9 col-md-8 col-sm-9">
+    <h4>Stefan Wallentowitz</h4>
 
-  Stefan is a curious developer and has been involved in the OpenRISC
+    Stefan is a curious developer and has been involved in the OpenRISC
     project for many years and is contributor and maintainer of
     several free and open source projects around SoC design. He is
     professor at Munich University of Applied Sciences.
-
-</div>
+  </div>
 </div>
 
 ## Advisors to the board
