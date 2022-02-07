@@ -57,22 +57,31 @@ SAT/SMT solvers are tools that are extremely fun and satisfying to work with, bu
 
 ### Circuit Visualization
 
-*Details:* The Makerchip platform for open-source circuit design has introduced support for custom visualization of circuit simulations. This has been used to great success in RISC-V training and has other applicability as well. In fact, any circuit can be visualized in useful ways. A few examples can be opened from [this repo](https://github.com/stevehoover/makerchip_examples). Some circuits we would like to provide visibility into include:
+*Details:* The Makerchip platform for open-source circuit design has introduced support for custom
+visualization of circuit simulations. This has been used to great success in RISC-V training and
+is useful for circuit debug and conveying microarchitectural behavior as well. Any circuit can
+be visualized in useful ways. Find a few examples [here](https://makerchip.com/sandbox/?tabs=Code-Examples,VIZ%20Guide#).
 
-  - SweRV
-  - SERV
-  - TL-Verilog flow library
-  - BaseJump STL
+Some circuits we would like to provide visibility into include:
+
+  - [SweRV](https://github.com/chipsalliance/Cores-SweRV)
+  - [SERV](https://github.com/olofk/serv)
+  - [TL-Verilog flow library](https://github.com/stevehoover/tlv_flow_lib/blob/master/pipeflow_lib.tlv)
+  - [BaseJump STL](https://github.com/bespoke-silicon-group/basejump_stl)
   - basic circuits for instructional purposes
-  - virtualized FPGA boards
+  - [virtualized FPGA boards](https://github.com/BalaDhinesh/Virtual-FPGA-Lab) (completed in GSoC 2021)
+  - this [neural network](https://github.com/vineetjain07/DNN_TL-V)
+  - gamified circuit design challenges
 
-Visualization is written in (very straight-forward) JavaScript that has access to trace data from simulation and a canvas to draw on. A bit more detail on these ideas can be found [here](https://github.com/stevehoover/TL-V_Projects)
+Visualization is written in (very straight-forward) JavaScript that has access to trace data from simulation and a canvas to draw on, described [here](https://makerchip.com/sandbox/?tabs=VIZ%20Guide,Code-Examples#).
 
-*Skill level:* Beginner
+*Skill level:* Beginner/Intermediate
+
+*Duration:* ~175 or ~350 hrs.
 
 *Language/Tools:* JavaScript, Verilog/SystemVerilog/TL-Verilog
 
-*Mentor:* [Steve Hoover](https://www.linkedin.com/in/steve-hoover-a44b607/) ([email](mailto:steve.hoover@redwoodeda.com)), Secondary: [Akos Hadnagy](https://www.linkedin.com/in/akos-hadnagy/)
+*Mentor:* [Steve Hoover](https://www.linkedin.com/in/steve-hoover-a44b607/) ([email](mailto:steve.hoover@redwoodeda.com)), *Alternate Mentor* (for gamified circuit education) [Gayatri Mehta](https://www.linkedin.com/in/gayatri-mehta-64aa7411/) ([email](gayatri.mehta@unt.edu)) (or other alternates depending on the specific project)
 
 
 ### Create your own LibreCores, or contribute to an existing one
@@ -161,17 +170,19 @@ The [Embench](https://www.embench.org/news.html) benchmark suite is a modern too
 
 ### Integration of WARP-V with OpenPiton
 
-*Details:* In GSoC 2020, one of Shivam Potdar's accomplishments was to prepare the [WARP-V](https://github.com/stevehoover/warp-v) CPU core for integration with the [OpenPiton](https://parallel.princeton.edu/openpiton/) heterogeneous many-core framework. This project would aim to complete that integration.
+*Details:* In GSoC 2020, one of Shivam Potdar's accomplishments was to prepare the [WARP-V](https://warp-v.org) CPU core for integration with the [OpenPiton](https://parallel.princeton.edu/openpiton/) heterogeneous many-core framework. This project would aim to complete that integration.
 
 This will enable academic exploration of the combined flexibility benefits of OpenPiton and WARP-V. OpenPiton provides flexibility through the integration of different CPU cores. WARP-V provides flexibility of the CPU core itself. WARP-V can be optimized for the cycle-time of OpenPiton, and differently-configured WARP-V cores could be run within the same system along with other CPU cores.
 
+*Duration:* ~350 hrs.
+
 *Skill level:* Advanced
 
-*Languages/Tools:* Verilog, TL-Verilog
+*Languages/Tools:* Verilog, TL-Verilog, Makerchip, GNU Make
 
-*Co-mentors:* [Steve Hoover](https://www.linkedin.com/in/steve-hoover-a44b607/) ([email](mailto:steve.hoover@redwoodeda.com)), [Jonathan Balkind](https://www.linkedin.com/in/jbalkind/) ([email](mailtojbalkind@ucsb.edu)), [Akos Hadnagy](https://www.linkedin.com/in/akos-hadnagy/) ([email](mailto:akos.hadnagy@gmail.com))
+*Co-mentors:* [Steve Hoover](https://www.linkedin.com/in/steve-hoover-a44b607/) ([email](mailto:steve.hoover@redwoodeda.com)), [Jonathan Balkind](https://www.linkedin.com/in/jbalkind/) ([email](mailtojbalkind@ucsb.edu))
 
-*Discussion:* [WARP-V LibreCores Gitter Room](https://gitter.im/librecores/warp-v), [OpenPiton LibreCores Gitter Room](https://gitter.im/librecores/openpiton)
+*Discussion:* [WARP-V LibreCores Gitter Room](https://gitter.im/librecores/warp-v), [TL-Verilog Users Slack Workspace](https://join.slack.com/t/tl-verilog-users/shared_invite/zt-4fatipnr-dmDgkbzrCe0ZRLOOVm89gA), [OpenPiton LibreCores Gitter Room](https://gitter.im/librecores/openpiton)
 
 
 ### Improve Test Coverage of the Moore HDL Compiler
