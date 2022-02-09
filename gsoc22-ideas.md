@@ -146,19 +146,6 @@ The [Embench](https://www.embench.org/news.html) benchmark suite is a modern too
 *Mentor:* [Stafford Horne](mailto:shorne@gmail.com)
 
 
-### Architectural Enhancement of the BlackParrot Linux-Capable RISC-V Multicore
-
-*Details:* BlackParrot aims to be the default open-source, Linux-capable, cache-coherent, RV64GC multicore used by the world. It has been FPGA and Silicon-validated as an industry-strength design with leading efficiency. But we need your help to make it even better! We have projects in arithmetic/logic design, FPGA optimization, additional parameterizations, memory system enhancements… For newer hardware designers or those just looking to get their feet wet, simply trying out BlackParrot in a new environment to shake out setup or documentation bugs is a great help.
-
-*Skill level:* All
-
-*Prerequisite:* Basic knowledge of Computer Architecture
-
-*Language/Tool:* Any/all of SystemVerilog, C, linker scripts, Makefile
-
-*Mentor:* [Dan Petrisko](mailto:petrisko@cs.washington.edu)
-
-
 ### Integration of WARP-V with OpenPiton
 
 *Details:* In GSoC 2020, one of Shivam Potdar's accomplishments was to prepare the [WARP-V](https://github.com/stevehoover/warp-v) CPU core for integration with the [OpenPiton](https://parallel.princeton.edu/openpiton/) heterogeneous many-core framework. This project would aim to complete that integration.
@@ -187,17 +174,6 @@ The Moore compiler is written in Rust. Don't be scared if you haven't touched Ru
 *Language/Tools:* Rust, SystemVerilog
 
 *Mentor:* [Fabian Schuiki](mailto:fschuiki@iis.ee.ethz.ch)
-
-
-### Co-optimizing Debian with BlackParrot
-
-*Details:* The RISC-V ISA is transforming the world of computing. While much research has goes into optimizing RISC-V cores for generally accepted industry and academic benchmarks, little research has been done to study applications running on these cores in their normal environment: running on a full OS like Debian. This project is to profile the Debian OS running on a Linux-capable RISC-V multicore, BlackParrot, to determine where bottlenecks exist, how to tweak software and hardwares parameters and examine the impact of the presence or omittance of various RISC-V extensions.
-
-*Skill level:* Intermediate to Advanced
-
-*Language/Tool:* C, Makefile, Bash, SystemVerilog
-
-*Mentors:* [Dan Petrisko](mailto:petrisko@cs.washington.edu), [Farzam Gilani](mailto:farzamgl@uw.edu)
 
 
 ### Giving AnyCore an Open-Source FPU
@@ -282,3 +258,24 @@ The goal of the project is to develop VPI based functions to dump digital simula
 
 *Language/Tools:* Verilog / SystemVerilog, C/C++
 
+### More precise instruction scheduling in LLVM for RISC-V based HammerBlade Manycore
+The RISC-V ISA will transform the world. Recently, UW taped out an open source RISC-V manycore processor with 496 cores that hits 500 Billion RISC-V instructions per second in one chip. The latest version is called HammerBlade Manycore, the design is hosted on Amazon F1, which allows us to simulate having the real chip even as we develop new features. We maintain a downstream RISC-V LLVM backend for custom compiler support. We want to improve the code generation with better instruction scheduling. We already have some basic scheduling support in our LLVM backend, this project aims to improve it by more precisely describing the pipeline model with adjusted weights.
+
+*Skill level:* intermediate
+
+*Project length:* long
+
+*Mentors:* [Reshabh K Sharma](mailto:reshabh@cs.washington.com), [Michael Taylor](mailto:prof.taylor@gmail.com)
+
+*Language/Tools:* C++, some knowledge of computer architecture, instruction pipelining and LLVM
+
+### TinyParrot: A minimal BlackParrot RISC-V Multicore variant
+*Details:* BlackParrot aims to be the default open-source, Linux-capable, cache-coherent, RV64GC multicore used by the world. It has been FPGA and Silicon-validated as an industry-strength design with leading efficiency. We wish to support open-source toolchains for FPGA and ASIC flows, but current open-source SRAM generators have not quite matured to make this seamless. This project will shrink BlackParrot to have extremely tiny caches, provide minimal ISA support and have other logic-saving optimizations with the goal of being able to easily synthesize to gates.
+
+*Skill level:* beginner-intermediate
+
+*Project length:* medium
+
+*Mentors:* [Dan Petrisko](mailto:petrisko@cs.washington.com), [Michael Taylor](mailto:prof.taylor@gmail.com)
+
+*Language/Tools:* SystemVerilog, some knowledge of computer architecture, RISC-V knowledge preferred but not required
