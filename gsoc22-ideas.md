@@ -89,6 +89,8 @@ etc. So, it is important that you discuss a proposal intensively.
 
 *Skill level:* All
 
+*Duration:* ~175 or ~350 hrs.
+
 *Language/Tool:* Verilog, VHDL, Chisel, TL-Verilog, ...
 
 *Mentor:* We will find the mentor with you,
@@ -440,3 +442,17 @@ The RISC-V ISA will transform the world. Recently, UW taped out an open source R
 *Language/Tools:* JavaScript. Python knowledge is useful for looking at the current implementation
 
 *Mentors:* [Olof Kindgren](mailto:olof.kindgren@gmail.com)
+
+### Support for multiple RISC-V cores on a mini MCU
+
+[OpenHW Group](https://www.openhwgroup.org/) is a not-for-profit organization that develops industrial-quality open-source HW. The CORE-V RISC-V cores family includes embedded and application class processors. The embedded cores are customized for performance [CV32E40P](https://github.com/openhwgroup/cv32e40p), security [CV32E40S](https://github.com/openhwgroup/cv32e40s), extendability, [CV32E40X](https://github.com/openhwgroup/cv32e40x), and for code size [CV32E41P](https://github.com/openhwgroup/cv32e41p). [core-v-mini-mcu](https://github.com/davideschiavone/core-v-mini-mcu) is a simple MCU meant to quickly try out new core HW and SW features. It targets simulation with Verilator, Questasim, etc, as well as real implementation on FPGAs and ASICs. FuseSoc is used to handle tools and targets.
+
+In this project, we propose extending the core-v-mini-mcu to support all the OpenHW Group embedded class cores (as today we only use CV32E40P) and to demonstrate performance and code size differences across them.
+
+*Skill level:* Medium (SystemVerilog)
+
+*Project length:* medium
+
+*Mentors:* [Davide Schiavone](https://github.com/davideschiavone) ([email](mailto:davide@openhwgroup.org)) and Veronia Bahaa ([email](mailto:veronia.iskandar@mailbox.tu-dresden.de))
+
+*Language/Tools:* SystemVerilog, RISC-V, C, Verilator
