@@ -135,16 +135,74 @@ Prerequisites:
 *Mentor:* [Jonathan Balkind](mailto:jbalkind@ucsb.edu)
 
 
-### Embench IoT OpenRISC port
+### OpenRISC Benchmarking and Performance improvements
 
-The [Embench](https://www.embench.org/news.html) benchmark suite is a modern tool used to measure embedded processor and compiler toolchain performance.  The [Embench IoT project](https://github.com/embench/embench-iot) has ports for ARM, RISC-V and other embedded processors.  The goal of this project will be to port Embench to run the OpenRISC toolchain and collect benchmarks.  The benchmarks should be recorded at [Embench IoT results](https://github.com/embench/embench-iot-results) to be able to compare OpenRISC vs other popular CPUs.
+The [OpenRISC](https://openrisc.io) CPU architecture has multiple CPU implementations
+including the mor1kx and marocchino.  Recent testing has shown that memory access
+on the marocchino is slightly slower compared to the mor1kx.
 
-*Skill level:* Easy
+This project will have the student:
 
-*Language/Tools:* Shell scripting, C, Makefile, Python
+* Use tools like the [Embench](https://www.embench.org/news.html) modern benchmark suite
+  to measure OpenRISC processor and compiler toolchain performance.
+* Document the OpenRISC performance at [Embench IoT results](https://github.com/embench/embench-iot-results)
+  to be able to compare OpenRISC vs other popular CPUs.
+* Track down and improve OpenRISC CPU performance by finding and fixing deficiencies in the verilog designed cores.
+
+*Skill level:* Advanced
+
+*Project Length:* large
+
+*Language/Tools:* Verilog, Shell scripting, C, Assembly, Python
 
 *Mentor:* [Stafford Horne](mailto:shorne@gmail.com)
 
+
+### LiteX SMP SoC for OpenRISC
+
+The [LiteX](https://github.com/enjoy-digital/litex) project makes creating
+FPGA-based SoCs easy.  LiteX supports creating SoCs containing OpenRISC CPU cores.
+Up until now however, there have been no LiteX SoCs that support running
+OpenRISC multicore/SMP Linux.  The [linux-on-litex-vexrisc](https://github.com/litex-hub/linux-on-litex-vexriscv)
+project provides a good example of how to develop and document getting Linux
+up and running on a LiteX SoC; including multicore.
+
+Using `linux-on-litex-vexrisc` as an example, this project will have the student
+creating a project to help people get up and running with OpenRISC.  The final
+goal shall be to have a documented multicore OpenRISC LiteX SoC running Linux
+SMP.
+
+*Skill level:* Advanced
+
+*Project Length:* large
+
+*Language/Tools:* Verilog, LiteX, Linux, Python, OpenRISC architecture
+
+*Mentor:* [Stafford Horne](mailto:shorne@gmail.com)
+
+### OpenRISC Linux Feature Development
+
+The OpenRISC Linux kernel support is under constant development but there are
+certain Linux facilities that are not yet used or available on the OpenRISC
+platform.
+
+This project will have the student developing, testing and sending patches up to
+the Linux kernel.  This includes:
+
+* Develop [rseq](https://lwn.net/Articles/650333/) support to OpenRISC Linux
+  and glibc.
+* Add floating point support to OpenRISC Linux.
+* Use the cacheinfo API for reporting CPU details in OpenRISC Linux.
+* Add [virtio](https://developer.ibm.com/articles/l-virtio/) support to OpenRISC
+  Linux which would allow running OpenRISC containers.
+
+*Skill level:* Advanced
+
+*Project Length:* large
+
+*Language/Tools:* Linux, C, Assembly, OpenRISC architecture
+
+*Mentor:* [Stafford Horne](mailto:shorne@gmail.com)
 
 ### Integration of WARP-V with OpenPiton
 
