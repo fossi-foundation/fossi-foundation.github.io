@@ -277,7 +277,7 @@ You can find a non-exhaustive [list of available tasks in our documentation](htt
 
 *Duration:* 175 or 350 hours
 
-*Language/Tools:* PHP7 with the [Symfony Framework](http://symfony.com/), MySQL, HTML/JS
+*Language/Tools:* PHP with the [Symfony Framework](http://symfony.com/), MySQL, HTML/JS
 
 *Mentor:* [Philipp Wagner](mailto:mail@philipp-wagner.com)
 
