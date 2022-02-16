@@ -286,23 +286,96 @@ The Moore compiler is written in Rust. Don't be scared if you haven't touched Ru
 
 *Mentor:* [Fabian Schuiki](mailto:fschuiki@iis.ee.ethz.ch)
 
+### Minimal RISC-V core with AI Acceleration synthesizable with open source tools
 
-### RISC-V core with AI Acceleration synthesizable with open source tools.
-A joint project between Embecosm and Southampton university recently developed an open source ISA extension for the CV32E40P RISC-V core to accelerate neural network inference acceleration.  The project [GitHub](https://github.com/AI-Vector-Accelerator) demonstrated a 5 fold increase in inference performance.   [YouTube](https://youtu.be/t0Fpy4TzLUE) has a short presentation of the project, given at the London Open Source RISC-V meetup in January 2021.
+A series of  projects between Embecosm and Southampton University over the past and a FOSSi GSoC project from 2021 have developed a simple (8 instruction) open source ISA extension for the CV32E40P and CV32E40X RISC-V cores to accelerate neural network inference acceleration.  The project [GitHub](https://github.com/AI-Vector-Accelerator) has demonstrated a 5 fold increase in inference performance.   [YouTube](https://youtu.be/DY8WXLF7CEg) has the most recent presentation of the project, given at the London Open Source RISC-V meetup in January 2022.
 
-This demonstrated the potential benefit of this approach, but relied on a core which can only be synthesized using proprietary FPGA synthesis tools.  This project proposes trying to repeat the approach using a RISC-V core (such as PicoRV or Fomu) which can be synthesized using the Yosys open source tool suite.
+This demonstrated the potential benefit of this approach, but could only be synthesized using proprietary FPGA synthesis tools.  This project proposes trying to create a stripped down version which can be synthesized using the Yosys open source tool suite.
 
-The deliverables of this project would be
+The core is delivered within the CORE-V MCU, a SoC wrapper which provides a debug interface, memory and a range of peripherals.  In order to make this project tractable, this will be stripped down to a minimal MCU providing just the debug interface and memory alongside the core. CORE-V MCU uses FuseSoc for ease of development, but the AVA work has not picked this up, so cleaning up the code to use FuseSoc will be an important starting point.
 
- - A RISC-V core synthesisable with Yosys extended to accelerate AI inference
- - Bring up of the extended core on a suitable FPGA platform.
- - Measurement of the impact on AI inference using TinyMLPerf.
+There are a series of steps in this project, so it can be provided as either a medium or long project. It is also quite open ended, so applicants should consider how they would wish to craft the project to directions that most interest them.
 
-*Primary Mentor:* [Jeremy Bennett](https://github.com/jeremybennett) ([email](mailto:jeremy.bennett@embecosm.com)), *Secondary Mentor:* [William Jones](https://github.com/william-r-jones) ([email](mailto:william.jones@embecosm.com))
+The deliverables of this project would be for the medium project:
+
+ - the stripped down, synthesizable with Verilator as a model;
+ - the stripped down CORE-V MCU with the CV32E40P core, synthasizable for FPGA with Yosys; and
+ - Embench benchmarking of the stripped down CORE-V MCU on FPGA.
+
+The long project would then extend these deliverables with the AI interface using the CV32E40X core:
+
+ - a modified stripped down CORE-V MCU using the CV32E40X core with AI instruction set extensions cleaned up to build completely under FuseSoc.
+ - a modified stripped down CORE-V MCU using the CV32E40X core with AI instruction set extensions as a Verilator model;
+ - a modified stripped down CORE-V MCU using the CV32E40X core with AI instruction set extensions, synthasizable for FPGA with Yosys; and
+ - measurement of the impact on AI inference using TinyMLPerf.
 
 *Skill level:* Advanced (particularly FPGA synthesis using Yosys)
 
-*Language/Tools:* Verilog, SystemVerilog, RISC-V, Yosys open source tool suite
+*Project length:* medium or long
+
+*Mentors:* [Jeremy Bennett](https://github.com/jeremybennett) ([email](mailto:jeremy.bennett@embecosm.com)) and [William Jones](https://github.com/william-r-jones) ([email](mailto:william.jones@embecosm.com))
+
+*Language/Tools:* Verilog, SystemVerilog, RISC-V, Yosys open source tool suite, TinyML benchmark suite
+
+### The World's smallest AI processor
+
+The prize winning bit-serial [SERV core](https://github.com/olofk/serv), created by Olof Kindgren, is the world's smallest RISC-V processor. In this project, we propose combining SERV with the miinimal AI instruction set extension developed under the AVA project (https://github.com/AI-Vector-Accelerator). This could for example use the CFU-LI interface.
+
+The goal would be to demonstrate the world's smallest processor optimized for AI inference.
+
+*Skill level:* Intermediate (particularly FPGA synthesis using Yosys)
+
+*Project length:* medium
+
+*Mentors:* [Jeremy Bennett](https://github.com/jeremybennett) ([email](mailto:jeremy.bennett@embecosm.com)) and [Olof Kindgren](https://github.com/olofk) ([email](mailto:olof@fossi-foundation.org))
+
+*Language/Tools:* Verilog/SystemVerilog, RISC-V, Yosys open source tool suite
+
+### Embench DSP Extensions
+
+We will be developing a set of new digital signal processing benchmarks to add to the current suite of Embench DSP benchmarks.  The starting point will be the current suite of DSP benchmarks (FIR, IIR, and FFT).  New benchmarks will be run on a microprocessor and its performance evaluated.
+
+These new benchmarks will be added to the Embench DSP suite and be made available to the world.
+
+There will the opportunity to engage with students at Rice University who are also working on the project.
+
+*Skill level:* Beginner (accessible to students who have some programming experience and are willing to learn)
+
+*Project length:* medium
+
+*Mentors:* Ray Simar ([email](mailto:ray.simar@rice.edu)).
+
+*Language/Tools:* C, embedded platforms on which to evaluate the benchmarks.
+
+### Embench Interrupt Latency benchmark
+
+Embench has always envisaged measuring the dynamic behavior of systems as well as computation throughput.  This is the Embench-RT benchmark suite.
+
+One of the benchmarks on [Embench-RT](https://github.com/embench/embench-rt) is [IRQ latency](https://github.com/embench/embench-rt/blob/main/irq_latency/design/rv-int-latency.md).  The benchmark goal is to measure an MCU interrupt latency. This factor is crucial for RT FW/SW that is driven by interrupts.
+
+Currently, this benchmark can run on RISCV cores; the project will be to integrate the benchmark for the reference Arm Cortex M4 board used for the main [Embench IoT](https://github.com/embench/embench-iot) benchmark. This will act as the reference against which all others will be compared.
+
+*Skill level:* Intermediate (some experience with embedded devices and board support packages).
+
+*Project length:* long
+
+*Mentors:* Ofer Shinaar ([email](mailto:Ofer.Shinaar@wdc.com)) assisted by one of his colleagues (name TBC).
+
+*Language/Tools:* C, embedded platforms on which to evaluate the benchmarks.
+
+# Porting Compiler test-suite (micro-benchmarks) to Embench
+
+Embench contains several benchmarks for IoT, benchmarks targeting performance, and code-size comparison. One missing piece is a compiler test-suite.
+
+The project goal is to port the [riscv32-Code-density-test-bench](https://github.com/westerndigitalcorporation/riscv32-Code-density-test-bench) to Embench IoT new repo. The effort will include porting the Embench build system, bringing up the repo for users (instructions, build, and full run), adding "correctness testing" to the test suite.
+
+*Skill level:* Beginner (some experience with C Python and Git).
+
+*Project length:* medium
+
+*Mentors:* Ofer Shinaar ([email](mailto:Ofer.Shinaar@wdc.com)) assisted by one of his colleagues (name TBC).
+
+*Language/Tools:* C, embedded platforms on which to evaluate the benchmarks.
 
 ### VPI based fst digital simulation waveform dumping
 
