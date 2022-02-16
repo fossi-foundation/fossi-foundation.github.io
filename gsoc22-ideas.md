@@ -25,17 +25,6 @@ Looking forward to meet you all!
 {:toc}
 
 
-### Porting BaseJump STL to FuseSoc
-
-*Details:* FuseSoC is a package manager and set of build tools for reusable hardware building blocks, which makes it easy to share designs between projects and reuse open IP. BaseJump STL is a comprehensive hardware library for SystemVerilog that seeks to contain all of the commonly used hardware primitives, much as the C++ Standard Template Library does with software primitives. This project is to port BaseJumpSTL to FuseSoC so that new hardware projects can hit the ground running and reuse hand-optimized IP cores rather than re-designing and re-debugging.
-
-*Skill level:* Beginner
-
-*Language/Tool:* SystemVerilog, Python
-
-*Mentor:* [Michael Taylor](mailto:prof.taylor@gmail.com)
-
-
 ### Logical Equivalence Checks with LLHD
 
 The Low Level Hardware Description language, or [LLHD](https://llhd.io/) in short, is simple intermediate representation that is able to capture the semantics of today's hardware description languages *including* their behavioral, verification, and testing features. The IR has been developed alongside the [Moore](https://github.com/fabianschuiki/moore) compiler and published as a [paper](https://arxiv.org/pdf/2004.03494) at PLDI 2020. Since then, we have been busy merging LLHD into the [CIRCT](https://github.com/llvm/circt) project, a larger joint effort to develop Circuit IR Compilers and Tools.
@@ -139,6 +128,8 @@ Prerequisites:
 
 *Skill level:* Intermediate
 
+*Duration:* 175 hours or 350 hours
+
 *Language/Tools:* Python (Migen), Verilog
 
 *Mentor:* [Jonathan Balkind](mailto:jbalkind@ucsb.edu)
@@ -192,6 +183,8 @@ The Moore compiler is written in Rust. Don't be scared if you haven't touched Ru
 
 *Skill level:* Beginner/Intermediate
 
+*Duration:* 175 hours
+
 *Language/Tools:* Verilog/SystemVerilog, RISC-V
 
 *Mentor:* [Jonathan Balkind](mailto:jbalkind@ucsb.edu)
@@ -207,6 +200,8 @@ If you are interested in the TL-Verilog ecosystem, you might also consider any o
 
 *Skill level:* Intermediate
 
+*Duration:* 175 or 350 hours
+
 *Language/Tools:* Verilog, SystemVerilog, RISC-V
 
 *Mentor:* [Jonathan Balkind](mailto:jbalkind@ucsb.edu)
@@ -219,6 +214,8 @@ If you are interested in the TL-Verilog ecosystem, you might also consider any o
 You can find a non-exhaustive [list of available tasks in our documentation](http://librecores-web.readthedocs.io/en/latest/contributing.html). Please talk to Philipp if you have other ideas, or didn't find an interesting project. We welcome your own ideas!
 
 *Skill Level:* Intermediate
+
+*Duration:* 175 or 350 hours
 
 *Language/Tools:* PHP7 with the [Symfony Framework](http://symfony.com/), MySQL, HTML/JS
 
@@ -274,9 +271,9 @@ The RISC-V ISA will transform the world. Recently, UW taped out an open source R
 
 *Skill level:* intermediate
 
-*Project length:* long
+*Project length:* long (350 hours)
 
-*Mentors:* [Reshabh K Sharma](mailto:reshabh@cs.washington.com), [Michael Taylor](mailto:prof.taylor@gmail.com)
+*Mentors:* [Reshabh K Sharma](mailto:reshabh@cs.washington.edu), [Michael Taylor](mailto:prof.taylor@gmail.com)
 
 *Language/Tools:* C++, some knowledge of computer architecture, instruction pipelining and LLVM
 
@@ -285,8 +282,30 @@ The RISC-V ISA will transform the world. Recently, UW taped out an open source R
 
 *Skill level:* beginner-intermediate
 
-*Project length:* medium
+*Project length:* medium (175 hours)
 
-*Mentors:* [Dan Petrisko](mailto:petrisko@cs.washington.com), [Michael Taylor](mailto:prof.taylor@gmail.com)
+*Mentors:* [Dan Petrisko](mailto:petrisko@cs.washington.edu), [Michael Taylor](mailto:prof.taylor@gmail.com)
 
 *Language/Tools:* SystemVerilog, some knowledge of computer architecture, RISC-V knowledge preferred but not required
+
+### Enhancing the Sootty Terminal-based Graphical Waveform Viewer
+[Sootty](https://github.com/Ben1152000/sootty) is a terminal-based waveform viewer which takes advantage of modern terminals' capabilities to give a full graphical display of the users' waveforms. Combined with this, the tool introduces a textual query language for searching waveforms for interesting events to assist in debugging. Sootty is in a fairly early stage of development and so there are a variety of new features that could be added. Get in touch and we can figure out some fun and useful new features for our users!
+
+*Skill level:* Beginner
+
+*Duration:* 175 or 350 hours
+
+*Language/Tools:* Python, Verilog/VHDL/...
+
+*Mentors:* [Ben Darnell](mailto:bdarnell@ucsb.edu), [Jonathan Balkind](mailto:jbalkind@ucsb.edu)
+
+### Javascript library for FuseSoC core files
+*Details:* FuseSoC core description files are a language-agnostic description of an IP core. So far, the only implementations for working with core description files are written in Python (e.g. FuseSoC). A javascript library would make it easier to parse interesting information from the core description files and present on websites.
+
+*Skill level:* beginner-intermediate
+
+*Project length:* medium
+
+*Language/Tools:* JavaScript. Python knowledge is useful for looking at the current implementation
+
+*Mentors:* [Olof Kindgren](mailto:olof.kindgren@gmail.com)
