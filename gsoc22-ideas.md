@@ -456,3 +456,47 @@ In this project, we propose extending the core-v-mini-mcu to support all the Ope
 *Mentors:* [Davide Schiavone](https://github.com/davideschiavone) ([email](mailto:davide@openhwgroup.org)) and Veronia Bahaa ([email](mailto:veronia.iskandar@mailbox.tu-dresden.de))
 
 *Language/Tools:* SystemVerilog, RISC-V, C, Verilator
+
+### Conda packages for Open Silicon tooling
+
+*Details:* Bootstrapping a working environment for Open Silicon development is often a tedious task that involves installing multiple tools written in many different languages from various distribution channels (PyPI, debian, homebrew, containers image) and more often than not building them directly from sources!
+
+The https://github.com/hdl/conda-eda/ project aims to fix this by providing conda.io packages for popular FPGA and ASIC tools and distributing them on a dedicated channel: https://anaconda.org/LiteX-Hub/.
+
+Possible contributions to this project:
+- Make an inventory of the tools commonly used in popular Open Silicon flows.
+- Identify the tools (and their dependencies) that are not yet packaged.
+- Add new recipes to the project to cover those gaps.
+- Moving the package to conda-forge.org to provide automated build and distribution for Linux, MacOSX and Windows.
+- Creating meta-packages that capture the environment for popular Open Silicon flows (analog, digital, hls-based).
+
+*Skill level:* Beginner
+
+*Duration:* ~175 hrs.
+
+*Language/Tools:* Conda, Shell scripting, Git
+
+*Mentor:* Johan Euphrosine<proppy@google.com>
+
+### Jupyter Notebook add-ons for Open Silicon development
+
+*Details:* Jupyter Notebook allows developers to share interactive documents that allow to reproduce a given computation, by capturing in a single file:
+the environment with the tools installation
+the code with a given set of parameters
+the results and their analysis
+
+This is a natural fit for Open Silicon design that often tuning input parameters, inspecting visual results and comparing metrics and simulation measurements.
+
+Possible contributions to this project:
+- Create Jupyter extensions that interface the common Open Silicon data formats (GDS, LEF, DEF, Waveform, Timing and Power analysis report) with its display primitives.
+- Create Jupyter kernels to support writing cells in HDL and HSL languages and evaluating their testbenches.
+- Create a corpus of notebook examples that capture popular Open Silicon flows (analog, digital, hls-based).
+Bootstrap the developer infrastructure and community to maintain those projects.
+
+*Skill level:* Beginner to Intermediate
+
+*Duration:* ~350 hrs.
+
+*Language/Tools:* Python, Typescript
+
+*Mentor:* Johan Euphrosine<proppy@google.com>
