@@ -97,34 +97,6 @@ etc. So, it is important that you discuss a proposal intensively.
  [LibreCores GSoC team](mailto:gsoc@fossi-foundation.org)
 
 
-### Continuous Integration for Hardware Projects on LibreCores CI
-
-*Goal:* Setup verification and continuous integration flow for one of open-source digital hardware projects.
-
-*Details:*
-[LibreCores CI](https://www.librecores.org/static/librecores-ci) is a
-under-development Continuous Integration service within
-[LibreCores](http://librecores.org). In this project we offer students
-to work with modern hardware verification tools, RTL codebase and
-[Jenkins Pipeline](https://jenkins.io/solutions/pipeline/) in order to
-setup efficient verification flows for one of the open-source hardware
-project being hosted on LibreCores. The project includes improvements
-of the HW project testability in RTL, development/improvement of
-testing frameworks and a development of a new Pipeline Library for
-automation in Jenkins.
-
-Prerequisites:
-* Basic knowledge of the hardware verification techniques
-* Knowledge of one of RTL languages
-* Knowledge of one of the scripting languages (preferably Python or Groovy)
-
-*Skill Level:* Intermediate
-
-*Language/Tools:* Verilog/VHDL/.../Python, Jenkins, Groovy
-
-*Mentors:* [Stefan Wallentowitz](mailto:stefan@wallentowitz.de)
-
-
 ### Building Manycore SoCs with OpenPiton + LiteX
 [LiteX](https://github.com/enjoy-digital/litex) makes building FPGA-based SoCs easy. Using the Python hardware design library Migen, LiteX provides a variety of peripherals to enable users to build a complex SoC around a core of their choice. For this project, we would like to connect a manycore [OpenPiton](http://www.openpiton.org/) processor design in order to build a new manycore LiteX SoC.
 
