@@ -39,6 +39,8 @@ SAT/SMT solvers are tools that are extremely fun and satisfying to work with, bu
 
 *Skill Level:* Intermediate to Advanced
 
+*Duration:* 175 hours or 350 hours
+
 *Language/Tools:* C++, SAT/SMT Solver (e.g. Z3, Boolector, Bitwuzla, or others)
 
 *Mentor:* [Fabian Schuiki](mailto:fschuiki@iis.ee.ethz.ch)
@@ -205,6 +207,8 @@ The Moore compiler is written in Rust. Don't be scared if you haven't touched Ru
 
 *Skill Level:* Advanced
 
+*Duration:* 175 hours or 350 hours
+
 *Language/Tools:* Rust, SystemVerilog
 
 *Mentor:* [Fabian Schuiki](mailto:fschuiki@iis.ee.ethz.ch)
@@ -236,7 +240,7 @@ If you are interested in the TL-Verilog ecosystem, you might also consider any o
 
 *Language/Tools:* Verilog, SystemVerilog, RISC-V
 
-*Mentor:* [Jonathan Balkind](mailto:jbalkind@ucsb.edu)
+*Mentor:* [Jonathan Balkind](mailto:jbalkind@ucsb.edu), [Nils Wistoff](mailto:nwistoff@iis.ee.ethz.ch)
 
 
 ### Extend LibreCores.org
@@ -263,6 +267,8 @@ We would love to have you help make Moore even better! As a proof of concept tha
 The Moore compiler is written in Rust. Don't be scared if you haven't touched Rust before -- if you know C or C++ you'll feel right at home. The main language we're currently tackling with Moore right now is SystemVerilog, so either knowing the language a bit or not being scared of looking into language reference manual will be useful.
 
 *Skill Level:* Advanced
+
+*Duration:* 175 hours or 350 hours
 
 *Language/Tools:* Rust, SystemVerilog
 
