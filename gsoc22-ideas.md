@@ -478,3 +478,16 @@ Bootstrap the developer infrastructure and community to maintain those projects.
 *Language/Tools:* Python, Typescript
 
 *Mentor:* Johan Euphrosine<proppy@google.com>
+
+### Adding Language Servers (VHDL/Verilog/SV) to TerosHDL
+
+*Details:* TerosHDL (https://terostechnology.github.io/) is an open source IDE for FPGA/ASIC development based in VSCode. It includes support for VHDL, Verilog and SystemVerilog.
+One of the most important features in a code editor is related to “go to definition”, linting… Currently TerosHDL supports those features partially. Tha main idea of this project is to integrate open source HDL language servers (Verible LSP, GHDL LSP, rusthdl…) in TerosHDL and provide all their capabilities. The language servers should work on Windows, Linux and Mac operating systems. Also create an interface for the plugin that allows users to enable/disable each feature independently.
+
+*Skill level:* Beginner
+
+*Duration:* 175h
+
+*Language/Tool:* Javascript, NodeJS
+
+*Mentor:* [Carlos Alberto Ruiz](mailto:carlosruiznaranjo@gmail.com), [Ismael Pérez](mailto:ismaelprojo@gmail.com)
