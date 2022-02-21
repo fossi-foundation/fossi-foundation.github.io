@@ -3,17 +3,15 @@ layout: page
 title: "Google Summer of Code 2022 - Ideas for Projects"
 ---
 
-*Note that this page is under construction for the new year of GSoC. Projects listed here will change and estimated project lengths are still to be defined.*
-
-FOSSi Foundation is applying as an umbrella organization in Google
+FOSSi Foundation is applying as an umbrella organization for Google
 Summer of Code 2022. That means that we give small projects the
 chance to participate in the program. Below you can find a list of
-ideas that the projects had, but students are encouraged to propose
+ideas that community mentors had, but mentees are encouraged to propose
 their own ideas. These projects are mostly open-ended and can be
 tailored to your level of experience, assuming that you have the 
 appropriate set of required skills for the particular project idea.
 
-Whether you’re an aspiring student or mentor, feel free to contact us,
+Whether you’re an aspiring mentee or mentor, feel free to contact us,
 either through the private GSoC-specific mailing list [gsoc@fossi-foundation.org](mailto:gsoc@fossi-foundation.org),
 through the public [discussion mailing list](https://lists.librecores.org/listinfo/discussion),
 or through the mentors listed for each project below.
@@ -364,18 +362,6 @@ The project goal is to port the [riscv32-Code-density-test-bench](https://github
 *Mentors:* Ofer Shinaar ([email](mailto:Ofer.Shinaar@wdc.com)) assisted by one of his colleagues (name TBC).
 
 *Language/Tools:* C, embedded platforms on which to evaluate the benchmarks.
-
-### VPI based fst digital simulation waveform dumping
-
-Most digital simulators use a proprietary binary data format for storing the simulation waveforms. This makes it impossible to access these waveforms for post processing. The only waveform format which is supported by all simulators is vcd. But the vcd waveform format is very limited as it does not support complex data structures and stores the waveform data in ASCII format resulting in very large waveform data files. The fst file format provided by GTKWave is an alternative. It is open available and represents an efficient binary file format overcoming the vcd file limitations.
-
-The goal of the project is to develop VPI based functions to dump digital simulation waveforms in fst format. 
-
-*Primary Mentor:* Klaus Strohmayer / semify e.U. [email](mailto:office@semify.com)
-
-*Skill level:* intermediate
-
-*Language/Tools:* Verilog / SystemVerilog, C/C++
 
 ### More precise instruction scheduling in LLVM for RISC-V based HammerBlade Manycore
 The RISC-V ISA will transform the world. Recently, UW taped out an open source RISC-V manycore processor with 496 cores that hits 500 Billion RISC-V instructions per second in one chip. The latest version is called HammerBlade Manycore, the design is hosted on Amazon F1, which allows us to simulate having the real chip even as we develop new features. We maintain a downstream RISC-V LLVM backend for custom compiler support. We want to improve the code generation with better instruction scheduling. We already have some basic scheduling support in our LLVM backend, this project aims to improve it by more precisely describing the pipeline model with adjusted weights.
