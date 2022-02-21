@@ -490,7 +490,7 @@ etc. So, it is important that you discuss a proposal intensively.
  
  
  
- ### Klayout ASAP7 DRC and LVS decks
+### Klayout ASAP7 DRC and LVS decks
 
 ASAP7 PDK is a 7-nm predictive process design kit (PDK) c, developed by Arizona State University in collaboration with ARM Ltd. for academic use. The PDK is realistic, based on current assumptions for the 7-nm technology node. Currently, there is an effort to port ASAP7 to OpenLane. To complete the port, ASA7 technology files must be ported to physical verification tools used by OpenLane.
 
@@ -580,7 +580,7 @@ record-keeping.
 
 *Skill level:* intermediate
 
-*Project length:* 165 or 330 hrs
+*Project length:* 175 or 350 hrs
 
 *Language/Tools:*  C, Tcl/Tk, iverilog, ngspice
 
@@ -624,7 +624,7 @@ tested at NIST.
 
 *Skill level:* intermediate
 
-*Project length:* 165 or 330 hrs
+*Project length:* 175 or 350 hrs
 
 *Language/Tools:* Tcl/Tk, Magic
 
