@@ -487,3 +487,148 @@ etc. So, it is important that you discuss a proposal intensively.
 
 *Mentor:* We will find the mentor with you,
  [LibreCores GSoC team](mailto:gsoc@fossi-foundation.org)
+ 
+ 
+ 
+### Klayout ASAP7 DRC and LVS decks
+
+ASAP7 PDK is a 7-nm predictive process design kit (PDK) c, developed by Arizona State University in collaboration with ARM Ltd. for academic use. The PDK is realistic, based on current assumptions for the 7-nm technology node. Currently, there is an effort to port ASAP7 to OpenLane. To complete the port, ASA7 technology files must be ported to physical verification tools used by OpenLane.
+
+The objective of this project is to develop ASAP7 Design Rules Checker (DRC) and Layout vs. Schematic (LVS) technology files for Klayout. Also, the scope of the project includes the development of a CI regression test suite. 
+
+*Skill level:* intermediate
+
+*Project length:* medium
+
+*Language/Tools:*  Python, Ruby and Klayout
+
+*Other requirements:* Good EE background
+
+*Mentors:* [Mohamed Shalan](mailto:mshalan@efabless.com),  [Mohamed Kassem](mailto:mkk@efabless.com)
+
+
+
+### Fault Silicon Validation and Open MPW integration
+
+Design for Testability (DFT) is a technique which facilitates a design to become testable after fabrication. “Extra” logic is added to the design during the implementation process, which helps post-fabrication testing. Post-fabrication testing is necessary because IC fabrication is not 100% error free; thus, identifying faulty silicon as early as possible and before reaching the end-user is essential to reduce its impact. 
+
+The objective of the project is to Fully integrate Fault into OpenLane to enable DFT. Also, the project aims at adding DFT support to Caravel chip to enable post fabrication testing using Automatic Testing Equipment (ATE) before packaging to exclude faulty chips.
+
+*Skill level:* intermediate
+
+*Project length:* medium
+
+*Language/Tools:*   Python, Verilog and OpenLane 
+
+*Other requirements:* Good knowledge of RTL design as well as DFT.
+
+*Mentors:* [Mohamed Shalan](mailto:mshalan@efabless.com),  [Kareem Farid](mailto:kareem.farid@efabless.com)
+
+
+### IRSIM dynamic power analysis and other improvements:
+
+Summary:
+Dynamic power analysis is a requirement for digital designs that
+need to be power efficient.  Static timing analysis tools do not
+understand actual circuit operation, so they can only estimate
+dynamic power usage, and will not be able to analyze specific
+power mitigation techniques, like having unused portions of a
+circuit shut down into a low-power or sleep mode.  Proper
+dynamic power analysis requires simulating a circuit while
+computing switching power, with simulation setups designed to
+put the circuit into specific operating modes.  SPICE analysis
+can do this but is prohibitively compute-expensive for large
+digital designs.  Verilog simulators do not have the information
+to compute power consumption.  Currently there are no open-source
+tools for dynamic power analysis.
+
+IRSIM is an open source switch-level simulator that analyzes digital
+circuits on the transistor level, but with a simplified linear model
+of transistors as resistive switches.  Because digital circuits
+operate by treating FET transistors as switches in one of two
+states, "on" (saturated) or "off", the simplified linear model
+works quite well, and changes in the state of a switch can be
+applied as "events" in a queue, similar to the way verilog
+simulators operate.  Consequently, IRSIM runs only about an order
+of magnitude slower than a verilog gate-level simulator, but
+many orders of magnitude faster than a SPICE simulator.  The
+slow speed of simulation relative to verilog simulators is one
+reason that IRSIM has largely fallen out of use.
+
+However, IRSIM has had built-in power analysis for decades.  But
+it has not been exercised for a long time, with considerable
+development in IRSIM happening without checking against the
+power analysis code.
+
+The purpose of the project is to test the operation of power
+analysis in IRSIM, and to upgrade it where needed to make use
+of features in IRSIM added in recent years.  That includes
+defining a Tcl command-line interface for power analysis.
+
+Time permitting (e.g., 330 hour internship instead of 165 hour),
+an additional needed feature for IRSIM is to be able to handle
+multiple transistor types and, by extension, multiple power
+domains.  The latter is particularly important for power
+analysis because many circuits operate in "sleep" modes by
+lowering the power supply to a minimum that can trigger a
+"wake-up" mechanism.  Proper power analysis depends on
+understanding the different voltage domains.  The
+implementation should be straightforward, as it adds nothing
+new to the analyses done by IRSIM, but is mostly just
+record-keeping.
+
+
+*Skill level:* intermediate
+
+*Project length:* 175 or 350 hrs
+
+*Language/Tools:*  C, Tcl/Tk, iverilog, ngspice
+
+*Mentors:* [Tim Edwards](mailto:tim@opencircuitdesign.com)
+
+
+
+### Parameterized device layouts for Sky130
+
+Summary: The purpose of this internship is to expand the set
+of available parameterized devices available in magic for use
+with the SkyWater Sky130 foundry process.  These devices are
+created using an existing framework written in Tcl/Tk, although
+most of the code involves magic command-line commands (which
+are implemented in Tcl).  Only a basic understanding of Tcl
+variables, conditionals, loops, and subroutine calls is needed.
+
+New devices of interest that have not yet been done in
+parameterized cells include (but are not limited to):  The
+photodiode, extended-drain MOSFETs, bipolar transistors, ESD
+transistors, inductors, metal fuses, UHV (ultra-high-voltage)
+devices.
+
+Each new device should follow the design specifications for
+device layout from the SkyWater DRC manual, and needs to
+implement five routines that (1) define the device parameters and
+limits, (2) convert parameters from a SPICE netlist, (3) define
+the user interface dialog (UI) for setting those parameters, (4)
+check and enforce parameter limits, and (5) draw the device.
+After implementing, each device needs to be checked for DRC
+correctness by generating a "torture test" of a large array of
+devices with different sets of parameters which can be passed to
+the DRC checkers to make sure that the drawing routine produces
+DRC clean layouts.
+
+Time permitting (e.g., 330 hour internship instead of 165 hour),
+the internship can include generating an analog layout implementing
+many different devices that can be tested from a probe station.
+This layout would be placed on an Efabless ChipIgnite run and
+tested at NIST.
+
+*Skill level:* intermediate
+
+*Project length:* 175 or 350 hrs
+
+*Language/Tools:* Tcl/Tk, Magic
+
+*Mentors:* [Tim Edwards](mailto:tim@opencircuitdesign.com)
+
+
+
