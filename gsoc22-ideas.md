@@ -477,3 +477,21 @@ One of the most important features in a code editor is related to “go to defin
 *Language/Tool:* Javascript, NodeJS
 
 *Mentor:* [Carlos Alberto Ruiz](mailto:carlosruiznaranjo@gmail.com), [Ismael Pérez](mailto:ismaelprojo@gmail.com)
+
+### Python bindings for OpenROAD
+
+*Details:* OpenROAD is a standalone application capable of performing RTL-to-GDSII SoC design, from floorplanning through detailed routing with metal fill insertion, signoff parasitic extraction and timing analysis. It currently provides a comprehensive high-level scriptable layer in TCL, but also embeds a Python interpreter.  The embedded Python interpreter provides support only for the database (odb) and is a subset of what is available in TCL.
+
+Possible contributions to this project:
+- Compile odb as a standalone python module
+- Extend the bindings to other components of OpenROAD
+- Write Python and/or Conda packaging recipes for the package and its dependencies
+- Bootstrap infrastructure to continuously build and publish the package to PyPI and/or Conda.
+
+*Skill level:* Intermediate to Advanced
+
+*Duration:* ~350 hrs.
+
+*Language/Tools:* Python, C++, Conda
+
+*Mentor:* Johan Euphrosine<proppy@google.com>, Matt Liberty <mliberty@eng.ucsd.edu>
