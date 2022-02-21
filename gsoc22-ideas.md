@@ -490,11 +490,8 @@ etc. So, it is important that you discuss a proposal intensively.
  
  
  
- 
- 
- ---------------------------------------------------------------
-### Klayout ASAP7 DRC and LVS decks
----------------------------------------------------------------
+ ### Klayout ASAP7 DRC and LVS decks
+
 ASAP7 PDK is a 7-nm predictive process design kit (PDK) c, developed by Arizona State University in collaboration with ARM Ltd. for academic use. The PDK is realistic, based on current assumptions for the 7-nm technology node. Currently, there is an effort to port ASAP7 to OpenLane. To complete the port, ASA7 technology files must be ported to physical verification tools used by OpenLane.
 
 The objective of this project is to develop ASAP7 Design Rules Checker (DRC) and Layout vs. Schematic (LVS) technology files for Klayout. Also, the scope of the project includes the development of a CI regression test suite. 
