@@ -349,7 +349,7 @@ Currently, this benchmark can run on RISCV cores; the project will be to integra
 
 *Language/Tools:* C, embedded platforms on which to evaluate the benchmarks.
 
-# Porting Compiler test-suite (micro-benchmarks) to Embench
+### Porting Compiler test-suite (micro-benchmarks) to Embench
 
 Embench contains several benchmarks for IoT, benchmarks targeting performance, and code-size comparison. One missing piece is a compiler test-suite.
 
