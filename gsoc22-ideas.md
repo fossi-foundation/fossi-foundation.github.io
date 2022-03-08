@@ -381,8 +381,10 @@ In this project, we propose extending the core-v-mini-mcu to support all the Ope
 
 *Language/Tools:* SystemVerilog, RISC-V, C, Verilator
 
-### More precise instruction scheduling in LLVM for RISC-V based HammerBlade Manycore
-The RISC-V ISA will transform the world. Recently, UW taped out an open source RISC-V manycore processor with 496 cores that hits 500 Billion RISC-V instructions per second in one chip. The latest version is called HammerBlade Manycore, the design is hosted on Amazon F1, which allows us to simulate having the real chip even as we develop new features. We maintain a downstream RISC-V LLVM backend for custom compiler support. We want to improve the code generation with better instruction scheduling. We already have some basic scheduling support in our LLVM backend, this project aims to improve it by more precisely describing the pipeline model with adjusted weights.
+### Improving state of code generation for RISC-V based manycore architectures in LLVM
+The RISC-V ISA will transform the world. Recently, UW taped out an open source RISC-V manycore processor with thousands of cores which executes trillions of RISC-V instructions per second in one chip. We are working on finding answers to questions like how to efficiently program and run code on thousands of cores?  
+
+We want to improve the state of the code generation for manycore architectures in LLVM by developing techniques to better specialize different parts of the compiler for manycore architectures, for example, congestion awareness, instruction scheduling and register allocation. We plan to do this by analyzing different workloads or comparing with other compilers like gcc for finding generalized improvement opportunities.
 
 *Skill level:* intermediate
 
@@ -390,7 +392,7 @@ The RISC-V ISA will transform the world. Recently, UW taped out an open source R
 
 *Mentors:* [Reshabh K Sharma](mailto:reshabh@cs.washington.edu), [Michael Taylor](mailto:prof.taylor@gmail.com)
 
-*Language/Tools:* C++, some knowledge of computer architecture, instruction pipelining and LLVM
+*Language/Tools:* C++, LLVM
 
 ### Enhancing the Sootty Terminal-based Graphical Waveform Viewer
 [Sootty](https://github.com/Ben1152000/sootty) is a terminal-based waveform viewer which takes advantage of modern terminals' capabilities to give a full graphical display of the users' waveforms. Combined with this, the tool introduces a textual query language for searching waveforms for interesting events to assist in debugging. Sootty is in a fairly early stage of development and so there are a variety of new features that could be added. Get in touch and we can figure out some fun and useful new features for our users!
