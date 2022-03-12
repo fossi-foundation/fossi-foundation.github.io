@@ -433,7 +433,7 @@ free online Makerchip IDE. This will include:
 
 *Project length:* ~175 or ~350 hours
 
-*Mentors:* one of several Efabless guys, [Steve Hoover](https://www.linkedin.com/in/steve-hoover-a44b607/) ([email](mailto:steve.hoover@redwoodeda.com))
+*Mentors:* [Mohamed Kassem](https://www.linkedin.com/in/mkkassem/), [Steve Hoover](https://www.linkedin.com/in/steve-hoover-a44b607/) ([email](mailto:steve.hoover@redwoodeda.com))
 
 
 ### More precise instruction scheduling in LLVM for RISC-V based HammerBlade Manycore
