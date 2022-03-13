@@ -147,7 +147,7 @@ This project will have the student:
 *Details:* The Makerchip platform for open-source circuit design has introduced support for custom
 visualization of circuit simulations. This has been used to great success in RISC-V training and
 is useful for circuit debug and conveying microarchitectural behavior as well. Any circuit can
-be visualized in useful ways. Find a few examples [here](https://makerchip.com/sandbox/?tabs=Code-Examples,VIZ%20Guide#).
+be visualized in useful ways. Find a few examples [here](https://makerchip.com/sandbox/?tabs=VIZ%20Guide,Code-Examples#).
 
 Some circuits we would like to provide visibility into include:
 
@@ -160,7 +160,7 @@ Some circuits we would like to provide visibility into include:
   - this [neural network](https://github.com/vineetjain07/DNN_TL-V)
   - gamified circuit design challenges
 
-Visualization is written in (very straight-forward) JavaScript that has access to trace data from simulation and a canvas to draw on, described [here](https://makerchip.com/sandbox/?tabs=VIZ%20Guide,Code-Examples#).
+Visualization is written in (very straight-forward) JavaScript that has access to trace data from simulation and a canvas to draw on, described [here](https://makerchip.com/sandbox/?tabs=Code-Examples,VIZ%20Guide#).
 
 *Skill level:* Beginner/Intermediate
 
@@ -205,6 +205,27 @@ The goal would be to demonstrate the world's smallest processor optimized for AI
 *Mentors:* [Jeremy Bennett](https://github.com/jeremybennett) ([email](mailto:jeremy.bennett@embecosm.com)) and [Olof Kindgren](https://github.com/olofk) ([email](mailto:olof@fossi-foundation.org))
 
 *Language/Tools:* Verilog/SystemVerilog, RISC-V, Yosys open source tool suite
+
+
+### 1st CLaaS for Local FPGAs
+
+[1st ClaaS](https://github.com/stevehoover/1st-CLaaS) supports web application communication with FPGA
+logic in the cloud. It would be nice to support local FPGA use cases as well. This is useful for local
+applications as well as to support development that will ultimately be deployed to the cloud.
+
+[FuseSoC](https://github.com/olofk/fusesoc) and [Apio](https://github.com/FPGAwars/apio) are worth
+considering for vendor-agnostic FPGA support.
+
+*Discussion:* [TL-Verilog User's Slack workspace](https://join.slack.com/t/tl-verilog-users/shared_invite/zt-4fatipnr-dmDgkbzrCe0ZRLOOVm89gA) `#1st-claas` channel.
+
+*Skill level:* Advanced
+
+*Languages/Tools:* FPGAs, Linux, Scripting, Makefiles
+
+*Project length:*: ~350 hours
+
+*Mentors:* [Theo Omtzigt](https://www.linkedin.com/in/theodoreomtzigt/) ([email](mailto:theo@stillwater-sc.com)), [Steve Hoover](https://www.linkedin.com/in/steve-hoover-a44b607/) ([email](mailto:steve.hoover@redwoodeda.com))
+
 
 ### Giving AnyCore an Open-Source FPU
 [AnyCore](https://people.engr.ncsu.edu/ericro/research/anycore.htm) is an advanced superscalar processor developed at NC State University, designed to be highly configurable across parameters like issue width and pipeline depth. This project would entail connecting an open-source Floating Point Unit (FPU) to the high performance AnyCore processor, which runs the RISC-V ISA.
@@ -380,6 +401,29 @@ In this project, we propose extending the core-v-mini-mcu to support all the Ope
 *Mentors:* [Davide Schiavone](https://github.com/davideschiavone) ([email](mailto:davide@openhwgroup.org)) and Veronia Bahaa ([email](mailto:veronia.iskandar@mailbox.tu-dresden.de))
 
 *Language/Tools:* SystemVerilog, RISC-V, C, Verilator
+
+
+### Development Framework for Open MPW Shuttles
+
+Efabless, Google, and SkyWater Technologies, through the Open MPW and ChipIgnite programs, provide free ASIC fabrication.
+To help streamline the development flow, this project will provide a starting template for development within the
+free online Makerchip IDE. This will include:
+
+  - visualization of the [Caravel](https://github.com/efabless/caravel) harness
+  - support for FPGA prototyping, leveraging this [environment](https://github.com/BalaDhinesh/Virtual-FPGA-Lab)
+  - default stimulus
+  - build flow enhancements to the [Caravel sample user project](https://github.com/efabless/caravel_user_project),
+    adding support for TL-Verilog and Makerchip
+  - clear development flow documentation
+
+*Skill level:* Intermediate/Advanced
+
+*Languages/Tools:* Caravel (https://github.com/efabless/caravel), FPGAs, TL-Verilog, Makerchip
+
+*Project length:* ~175 or ~350 hours
+
+*Mentors:* [Mohamed Kassem](https://www.linkedin.com/in/mkkassem/), [Steve Hoover](https://www.linkedin.com/in/steve-hoover-a44b607/) ([email](mailto:steve.hoover@redwoodeda.com))
+
 
 ### Improving state of code generation for RISC-V based manycore architectures in LLVM
 The RISC-V ISA will transform the world. Recently, UW taped out an open source RISC-V manycore processor with thousands of cores which executes trillions of RISC-V instructions per second in one chip. We are working on finding answers to questions like how to efficiently program and run code on thousands of cores?  
