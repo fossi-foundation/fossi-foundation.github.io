@@ -479,7 +479,7 @@ Possible contributions to this project:
 
 *Language/Tools:* Conda, Shell scripting, Git
 
-*Mentor:* Johan Euphrosine<proppy@google.com>
+*Mentor:* [Johan Euphrosine](mailto:proppy@google.com)
 
 ### Integration of WARP-V with OpenPiton
 
