@@ -147,7 +147,7 @@ This project will have the student:
 *Details:* The Makerchip platform for open-source circuit design has introduced support for custom
 visualization of circuit simulations. This has been used to great success in RISC-V training and
 is useful for circuit debug and conveying microarchitectural behavior as well. Any circuit can
-be visualized in useful ways. Find a few examples [here](https://makerchip.com/sandbox/?tabs=Code-Examples,VIZ%20Guide#).
+be visualized in useful ways. Find a few examples [here](https://makerchip.com/sandbox/?tabs=VIZ%20Guide,Code-Examples#).
 
 Some circuits we would like to provide visibility into include:
 
@@ -160,7 +160,7 @@ Some circuits we would like to provide visibility into include:
   - this [neural network](https://github.com/vineetjain07/DNN_TL-V)
   - gamified circuit design challenges
 
-Visualization is written in (very straight-forward) JavaScript that has access to trace data from simulation and a canvas to draw on, described [here](https://makerchip.com/sandbox/?tabs=VIZ%20Guide,Code-Examples#).
+Visualization is written in (very straight-forward) JavaScript that has access to trace data from simulation and a canvas to draw on, described [here](https://makerchip.com/sandbox/?tabs=Code-Examples,VIZ%20Guide#).
 
 *Skill level:* Beginner/Intermediate
 
@@ -205,6 +205,27 @@ The goal would be to demonstrate the world's smallest processor optimized for AI
 *Mentors:* [Jeremy Bennett](https://github.com/jeremybennett) ([email](mailto:jeremy.bennett@embecosm.com)) and [Olof Kindgren](https://github.com/olofk) ([email](mailto:olof@fossi-foundation.org))
 
 *Language/Tools:* Verilog/SystemVerilog, RISC-V, Yosys open source tool suite
+
+
+### 1st CLaaS for Local FPGAs
+
+[1st ClaaS](https://github.com/stevehoover/1st-CLaaS) supports web application communication with FPGA
+logic in the cloud. It would be nice to support local FPGA use cases as well. This is useful for local
+applications as well as to support development that will ultimately be deployed to the cloud.
+
+[FuseSoC](https://github.com/olofk/fusesoc) and [Apio](https://github.com/FPGAwars/apio) are worth
+considering for vendor-agnostic FPGA support.
+
+*Discussion:* [TL-Verilog User's Slack workspace](https://join.slack.com/t/tl-verilog-users/shared_invite/zt-4fatipnr-dmDgkbzrCe0ZRLOOVm89gA) `#1st-claas` channel.
+
+*Skill level:* Advanced
+
+*Languages/Tools:* FPGAs, Linux, Scripting, Makefiles
+
+*Project length:*: ~350 hours
+
+*Mentors:* [Theo Omtzigt](https://www.linkedin.com/in/theodoreomtzigt/) ([email](mailto:theo@stillwater-sc.com)), [Steve Hoover](https://www.linkedin.com/in/steve-hoover-a44b607/) ([email](mailto:steve.hoover@redwoodeda.com))
+
 
 ### Giving AnyCore an Open-Source FPU
 [AnyCore](https://people.engr.ncsu.edu/ericro/research/anycore.htm) is an advanced superscalar processor developed at NC State University, designed to be highly configurable across parameters like issue width and pipeline depth. This project would entail connecting an open-source Floating Point Unit (FPU) to the high performance AnyCore processor, which runs the RISC-V ISA.
@@ -381,8 +402,33 @@ In this project, we propose extending the core-v-mini-mcu to support all the Ope
 
 *Language/Tools:* SystemVerilog, RISC-V, C, Verilator
 
-### More precise instruction scheduling in LLVM for RISC-V based HammerBlade Manycore
-The RISC-V ISA will transform the world. Recently, UW taped out an open source RISC-V manycore processor with 496 cores that hits 500 Billion RISC-V instructions per second in one chip. The latest version is called HammerBlade Manycore, the design is hosted on Amazon F1, which allows us to simulate having the real chip even as we develop new features. We maintain a downstream RISC-V LLVM backend for custom compiler support. We want to improve the code generation with better instruction scheduling. We already have some basic scheduling support in our LLVM backend, this project aims to improve it by more precisely describing the pipeline model with adjusted weights.
+
+### Development Framework for Open MPW Shuttles
+
+Efabless, Google, and SkyWater Technologies, through the Open MPW and ChipIgnite programs, provide free ASIC fabrication.
+To help streamline the development flow, this project will provide a starting template for development within the
+free online Makerchip IDE. This will include:
+
+  - visualization of the [Caravel](https://github.com/efabless/caravel) harness
+  - support for FPGA prototyping, leveraging this [environment](https://github.com/BalaDhinesh/Virtual-FPGA-Lab)
+  - default stimulus
+  - build flow enhancements to the [Caravel sample user project](https://github.com/efabless/caravel_user_project),
+    adding support for TL-Verilog and Makerchip
+  - clear development flow documentation
+
+*Skill level:* Intermediate/Advanced
+
+*Languages/Tools:* Caravel (https://github.com/efabless/caravel), FPGAs, TL-Verilog, Makerchip
+
+*Project length:* ~175 or ~350 hours
+
+*Mentors:* [Mohamed Kassem](https://www.linkedin.com/in/mkkassem/), [Steve Hoover](https://www.linkedin.com/in/steve-hoover-a44b607/) ([email](mailto:steve.hoover@redwoodeda.com))
+
+
+### Improving state of code generation for RISC-V based manycore architectures in LLVM
+The RISC-V ISA will transform the world. Recently, UW taped out an open source RISC-V manycore processor with thousands of cores which executes trillions of RISC-V instructions per second in one chip. We are working on finding answers to questions like how to efficiently program and run code on thousands of cores?  
+
+We want to improve the state of the code generation for manycore architectures in LLVM by developing techniques to better specialize different parts of the compiler for manycore architectures, for example, congestion awareness, instruction scheduling and register allocation. We plan to do this by analyzing different workloads or comparing with other compilers like gcc for finding generalized improvement opportunities.
 
 *Skill level:* intermediate
 
@@ -390,7 +436,7 @@ The RISC-V ISA will transform the world. Recently, UW taped out an open source R
 
 *Mentors:* [Reshabh K Sharma](mailto:reshabh@cs.washington.edu), [Michael Taylor](mailto:prof.taylor@gmail.com)
 
-*Language/Tools:* C++, some knowledge of computer architecture, instruction pipelining and LLVM
+*Language/Tools:* C++, LLVM
 
 ### Enhancing the Sootty Terminal-based Graphical Waveform Viewer
 [Sootty](https://github.com/Ben1152000/sootty) is a terminal-based waveform viewer which takes advantage of modern terminals' capabilities to give a full graphical display of the users' waveforms. Combined with this, the tool introduces a textual query language for searching waveforms for interesting events to assist in debugging. Sootty is in a fairly early stage of development and so there are a variety of new features that could be added. Get in touch and we can figure out some fun and useful new features for our users!
@@ -433,7 +479,7 @@ Possible contributions to this project:
 
 *Language/Tools:* Conda, Shell scripting, Git
 
-*Mentor:* Johan Euphrosine<proppy@google.com>
+*Mentor:* [Johan Euphrosine](mailto:proppy@google.com)
 
 ### Integration of WARP-V with OpenPiton
 
@@ -630,5 +676,53 @@ tested at NIST.
 
 *Mentors:* [Tim Edwards](mailto:tim@opencircuitdesign.com)
 
+
+### RISC-V TensorCore for Edge AI
+
+The goals of the RISC-V TensorCore project are to create 
+RISC-V V-extension-based hardware accelerators that leverage 
+custom numerics to gain energy-efficiency, performance, 
+reproducibility, or reliable computations for robotics, 
+model-predictive control, AI/ML, Reinforcement Learning, 
+data acquisition and signal processing applications. 
+
+As many embedded intelligence applications will reside 
+on the edge, and hardware experimentation requires a 
+cost-effective and flexible design environment, most 
+of the vector engines presented here are targeted as 
+softcores on different FPGA platforms. 
+
+As the reconfigurability of an FPGA adds overhead to the 
+realization of the logic for a computational transformation, 
+it is paramount for energy-efficiency that the computational 
+engine takes full advantage of the hardmacros available 
+in the FPGA. The micro-architecture of a vector engine maps 
+well to the DSP-slice architecture of most FPGAs, they 
+are a productive technology target to deliver on custom 
+compute engines with custom numerics.  
+
+Furthermore, when introducing custom numerics, the language 
+support for these new types will always lag by many years, 
+and sometimes the language standard committee will never 
+be motivated to adapt. This means that only languages that 
+offer user-defined types, such as Julia and C++, are ready 
+to take advantage of custom hardware accelerators that 
+differentiate through custom numerics. The user-defined 
+type can be emulated by the scalar core, and computational 
+kernels can be executed faithfully in the custom arithmetic 
+by the vector engine. A user-defined type library, such as 
+[Universal](https://github.com/stillwater-sc/universal)
+will function as the custom type emulation layer, 
+and higher level libraries, such as 
+[hprBLAS](https://github.com/stillwater-sc/hpr-blas) 
+will function as the kernel dispatch layer.
+
+*Skill level:* intermediate
+
+*Project length:* 175 or 350 hrs
+
+*Language/Tools:* TL-V, SV, Verilog
+
+*Mentors:* [Theodore Omtzigt](mailto:theo@stillwater-sc.com)
 
 
