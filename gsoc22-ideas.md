@@ -768,17 +768,21 @@ that we are testing is a browser-based visualization of a job's results.
 This lets users view a small preview of the GDS result, alongside various metrics
 reported by each task in the physical design flow.
 
-We would like to improve the way that data is presented and add more information
-from the SiliconCompiler job manifests, so this would be a great project for a
-developer interested in frontend development and/or data visualization!
+We would like to improve the way that this data is presented, and add more information
+from the SiliconCompiler job manifests. This would be a great project for someone
+interested in frontend development and/or data visualization!
+
+This is an example of the sort of report which you would be working on:
+
+![exampleReport](https://user-images.githubusercontent.com/5217539/162544399-3c83d667-35b4-4013-b373-ae42c00c4ad6.png)
 
 We have a few improvements in mind, but we would also welcome suggestions:
 
 - Past Results: SiliconCompiler retains metrics from past builds, which we would like to display.
 - Data Visualization: We would like to explore options beyond simple tables for visualizing metrics within and across job runs.
 - Input Parameters: In addition to a job's results, we would like to include the values of configurable inputs in our reports.
-- Modal Dialogs: There is some content which we would like to display in 'hover-over' modals, rather than linking to them.
-- "Flowgraph" visualization: We would like to display which individual tasks were run over the course of the job, in the correct order. SiliconCompiler currently uses graphviz to generate diagrams of these "flowgraphs".
+- Modal Dialogs: There is some content which we would like to display in 'hover-over' modals, rather than linking to it.
+- "Flowgraph" Visualization: SiliconCompiler can generate diagrams describing which tasks ran over the course of a job, and we would like to include those in our reports.
 
 *Skill Level:* Beginner
 
