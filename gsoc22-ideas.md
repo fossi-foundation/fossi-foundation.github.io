@@ -726,3 +726,38 @@ will function as the kernel dispatch layer.
 *Mentors:* [Theodore Omtzigt](mailto:theo@stillwater-sc.com)
 
 
+### RISC-V core benchmarks using SiliconCompiler
+
+[SiliconCompiler](https://github.com/siliconcompiler/siliconcompiler) is an
+open-source build framework for chip design that automates translation from
+source code to silicon. For this project, we would like to use SiliconCompiler
+to compile a handful of open-source RISC-V cores to open technology targets like
+FreePDK45 or Skywater130, and document optimal performance and area for each.
+
+In order to demonstrate SiliconCompiler's flexibility, we would like to pick an
+interesting range of cores implemented in different HDLs. Some cores we are
+considering include:
+
+- [PicoRV32](https://github.com/YosysHQ/picorv32) (Verilog)
+- [Ibex](https://github.com/lowrisc/ibex) (SystemVerilog)
+- [VexRiscv](https://github.com/SpinalHDL/VexRiscv) (SpinalHDL)
+- [RISC-V Mini](https://github.com/ucb-bar/riscv-mini) (Chisel)
+- [Flute](https://github.com/bluespec/Flute) (Bluespec)
+
+However, we are open to suggestions from our mentee!
+
+The expected outcome of this project is to pick 3-6 cores and write a
+SiliconCompiler build script for each one (with tuned build parameters), and
+then publish the build scripts along with layout screenshots and benchmarking
+results. In addition, this project may entail contributing back any changes to
+SiliconCompiler needed to complete the task. In particular, this project will
+likely involve work on tool drivers for any non-Verilog frontends used.
+
+*Skill Level:* Intermediate
+
+*Duration:* 175 hours (3 cores) or 350 hours (6 cores)
+
+*Language/tools:* Python, Yosys, OpenROAD, Verilog, other HDLs depending on cores chosen
+
+*Mentors:* [Noah Moroze](mailto:noah@zeroasic.com), Will Ransohoff
+
