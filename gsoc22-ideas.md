@@ -759,5 +759,31 @@ likely involve work on tool drivers for any non-Verilog frontends used.
 
 *Language/tools:* Python, Yosys, OpenROAD, Verilog, other HDLs depending on cores chosen
 
-*Mentors:* [Noah Moroze](mailto:noah@zeroasic.com), Will Ransohoff
+*Mentors:* [Noah Moroze](mailto:noah@zeroasic.com), [Will Ransohoff](mailto:will@zeroasic.com)
 
+### Interactive SiliconCompiler design summaries
+
+SiliconCompiler produces automated reports for its designs, and one format
+that we are testing is a browser-based visualization of a job's results.
+This lets users view a small preview of the GDS result, alongside various metrics
+reported by each task in the physical design flow.
+
+We would like to improve the way that this data is presented, and add more information
+from the SiliconCompiler job manifests. This would be a great project for someone
+interested in frontend development and/or data visualization!
+
+[This is what our reports currently look like.](https://user-images.githubusercontent.com/5217539/162544399-3c83d667-35b4-4013-b373-ae42c00c4ad6.png) We have a few improvements in mind, but we would also welcome suggestions:
+
+- Past Results: SiliconCompiler retains metrics from past builds, which we would like to display.
+- Data Visualization: We would like to explore options beyond simple tables for visualizing metrics within and across job runs.
+- Input Parameters: In addition to a job's results, we would like to include the values of configurable inputs in our reports.
+- Modal Dialogs: There is some content which we would like to display in 'hover-over' modals, rather than linking to it.
+- "Flowgraph" Visualization: SiliconCompiler can generate diagrams describing which tasks ran over the course of a job, and we would like to include those in our reports.
+
+*Skill Level:* Beginner
+
+*Duration:* 175 hours
+
+*Languate/tools:* Python (+Jinja), JS, HTML/CSS
+
+*Mentors:* [Will Ransohoff](mailto:will@zeroasic.com)
