@@ -759,7 +759,7 @@ likely involve work on tool drivers for any non-Verilog frontends used.
 
 *Language/tools:* Python, Yosys, OpenROAD, Verilog, other HDLs depending on cores chosen
 
-*Mentors:* [Noah Moroze](mailto:noah@zeroasic.com), Will Ransohoff
+*Mentors:* [Noah Moroze](mailto:noah@zeroasic.com), [Will Ransohoff](mailto:will@zeroasic.com)
 
 ### Interactive SiliconCompiler design summaries
 
@@ -772,11 +772,7 @@ We would like to improve the way that this data is presented, and add more infor
 from the SiliconCompiler job manifests. This would be a great project for someone
 interested in frontend development and/or data visualization!
 
-This is an example of the sort of report which you would be working on:
-
-![exampleReport](https://user-images.githubusercontent.com/5217539/162544399-3c83d667-35b4-4013-b373-ae42c00c4ad6.png)
-
-We have a few improvements in mind, but we would also welcome suggestions:
+[This is what our reports currently look like.](https://user-images.githubusercontent.com/5217539/162544399-3c83d667-35b4-4013-b373-ae42c00c4ad6.png) We have a few improvements in mind, but we would also welcome suggestions:
 
 - Past Results: SiliconCompiler retains metrics from past builds, which we would like to display.
 - Data Visualization: We would like to explore options beyond simple tables for visualizing metrics within and across job runs.
