@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "El Correo Libre Issue 48"
-description: El Correo Libre Newsletter, Issue 48
+title: "El Correo Libre Issue 49"
+description: El Correo Libre Newsletter, Issue 49
 author: Gareth Halfacree
 ---
-# El Correo Libre Issue 48
+# El Correo Libre Issue 49
 
 <img src="images/verigpu.jpg" style="max-width:100%" />
 
