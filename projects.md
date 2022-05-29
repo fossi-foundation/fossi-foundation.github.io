@@ -32,7 +32,7 @@ are involved in.
 </tr>
 <tr>
   <td style="padding: 15px; vertical-align: top">
-    <img src="/assets/cocotb_logo_unofficial.png" width="120px">
+    <img src="/assets/cocotb-logo.svg" width="120px">
   </td>
   <td>
     <p><b><a href="https://www.cocotb.org">cocotb</a></b> is a COroutine based COsimulation TestBench environment for verifying VHDL/Verilog RTL using Python.
