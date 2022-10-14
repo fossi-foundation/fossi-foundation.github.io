@@ -43,15 +43,6 @@ are involved in.
 </tr>
 <tr>
   <td style="padding: 10px; vertical-align: top">
-    <a href="https://www.librecores.org"><img src="/assets/librecores_logo.png" width="120px" /></a>
-  </td>
-  <td>
-    <b><a href="https://www.librecores.org">LibreCores</a></b> is a community hub for FOSSi.
-    Centered around the theme of "sharing," LibreCores features documentation, ways for the communicate to interact, and most importantly, a project repository with free and open source digital hardware ("IP cores") and associated projects.
-  </td>
-</tr>
-<tr>
-  <td style="padding: 10px; vertical-align: top">
     <a href="https://www.embench.org"><img src="/assets/embench_logo.png" width="120px" /></a>
   </td>
   <td>
@@ -74,6 +65,20 @@ are involved in.
 </tr>
 </table>
 
+Previous projects
+-----------------
+
+<table>
+<tr>
+  <td style="padding: 10px; vertical-align: top">
+    <a href="https://www.librecores.org"><img src="/assets/librecores_logo.png" width="120px" /></a>
+  </td>
+  <td>
+    <b><a href="https://www.librecores.org">LibreCores</a></b> was a community hub for FOSSi.
+    Centered around the theme of "sharing," LibreCores features documentation, ways for the communicate to interact, and most importantly, a project repository with free and open source digital hardware ("IP cores") and associated projects.
+  </td>
+</tr>
+</table>
 
 Join our efforts!
 -----------------
