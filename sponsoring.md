@@ -78,13 +78,6 @@ we started and run the [projects](/projects) and
 community. You can find more details about our plans for 2017 in the
 [sponsorship proposal](/assets/SponsorshipProposal-Feb17.pdf).
 
-The most of the money is evenly distributed between running our annual
-conference [ORConf](https://orconf.org) and the developement and
-running costs of our community portal
-[LibreCores.org](https://librecores.org). Some funds are reserved to
-develop the legal framework for free and open source silicon and to
-cover our administrative costs.
-
 <!--
 ### How can the community benefit from our work?
 

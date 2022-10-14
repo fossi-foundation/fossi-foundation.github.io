@@ -39,11 +39,11 @@ Foundation [manifesto](manifesto)
 ### Stay up to date
 
 Every month we at the FOSSi Foundation collect the news highlights in the FOSSi ecosystem for you, so you can stay up-to-date without much hassle.
-Our newsletter is called El Correo Libre, and you can get it delivered [to your email inbox](https://eepurl.com/dnL4v1), [read it online](https://medium.com/librecores), or [in your feed reader](/ecl).
+Our newsletter is called El Correo Libre, and you can get it delivered [to your email inbox](https://eepurl.com/dnL4v1), [read it online](/archive), or [in your feed reader](/ecl).
 
 <!-- Begin Mailchimp Signup Form -->
 <div id="mc_embed_signup" style="border:2px solid #a23c0b; background-color: rgb(226, 226, 222); padding: 10px; margin-top: 20px;">
-<form action="https://librecores.us17.list-manage.com/subscribe/post?u=5d525b453672149a60c198960&amp;id=1241c8638b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline" target="_blank" novalidate role="form">
+<form action="https://fossi-foundation.us17.list-manage.com/subscribe/post?u=5d525b453672149a60c198960&amp;id=1241c8638b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline" target="_blank" novalidate role="form">
 
   <h3 style="margin-top: 0; padding-bottom: 10px; color: #a23c0b">Sign up now to receive El Correo Libre to your inbox!</h3>
 

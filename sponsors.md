@@ -27,9 +27,8 @@ We extend an enormous thanks to everyone who has contributed to our mission.
 
 <div class="panel panel-sponsors panel-silver">Silver (€5,000 - €10,000)</div>
 <p style="font-style: italic">
-  <b>Tired of developing the same hardware block again and again?</b>
-  The FOSSi Foundation helps projects to build on top of well-tested components and focus on what makes a difference.
-  We bring developers together and are making hardware blocks easier to discover through <a href="https://www.librecores.org">LibreCores</a>.
+  <b>Tired of painful hardware verification?</b>
+  The FOSSi Foundation helps the cocotb project to provide the world with productive, Python-based verification.
   <a href="sponsoring">Sponsor the FOSSi Foundation today</a> to help us in this quest!
 </p>
 <div class="row">
