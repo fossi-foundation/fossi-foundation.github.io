@@ -7,9 +7,9 @@ author: Stefan Wallentowitz
 
 As announced in [ECL 57](https://www.fossi-foundation.org/2022/12/12/ecl57) our North American open source silicon conference "Latch-Up" will return in 2023. And it will be joined by another edition of ORConf!
 
-[https://www.fossi-foundation.org/latchup/](**Latch-Up 2023**) will be held at the University of California, Santa Barbara on March 31st to April 2nd
+[**Latch-Up 2023**](https://www.fossi-foundation.org/latchup/) will be held at the University of California, Santa Barbara on March 31st to April 2nd
 
-[https://orconf.org](**ORConf 2023**) will be held in Munich, Germany on September 15th to September 17th
+[**ORConf 2023**](https://orconf.org) will be held in Munich, Germany on September 15th to September 17th
 
 One of our main ambitions is to hold community events as a melting pot of projects from hobbyists, industry and academia. They are well-recognized and popular due to their informal nature, and probably the prime vendor-neutral events in the open source silicon space.
 
@@ -17,6 +17,6 @@ Presentation submissions and registration for Latch-Up have already started, ORC
 
 As always, the events are **free to attend**! To cover some of the costs we invite you to buy professional tickets, especially if you can reimburse them with your company.
 
-Finally, we are looking for sponsors and have some great deals to show your support for this thriving community. [mailto:info@fossi-foundation.org?Subject=Event Sponsorship](Please get in touch if you are interested!)
+Finally, we are looking for sponsors and have some great deals to show your support for this thriving community. [Please get in touch if you are interested!](mailto:info@fossi-foundation.org?Subject=Event Sponsorship)
 
 Looking forward to meeting you in Santa Barbara or Munich!
