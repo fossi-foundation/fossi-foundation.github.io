@@ -5,7 +5,7 @@ description: After two years of hibernation our two main events return in 2023
 author: Stefan Wallentowitz
 ---
 
-FOSSi Foundation, the international not for profit organisation which promotes and protects the open source silicon chip movement announced in [ECL 57](https://www.fossi-foundation.org/2022/12/12/ecl57) our North American open source silicon conference "Latch-Up" will return in 2023. And it will be joined by another edition of ORConf!
+We announced in [ECL 57](https://www.fossi-foundation.org/2022/12/12/ecl57) our North American open source silicon conference "Latch-Up" will return in 2023. And it will be joined by another edition of ORConf!
 
 [**Latch-Up 2023**](https://www.fossi-foundation.org/latchup/) will be held at the University of California, Santa Barbara on March 31st to April 2nd
 
