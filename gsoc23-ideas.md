@@ -134,12 +134,14 @@ Some circuits we would like to provide visibility into include:
   - [SweRV](https://github.com/chipsalliance/Cores-SweRV)
   - [SERV](https://github.com/olofk/serv)
   - [TL-Verilog flow library](https://github.com/stevehoover/tlv_flow_lib/blob/master/pipeflow_lib.tlv)
+  - Control and status register hardware generated from [SystemRDL](https://en.wikipedia.org/wiki/SystemRDL)
   - [BaseJump STL](https://github.com/bespoke-silicon-group/basejump_stl)
   - basic circuits for instructional purposes
   - [virtualized FPGA boards](https://github.com/BalaDhinesh/Virtual-FPGA-Lab) (completed in GSoC 2021)
   - this [neural network](https://github.com/vineetjain07/DNN_TL-V)
   - gamified circuit design challenges
 
+These are ideal projects for Google Summer of Code because of the immediate and incremental impact.
 Visualization is written in (very straight-forward) JavaScript that has access to trace data from simulation and a canvas to draw on, described [here](https://makerchip.com/sandbox/?tabs=Code-Examples,VIZ%20Guide#).
 
 *Skill level:* Beginner/Intermediate
