@@ -352,20 +352,6 @@ In this project, we propose extending the core-v-mini-mcu to support all the Ope
 
 *Language/Tools:* SystemVerilog, RISC-V, C, Verilator
 
-
-### Improving state of code generation for RISC-V based manycore architectures in LLVM
-The RISC-V ISA will transform the world. Recently, UW taped out an open source RISC-V manycore processor with thousands of cores which executes trillions of RISC-V instructions per second in one chip. We are working on finding answers to questions like how to efficiently program and run code on thousands of cores?  
-
-We want to improve the state of the code generation for manycore architectures in LLVM by developing techniques to better specialize different parts of the compiler for manycore architectures, for example, congestion awareness, instruction scheduling and register allocation. We plan to do this by analyzing different workloads or comparing with other compilers like gcc for finding generalized improvement opportunities.
-
-*Skill level:* intermediate
-
-*Project length:* long (350 hours)
-
-*Mentors:* [Reshabh K Sharma](mailto:reshabh@cs.washington.edu), [Michael Taylor](mailto:prof.taylor@gmail.com)
-
-*Language/Tools:* C++, LLVM
-
 ### Javascript library for FuseSoC core files
 *Details:* FuseSoC core description files are a language-agnostic description of an IP core. So far, the only implementations for working with core description files are written in Python (e.g. FuseSoC). A javascript library would make it easier to parse interesting information from the core description files and present on websites.
 
