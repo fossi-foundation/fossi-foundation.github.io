@@ -261,20 +261,6 @@ There will the opportunity to engage with students at Rice University who are al
 
 *Language/Tools:* C, embedded platforms on which to evaluate the benchmarks.
 
-### Extend LibreCores.org
-
-[LibreCores](https://www.librecores.org) is a community web site with the goal of providing an overview of IP cores and the corresponding ecosystem. We strive for LibreCores to be *the* resource for free and open source IP: it should be easy to find, integrate, and contribute to the projects found there -- to make digital design projects as easy as writing software. For further information on our goals, see the [FOSDEM Presentation slides](https://fosdem.org/2016/schedule/event/digital_hardware_design/attachments/slides/1037/export/events/attachments/digital_hardware_design/slides/1037/fossi_fosdem.pdf) announcing LibreCores. The full site source code is available on [GitHub](https://github.com/librecores/librecores-web).
-
-You can find a non-exhaustive [list of available tasks in our documentation](http://librecores-web.readthedocs.io/en/latest/contributing.html). Please talk to Philipp if you have other ideas, or didn't find an interesting project. We welcome your own ideas!
-
-*Skill Level:* Intermediate
-
-*Duration:* 175 or 350 hours
-
-*Language/Tools:* PHP with the [Symfony Framework](http://symfony.com/), MySQL, HTML/JS
-
-*Mentor:* [Philipp Wagner](mailto:mail@philipp-wagner.com)
-
 ### Adding Language Servers (VHDL/Verilog/SV) to TerosHDL
 
 *Details:* TerosHDL (https://terostechnology.github.io/) is an open source IDE for FPGA/ASIC development based in VSCode. It includes support for VHDL, Verilog and SystemVerilog.
