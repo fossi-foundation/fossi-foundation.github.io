@@ -577,6 +577,22 @@ interested in frontend development and/or data visualization!
 
 *Duration:* 175 hours
 
-*Languate/tools:* Python (+Jinja), JS, HTML/CSS
+*Language/tools:* Python (+Jinja), JS, HTML/CSS
 
 *Mentors:* [Will Ransohoff](mailto:will@zeroasic.com)
+
+### Enhancing the Sootty Terminal-based Graphical Waveform Viewer
+
+[Sootty](https://github.com/Ben1152000/sootty) is a terminal-based waveform viewer that can be used to display the contents of a VCD file. It is written in Python in order to leverage the read-eval-print loop to enable interactive hardware debugging. It also provides a textual query language that lets the user search a waveform for interesting events to assist in debugging.  
+
+We are interested in developing a more robust backend to better support real-world designs, some of which contain gigabytes of data that must be efficiently stored and parsed. The goal for this project is to incorporate [polars](https://github.com/pola-rs/polars), a fast DataFrame library with Python bindings in order to improve the tool’s scalability and overall performance.
+
+*Skill Level:* Beginner-Intermediate
+
+*Duration:* 175 or 350 hours
+
+*Language/Tools:* Python
+
+*Other Requirements:* Familiarity with basic data structures/algorithm design
+
+*Mentors:* [Benjamin Darnell](mailto:bzd2@illinois.edu), [Jonathan Balkind](mailto:jbalkind@ucsb.edu)
