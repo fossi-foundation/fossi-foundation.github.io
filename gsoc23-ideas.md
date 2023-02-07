@@ -690,3 +690,16 @@ The project will entail replacing the X11 and optional OpenGL dependencies on si
 *Duration:* 175 or 350 hrs.
 
 *Mentors:* [Mohamed Gaber](mailto:donn@efabless.com), Tim Edwards
+
+### Extending Verilator with insertion customization
+
+*Details:* Verilator is a popular simulator for digital designs. For special simulations, such as fault injection simulation, it would be useful to have the ability to configure parts of the design where specific elements are inserted. This perfectly integrates into the flow of model creation and keep optimization high.
+
+*Skill level:* Advanced
+
+*Language/Tools:* C++
+
+*Duration:* 350 hrs
+
+*Mentors:* [Stefan Wallentowitz](mailto:stefan.wallentowitz@hm.edu)
+
