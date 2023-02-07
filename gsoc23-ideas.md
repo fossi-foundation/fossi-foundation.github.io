@@ -607,3 +607,23 @@ We are interested in developing a more robust backend to better support real-wor
 *Other Requirements:* Familiarity with basic data structures/algorithm design
 
 *Mentors:* [Benjamin Darnell](mailto:bzd2@illinois.edu), [Jonathan Balkind](mailto:jbalkind@ucsb.edu)
+
+### Improving SDF support in Icarus Verilog 
+
+*Details:* With the release of the open source PDKs from Skywater Technology and Globalfoundries and the associated OpenMPW program, ASIC design has never been more accessible. Icarus Verilog covers the parts for RTL and GL simulations. But when it comes to back-annotated timing simulations using the Standard Delay Format (SDF), Icarus lacks certain features.
+
+There are three categories of features not yet supported in Icarus:
+
+- wire/interconnect delays
+- conditional path delays
+- timing checks
+
+The focus of this project is to improve Icarus' support for SDF files. Simple cases will be implemented first, and then the code will be extended to handle the more complex cases. The ultimate goal is to perform accurate SDF simulations for SKY130 (and possibly GF180).
+
+*Skill level:* Intermediate to Advanced
+
+*Duration:* ~350 hrs.
+
+*Language/Tools:* C, C++, Verilog
+
+*Mentors:* Cary R. ([email](mailto:cygcary@yahoo.com)), Stephen Williams ([email](mailto:steve@icarus.com))
