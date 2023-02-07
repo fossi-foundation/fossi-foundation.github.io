@@ -437,48 +437,69 @@ The objective of this project is to develop ASAP7 Design Rules Checker (DRC) and
 *Mentors:* [Mohamed Shalan](mailto:mshalan@efabless.com),  [Mohamed Kassem](mailto:mkk@efabless.com)
 
 
-
 ### Parameterized device layouts for Sky130
 
-Summary: The purpose of this internship is to expand the set
-of available parameterized devices available in magic for use
-with the SkyWater Sky130 foundry process.  These devices are
-created using an existing framework written in Tcl/Tk, although
-most of the code involves magic command-line commands (which
-are implemented in Tcl).  Only a basic understanding of Tcl
-variables, conditionals, loops, and subroutine calls is needed.
+The purpose of this project is to expand the set of available parameterized devices available in magic for use with the SkyWater Sky130 foundry process.  These devices are created using an existing framework written in Tcl/Tk, although most of the code involves magic command-line commands (which are implemented in Tcl).  Only a basic understanding of Tcl variables, conditionals, loops, and subroutine calls is needed.
 
-New devices of interest that have not yet been done in
-parameterized cells include (but are not limited to):  The
-photodiode, extended-drain MOSFETs, bipolar transistors, ESD
-transistors, inductors, metal fuses, UHV (ultra-high-voltage)
-devices.
+Existing devices could use more thorough checks of DRC cleanliness across a wide range of parameters.  FET devices could use an option to have all gate contacts merged into a single net, which would also allow a tighter pitch for the smallest length devices.
 
-Each new device should follow the design specifications for
-device layout from the SkyWater DRC manual, and needs to
-implement five routines that (1) define the device parameters and
-limits, (2) convert parameters from a SPICE netlist, (3) define
-the user interface dialog (UI) for setting those parameters, (4)
-check and enforce parameter limits, and (5) draw the device.
-After implementing, each device needs to be checked for DRC
-correctness by generating a "torture test" of a large array of
-devices with different sets of parameters which can be passed to
-the DRC checkers to make sure that the drawing routine produces
-DRC clean layouts.
+New devices of interest that have not yet been done in parameterized cells include (but are not limited to):  The photodiode, extended-drain MOSFETs, bipolar transistors, ESD transistors, inductors, metal fuses, UHV (ultra-high-voltage) devices.
 
-Time permitting (e.g., 330 hour internship instead of 165 hour),
-the internship can include generating an analog layout implementing
-many different devices that can be tested from a probe station.
-This layout would be placed on an Efabless ChipIgnite run and
-tested at NIST.
+Each new device should follow the design specifications for device layout from the SkyWater DRC manual, and needs to implement five routines that (1) define the device parameters and limits, (2) convert parameters from a SPICE netlist, (3) define the user interface dialog (UI) for setting those parameters, (4) check and enforce parameter limits, and (5) draw the device. After implementing, each device needs to be checked for DRC correctness by generating a "torture test" of a large array of devices with different sets of parameters which can be passed to the DRC checkers to make sure that the drawing routine produces DRC clean layouts.
 
-*Skill level:* intermediate
+*Skill level:* Intermediate/Advanced
 
-*Project length:* 175 or 350 hrs
+*Duration:* medium (175 hours)
 
 *Language/Tools:* Tcl/Tk, Magic
 
-*Mentors:* [Tim Edwards](mailto:tim@opencircuitdesign.com)
+*Mentors:* [Tim Edwards](tim@opencircuitdesign.com)
+
+
+### Parameterized device layouts for GF180MCU
+
+
+The purpose of this project is to expand the set of available parameterized devices available in magic for use with the Global Foundries GF180MCU foundry process.  These devices are created using an existing framework written in Tcl/Tk, although most of the code involves magic command-line commands (which are implemented in Tcl).  Only a basic understanding of Tcl variables, conditionals, loops, and subroutine calls is needed.
+
+At the moment, even the basic parameterized devices for GF180MCU have not been thoroughly vetted and checked across a large number of parameters.
+
+New devices of interest that have not yet been done in parameterized cells include (but are not limited to): Extended-drain MOSFETs (LDNMOS, LDPMOS), bipolar transistors, schottky diode, ESD devices (salidice-blocked drain (SAB) devices), fuse devices (metal, poly, and eFuse).
+
+Each new device should follow the design specifications for device layout from the GF180MCU DRC manual, and needs to implement five routines that (1) define the device parameters and limits, (2) convert parameters from a SPICE netlist, (3) define the user interface dialog (UI) for setting those parameters, (4) check and enforce parameter limits, and (5) draw the device. After implementing, each device needs to be checked for DRC correctness by generating a "torture test" of a large array of devices with different sets of parameters which can be passed to the DRC checkers to make sure that the drawing routine produces DRC clean layouts.
+
+Time permitting (e.g., 350 hour internship instead of 175 hour), the internship can include general improvements to the methods for Tcl-scripted parameterized devices in Magic.
+
+*Skill level:* Intermediate/Advanced
+
+*Duration:* medium or long (175 or 350 hrs)
+
+*Language/Tools:* Tcl/Tk, Magic, (extended internship: C/C++)
+
+*Mentors:* [Tim Edwards](tim@opencircuitdesign.com)
+
+
+### Capiche system development
+
+
+The purpose of this project is to expand the set of scripts in the github repository [RTimothyEdwards/capiche](https://github.com/RTimothyEdwards/capiche) into a system for understanding and modeling parasitic capacitance in a foundry process.  This is ideally done using a Jupyter notebook and taking advantage of the existing Python scripts, but allow users to simulate and plot capacitance over a number of different variables.
+
+The system should make it convenient for the user to create a set of model equations representing parasitic capacitance and then measure the accuracy vs. simulation by the field equation solver FasterCap.
+
+Plots should be made interactive with matplotlib instead of the current method of generating static SVG images.
+
+Plots should be extended to include surface plots over two variables.
+
+Time permitting (e.g., 350 hour internship instead of 175 hour), the internship can include extending the FasterCap input file format to include 3-dimensional geometry.  Ideally, one would make a layout in magic, and convert the layout directly into an input file for FasterCap using the routines in Capiche plus some parsing of the 2D layout file.
+
+*Skill level:*   Intermediate/Advanced
+
+*Duration:* medium or long (175 or 350 hrs)
+
+*Languages:* Python + scipy and matplotlib, C, Jupyter notebooks
+
+*Tools:* Magic, FasterCap, Octave
+
+*Mentors:* [Tim Edwards](tim@opencircuitdesign.com)
 
 
 ### RISC-V TensorCore for Edge AI
