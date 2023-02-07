@@ -47,9 +47,9 @@ Bootstrap the developer infrastructure and community to maintain those projects.
 *Mentor:* [Johan Euphrosine](mailto:proppy@google.com)
 
 ### TinyParrot: A minimal BlackParrot RISC-V Multicore variant
-*Details:* BlackParrot aims to be the default open-source, Linux-capable, cache-coherent, RV64GC multicore used by the world. It has been FPGA and Silicon-validated as an industry-strength design with leading efficiency. We wish to support open-source toolchains for FPGA and ASIC flows, but current open-source SRAM generators have not quite matured to make this seamless. This project will shrink BlackParrot to have extremely tiny caches, provide minimal ISA support and have other logic-saving optimizations with the goal of being able to easily synthesize to gates.
+*Details:* BlackParrot aims to be the default open-source, Linux-capable, cache-coherent, RV64GC multicore used by the world. It has been FPGA and Silicon-validated as an industry-strength design with leading efficiency. We wish to make it even tinier. This project will look into various size optimizations which may include parameterizing out support for the RISC-V MFD extensions or remapping FPGA primitives using the portability layer in BaseJump STL. The final optimizations may depend on the applicant's skill set. At the end of this project, we hope to use the ZynqParrot infrastructure to fit a BlackParrot multicore into affordable educational FPGA boards such as the Z2!
 
-*Skill level:* beginner-intermediate
+*Skill level:* intermediate
 
 *Project length:* medium (175 hours)
 
