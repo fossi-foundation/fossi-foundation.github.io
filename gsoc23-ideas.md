@@ -627,3 +627,45 @@ The focus of this project is to improve Icarus' support for SDF files. Simple ca
 *Language/Tools:* C, C++, Verilog
 
 *Mentors:* Cary R. ([email](mailto:cygcary@yahoo.com)), Stephen Williams ([email](mailto:steve@icarus.com))
+
+### Multiple Frontends for OpenLane
+*Details:* OpenLane lacks support for many popular HDLs, including the previously DARPA-endorsed VHDL which continues to be popular in FPGA spaces and the European EDA scene, Chisel/FIRRTL, a Scala-based HDL and intermediate representation of integrated circuits, and BSV by Bluespec, a popular variant of SystemVerilog.
+
+The project will entail both adding support for these frontends as well as adding a set of designs as tests.
+
+*Skill level:* Beginner-Intermediate
+
+*Duration:* 175 hrs.
+
+*Language/Tools:* Python, Verilog, Docker (or Nix)
+
+*Mentor:* [Mohamed Gaber](mailto:donn@efabless.com), [Mohamed Shalan](mailto:mshalan@efabless.com)
+
+### Testing for OpenLane
+*Details:*  OpenLane is the world's most popular open-source RTL-to-GDSII flow. However, testing and coverage is still somewhat lacking as of 2023. There are two tasks that may be done to enhance this, ideally worked on by two candidates but can be done by the same candidate over a longer period:
+
+Write an extensive Python unit test suite for an upcoming version of OpenLane, including for all included steps and functions. A candidate is to explore and evaluate the various Python test libraries, present a good option, then embark on writing the unit tests.
+Create an exhaustive design suite out of various open source projects that exercise the limits of the OpenLane project, including niche use-cases.
+
+*Skill level:* Intermediate
+
+*Duration:* 175 hrs (two candidates,) 350 hrs (one candidate)
+
+*Language/Tools:* Python, Verilog, Docker (or Nix)
+
+*Mentor:* [Mohamed Gaber](mailto:donn@efabless.com), [Mohamed Shalan](mailto:mshalan@efabless.com)
+
+### Remove X11-specific code and redundant backends from Magic and enhance C99 adherence
+*Details:* The Magic VLSI utility, the primary signoff tool for OpenLane, does not compile on platforms without X11 support. As a layout viewer, Magic uses a mixture of X11 + Cairo to render its various views. Additionally, large swaths of the codebase are not C99-adherent, with declaration problems and the like.
+
+This prevents it from compiling properly on some platforms we're looking to target, such as macOS and Windows.
+
+The project will entail replacing the X11 and optional OpenGL dependencies on simple, pure Cairo code.
+
+*Skill level:* Advanced
+
+*Language/Tools:* C, Tcl/Tk, Magic
+
+*Duration:* 175 or 350 hrs.
+
+*Mentors:* [Mohamed Gaber](mailto:donn@efabless.com), Tim Edwards
