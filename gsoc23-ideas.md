@@ -195,7 +195,7 @@ If you are interested in the TL-Verilog ecosystem, you might also consider any o
 
 
 ### Architectural Improvements to OpenPiton+Ariane
-[OpenPiton+Ariane](https://openpiton-blog.princeton.edu/2018/11/announcing-openpiton-with-ariane/) is a permissively-licensed RISC-V manycore processor, built as a collaboration between the [PULP Platform](https://www.pulp-platform.org/) from ETH Zürich and the [OpenPiton Platform](http://www.openpiton.org/) from Princeton University. We would like to co-optimise OpenPiton and Ariane in their combined platform, to improve performance of the processor both in FPGA emulation systems and for eventual silicon chips. One possible idea this year is to implement the RISC-V cache management operation (CMO) extensions. We are open to many potential projects aimed at improving the performance of aspects of either Ariane or OpenPiton and encourage you to get in touch to discuss ideas.
+[OpenPiton+Ariane](https://openpiton-blog.princeton.edu/2018/11/announcing-openpiton-with-ariane/) is a permissively-licensed RISC-V manycore processor, built as a collaboration between the [PULP Platform](https://www.pulp-platform.org/) from ETH Zürich and the [OpenPiton Platform](http://www.openpiton.org/) from Princeton University. We would like to co-optimise OpenPiton and Ariane/CVA6 in their combined platform, to improve performance of the processor both in FPGA emulation systems and for eventual silicon chips. One possible idea this year is to implement the RISC-V cache management operation (CMO) extensions. We are open to many potential projects aimed at improving the performance of aspects of either Ariane/CVA6 or OpenPiton and encourage you to get in touch to discuss ideas.
 
 *Skill level:* Intermediate
 
@@ -204,6 +204,17 @@ If you are interested in the TL-Verilog ecosystem, you might also consider any o
 *Language/Tools:* Verilog, SystemVerilog, RISC-V
 
 *Mentor:* [Jonathan Balkind](mailto:jbalkind@ucsb.edu), [Nils Wistoff](mailto:nwistoff@iis.ee.ethz.ch)
+
+### Enhancing OpenPiton+Ariane With a High Performance Data Cache
+The CVA6/Ariane core supports several different L1 data caches for different contexts and user demands. CEA are leading a new effort building a high performance data cache (HPDC) for integration into CVA6. This project would extend the HPDC to make it usable within OpenPiton through connection to OpenPiton's L1.5 cache via the standard P-Mesh Transaction-Response Interface.
+
+*Skill level:* Intermediate
+
+*Duration:* 350 hours
+
+*Language/Tools:* Verilog, SystemVerilog, RISC-V
+
+*Mentor:* [Jonathan Balkind](mailto:jbalkind@ucsb.edu), [César Fuguet Tortolero](mailto:Cesar.FUGUETTORTOLERO@cea.fr)
 
 ### OpenRISC Linux Feature Development
 
@@ -577,6 +588,42 @@ interested in frontend development and/or data visualization!
 
 *Duration:* 175 hours
 
-*Languate/tools:* Python (+Jinja), JS, HTML/CSS
+*Language/tools:* Python (+Jinja), JS, HTML/CSS
 
 *Mentors:* [Will Ransohoff](mailto:will@zeroasic.com)
+
+### Enhancing the Sootty Terminal-based Graphical Waveform Viewer
+
+[Sootty](https://github.com/Ben1152000/sootty) is a terminal-based waveform viewer that can be used to display the contents of a VCD file. It is written in Python in order to leverage the read-eval-print loop to enable interactive hardware debugging. It also provides a textual query language that lets the user search a waveform for interesting events to assist in debugging.  
+
+We are interested in developing a more robust backend to better support real-world designs, some of which contain gigabytes of data that must be efficiently stored and parsed. The goal for this project is to incorporate [polars](https://github.com/pola-rs/polars), a fast DataFrame library with Python bindings in order to improve the tool’s scalability and overall performance.
+
+*Skill Level:* Beginner-Intermediate
+
+*Duration:* 175 or 350 hours
+
+*Language/Tools:* Python
+
+*Other Requirements:* Familiarity with basic data structures/algorithm design
+
+*Mentors:* [Benjamin Darnell](mailto:bzd2@illinois.edu), [Jonathan Balkind](mailto:jbalkind@ucsb.edu)
+
+### Improving SDF support in Icarus Verilog 
+
+*Details:* With the release of the open source PDKs from Skywater Technology and Globalfoundries and the associated OpenMPW program, ASIC design has never been more accessible. Icarus Verilog covers the parts for RTL and GL simulations. But when it comes to back-annotated timing simulations using the Standard Delay Format (SDF), Icarus lacks certain features.
+
+There are three categories of features not yet supported in Icarus:
+
+- wire/interconnect delays
+- conditional path delays
+- timing checks
+
+The focus of this project is to improve Icarus' support for SDF files. Simple cases will be implemented first, and then the code will be extended to handle the more complex cases. The ultimate goal is to perform accurate SDF simulations for SKY130 (and possibly GF180).
+
+*Skill level:* Intermediate to Advanced
+
+*Duration:* ~350 hrs.
+
+*Language/Tools:* C, C++, Verilog
+
+*Mentors:* Cary R. ([email](mailto:cygcary@yahoo.com)), Stephen Williams ([email](mailto:steve@icarus.com))

@@ -6,6 +6,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <!-- Social media preview -->
+  <meta property="og:title" content="Latch-Up 2023 Santa Barbara, CA">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://latchup.io">
+  <meta property="og:description" content="Latch-Up: An open source silicon conference">
+  <meta property="og:image" content="https://www.fossi-foundation.org/latchup/images/latchup_draft.png">
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:creator" content="@latchupconf" />
+  <meta prefix="og: http://ogp.me/ns#" property="og:image" content="https://www.fossi-foundation.org/latchup/images/latchup_draft.png" />
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -271,7 +281,7 @@ Get a head start on the workshop and a taste of what is going on:
 	</div>
 
 -->
-<!--
+
 	<div class="row">
           <div class="col-sm-12 mt-3">
             <div class="card">
@@ -279,7 +289,7 @@ Get a head start on the workshop and a taste of what is going on:
               <h5 class="card-header">Presentations</h5>
               <div class="card-body">
 		<p class="card-text">
--->
+
 		  <!-- <h4> -->
 		    <!--   <a name="!!!" href="#!!!"></a>!!!</h4> -->
 		  <!-- <p> -->
@@ -287,253 +297,283 @@ Get a head start on the workshop and a taste of what is going on:
 		<!-- <h6>Presenter: </h6> -->
 		<!-- <p> -->
 		  <!-- </p> -->
-<!--
 		<h4>
-                  <a name="verilator" href="#verilator"></a>Accelerating Verilated design runtimes</h4>
+                  <a name="risu064" href="#risu064"></a>RISu064 - An in-order non-blocking dual-issue RISC-V 64 processor</h4>
 		<p>
-		  We'll look at some off-the-shelf designs and techniques to have them simulate faster.
+		  Brief introduction of my recent project of building a RV64 processor core, which features an in-order non-blocking dual-issue pipeline, and taped out at SKY130.
 		</p>
 
-		<h6>Presenter: Wilson Snyder</h6>
-		<p>
-		</p>
-
-		<h4>
-                  <a name="lowpower" href="#lowpower"></a>Designing Low-power Circuit with Open-Source Hardware: Opportunities and Challenges</h4>
-		<p>
-		  Reducing power consumption has always been a primary design goal
-		  for circuit designer and the driving force behind a variety of
-		  products ranging from server-class chips to battery-operated
-		  IoT devices. Recently, the advent of open-source concept in
-		  various stages of circuit design promises great portability,
-		  flexibility and customizability. Meanwhile, open-source also
-		  introduces new design challenges.
-		</p>
-		<p>
-		  I argue that with increasing demands from application space,
-		  the interaction between low-power design with open-source
-		  availability offers a bright future in terms of development cost
-		  and enables broader collaborative efforts.
-		</p>
-		<p>
-		  In this talk, I will overview the opportunities and challenges
-		  specifically in low power design with various levels of open-source
-		  hardware.
-		</p>
-
-		<h6>Presenter: Xinfei Guo</h6>
+		<h6>Presenter: Wenting Zhang</h6>
 		<p>
 		</p>
 
 		<h4>
-                  <a name="cocotbtask" href="#cocotbtask"></a>Speeding up cocotb Verification with Task-Based BFMs</h4>
+                  <a name="minimax" href="#minimax"></a>Minimax - a Compressed-First, Microcoded RISC-V CPU</h4>
 		<p>
-		  Cocotb provides a framework for cosimulating a testbench written
-		  in Python with an HDL design and design written in SystemVerilog,
-		  Verilog, or VHDL. Cocotb provides APIs for interacting with the
-		  HDL environment at the signal level, and will soon provide the
-		  ability to interact with the HDL environment via task calls.
+		  RISC-V's compressed instruction (RVC) extension is intended as
+		  an add-on to the regular instruction set. Thought experiment:
+		  can a RISC-V CPU directly execute only the RVC instructions,
+		  and emulate the uncompressed instruction set in microcode? The
+		  result is Minimax: the smallest¹, fastest² RV32IC core
+		  available - with the weasel words hidden in the fine print.
+		  In this presentation, I will show how Minimax fits in with
+		  the other excellent open-source RISC-V cores already available.
 		</p>
-		<p>
-		  Interacting with the HDL environment via task calls can improve
-		  overall performance by an order of magnitude. This talk provides
-		  an introduction to task-based bus functional models (BFMs) for
-		  the cocotb environment, and provides a tutorial on writing task-based BFMs.
-		</p>
-
-		<h6>Presenter: Matthew Ballance</h6>
+		<h6>Presenter: Graeme Smecher</h6>
 		<p>
 		</p>
 
 		<h4>
-                  <a name="linuxonriscv" href="#linuxonriscv"></a>How to run Linux on RISC-V (with open hardware and open source FPGA tools)</h4>
+                  <a name="space" href="#space"></a>Space - Opportunities, Challenges for Open Source Community</h4>
 		<p>
-		  Want to run Linux with RISC-V on Open Source Hardware?
-		  This talk will explore the current options including how open
-		  source FPGA tools can be leveraged to build open Linux-capable systems.
-		</p>
-		<p>
-		  I will explain how myself and others at Hackaday Supercon teamed
-		  up to get Linux running on RISC-V core in the ECP5 FPGA badge
-		  using only open source tools thanks to Project Trellis, yosys
-		  and nextpnr.  I will explain what migen and LiteX are, and how
-		  it enabled us to quickly build a System-on-Chip (SoC) capable of
-		  running Linux on VexRiscv.
-		</p>
-		<p>
-		  In conclusion, I will explore the landscape of open source chip
-		  design projects and the Linux-capable RISC-V silicon chips on
-		  horizon for 2020, and talk about my desire to collaborate on an
-		  affordable (&lt;$100?) OSHW Linux RISC-V board.
+		  Space applications present special challenges to open source
+		  technologies including high reliability and harsh environment.
+		  LeWiz Communications published several open source IP cores
+		  including Ethernet, RISC-V with network protocols and
+		  providing complete verification suites, design examples, etc.
+		  These are now targeted for space applications with specific
+		  space mission targets. This talk presents potential
+		  opportunities for space usage, the available open source
+		  technologies, challenges to space applications and uses
+		  actual applications to provide examples. Finally, it will
+		  call on the open source community to contribute to areas
+		  still lacking support for FPGA and ASIC implementations
+		  targeted for space applications.
 		</p>
 
-		<h6>Presenter: Drew Fustini</h6>
+		<h6>Presenter: CHINH LE</h6>
 		<p>
 		</p>
 
 		<h4>
-                  <a name="fossicompiler" href="#fossicompiler"></a>Building an open source silicon compiler</h4>
+                  <a name="neuromorphic" href="#neuromorphic"></a>Open Source Brain-Inspired Neuromorphic Software and Hardware</h4>
 		<p>
-		  In 2018 DARPA stood up research programs in EDA (IDEA) and
-		  open source hardware (POSH) to address the exploding cost and
-		  complexity of modern chip design. The goal of these programs
-		  is to create an intelligent hardware compiler capable of
-		  automatically generating tapeout ready GDSII databases directly
-		  from source code and schematics.
-		</p>
-		<p>
-		  This talk will give an overview of these research programs and
-		  give a status update on the many open source tools that have
-		  come out of the program to date.
-		</p>
-
-		<h6>Presenter: Andreas D Olofsson</h6>
-		<p>
-		</p>
-
-		<h4>
-                  <a name="formalriscv" href="#formalriscv"></a>Formal methods for hardware-software integration on RISC-V embedded systems</h4>
-		<p>
-		  Traditional systems integration of software, compilers and
-		  hardware into an embedded systems stack relies on documentation
-		  which is often imprecise and incomplete, and on extensive testing,
-		  which can never cover all possible scenarios.
-		</p>
-		<p>
-		  We propose a way to improve this tedious and error-prone process:
-		  For each interface in an embedded systems stack, we write down a
-		  formal, machine-readable interface specification, and using a
-		  proof checker called Coq, we exhaustively verify that each layer
-		  in our stack conforms to its interface specifications.
-		  This allows us to prove an end to end correctness theorem about
-		  our systems stack describing the behavior of the complete system
-		  in terms of just the specification of the highest and the lowest layer.
-		</p>
-		<p>
-		  We used this methodology to develop from scratch a simple systems
-		  stack consisting of a high-level language to describe IO behavior,
-		  a compiler for a C-like language, and a pipelined RISC-V processor.
-		  Using this stack, we developed a protype IoT device running on
-		  an FPGA connected to a lightbulb and a network card to demonstrate
-		  the feasability of our approach.
+		  The brain is the perfect place to look for inspiration to
+		  develop more efficient neural networks. One of the main
+		  differences with modern deep learning is that the brain
+		  encodes and processes information as spikes rather than
+		  continuous, high-precision activations. This presentation
+		  will dive into how the open-source ecosystem has been used
+		  to develop brain-inspired neuromorphic accelerators, from
+		  our development of a Python training library for spiking
+		  neural networks (snnTorch, >60,000 downloads), to compiling
+		  these next-generation deep learning models on custom ASICs
+		  submitted for tape-out in the Sky130 process. The open-source
+		  silicon movement has the potential to impact how we adopt
+		  principles from neuroscience to improving deep learning and
+		  hardware acceleration.
 		</p>
 
-		<h6>Presenter: Samuel Gruetter</h6>
+		<h6>Presenter: Jason Eshraghian</h6>
 		<p>
 		</p>
 
 		<h4>
-                  <a name="pdvl" href="#pdvl"></a>Converting an Executable Spec from PDVL to SystemVerilog</h4>
+                  <a name="constellation" href="#constellation"></a>Constellation: A Open-Source Chisel Generator for Network-on-Chip Interconnects</h4>
 		<p>
-		  First, an open source tool is introduced, which converts a
-		  grammar into an executable parser and writer (based on a grammar
-		  for PDVL or SystemVerilog for instance). The resulting
-		  database-structure can be accessed by C++ routines.
-		</p>
-		<p>
-		  This tool is used for the PDVL to SystemVerilog Converter which
-		  is introduced in the second part. It shows how executable specs
-		  (e.g. RISC-V) written in PDVL can be automatically converted
-		  and merged to an SoC in SystemVerilog.
-		</p>
-		<p>
-		  The projects can be seen at https://github.com/cloudxcc
-		</p>
-
-		<h6>Presenter: Tobias Strauch</h6>
-		<p>
-		</p>
-
-		<h4>
-                  <a name="hammer" href="#hammer"></a>Hammer: Enabling Re-usability in Physical Design</h4>
-		<p>
-		  Physical designers spend a non-trivial amount of time because
-		  traditional physical design methodologies do not enable designers
-		  on different projects to efficiently share effort with each other.
-		  We present an open-source library and framework, Hammer, to
-		  enable designers to share effort with each other through
-		  separation of concerns. Hammer provides APIs and abstractions
-		  to enable designs to share effort across projects with different
-		  CAD tools, technologies, and architectures.
+		  In response to growing application diversity, System-on-Chip
+		  (SoC) architectures have become increasingly heterogeneous,
+		  with diverse cores and accelerators, as well as non-uniform
+		  memory systems. However, existing open-source design
+		  frameworks for SoCs and NoCs (Network-on-Chips) have been
+		  unable to facilitate design exploration of heterogeneous SoC
+		  architectures with irregular NoCs. We present Constellation,
+		  a new NoC RTL generator framework designed from the ground up
+		  to support integration in a heterogeneous SoC and evaluation
+		  of highly irregular NoC architectures. Constellation
+		  implements a highly decoupled specification system that allows
+		  an architect to specify an exponentially large design space of
+		  irregular virtual-channel wormhole-routed NoC architectures.
+		  Additionally, Constellation provides a diverse set of systems,
+		  regression tests, and evaluation tools to provide confidence
+		  in the correctness and performance of the generated hardware.
+		  Constellation is open-sourced and integrated into the Chipyard
+		  SoC design framework, allowing full-system exploration of
+		  heterogeneous SoC architectures with irregular memory fabrics.
 		</p>
 
-		<h6>Presenter: Edward Wang</h6>
+		<h6>Presenter: Jerry Zhao</h6>
 		<p>
 		</p>
 
 		<h4>
-                  <a name="makerchip" href="#makerchip"></a>Open-Source Silicon Development with Makerchip.com</h4>
+                  <a name="siliconcompiler" href="#siliconcompiler"></a>Goodbye Make, Hello SiliconCompiler!</h4>
 		<p>
-		  Makerchip is a free online platform for open-source integrated
-		  circuit design, provided by Massachusetts startup, Redwood
-		  EDA. In addition to Verilog and SystemVerilog, Makerchip
-		  supports the emerging Transaction-Level Verilog standard. This
-		  talk will illustrate rapid open-source development in Makerchip.
-		  It will provide a taste of how TL-Verilog is taking circuit
-		  design to the next level and describe how these technologies
-		  are influencing open-source silicon. Projects built using
-		  Makerchip and TL-Verilog and deployed to cloud FPGAs will be
-		  showcased, including the WARP-V RISC-V/MIPS/etc. CPU core
-		  generator and a hardware-accelerated web application for
-		  exploring fractals.
+		  SiliconCompiler is a modern replacement of "make" that
+		  leverages the cloud and modern programming frameworks to
+		  lower the barrier to hardware development.
+		  (https://github.com/siliconcompiler/). The project has been
+		  successfully used in sky130 shuttle run designs and in
+		  multiple SoCs at advanced FinFET nodes. This session will give
+		  an overview of the project, followed by a set of short demos
+		  showing interesting use cases.
 		</p>
 
-		<h6>Presenter: Steve Hoover</h6>
+		<h6>Presenter: Andreas Olofsson</h6>
 		<p>
 		</p>
 
 		<h4>
-                  <a name="firesim" href="#firesim"></a>FireSim: Simulating, Debugging, and Profiling RTL Designs running Complex Software Stacks at FPGA-Speeds</h4>
+                  <a name="firesim" href="#firesim"></a>FireSim: A Scalable Platform for FPGA-Accelerated Simulation, Debugging, and Profiling of RTL Designs</h4>
 		<p>
 		  FireSim is an easy-to-use, open-source, FPGA-accelerated
-		  hardware simulation platform that runs on Amazon EC2 F1. FireSim
-		  automatically instruments and transforms RTL designs into fast
-		  (10s-100s MHz), deterministic, FPGA-based simulators that enable
-		  productive pre-silicon verification and performance validation.
-		  Users can plug in their own designs or harness the included
-		  Chipyard SoC design environment, which includes in-order and
-		  out-of-order RISC-V cores, uncore components, peripherals, and
-		  accelerators.
-		</p>
-		<p>
-		  Like FPGA prototypes, FireSim allows users to validate and
-		  verify their RTL designs at FPGA-speeds. Unlike FPGA prototypes,
-		  FireSim includes synthesizeable and timing-accurate models for
-		  standard I/O interfaces like DRAM, Ethernet, UART, and others,
-		  allowing users to obtain accurate performance measurements for
-		  their design, pre-silicon. FireSim also provides a large array
-		  of debugging and profiling features not available in FPGA
-		  prototypes, including assertion synthesis, printf synthesis,
-		  out-of-band instruction trace and performance counter recording,
-		  and Flame Graph integration. These tools enable rapidly
-		  introspecting on a design deep into simulation time.
-		</p>
-		<p>
-		  By providing a framework to automate the management of FPGA
+		  hardware simulation platform that runs on cloud and
+		  on-premises FPGAs, including AWS EC2 F1 and local machines
+		  with Xilinx Alveo boards. FireSim automatically instruments
+		  and transforms RTL designs into fast (10s-100s MHz),
+		  deterministic, and cycle-exact FPGA-based simulators that
+		  enable productive pre-silicon verification and performance
+		  validation. Users can plug in their own designs or harness
+		  the included Chipyard SoC design environment, which includes
+		  in-order and out-of-order RISC-V cores, uncore components,
+		  peripherals, and accelerators. In contrast with traditional
+		  FPGA prototyping, FireSim includes synthesizable and
+		  timing-accurate models for standard I/O interfaces like DRAM,
+		  Ethernet, UART, and others, allowing users to obtain accurate
+		  performance measurements for their pre-silicon design. FireSim
+		  also provides a large array of debugging and profiling
+		  features not available in FPGA prototypes, including assertion
+		  synthesis, print synthesis, out-of-band instruction trace and
+		  performance counter recording, Flame Graph integration, and
+		  co-simulation with software models. These features enable
+		  rapidly debugging and profiling designs trillions of cycles
+		  into simulation, without perturbing design behavior. By
+		  providing a framework to automate the management of FPGA
 		  infrastructure, FireSim lets hardware and software developers
-		  get a head-start on building software for novel hardware designs,
-		  by letting developers interact with the pre-silicon hardware
-		  design as they would a virtual machine. In effect, both hardware
-		  and software developers can work from a single source of truth:
-		  the RTL for the hardware design. FireSim also scales to simulating
-		  thousands of multi-core compute nodes, including the ability to
-		  simulate large clusters of networked designs over hundreds of FPGAs.
-		  Leveraging AWS EC2 F1, FireSim removes the high capex traditionally
-		  involved in large-scale FPGA-based simulation, democratizing access
-		  to realistic pre-silicon hardware modeling of new designs. For
-		  designs that contain RISC-V SoCs, FireSim also provides compatible
-		  Linux distributions (Buildroot, Fedora) and automates the process
-		  of building complex workloads on top of these Linux distributions.
-		  By harnessing a standardized host platform and providing a large
-		  amount of automation/tooling, FireSim drastically simplifies the
-		  process of building and deploying large-scale FPGA-based hardware
-		  simulations.
+		  get a head-start on building software for novel hardware
+		  designs, by letting developers interact with the pre-silicon
+		  hardware design as they would a virtual machine. In effect,
+		  both hardware and software developers can work from a single
+		  source of truth: the RTL for the hardware design. FireSim also
+		  scales to simulating thousands of multi-core compute nodes,
+		  including the ability to simulate large clusters of networked
+		  designs over hundreds of FPGAs. By providing a consistent,
+		  user-friendly interface for managing simulations, FireSim
+		  enables easy scaling from small numbers of simulations hosted
+		  by on-premises FPGAs to massive simulations using hundreds of
+		  FPGAs on the cloud. This allows FireSim to remove the high
+		  capex traditionally involved in large-scale FPGA-based
+		  simulation, democratizing access to realistic pre-silicon
+		  hardware modeling of new designs. By defining standardized
+		  host platforms and providing a large amount of
+		  automation/tooling, FireSim drastically simplifies the process
+		  of building and deploying large-scale FPGA-based hardware
+		  simulations. To date, FireSim has been used in the development
+		  of commercial silicon and in published work from authors at
+		  over 20 academic and industrial institutions across various
+		  areas including computer architecture, systems, networking,
+		  circuits, security, and HPC.
 		</p>
 
 		<h6>Presenter: Sagar Karandikar</h6>
 		<p>
 		</p>
 
+		<h4>
+                  <a name="chipyard" href="#chipyard"></a>Chipyard: An Open-Source RISC-V SoC Design Framework</h4>
+		<p>
+		  We present Chipyard - an open-source integrated system-on-chip
+		  (SoC) design, simulation, and implementation environment for
+		  specialized RISC-V compute systems. Chipyard includes
+		  parameterized, composable, open-source, generator-based IP
+		  blocks that can be used across multiple stages of the hardware
+		  development flow while maintaining design intent and
+		  integration consistency. Through FPGA simulation and rapid
+		  ASIC implementation, this framework allows for continuous
+		  validation of physically realizable customized systems.
+		  Through integration with the Rocket Chip generator ecosystem,
+		  Chipyard provides a large number of easily composable and
+		  extensible open-source digital IP blocks including
+		  Linux-capable cores, accelerators, and system components.
+		  Chipyard contains mainstream energy-efficient and
+		  high-performance processor cores (Rocket, SonicBOOM, CVA6,
+		  Ibex, Sodor), domain specific accelerators
+		  (Hwacha/Gemmini/NVDLA vector/ML, SHA3/FFT/Mempress misc.),
+		  memory systems (caches, scratchpads, DRAMSim2), on-chip
+		  interconnects (Constellation) and additional peripherals to
+		  help create a fully featured SoC. Chipyard enables
+		  customization through intra-core and inter-core configuration,
+		  as well as custom extensions using the Rocket Custom
+		  Co-processor (RoCC) interface and MMIO-based devices. Chipyard
+		  also allows users to seamlessly integrate their own
+		  SystemVerilog custom IPs. Additionally, Chipyard provides
+		  software workload management tooling (FireMarshal) and
+		  toolchains for users to generate custom baremetal and
+		  Linux-based workloads for generated custom SoCs. As the SoC is
+		  co-designed for a specific use case, Chipyard enables pushing
+		  the entire SoC through automated ASIC flows (e.g. Hammer),
+		  software simulation (e.g. Verilator), FPGA prototyping flows
+		  (e.g. Vivado), and FPGA-accelerated simulation flows (e.g.
+		  FireSim). This allows the user to measure their workloads of
+		  interest in a fully automated way. Harnessing the integration
+		  with the Hammer ASIC physical design framework, users can run
+		  power-analysis simulation, go from gates to a GDSII, and more,
+		  in a minimal amount of time in both commercial and open-source
+		  process technologies (SKY130) and tooling (OpenRoad). For
+		  pre-silicon simulation and prototyping, users can use
+		  Verilator or FPGA prototyping for quick design/test cycle. For
+		  even faster continuous and simultaneous development for
+		  higher-quality verification and validation, users can use the
+		  FireSim FPGA-accelerated simulation platform for additional
+		  scale, accuracy, and debuggability. In this talk, we cover
+		  how the open-source Chipyard “one-stop shop” SoC framework
+		  enables users to create, integrate, test, and measure their
+		  own hardware designs. To date Chipyard has enabled end-to-end
+		  computer architecture research and development in over 15
+		  academic and industrial institutions across all domains.
+		</p>
+
+		<h6>Presenter: Abraham Gonzalez</h6>
+		<p>
+		</p>
+
+		<h4>
+                  <a name="systolic" href="#systolic"></a>Taping out a systolic array 101</h4>
+		<p>
+		  During this talk, I will give an introduction to systolic
+		  arrays and my work on taping out a small systolic array using
+		  only open-source tools, my work is part of the zero to ASIC
+		  community https://www.zerotoasiccourse.com/. All of the
+		  content to be presented is from the perspective of an embedded
+		  software engineer learning digital design in his free time,
+		  without previous knowledge of digital design.
+		</p>
+
+		<h6>Presenter: Camilo Soto</h6>
+		<p>
+		</p>
+
+		<h4>
+                  <a name="checker" href="#checker"></a>SVA based Checker IP in Verilator</h4>
+		<p>
+		  Checkers are a critical part of the design verification
+		  process. With the advent of constrained-random techniques, a
+		  lot of stimulus-generation capabilities are supported by
+		  languages, methodologies, and supporting tools. Ensuring that
+		  a design behaves as per the specification is achieved using
+		  various forms of checkers. The term “checker” at times means
+		  different things to different people. With SystemVerilog 2009
+		  standard making “checker” as a keyword in the language
+		  itself, we would like to use that for temporal checks using
+		  assertions. Verilator is a free and open-source simulator that
+		  can convert SystemVerilog code into a cycle-accurate
+		  executable model. Assertions are statements that specify
+		  properties or constraints that the design should satisfy. In
+		  this paper, we present our experience in porting some of our
+		  Checker IPs (APB, AHB, etc.) developed and used in production
+		  to Verilator. Given the SVA support is still maturing in
+		  Verilator, our team had to adapt the code to be restricted to
+		  what the tool supports. We also developed unit tests to verify
+		  these properties in Verilator. We will share our findings,
+		  potential areas to improve, etc. Our intention is to make this
+		  code base available as part of GO2UVM library.
+		</p>
+
+		<h6>Presenter: Srinivasan Venkataramanan</h6>
+		<p>
+		</p>
+
+<!--
 		<h4>
                   <a name="chipyard" href="#chipyard"></a>Chipyard: Open-Source SoC Design, Simulation, and Implementation Environment</h4>
 		<p>
@@ -704,12 +744,12 @@ Get a head start on the workshop and a taste of what is going on:
 		<h6>Presenter: Cole Johnson</h6>
 		<p>
 		</p>
+    -->
 
 	      </div>
             </div>
 	  </div>
 	</div>
-    -->
           <div class="row">
             <!-- Card: venue -->
             <a name="venue" href="#venue"></a>
