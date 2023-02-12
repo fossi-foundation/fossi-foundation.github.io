@@ -69,6 +69,28 @@ Bootstrap the developer infrastructure and community to maintain those projects.
 *Mentor:* [Jonathan Balkind](mailto:jbalkind@ucsb.edu)
 
 
+### Online Compilation Through CPU Simulation
+
+This project aims to demystify the complete process of going from a high-level program down to cycle-level circuit
+simulation of the executing that program.
+
+Compiler Explorer (https://godbolt.org/) is an open-source online tool that allows a user to explore how compilers turn source code in various languages through various compilers into assembly code.
+
+WARP-V is an open-source CPU core generator with a built-in assembler. A CPU can be configured and assembly code can be
+provided, to generate a customized CPU core. This core can be loaded in Makerchip, simulated, and edited online.
+
+The combination of Compiler Explorer and WARP-V would create a full online experimentation platform to go from high-level
+software to circuit simulation of the program in a customized CPU core.
+
+*Skill level:* Intermediate
+
+*Duration:* ~175 or ~350 hrs.
+
+*Language/Tools:* Node.js and general web developement
+
+*Mentor:* [Steve Hoover](https://www.linkedin.com/in/steve-hoover-a44b607/) ([email](mailto:steve.hoover@redwoodeda.com))
+
+
 ### Minimal RISC-V core with AI Acceleration synthesizable with open source tools
 
 A series of  projects between Embecosm and Southampton University over the past and a FOSSi GSoC project from 2021 have developed a simple (8 instruction) open source ISA extension for the CV32E40P and CV32E40X RISC-V cores to accelerate neural network inference acceleration.  The project [GitHub](https://github.com/AI-Vector-Accelerator) has demonstrated a 5 fold increase in inference performance.   [YouTube](https://youtu.be/DY8WXLF7CEg) has the most recent presentation of the project, given at the London Open Source RISC-V meetup in January 2022.
