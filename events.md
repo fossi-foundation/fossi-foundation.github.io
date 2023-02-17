@@ -21,6 +21,13 @@ we are happy to talk to you.
 
 We hope to see you at some of our future events!
 
+### Latch-Up Santa Barbara
+* March 31-April 2, 2023
+* Santa Barbara CA, USA
+* [More information](http://latchup.io)
+
+## Past events
+
 ### FOSSi Dial-Up:  Tim Ansell - Fully open source manufacturable PDK for a 130nm process
 * June 30 2020
 * Online
@@ -31,8 +38,6 @@ We hope to see you at some of our future events!
 * tbd
 * [More information](https://orconf.org)
 * **Cancelled**
-
-## Past events
 
 ### LatchUp 2020
 * April 11-12 2020
