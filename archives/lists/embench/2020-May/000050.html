@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] Fwd: Benchmark question
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Fwd%3A%20Benchmark%20question&In-Reply-To=%3CCAHis7pmiuFFejQ5ZePqvUfibDBJ67Ti_N1fPM-%2B50_tm73DkTg%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000049.html">
+   <LINK REL="Next"  HREF="000051.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] Fwd: Benchmark question</H1>
+    <B>David PATTERSON</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Fwd%3A%20Benchmark%20question&In-Reply-To=%3CCAHis7pmiuFFejQ5ZePqvUfibDBJ67Ti_N1fPM-%2B50_tm73DkTg%40mail.gmail.com%3E"
+       TITLE="[Embench] Fwd: Benchmark question">pattrsn at cs.berkeley.edu
+       </A><BR>
+    <I>Thu May 21 17:27:18 CEST 2020</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000049.html">[Embench] Notes from Embench call 11 May 2020
+</A></li>
+        <LI>Next message (by thread): <A HREF="000051.html">[Embench] Benchmark question
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#50">[ date ]</a>
+              <a href="thread.html#50">[ thread ]</a>
+              <a href="subject.html#50">[ subject ]</a>
+              <a href="author.html#50">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Following up from request for floating point benchmarks for Embench 0.6.
+
+I presume I should follow up with an offer from BDTI for DSP benchmarks?
+
+Dave
+
+---------- Forwarded message ---------
+From: Jeff Bier &lt;<A HREF="https://lists.librecores.org/listinfo/embench">bier at bdti.com</A>&gt;
+Date: Thu, May 21, 2020 at 8:20 AM
+Subject: RE: Benchmark question
+To: <A HREF="https://lists.librecores.org/listinfo/embench">pattrsn at cs.berkeley.edu</A> &lt;<A HREF="https://lists.librecores.org/listinfo/embench">pattrsn at cs.berkeley.edu</A>&gt;
+
+
+Hi Dave,
+
+
+Sorry for the slow response on this.  My dad has been in the hospital this
+week -- he’s doing OK, but conditions related to Covid-19 made things much
+more complicated.
+
+
+
+Regarding floating-point embedded benchmarks, here are some ideas…
+
+   - My company, BDTI, would be willing to open source BDTI could open
+   source the C reference code for a subset of our floating-point DSP
+   benchmarks.  If this is of interest, let’s talk.  (This could be at the
+   function level, like FFTs and FIR filters, and/or at the task level, like
+   an OFDM wireless receiver baseband.)
+   - <A HREF="https://www.fourmilab.ch/fbench/">https://www.fourmilab.ch/fbench/</A>
+   - Linear algebra libraries, e.g. matrix multiplication, matrix
+   inversion.  (I don’t have a specific pointer, but I’m guessing there are
+   open source libraries available.)
+   - OpenCV is now C++, but earlier versions were C.  (Some computer vision
+   tasks are pixel-oriented and inherently integer, but others are geometric
+   and more naturally float-based.)
+   - Here’s an audio application in C, with all sorts of algorithms such as
+   de-clipper, eq, reverb, etc.  <A HREF="https://github.com/ePirat/Postfish.">https://github.com/ePirat/Postfish.</A>
+   (However it may be a bit challenging to extract individual algorithms from
+   the entire framework…)
+
+
+
+I hope this helps.
+
+
+
+-jeff-
+
+
+
+*From:* David PATTERSON &lt;<A HREF="https://lists.librecores.org/listinfo/embench">pattrsn at cs.berkeley.edu</A>&gt;
+*Sent:* Tuesday, May 12, 2020 7:53 AM
+*To:* Jeff Bier &lt;<A HREF="https://lists.librecores.org/listinfo/embench">bier at edge-ai-vision.com</A>&gt;
+*Subject:* Benchmark question
+
+
+
+The embedded benchmarking effort I'm involved in wants to branch out to
+floating point programs from integer programs, and allow a little larger
+programs (250 KB of data).
+
+
+Do you have any suggestions?
+
+
+
+Ideally they we be open source C programs, including data sets.
+
+
+
+DSP apps should be fine.
+
+
+
+If there was an existing such benchmark for DSP or some other area, and
+they had an open source license, we might be able to follow their lead.
+
+
+
+Best,
+Dave
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://lists.librecores.org/pipermail/embench/attachments/20200521/4853328e/attachment.htm">http://lists.librecores.org/pipermail/embench/attachments/20200521/4853328e/attachment.htm</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000049.html">[Embench] Notes from Embench call 11 May 2020
+</A></li>
+	<LI>Next message (by thread): <A HREF="000051.html">[Embench] Benchmark question
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#50">[ date ]</a>
+              <a href="thread.html#50">[ thread ]</a>
+              <a href="subject.html#50">[ subject ]</a>
+              <a href="author.html#50">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,101 @@
+<tt>
+&lt;html&gt;<br>
+&nbsp;&nbsp;&lt;head&gt;<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta&nbsp;http-equiv=&quot;content-type&quot;&nbsp;content=&quot;text/html;&nbsp;charset=UTF-8&quot;&gt;<br>
+&nbsp;&nbsp;&lt;/head&gt;<br>
+&nbsp;&nbsp;&lt;body&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Hi&nbsp;all,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;moz-forward-container&quot;&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;as&nbsp;the&nbsp;new&nbsp;release&nbsp;of&nbsp;LLVM&nbsp;has&nbsp;been&nbsp;out&nbsp;for&nbsp;some&nbsp;days&nbsp;now&nbsp;I<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;generated&nbsp;new&nbsp;benchmark&nbsp;results.&lt;/p&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Here&nbsp;are&nbsp;the&nbsp;geomean&nbsp;relative&nbsp;(to&nbsp;the&nbsp;current&nbsp;baseline,&nbsp;see<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;slide&nbsp;7)&nbsp;results&nbsp;per&nbsp;optimization&nbsp;flag&nbsp;for&nbsp;RI5CY:&lt;/p&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;pre&gt;Options              &nbsp;Geomean  &nbsp;+ve  &nbsp;-ve<br>
+-------              &nbsp;-------  &nbsp;---   &nbsp;--<br>
+-O0                     &nbsp;0.43 &nbsp;0.23 &nbsp;0.16<br>
+-O1                     &nbsp;0.87 &nbsp;0.33 &nbsp;0.24<br>
+-O2                     &nbsp;0.97 &nbsp;0.37 &nbsp;0.28<br>
+-O3                     &nbsp;0.97 &nbsp;0.35 &nbsp;0.27<br>
+-O3&nbsp;-finline-limit=50   &nbsp;0.97 &nbsp;0.35 &nbsp;0.27<br>
+-O3&nbsp;-funroll-loops      &nbsp;0.97 &nbsp;0.35 &nbsp;0.27<br>
+-Os                     &nbsp;0.88 &nbsp;0.34 &nbsp;0.25<br>
+-Os&nbsp;-msave-restore      &nbsp;0.87 &nbsp;0.33 &nbsp;0.24<br>
+-Oz                     &nbsp;0.87 &nbsp;0.33 &nbsp;0.25<br>
+-Oz&nbsp;-msave-restore      &nbsp;0.86 &nbsp;0.33 &nbsp;0.25<br>
+<br>
+Size&nbsp;results<br>
+============<br>
+<br>
+Options              &nbsp;Geomean  &nbsp;+ve  &nbsp;-ve<br>
+-------              &nbsp;-------  &nbsp;---   &nbsp;--<br>
+-O0                     &nbsp;2.65 &nbsp;0.82 &nbsp;0.63<br>
+-O1                     &nbsp;1.24 &nbsp;0.24 &nbsp;0.21<br>
+-O2                     &nbsp;1.37 &nbsp;0.42 &nbsp;0.33<br>
+-O3                     &nbsp;1.56 &nbsp;0.76 &nbsp;0.52<br>
+-O3&nbsp;-finline-limit=50   &nbsp;1.56 &nbsp;0.76 &nbsp;0.52<br>
+-O3&nbsp;-funroll-loops      &nbsp;1.56 &nbsp;0.76 &nbsp;0.52<br>
+-Os                     &nbsp;1.23 &nbsp;0.28 &nbsp;0.23<br>
+-Os&nbsp;-msave-restore      &nbsp;1.14 &nbsp;0.28 &nbsp;0.23<br>
+-Oz                     &nbsp;1.18 &nbsp;0.24 &nbsp;0.21<br>
+-Oz&nbsp;-msave-restore      &nbsp;1.09 &nbsp;0.23 &nbsp;0.20&lt;/pre&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;And&nbsp;here&nbsp;the&nbsp;same&nbsp;for&nbsp;ARM&nbsp;Cortex-M4:&lt;/p&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;pre&gt;Speed&nbsp;results<br>
+=============<br>
+<br>
+Options              &nbsp;Geomean  &nbsp;+ve  &nbsp;-ve<br>
+-------              &nbsp;-------  &nbsp;---   &nbsp;--<br>
+-O0                     &nbsp;0.42 &nbsp;0.25 &nbsp;0.16<br>
+-O1                     &nbsp;0.94 &nbsp;0.14 &nbsp;0.13<br>
+-O2                     &nbsp;1.04 &nbsp;0.13 &nbsp;0.12<br>
+-O3                     &nbsp;1.05 &nbsp;0.17 &nbsp;0.16<br>
+-O3&nbsp;-finline-limit=50   &nbsp;1.05 &nbsp;0.17 &nbsp;0.16<br>
+-O3&nbsp;-funroll-loops      &nbsp;1.05 &nbsp;0.17 &nbsp;0.16<br>
+-Os                     &nbsp;0.95 &nbsp;0.13 &nbsp;0.12<br>
+-Oz                     &nbsp;0.92 &nbsp;0.17 &nbsp;0.15<br>
+<br>
+Size&nbsp;results<br>
+============<br>
+<br>
+Options              &nbsp;Geomean  &nbsp;+ve  &nbsp;-ve<br>
+-------              &nbsp;-------  &nbsp;---   &nbsp;--<br>
+-O0                     &nbsp;1.85 &nbsp;0.33 &nbsp;0.29<br>
+-O1                     &nbsp;1.18 &nbsp;0.14 &nbsp;0.13<br>
+-O2                     &nbsp;2.04 &nbsp;1.22 &nbsp;0.77<br>
+-O3                     &nbsp;2.18 &nbsp;1.59 &nbsp;0.92<br>
+-O3&nbsp;-finline-limit=50   &nbsp;2.18 &nbsp;1.59 &nbsp;0.92<br>
+-O3&nbsp;-funroll-loops      &nbsp;2.18 &nbsp;1.59 &nbsp;0.92<br>
+-Os                     &nbsp;1.16 &nbsp;0.17 &nbsp;0.16<br>
+-Oz                     &nbsp;1.02 &nbsp;0.12 &nbsp;0.11<br>
+<br>
+&lt;/pre&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;You'll&nbsp;notice&nbsp;that&nbsp;the&nbsp;ARM&nbsp;has&nbsp;no&nbsp;results&nbsp;for&nbsp;the&nbsp;flag<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;combination&nbsp;&quot;-Oz&nbsp;-msave-restore&quot;.&nbsp;That's&nbsp;only&nbsp;because&nbsp;ARM&nbsp;LLVM<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;doesn't&nbsp;support&nbsp;the&nbsp;&quot;-msave-restore&quot;&nbsp;flag.&nbsp;This&nbsp;is&nbsp;now&nbsp;being<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;specified&nbsp;in&nbsp;the&nbsp;slides&nbsp;as&nbsp;well.&lt;br&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Also&nbsp;note&nbsp;that&nbsp;the&nbsp;top&nbsp;of&nbsp;tree&nbsp;speed&nbsp;result&nbsp;for&nbsp;RI5CY&nbsp;in&nbsp;silde<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;23&nbsp;of&nbsp;the&nbsp;Embench&nbsp;presentation&nbsp;showed&nbsp;during&nbsp;last&nbsp;meeting&nbsp;had&nbsp;a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;quite&nbsp;surprisingly&nbsp;worse&nbsp;geomean&nbsp;than&nbsp;LLVM&nbsp;10.0.1.&lt;/p&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;That&nbsp;was&nbsp;probably&nbsp;due&nbsp;to&nbsp;a&nbsp;lack&nbsp;of&nbsp;some&nbsp;optimization&nbsp;flags.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nevertheless&nbsp;the&nbsp;results&nbsp;from&nbsp;LLVM&nbsp;11&nbsp;(that&nbsp;follows&nbsp;the&nbsp;top&nbsp;of<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tree&nbsp;example&nbsp;of&nbsp;the&nbsp;slides)&nbsp;confirm&nbsp;that&nbsp;there&nbsp;is&nbsp;actually&nbsp;a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;slight&nbsp;decrease&nbsp;of&nbsp;speed&nbsp;optimization&nbsp;between&nbsp;LLVM&nbsp;10.0.1&nbsp;(a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;geomean&nbsp;of&nbsp;0.98)&nbsp;and&nbsp;LLVM&nbsp;11.0.0&nbsp;(a&nbsp;goemean&nbsp;of&nbsp;0.97)&nbsp;as&nbsp;we<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mentioned&nbsp;during&nbsp;the&nbsp;call.&lt;/p&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;The&nbsp;slides&nbsp;are&nbsp;being&nbsp;currently&nbsp;reviewed&nbsp;and&nbsp;updated&nbsp;to<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;integrate&nbsp;the&nbsp;LLVM&nbsp;11&nbsp;results.&lt;/p&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;For&nbsp;any&nbsp;question/observation&nbsp;don't&nbsp;hesitate&nbsp;to&nbsp;reply.&lt;/p&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;&lt;br&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Speak&nbsp;to&nbsp;you&nbsp;all&nbsp;soon.&lt;br&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Best&nbsp;wishes,&lt;br&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Paolo&nbsp;Savini&lt;br&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+&nbsp;&nbsp;&lt;/body&gt;<br>
+&lt;/html&gt;<br>
+
+</tt>

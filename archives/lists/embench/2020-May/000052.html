@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] Benchmark question
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Benchmark%20question&In-Reply-To=%3C77d93063bccb4d3a950274601a8234fa%40huawei.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000051.html">
+   <LINK REL="Next"  HREF="000054.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] Benchmark question</H1>
+    <B>Mark Hill</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Benchmark%20question&In-Reply-To=%3C77d93063bccb4d3a950274601a8234fa%40huawei.com%3E"
+       TITLE="[Embench] Benchmark question">mark.hill at huawei.com
+       </A><BR>
+    <I>Thu May 21 23:50:18 CEST 2020</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000051.html">[Embench] Benchmark question
+</A></li>
+        <LI>Next message (by thread): <A HREF="000054.html">[Embench] Benchmark question
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#52">[ date ]</a>
+              <a href="thread.html#52">[ thread ]</a>
+              <a href="subject.html#52">[ subject ]</a>
+              <a href="author.html#52">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Dave,
+
+One area we see use of double precision floating point in embedded products is kalman filtering to combine inputs from various sensors, unfortunately the code we have is proprietary but perhaps there are some public domain implementations that could be used as a suitable benchmark.
+
+Mark
+
+
+From: Embench [mailto:<A HREF="https://lists.librecores.org/listinfo/embench">embench-bounces at lists.librecores.org</A>] On Behalf Of Roger Shepherd
+Sent: 21 May 2020 16:50
+To: <A HREF="https://lists.librecores.org/listinfo/embench">pattrsn at cs.berkeley.edu</A>
+Cc: <A HREF="https://lists.librecores.org/listinfo/embench">embench at lists.librecores.org</A>
+Subject: Re: [Embench] Benchmark question
+
+Dave,
+
+Yes! I think getting some of the BDTI benchmarks would be great, especially if they retain some BDTI branding/copyright. When I last worked on DSPs, BDTI’s benchmarks had a very high reputation (partly because BDTI had results for a wide range of DSPs and processors).
+
+Which makes me think, part of the utility of a benchmark suite comes from having results from a large number of processors/platforms. Perhaps we could actively address getting a wider set of results for Embench? Maybe a topic for our next call?
+
+Roher
+
+
+
+
+On 21 May 2020, at 16:27, David PATTERSON &lt;<A HREF="https://lists.librecores.org/listinfo/embench">pattrsn at cs.berkeley.edu</A>&lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">pattrsn at cs.berkeley.edu</A>&gt;&gt; wrote:
+
+Following up from request for floating point benchmarks for Embench 0.6.
+
+I presume I should follow up with an offer from BDTI for DSP benchmarks?
+
+Dave
+
+---------- Forwarded message ---------
+From: Jeff Bier &lt;<A HREF="https://lists.librecores.org/listinfo/embench">bier at bdti.com</A>&lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">bier at bdti.com</A>&gt;&gt;
+Date: Thu, May 21, 2020 at 8:20 AM
+Subject: RE: Benchmark question
+To: <A HREF="https://lists.librecores.org/listinfo/embench">pattrsn at cs.berkeley.edu</A>&lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">pattrsn at cs.berkeley.edu</A>&gt; &lt;<A HREF="https://lists.librecores.org/listinfo/embench">pattrsn at cs.berkeley.edu</A>&lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">pattrsn at cs.berkeley.edu</A>&gt;&gt;
+
+Hi Dave,
+
+Sorry for the slow response on this.  My dad has been in the hospital this week -- he’s doing OK, but conditions related to Covid-19 made things much more complicated.
+
+Regarding floating-point embedded benchmarks, here are some ideas…
+·       My company, BDTI, would be willing to open source BDTI could open source the C reference code for a subset of our floating-point DSP benchmarks.  If this is of interest, let’s talk.  (This could be at the function level, like FFTs and FIR filters, and/or at the task level, like an OFDM wireless receiver baseband.)
+·       <A HREF="https://www.fourmilab.ch/fbench/">https://www.fourmilab.ch/fbench/</A>
+·       Linear algebra libraries, e.g. matrix multiplication, matrix inversion.  (I don’t have a specific pointer, but I’m guessing there are open source libraries available.)
+·       OpenCV is now C++, but earlier versions were C.  (Some computer vision tasks are pixel-oriented and inherently integer, but others are geometric and more naturally float-based.)
+·       Here’s an audio application in C, with all sorts of algorithms such as de-clipper, eq, reverb, etc.  <A HREF="https://github.com/ePirat/Postfish.">https://github.com/ePirat/Postfish.</A>  (However it may be a bit challenging to extract individual algorithms from the entire framework…)
+
+I hope this helps.
+
+-jeff-
+
+From: David PATTERSON &lt;<A HREF="https://lists.librecores.org/listinfo/embench">pattrsn at cs.berkeley.edu</A>&lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">pattrsn at cs.berkeley.edu</A>&gt;&gt;
+Sent: Tuesday, May 12, 2020 7:53 AM
+To: Jeff Bier &lt;<A HREF="https://lists.librecores.org/listinfo/embench">bier at edge-ai-vision.com</A>&lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">bier at edge-ai-vision.com</A>&gt;&gt;
+Subject: Benchmark question
+
+The embedded benchmarking effort I'm involved in wants to branch out to floating point programs from integer programs, and allow a little larger programs (250 KB of data).
+
+Do you have any suggestions?
+
+Ideally they we be open source C programs, including data sets.
+
+DSP apps should be fine.
+
+If there was an existing such benchmark for DSP or some other area, and they had an open source license, we might be able to follow their lead.
+
+Best,
+Dave
+--
+Embench mailing list
+<A HREF="https://lists.librecores.org/listinfo/embench">Embench at lists.librecores.org</A>&lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">Embench at lists.librecores.org</A>&gt;
+<A HREF="https://lists.librecores.org/listinfo/embench">https://lists.librecores.org/listinfo/embench</A>
+
+--
+Roger Shepherd
+<A HREF="https://lists.librecores.org/listinfo/embench">roger.shepherd at chipless.eu</A>&lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">roger.shepherd at chipless.eu</A>&gt;
+
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://lists.librecores.org/pipermail/embench/attachments/20200521/de4fecb2/attachment.htm">http://lists.librecores.org/pipermail/embench/attachments/20200521/de4fecb2/attachment.htm</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000051.html">[Embench] Benchmark question
+</A></li>
+	<LI>Next message (by thread): <A HREF="000054.html">[Embench] Benchmark question
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#52">[ date ]</a>
+              <a href="thread.html#52">[ thread ]</a>
+              <a href="subject.html#52">[ subject ]</a>
+              <a href="author.html#52">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

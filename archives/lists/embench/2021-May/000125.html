@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] Warm-up phase
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Warm-up%20phase&In-Reply-To=%3C123a1009-3f84-7fd0-a9da-3d385fc52cc2%40embecosm.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000124.html">
+   <LINK REL="Next"  HREF="000123.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] Warm-up phase</H1>
+    <B>Jeremy Bennett</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Warm-up%20phase&In-Reply-To=%3C123a1009-3f84-7fd0-a9da-3d385fc52cc2%40embecosm.com%3E"
+       TITLE="[Embench] Warm-up phase">jeremy.bennett at embecosm.com
+       </A><BR>
+    <I>Sun May  9 12:41:41 CEST 2021</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000124.html">[Embench] Warm-up phase
+</A></li>
+        <LI>Next message (by thread): <A HREF="000123.html">[Embench] WD Code size compiler tests
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#125">[ date ]</a>
+              <a href="thread.html#125">[ thread ]</a>
+              <a href="subject.html#125">[ subject ]</a>
+              <a href="author.html#125">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>On 02/05/2021 11:37, Avishai Tvila wrote:
+&gt;<i> I’m wondering why we need the warm-up phase at all.
+</I>&gt;<i> 
+</I>&gt;<i> It seems the impact of cold caches/predictors is insignificant.
+</I>
+Hi Avishai,
+
+Thanks for your contract.
+
+&gt;<i> The impact of warm-up is highest when the whole data is fit in the
+</I>&gt;<i> cache, and the misses are only due to a cold cache.
+</I>
+Well there is also the impact on branch prediction as well. Plus some
+small chips have low power modes with voltage and frequency scaling and
+you want to make sure they are brought out of these fully.
+
+&gt;<i> Therefore, the upper bound of warm-up gain per access is
+</I>&gt;<i> ((Miss-penalty)*(static data size)/(Dynamic accesses))*(base CPI)
+</I>&gt;<i> 
+</I>&gt;<i> Warm-up has three parts:
+</I>&gt;<i> 
+</I>&gt;<i>  1. I$ - for Embench, the code size is up to 16KB, the number of dynamic
+</I>&gt;<i>     instructions depends on clock frequency, but even for 10MHz, it’s
+</I>&gt;<i>     bigger than 80M instructions. Even if a missed penalty is 100s
+</I>&gt;<i>     cycles, the impact is about 0.
+</I>&gt;<i>  2. Branch Predictor – same as (1)
+</I>&gt;<i>  3. D$ - data size is limited to 64K, assuming cache line is 32B,
+</I>&gt;<i>     warming can save 2K misses. Assuming we have ~20% memory accesses,
+</I>&gt;<i>     it’s 2K out of 16M; even with a missed penalty of 300 cycles, it’s
+</I>&gt;<i>     only 0.03 cycles per memory access.
+</I>
+The impact varies greatly from chip to chip. We have this feature in
+order to eliminate the issue for those chips where it does matter.
+
+It is an interesting subject, and where it would be good to have
+benchmarks to assess the impact of warm-up. But we have kept the scope
+of the first Embench benchmarks deliberately simple in the interest of
+being able to deliver something useful.
+
+Embench 2.0 proposes a different way of measuring performance, comparing
+complete runs with different scaling factors. This will effectively
+eliminate any warm-up effect.
+
+Best wishes,
+
+
+Jeremy
+
+&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> 
+</I>&gt;<i> Thoughts?
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> 
+</I>&gt;<i> Best,
+</I>&gt;<i> 
+</I>&gt;<i> Ofer &amp; Avishai
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>
+
+-- 
+Cell: +44 (7970) 676050
+SkypeID: jeremybennett
+Twitter: @jeremypbennett
+Email: <A HREF="https://lists.librecores.org/listinfo/embench">jeremy.bennett at embecosm.com</A>
+Web: www.embecosm.com
+PGP key: 1024D/BEF58172FB4754E1 2009-03-20
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: OpenPGP_signature
+Type: application/pgp-signature
+Size: 203 bytes
+Desc: OpenPGP digital signature
+URL: &lt;<A HREF="http://lists.librecores.org/pipermail/embench/attachments/20210509/2b0b645d/attachment.sig">http://lists.librecores.org/pipermail/embench/attachments/20210509/2b0b645d/attachment.sig</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000124.html">[Embench] Warm-up phase
+</A></li>
+	<LI>Next message (by thread): <A HREF="000123.html">[Embench] WD Code size compiler tests
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#125">[ date ]</a>
+              <a href="thread.html#125">[ thread ]</a>
+              <a href="subject.html#125">[ subject ]</a>
+              <a href="author.html#125">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,353 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] Notes from Embench call 21 September 2020
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Notes%20from%20Embench%20call%2021%20September%202020&In-Reply-To=%3C1309424f-75b6-78d6-c159-b9b6ec21b57b%40embecosm.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000078.html">
+   <LINK REL="Next"  HREF="000079.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] Notes from Embench call 21 September 2020</H1>
+    <B>Jeremy Bennett</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Notes%20from%20Embench%20call%2021%20September%202020&In-Reply-To=%3C1309424f-75b6-78d6-c159-b9b6ec21b57b%40embecosm.com%3E"
+       TITLE="[Embench] Notes from Embench call 21 September 2020">jeremy.bennett at embecosm.com
+       </A><BR>
+    <I>Fri Oct 16 16:15:21 CEST 2020</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000078.html">[Embench] Fwd: &quot;Embench&quot;ing open source FPGA soft cores
+</A></li>
+        <LI>Next message (by thread): <A HREF="000079.html">[Embench] Embench meeting/call 19 October 2020
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#77">[ date ]</a>
+              <a href="thread.html#77">[ thread ]</a>
+              <a href="subject.html#77">[ subject ]</a>
+              <a href="author.html#77">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Hi all,
+
+Apologies for the delay. I wrote the notes, but failed to send them
+out. These are the notes from September's meeting, summarizing actions.
+
+0. Welcome new participants
+- ---------------------------
+
+Ben Marshall from Bristol University
+Mark Himmelstein from RISC-V International
+Tariq Kurd from Huawei
+
+1. Actions from previous meetings
+- ---------------------------------
+
+ACTION: Jeremy to add tutorial example to reproduce baseline results
+in documentation.
+- - captured as GitHub issue 68
+- - in progress
+
+ACTION (ongoing): Roger Shepherd to provide Embench results for ST dev
+boards, Apple Macs and Raspberry Pi.
+- - in progress
+
+ACTION: Jeremy Bennett/Paolo Savini to attempt to get results for
+Atmel AVR using Arduino.
+- - in progress
+
+ACTION: Jeremy Bennett to explore alternatives to Google Docs for
+presentations
+- - Open Document Format version prepared
+- - hieroglyph version in progress
+
+ACTION (ongoing): Ray Simar to set class project to come up with new
+benchmarks based on the TinyML book.
+- - in porgress
+- - Ray to report in item 6
+
+ACTION: Jeremy Bennett to update documentation to advise that Python
+minimum version 3.6 is required.
+- - in progress
+
+2. GitHub pull requests
+- -----------------------
+
+- From embench-iot:
+
+<A HREF="https://github.com/embench/embench-iot/pull/86">https://github.com/embench/embench-iot/pull/86</A>
+- - update doc/README.md to explain Python module naming
+- - merged
+- - thanks to Roger Shepherd for the fix
+
+<A HREF="https://github.com/embench/embench-iot/pull/88">https://github.com/embench/embench-iot/pull/88</A>
+- - fix GCC specific and ISO C compliance error
+- - resolves issue 72
+- - merged
+- - thanks to Paolo Savini for the fix
+
+<A HREF="https://github.com/embench/embench-iot/pull/90">https://github.com/embench/embench-iot/pull/90</A>
+- - fix error in result decoding
+- - merged
+- - thanks to Samuel Obuch for the fix
+
+<A HREF="https://github.com/embench/embench-iot/pull/91">https://github.com/embench/embench-iot/pull/91</A>
+- - log all arguments on failure of benchmark_speed.py
+- - merged
+- - thanks to Samuel Obuch for the fix
+
+<A HREF="https://github.com/embench/embench-iot/pull/92">https://github.com/embench/embench-iot/pull/92</A>
+- - fix typo in comment
+- - merged
+- - thanks to Roger Shepherd for the fix
+
+- From embench-iot-results:
+
+None
+
+Thank you to everyone who contributed pull requests.
+
+3. New GitHub issues
+- --------------------
+
+- From embench-iot:
+
+<A HREF="https://github.com/embench/embench-iot/issues/87">https://github.com/embench/embench-iot/issues/87</A>
+- - note python prequisite version
+- - bug assigned to Jeremy Bennett
+- - in progress
+- - thanks to Ofer Shinaar for raising this
+
+<A HREF="https://github.com/embench/embench-iot/issues/89">https://github.com/embench/embench-iot/issues/89</A>
+- - problems building benchmark
+- - resolved
+- - thanks to Nagendra Gulur for raising this
+- - thanks to Samuel Obuch for the resolution
+
+<A HREF="https://github.com/embench/embench-iot/issues/93">https://github.com/embench/embench-iot/issues/93</A>
+- - need for a standard citation for Embench
+- - see agenda item 5
+- - thanks to Ben Marshall for raising this
+
+<A HREF="https://github.com/embench/embench-iot/issues/94">https://github.com/embench/embench-iot/issues/94</A>
+- - how to reproduce Embench for riscv32
+- - assigned to Jeremy Bennett &amp; Paolo Savini
+- - discussion in progress
+- - thanks to Huaqi Fang for raising this
+
+- From embench-iot-results:
+
+None
+
+Thanks to all those who raised issues and provided responses.
+
+4. Update on benchmarks
+- -----------------------
+
+Paolo Savini shared the latest results.
+
+Slide 7 - mention board and compiler version
+
+Compare with Arm - were cache's used - probably not for Cortex M4
+
+Slide 25 needs warning not to use
+
+Is outlining implemented for RISC-V Clang/LLVM?
+
+For bit manipulation slides 27-30 could show actual scores
+
+Need to get real hardware for RISC-V results. HiFive1?
+
+5. Publicity
+- ------------
+
+Stefan Wallentowitz is putting together an interview style blog post
+about Embench, based on interview responses from Dave Patterson and
+Jeremy Bennett.
+
+ACTION: Jeremy to push to conclusion with Embecosm
+
+A new version of a generic presentation on Embench will be circulated
+at the meeting.
+
+ACTION: Jeremy Bennett to finalize in light of feedback and circulate
+with minutes.
+
+Ben Marshall has raised the question of a standard citation for
+Embench. Currently he is using:
+
+@misc{embench-iot,
+title={Embench: Open Benchmarks for Embedded Platforms},
+author={David Patterson and Jeremy Bennett and Palmer Dabbelt, Cesare
+Garlati and G. S. Madhusudan and Trevor Mudge},
+howpublished=&quot;\url{<A HREF="https://github.com/embench/embench-iot">https://github.com/embench/embench-iot</A>}&quot;
+}
+
+He has asked if there is a better citation he should be using.
+
+Reference tagging.
+
+There is also a SIGArch blog post.
+
+Should we have an archive paper? Can update as we go. Also may last
+longer than GitHub. History and current results
+
+ACTION: David Patterson to prepare draft paper.
+
+David Patterson spoke at the Embedded Vision conference last week.
+Follow up Q&amp;A on22 September
+
+Jeremy Bennett is giving a keynote talk at the 3rd Workshop on RISC-V
+Activities held by Edacentrum, Germany. The talk will be looking at
+the RISC-V Software Ecosystem. The final part of the talk explores the
+importance of benchmarking in developing that ecosystem.
+
+- - workshop: <A HREF="https://www.edacentrum.de/en/events/risc-v/2020/program">https://www.edacentrum.de/en/events/risc-v/2020/program</A>
+- - talk abstract: <A HREF="https://www.edacentrum.de/risc-v-software-ecosystem">https://www.edacentrum.de/risc-v-software-ecosystem</A>
+
+Jeremy Bennett is speaking at VSDOpen on 10 October, a conference for
+students in India. Although the talk has quite a broad abstract, it
+will use Embench as an example of the bridge between hardware and
+software in open source.
+- - conference: <A HREF="https://www.vlsisystemdesign.com/vsdopen/">https://www.vlsisystemdesign.com/vsdopen/</A>
+
+6. Embench 0.6
+- --------------
+
+There is an ongoing shared document to add potential programs for a
+new floating point benchmark suite:
+
+<A HREF="https://docs.google.com/document/d/1tC0LXZRYeyoSRTM9aXtapzx3sA00vfFcL9QjOxU3vzQ">https://docs.google.com/document/d/1tC0LXZRYeyoSRTM9aXtapzx3sA00vfFcL9QjOxU3vzQ</A>
+
+Ray Sinar and his students at RICE are leading the effort to develop
+the FP benchmark suite with his students during the coming semester.
+Ray to report.
+- - focus on DSP benchmarks from BDTI (FIR, IIR, FFT, vector dot-product)
+- - teams have been formed - 10 person team
+- - set of goals  as go through semester
+- - getting benchmarks written should be good
+- - challenges around data, self-testing
+- - want to run on some microprocessor platforms
+  - talked to Arm, SiFive and Tensilica
+- - carry on past this semester, hope to keep going
+- - wrestle with practical issues between floating point and fixed point
+  - easier to start with floating point
+  - BDTI came from fixed point
+- - students can also sign up for TinyML (3 dozen signed up)
+  - going to produce benchmark, but not main task
+    - David Patterson noted that MLPerf has a TinyML effort
+
+Willing to accept more ideas for floating point
+- - Mark Hill suggested Kalman filter
+
+A reminder that we need volunteers to lead particular aspects of
+current and future efforts.
+
+7. Future meetings
+- ------------------
+
+We currently meet regularly on the third Monday of each month 8-9am
+California time. Our future meetings will be. Note that the Decmember
+date has been changed to avoid the week before Christmas.
+- - Mon 19 Oct 2020
+- - Mon 16 Nov 2020
+- - Mon 14 Dec 2020 (changed)
+
+The following dates are proposed for 2020
+
+- - Mon 11 Jan 2021 (Week 2, because of Martin Luther King Jr day)
+- - Mon 15 Feb 2021
+- - Mon 15 Mar 2021
+- - Mon 19 Apr 2021
+- - Mon 17 May 2021
+- - Mon 21 Jun 2021
+- - Mon 19 Jul 2021
+- - Mon 16 Aug 2021
+- - Mon 21 Sep 2021
+- - Mon 18 Oct 2021
+- - Mon 15 Nov 2021
+- - Mon 13 Dec 2021 (week 2, to keep clear of Christmas)
+
+I've created a calendar entry for our regular attendees, to provide
+automated reminders. Please ask if you wish to be added to this.
+
+8. AOB
+- ------
+
+In response to a question, raise specific issues as on GitHub, but also
+post links to the mailing list
+
+Best wishes,
+
+
+Jeremy
+Vice Chair
+
+
+-----BEGIN PGP SIGNATURE-----
+
+iF0EARECAB0WIQRASGDWqmhRZUfAaPW+9YFy+0dU4QUCX4mq9wAKCRC+9YFy+0dU
+4aKtAJwPLi38y/fbd3BUWtVgmt6RDMN1PwCeJWs6t3WFp/2fdREzNSBG+8STjy0=
+=3H5+
+-----END PGP SIGNATURE-----
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: embench-generic-sep-2020.odp
+Type: application/vnd.oasis.opendocument.presentation
+Size: 1245308 bytes
+Desc: not available
+URL: &lt;<A HREF="http://lists.librecores.org/pipermail/embench/attachments/20201016/13cacda5/attachment.odp">http://lists.librecores.org/pipermail/embench/attachments/20201016/13cacda5/attachment.odp</A>&gt;
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: embench-generic-sep-2020.pdf
+Type: application/pdf
+Size: 464563 bytes
+Desc: not available
+URL: &lt;<A HREF="http://lists.librecores.org/pipermail/embench/attachments/20201016/13cacda5/attachment.pdf">http://lists.librecores.org/pipermail/embench/attachments/20201016/13cacda5/attachment.pdf</A>&gt;
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: embench-generic-sep-2020.odp.sig
+Type: application/octet-stream
+Size: 95 bytes
+Desc: not available
+URL: &lt;<A HREF="http://lists.librecores.org/pipermail/embench/attachments/20201016/13cacda5/attachment.obj">http://lists.librecores.org/pipermail/embench/attachments/20201016/13cacda5/attachment.obj</A>&gt;
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: embench-generic-sep-2020.pdf.sig
+Type: application/octet-stream
+Size: 95 bytes
+Desc: not available
+URL: &lt;<A HREF="http://lists.librecores.org/pipermail/embench/attachments/20201016/13cacda5/attachment-0001.obj">http://lists.librecores.org/pipermail/embench/attachments/20201016/13cacda5/attachment-0001.obj</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000078.html">[Embench] Fwd: &quot;Embench&quot;ing open source FPGA soft cores
+</A></li>
+	<LI>Next message (by thread): <A HREF="000079.html">[Embench] Embench meeting/call 19 October 2020
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#77">[ date ]</a>
+              <a href="thread.html#77">[ thread ]</a>
+              <a href="subject.html#77">[ subject ]</a>
+              <a href="author.html#77">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

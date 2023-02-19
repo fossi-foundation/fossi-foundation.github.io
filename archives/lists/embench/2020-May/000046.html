@@ -1,0 +1,188 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] Notes from Embench call 20 Apr 2020
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Notes%20from%20Embench%20call%2020%20Apr%202020&In-Reply-To=%3C5bf77a57-d087-6e2b-f51e-3f987ec7bbe5%40embecosm.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   
+   <LINK REL="Next"  HREF="000047.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] Notes from Embench call 20 Apr 2020</H1>
+    <B>Jeremy Bennett</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Notes%20from%20Embench%20call%2020%20Apr%202020&In-Reply-To=%3C5bf77a57-d087-6e2b-f51e-3f987ec7bbe5%40embecosm.com%3E"
+       TITLE="[Embench] Notes from Embench call 20 Apr 2020">jeremy.bennett at embecosm.com
+       </A><BR>
+    <I>Fri May  8 21:20:21 CEST 2020</I>
+    <P><UL>
+        
+        <LI>Next message (by thread): <A HREF="000047.html">[Embench] Sourcing the Embench reference board
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#46">[ date ]</a>
+              <a href="thread.html#46">[ thread ]</a>
+              <a href="subject.html#46">[ subject ]</a>
+              <a href="author.html#46">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Hi all,
+
+These are the notes from last month's meeting, summarizing actions.
+
+2. GitHub pull requests
+- -----------------------
+
+The following two pull requests have been merged:
+
+<A HREF="https://github.com/embench/embench-iot/pull/49">https://github.com/embench/embench-iot/pull/49</A>
+- - Update ARC GCC target
+- - Thanks to Claudiu Zissulescu for this patch
+
+<A HREF="https://github.com/embench/embench-iot/pull/54">https://github.com/embench/embench-iot/pull/54</A>
+- - Remove redundant code from STM32F4 Discovery board support
+- - Thanks to Paolo Savini for this patch
+
+3. New GitHub issues
+- --------------------
+
+The following new issues have been raised.
+
+<A HREF="https://github.com/embench/embench-iot/issues/51">https://github.com/embench/embench-iot/issues/51</A>
+- - Problems with spaces when setting tool flag options
+- - This appears to be a bug - assigned to Paolo Savini to fix
+- - Thanks to Mark Hill for raising the issue.
+
+<A HREF="https://github.com/embench/embench-iot/issues/52">https://github.com/embench/embench-iot/issues/52</A>
+- - Incorrect reporting of code size.
+- - This is a more comprehensive version of issue 40, with suggested fix.
+- - Assigned to Paolo Savini to fix.
+- - Thanks to Mark Hill for raising the issue.
+
+<A HREF="https://github.com/embench/embench-iot/issues/52">https://github.com/embench/embench-iot/issues/52</A>
+- - Inconsistent speed results on VexRiscv core
+- - This appears to be an issue with a non-bare-metal multi-core system
+- - Some suggestions provided - an issue for future Embench
+- - Thanks to genesys2 for raising the issue.
+
+5. Update on benchmarks
+- -----------------------
+
+Work is in progress on the embench-iot-results repository. Goal is to
+have this clean and ready to accept new submissions by the time of the
+next meeting.
+
+ACTION: Jeremy Bennett, Paolo Savini. Complete work in results repository.
+
+Ofer Shinaar advised that Western Digital would start working on
+adopting their enterprise build system for Embench later this year.
+
+Ofer Shinnar advised that Western Digital hoped to take forward the
+work on benchmarking interrupt latency and context switch performance
+later this year. This is building on the initial work by Cesare Garlati.
+
+A question was raised about where the reference platform (Cortex M4,
+ST Discovery Board) could be obtained.
+
+ACTION: Jeremy Bennett to publicise current vendors on the mailing
+list, and update the documentation with more details to make the board
+easier to find in future.
+
+8. Publicity
+- ------------
+
+David Patterson has submitted an abstract to Hot Chips. This will look
+at the latest results for a wider range of processors and also the
+work by AdaCore on an Ada version of Embench.
+
+There was a request for more coverage of Embench at RISC-V meetups.
+This has already been done at the London meetup by Jeremy Bennett.
+
+ACTION: Jeremy Bennett to update his slides and make them generally
+available to the community for others to use.
+
+10. AOB: Embench 0.6
+- --------------------
+
+There was a wide-ranging discussion of the requirements for Embench
+0.6. Ideas suggested were:
+- - a floating point suite
+  - BEEBS has some that were rejected from current Embench
+  - increasing the size of the benchmarks for FP platforms to say 1MB
+  - can we add some machine learning benchmarks
+  - use M4/M7 as baseline
+- - easier configuration
+- - extending the interrupt latency, context-switching benchmarks
+- - getting rid of dummy libraries
+
+ACTION: All to suggest benchmarks that could be used for a FP
+benchmark suite.
+
+9. Next meeting
+- ---------------
+
+We currently meet regularly on the third Monday of each month 8-10am
+California time. Our future meetings will be
+- - Mon 11 May 2020 (changed)
+- - Mon 15 Jun 2020
+- - Mon 20 Jul 2020
+- - Mon 10 Aug 2020 (changed)
+- - Mon 21 Sep 2020
+- - Mon 19 Oct 2020
+- - Mon 16 Nov 2020
+- - Mon 14 Dec 2020 (changed)
+
+Note that some dates have been changed to accommodate conferences and
+holidays.
+
+I have a calendar entry for our regular attendees, to provide
+automated reminders. Please ask if you wish to be added to this.
+
+Our May videoconference is next Monday, 11 May at 08:00 California
+time. I shall send out an agenda over the weekend.
+
+Best wishes,
+
+
+Jeremy
+
+-----BEGIN PGP SIGNATURE-----
+
+iF0EARECAB0WIQRASGDWqmhRZUfAaPW+9YFy+0dU4QUCXrWw9AAKCRC+9YFy+0dU
+4fm1AJ9BchTTzNJ4yn9/v3C8DhXNKelz7QCeJzZMh2udcQTEwEz86ygGfkB4uoU=
+=BcNW
+-----END PGP SIGNATURE-----
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message (by thread): <A HREF="000047.html">[Embench] Sourcing the Embench reference board
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#46">[ date ]</a>
+              <a href="thread.html#46">[ thread ]</a>
+              <a href="subject.html#46">[ subject ]</a>
+              <a href="author.html#46">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

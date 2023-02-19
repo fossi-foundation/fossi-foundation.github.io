@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] Use of assert
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Use%20of%20assert&In-Reply-To=%3C57d9e5ee-6300-c03b-4df1-dc42eef879eb%40embecosm.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000007.html">
+   <LINK REL="Next"  HREF="000010.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] Use of assert</H1>
+    <B>Jeremy Bennett</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Use%20of%20assert&In-Reply-To=%3C57d9e5ee-6300-c03b-4df1-dc42eef879eb%40embecosm.com%3E"
+       TITLE="[Embench] Use of assert">jeremy.bennett at embecosm.com
+       </A><BR>
+    <I>Thu Aug 29 18:34:40 CEST 2019</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000007.html">[Embench] Use of assert
+</A></li>
+        <LI>Next message (by thread): <A HREF="000010.html">[Embench] Use of assert
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#9">[ date ]</a>
+              <a href="thread.html#9">[ thread ]</a>
+              <a href="subject.html#9">[ subject ]</a>
+              <a href="author.html#9">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+On 29/08/19 09:16, Jon Taylor wrote:
+&gt;<i> The nettle-aes and nettle-sha256 tests both have assert statements
+</I>&gt;<i> in the code.
+</I>&gt;<i> 
+</I>&gt;<i> Having in the other thread suggested that it’s important to
+</I>&gt;<i> include libraries, I think assert is a different case as it isn’t
+</I>&gt;<i> really a core part of the benchmark functionality. In the benchmark
+</I>&gt;<i> situation, the stimulus will be constant, and the asserts won’t be
+</I>&gt;<i> triggered. However if the code is built with real libraries (as
+</I>&gt;<i> opposed to dummies), the library code for assert is a significant
+</I>&gt;<i> size (~20k for RISC-V, ~12k for Arm vs a test size of ~3k). I
+</I>&gt;<i> propose they are removed – their use is primarily debug/error
+</I>&gt;<i> handling and I’m not sure that has value within Embench.
+</I>
+Hi Jon,
+
+I agree with you on this. I propose doing the same as we have with a
+number of other problematic functions (e.g. rand), and providing an
+Embench version in the support library. All that matters is that the
+benchmark should fail (i.e. exit with a non-zero return code) if
+assert is triggered, so this can be much simpler than the full library
+assert.
+&gt;<i> Related to the library and size thread, assert also creates a
+</I>&gt;<i> challenge in calculating overhead, since assert uses some code in
+</I>&gt;<i> common with printf. This means that if printf is used in other
+</I>&gt;<i> common code (eg UART output), the size differential between the
+</I>&gt;<i> nettle tests and the empty test does not give an accurate size
+</I>&gt;<i> calculation. If library size is included in the overall benchmark
+</I>&gt;<i> measurement, then we need to try and make the common library code
+</I>&gt;<i> as consistent as possible. Multiple dummy/empty tests might be
+</I>&gt;<i> another approach, but that adds a maintenance overhead.
+</I>
+Yes - I've run into this before. My proposed fix will deal with this.
+Once I have the patch, I'll post it here.
+&gt;<i> I’m happy to be challenged on this if I’ve missed a good reason
+</I>&gt;<i> for leaving them in place.
+</I>
+Thanks for spotting the issue.
+
+Best wishes,
+
+
+Jeremy
+
+- -- 
+Tel: +44 (1590) 610184
+Cell: +44 (7970) 676050
+SkypeID: jeremybennett
+Twitter: @jeremypbennett
+Email: <A HREF="https://lists.librecores.org/listinfo/embench">jeremy.bennett at embecosm.com</A>
+Web: www.embecosm.com
+PGP key: 1024D/BEF58172FB4754E1 2009-03-20
+-----BEGIN PGP SIGNATURE-----
+
+iEYEARECAAYFAl1n/p4ACgkQvvWBcvtHVOFJ5ACdFITzhgO88ZzH8M5i8EA7VqAy
+QJ0Anig50yUURc544C+DivPIMvec1g4l
+=Bfx3
+-----END PGP SIGNATURE-----
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000007.html">[Embench] Use of assert
+</A></li>
+	<LI>Next message (by thread): <A HREF="000010.html">[Embench] Use of assert
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#9">[ date ]</a>
+              <a href="thread.html#9">[ thread ]</a>
+              <a href="subject.html#9">[ subject ]</a>
+              <a href="author.html#9">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

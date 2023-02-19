@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] [Pull request] Python build system for Embench
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20%5BPull%20request%5D%20Python%20build%20system%20for%20Embench&In-Reply-To=%3C2367a941-a281-2596-868f-5657fe2830f3%40embecosm.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000002.html">
+   <LINK REL="Next"  HREF="000004.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] [Pull request] Python build system for Embench</H1>
+    <B>Jeremy Bennett</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20%5BPull%20request%5D%20Python%20build%20system%20for%20Embench&In-Reply-To=%3C2367a941-a281-2596-868f-5657fe2830f3%40embecosm.com%3E"
+       TITLE="[Embench] [Pull request] Python build system for Embench">jeremy.bennett at embecosm.com
+       </A><BR>
+    <I>Fri Aug 16 20:27:57 CEST 2019</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000002.html">[Embench] Embench meeting/call 19 Aug 2019
+</A></li>
+        <LI>Next message (by thread): <A HREF="000004.html">[Embench] Notes from Monthly conference call 19 Aug 2019
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#3">[ date ]</a>
+              <a href="thread.html#3">[ thread ]</a>
+              <a href="subject.html#3">[ subject ]</a>
+              <a href="author.html#3">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Hi all,
+
+I have submitted a pull request for a first version of the Python
+build system for Embench.
+
+  <A HREF="https://github.com/embench/embench-iot/pull/9">https://github.com/embench/embench-iot/pull/9</A>
+
+It provides three commands:
+- - build_all.py to build all the benchmarks
+- - benchmark_size.py to yield the Embench code size statistics
+- - benchmark_speed.py to yield the Embench code speed statistics
+
+This is still work in progress. Benchmarking speed in particular needs
+to be highly configurable to deal with all sorts of hardware and
+simulators. At present there is only one style of target set, which
+relies on a gdb being able to launch its own debug server to the target.
+
+All commands have docstrings and --help works to list options. However
+I have yet to update the main documentation - that is the next job.
+
+Here is how I run it using a gdbserver based on a Verilator model of
+the PULP RI5CY core:
+
+To build everything:
+
+  ./build_all.py --arch riscv32 --chip size-test-gcc \
+    --board ri5cyverilator --cc riscv32-unknown-elf-gcc
+
+To get the size benchmark statistics:
+
+  ./benchmark_size.py
+
+To rebuild for speed optimization
+
+  ./build_all.py --clean --arch riscv32 --chip speed-test \
+    --board ri5cyverilator --cc riscv32-unknown-elf-gcc
+
+To get the speed benchmark
+
+  ./benchmark_speed.py --absolute \
+    --target-module run-gdbserver-sim \
+    --gdb-command riscv32-unknown-elf-gdb \
+    --gdbserver-command riscv32-gdbserver \
+    --gdbserver-target ri5cy
+
+Review and feedback much appreciated.
+
+Best wishes,
+
+
+Jeremy
+
+- -- 
+Tel: +44 (1590) 610184
+Cell: +44 (7970) 676050
+SkypeID: jeremybennett
+Twitter: @jeremypbennett
+Email: <A HREF="https://lists.librecores.org/listinfo/embench">jeremy.bennett at embecosm.com</A>
+Web: www.embecosm.com
+PGP key: 1024D/BEF58172FB4754E1 2009-03-20
+-----BEGIN PGP SIGNATURE-----
+
+iEYEARECAAYFAl1W9aoACgkQvvWBcvtHVOH/3QCfW3z/K694/s7oWsNcXw2XuqOo
+yQMAoIW449cdFnflzK4emGSAYO1ZWRsK
+=Jida
+-----END PGP SIGNATURE-----
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000002.html">[Embench] Embench meeting/call 19 Aug 2019
+</A></li>
+	<LI>Next message (by thread): <A HREF="000004.html">[Embench] Notes from Monthly conference call 19 Aug 2019
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#3">[ date ]</a>
+              <a href="thread.html#3">[ thread ]</a>
+              <a href="subject.html#3">[ subject ]</a>
+              <a href="author.html#3">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

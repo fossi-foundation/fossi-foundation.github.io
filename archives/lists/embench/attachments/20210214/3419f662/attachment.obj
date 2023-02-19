@@ -1,0 +1,12 @@
+### Measure context switch latency - requirements proposal
+
+1. OS Event Set - measure the amount of instructions/cycles when task A sets an event to a pending task B. Measurement is done from the OS event set function call up  to the first instruction of the task we switch to (task B).
+2. OS Semaphore Give - measure the amount of instructions/cycles when task A 'gives' a semaphore to pending 'take' task B. Measurement is done from the OS event send function call up to the first instruction of the task we switch to (task B).
+3. OS Queue Send - measure the amount of instructions/cycles when task A sends an item to a pending task B. Measurement is done from the OS queue send function call up to the first instruction of the task we switch to (task B).
+4. OS Task Yield - measure the amount of instructions/cycles when task A becomes idle and CPU time is given to a pending task B. Measurement is done from the OS task Yield function call up to the first instruction of the task we switch to (task B).
+
+
+### Context Switch Measurement  - implementation options
+
+1. Use an existing open source operating system and measure its APIs.
+2. Have our own simple generic implementation of the said OS APIs.

@@ -1,0 +1,348 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] WD Code size compiler tests
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20WD%20Code%20size%20compiler%20tests&In-Reply-To=%3C08FBEABE-0E84-4BC4-886F-773537A26A2E%40chipless.eu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000164.html">
+   <LINK REL="Next"  HREF="000166.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] WD Code size compiler tests</H1>
+    <B>Roger Shepherd</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20WD%20Code%20size%20compiler%20tests&In-Reply-To=%3C08FBEABE-0E84-4BC4-886F-773537A26A2E%40chipless.eu%3E"
+       TITLE="[Embench] WD Code size compiler tests">roger.shepherd at chipless.eu
+       </A><BR>
+    <I>Wed Dec  8 12:13:24 CET 2021</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000164.html">[Embench] WD Code size compiler tests
+</A></li>
+        <LI>Next message (by thread): <A HREF="000166.html">[Embench] Agenda for Embench meeting on 13 December 2021
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#165">[ date ]</a>
+              <a href="thread.html#165">[ thread ]</a>
+              <a href="subject.html#165">[ subject ]</a>
+              <a href="author.html#165">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>I’d like to second Jeremy’s comment:
+
+&gt;<i> Even though the tests are originally created to look at code size, we
+</I>&gt;<i> should ensure they can be run, that the result is verified and that we
+</I>&gt;<i> can get a performance measure.
+</I>
+I know that the difficulty that these requirements add are annoying and can seem unnecessary but over the years I’ve seen too many cases where the code size has been squeezed down impressively but either it no longer works or it runs very slowly. Remember, it’s pretty easy to generate fast dense code if it doesn’t have to function correctly.
+
+Roger
+
+&gt;<i> On 8 Dec 2021, at 09:37, Jeremy Bennett &lt;<A HREF="https://lists.librecores.org/listinfo/embench">jeremy.bennett at embecosm.com</A>&gt; wrote:
+</I>&gt;<i> 
+</I>&gt;<i> On 16/11/2021 11:40, Nidal Faour wrote:
+</I>&gt;&gt;<i> Hi All,
+</I>&gt;&gt;<i> A while ago we started this thread and I mistakenly replied to Roger only, so there is the reply:
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> &quot;&quot;&quot;
+</I>&gt;&gt;<i> I agree with what you suggested, these four bullets must be sorted out.
+</I>&gt;&gt;<i> As for the “maturity”, I think it was a misleading word. What I meant is looking at code that the compiler could have made it better in the matter of code size. of course, you need someone to investigate the generated assembly and eliminate the parts where it is an ISA limitation.
+</I>&gt;&gt;<i> As for the audience, I think we should target developers at first who want to improve tools/compilers, for the same reason I mentioned about ISA limitation, at least until we can come up with fully automated measurements.
+</I>&gt;&gt;<i> How do you think we should proceed from here? 
+</I>&gt;&gt;<i> &quot;&quot;&quot;
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Following the meeting yesterday, we will prepare a document to better describe the purpose of the test, how did we come up with these tests, and how to use them.
+</I>&gt;&gt;<i> We will also define the way to add more tests to the repo. And what it should contain.
+</I>&gt;<i> 
+</I>&gt;<i> Hi Nidal,
+</I>&gt;<i> 
+</I>&gt;<i> As we discussed, I think this is a good proposal. Here are some things I
+</I>&gt;<i> would like to see.
+</I>&gt;<i> 
+</I>&gt;<i> Even though the tests are originally created to look at code size, we
+</I>&gt;<i> should ensure they can be run, that the result is verified and that we
+</I>&gt;<i> can get a performance measure. We should also generate an overall score,
+</I>&gt;<i> even though in practice it is individual benchmark results which matter.
+</I>&gt;<i> 
+</I>&gt;<i> Best wishes,
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Jeremy
+</I>&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Waiting for your feedback/suggestion on this matter.
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Best Regards,
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Nidal Faour
+</I>&gt;&gt;<i> Staff Engineer, R&amp;D Engineering – Firmware &amp; Toolchain, CTO Group
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Western Digital®
+</I>&gt;&gt;<i> Migdal Tefen 24959, P.O Box 3
+</I>&gt;&gt;<i> Email: <A HREF="https://lists.librecores.org/listinfo/embench">nidal.faour at wdc.com</A>
+</I>&gt;&gt;<i> Office: +972-4-9078756
+</I>&gt;&gt;<i> Mobile: +972-50-8867756
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> -----Original Message-----
+</I>&gt;&gt;&gt;<i> From: Embench &lt;<A HREF="https://lists.librecores.org/listinfo/embench">embench-bounces at lists.librecores.org</A>&gt; On Behalf Of
+</I>&gt;&gt;&gt;<i> <A HREF="https://lists.librecores.org/listinfo/embench">embench-request at lists.librecores.org</A>
+</I>&gt;&gt;&gt;<i> Sent: Friday, 14 May 2021 13:40
+</I>&gt;&gt;&gt;<i> To: <A HREF="https://lists.librecores.org/listinfo/embench">embench at lists.librecores.org</A>
+</I>&gt;&gt;&gt;<i> Subject: Embench Digest, Vol 22, Issue 5
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> CAUTION: This email originated from outside of Western Digital. Do not click
+</I>&gt;&gt;&gt;<i> on links or open attachments unless you recognize the sender and know that
+</I>&gt;&gt;&gt;<i> the content is safe.
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> Send Embench mailing list submissions to
+</I>&gt;&gt;&gt;<i>       <A HREF="https://lists.librecores.org/listinfo/embench">embench at lists.librecores.org</A>
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> To subscribe or unsubscribe via the World Wide Web, visit
+</I>&gt;&gt;&gt;<i>       <A HREF="https://lists.librecores.org/listinfo/embench">https://lists.librecores.org/listinfo/embench</A>
+</I>&gt;&gt;&gt;<i> or, via email, send a message with subject or body 'help' to
+</I>&gt;&gt;&gt;<i>       <A HREF="https://lists.librecores.org/listinfo/embench">embench-request at lists.librecores.org</A>
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> You can reach the person managing the list at
+</I>&gt;&gt;&gt;<i>       <A HREF="https://lists.librecores.org/listinfo/embench">embench-owner at lists.librecores.org</A>
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> When replying, please edit your Subject line so it is more specific than &quot;Re:
+</I>&gt;&gt;&gt;<i> Contents of Embench digest...&quot;
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> Today's Topics:
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i>  1. Re: WD Code size compiler tests (Roger Shepherd)
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> ----------------------------------------------------------------------
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> Message: 1
+</I>&gt;&gt;&gt;<i> Date: Fri, 14 May 2021 11:39:29 +0100
+</I>&gt;&gt;&gt;<i> From: Roger Shepherd &lt;<A HREF="https://lists.librecores.org/listinfo/embench">roger.shepherd at chipless.eu</A>&gt;
+</I>&gt;&gt;&gt;<i> To: <A HREF="https://lists.librecores.org/listinfo/embench">embench at lists.librecores.org</A>
+</I>&gt;&gt;&gt;<i> Subject: Re: [Embench] WD Code size compiler tests
+</I>&gt;&gt;&gt;<i> Message-ID: &lt;<A HREF="https://lists.librecores.org/listinfo/embench">56EBE553-056C-4AEE-80D7-269757955E59 at chipless.eu</A>&gt;
+</I>&gt;&gt;&gt;<i> Content-Type: text/plain; charset=&quot;utf-8&quot;
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> I replied directly to Nidal about this which was probably not the right way to
+</I>&gt;&gt;&gt;<i> have done things. Prompted by Jeremy’s response, I’ll copy what I said to
+</I>&gt;&gt;&gt;<i> Nidal here. I’ll leave it to Nidal to add his response.
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> Nidal,
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> I’ve had a look carefully at a couple of the benchmarks and I think they give
+</I>&gt;&gt;&gt;<i> me a feel for what’s been done. I do like the idea of having a set of Embench
+</I>&gt;&gt;&gt;<i> compiler tests and these could be a good starting point. Before we put too
+</I>&gt;&gt;&gt;<i> much effort into setting things up, I think we need to try agree a set of
+</I>&gt;&gt;&gt;<i> achievable and useful objectives. I think we need to cover
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> 1. Audience/Users
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> 2. Specific aspects of compiler that we’re trying to assess
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> 3. Assessment methodology
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> 4. Anything else
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> To get things going, let me make some suggestions - if only that we can have
+</I>&gt;&gt;&gt;<i> something concrete to disagree with!
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> 1. People wanting to assess compiler maturity. This includes compiler
+</I>&gt;&gt;&gt;<i> developers and users.
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> 2. A set of particular scenarios where compilers in the past have shown a lack
+</I>&gt;&gt;&gt;<i> of specific optimisations
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> 3. Compilation of source source code. An automated measurement of the
+</I>&gt;&gt;&gt;<i> quality of the benchmark; perhaps size is good enough.
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> It’s not clear that “size” provides a useful metric for comparing maturity
+</I>&gt;&gt;&gt;<i> between architectures or between different abi’s on the same architecture. I
+</I>&gt;&gt;&gt;<i> suspect that if undertaking this work personally, I’d probably eyeball the code
+</I>&gt;&gt;&gt;<i> to see what was going on and not rely on any automated measurement, but I
+</I>&gt;&gt;&gt;<i> think for Embench we should do better than that.
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> 4. There must be a check that the code will execute as expected.
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> I don’t trust code that doesn’t execute. But making code executable has it’s
+</I>&gt;&gt;&gt;<i> own problems - in particular, the extra code needed may make it difficult to
+</I>&gt;&gt;&gt;<i> see what is happening regarding the particular optimisation that is being
+</I>&gt;&gt;&gt;<i> checked for.
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> Before we get too dragged into the details of 3 and 4 I do think we need to
+</I>&gt;&gt;&gt;<i> check that we have 1, the audience, sorted out. We have a different task on
+</I>&gt;&gt;&gt;<i> our hands if we are looking at providing a set of microbenchmarks for
+</I>&gt;&gt;&gt;<i> architects and tool developers, or if we are trying benchmarks to help to
+</I>&gt;&gt;&gt;<i> select cores and tools.
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> Roger
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> In the light of this my response to Jeremy’s mail is:
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;&gt;<i> On 02/05/2021 11:57, Nidal Faour wrote:
+</I>&gt;&gt;&gt;&gt;&gt;<i> Hi all,
+</I>&gt;&gt;&gt;&gt;&gt;<i> I would like to have your opinion about opening a new repo under the
+</I>&gt;&gt;&gt;&gt;&gt;<i> Embench to hold the test cases done by WD. (located at the following
+</I>&gt;&gt;&gt;&gt;&gt;<i> link)
+</I>&gt;&gt;&gt;&gt;&gt;<i> <A HREF="https://github.com/westerndigitalcorporation/riscv32-Code-density-tes">https://github.com/westerndigitalcorporation/riscv32-Code-density-tes</A>
+</I>&gt;&gt;&gt;&gt;&gt;<i> t-bench
+</I>&gt;&gt;&gt;&gt;&gt;<i> &lt;<A HREF="https://github.com/westerndigitalcorporation/riscv32-Code-density-te">https://github.com/westerndigitalcorporation/riscv32-Code-density-te</A>
+</I>&gt;&gt;&gt;&gt;&gt;<i> st-bench&gt;Hi Nidal,
+</I>&gt;&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;&gt;<i> I'm up for this. I think we need to get buy in from the Embench community.
+</I>&gt;&gt;&gt;<i> What do others think?
+</I>&gt;&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> It needs buy-in and commitment. That means some people need to commit
+</I>&gt;&gt;&gt;<i> to working on it, rather than just agreeing it is a good thing.
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;&gt;&gt;<i> My suggestion is to have a new repo to hold these tests and labeled
+</I>&gt;&gt;&gt;<i> “compiler benchmark” or whatever better name you may suggest.
+</I>&gt;&gt;&gt;&gt;<i> That would be the thing to do. We'd need to make sure it was consistent
+</I>&gt;&gt;&gt;<i> with the 7 principles behind Embench. One that springs to mind is the need to
+</I>&gt;&gt;&gt;<i> make sure that the benchmarks are self-verifying.
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> Yes, but… see my (second) point 4 above. I think the tests are probably useful
+</I>&gt;&gt;&gt;<i> even if they aren’t benchmarks as such (e.g. “here are some useful code
+</I>&gt;&gt;&gt;<i> fragments to use to assess compiler maturity/code size”) but that might
+</I>&gt;&gt;&gt;<i> beyond the scope of Embench. I this is also tied in with the questions of who
+</I>&gt;&gt;&gt;<i> will use them? and what will they use them for.
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;&gt;&gt;<i> Also, I think it would be better to add a new column labeled “Compiler” to
+</I>&gt;&gt;&gt;<i> the Embench Baseline Data slide to emphasize that these tests are made to
+</I>&gt;&gt;&gt;<i> test the compiler maturity for the specific target.
+</I>&gt;&gt;&gt;&gt;<i> Well they test three things - the processor, the compiler and the libraries.
+</I>&gt;&gt;&gt;<i> There is always the issue of how much information to put on the summary.
+</I>&gt;&gt;&gt;&gt;&gt;<i> Just to remind you, here is the Baseline Data table I’m referring to
+</I>&gt;&gt;&gt;&gt;&gt;<i> as an example that I took from one of Jeremy's presentations. (see
+</I>&gt;&gt;&gt;&gt;&gt;<i> the last column I’ve added)
+</I>&gt;&gt;&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;&gt;&gt;<i> Name
+</I>&gt;&gt;&gt;&gt;&gt;<i> Comments
+</I>&gt;&gt;&gt;&gt;&gt;<i> Orig Source
+</I>&gt;&gt;&gt;&gt;&gt;<i> C LOC
+</I>&gt;&gt;&gt;&gt;&gt;<i> code size
+</I>&gt;&gt;&gt;&gt;&gt;<i> data size
+</I>&gt;&gt;&gt;&gt;&gt;<i> time (ms)
+</I>&gt;&gt;&gt;&gt;&gt;<i> branch
+</I>&gt;&gt;&gt;&gt;&gt;<i> memory
+</I>&gt;&gt;&gt;&gt;&gt;<i> compute
+</I>&gt;&gt;&gt;&gt;&gt;<i> Compiler
+</I>&gt;&gt;&gt;&gt;&gt;<i> aha-mont64
+</I>&gt;&gt;&gt;&gt;&gt;<i> Montgomery multiplication
+</I>&gt;&gt;&gt;&gt;&gt;<i> AHA
+</I>&gt;&gt;&gt;&gt;&gt;<i> 162
+</I>&gt;&gt;&gt;&gt;&gt;<i> 1,072
+</I>&gt;&gt;&gt;&gt;&gt;<i> 0
+</I>&gt;&gt;&gt;&gt;&gt;<i> 4,004
+</I>&gt;&gt;&gt;&gt;&gt;<i> low
+</I>&gt;&gt;&gt;&gt;&gt;<i> low
+</I>&gt;&gt;&gt;&gt;&gt;<i> high
+</I>&gt;&gt;&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;&gt;&gt;<i> crc32
+</I>&gt;&gt;&gt;&gt;&gt;<i> CRC error checking 32b
+</I>&gt;&gt;&gt;&gt;&gt;<i> MiBench
+</I>&gt;&gt;&gt;&gt;&gt;<i> 101
+</I>&gt;&gt;&gt;&gt;&gt;<i> 284
+</I>&gt;&gt;&gt;&gt;&gt;<i> 1,024
+</I>&gt;&gt;&gt;&gt;&gt;<i> 4,010
+</I>&gt;&gt;&gt;&gt;&gt;<i> high
+</I>&gt;&gt;&gt;&gt;&gt;<i> med
+</I>&gt;&gt;&gt;&gt;&gt;<i> low
+</I>&gt;&gt;&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;&gt;&gt;<i> cubic
+</I>&gt;&gt;&gt;&gt;&gt;<i> Cubic root solver
+</I>&gt;&gt;&gt;&gt;&gt;<i> MiBench
+</I>&gt;&gt;&gt;&gt;&gt;<i> 125
+</I>&gt;&gt;&gt;&gt;&gt;<i> 1,584
+</I>&gt;&gt;&gt;&gt;&gt;<i> 0
+</I>&gt;&gt;&gt;&gt;&gt;<i> 3,831
+</I>&gt;&gt;&gt;&gt;&gt;<i> low
+</I>&gt;&gt;&gt;&gt;&gt;<i> med
+</I>&gt;&gt;&gt;&gt;&gt;<i> med
+</I>&gt;&gt;&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;&gt;<i> I don't think the compiler alone adds much. What matters is all the
+</I>&gt;&gt;&gt;<i> supplementary data (in the JSON file) providing all the details to reproduce
+</I>&gt;&gt;&gt;<i> the results.
+</I>&gt;&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> Agreed that providing the information needed to enable reproducibility is key
+</I>&gt;&gt;&gt;<i> for benchmarks.
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> Roger
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> -------------- next part --------------
+</I>&gt;&gt;&gt;<i> An HTML attachment was scrubbed...
+</I>&gt;&gt;&gt;<i> URL:
+</I>&gt;&gt;&gt;<i> &lt;<A HREF="http://lists.librecores.org/pipermail/embench/attachments/20210514/761f7">http://lists.librecores.org/pipermail/embench/attachments/20210514/761f7</A>
+</I>&gt;&gt;&gt;<i> b7f/attachment.htm&gt;
+</I>&gt;&gt;&gt;<i> -------------- next part --------------
+</I>&gt;&gt;&gt;<i> A non-text attachment was scrubbed...
+</I>&gt;&gt;&gt;<i> Name: signature.asc
+</I>&gt;&gt;&gt;<i> Type: application/pgp-signature
+</I>&gt;&gt;&gt;<i> Size: 833 bytes
+</I>&gt;&gt;&gt;<i> Desc: Message signed with OpenPGP
+</I>&gt;&gt;&gt;<i> URL:
+</I>&gt;&gt;&gt;<i> &lt;<A HREF="http://lists.librecores.org/pipermail/embench/attachments/20210514/761f7">http://lists.librecores.org/pipermail/embench/attachments/20210514/761f7</A>
+</I>&gt;&gt;&gt;<i> b7f/attachment.sig&gt;
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> ------------------------------
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> Subject: Digest Footer
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> Embench mailing list
+</I>&gt;&gt;&gt;<i> <A HREF="https://lists.librecores.org/listinfo/embench">Embench at lists.librecores.org</A>
+</I>&gt;&gt;&gt;<i> <A HREF="https://lists.librecores.org/listinfo/embench">https://lists.librecores.org/listinfo/embench</A>
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> ------------------------------
+</I>&gt;&gt;&gt;<i> 
+</I>&gt;&gt;&gt;<i> End of Embench Digest, Vol 22, Issue 5
+</I>&gt;&gt;&gt;<i> **************************************
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> -- 
+</I>&gt;<i> Cell: +44 (7970) 676050
+</I>&gt;<i> SkypeID: jeremybennett
+</I>&gt;<i> Twitter: @jeremypbennett
+</I>&gt;<i> Email: <A HREF="https://lists.librecores.org/listinfo/embench">jeremy.bennett at embecosm.com</A> &lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">jeremy.bennett at embecosm.com</A>&gt;
+</I>&gt;<i> Web: www.embecosm.com &lt;<A HREF="http://www.embecosm.com/">http://www.embecosm.com/</A>&gt;
+</I>&gt;<i> PGP key: 1024D/BEF58172FB4754E1 2009-03-20
+</I>&gt;<i> 
+</I>&gt;<i> -- 
+</I>&gt;<i> Embench mailing list
+</I>&gt;<i> <A HREF="https://lists.librecores.org/listinfo/embench">Embench at lists.librecores.org</A> &lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">Embench at lists.librecores.org</A>&gt;
+</I>&gt;<i> <A HREF="https://lists.librecores.org/listinfo/embench">https://lists.librecores.org/listinfo/embench</A> &lt;<A HREF="https://lists.librecores.org/listinfo/embench">https://lists.librecores.org/listinfo/embench</A>&gt;
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://lists.librecores.org/pipermail/embench/attachments/20211208/4c84ddad/attachment.htm">http://lists.librecores.org/pipermail/embench/attachments/20211208/4c84ddad/attachment.htm</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000164.html">[Embench] WD Code size compiler tests
+</A></li>
+	<LI>Next message (by thread): <A HREF="000166.html">[Embench] Agenda for Embench meeting on 13 December 2021
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#165">[ date ]</a>
+              <a href="thread.html#165">[ thread ]</a>
+              <a href="subject.html#165">[ subject ]</a>
+              <a href="author.html#165">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,199 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] New embench user - building the benchmarks
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20New%20embench%20user%20-%20building%20the%20benchmarks&In-Reply-To=%3Cd24313a8-8882-5931-f457-426f00db9332%40embecosm.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   
+   <LINK REL="Next"  HREF="000174.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] New embench user - building the benchmarks</H1>
+    <B>Paolo Savini</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20New%20embench%20user%20-%20building%20the%20benchmarks&In-Reply-To=%3Cd24313a8-8882-5931-f457-426f00db9332%40embecosm.com%3E"
+       TITLE="[Embench] New embench user - building the benchmarks">paolo.savini at embecosm.com
+       </A><BR>
+    <I>Tue Feb  8 16:24:35 CET 2022</I>
+    <P><UL>
+        
+        <LI>Next message (by thread): <A HREF="000174.html">[Embench] Minutes for Embench meeting on 13 December 2021
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#173">[ date ]</a>
+              <a href="thread.html#173">[ thread ]</a>
+              <a href="subject.html#173">[ subject ]</a>
+              <a href="author.html#173">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi David,
+
+thank you for your email and sorry for the delay.
+
+&gt;<i> Hello!  We’re new to embench and trying to bring it up on a RISC-V core we are designing at Harvey Mudd College.
+</I>This sounds very interesting. You should join the zoom Embench call on 
+the 21st of February and meet the team.
+&gt;<i>
+</I>&gt;<i> Is there documentation or an example script or Makefile of how to build embench for RISC-V?  We’d really like an example command that works out of the box, and also demonstrates eliminating library code and using preferred optimization flags, so we know we are benchmarking consistently with other reported results.
+</I>&gt;<i>
+</I>&gt;<i> We cloned the embench-iot repo and are attempting to build with:
+</I>&gt;<i>
+</I>&gt;<i> ./build_all.py --arch riscv32 --chip generic --board ri5cyverilator --cc riscv64-unknown-elf-gcc
+</I>&gt;<i>
+</I>&gt;<i> We get a bunch of undefined references listed below.  It looks like it might be prematurely trying to link.
+</I>&gt;<i>
+</I>&gt;<i> We tried adding some cflags shown below, and many of the benchmarks now build, but cubic, nbody, and st fail missing some math functions.  We tried adding --ldflags “-lm” but got error messages from build_all.
+</I>&gt;<i>
+</I>&gt;<i> ./build_all.py --arch riscv32 --chip generic --board ri5cyverilator --cflags “-O2 -nostartfiles -c” --cc riscv64-unknown-elf-gcc
+</I>
+Generally yes that's the way we call the script. Only we include the 
+libraries (e.g. -lm) with --user-libs=&quot;-lm&quot;, not --ldflags.
+
+This shouldn't be a problem but we are well aware that the scripts 
+aren't perfect yet, and there's ongoing work to improve them.
+
+As an example here is a command line used to generate the baseline results:
+
+./build_all.py --arch riscv32 --chip generic --board ri5cyverilator --cc riscv32-unknown-elf-gcc --cflags=&quot;-c -O2 -ffunction-sections -march=rv32imc -mabi=ilp32&quot; --ldflags=&quot;-Wl,-gc-sections&quot; --user-libs=&quot;-lm&quot;
+
+As you can notice I put &quot;=&quot; to initialize --user-libs as you need to do 
+with these arguments if you provide only one value in the quotes. You'd 
+see the same errors if for instance you did --cflags &quot;-c&quot;. The reason is 
+in how the arguments are parsed. Detail that needs to be fixed.
+
+Thanks for the input anyway, we always welcome active users and 
+contributors.
+
+Feel free to join the call on the 21st 4pm UTC if you are available. 
+Here are the details:
+
+Join Zoom Meeting
+<A HREF="https://us02web.zoom.us/j/557006550?pwd=eTFJNWszZDZhMGRwOCs4RDY3ZTFYQT09">https://us02web.zoom.us/j/557006550?pwd=eTFJNWszZDZhMGRwOCs4RDY3ZTFYQT09</A>
+
+Meeting ID: 557 006 550
+Passcode: 329513
+One tap mobile
++442080806592,,557006550#,,,,*329513# United Kingdom
++443300885830,,557006550#,,,,*329513# United Kingdom
+
+Dial by your location
+         +44 208 080 6592 United Kingdom
+         +44 330 088 5830 United Kingdom
+         +44 131 460 1196 United Kingdom
+         +44 203 481 5237 United Kingdom
+         +44 203 481 5240 United Kingdom
+         +44 203 901 7895 United Kingdom
+         +44 208 080 6591 United Kingdom
+         +1 253 215 8782 US (Tacoma)
+         +1 301 715 8592 US (Washington DC)
+         +1 312 626 6799 US (Chicago)
+         +1 346 248 7799 US (Houston)
+         +1 646 558 8656 US (New York)
+         +1 669 900 9128 US (San Jose)
+Meeting ID: 557 006 550
+Passcode: 329513
+Find your local number:<A HREF="https://us02web.zoom.us/u/kbsfJcZ8Ql">https://us02web.zoom.us/u/kbsfJcZ8Ql</A>
+
+
+Best wishes
+
+Paolo Savini
+
+
+&gt;<i>
+</I>&gt;<i> Thank you!
+</I>&gt;<i>
+</I>&gt;<i> David Harris
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Warning: Compilation of main.c from source directory /home/harris/riscv-wally/addins/embench-iot
+</I>&gt;<i> /support to binary directory /home/harris/riscv-wally/addins/embench-iot/bd/support failed
+</I>&gt;<i> Command was:
+</I>&gt;<i> riscv64-unknown-elf-gcc -I/home/harris/riscv-wally/addins/embench-iot/support -I/home/harris/ris
+</I>&gt;<i> cv-wally/addins/embench-iot/config/riscv32/boards/ri5cyverilator -I/home/harris/riscv-wally/addi
+</I>&gt;<i> ns/embench-iot/config/riscv32/chips/generic -I/home/harris/riscv-wally/addins/embench-iot/config
+</I>&gt;<i> /riscv32 -DCPU_MHZ=1 -DWARMUP_HEAT=1 -o main.o /home/harris/riscv-wally/addins/embench-iot/suppo
+</I>&gt;<i> rt/main.c
+</I>&gt;<i>
+</I>&gt;<i> /opt/riscv/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-elf/11.1.0/../../../../riscv64-unknown-el
+</I>&gt;<i> f/bin/ld: /tmp/cc5hnmDt.o: in function `main':
+</I>&gt;<i> main.c:(.text+0x12): undefined reference to `initialise_board'
+</I>&gt;<i> /opt/riscv/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-elf/11.1.0/../../../../riscv64-unknown-el
+</I>&gt;<i> f/bin/ld: main.c:(.text+0x1a): undefined reference to `initialise_benchmark'
+</I>&gt;<i> /opt/riscv/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-elf/11.1.0/../../../../riscv64-unknown-el
+</I>&gt;<i> f/bin/ld: main.c:(.text+0x24): undefined reference to `warm_caches'
+</I>&gt;<i> /opt/riscv/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-elf/11.1.0/../../../../riscv64-unknown-el
+</I>&gt;<i> f/bin/ld: main.c:(.text+0x2c): undefined reference to `start_trigger'
+</I>&gt;<i> /opt/riscv/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-elf/11.1.0/../../../../riscv64-unknown-el
+</I>&gt;<i> f/bin/ld: main.c:(.text+0x34): undefined reference to `benchmark'
+</I>&gt;<i> /opt/riscv/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-elf/11.1.0/../../../../riscv64-unknown-el
+</I>&gt;<i> f/bin/ld: main.c:(.text+0x42): undefined reference to `stop_trigger'
+</I>&gt;<i> /opt/riscv/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-elf/11.1.0/../../../../riscv64-unknown-el
+</I>&gt;<i> f/bin/ld: main.c:(.text+0x52): undefined reference to `verify_benchmark'
+</I>&gt;<i> collect2: error: ld returned 1 exit status
+</I>&gt;<i>
+</I>&gt;<i> Compilation of benchmark &quot;aha-mont64&quot; successful
+</I>&gt;<i> Warning: Unable to find support library /home/harris/riscv-wally/addins/embench-iot/bd/support/m
+</I>&gt;<i> ain.o
+</I>&gt;<i> Warning: Link of benchmark &quot;aha-mont64&quot; failed
+</I>&gt;<i>
+</I>&gt;<i> riscv64-unknown-elf-gcc: fatal error: no input files
+</I>&gt;<i> compilation terminated.
+</I>&gt;<i>
+</I>&gt;<i> In directory &quot;/home/harris/riscv-wally/addins/embench-iot/bd/src/aha-mont64&quot;
+</I>&gt;<i> Command was:
+</I>&gt;<i> riscv64-unknown-elf-gcc -o aha-mont64
+</I>&gt;<i> Warning: Compilation of crc_32.c from source directory /home/harris/riscv-wally/addins/embench-i
+</I>&gt;<i> ot/src/crc32 to binary directory /home/harris/riscv-wally/addins/embench-iot/bd/src/crc32 failed
+</I>&gt;<i> Command was:
+</I>&gt;<i> riscv64-unknown-elf-gcc -I/home/harris/riscv-wally/addins/embench-iot/support -I/home/harris/ris
+</I>&gt;<i> cv-wally/addins/embench-iot/config/riscv32/boards/ri5cyverilator -I/home/harris/riscv-wally/addi
+</I>&gt;<i> ns/embench-iot/config/riscv32/chips/generic -I/home/harris/riscv-wally/addins/embench-iot/config
+</I>&gt;<i> /riscv32 -DCPU_MHZ=1 -DWARMUP_HEAT=1 -o crc_32.o /home/harris/riscv-wally/addins/embench-iot/src
+</I>&gt;<i> /crc32/crc_32.c
+</I>&gt;<i>
+</I>&gt;<i> /opt/riscv/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-elf/11.1.0/../../../../riscv64-unknown-el
+</I>&gt;<i> f/bin/ld: /opt/riscv/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-elf/11.1.0/../../../../riscv64-
+</I>&gt;<i> unknown-elf/lib/crt0.o: in function `.L0 ':
+</I>&gt;<i> (.text+0x38): undefined reference to `main'
+</I>&gt;<i> /opt/riscv/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-elf/11.1.0/../../../../riscv64-unknown-el
+</I>&gt;<i> f/bin/ld: /tmp/ccQ4pL57.o: in function `.L3':
+</I>&gt;<i> crc_32.c:(.text+0x16): undefined reference to `rand_beebs'
+</I>&gt;<i> /opt/riscv/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-elf/11.1.0/../../../../riscv64-unknown-el
+</I>&gt;<i> f/bin/ld: /tmp/ccQ4pL57.o: in function `benchmark_body':
+</I>&gt;<i> crc_32.c:(.text+0xd0): undefined reference to `srand_beebs'
+</I>&gt;<i> collect2: error: ld returned 1 exit status
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://lists.librecores.org/pipermail/embench/attachments/20220208/2f64cada/attachment.htm">http://lists.librecores.org/pipermail/embench/attachments/20220208/2f64cada/attachment.htm</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message (by thread): <A HREF="000174.html">[Embench] Minutes for Embench meeting on 13 December 2021
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#173">[ date ]</a>
+              <a href="thread.html#173">[ thread ]</a>
+              <a href="subject.html#173">[ subject ]</a>
+              <a href="author.html#173">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

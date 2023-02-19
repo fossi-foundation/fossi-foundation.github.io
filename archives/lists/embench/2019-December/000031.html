@@ -1,0 +1,202 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] Embench meeting/call 16 Dec 2019
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Embench%20meeting/call%2016%20Dec%202019&In-Reply-To=%3Ca6a9918d-e5ca-9562-f579-94e5688043dc%40embecosm.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   
+   <LINK REL="Next"  HREF="000032.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] Embench meeting/call 16 Dec 2019</H1>
+    <B>Jeremy Bennett</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Embench%20meeting/call%2016%20Dec%202019&In-Reply-To=%3Ca6a9918d-e5ca-9562-f579-94e5688043dc%40embecosm.com%3E"
+       TITLE="[Embench] Embench meeting/call 16 Dec 2019">jeremy.bennett at embecosm.com
+       </A><BR>
+    <I>Sat Dec 14 12:30:17 CET 2019</I>
+    <P><UL>
+        
+        <LI>Next message (by thread): <A HREF="000032.html">[Embench] Notes from previous Embench call, 18 Nov 19
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#31">[ date ]</a>
+              <a href="thread.html#31">[ thread ]</a>
+              <a href="subject.html#31">[ subject ]</a>
+              <a href="author.html#31">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Hi all,
+
+A reminder that our next regular meeting of the Embench group will be
+on Monday, 16 December, 8-10am California time.
+
+We will meet using the same Zoom details as before. Please email me if
+you do not have them - I am reluctant to post details on an open
+mailing list.
+
+Agenda
+======
+
+1. Actions from previous meeting
+- --------------------------------
+
+2. GitHub pull requests
+- -----------------------
+
+We have one pull request, from Ola Jepsson to have a configuration to
+run Embench natively.
+
+  <A HREF="https://github.com/embench/embench-iot/pull/29">https://github.com/embench/embench-iot/pull/29</A>
+
+I think this is useful, but should not be the default - I have commented
+on the pull request. I've asked Ola to join the call if possible on
+Monday. In the meantime, please comment on the pull request
+
+3. New GitHub issues
+- --------------------
+
+We have one new issue from Bruce Hoult.
+
+  <A HREF="https://github.com/embench/embench-iot/issues/30">https://github.com/embench/embench-iot/issues/30</A>
+
+This is an interesting small program. I think it duplicates programs we
+already have in the mix. I discussed with Bruce and have suggested that
+we need to start building up candidate replacement programs for when we
+refresh Embench in two years time.
+
+4. Website analytics
+- --------------------
+
+I understand this is now working. Update from Cesare Garlati
+
+5. New baseline
+- ---------------
+
+It has been suggested that the Cortex M4 processor is a more appropriate
+baseline for Embench. It is widely available real silicon with a well
+established reputation in Industry. Low costs boards are readily
+available from many sources.
+
+It would therefore be a better choice than an arbitrary RI5CY softcore
+model as a baseline.
+
+We have M4 size baseline data. I am working on getting M4 speed baseline
+data.
+
+How do the group feel about this?
+
+6. Update on benchmarks
+- -----------------------
+
+All to report
+
+7. EEMBC process
+- ----------------
+
+I have yet to engage with Peter Torelli. Now that Summit is out of the
+way, I shall try to contact him again.
+
+8. Process and documentation
+- ----------------------------
+
+Jon Taylor and Dave Patterson to report on progress with documentation.
+
+9. Publicity
+- ------------
+
+@EmbenchOrg now has its first tweet
+
+Nidal Faour has set up a LinkedIn organization for Embench.
+
+At RISC-V Summit, Dave Patterson presented Embench, and I used Embench
+in my talk on the state of open source compiler technology.
+
+I missed the deadline for a main track talk at FOSDEM, but have a talk
+accepted for the LLVM Dev Room on using Embench to evaluate the LLVM
+compiler.
+
+10. More data
+- ------------
+
+There is now a repository for results. It is highly experimental, but I
+wanted to put a placeholder down.
+
+  <A HREF="https://github.com/embench/embench-iot-results">https://github.com/embench/embench-iot-results</A>
+
+It holds the results of Embench runs as JSON files, and has a Python
+script to generate a Markdown table in the README.md file of the
+results. So far it has the data which informed the two talks at RISC-V
+Summit, which includes size data for ARC, ARM and AVR as well as RISC-V.
+
+At present the JSON files are in a flat directory. Some structure will
+make the data easier to navigate. The use of Markdown tables is too
+primitive. I shall investigate generating wiki tables instead, which
+will allow readers to sort by different table column.
+
+I am close to having Embench running properly on the FOMU RISC-V board,
+which will give us real hardware speed data.
+
+11. Next meeting
+- ---------------
+
+We meet regularly on the third Thursday of each month 8-10am
+California time. Our next meeting will be Monday 20 January 2020.
+
+12. AOB
+- ------
+
+Best wishes,
+
+
+Jeremy Bennett
+Vice chair
+
+- -- 
+Tel: +44 (1590) 610184
+Cell: +44 (7970) 676050
+SkypeID: jeremybennett
+Twitter: @jeremypbennett
+Email: <A HREF="https://lists.librecores.org/listinfo/embench">jeremy.bennett at embecosm.com</A>
+Web: www.embecosm.com
+PGP key: 1024D/BEF58172FB4754E1 2009-03-20
+-----BEGIN PGP SIGNATURE-----
+
+iEYEARECAAYFAl30x8gACgkQvvWBcvtHVOFvxwCfcqJCjdUDvxndAwWInkxWxPvw
+4JEAnR1zcUvomwezLyU9P/ZSIa0l2Cb4
+=vsmW
+-----END PGP SIGNATURE-----
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message (by thread): <A HREF="000032.html">[Embench] Notes from previous Embench call, 18 Nov 19
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#31">[ date ]</a>
+              <a href="thread.html#31">[ thread ]</a>
+              <a href="subject.html#31">[ subject ]</a>
+              <a href="author.html#31">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

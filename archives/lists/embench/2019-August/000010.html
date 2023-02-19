@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] Use of assert
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Use%20of%20assert&In-Reply-To=%3C476578b1-a5c6-8598-fe0a-0f22de987de8%40embecosm.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000009.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] Use of assert</H1>
+    <B>Jeremy Bennett</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Use%20of%20assert&In-Reply-To=%3C476578b1-a5c6-8598-fe0a-0f22de987de8%40embecosm.com%3E"
+       TITLE="[Embench] Use of assert">jeremy.bennett at embecosm.com
+       </A><BR>
+    <I>Thu Aug 29 19:17:41 CEST 2019</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000009.html">[Embench] Use of assert
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#10">[ date ]</a>
+              <a href="thread.html#10">[ thread ]</a>
+              <a href="subject.html#10">[ subject ]</a>
+              <a href="author.html#10">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+On 29/08/19 17:34, Jeremy Bennett wrote:
+&gt;<i> On 29/08/19 09:16, Jon Taylor wrote:
+</I>&gt;&gt;<i> The nettle-aes and nettle-sha256 tests both have assert
+</I>&gt;&gt;<i> statements in the code.
+</I>
+Pull request to fix this here:
+
+<A HREF="https://github.com/embench/embench-iot/pull/11">https://github.com/embench/embench-iot/pull/11</A>
+
+This only affects the two nettle crypto benchmarks. Their code size is
+slightly reduced as a consequence. The references to assert in
+sglib-combined are dummies.
+
+I'll leave this a day or two for comments, then if there are no
+objections, I'll merge it.
+
+Best wishes,
+
+
+Jeremy
+
+&gt;<i> 
+</I>&gt;&gt;<i> Having in the other thread suggested that it’s important to 
+</I>&gt;&gt;<i> include libraries, I think assert is a different case as it
+</I>&gt;&gt;<i> isn’t really a core part of the benchmark functionality. In the
+</I>&gt;&gt;<i> benchmark situation, the stimulus will be constant, and the
+</I>&gt;&gt;<i> asserts won’t be triggered. However if the code is built with
+</I>&gt;&gt;<i> real libraries (as opposed to dummies), the library code for
+</I>&gt;&gt;<i> assert is a significant size (~20k for RISC-V, ~12k for Arm vs a
+</I>&gt;&gt;<i> test size of ~3k). I propose they are removed – their use is
+</I>&gt;&gt;<i> primarily debug/error handling and I’m not sure that has value
+</I>&gt;&gt;<i> within Embench.
+</I>&gt;<i> 
+</I>&gt;<i> Hi Jon,
+</I>&gt;<i> 
+</I>&gt;<i> I agree with you on this. I propose doing the same as we have with
+</I>&gt;<i> a number of other problematic functions (e.g. rand), and providing
+</I>&gt;<i> an Embench version in the support library. All that matters is that
+</I>&gt;<i> the benchmark should fail (i.e. exit with a non-zero return code)
+</I>&gt;<i> if assert is triggered, so this can be much simpler than the full
+</I>&gt;<i> library assert.
+</I>&gt;&gt;<i> Related to the library and size thread, assert also creates a 
+</I>&gt;&gt;<i> challenge in calculating overhead, since assert uses some code
+</I>&gt;&gt;<i> in common with printf. This means that if printf is used in
+</I>&gt;&gt;<i> other common code (eg UART output), the size differential between
+</I>&gt;&gt;<i> the nettle tests and the empty test does not give an accurate
+</I>&gt;&gt;<i> size calculation. If library size is included in the overall
+</I>&gt;&gt;<i> benchmark measurement, then we need to try and make the common
+</I>&gt;&gt;<i> library code as consistent as possible. Multiple dummy/empty
+</I>&gt;&gt;<i> tests might be another approach, but that adds a maintenance
+</I>&gt;&gt;<i> overhead.
+</I>&gt;<i> 
+</I>&gt;<i> Yes - I've run into this before. My proposed fix will deal with
+</I>&gt;<i> this. Once I have the patch, I'll post it here.
+</I>&gt;&gt;<i> I’m happy to be challenged on this if I’ve missed a good reason 
+</I>&gt;&gt;<i> for leaving them in place.
+</I>&gt;<i> 
+</I>&gt;<i> Thanks for spotting the issue.
+</I>&gt;<i> 
+</I>&gt;<i> Best wishes,
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Jeremy
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>
+- -- 
+Tel: +44 (1590) 610184
+Cell: +44 (7970) 676050
+SkypeID: jeremybennett
+Twitter: @jeremypbennett
+Email: <A HREF="https://lists.librecores.org/listinfo/embench">jeremy.bennett at embecosm.com</A>
+Web: www.embecosm.com
+PGP key: 1024D/BEF58172FB4754E1 2009-03-20
+-----BEGIN PGP SIGNATURE-----
+
+iEYEARECAAYFAl1oCLMACgkQvvWBcvtHVOE5OgCeNDm5/F2aiazIBFOulA1Khxfv
+JCQAn3kjbOYkcK/9v2t4wVZ3/CmsxfVk
+=FIRx
+-----END PGP SIGNATURE-----
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000009.html">[Embench] Use of assert
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#10">[ date ]</a>
+              <a href="thread.html#10">[ thread ]</a>
+              <a href="subject.html#10">[ subject ]</a>
+              <a href="author.html#10">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

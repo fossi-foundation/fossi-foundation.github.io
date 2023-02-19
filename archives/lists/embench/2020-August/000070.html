@@ -1,0 +1,262 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] Embench meeting/call 10 August 2020
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Embench%20meeting/call%2010%20August%202020&In-Reply-To=%3Cdb7aebd7-d9c8-0142-fd72-f0b5892da5ab%40embecosm.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000069.html">
+   <LINK REL="Next"  HREF="000071.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] Embench meeting/call 10 August 2020</H1>
+    <B>Jeremy Bennett</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Embench%20meeting/call%2010%20August%202020&In-Reply-To=%3Cdb7aebd7-d9c8-0142-fd72-f0b5892da5ab%40embecosm.com%3E"
+       TITLE="[Embench] Embench meeting/call 10 August 2020">jeremy.bennett at embecosm.com
+       </A><BR>
+    <I>Sun Aug  9 15:18:21 CEST 2020</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000069.html">[Embench] Fwd: Your Arm DevSummit 2020 - Submission Status Notification
+</A></li>
+        <LI>Next message (by thread): <A HREF="000071.html">[Embench] Embench meeting/call 10 August 2020
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#70">[ date ]</a>
+              <a href="thread.html#70">[ thread ]</a>
+              <a href="subject.html#70">[ subject ]</a>
+              <a href="author.html#70">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Hi all,
+
+Our next regular meeting of the Embench group will be tomorrow Monday,
+10 August, 8-9am California time. This is a week earlier than our
+regular cycle because of possible conference clashes next week.
+
+Since it is only 3 weeks since our last call, this may be a relatively
+light meeting.
+
+We shall meet using the same Zoom details as before. I have changed
+the settings to remove the waiting room, so there should be no delays
+in joining from now on.
+
+Please email me if you do not have the Zoom meeting details - I am
+reluctant to post details on an open mailing list.
+
+Agenda
+======
+
+1. Actions from previous meeting
+- --------------------------------
+
+ACTION: Jeremy to add tutorial example to reproduce baseline results
+in documentation.
+- - captured as GitHub issue 68
+- - in progress
+
+ACTION (ongoing): Roger Shepherd to provide Embench results for ST dev
+boards, Apple Macs and Raspberry Pi.
+- - in progress
+- - Roger to report, see agenda item 4.
+
+ACTION: Jeremy Bennett/Paolo Savini to attempt to get results for
+Atmel AVR using Arduino.
+- - in progress
+
+ACTION: Jeremy Bennett to explore alternatives to Google Docs for
+presentations
+- - in progress
+
+ACTION (ongoing): Ray Simar to set class project to come up with new
+benchmarks based on the TinyML book.
+
+ACTION (ongoing): Ray Simar to continue work on BDTI benchmarks,
+including how they would be licensed (anything GPL compatible is fine).
+
+ACTION: Jeremy to set up repository, with Ray as co-owner for FP Embench
+- - complete
+
+ACTION: Jeremy to reissue 10 August invitation.
+- - complete
+
+2. GitHub pull requests
+- -----------------------
+
+- From embench-iot:
+
+<A HREF="https://github.com/embench/embench-iot/pull/75">https://github.com/embench/embench-iot/pull/75</A>
+- - adds missing prerequsite to documentation
+- - merged.
+- - thanks to Jeremy Bennett for the fix
+
+<A HREF="https://github.com/embench/embench-iot/pull/80">https://github.com/embench/embench-iot/pull/80</A>
+- - remove Python 3.6 dependency when checking version
+- - merged
+- - thanks to Nidal Faour for the fix
+
+<A HREF="https://github.com/embench/embench-iot/pull/82">https://github.com/embench/embench-iot/pull/82</A>
+- - make scripts work with older versions of Python
+- - rejected - previous design decision to use Python 3.6
+- - thanks to Nidal Faour proposing this solution
+
+<A HREF="https://github.com/embench/embench-iot/pull/5">https://github.com/embench/embench-iot/pull/5</A>
+- - resolves issue #84
+- - under revision
+- - thanks to Roger Shepherd for the fix
+
+- From embench-iot-results:
+
+None
+
+3. New GitHub issues
+- --------------------
+
+- From embench-iot:
+
+<A HREF="https://github.com/embench/embench-iot/issues/76">https://github.com/embench/embench-iot/issues/76</A>
+- - parameter value priority order is unclear
+- - the structure of config files needs cleaning up
+- - thanks to Roger Shepherd for raising this
+
+<A HREF="https://github.com/embench/embench-iot/issues/77">https://github.com/embench/embench-iot/issues/77</A>
+- - -gc-sections is -dead-strip in the Apple linker
+- - this issue will largely go away when we get rid of dummy libs
+- - any residual documentation should be updated.
+- - thanks to Roger Shepherd for raising this
+
+<A HREF="https://github.com/embench/embench-iot/issues/78">https://github.com/embench/embench-iot/issues/78</A>
+- - documentation incorrectly says --chip and --board are mandatory
+- - bug in the documentation to be fixed.
+- - thanks to Roger Shepherd for raising this
+
+<A HREF="https://github.com/embench/embench-iot/issues/81">https://github.com/embench/embench-iot/issues/81</A>
+- - native target truncates time measurements
+- - appears to be a bug in run_native.py
+- - thanks to Samuel Obuch for raising this
+
+<A HREF="https://github.com/embench/embench-iot/issues/83">https://github.com/embench/embench-iot/issues/83</A>
+- - error in logging failed command when running benchmarks
+- - but benchmark_speed.py
+- - thanks to Samuel Obuch for raising this
+
+<A HREF="https://github.com/embench/embench-iot/issues/84">https://github.com/embench/embench-iot/issues/84</A>
+- - unclear naming convention for Python modules in benchmark_speed.py
+- - bug in the documentation
+- - thanks to Roger Shepherd for raising this
+
+- From embench-iot-results:
+
+None
+
+4. Update on benchmarks
+- -----------------------
+
+Roger Shepherd will report on his progress with benchmarking other
+platforms.
+
+5. Publicity
+- ------------
+
+We were unfortunately not accepted for Arm TechCon
+
+Jeremy Bennett is speaking at VSDOpen in October, a conference for
+students in India. Although the talk has quite a broad abstract, it
+will use Embench as an example of the bridge between hardware and
+software in open source.
+
+6. Embench 0.6
+- --------------
+
+There is an ongoing shared document to add potential programs for a
+new floating point benchmark suite:
+
+<A HREF="https://docs.google.com/document/d/1tC0LXZRYeyoSRTM9aXtapzx3sA00vfFcL9QjOxU3vzQ">https://docs.google.com/document/d/1tC0LXZRYeyoSRTM9aXtapzx3sA00vfFcL9QjOxU3vzQ</A>
+
+This has been updated with the candidate programs from BEEBS.
+
+Ray Sinar is leading the effort to develop the FP benchmark suite with
+his students during the coming semester.
+
+A reminder that we need volunteers to lead particular aspects of
+current and future efforts.
+
+7. Next meeting
+- ---------------
+
+We currently meet regularly on the third Monday of each month 8-10am
+California time. Our future meetings will be. Note that the Decmember
+date has been changed to avoid the week before Christmas.
+- - Mon 21 Sep 2020
+- - Mon 19 Oct 2020
+- - Mon 16 Nov 2020
+- - Mon 14 Dec 2020 (changed)
+
+At our next meeting, I shall propose dates for 2021.
+
+I've created a calendar entry for our regular attendees, to provide
+automated reminders. Please ask if you wish to be added to this.
+
+8. AOB
+- ------
+
+Best wishes,
+
+
+Jeremy Bennett
+Vice chair
+- -- 
+Cell: +44 (7970) 676050
+SkypeID: jeremybennett
+Twitter: @jeremypbennett
+Email: <A HREF="https://lists.librecores.org/listinfo/embench">jeremy.bennett at embecosm.com</A>
+Web: www.embecosm.com
+PGP key: 1024D/BEF58172FB4754E1 2009-03-20
+-----BEGIN PGP SIGNATURE-----
+
+iQGzBAEBCAAdFiEEfL25IuH1CZQzQG8aM+MvgSrT1rAFAl8v95sACgkQM+MvgSrT
+1rB06gv/d+ZZV0yFBE9VhpRGInpGVHNCxBU0nAu+W2AeRoe1gGC47v5YhzIyjnJT
+SnzmjMhVxg++R7G2suCL/6fML1KLTZBp2xCd4YjASeXldPYaraMU1LG/rdFz1Gah
+/7at0kAqWwy5r6+hrOeMDLkXU9qyrjX+KSaomyDxkp1PYC0uBNiD9KmouxdSw/N+
+qPcqmOCso0T9CVb9ZKvoG2B9UyhrJ2veTji+ZWJek9cmZHtViGOn7h3FxzbW/krN
+UBwCQq8I6scqEMQ4sXw3oK2RqwuOgmyyw7pMnVnWWMwITOaylx/ET7wroMSarjfd
+BsPdlgio9NJms9HKy1sTAWxyXJRkfGho7IaNhBl4CDys4uRhqzwjwnrbj8aZFgIP
+fRkdleyaJzV9L9RIYrV5LJ6cPZCCS4IEt/mzlUTMGEy+Esk4hOQI9E8s/78FFaKK
+2aYGRF2tnJDi8DKRBF79EQ7aDpnsMBbS+uOiercBTH+0Jrmvgh2jP1MM6S7t/aUr
+ipPb2yot
+=t7nY
+-----END PGP SIGNATURE-----
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000069.html">[Embench] Fwd: Your Arm DevSummit 2020 - Submission Status Notification
+</A></li>
+	<LI>Next message (by thread): <A HREF="000071.html">[Embench] Embench meeting/call 10 August 2020
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#70">[ date ]</a>
+              <a href="thread.html#70">[ thread ]</a>
+              <a href="subject.html#70">[ subject ]</a>
+              <a href="author.html#70">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

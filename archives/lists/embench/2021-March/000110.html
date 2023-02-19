@@ -1,0 +1,239 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] New metrics for Embench results - Speed/Rate
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20New%20metrics%20for%20Embench%20results%20-%20Speed/Rate&In-Reply-To=%3CBYAPR04MB4920B17AEE17B475AB78EB239B6D9%40BYAPR04MB4920.namprd04.prod.outlook.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000109.html">
+   <LINK REL="Next"  HREF="000111.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] New metrics for Embench results - Speed/Rate</H1>
+    <B>Ofer Shinaar</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20New%20metrics%20for%20Embench%20results%20-%20Speed/Rate&In-Reply-To=%3CBYAPR04MB4920B17AEE17B475AB78EB239B6D9%40BYAPR04MB4920.namprd04.prod.outlook.com%3E"
+       TITLE="[Embench] New metrics for Embench results - Speed/Rate">Ofer.Shinaar at wdc.com
+       </A><BR>
+    <I>Sun Mar 14 07:44:32 CET 2021</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000109.html">[Embench] New metrics for Embench results - Speed/Rate
+</A></li>
+        <LI>Next message (by thread): <A HREF="000111.html">[Embench] Agenda for Embench meeting on 15 March 2021
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#110">[ date ]</a>
+              <a href="thread.html#110">[ thread ]</a>
+              <a href="subject.html#110">[ subject ]</a>
+              <a href="author.html#110">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Roger,
+
+Thanks for the inputs. To be frank, we run Embench with multi hart, IPC was higher as expected, but it was on simulation with ~95% accuracy. We will try that on FPGA as well…
+I also so saw other entities show their Embench results with IPC values.
+I will take your tips and will see how we can go forward
+
+Thanks,
+Ofer
+
+From: Roger Shepherd &lt;<A HREF="https://lists.librecores.org/listinfo/embench">roger.shepherd at chipless.eu</A>&gt;
+Sent: Friday, 12 March 2021 17:48
+To: Ofer Shinaar &lt;<A HREF="https://lists.librecores.org/listinfo/embench">Ofer.Shinaar at wdc.com</A>&gt;
+Cc: Ray Simar &lt;<A HREF="https://lists.librecores.org/listinfo/embench">ray.simar at rice.edu</A>&gt;; <A HREF="https://lists.librecores.org/listinfo/embench">embench at lists.librecores.org</A>
+Subject: Re: [Embench] New metrics for Embench results - Speed/Rate
+
+Ofer,
+
+My view.
+
+I think I understand where you are coming for regarding Rate and if I were you I would try to go ahead and use the benchmarks to make measurements. Of course, the automated system isn’t set up to handle this, but I’m sure you could work something out for your purposes. I’m sure that in doing so, you’ll discover a lot. Perhaps some benchmarks don’t work well; perhaps it becomes clear that there is another benchmark that needs to be added. Etc Etc. You will also have a view on how useful the approach is.
+
+If after that, you still find the “rate” concept useful, then it would be good time to make a proposal to Embench. From my experience with organisations like Embench, they tend to be do-ocracies; the people who do things have a lot of influence over what happens.
+
+Roger
+
+
+
+
+On 9 Mar 2021, at 13:50, Ofer Shinaar &lt;<A HREF="https://lists.librecores.org/listinfo/embench">Ofer.Shinaar at wdc.com</A>&lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">Ofer.Shinaar at wdc.com</A>&gt;&gt; wrote:
+
+Hi Roger,
+Thanks for the excellent elaboration on the topics…
+For #2 we started to see small embedded devices (for IoT market), including threading/multihart core designs with low cache capacity and low memory resources.
+Besides the core we published (WDC) with two harts, I can tell you from firsthand that Israel Academy and other Israel companies are developing multi-hart, 32bit small cores.
+
+Since I am in contact with those entities, I published Embench (and tring to get them on board ;) ). I thinkthroughput will be valid for many entities which want to use an open-source benchmark.
+
+Anyhow, even if we run the same test simultaneously, each on a different hart, we will get valid results with higher throughput (without any need for special multi-threads-benchmark)…
+
+Any thoughts?
+
+
+BR,
+Ofer
+
+
+From: Roger Shepherd &lt;<A HREF="https://lists.librecores.org/listinfo/embench">roger.shepherd at chipless.eu</A>&lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">roger.shepherd at chipless.eu</A>&gt;&gt;
+Sent: Tuesday, 9 March 2021 00:32
+To: Ofer Shinaar &lt;<A HREF="https://lists.librecores.org/listinfo/embench">Ofer.Shinaar at wdc.com</A>&lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">Ofer.Shinaar at wdc.com</A>&gt;&gt;
+Cc: Ray Simar &lt;<A HREF="https://lists.librecores.org/listinfo/embench">ray.simar at rice.edu</A>&lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">ray.simar at rice.edu</A>&gt;&gt;; <A HREF="https://lists.librecores.org/listinfo/embench">embench at lists.librecores.org</A>&lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">embench at lists.librecores.org</A>&gt;
+Subject: Re: [Embench] New metrics for Embench results - Speed/Rate
+
+I think we should separate the Speed/Rate and Base/Peak issues so I’m setting off two e-mail threads. This is the Speed/Rate thread.
+
+Speed/Rate is interesting - especially when it get coupled with, say, energy consumption. I think there are two important considerations:-
+
+1. How practical is this? To be easy to measure we would need to assume some sort of threading/o-s/kernel or whatever, and there isn’t one standardly available in our space.
+
+
+
+2. Are these the right benchmarks to use? The answer is “it depends on what type of machine using them for”.  For system where an entire computer is replicated, or on certain types of multithreaded machine (e.g. Xmos Xcore), these benchmarks would scale and you could demonstrate (say) the power benefits of replication, or the throughput benefits of multithreading. But for machines where resources such as cache capacity or memory bandwidth limit performance, it’s not clear these programs provide enough resource pressure to be useful. I think some clarity of the requirement would be useful here.
+
+Roger
+
+
+
+On 8 Mar 2021, at 08:03, Ofer Shinaar &lt;<A HREF="https://lists.librecores.org/listinfo/embench">Ofer.Shinaar at wdc.com</A>&lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">Ofer.Shinaar at wdc.com</A>&gt;&gt; wrote:
+
+Hi Ray,
+By raw, I am thinking about the basic compiler flags, something like we currently have. But if we take my example, “save-restore” is something unique to RISCV.
+I understand that it is basic usage when doing “size” testing, but we can argue that it should be part of the “none-raw” flags or “special target flags.”
+Having the “peek/rate” will give us the option to total separate basic flags from none-basic flags… Plus, we can show how each target can boost performance and decrease size just by compiler “tweaks.”
+
+BR,
+Ofer
+
+From: Ray Simar &lt;<A HREF="https://lists.librecores.org/listinfo/embench">ray.simar at rice.edu</A>&lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">ray.simar at rice.edu</A>&gt;&gt;
+Sent: Friday, 5 March 2021 03:21
+To: Ofer Shinaar &lt;<A HREF="https://lists.librecores.org/listinfo/embench">Ofer.Shinaar at wdc.com</A>&lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">Ofer.Shinaar at wdc.com</A>&gt;&gt;
+Cc: David Patterson &lt;<A HREF="https://lists.librecores.org/listinfo/embench">pattrsn at cs.berkeley.edu</A>&lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">pattrsn at cs.berkeley.edu</A>&gt;&gt;; <A HREF="https://lists.librecores.org/listinfo/embench">embench at lists.librecores.org</A>&lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">embench at lists.librecores.org</A>&gt;
+Subject: Re: [Embench] New metrics for Embench results - Base/Peak and Speed/Rate
+
+Hi Ofer,
+
+Thanks for the ideas.  I was wondering if we might be able to calculate these measures, at least in part, from the raw measures.  I do like the idea of a single top line number as the team is doing now.  But maybe if we offered the right set of raw measurements people could calculate these additional measures as they needed.
+
+Thoughts?
+
+All the best,
+Ray
+
+On Mar 4, 2021, at 3:17 AM, Ofer Shinaar &lt;<A HREF="https://lists.librecores.org/listinfo/embench">Ofer.Shinaar at wdc.com</A>&lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">Ofer.Shinaar at wdc.com</A>&gt;&gt; wrote:
+
+Hi Dave,
+Its is more an enhancement and less a “problem-solving.”
+
+For base/peak, we can also allow vendors to publish their best result with compiler tweaks, along with the current “base” typical results.
+After all, riscv and arm compiler are not the same; for example, we do provide –msave-restore for RV, but we do not give that ARM because it is just a basic flag that we “must use”.
+Peak will allow you to drive more flags and expose where we can get with each compiler per target.
+
+For Rate/Speed:
+We only publish Speed results, and some targets want to see IPC/throughput as well. Give the “Rate” option will solve that.
+
+Thanks,
+Ofer
+
+
+
+From: David PATTERSON &lt;<A HREF="https://lists.librecores.org/listinfo/embench">pattrsn at cs.berkeley.edu</A>&lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">pattrsn at cs.berkeley.edu</A>&gt;&gt;
+Sent: Thursday, 4 March 2021 03:44
+To: Ofer Shinaar &lt;<A HREF="https://lists.librecores.org/listinfo/embench">Ofer.Shinaar at wdc.com</A>&lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">Ofer.Shinaar at wdc.com</A>&gt;&gt;
+Cc: <A HREF="https://lists.librecores.org/listinfo/embench">embench at lists.librecores.org</A>&lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">embench at lists.librecores.org</A>&gt;
+Subject: Re: [Embench] New metrics for Embench results - Base/Peak and Speed/Rate
+
+What is the problem you're trying to solve with the new metrics?
+
+Dave
+
+On Wed, Mar 3, 2021 at 3:47 AM Ofer Shinaar &lt;<A HREF="https://lists.librecores.org/listinfo/embench">Ofer.Shinaar at wdc.com</A>&lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">Ofer.Shinaar at wdc.com</A>&gt;&gt; wrote:
+Hello all,
+I would like to bring to the forum a suggestion on including more results metrics as we have on SPEC
+
+
+1.       Include metric fo Base and Peak:
+
+-          SPEC url or explanation: <A HREF="https://www.spec.org/cpu2017/Docs/overview.html#Q16">https://www.spec.org/cpu2017/Docs/overview.html#Q16</A>
+
+-          Currently, we can say we only have “Base”, on IoT results.
+
+-          Having “Peak” will give us a possibility to expose more compiler flags that can boost performance, and we can publish results + links to tools that can “find the best set of compiler flags”
+
+Example for work done by Craig Blackmore (from Embecosm):
+
+o   <A HREF="https://github.com/craigblackmore/opentuner">https://github.com/craigblackmore/opentuner</A>
+
+o   <A HREF="https://www.groundai.com/project/automatically-tuning-the-gcc-compiler-to-optimize-the-performance-of-applications-running-on-embedded-systems/2">https://www.groundai.com/project/automatically-tuning-the-gcc-compiler-to-optimize-the-performance-of-applications-running-on-embedded-systems/2</A>
+
+2.        Include metric for Speed and Rate
+
+-          SPEC url for explanation: <A HREF="https://www.spec.org/cpu2017/Docs/overview.html#Q15">https://www.spec.org/cpu2017/Docs/overview.html#Q15</A>
+
+-          On the embedded space, sometimes throughput is more important than “time”. Those days we can start seeing IoT cores /MCUs that have a multithreaded design.
+Also, we see emerging multithreading designs for RISCV. On those designs rate for throughput will be more important than Time.
+
+Thoughts/comments?
+
+Thanks,
+Ofer
+
+
+
+
+Ofer Shinaar
+Senior Manager, R&amp;D Engineering – Firmware &amp; Toolchain, CTO Group
+
+Western Digital®
+Israel, Migdal Tefen 24959, P.O Box 3
+Email: <A HREF="https://lists.librecores.org/listinfo/embench">Ofer.shinaar at wdc.com</A>&lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">Ofer.shinaar at wdc.com</A>&gt;
+Office: +972-4-9078783
+Mobile: +972-52-2836160
+
+
+--
+Embench mailing list
+<A HREF="https://lists.librecores.org/listinfo/embench">Embench at lists.librecores.org</A>&lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">Embench at lists.librecores.org</A>&gt;
+<A HREF="https://lists.librecores.org/listinfo/embench">https://lists.librecores.org/listinfo/embench</A>
+--
+Embench mailing list
+<A HREF="https://lists.librecores.org/listinfo/embench">Embench at lists.librecores.org</A>&lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">Embench at lists.librecores.org</A>&gt;
+<A HREF="https://lists.librecores.org/listinfo/embench">https://lists.librecores.org/listinfo/embench</A>
+
+--
+Embench mailing list
+<A HREF="https://lists.librecores.org/listinfo/embench">Embench at lists.librecores.org</A>&lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">Embench at lists.librecores.org</A>&gt;
+<A HREF="https://lists.librecores.org/listinfo/embench">https://lists.librecores.org/listinfo/embench</A>
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://lists.librecores.org/pipermail/embench/attachments/20210314/843a6f17/attachment.htm">http://lists.librecores.org/pipermail/embench/attachments/20210314/843a6f17/attachment.htm</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000109.html">[Embench] New metrics for Embench results - Speed/Rate
+</A></li>
+	<LI>Next message (by thread): <A HREF="000111.html">[Embench] Agenda for Embench meeting on 15 March 2021
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#110">[ date ]</a>
+              <a href="thread.html#110">[ thread ]</a>
+              <a href="subject.html#110">[ subject ]</a>
+              <a href="author.html#110">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

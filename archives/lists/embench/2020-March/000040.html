@@ -1,0 +1,228 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] Embench meeting/call 9 Mar 2020 (NOTE date change)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Embench%20meeting/call%209%20Mar%202020%20%28NOTE%20date%20change%29&In-Reply-To=%3C65415984-5ae2-8f96-5b4c-e06cb2c624a8%40embecosm.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000039.html">
+   <LINK REL="Next"  HREF="000041.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] Embench meeting/call 9 Mar 2020 (NOTE date change)</H1>
+    <B>Jeremy Bennett</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Embench%20meeting/call%209%20Mar%202020%20%28NOTE%20date%20change%29&In-Reply-To=%3C65415984-5ae2-8f96-5b4c-e06cb2c624a8%40embecosm.com%3E"
+       TITLE="[Embench] Embench meeting/call 9 Mar 2020 (NOTE date change)">jeremy.bennett at embecosm.com
+       </A><BR>
+    <I>Tue Mar  3 18:14:41 CET 2020</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000039.html">[Embench] Notes from Embench call 17 Feb 20
+</A></li>
+        <LI>Next message (by thread): <A HREF="000041.html">[Embench] Draft of Abstract for Hot Chips
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#40">[ date ]</a>
+              <a href="thread.html#40">[ thread ]</a>
+              <a href="subject.html#40">[ subject ]</a>
+              <a href="author.html#40">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Hi all,
+
+Our next regular meeting of the Embench group will be on Monday, 9
+March, 8-10am California time.
+
+NOTE: This is a change, since our Chair, David Patterson is speaking
+at a conference on the originally advertised date.
+
+We will meet using the same Zoom details as before. Please email me if
+you do not have them - I am reluctant to post details on an open
+mailing list.
+
+Agenda
+======
+
+1. Actions from previous meeting
+- --------------------------------
+
+ACTION: Jeremy Bennett to merge pull request 33 from Paolo Savini.
+- - Complete
+
+ACTION: Jeremy Bennett to progress better website analytics with
+Stefan Wallentowitz.
+- - In progress.
+
+ACTION: Jeremy Bennett to meet with Peter Torelli of EEMBC at Embedded
+World
+- - Complete
+
+ACTION: Jeremy Bennett to merge documentation updates from David
+Patterson and Jon Taylor.
+- - Complete
+
+ACTION: Jeremy Bennett to investigate channels for press release for
+Embedded World.
+- - Complete
+
+ACTION: Dave Patterson to prepare a paper for HotChips in August 2020.
+- - In progress: To address after Embedded World (deadline 23 March)
+
+ACTION: Jon Taylor to advise when to submit proposal to speak at Arm
+TechCon in autumn 2020.
+- - Ongoing
+
+2. GitHub pull requests
+- -----------------------
+
+The following pull request has been submitted:
+
+<A HREF="https://github.com/embench/embench-iot/pull/49">https://github.com/embench/embench-iot/pull/49</A>
+- - Update ARC GCC target
+- - Thanks to Claudiu Zissulescu for this patch
+
+3. New GitHub issues
+- --------------------
+
+<A HREF="https://github.com/embench/embench-iot/issues/39">https://github.com/embench/embench-iot/issues/39</A>
+- - Question of which repository should hold support files
+- - Suggestion that external repositories could be OK if properly
+version controlled to allow others to reproduce results.
+- - Thanks to Greg Chadwick of the Ibex/OpenTitan project for raising
+the issue.
+
+<A HREF="https://github.com/embench/embench-iot/issues/40">https://github.com/embench/embench-iot/issues/40</A>
+- - benchmark_size.py does not correctly compute size if multiple text
+sections are present.
+- - this appears to be a bug - assigned to Jeremy Bennett
+- - Thanks to Tilakbg90 for raising the issue.
+
+<A HREF="https://github.com/embench/embench-iot/issues/47">https://github.com/embench/embench-iot/issues/47</A>
+- - some native benchmark results are wrong on MIPS
+- - needs more diagnosis - could be a bug in the native target
+- - Thanks to lidija-b for raising the issue.
+
+4. Website analytics
+- --------------------
+
+Update from Cesare Garlati
+Jeremy Bennett will report on progress with Stefan Wallentowitz on
+obtaining better website data (action in progress from previous meeting).
+
+5. EEMBC process
+- ----------------
+
+Jeremy Bennett will report on his meeting with Peter Torelli at
+Embedded World.
+
+6. Update on benchmarks
+- -----------------------
+
+Support for the new baseline, using the Cortex M4 processor was
+committed in time for the Embench 0.5 release.
+
+After including the documentation updates from Jon Taylor and David
+Patterson, the repository was tagged as embench-0.5. The source code
+is available as a ZIP or compressed tar download for those not wishing
+to do battle with git.
+
+All future development on the master branch will be towards Embench
+0.6, with a goal of reaching Embench 1.0 before the end of the year.
+
+A new version of the embench-iot-results repository is in progress to
+allow results to be captured.
+
+7. Process and documentation
+- ----------------------------
+
+Updates from Jon Taylor and David Patterson were merged into the
+repository prior to the Embench 0.5 release.
+
+8. Publicity
+- ------------
+
+Jeremy Bennett will report on the launch of Embench at Embedded World.
+The launch was covered exclusively by Electronics Weekly:
+
+<A HREF="https://www.electronicsweekly.com/news/embench-launch-embedded-world-2020-02/">https://www.electronicsweekly.com/news/embench-launch-embedded-world-2020-02/</A>
+
+The meeting will consider what (if anything) to submit to Hot Chips -
+deadline is 23 March.
+
+9. Next meeting
+- ---------------
+
+We currently meet regularly on the third Monday of each month 8-10am
+California time. Our future meetings will be
+- - Mon 20 Apr 2020
+- - Mon 18 May 2020
+- - Mon 15 Jun 2020
+- - Mon 20 Jul 2020
+- - Mon 17 Aug 2020
+- - Mon 21 Sep 2020
+- - Mon 19 Oct 2020
+- - Mon 16 Nov 2020
+- - Mon 21 Dec 2020
+
+We have agreed to consider how frequently we wish to meet going forward.
+
+I've been created a calendar entry for our regular attendees,
+to provide automated reminders. Please ask if you wish to be added to
+this.
+
+10. AOB
+- -------
+
+Best wishes,
+
+
+Jeremy Bennett
+Vice chair
+
+- -- 
+Cell: +44 (7970) 676050
+SkypeID: jeremybennett
+Twitter: @jeremypbennett
+Email: <A HREF="https://lists.librecores.org/listinfo/embench">jeremy.bennett at embecosm.com</A>
+Web: www.embecosm.com
+PGP key: 1024D/BEF58172FB4754E1 2009-03-20
+-----BEGIN PGP SIGNATURE-----
+
+iF0EARECAB0WIQRASGDWqmhRZUfAaPW+9YFy+0dU4QUCXl6QfgAKCRC+9YFy+0dU
+4eZ1AJ0Yn9JRahyykCiIqlIA1stlGcLeGQCfSUzb+C/GOrp5EvJkuasDUK/TTV8=
+=3NLA
+-----END PGP SIGNATURE-----
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000039.html">[Embench] Notes from Embench call 17 Feb 20
+</A></li>
+	<LI>Next message (by thread): <A HREF="000041.html">[Embench] Draft of Abstract for Hot Chips
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#40">[ date ]</a>
+              <a href="thread.html#40">[ thread ]</a>
+              <a href="subject.html#40">[ subject ]</a>
+              <a href="author.html#40">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] New metrics for Embench results - Base/Peak and Speed/Rate
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20New%20metrics%20for%20Embench%20results%20-%20Base/Peak%20and%0A%20Speed/Rate&In-Reply-To=%3CBYAPR04MB49209C7F21642ECA7E9670A09B979%40BYAPR04MB4920.namprd04.prod.outlook.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000102.html">
+   <LINK REL="Next"  HREF="000104.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] New metrics for Embench results - Base/Peak and Speed/Rate</H1>
+    <B>Ofer Shinaar</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20New%20metrics%20for%20Embench%20results%20-%20Base/Peak%20and%0A%20Speed/Rate&In-Reply-To=%3CBYAPR04MB49209C7F21642ECA7E9670A09B979%40BYAPR04MB4920.namprd04.prod.outlook.com%3E"
+       TITLE="[Embench] New metrics for Embench results - Base/Peak and Speed/Rate">Ofer.Shinaar at wdc.com
+       </A><BR>
+    <I>Thu Mar  4 10:17:51 CET 2021</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000102.html">[Embench] New metrics for Embench results - Base/Peak and Speed/Rate
+</A></li>
+        <LI>Next message (by thread): <A HREF="000104.html">[Embench] New metrics for Embench results - Base/Peak and Speed/Rate
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#103">[ date ]</a>
+              <a href="thread.html#103">[ thread ]</a>
+              <a href="subject.html#103">[ subject ]</a>
+              <a href="author.html#103">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Dave,
+Its is more an enhancement and less a “problem-solving.”
+
+For base/peak, we can also allow vendors to publish their best result with compiler tweaks, along with the current “base” typical results.
+After all, riscv and arm compiler are not the same; for example, we do provide –msave-restore for RV, but we do not give that ARM because it is just a basic flag that we “must use”.
+Peak will allow you to drive more flags and expose where we can get with each compiler per target.
+
+For Rate/Speed:
+We only publish Speed results, and some targets want to see IPC/throughput as well. Give the “Rate” option will solve that.
+
+Thanks,
+Ofer
+
+
+
+From: David PATTERSON &lt;<A HREF="https://lists.librecores.org/listinfo/embench">pattrsn at cs.berkeley.edu</A>&gt;
+Sent: Thursday, 4 March 2021 03:44
+To: Ofer Shinaar &lt;<A HREF="https://lists.librecores.org/listinfo/embench">Ofer.Shinaar at wdc.com</A>&gt;
+Cc: <A HREF="https://lists.librecores.org/listinfo/embench">embench at lists.librecores.org</A>
+Subject: Re: [Embench] New metrics for Embench results - Base/Peak and Speed/Rate
+
+What is the problem you're trying to solve with the new metrics?
+
+Dave
+
+On Wed, Mar 3, 2021 at 3:47 AM Ofer Shinaar &lt;<A HREF="https://lists.librecores.org/listinfo/embench">Ofer.Shinaar at wdc.com</A>&lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">Ofer.Shinaar at wdc.com</A>&gt;&gt; wrote:
+Hello all,
+I would like to bring to the forum a suggestion on including more results metrics as we have on SPEC
+
+
+1.       Include metric fo Base and Peak:
+
+-          SPEC url or explanation: <A HREF="https://www.spec.org/cpu2017/Docs/overview.html#Q16">https://www.spec.org/cpu2017/Docs/overview.html#Q16</A>
+
+-          Currently, we can say we only have “Base”, on IoT results.
+
+-          Having “Peak” will give us a possibility to expose more compiler flags that can boost performance, and we can publish results + links to tools that can “find the best set of compiler flags”
+
+Example for work done by Craig Blackmore (from Embecosm):
+
+o   <A HREF="https://github.com/craigblackmore/opentuner">https://github.com/craigblackmore/opentuner</A>
+
+o   <A HREF="https://www.groundai.com/project/automatically-tuning-the-gcc-compiler-to-optimize-the-performance-of-applications-running-on-embedded-systems/2">https://www.groundai.com/project/automatically-tuning-the-gcc-compiler-to-optimize-the-performance-of-applications-running-on-embedded-systems/2</A>
+
+2.        Include metric for Speed and Rate
+
+-          SPEC url for explanation: <A HREF="https://www.spec.org/cpu2017/Docs/overview.html#Q15">https://www.spec.org/cpu2017/Docs/overview.html#Q15</A>
+
+-          On the embedded space, sometimes throughput is more important than “time”. Those days we can start seeing IoT cores /MCUs that have a multithreaded design.
+Also, we see emerging multithreading designs for RISCV. On those designs rate for throughput will be more important than Time.
+
+Thoughts/comments?
+
+Thanks,
+Ofer
+
+
+
+
+Ofer Shinaar
+Senior Manager, R&amp;D Engineering – Firmware &amp; Toolchain, CTO Group
+
+Western Digital®
+Israel, Migdal Tefen 24959, P.O Box 3
+Email: <A HREF="https://lists.librecores.org/listinfo/embench">Ofer.shinaar at wdc.com</A>&lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">Ofer.shinaar at wdc.com</A>&gt;
+Office: +972-4-9078783
+Mobile: +972-52-2836160
+
+
+--
+Embench mailing list
+<A HREF="https://lists.librecores.org/listinfo/embench">Embench at lists.librecores.org</A>&lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">Embench at lists.librecores.org</A>&gt;
+<A HREF="https://lists.librecores.org/listinfo/embench">https://lists.librecores.org/listinfo/embench</A>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://lists.librecores.org/pipermail/embench/attachments/20210304/cd6572bf/attachment.htm">http://lists.librecores.org/pipermail/embench/attachments/20210304/cd6572bf/attachment.htm</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000102.html">[Embench] New metrics for Embench results - Base/Peak and Speed/Rate
+</A></li>
+	<LI>Next message (by thread): <A HREF="000104.html">[Embench] New metrics for Embench results - Base/Peak and Speed/Rate
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#103">[ date ]</a>
+              <a href="thread.html#103">[ thread ]</a>
+              <a href="subject.html#103">[ subject ]</a>
+              <a href="author.html#103">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

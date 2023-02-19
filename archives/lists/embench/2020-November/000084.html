@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] PR - RV interrupt latency benchmark proposal
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20PR%20-%20RV%20interrupt%20latency%20benchmark%20proposal&In-Reply-To=%3CAM5PR0801MB16511F6DCDEF4918FE04543393E60%40AM5PR0801MB1651.eurprd08.prod.outlook.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000083.html">
+   <LINK REL="Next"  HREF="000085.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] PR - RV interrupt latency benchmark proposal</H1>
+    <B>Jon Taylor</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20PR%20-%20RV%20interrupt%20latency%20benchmark%20proposal&In-Reply-To=%3CAM5PR0801MB16511F6DCDEF4918FE04543393E60%40AM5PR0801MB1651.eurprd08.prod.outlook.com%3E"
+       TITLE="[Embench] PR - RV interrupt latency benchmark proposal">Jon.Taylor at arm.com
+       </A><BR>
+    <I>Fri Nov 13 09:00:48 CET 2020</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000083.html">[Embench] PR - RV interrupt latency benchmark proposal
+</A></li>
+        <LI>Next message (by thread): <A HREF="000085.html">[Embench] PR - RV interrupt latency benchmark proposal
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#84">[ date ]</a>
+              <a href="thread.html#84">[ thread ]</a>
+              <a href="subject.html#84">[ subject ]</a>
+              <a href="author.html#84">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Ronen,
+
+Thanks for sharing this. Please can you clarify the macros M_PSP_PUSH and M_PSP_POP? I can’t see them in the embench tree anywhere. I assume they’re some sort of context save/restore.
+
+What I would observe is that by stopping the timer as soon as you enter the ASM interrupt handler, there’s no timing of a C prologue that you’d need if the handler was a c-function (or called into a c-function). Would it be more representative to stop the timer once the code has reached the specific C handler function?
+
+Regards,
+
+Jon
+
+From: Embench &lt;<A HREF="https://lists.librecores.org/listinfo/embench">embench-bounces at lists.librecores.org</A>&gt; On Behalf Of Ronen Haen
+Sent: 10 November 2020 07:57
+To: <A HREF="https://lists.librecores.org/listinfo/embench">embench at lists.librecores.org</A>
+Subject: [Embench] PR - RV interrupt latency benchmark proposal
+
+Hi All,
+
+I’ve created a PR <A HREF="https://github.com/embench/embench-context-latency/pull/1">https://github.com/embench/embench-context-latency/pull/1</A>
+Your comments would be much appreciated.
+
+Thanks,
+Ronen
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://lists.librecores.org/pipermail/embench/attachments/20201113/4f7474f3/attachment.htm">http://lists.librecores.org/pipermail/embench/attachments/20201113/4f7474f3/attachment.htm</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000083.html">[Embench] PR - RV interrupt latency benchmark proposal
+</A></li>
+	<LI>Next message (by thread): <A HREF="000085.html">[Embench] PR - RV interrupt latency benchmark proposal
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#84">[ date ]</a>
+              <a href="thread.html#84">[ thread ]</a>
+              <a href="subject.html#84">[ subject ]</a>
+              <a href="author.html#84">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

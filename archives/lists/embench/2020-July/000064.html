@@ -1,0 +1,304 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] Notes from Embench call 15 June 2020
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Notes%20from%20Embench%20call%2015%20June%202020&In-Reply-To=%3C4341be3f-d48a-c9f2-c124-b66f83a95bde%40embecosm.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   
+   <LINK REL="Next"  HREF="000065.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] Notes from Embench call 15 June 2020</H1>
+    <B>paolo</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Notes%20from%20Embench%20call%2015%20June%202020&In-Reply-To=%3C4341be3f-d48a-c9f2-c124-b66f83a95bde%40embecosm.com%3E"
+       TITLE="[Embench] Notes from Embench call 15 June 2020">paolo.savini at embecosm.com
+       </A><BR>
+    <I>Thu Jul 16 13:29:25 CEST 2020</I>
+    <P><UL>
+        
+        <LI>Next message (by thread): <A HREF="000065.html">[Embench] Embench meeting/call 19 July 2020
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#64">[ date ]</a>
+              <a href="thread.html#64">[ thread ]</a>
+              <a href="subject.html#64">[ subject ]</a>
+              <a href="author.html#64">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi all,
+
+here is the slide I presented in the June meeting about the comparison
+of the speed/size results obtained with embench for GCC 9.2.0 vs GCC
+10.1.0 on RISCV (ri5cy) and ARM (cortex-m4).
+
+sorry for the delay on this.
+
+The action about the search of suitable FP benchmarks from BEEBS is in
+progress.
+
+
+Best,
+
+Paolo
+
+On 15/06/2020 17:03, Jeremy Bennett wrote:
+&gt;<i> Hi all,
+</I>&gt;<i>
+</I>&gt;<i> These are the notes from last week's meeting, summarizing actions.
+</I>&gt;<i>
+</I>&gt;<i> 0. Welcomes
+</I>&gt;<i> -----------
+</I>&gt;<i>
+</I>&gt;<i> Welcome new participants Erin Olson, Nikos Fragoulis, Ray Simar and
+</I>&gt;<i> Paul Butcher.
+</I>&gt;<i>
+</I>&gt;<i> 1. Actions from previous meetings
+</I>&gt;<i> ---------------------------------
+</I>&gt;<i>
+</I>&gt;<i> ACTION: Jeremy Bennett. Update London Meetup slides and make available
+</I>&gt;<i> to group.
+</I>&gt;<i> - Complete, but needs updating as discussed in agenda item 5 below.
+</I>&gt;<i>
+</I>&gt;<i> ACTION: Jeremy Bennett to complete work on the embench-iot-results
+</I>&gt;<i> respository.
+</I>&gt;<i> - Complete, see pull request 3.
+</I>&gt;<i>
+</I>&gt;<i> ACTION: Paolo Savini to distribute his slide.
+</I>&gt;<i> - In progress.
+</I>&gt;<i>
+</I>&gt;<i> ACTION (continued): Jeremy Bennett to update the documentation with
+</I>&gt;<i> more details to make the board easier to find in future.
+</I>&gt;<i> - Complete, see pull request 67.
+</I>&gt;<i>
+</I>&gt;<i> ACTION: David Patterson/Jeremy Bennett. Chase up what is happening for
+</I>&gt;<i> Arm TechCon.
+</I>&gt;<i> - Complete. Proposal submitted.
+</I>&gt;<i>
+</I>&gt;<i> ACTION: Paolo Savini to explore suitable BEEBS floating point benchmarks.
+</I>&gt;<i> - In progress.
+</I>&gt;<i>
+</I>&gt;<i> ACTION: Jeremy Bennett. Set up a shared Google doc for people to
+</I>&gt;<i> record suggestions.
+</I>&gt;<i> - Complete, see
+</I>&gt;<i> <A HREF="https://docs.google.com/document/d/1tC0LXZRYeyoSRTM9aXtapzx3sA00vfFcL9QjOxU3vzQ">https://docs.google.com/document/d/1tC0LXZRYeyoSRTM9aXtapzx3sA00vfFcL9QjOxU3vzQ</A>
+</I>&gt;<i>
+</I>&gt;<i> ACTION: All. Reach out to friends in embedded computing for
+</I>&gt;<i> suggestions, including DSP suggestions.
+</I>&gt;<i> - In progress.
+</I>&gt;<i>
+</I>&gt;<i> 2. GitHub pull requests
+</I>&gt;<i> -----------------------
+</I>&gt;<i>
+</I>&gt;<i> From embench-iot:
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="https://github.com/embench/embench-iot/pull/63">https://github.com/embench/embench-iot/pull/63</A>
+</I>&gt;<i> - Add --baselinedir and --baseline-output options
+</I>&gt;<i> - Discussion felt this would be useful, will commit
+</I>&gt;<i> - Thanks to Ed  Jones for providing this.
+</I>&gt;<i>
+</I>&gt;<i> ACTION: Jeremy Bennett to commit the pull request.
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="https://github.com/embench/embench-iot/pull/64">https://github.com/embench/embench-iot/pull/64</A>
+</I>&gt;<i> - Always log compiler and linker output, even if successful
+</I>&gt;<i> - Merged
+</I>&gt;<i> - Issue 66 raised to add --quiet and --verbose flags
+</I>&gt;<i> - Thanks to Ed Jones for providing this.
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="https://github.com/embench/embench-iot/pull/67">https://github.com/embench/embench-iot/pull/67</A>
+</I>&gt;<i> - Document how to obtain the baseline platform
+</I>&gt;<i> - Merged
+</I>&gt;<i> - Thanks to Jeremy Bennett for providing this.
+</I>&gt;<i>
+</I>&gt;<i> From embench-iot-results:
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="https://github.com/embench/embench-iot-results/pull/3">https://github.com/embench/embench-iot-results/pull/3</A>
+</I>&gt;<i> - The rework to just hold Embench 0.5 results
+</I>&gt;<i> - Merged as a matter of urgency
+</I>&gt;<i> - Tagged embench-0.5
+</I>&gt;<i> - Thanks to Jeremy Bennett for providing this.
+</I>&gt;<i>
+</I>&gt;<i> Thanks to all those who provided patches.
+</I>&gt;<i>
+</I>&gt;<i> 3. New GitHub issues
+</I>&gt;<i> --------------------
+</I>&gt;<i>
+</I>&gt;<i> From embench-iot:
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="https://github.com/embench/embench-iot/issues/62">https://github.com/embench/embench-iot/issues/62</A>
+</I>&gt;<i> - Difficulty recreating results
+</I>&gt;<i> - Given some guidance, encourage to join call and mailing list
+</I>&gt;<i> - Thanks to joeski65 for raising this.
+</I>&gt;<i>
+</I>&gt;<i> ACTION: Jeremy to add tutorial example to reproduce baseline results
+</I>&gt;<i> in documentation.
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="https://github.com/embench/embench-iot/issues/65">https://github.com/embench/embench-iot/issues/65</A>
+</I>&gt;<i> - Issue of cubic using long double
+</I>&gt;<i> - Explained rationale (we have discussed this before)
+</I>&gt;<i> - Thanks to Matteo Perotti for raising this
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="https://github.com/embench/embench-iot/issues/66">https://github.com/embench/embench-iot/issues/66</A>
+</I>&gt;<i> - Add --verbose and --quiet flags
+</I>&gt;<i> - Enhancement request (see also pull request 64 above)
+</I>&gt;<i> - Thanks to Jeremy Bennett for raising this
+</I>&gt;<i>
+</I>&gt;<i> From embench-iot-results:
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="https://github.com/embench/embench-iot-results/issues/1">https://github.com/embench/embench-iot-results/issues/1</A>
+</I>&gt;<i> - Not clear what libraries are used for results
+</I>&gt;<i> - Latest commit clarifies this.
+</I>&gt;<i> - Thanks to Matteo Perotti for raising this.
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="https://github.com/embench/embench-iot-results/issues/2">https://github.com/embench/embench-iot-results/issues/2</A>
+</I>&gt;<i> - Reference data is now wrong.
+</I>&gt;<i> - Latest commit resolves this.
+</I>&gt;<i> - Thanks to Matteo Perotti for raising this.
+</I>&gt;<i>
+</I>&gt;<i> Thanks to all those who raised issues and provided responses.
+</I>&gt;<i>
+</I>&gt;<i> 4. Update on benchmarks
+</I>&gt;<i> -----------------------
+</I>&gt;<i>
+</I>&gt;<i> The embench-iot-results repository now captures the Embench 0.5
+</I>&gt;<i> results for Arm Cortex M4 and RISC-V RI5CY.  Pull requests for other
+</I>&gt;<i> architectures very welcome.
+</I>&gt;<i>
+</I>&gt;<i> Roger Shepherd has raised the issue of widening results to increase
+</I>&gt;<i> credibility and has volunteered to provide data for ST dev
+</I>&gt;<i> boards, Macs and Rasberry Pi’s.
+</I>&gt;<i>
+</I>&gt;<i> ACTION: Roger Shepherd to provide Embench results for ST dev boards,
+</I>&gt;<i> Apple Macs and Raspberry Pi.
+</I>&gt;<i>
+</I>&gt;<i> ACTION: Jeremy Bennett/Paolo Savini to attempt to get results for
+</I>&gt;<i> Atmel AVR using Arduino.
+</I>&gt;<i>
+</I>&gt;<i> Volunteers for more platforms are welcome
+</I>&gt;<i>
+</I>&gt;<i> 5. Publicity
+</I>&gt;<i> ------------
+</I>&gt;<i>
+</I>&gt;<i> David Patterson has made a submission to Arm TechCon for this year.
+</I>&gt;<i>
+</I>&gt;<i> We now have a Wikipedia page: <A HREF="https://en.wikipedia.org/wiki/Embench.">https://en.wikipedia.org/wiki/Embench.</A>
+</I>&gt;<i> Please edit to improve.
+</I>&gt;<i>
+</I>&gt;<i> ACTION: Jeremy Bennett to add link to results page.
+</I>&gt;<i>
+</I>&gt;<i> Jeremy Bennett's slides from the London meetup in January are now
+</I>&gt;<i> online for others to use. NOTE they predate the release of 0.5 and the
+</I>&gt;<i> Arm Cortex M4 baseline, so the data needs updating. See
+</I>&gt;<i> <A HREF="https://docs.google.com/presentation/d/1YW5sXZODsCitqGw6mWBzSMtAKQQtYRK61JHj3FkymZY.">https://docs.google.com/presentation/d/1YW5sXZODsCitqGw6mWBzSMtAKQQtYRK61JHj3FkymZY.</A>
+</I>&gt;<i> Google presentations struggle with error bars on graphs, so the graphs
+</I>&gt;<i> are all images copied from LibreOffice calc.
+</I>&gt;<i>
+</I>&gt;<i> Bill McSpadden noted that Google Docs/G-drive are not supported in China.
+</I>&gt;<i>
+</I>&gt;<i> ACTION: Jeremy Bennett to explore alternatives - possibly restructured
+</I>&gt;<i> text or hieroglyph, which could be held in a repository.
+</I>&gt;<i>
+</I>&gt;<i> 6. Embench 0.6
+</I>&gt;<i> --------------
+</I>&gt;<i>
+</I>&gt;<i> At our last meeting we all took an action to consider new benchmarks
+</I>&gt;<i> that could be included in a floating-point Embench suite.  There is a
+</I>&gt;<i> shared document to add these:
+</I>&gt;<i> <A HREF="https://docs.google.com/document/d/1tC0LXZRYeyoSRTM9aXtapzx3sA00vfFcL9QjOxU3vzQ">https://docs.google.com/document/d/1tC0LXZRYeyoSRTM9aXtapzx3sA00vfFcL9QjOxU3vzQ</A>
+</I>&gt;<i>
+</I>&gt;<i> Discussion of future benchmarks
+</I>&gt;<i> - Nikos Fragoulis has C code benchmarks in Irida Labs. Have managed to
+</I>&gt;<i> fit deep learning network on Cortex M0, process images at 5
+</I>&gt;<i> frames/second. Any benchmark would be open, but have to use
+</I>&gt;<i> non-proprietary or random data.
+</I>&gt;<i> - Ray Simar suggested ideas from the TinyML book by Pete Worden and
+</I>&gt;<i> Daniel Situnayake. He could give his fall students a project to come
+</I>&gt;<i> up with a new
+</I>&gt;<i> - BDTI kernel benchmarks - set of 12 kernels, FIR, IIR, FFT, vector
+</I>&gt;<i> operations etc. Offer to make some of their benchmarks available. Good
+</I>&gt;<i> low level DSP benchmarks.
+</I>&gt;<i>
+</I>&gt;<i> ACTION: Nikos Fragoulis to propose benchmark and suitable data.
+</I>&gt;<i>
+</I>&gt;<i> ACTION: Ray Simar to set class project to come up with new benchmarks
+</I>&gt;<i> based on the TinyML book.
+</I>&gt;<i>
+</I>&gt;<i> ACTION: David Patterson to convene a meeting with Ray Simar and Jeff
+</I>&gt;<i> Bier to discuss use of BDTI benchmarks, including how they would be
+</I>&gt;<i> licensed (anything GPL compatible is fine).
+</I>&gt;<i>
+</I>&gt;<i> A reminder that we need volunteers to lead particular aspects of the
+</I>&gt;<i> effort.
+</I>&gt;<i>
+</I>&gt;<i> 7. Future meetings
+</I>&gt;<i> ------------------
+</I>&gt;<i>
+</I>&gt;<i> Future meetings will be 1 hour long.
+</I>&gt;<i>
+</I>&gt;<i> We currently meet regularly on the third Monday of each month 8-10am
+</I>&gt;<i> California time. Our future meetings will be. Note that 2 dates have
+</I>&gt;<i> been changed to accommodate upcoming conferences/holidays.
+</I>&gt;<i> - Mon 20 Jul 2020
+</I>&gt;<i> - Mon 10 Aug 2020 (changed)
+</I>&gt;<i> - Mon 21 Sep 2020
+</I>&gt;<i> - Mon 19 Oct 2020
+</I>&gt;<i> - Mon 16 Nov 2020
+</I>&gt;<i> - Mon 14 Dec 2020 (changed)
+</I>&gt;<i>
+</I>&gt;<i> I've created a calendar entry for our regular attendees, to provide
+</I>&gt;<i> automated reminders. Please ask if you wish to be added to this.
+</I>&gt;<i>
+</I>&gt;<i> 8. AOB
+</I>&gt;<i> ------
+</I>&gt;<i>
+</I>&gt;<i> Paul Butcher introduced his work on fuzzing for security using Embench.
+</I>&gt;<i>
+</I>&gt;<i> Best wishes,
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Jeremy
+</I>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Embench_GCC_9-2_10-1.pdf
+Type: application/pdf
+Size: 57715 bytes
+Desc: not available
+URL: &lt;<A HREF="http://lists.librecores.org/pipermail/embench/attachments/20200716/6bfd98bd/attachment.pdf">http://lists.librecores.org/pipermail/embench/attachments/20200716/6bfd98bd/attachment.pdf</A>&gt;
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 833 bytes
+Desc: OpenPGP digital signature
+URL: &lt;<A HREF="http://lists.librecores.org/pipermail/embench/attachments/20200716/6bfd98bd/attachment.sig">http://lists.librecores.org/pipermail/embench/attachments/20200716/6bfd98bd/attachment.sig</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message (by thread): <A HREF="000065.html">[Embench] Embench meeting/call 19 July 2020
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#64">[ date ]</a>
+              <a href="thread.html#64">[ thread ]</a>
+              <a href="subject.html#64">[ subject ]</a>
+              <a href="author.html#64">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

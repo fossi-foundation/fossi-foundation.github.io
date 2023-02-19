@@ -1,0 +1,274 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] Embench meeting/call 19 July 2020
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Embench%20meeting/call%2019%20July%202020&In-Reply-To=%3Cb74773f5-b269-b751-8db5-2c994ffeaa90%40embecosm.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000064.html">
+   <LINK REL="Next"  HREF="000067.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] Embench meeting/call 19 July 2020</H1>
+    <B>Jeremy Bennett</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Embench%20meeting/call%2019%20July%202020&In-Reply-To=%3Cb74773f5-b269-b751-8db5-2c994ffeaa90%40embecosm.com%3E"
+       TITLE="[Embench] Embench meeting/call 19 July 2020">jeremy.bennett at embecosm.com
+       </A><BR>
+    <I>Sun Jul 19 18:31:30 CEST 2020</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000064.html">[Embench] Notes from Embench call 15 June 2020
+</A></li>
+        <LI>Next message (by thread): <A HREF="000067.html">[Embench] New Embench FP suite repository
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#65">[ date ]</a>
+              <a href="thread.html#65">[ thread ]</a>
+              <a href="subject.html#65">[ subject ]</a>
+              <a href="author.html#65">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Hi all,
+
+Our next regular meeting of the Embench group will be tomorrow Monday,
+19 July, 8-10am California time.
+
+We will meet using the same Zoom details as before. Please email me if
+you do not have them - I am reluctant to post details on an open
+mailing list.
+
+Agenda
+======
+
+1. Actions from previous meeting
+- --------------------------------
+
+ACTION: Paolo Savini to distribute his slide.
+- - complete
+
+ACTION: Paolo Savini to explore suitable BEEBS floating point benchmarks.
+- - see agenda item 6
+- - in progress
+
+ACTION: Jeremy Bennett to commit the pull request 63
+- - complete
+
+ACTION: Jeremy to add tutorial example to reproduce baseline results
+in documentation.
+- - captured as GitHub issue 68
+- - in progress
+
+ACTION: Roger Shepherd to provide Embench results for ST dev boards,
+Apple Macs and Raspberry Pi.
+- - see agenda item 4
+- - Roger to report
+
+ACTION: Jeremy Bennett/Paolo Savini to attempt to get results for
+Atmel AVR using Arduino.
+- - see agenda item 4
+- - Paolo to report
+
+ACTION: Jeremy Bennett to add link to results page to Wikipedia.
+- - added text and link, but link removed - help from Wikipedia expert
+welcome!
+- - see agenda item 5
+- - complete
+
+ACTION: Jeremy Bennett to explore alternatives to Google Docs - possibly
+restructured text or hieroglyph, which could be held in a repository.
+- - see agenda item 5
+- - in progress
+
+ACTION: Nikos Fragoulis to propose benchmark and suitable data from
+Irida Labs
+- - see agenda item 6
+- - Nikos to report
+
+ACTION: Ray Simar to set class project to come up with new benchmarks
+based on the TinyML book.
+- - see agenda item 6
+- - Ray to report
+
+ACTION: David Patterson to convene a meeting with Ray Simar and Jeff
+Bier to discuss use of BDTI benchmarks, including how they would be
+licensed (anything GPL compatible is fine).
+- - see agenda item 6
+- - David to report
+
+2. GitHub pull requests
+- -----------------------
+
+<A HREF="https://github.com/embench/embench-iot/pull/74">https://github.com/embench/embench-iot/pull/74</A>
+- - fixes issue 69
+- - thanks to Brian Grayson of SiFive for the fix
+
+<A HREF="https://github.com/embench/embench-iot/pull/75">https://github.com/embench/embench-iot/pull/75</A>
+- - fixes issue 70
+- - thanks to Jeremy Bennett for the fix
+
+3. New GitHub issues
+- --------------------
+
+- From embench-iot:
+
+<A HREF="https://github.com/embench/embench-iot/issues/68">https://github.com/embench/embench-iot/issues/68</A>
+- - captures action to document creation of baseline results
+- - assigned to Jeremy Bennett
+
+<A HREF="https://github.com/embench/embench-iot/issues/69">https://github.com/embench/embench-iot/issues/69</A>
+- - repeated builds fail noisily
+- - bug in build_all.py fixed by pull-request 74
+- - thanks to Brian Grayson of SiFive for the issue report and fix
+
+<A HREF="https://github.com/embench/embench-iot/issues/70">https://github.com/embench/embench-iot/issues/70</A>
+- - Update doc to note pyelftools is a prerequisite
+- - fixed by pull-request 75
+- - thanks to Ed Jones of Embecosm for the issue report
+
+<A HREF="https://github.com/embench/embench-iot/issues/71">https://github.com/embench/embench-iot/issues/71</A>
+- - results directory is not created by run_all.py
+- - bug assigned to Jeremy Bennett
+- - thanks to Ed Jones of Embecosm for the issue report
+
+<A HREF="https://github.com/embench/embench-iot/issues/72">https://github.com/embench/embench-iot/issues/72</A>
+- - wikisort has a GCC extension in the code
+- - assigned to Paolo Savini to fix and check all benchmarks
+- - we need to agree what C standard we require (see agenda item 4)
+- - thanks to Kjetil Østerås of Silicon Labs for the issue report
+
+<A HREF="https://github.com/embench/embench-iot/issues/73">https://github.com/embench/embench-iot/issues/73</A>
+- - other benchmarks use GCC extensions
+- - generalization of issue 72, also assigned to Paolo Savini
+- - thanks to Kjetil Østerås of Silicon Labs for the issue report
+
+- From embench-iot-results:
+
+<A HREF="https://github.com/embench/embench-iot-results/issues/4">https://github.com/embench/embench-iot-results/issues/4</A>
+- - what is the performance of baseline board at full-speed
+- - flat out would be affected by Flash memory access times.
+- - assigned to Paolo Savini to investigate.
+- - Thanks to Charles Papon (Dolu1990) for raising this.
+
+4. Update on benchmarks
+- -----------------------
+
+Issues 72 and 73 have highlighted that we have no documented what C
+standard the benchmarks follow. Historically benchmarks have always
+gone for ANSI C89 (ISO C90) as the lowest common denominator, but
+should we really base a new benchmark set on a coding standard set
+more than 3 decades ago.
+
+I should like to propose we mandate C11 as the minimum for all C
+benchmarks and C++11 for all C++ benchmarks (which we will presumably
+have in the future).
+
+Roger Shepherd and Paolo Savini have an action to try to obtain more
+data points for other platforms. They are invited to report on progress.
+
+5. Publicity
+- ------------
+
+The Wikipedia page: <A HREF="https://en.wikipedia.org/wiki/Embench,">https://en.wikipedia.org/wiki/Embench,</A> now refers
+to the results repository, but the link was removed (no external links
+in the text).  We'd appreciate a Wikipedia expert to advise on the
+correct way to add such links.
+
+Jeremy Bennett had an action to explore alternatives to Google for the
+standard presentation. There is work in progress on a version in
+ReStructuredText using Sphinx/Hieroglyph version here:
+
+<A HREF="https://github.com/jeremybennett/embench-iot/tree/presentations">https://github.com/jeremybennett/embench-iot/tree/presentations</A>
+
+Some of the tables are stretching the limits of ReStructuredText. Any
+suggestions welcome.
+
+Report on other conferences upcoming.
+
+6. Embench 0.6
+- --------------
+
+There is an ongoing shared document to add potential programs for a
+new floating point benchmark suite:
+
+<A HREF="https://docs.google.com/document/d/1tC0LXZRYeyoSRTM9aXtapzx3sA00vfFcL9QjOxU3vzQ">https://docs.google.com/document/d/1tC0LXZRYeyoSRTM9aXtapzx3sA00vfFcL9QjOxU3vzQ</A>
+
+Following on from last week's meeting, Nikos Fragoulis, Ray Simar  and
+David Patterson are invited to report back on their actions.
+
+Paolo Savini has completed his action to look at candidate floating
+point programs in the BEEBS benchmark set. He suggests matmult-float
+(as already suggested), ludcmp, qurt, sqrt, fasta, stb_perlin and frac
+as being plausible candidates. Paolo may be unable to join the
+meeting, but has provided detailed notes to the vice-chair and chair.
+
+An opportunity to discuss.
+
+A reminder that we need volunteers to lead particular aspects of the
+effort.
+
+7. Next meeting
+- ---------------
+
+We currently meet regularly on the third Monday of each month 8-10am
+California time. Our future meetings will be. Note that 2 dates have
+been changed to accommodate upcoming conferences/holidays.
+- - Mon 10 Aug 2020 (changed)
+- - Mon 21 Sep 2020
+- - Mon 19 Oct 2020
+- - Mon 16 Nov 2020
+- - Mon 14 Dec 2020 (changed)
+
+I've created a calendar entry for our regular attendees, to provide
+automated reminders. Please ask if you wish to be added to this.
+
+8. AOB
+- ------
+
+Best wishes,
+
+
+Jeremy Bennett
+Vice chair
+
+
+
+-----BEGIN PGP SIGNATURE-----
+
+iF0EARECAB0WIQRASGDWqmhRZUfAaPW+9YFy+0dU4QUCXxR1YQAKCRC+9YFy+0dU
+4TYMAJ4lA+C1BAmnl45mBuuLp11dZ+8MZgCffni5vbrUWpJxabHqR4KKRr6N694=
+=y7X0
+-----END PGP SIGNATURE-----
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000064.html">[Embench] Notes from Embench call 15 June 2020
+</A></li>
+	<LI>Next message (by thread): <A HREF="000067.html">[Embench] New Embench FP suite repository
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#65">[ date ]</a>
+              <a href="thread.html#65">[ thread ]</a>
+              <a href="subject.html#65">[ subject ]</a>
+              <a href="author.html#65">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

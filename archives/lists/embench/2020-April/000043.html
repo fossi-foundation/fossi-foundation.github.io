@@ -1,0 +1,194 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] Embench meeting/call 20 Apr 2020
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Embench%20meeting/call%2020%20Apr%202020&In-Reply-To=%3Caa8e45f8-fb20-dd6a-e91f-89706264dc7c%40embecosm.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000042.html">
+   <LINK REL="Next"  HREF="000044.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] Embench meeting/call 20 Apr 2020</H1>
+    <B>Jeremy Bennett</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Embench%20meeting/call%2020%20Apr%202020&In-Reply-To=%3Caa8e45f8-fb20-dd6a-e91f-89706264dc7c%40embecosm.com%3E"
+       TITLE="[Embench] Embench meeting/call 20 Apr 2020">jeremy.bennett at embecosm.com
+       </A><BR>
+    <I>Mon Apr 20 12:25:51 CEST 2020</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000042.html">[Embench] Notes from Embench call 9 Mar 2020
+</A></li>
+        <LI>Next message (by thread): <A HREF="000044.html">[Embench] Candidate for ML for future Embench
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#43">[ date ]</a>
+              <a href="thread.html#43">[ thread ]</a>
+              <a href="subject.html#43">[ subject ]</a>
+              <a href="author.html#43">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Hi all,
+
+Our next regular meeting of the Embench group will be today Monday, 20
+April, 8-10am California time.
+
+We will meet using the same Zoom details as before. Please email me if
+you do not have them - I am reluctant to post details on an open
+mailing list.
+
+Agenda
+======
+
+1. Actions from previous meeting
+- --------------------------------
+
+ACTION: Paolo Savini. Review pull request 49 (ARC support)
+- - in progress
+
+ACTION: Jeremy Bennett. Investigate issue 40 (multiple text section
+size incorrect)
+- - in progress, patch invited from issue reporter.
+- - subsumed by issue 52.
+
+ACTION: Paolo Savini. Investigate issue 47 (native build results wrong)
+- - in progress, suggestions made to diagnose issue.
+
+ACTION: Jeremy Bennett to progress better website analytics with
+Stefan Wallentowitz.
+- - In progress.
+
+ACTION: Jeremy Bennett. Update embench-iot-results repository to
+reflect Embench 0.5
+- - in progress.
+
+ACTION: David Patterson. Submit abstract to HotChips.
+- - complete.
+
+ACTION: Jeremy Bennett. Revise calendar of 2020 meetings to allow for
+conferences and holidays.
+- - complete.
+
+2. GitHub pull requests
+- -----------------------
+
+The following pull request has been submitted:
+
+<A HREF="https://github.com/embench/embench-iot/pull/49">https://github.com/embench/embench-iot/pull/49</A>
+- - Update ARC GCC target
+- - Thanks to Claudiu Zissulescu for this patch
+- - Some changes requested to separate out ARC changes from other target
+changes. Otherwise good to merge.
+
+<A HREF="https://github.com/embench/embench-iot/pull/54">https://github.com/embench/embench-iot/pull/54</A>
+- - Remove redundant code from STM32F4 Discovery board support
+- - Thanks to Paolo Savini for this patch
+- - Merged.
+
+3. New GitHub issues
+- --------------------
+
+<A HREF="https://github.com/embench/embench-iot/issues/51">https://github.com/embench/embench-iot/issues/51</A>
+- - Problems with spaces when setting tool flag options
+- - This appears to be a bug - assigned to Paolo Savini to fix
+- - Thanks to Mark Hill for raising the issue.
+
+<A HREF="https://github.com/embench/embench-iot/issues/52">https://github.com/embench/embench-iot/issues/52</A>
+- - Incorrect reporting of code size.
+- - This is a more comprehensive version of issue 40, with suggested fix.
+- - Assigned to Paolo Savini to fix.
+- - Thanks to Mark Hill for raising the issue.
+
+<A HREF="https://github.com/embench/embench-iot/issues/52">https://github.com/embench/embench-iot/issues/52</A>
+- - Inconsistent speed results on VexRiscv core
+- - This appears to be an issue with a non-bare-metal multi-core system
+- - Some suggestions provided - an issue for future Embench
+- - Thanks to genesys2 for raising the issue.
+
+4. Website analytics
+- --------------------
+
+Update from Cesare Garlati
+
+Jeremy Bennett will report on progress with Stefan Wallentowitz on
+obtaining better website data (action in progress from previous meeting).
+
+5. Update on benchmarks
+- -----------------------
+
+The priority has been to get the results repository clean, so that
+there is a place where results can be submitted.
+
+6. Publicity
+- ------------
+
+An abstract has been submitted  to Hot Chips. What other conferences
+are to be anticipated?
+
+7. Next meeting
+- ---------------
+
+We currently meet regularly on the third Monday of each month 8-10am
+California time. Our future meetings will be. Note that 3 dates have
+been changed to accommodate upcoming conferences/holidays.
+- - Mon 11 May 2020 (changed)
+- - Mon 15 Jun 2020
+- - Mon 20 Jul 2020
+- - Mon 10 Aug 2020 (changed)
+- - Mon 21 Sep 2020
+- - Mon 19 Oct 2020
+- - Mon 16 Nov 2020
+- - Mon 14 Dec 2020 (changed)
+
+I've created a calendar entry for our regular attendees, to provide
+automated reminders. Please ask if you wish to be added to this.
+
+8. AOB
+- ------
+
+Best wishes,
+
+
+Jeremy Bennett
+Vice chair
+
+-----BEGIN PGP SIGNATURE-----
+
+iF0EARECAB0WIQRASGDWqmhRZUfAaPW+9YFy+0dU4QUCXp14rQAKCRC+9YFy+0dU
+4ZdIAJ0RIIzxIIxDKjgk9ukVYW+VxLQ8jACfQdOKsT6IWSE3U5vi4ICxg9ijI8I=
+=8bad
+-----END PGP SIGNATURE-----
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000042.html">[Embench] Notes from Embench call 9 Mar 2020
+</A></li>
+	<LI>Next message (by thread): <A HREF="000044.html">[Embench] Candidate for ML for future Embench
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#43">[ date ]</a>
+              <a href="thread.html#43">[ thread ]</a>
+              <a href="subject.html#43">[ subject ]</a>
+              <a href="author.html#43">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

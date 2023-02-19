@@ -1,0 +1,319 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] WD Code size compiler tests
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20WD%20Code%20size%20compiler%20tests&In-Reply-To=%3C3e517cf4-0a7e-04b6-dec6-6e496a948898%40embecosm.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000123.html">
+   <LINK REL="Next"  HREF="000127.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] WD Code size compiler tests</H1>
+    <B>Jeremy Bennett</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20WD%20Code%20size%20compiler%20tests&In-Reply-To=%3C3e517cf4-0a7e-04b6-dec6-6e496a948898%40embecosm.com%3E"
+       TITLE="[Embench] WD Code size compiler tests">jeremy.bennett at embecosm.com
+       </A><BR>
+    <I>Wed May 12 19:54:23 CEST 2021</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000123.html">[Embench] WD Code size compiler tests
+</A></li>
+        <LI>Next message (by thread): <A HREF="000127.html">[Embench] WD Code size compiler tests
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#126">[ date ]</a>
+              <a href="thread.html#126">[ thread ]</a>
+              <a href="subject.html#126">[ subject ]</a>
+              <a href="author.html#126">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>On 02/05/2021 11:57, Nidal Faour wrote:
+&gt;<i>
+</I>&gt;<i> Hi all,
+</I>&gt;<i>
+</I>&gt;<i> I would like to have your opinion about opening a new repo under the
+</I>&gt;<i> Embench to hold the test cases done by WD. (located at the following link)
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="https://github.com/westerndigitalcorporation/riscv32-Code-density-test-bench">https://github.com/westerndigitalcorporation/riscv32-Code-density-test-bench</A>
+</I>&gt;<i> &lt;<A HREF="https://github.com/westerndigitalcorporation/riscv32-Code-density-test-bench">https://github.com/westerndigitalcorporation/riscv32-Code-density-test-bench</A>&gt;
+</I>&gt;<i>
+</I>Hi Nidal,
+
+I'm up for this. I think we need to get buy in from the Embench
+community. What do others think?
+
+&gt;<i>  
+</I>&gt;<i>
+</I>&gt;<i> My suggestion is to have a new repo to hold these tests and labeled
+</I>&gt;<i> “compiler benchmark” or whatever better name you may suggest.
+</I>&gt;<i>
+</I>That would be the thing to do. We'd need to make sure it was consistent
+with the 7 principles behind Embench. One that springs to mind is the
+need to make sure that the benchmarks are self-verifying.
+&gt;<i>
+</I>&gt;<i> Also, I think it would be better to add a new column labeled
+</I>&gt;<i> “Compiler” to the Embench Baseline Data slide to emphasize that these
+</I>&gt;<i> tests are made to test the compiler maturity for the specific target.
+</I>&gt;<i>
+</I>Well they test three things - the processor, the compiler and the
+libraries. There is always the issue of how much information to put on
+the summary.
+&gt;<i>
+</I>&gt;<i> Just to remind you, here is the Baseline Data table I’m referring to
+</I>&gt;<i> as an example that I took from one of Jeremy's presentations. (see the
+</I>&gt;<i> last column I’ve added)
+</I>&gt;<i>
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>&gt;<i> /Name/
+</I>&gt;<i>
+</I>&gt;<i> 	
+</I>&gt;<i>
+</I>&gt;<i> /Comments/
+</I>&gt;<i>
+</I>&gt;<i> 	
+</I>&gt;<i>
+</I>&gt;<i> /Orig Source/
+</I>&gt;<i>
+</I>&gt;<i> 	
+</I>&gt;<i>
+</I>&gt;<i> /C LOC/
+</I>&gt;<i>
+</I>&gt;<i> 	
+</I>&gt;<i>
+</I>&gt;<i> /code size/
+</I>&gt;<i>
+</I>&gt;<i> 	
+</I>&gt;<i>
+</I>&gt;<i> /data size/
+</I>&gt;<i>
+</I>&gt;<i> 	
+</I>&gt;<i>
+</I>&gt;<i> /time (ms)/
+</I>&gt;<i>
+</I>&gt;<i> 	
+</I>&gt;<i>
+</I>&gt;<i> /branch/
+</I>&gt;<i>
+</I>&gt;<i> 	
+</I>&gt;<i>
+</I>&gt;<i> /memory/
+</I>&gt;<i>
+</I>&gt;<i> 	
+</I>&gt;<i>
+</I>&gt;<i> /compute/
+</I>&gt;<i>
+</I>&gt;<i> 	
+</I>&gt;<i>
+</I>&gt;<i> /Compiler/
+</I>&gt;<i>
+</I>&gt;<i> aha-mont64
+</I>&gt;<i>
+</I>&gt;<i> 	
+</I>&gt;<i>
+</I>&gt;<i> Montgomery multiplication
+</I>&gt;<i>
+</I>&gt;<i> 	
+</I>&gt;<i>
+</I>&gt;<i> AHA
+</I>&gt;<i>
+</I>&gt;<i> 	
+</I>&gt;<i>
+</I>&gt;<i> 162
+</I>&gt;<i>
+</I>&gt;<i> 	
+</I>&gt;<i>
+</I>&gt;<i> 1,072
+</I>&gt;<i>
+</I>&gt;<i> 	
+</I>&gt;<i>
+</I>&gt;<i> 0
+</I>&gt;<i>
+</I>&gt;<i> 	
+</I>&gt;<i>
+</I>&gt;<i> 4,004
+</I>&gt;<i>
+</I>&gt;<i> 	
+</I>&gt;<i>
+</I>&gt;<i> low
+</I>&gt;<i>
+</I>&gt;<i> 	
+</I>&gt;<i>
+</I>&gt;<i> low
+</I>&gt;<i>
+</I>&gt;<i> 	
+</I>&gt;<i>
+</I>&gt;<i> high
+</I>&gt;<i>
+</I>&gt;<i> 	
+</I>&gt;<i>
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>&gt;<i> crc32
+</I>&gt;<i>
+</I>&gt;<i> 	
+</I>&gt;<i>
+</I>&gt;<i> CRC error checking 32b
+</I>&gt;<i>
+</I>&gt;<i> 	
+</I>&gt;<i>
+</I>&gt;<i> MiBench
+</I>&gt;<i>
+</I>&gt;<i> 	
+</I>&gt;<i>
+</I>&gt;<i> 101
+</I>&gt;<i>
+</I>&gt;<i> 	
+</I>&gt;<i>
+</I>&gt;<i> 284
+</I>&gt;<i>
+</I>&gt;<i> 	
+</I>&gt;<i>
+</I>&gt;<i> 1,024
+</I>&gt;<i>
+</I>&gt;<i> 	
+</I>&gt;<i>
+</I>&gt;<i> 4,010
+</I>&gt;<i>
+</I>&gt;<i> 	
+</I>&gt;<i>
+</I>&gt;<i> high
+</I>&gt;<i>
+</I>&gt;<i> 	
+</I>&gt;<i>
+</I>&gt;<i> med
+</I>&gt;<i>
+</I>&gt;<i> 	
+</I>&gt;<i>
+</I>&gt;<i> low
+</I>&gt;<i>
+</I>&gt;<i> 	
+</I>&gt;<i>
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>&gt;<i> cubic
+</I>&gt;<i>
+</I>&gt;<i> 	
+</I>&gt;<i>
+</I>&gt;<i> Cubic root solver
+</I>&gt;<i>
+</I>&gt;<i> 	
+</I>&gt;<i>
+</I>&gt;<i> MiBench
+</I>&gt;<i>
+</I>&gt;<i> 	
+</I>&gt;<i>
+</I>&gt;<i> 125
+</I>&gt;<i>
+</I>&gt;<i> 	
+</I>&gt;<i>
+</I>&gt;<i> 1,584
+</I>&gt;<i>
+</I>&gt;<i> 	
+</I>&gt;<i>
+</I>&gt;<i> 0
+</I>&gt;<i>
+</I>&gt;<i> 	
+</I>&gt;<i>
+</I>&gt;<i> 3,831
+</I>&gt;<i>
+</I>&gt;<i> 	
+</I>&gt;<i>
+</I>&gt;<i> low
+</I>&gt;<i>
+</I>&gt;<i> 	
+</I>&gt;<i>
+</I>&gt;<i> med
+</I>&gt;<i>
+</I>&gt;<i> 	
+</I>&gt;<i>
+</I>&gt;<i> med
+</I>&gt;<i>
+</I>&gt;<i> 	
+</I>&gt;<i>
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>I don't think the compiler alone adds much. What matters is all the
+supplementary data (in the JSON file) providing all the details to
+reproduce the results.
+
+Best wishes,
+
+
+Jeremy
+
+&gt;<i> Best Regards,
+</I>&gt;<i>
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>&gt;<i> *Nidal Faour*
+</I>&gt;<i>
+</I>&gt;<i> Staff Engineer, R&amp;D Engineering – Firmware &amp; Toolchain, CTO Group
+</I>&gt;<i>
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>&gt;<i> *Western Digital®*
+</I>&gt;<i>
+</I>&gt;<i> Migdal Tefen 24959, P.O Box 3
+</I>&gt;<i>
+</I>&gt;<i> Email: <A HREF="https://lists.librecores.org/listinfo/embench">nidal.faour at wdc.com</A> &lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">nidal.faour at wdc.com</A>&gt;**
+</I>&gt;<i>
+</I>&gt;<i> Office: +972-4-9078756**
+</I>&gt;<i>
+</I>&gt;<i> Mobile: +972-50-8867756**
+</I>&gt;<i>
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>&gt;<i>
+</I>
+-- 
+Cell: +44 (7970) 676050
+SkypeID: jeremybennett
+Twitter: @jeremypbennett
+Email: <A HREF="https://lists.librecores.org/listinfo/embench">jeremy.bennett at embecosm.com</A>
+Web: www.embecosm.com
+PGP key: 1024D/BEF58172FB4754E1 2009-03-20
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://lists.librecores.org/pipermail/embench/attachments/20210512/72f3e544/attachment.htm">http://lists.librecores.org/pipermail/embench/attachments/20210512/72f3e544/attachment.htm</A>&gt;
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: OpenPGP_signature
+Type: application/pgp-signature
+Size: 203 bytes
+Desc: OpenPGP digital signature
+URL: &lt;<A HREF="http://lists.librecores.org/pipermail/embench/attachments/20210512/72f3e544/attachment.sig">http://lists.librecores.org/pipermail/embench/attachments/20210512/72f3e544/attachment.sig</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000123.html">[Embench] WD Code size compiler tests
+</A></li>
+	<LI>Next message (by thread): <A HREF="000127.html">[Embench] WD Code size compiler tests
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#126">[ date ]</a>
+              <a href="thread.html#126">[ thread ]</a>
+              <a href="subject.html#126">[ subject ]</a>
+              <a href="author.html#126">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

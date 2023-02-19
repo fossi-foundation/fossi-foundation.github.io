@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] Floating point accuracy
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Floating%20point%20accuracy&In-Reply-To=%3CDB7PR08MB42178E0521EE1888C5BAA2A6939C0%40DB7PR08MB4217.eurprd08.prod.outlook.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   
+   <LINK REL="Next"  HREF="000017.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] Floating point accuracy</H1>
+    <B>Jon Taylor</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Floating%20point%20accuracy&In-Reply-To=%3CDB7PR08MB42178E0521EE1888C5BAA2A6939C0%40DB7PR08MB4217.eurprd08.prod.outlook.com%3E"
+       TITLE="[Embench] Floating point accuracy">Jon.Taylor at arm.com
+       </A><BR>
+    <I>Wed Oct  2 12:20:51 CEST 2019</I>
+    <P><UL>
+        
+        <LI>Next message (by thread): <A HREF="000017.html">[Embench] Floating point accuracy
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#16">[ date ]</a>
+              <a href="thread.html#16">[ thread ]</a>
+              <a href="subject.html#16">[ subject ]</a>
+              <a href="author.html#16">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>I'm still testing the performance of Embench on various Arm devices.
+
+During testing, I encountered the ST (stats) test failing. This performs various double precision floating point operations.
+
+When using Arm's fast math library on a device with no hardware floating point support, the test fails.
+(see <A HREF="https://developer.arm.com/docs/dui0774/i/compiler-command-line-options/-ffast-math-fno-fast-math">https://developer.arm.com/docs/dui0774/i/compiler-command-line-options/-ffast-math-fno-fast-math</A>)
+
+On debugging this further, this is due to a comparison mismatch in the verify_benchmark function.
+If I modify the code with some debug printf statements:
+                printf (&quot;first check: %8.8e\n&quot;, fabs (expSumA - SumA));
+                printf (&quot;second check: %8.8e\n&quot;, fabs (expSumB - SumB));
+                printf (&quot;third check: %8.8e\n&quot;, fabs (expCoef - Coef));
+                printf (&quot;Coef %8.8e, expCoef %8.8e\n&quot;, Coef, expCoef);
+
+                return (fabs (expSumA - SumA) &lt; 1.0e13)
+    &amp;&amp; (fabs (expSumB - SumB) &lt; 1.0e-13) &amp;&amp; (fabs (expCoef - Coef) &lt; 1.0e-17);
+
+I see the following output:
+
+first check: 0.00000000e+00
+
+second check: 0.00000000e+00
+
+third check: 2.22044605e-16
+
+Coef 9.99900055e-01, expCoef 9.99900055e-01
+
+(It also looks like there's a code error here, since the first comparison is &lt;1e13, the second is &lt;1e-13. Shouldn't the first also be 1e-13?)
+
+The third check result about causes the test to fail since the third comparison looks for an error of less than 1e-17. Is there a particular reason for a tighter threshold on the third check? In fact the absolute difference is less than 1e-17, it's just that the comparison is done quickly and introduces some error. Can it be relaxed to 1e-13 to match the other comparisons? I don't know where those numbers have been derived from.
+
+Regards,
+
+Jon
+
+
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://lists.librecores.org/pipermail/embench/attachments/20191002/5408ea51/attachment.htm">http://lists.librecores.org/pipermail/embench/attachments/20191002/5408ea51/attachment.htm</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message (by thread): <A HREF="000017.html">[Embench] Floating point accuracy
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#16">[ date ]</a>
+              <a href="thread.html#16">[ thread ]</a>
+              <a href="subject.html#16">[ subject ]</a>
+              <a href="author.html#16">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

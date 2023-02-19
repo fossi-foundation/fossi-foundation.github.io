@@ -1,0 +1,287 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] Interrupts ( Embench Digest, Vol 16, Issue 2)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Interrupts%20%28%20Embench%20Digest%2C%20Vol%2016%2C%20Issue%202%29&In-Reply-To=%3CFE9F760E-72AC-499E-A65F-71B2C4779096%40chipless.eu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000087.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] Interrupts ( Embench Digest, Vol 16, Issue 2)</H1>
+    <B>Roger Shepherd</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Interrupts%20%28%20Embench%20Digest%2C%20Vol%2016%2C%20Issue%202%29&In-Reply-To=%3CFE9F760E-72AC-499E-A65F-71B2C4779096%40chipless.eu%3E"
+       TITLE="[Embench] Interrupts ( Embench Digest, Vol 16, Issue 2)">roger.shepherd at chipless.eu
+       </A><BR>
+    <I>Mon Nov 16 12:36:08 CET 2020</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000087.html">[Embench] Embench Digest, Vol 16, Issue 2
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#88">[ date ]</a>
+              <a href="thread.html#88">[ thread ]</a>
+              <a href="subject.html#88">[ subject ]</a>
+              <a href="author.html#88">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>I think I may be missing a little context for this discussion. Has the rationale or objectives for this benchmark been written? From my experience, doing so exposes a lot of choices that have to be made, and how those choices get made depends on what you are trying to do. I don’t have a good way to structure the issues so the rest of this mail may seem a little unstructured - sorry - and it certainly isn’t comprehensive. Its purpose is to encourage the creation of a rationale.
+
+
+1. Software environment
+
+What is the software environment that we are concerned with? Bare machine? Language system? Small/real-time kernel or operating system? What environment does “an interrupt” execute in? What can an interrupt do to the rest of the software system?
+
+For example, if the processor is running a &quot;language system” and the software run in an interrupt is written in that language, then the latency of the interrupt ought to include the cost of setting up the environment that the interrupt software runs in. And the “overhead” cost of taking the interrupt should include that set-up cost and the corresponding break-down cost on exit.
+
+Another example, some processors have mechanisms which may help with interrupt latency and overhead, but it turns out that these mechanisms can’t (or aren’t) used by an operating system. (I recall this is why the original MIPS architecture did not have vectored interrupts - Unix funnelled all interrupts through the same hole).
+
+Finally, when running a full-blown operating system, the interrupt latency can be determined by how long various locks are held within the operating system - and these can be long.
+
+
+2. Hardware environment
+
+What’s the structure of the computer system? The memory structure matters. Even without caches the memory system is often not uniform - on-chip RAM, ROM, FLASH, external SRAM, DRAM. E.G. 1. You may get faster response if your interrupt code lives in SRAM rather than FLASH - does your software system let you exploit this? E.G. 2. DRAM refresh cycles can increase latency.
+
+
+3. Nested interrupts
+
+Is there an interest in measuring the behaviour of multiple, prioritised interrupts?
+
+
+4. Latency
+
+I’m interested in how long it takes from an EVENT occurring to the processor taking an ACTION.
+
+What EVENTS? - internal (e.g. timers), software generated, external?
+
+What ACTIONS? Changing some internal state? Causing something to happen externally?
+
+
+5. Cost
+
+How much time - above that needed for the action of the interrupt - does taking the interrupt cost? This would include environment set-up and break-down for the interrupt code, but might also include the cost of re-executing a long-running instruction that was abandoned when the interrupt was taken.
+
+There’s also the impact that one interrupt might have on another. Even without the complexity of a prioritised multiple interrupt system, there is the question of the latency (etc) of a second interrupt, for example, assuming interrupts don’t do anything except set-up, break-down and return.
+
+
+6. Jitter
+
+What is the distribution of the latency?
+
+
+7. How are measurements to be made?
+
+And does the act of measuring affect the behaviour?
+
+
+I only have three strong opinions about this. The first is that we do need to set out our objectives. The second is that we have to keep things simple. And the third is that we ought to consider the software context.
+
+
+Best
+
+Roger
+
+
+
+&gt;<i> On 15 Nov 2020, at 07:04, Ronen Haen &lt;<A HREF="https://lists.librecores.org/listinfo/embench">Ronen.Haen at wdc.com</A>&gt; wrote:
+</I>&gt;<i> 
+</I>&gt;<i> Hi,
+</I>&gt;<i> 
+</I>&gt;<i> 1. Jon, M_PSP_PUSH and M_PSP_POP are context save/restore; this initial proposal only includes measurements w/o FW overhead. Next step would be adding FW overhead (called into a c-function interrupt handler)
+</I>&gt;<i> 2. Jeremy, I can present this proposal at Monday's meeting.
+</I>&gt;<i> 
+</I>&gt;<i> Thanks,
+</I>&gt;<i> Ronen
+</I>&gt;<i> 
+</I>&gt;<i> -----Original Message-----
+</I>&gt;<i> From: Embench &lt;<A HREF="https://lists.librecores.org/listinfo/embench">embench-bounces at lists.librecores.org</A>&gt; On Behalf Of <A HREF="https://lists.librecores.org/listinfo/embench">embench-request at lists.librecores.org</A>
+</I>&gt;<i> Sent: Friday, 13 November 2020 13:00
+</I>&gt;<i> To: <A HREF="https://lists.librecores.org/listinfo/embench">embench at lists.librecores.org</A>
+</I>&gt;<i> Subject: Embench Digest, Vol 16, Issue 2
+</I>&gt;<i> 
+</I>&gt;<i> CAUTION: This email originated from outside of Western Digital. Do not click on links or open attachments unless you recognize the sender and know that the content is safe.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Send Embench mailing list submissions to
+</I>&gt;<i>        <A HREF="https://lists.librecores.org/listinfo/embench">embench at lists.librecores.org</A>
+</I>&gt;<i> 
+</I>&gt;<i> To subscribe or unsubscribe via the World Wide Web, visit
+</I>&gt;<i>        <A HREF="https://lists.librecores.org/listinfo/embench">https://lists.librecores.org/listinfo/embench</A>
+</I>&gt;<i> or, via email, send a message with subject or body 'help' to
+</I>&gt;<i>        <A HREF="https://lists.librecores.org/listinfo/embench">embench-request at lists.librecores.org</A>
+</I>&gt;<i> 
+</I>&gt;<i> You can reach the person managing the list at
+</I>&gt;<i>        <A HREF="https://lists.librecores.org/listinfo/embench">embench-owner at lists.librecores.org</A>
+</I>&gt;<i> 
+</I>&gt;<i> When replying, please edit your Subject line so it is more specific than &quot;Re: Contents of Embench digest...&quot;
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Today's Topics:
+</I>&gt;<i> 
+</I>&gt;<i>   1. Re: PR - RV interrupt latency benchmark proposal (Jon Taylor)
+</I>&gt;<i>   2. Re: PR - RV interrupt latency benchmark proposal (Jeremy Bennett)
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> ----------------------------------------------------------------------
+</I>&gt;<i> 
+</I>&gt;<i> Message: 1
+</I>&gt;<i> Date: Fri, 13 Nov 2020 08:00:48 +0000
+</I>&gt;<i> From: Jon Taylor &lt;<A HREF="https://lists.librecores.org/listinfo/embench">Jon.Taylor at arm.com</A>&gt;
+</I>&gt;<i> To: &quot;<A HREF="https://lists.librecores.org/listinfo/embench">embench at lists.librecores.org</A>&quot; &lt;<A HREF="https://lists.librecores.org/listinfo/embench">embench at lists.librecores.org</A>&gt;
+</I>&gt;<i> Cc: nd &lt;<A HREF="https://lists.librecores.org/listinfo/embench">nd at arm.com</A>&gt;
+</I>&gt;<i> Subject: Re: [Embench] PR - RV interrupt latency benchmark proposal
+</I>&gt;<i> Message-ID:
+</I>&gt;<i>        &lt;<A HREF="https://lists.librecores.org/listinfo/embench">AM5PR0801MB16511F6DCDEF4918FE04543393E60 at AM5PR0801MB1651.eurprd08.prod.outlook.com</A>&gt;
+</I>&gt;<i> 
+</I>&gt;<i> Content-Type: text/plain; charset=&quot;utf-8&quot;
+</I>&gt;<i> 
+</I>&gt;<i> Hi Ronen,
+</I>&gt;<i> 
+</I>&gt;<i> Thanks for sharing this. Please can you clarify the macros M_PSP_PUSH and M_PSP_POP? I can’t see them in the embench tree anywhere. I assume they’re some sort of context save/restore.
+</I>&gt;<i> 
+</I>&gt;<i> What I would observe is that by stopping the timer as soon as you enter the ASM interrupt handler, there’s no timing of a C prologue that you’d need if the handler was a c-function (or called into a c-function). Would it be more representative to stop the timer once the code has reached the specific C handler function?
+</I>&gt;<i> 
+</I>&gt;<i> Regards,
+</I>&gt;<i> 
+</I>&gt;<i> Jon
+</I>&gt;<i> 
+</I>&gt;<i> From: Embench &lt;<A HREF="https://lists.librecores.org/listinfo/embench">embench-bounces at lists.librecores.org</A>&gt; On Behalf Of Ronen Haen
+</I>&gt;<i> Sent: 10 November 2020 07:57
+</I>&gt;<i> To: <A HREF="https://lists.librecores.org/listinfo/embench">embench at lists.librecores.org</A>
+</I>&gt;<i> Subject: [Embench] PR - RV interrupt latency benchmark proposal
+</I>&gt;<i> 
+</I>&gt;<i> Hi All,
+</I>&gt;<i> 
+</I>&gt;<i> I’ve created a PR <A HREF="https://github.com/embench/embench-context-latency/pull/1">https://github.com/embench/embench-context-latency/pull/1</A>
+</I>&gt;<i> Your comments would be much appreciated.
+</I>&gt;<i> 
+</I>&gt;<i> Thanks,
+</I>&gt;<i> Ronen
+</I>&gt;<i> 
+</I>&gt;<i> -------------- next part --------------
+</I>&gt;<i> An HTML attachment was scrubbed...
+</I>&gt;<i> URL: &lt;<A HREF="http://lists.librecores.org/pipermail/embench/attachments/20201113/4f7474f3/attachment-0001.htm">http://lists.librecores.org/pipermail/embench/attachments/20201113/4f7474f3/attachment-0001.htm</A>&gt;
+</I>&gt;<i> 
+</I>&gt;<i> ------------------------------
+</I>&gt;<i> 
+</I>&gt;<i> Message: 2
+</I>&gt;<i> Date: Fri, 13 Nov 2020 08:25:29 +0000
+</I>&gt;<i> From: Jeremy Bennett &lt;<A HREF="https://lists.librecores.org/listinfo/embench">jeremy.bennett at embecosm.com</A>&gt;
+</I>&gt;<i> To: <A HREF="https://lists.librecores.org/listinfo/embench">embench at lists.librecores.org</A>
+</I>&gt;<i> Subject: Re: [Embench] PR - RV interrupt latency benchmark proposal
+</I>&gt;<i> Message-ID: &lt;<A HREF="https://lists.librecores.org/listinfo/embench">a56992e2-3f6c-cedb-8398-4f17f7a26920 at embecosm.com</A>&gt;
+</I>&gt;<i> Content-Type: text/plain; charset=utf-8
+</I>&gt;<i> 
+</I>&gt;<i> -----BEGIN PGP SIGNED MESSAGE-----
+</I>&gt;<i> Hash: SHA1
+</I>&gt;<i> 
+</I>&gt;<i> On 10/11/2020 07:57, Ronen Haen wrote:
+</I>&gt;&gt;<i> Hi All,
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> I’ve created a PR
+</I>&gt;&gt;<i> <A HREF="https://github.com/embench/embench-context-latency/pull/1">https://github.com/embench/embench-context-latency/pull/1</A>
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Your comments would be much appreciated.
+</I>&gt;<i> 
+</I>&gt;<i> Hi Ronen,
+</I>&gt;<i> 
+</I>&gt;<i> Thanks for your work on this. Would you be willing to present it at Monday's meeting?
+</I>&gt;<i> 
+</I>&gt;<i> Best wishes,
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Jeremy
+</I>&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Thanks,
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Ronen
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> - --
+</I>&gt;<i> Cell: +44 (7970) 676050
+</I>&gt;<i> SkypeID: jeremybennett
+</I>&gt;<i> Twitter: @jeremypbennett
+</I>&gt;<i> Email: <A HREF="https://lists.librecores.org/listinfo/embench">jeremy.bennett at embecosm.com</A>
+</I>&gt;<i> Web: www.embecosm.com
+</I>&gt;<i> PGP key: 1024D/BEF58172FB4754E1 2009-03-20 -----BEGIN PGP SIGNATURE-----
+</I>&gt;<i> 
+</I>&gt;<i> iF0EARECAB0WIQRASGDWqmhRZUfAaPW+9YFy+0dU4QUCX65C9wAKCRC+9YFy+0dU
+</I>&gt;<i> 4bDOAKCTp+wLivNj43/TFU2Bu69RcvQy+gCeISukpRMbSwSRLqJWpFSxt96B324=
+</I>&gt;<i> =3XSm
+</I>&gt;<i> -----END PGP SIGNATURE-----
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> ------------------------------
+</I>&gt;<i> 
+</I>&gt;<i> Subject: Digest Footer
+</I>&gt;<i> 
+</I>&gt;<i> Embench mailing list
+</I>&gt;<i> <A HREF="https://lists.librecores.org/listinfo/embench">Embench at lists.librecores.org</A>
+</I>&gt;<i> <A HREF="https://lists.librecores.org/listinfo/embench">https://lists.librecores.org/listinfo/embench</A>
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> ------------------------------
+</I>&gt;<i> 
+</I>&gt;<i> End of Embench Digest, Vol 16, Issue 2
+</I>&gt;<i> **************************************
+</I>&gt;<i> --
+</I>&gt;<i> Embench mailing list
+</I>&gt;<i> <A HREF="https://lists.librecores.org/listinfo/embench">Embench at lists.librecores.org</A>
+</I>&gt;<i> <A HREF="https://lists.librecores.org/listinfo/embench">https://lists.librecores.org/listinfo/embench</A>
+</I>
+--
+Roger Shepherd
+<A HREF="https://lists.librecores.org/listinfo/embench">roger.shepherd at chipless.eu</A>
+
+
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://lists.librecores.org/pipermail/embench/attachments/20201116/61f778ec/attachment.htm">http://lists.librecores.org/pipermail/embench/attachments/20201116/61f778ec/attachment.htm</A>&gt;
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 833 bytes
+Desc: Message signed with OpenPGP
+URL: &lt;<A HREF="http://lists.librecores.org/pipermail/embench/attachments/20201116/61f778ec/attachment.sig">http://lists.librecores.org/pipermail/embench/attachments/20201116/61f778ec/attachment.sig</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000087.html">[Embench] Embench Digest, Vol 16, Issue 2
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#88">[ date ]</a>
+              <a href="thread.html#88">[ thread ]</a>
+              <a href="subject.html#88">[ subject ]</a>
+              <a href="author.html#88">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

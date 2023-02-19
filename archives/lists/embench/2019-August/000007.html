@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] Use of assert
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Use%20of%20assert&In-Reply-To=%3CDB7PR08MB42179C7B33928CB0A33C7A4093A20%40DB7PR08MB4217.eurprd08.prod.outlook.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000008.html">
+   <LINK REL="Next"  HREF="000009.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] Use of assert</H1>
+    <B>Jon Taylor</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Use%20of%20assert&In-Reply-To=%3CDB7PR08MB42179C7B33928CB0A33C7A4093A20%40DB7PR08MB4217.eurprd08.prod.outlook.com%3E"
+       TITLE="[Embench] Use of assert">Jon.Taylor at arm.com
+       </A><BR>
+    <I>Thu Aug 29 10:16:22 CEST 2019</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000008.html">[Embench] How to measure code size fairly
+</A></li>
+        <LI>Next message (by thread): <A HREF="000009.html">[Embench] Use of assert
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#7">[ date ]</a>
+              <a href="thread.html#7">[ thread ]</a>
+              <a href="subject.html#7">[ subject ]</a>
+              <a href="author.html#7">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>The nettle-aes and nettle-sha256 tests both have assert statements in the code.
+
+Having in the other thread suggested that it's important to include libraries, I think assert is a different case as it isn't really a core part of the benchmark functionality. In the benchmark situation, the stimulus will be constant, and the asserts won't be triggered. However if the code is built with real libraries (as opposed to dummies), the library code for assert is a significant size (~20k for RISC-V, ~12k for Arm vs a test size of ~3k). I propose they are removed - their use is primarily debug/error handling and I'm not sure that has value within Embench.
+
+Related to the library and size thread, assert also creates a challenge in calculating overhead, since assert uses some code in common with printf. This means that if printf is used in other common code (eg UART output), the size differential between the nettle tests and the empty test does not give an accurate size calculation. If library size is included in the overall benchmark measurement, then we need to try and make the common library code as consistent as possible. Multiple dummy/empty tests might be another approach, but that adds a maintenance overhead.
+
+I'm happy to be challenged on this if I've missed a good reason for leaving them in place.
+
+Kind regards,
+
+Jon
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://lists.librecores.org/pipermail/embench/attachments/20190829/c9a30f39/attachment.htm">http://lists.librecores.org/pipermail/embench/attachments/20190829/c9a30f39/attachment.htm</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000008.html">[Embench] How to measure code size fairly
+</A></li>
+	<LI>Next message (by thread): <A HREF="000009.html">[Embench] Use of assert
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#7">[ date ]</a>
+              <a href="thread.html#7">[ thread ]</a>
+              <a href="subject.html#7">[ subject ]</a>
+              <a href="author.html#7">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

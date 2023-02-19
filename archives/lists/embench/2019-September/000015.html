@@ -1,0 +1,182 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] Embench meeting/call 16 Sep 2019
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Embench%20meeting/call%2016%20Sep%202019&In-Reply-To=%3C4793862f-e1c1-4723-b29a-6ddf38048549%40embecosm.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000013.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] Embench meeting/call 16 Sep 2019</H1>
+    <B>Jeremy Bennett</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Embench%20meeting/call%2016%20Sep%202019&In-Reply-To=%3C4793862f-e1c1-4723-b29a-6ddf38048549%40embecosm.com%3E"
+       TITLE="[Embench] Embench meeting/call 16 Sep 2019">jeremy.bennett at embecosm.com
+       </A><BR>
+    <I>Sat Sep 14 14:23:57 CEST 2019</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000013.html">[Embench] Compilation warnings
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#15">[ date ]</a>
+              <a href="thread.html#15">[ thread ]</a>
+              <a href="subject.html#15">[ subject ]</a>
+              <a href="author.html#15">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Hi all,
+
+A reminder that our next regular meeting of the Embench group will be
+next Monday, 16 September, 8-10am California time.
+
+We will meet using the same Zoom details as before. Please email me if
+you do not have them - I am reluctant to post details on an open
+mailing list.
+
+Agenda
+======
+
+1. Sysadmin, github, mailing list and web analytics
+- ---------------------------------------------------
+
+Cesare Garlati's context switching benchmark has been moved into the
+Embench github organization:
+
+  <A HREF="https://github.com/embench/embench-context-latency">https://github.com/embench/embench-context-latency</A>
+
+Cesare Garlati to report on website analytics.
+
+2. Build system
+- ---------------
+
+The python build system has been merged and is stable.
+
+Jeremy Bennett is working on a new version, which will give greater
+flexibility when building for real hardware and with multipass
+compilation (for example when using PGO or iterative compilation).
+
+This is the interim solution. Our plan is to move to Western Digital's
+enterprise build system in 2020.
+
+3. Update on benchmarks
+- -----------------------
+
+Jon Taylor and Cesare Garlati to update on crypto benchmarks.
+
+No response to mailing list request for help with BlueTooth LE.
+
+Jeremy Bennett to report on progress porting the context switch
+benchmark to ARM.
+
+Two benchmarks use assert() macros, which pull in a huge amount of
+library for code that should never be invoked. These have been
+replaced with a simple dummy assert macro, which just calls exit() if
+ever triggered. This is the same approach used with other library
+calls, such as rand() to ensure reproducibility. See the discussion at
+
+  <A HREF="https://lists.librecores.org/pipermail/embench/2019-August/000007.html">https://lists.librecores.org/pipermail/embench/2019-August/000007.html</A>
+
+4. Process and documentation
+- ----------------------------
+
+Peter Torelli to report on feedback from the EEMBC committee.
+
+Jon Taylor and Dave Patterson to report on progress with documentation.
+
+There is an ongoing discussion on the mailing list about how to
+measure size of compiled code. Please join in. In due course the
+benchmark scripts will reflect the outcome of this discussion.
+
+  <A HREF="https://lists.librecores.org/pipermail/embench/2019-August/000005.html">https://lists.librecores.org/pipermail/embench/2019-August/000005.html</A>
+
+There is a known issue with the README on the GitHub repository being
+out of step with the new Python build scripts. Action for Jeremy
+Bennett to fix.
+
+5. Publicity
+- ------------
+
+All to report on speaking and other publicity opportunities.
+
+Dave Patterson has submitted a paper to Embedded World in Nuremberg,
+which we plan will be our official launch (February 2020).
+
+Dave has also submitted a talk to the RISC-V Summit in San Jose
+(December 2019).
+
+By the time of the meeting, Jeremy Bennett will have presented Embench
+at the GNU Tools Cauldron in Montreal
+
+Jeremy Bennett will present Embench at ORConf in Bordeaux at the end
+of September.
+
+6. More data
+- ------------
+
+Any reports on new data points.
+
+7. Next meeting
+- ---------------
+
+We meet regularly on the third Thursday of each month 8-10am
+California time. Our next meeting will be Monday 21 October.
+
+8. AOB
+- ------
+
+Best wishes,
+
+
+Jeremy
+Vice chair
+
+- -- 
+Tel: +44 (1590) 610184
+Cell: +44 (7970) 676050
+SkypeID: jeremybennett
+Twitter: @jeremypbennett
+Email: <A HREF="https://lists.librecores.org/listinfo/embench">jeremy.bennett at embecosm.com</A>
+Web: www.embecosm.com
+PGP key: 1024D/BEF58172FB4754E1 2009-03-20
+-----BEGIN PGP SIGNATURE-----
+
+iEYEARECAAYFAl1829cACgkQvvWBcvtHVOGaGgCfTvnR2kGnq7+/PMb+VW6Z+YQS
+xjEAn3kB8dn4zArDEiFuXEYALBhZaJ7F
+=ss9/
+-----END PGP SIGNATURE-----
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000013.html">[Embench] Compilation warnings
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#15">[ date ]</a>
+              <a href="thread.html#15">[ thread ]</a>
+              <a href="subject.html#15">[ subject ]</a>
+              <a href="author.html#15">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

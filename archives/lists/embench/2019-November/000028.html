@@ -1,0 +1,226 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] Embench meeting/call 18 Nov 2019
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Embench%20meeting/call%2018%20Nov%202019&In-Reply-To=%3C025eb75e-576f-85dd-c6f6-c1010ff0220b%40embecosm.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000027.html">
+   <LINK REL="Next"  HREF="000029.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] Embench meeting/call 18 Nov 2019</H1>
+    <B>Jeremy Bennett</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Embench%20meeting/call%2018%20Nov%202019&In-Reply-To=%3C025eb75e-576f-85dd-c6f6-c1010ff0220b%40embecosm.com%3E"
+       TITLE="[Embench] Embench meeting/call 18 Nov 2019">jeremy.bennett at embecosm.com
+       </A><BR>
+    <I>Thu Nov 14 19:57:40 CET 2019</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000027.html">[Embench] Improved documentation
+</A></li>
+        <LI>Next message (by thread): <A HREF="000029.html">[Embench] Notes for Embench meeting/call 21 Oct 2019
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#28">[ date ]</a>
+              <a href="thread.html#28">[ thread ]</a>
+              <a href="subject.html#28">[ subject ]</a>
+              <a href="author.html#28">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Hi all,
+
+A reminder that our next regular meeting of the Embench group will be
+on Monday, 18 November, 8-10am California time.
+
+We will meet using the same Zoom details as before. Please email me if
+you do not have them - I am reluctant to post details on an open
+mailing list.
+
+Agenda
+======
+
+1. Actions from previous meeting
+- --------------------------------
+
+(to follow - I realize I have not yet circulated the minutes)
+
+2. GitHub pull requests
+- -----------------------
+
+Pleasing activity from the community!!!
+
+I have dropped the requirement for a separate ChangeLog file, instead
+requiring that the commit log follow ChangeLog conventions. This gets
+rid of all the merge conflicts with the ChangeLog file!
+
+The following pull requests have been processed.
+
+<A HREF="https://github.com/embench/embench-iot/pull/14:">https://github.com/embench/embench-iot/pull/14:</A> Fix FP accuracy
+- - thanks to Koh Tsune
+- - small changes as suggested by Jon Taylor and merged
+
+<A HREF="https://github.com/embench/embench-iot/pull/15:">https://github.com/embench/embench-iot/pull/15:</A> Fix script exception
+handling.
+- - thanks to Koh Tsune
+- - merged
+
+<A HREF="https://github.com/embench/embench-iot/pull/17:">https://github.com/embench/embench-iot/pull/17:</A> Remove duplicate PI
+definition
+- - thanks to Koh Tsune
+- - rejected to preserve diversity in the code base as discussed
+
+<A HREF="https://github.com/embench/embench-iot/pull/18:">https://github.com/embench/embench-iot/pull/18:</A> Avoid use of long double
+- - thanks to Anton Blanchard
+- - rejected to keep long double example in code base
+
+<A HREF="https://github.com/embench/embench-iot/pull/19:">https://github.com/embench/embench-iot/pull/19:</A> use __int128 if available
+- - thanks to Anton Blanchard
+- - merged
+
+<A HREF="https://github.com/embench/embench-iot/pull/23:">https://github.com/embench/embench-iot/pull/23:</A> Ensure nbody uses its
+main function
+- - thanks to Koh Tsune for raising issue 16 on this
+- - merged
+
+<A HREF="https://github.com/embench/embench-iot/pull/24:">https://github.com/embench/embench-iot/pull/24:</A> Fix bugs in pull req 23
+- - thanks to Koh Tsune
+- - merged
+
+<A HREF="https://github.com/embench/embench-iot/pull/25:">https://github.com/embench/embench-iot/pull/25:</A> Check Python version
+- - thanks to Cooper Qu for raising issue 20 o nthis
+- - merged
+
+<A HREF="https://github.com/embench/embench-iot/pull/26:">https://github.com/embench/embench-iot/pull/26:</A> Fix spelling typo
+- - thanks to kneta2
+- - merged
+
+<A HREF="https://github.com/embench/embench-iot/pull/27:">https://github.com/embench/embench-iot/pull/27:</A> Update documentation
+and convert to Markdown
+- - thanks to me
+- - merged
+
+3. GitHub open issues
+- ---------------------
+
+We have two open issues. Comments welcome.
+
+<A HREF="https://github.com/embench/embench-iot/issues/21">https://github.com/embench/embench-iot/issues/21</A>
+
+Cooper Qu proposes an enhancement to &quot;freeze&quot; the Python code of the
+scripts for portability.
+
+<A HREF="https://github.com/embench/embench-iot/issues/6">https://github.com/embench/embench-iot/issues/6</A>
+
+Paul Götzinger gave good feedback on trying to run the benchmarks. We
+still need more documentation on how to run benchmarks on different
+targets.
+
+4. Website analytics
+- --------------------
+
+Update from Cesare Garlati
+
+5. Update on benchmarks
+- -----------------------
+
+Update on crypto, BluetoothLE benchmarks
+
+Update on porting context switch to Arm.
+
+6. EEMBC process
+- ----------------
+
+Jeremy to report on conversation with Peter Torelli.
+
+7. Process and documentation
+- ----------------------------
+
+Jon Taylor and Dave Patterson to report on progress with documentation.
+
+8. Publicity
+- ------------
+
+I now have control of @EmbenchOrg on Twitter
+(<A HREF="https://twitter.com/EmbenchOrg">https://twitter.com/EmbenchOrg</A>). Let me know if there is anything I
+should be tweeting.
+
+All to report on speaking and other publicity opportunities.
+
+I propose submitting a main track talk to FOSDEM (1-2 February,
+Brussels) on Embench. There is fierce competition for these slots. It
+is a big audience (5-8k attendees, 1,500 seater lecture theatre, live
+streamed). Who should be the speaker?
+
+I'll also submit a talk on using Embench to evaluate LLVM to the
+FOSDEM LLVM Dev Room.
+
+9. More data
+- ------------
+
+I hope to report a set of data on code size for ARC, Arm and RISC-V
+for a range of architecture variants.
+
+10. Next meeting
+- ---------------
+
+We meet regularly on the third Thursday of each month 8-10am
+California time. Our next meeting will be Monday 16 December.
+
+11. AOB
+- ------
+
+Best wishes,
+
+
+Jeremy
+Vice chair
+
+- -- 
+Tel: +44 (1590) 610184
+Cell: +44 (7970) 676050
+SkypeID: jeremybennett
+Twitter: @jeremypbennett
+Email: <A HREF="https://lists.librecores.org/listinfo/embench">jeremy.bennett at embecosm.com</A>
+Web: www.embecosm.com
+PGP key: 1024D/BEF58172FB4754E1 2009-03-20
+-----BEGIN PGP SIGNATURE-----
+
+iEYEARECAAYFAl3No6MACgkQvvWBcvtHVOFkYwCcCsWf5i32dpITxZOLvzA/4L96
+yp4AnRFIa3jtcYnbZuSowlKREC/An3el
+=PiEn
+-----END PGP SIGNATURE-----
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000027.html">[Embench] Improved documentation
+</A></li>
+	<LI>Next message (by thread): <A HREF="000029.html">[Embench] Notes for Embench meeting/call 21 Oct 2019
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#28">[ date ]</a>
+              <a href="thread.html#28">[ thread ]</a>
+              <a href="subject.html#28">[ subject ]</a>
+              <a href="author.html#28">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

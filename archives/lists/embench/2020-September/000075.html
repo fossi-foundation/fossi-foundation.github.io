@@ -1,0 +1,274 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] Embench meeting/call 20 September 2020
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Embench%20meeting/call%2020%20September%202020&In-Reply-To=%3C1e32fc8b-b718-8000-f166-217376a5bf6a%40embecosm.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] Embench meeting/call 20 September 2020</H1>
+    <B>Jeremy Bennett</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Embench%20meeting/call%2020%20September%202020&In-Reply-To=%3C1e32fc8b-b718-8000-f166-217376a5bf6a%40embecosm.com%3E"
+       TITLE="[Embench] Embench meeting/call 20 September 2020">jeremy.bennett at embecosm.com
+       </A><BR>
+    <I>Sun Sep 20 15:22:36 CEST 2020</I>
+    <P><UL>
+        
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#75">[ date ]</a>
+              <a href="thread.html#75">[ thread ]</a>
+              <a href="subject.html#75">[ subject ]</a>
+              <a href="author.html#75">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Hi all,
+
+Our next regular meeting of the Embench group will be tomorrow Monday,
+20 September, 8-9am California time. We shall meet using the same Zoom
+details as before.
+
+Please email me if you do not have the Zoom meeting details - I am
+reluctant to post details on an open mailing list.
+
+Agenda
+======
+
+1. Actions from previous meeting
+- --------------------------------
+
+ACTION: Jeremy to add tutorial example to reproduce baseline results
+in documentation.
+- - captured as GitHub issue 68
+- - in progress
+
+ACTION (ongoing): Roger Shepherd to provide Embench results for ST dev
+boards, Apple Macs and Raspberry Pi.
+- - in progress
+
+ACTION: Jeremy Bennett/Paolo Savini to attempt to get results for
+Atmel AVR using Arduino.
+- - in progress
+
+ACTION: Jeremy Bennett to explore alternatives to Google Docs for
+presentations
+- - Open Document Format version prepared
+- - hieroglyph version in progress
+
+ACTION (ongoing): Ray Simar to set class project to come up with new
+benchmarks based on the TinyML book.
+- - in porgress
+- - Ray to report in item 6
+
+ACTION: Jeremy Bennett to update documentation to advise that Python
+minimum version 3.6 is required.
+- - in progress
+
+2. GitHub pull requests
+- -----------------------
+
+- From embench-iot:
+
+<A HREF="https://github.com/embench/embench-iot/pull/86">https://github.com/embench/embench-iot/pull/86</A>
+- - update doc/README.md to explain Python module naming
+- - merged
+- - thanks to Roger Shepherd for the fix
+
+<A HREF="https://github.com/embench/embench-iot/pull/88">https://github.com/embench/embench-iot/pull/88</A>
+- - fix GCC specific and ISO C compliance error
+- - resolves issue 72
+- - merged
+- - thanks to Paolo Savini for the fix
+
+<A HREF="https://github.com/embench/embench-iot/pull/90">https://github.com/embench/embench-iot/pull/90</A>
+- - fix error in result decoding
+- - merged
+- - thanks to Samuel Obuch for the fix
+
+<A HREF="https://github.com/embench/embench-iot/pull/91">https://github.com/embench/embench-iot/pull/91</A>
+- - log all arguments on failure of benchmark_speed.py
+- - merged
+- - thanks to Samuel Obuch for the fix
+
+<A HREF="https://github.com/embench/embench-iot/pull/92">https://github.com/embench/embench-iot/pull/92</A>
+- - fix typo in comment
+- - merged
+- - thanks to Roger Shepherd for the fix
+
+- From embench-iot-results:
+
+None
+
+3. New GitHub issues
+- --------------------
+
+- From embench-iot:
+
+<A HREF="https://github.com/embench/embench-iot/issues/87">https://github.com/embench/embench-iot/issues/87</A>
+- - note python prequisite version
+- - bug assigned to Jeremy Bennett
+- - in progress
+- - thanks to Ofer Shinaar for raising this
+
+<A HREF="https://github.com/embench/embench-iot/issues/89">https://github.com/embench/embench-iot/issues/89</A>
+- - problems building benchmark
+- - resolved
+- - thanks to Nagendra Gulur for raising this
+- - thanks to Samuel Obuch for the resolution
+
+<A HREF="https://github.com/embench/embench-iot/issues/93">https://github.com/embench/embench-iot/issues/93</A>
+- - need for a standard citation for Embench
+- - see agenda item 5
+- - thanks to Ben Marshall for raising this
+
+<A HREF="https://github.com/embench/embench-iot/issues/94">https://github.com/embench/embench-iot/issues/94</A>
+- - how to reproduce Embench for riscv32
+- - assigned to Jeremy Bennett &amp; Paolo Savini
+- - discussion in progress
+- - thanks to Huaqi Fang for raising this
+
+- From embench-iot-results:
+
+None
+
+4. Update on benchmarks
+- -----------------------
+
+Roger Shepherd will report on his progress with benchmarking other
+platforms.
+
+Paolo Savini and Jeremy Bennett have recently re-run the Embench 0.5
+benchmarks to obtain data for GCC 10.2 and a historical record of
+performance for Arm on versions of Clang/LLVM. They will report results
+
+5. Publicity
+- ------------
+
+Stefan Wallentowitz is putting together an interview style blog post
+about Embench, based on interview responses from Dave Patterson and
+Jeremy Bennett
+
+A new version of a generic presentation on Embench will be circulated
+at the meeting.
+
+Ben Marshall has raised the question of a standard citation for
+Embench. Currently he is using:
+
+@misc{embench-iot,
+title={Embench: Open Benchmarks for Embedded Platforms},
+author={David Patterson and Jeremy Bennett and Palmer Dabbelt, Cesare
+Garlati and G. S. Madhusudan and Trevor Mudge},
+howpublished=&quot;\url{<A HREF="https://github.com/embench/embench-iot">https://github.com/embench/embench-iot</A>}&quot;
+}
+
+He has asked if there is a better citation he should be using.
+
+Jeremy Bennett is giving a keynote talk at the 3rd Workshop on RISC-V
+Activities held by Edacentrum, Germany. The talk will be looking at
+the RISC-V Software Ecosystem. The final part of the talk explores the
+importance of benchmarking in developing that ecosystem.
+
+- - workshop: <A HREF="https://www.edacentrum.de/en/events/risc-v/2020/program">https://www.edacentrum.de/en/events/risc-v/2020/program</A>
+- - talk abstract: <A HREF="https://www.edacentrum.de/risc-v-software-ecosystem">https://www.edacentrum.de/risc-v-software-ecosystem</A>
+
+Jeremy Bennett is speaking at VSDOpen on 10 October, a conference for
+students in India. Although the talk has quite a broad abstract, it
+will use Embench as an example of the bridge between hardware and
+software in open source.
+- - conference: <A HREF="https://www.vlsisystemdesign.com/vsdopen/">https://www.vlsisystemdesign.com/vsdopen/</A>
+
+6. Embench 0.6
+- --------------
+
+There is an ongoing shared document to add potential programs for a
+new floating point benchmark suite:
+
+<A HREF="https://docs.google.com/document/d/1tC0LXZRYeyoSRTM9aXtapzx3sA00vfFcL9QjOxU3vzQ">https://docs.google.com/document/d/1tC0LXZRYeyoSRTM9aXtapzx3sA00vfFcL9QjOxU3vzQ</A>
+
+Ray Sinar and his students at RICE are leading the effort to develop
+the FP benchmark suite with his students during the coming semester.
+Ray to report.
+
+A reminder that we need volunteers to lead particular aspects of
+current and future efforts.
+
+7. Next meeting
+- ---------------
+
+We currently meet regularly on the third Monday of each month 8-9am
+California time. Our future meetings will be. Note that the Decmember
+date has been changed to avoid the week before Christmas.
+- - Mon 19 Oct 2020
+- - Mon 16 Nov 2020
+- - Mon 14 Dec 2020 (changed)
+
+The following dates are proposed for 2020
+
+- - Mon 18 Jan 2021 (Martin Luther King Jr day)
+- - Mon 15 Feb 2021
+- - Mon 15 Mar 2021
+- - Mon 19 Apr 2021
+- - Mon 17 May 2021
+- - Mon 21 Jun 2021
+- - Mon 19 Jul 2021
+- - Mon 16 Aug 2021
+- - Mon 21 Sep 2021
+- - Mon 18 Oct 2021
+- - Mon 15 Nov 2021
+- - Mon 13 Dec 2021 (week 2, to keep clear of Christmas)
+
+Do we need to move the January meeting to week 2?
+
+I've created a calendar entry for our regular attendees, to provide
+automated reminders. Please ask if you wish to be added to this.
+
+8. AOB
+- ------
+
+Best wishes,
+
+
+Jeremy Bennett
+Vice chair
+-----BEGIN PGP SIGNATURE-----
+
+iF0EARECAB0WIQRASGDWqmhRZUfAaPW+9YFy+0dU4QUCX2dXmgAKCRC+9YFy+0dU
+4cFfAJ9AkPxUe48kydKdierOm+XZajkBAgCggO1DqSXGFAFuAoJTYVROrYKMWr8=
+=evLf
+-----END PGP SIGNATURE-----
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#75">[ date ]</a>
+              <a href="thread.html#75">[ thread ]</a>
+              <a href="subject.html#75">[ subject ]</a>
+              <a href="author.html#75">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] Issues with cubic benchmark
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Issues%20with%20cubic%20benchmark&In-Reply-To=%3C6f76960d-0950-340d-e967-bb74afe7c624%40embecosm.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000025.html">
+   <LINK REL="Next"  HREF="000027.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] Issues with cubic benchmark</H1>
+    <B>Jeremy Bennett</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Issues%20with%20cubic%20benchmark&In-Reply-To=%3C6f76960d-0950-340d-e967-bb74afe7c624%40embecosm.com%3E"
+       TITLE="[Embench] Issues with cubic benchmark">jeremy.bennett at embecosm.com
+       </A><BR>
+    <I>Sun Nov  3 16:58:36 CET 2019</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000025.html">[Embench] 128-bit integer support in Embench (pull request #19)
+</A></li>
+        <LI>Next message (by thread): <A HREF="000027.html">[Embench] Improved documentation
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#26">[ date ]</a>
+              <a href="thread.html#26">[ thread ]</a>
+              <a href="subject.html#26">[ subject ]</a>
+              <a href="author.html#26">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+On 22/10/19 01:19, Anton Blanchard wrote:
+&gt;<i> Hi,
+</I>&gt;<i> 
+</I>&gt;&gt;<i> Cubic uses long double which is not standardized. On x86-64 it 
+</I>&gt;&gt;<i> provides only 80 bits of precision, but on other architectures
+</I>&gt;&gt;<i> it provides either 64 bits or 128 bits of precision.
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> This not only means that we aren't computing the same results,
+</I>&gt;&gt;<i> but we are also unfairly penalising architectures that use a 128
+</I>&gt;&gt;<i> bit long double. Those architectures often have a software
+</I>&gt;&gt;<i> emulation library for 128 bit floating point arithmetic. It was
+</I>&gt;&gt;<i> also pointed out to me that the benchmark isn't consistently
+</I>&gt;&gt;<i> using long double - it's using double versions of the
+</I>&gt;&gt;<i> transcendental functions.
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> I would suggest using double everywhere so that all architectures
+</I>&gt;&gt;<i> are doing identical computations.
+</I>&gt;<i> 
+</I>&gt;<i> A potential fix:
+</I>&gt;<i> 
+</I>&gt;<i> <A HREF="https://github.com/embench/embench-iot/pull/18">https://github.com/embench/embench-iot/pull/18</A>
+</I>
+Hi Anton,
+
+Thanks for this and sorry for the slow reply while I've been away.
+
+I've commented on this in the pull request and posted a separate email
+to the mailing list, since I think there are arguments for and
+against. We'll see if anyone has any comments to make. If not, I'll
+merge your suggestion.
+
+Thanks for contributing.
+
+Best wishes,
+
+
+Jeremy
+
+&gt;<i> 
+</I>&gt;<i> Thanks, Anton
+</I>&gt;<i> 
+</I>
+
+- -- 
+Tel: +44 (1590) 610184
+Cell: +44 (7970) 676050
+SkypeID: jeremybennett
+Twitter: @jeremypbennett
+Email: <A HREF="https://lists.librecores.org/listinfo/embench">jeremy.bennett at embecosm.com</A>
+Web: www.embecosm.com
+PGP key: 1024D/BEF58172FB4754E1 2009-03-20
+-----BEGIN PGP SIGNATURE-----
+
+iEYEARECAAYFAl2++SsACgkQvvWBcvtHVOH7RgCfQPQJAyreEV6wQ1svQwlWY+0g
+G2kAmgIScAZxDKvc9BY0QWcTN7/r/KMt
+=Fx+w
+-----END PGP SIGNATURE-----
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000025.html">[Embench] 128-bit integer support in Embench (pull request #19)
+</A></li>
+	<LI>Next message (by thread): <A HREF="000027.html">[Embench] Improved documentation
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#26">[ date ]</a>
+              <a href="thread.html#26">[ thread ]</a>
+              <a href="subject.html#26">[ subject ]</a>
+              <a href="author.html#26">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

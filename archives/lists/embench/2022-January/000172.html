@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] New embench user - building the benchmarks
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20New%20embench%20user%20-%20building%20the%20benchmarks&In-Reply-To=%3C5C07640B-0901-4B20-AC13-55934593C4E9%40g.hmc.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000171.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] New embench user - building the benchmarks</H1>
+    <B>David Harris</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20New%20embench%20user%20-%20building%20the%20benchmarks&In-Reply-To=%3C5C07640B-0901-4B20-AC13-55934593C4E9%40g.hmc.edu%3E"
+       TITLE="[Embench] New embench user - building the benchmarks">harris at g.hmc.edu
+       </A><BR>
+    <I>Thu Jan 27 20:21:03 CET 2022</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000171.html">[Embench] No Embench meeting in January 2022
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#172">[ date ]</a>
+              <a href="thread.html#172">[ thread ]</a>
+              <a href="subject.html#172">[ subject ]</a>
+              <a href="author.html#172">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hello!  We’re new to embench and trying to bring it up on a RISC-V core we are designing at Harvey Mudd College.
+
+Is there documentation or an example script or Makefile of how to build embench for RISC-V?  We’d really like an example command that works out of the box, and also demonstrates eliminating library code and using preferred optimization flags, so we know we are benchmarking consistently with other reported results.
+
+We cloned the embench-iot repo and are attempting to build with:
+
+./build_all.py --arch riscv32 --chip generic --board ri5cyverilator --cc riscv64-unknown-elf-gcc
+
+We get a bunch of undefined references listed below.  It looks like it might be prematurely trying to link.
+
+We tried adding some cflags shown below, and many of the benchmarks now build, but cubic, nbody, and st fail missing some math functions.  We tried adding --ldflags “-lm” but got error messages from build_all.
+
+./build_all.py --arch riscv32 --chip generic --board ri5cyverilator --cflags “-O2 -nostartfiles -c” --cc riscv64-unknown-elf-gcc 
+
+Thank you!
+
+David Harris
+
+
+Warning: Compilation of main.c from source directory /home/harris/riscv-wally/addins/embench-iot
+/support to binary directory /home/harris/riscv-wally/addins/embench-iot/bd/support failed
+Command was:
+riscv64-unknown-elf-gcc -I/home/harris/riscv-wally/addins/embench-iot/support -I/home/harris/ris
+cv-wally/addins/embench-iot/config/riscv32/boards/ri5cyverilator -I/home/harris/riscv-wally/addi
+ns/embench-iot/config/riscv32/chips/generic -I/home/harris/riscv-wally/addins/embench-iot/config
+/riscv32 -DCPU_MHZ=1 -DWARMUP_HEAT=1 -o main.o /home/harris/riscv-wally/addins/embench-iot/suppo
+rt/main.c
+
+/opt/riscv/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-elf/11.1.0/../../../../riscv64-unknown-el
+f/bin/ld: /tmp/cc5hnmDt.o: in function `main':
+main.c:(.text+0x12): undefined reference to `initialise_board'
+/opt/riscv/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-elf/11.1.0/../../../../riscv64-unknown-el
+f/bin/ld: main.c:(.text+0x1a): undefined reference to `initialise_benchmark'
+/opt/riscv/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-elf/11.1.0/../../../../riscv64-unknown-el
+f/bin/ld: main.c:(.text+0x24): undefined reference to `warm_caches'
+/opt/riscv/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-elf/11.1.0/../../../../riscv64-unknown-el
+f/bin/ld: main.c:(.text+0x2c): undefined reference to `start_trigger'
+/opt/riscv/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-elf/11.1.0/../../../../riscv64-unknown-el
+f/bin/ld: main.c:(.text+0x34): undefined reference to `benchmark'
+/opt/riscv/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-elf/11.1.0/../../../../riscv64-unknown-el
+f/bin/ld: main.c:(.text+0x42): undefined reference to `stop_trigger'
+/opt/riscv/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-elf/11.1.0/../../../../riscv64-unknown-el
+f/bin/ld: main.c:(.text+0x52): undefined reference to `verify_benchmark'
+collect2: error: ld returned 1 exit status
+
+Compilation of benchmark &quot;aha-mont64&quot; successful
+Warning: Unable to find support library /home/harris/riscv-wally/addins/embench-iot/bd/support/m
+ain.o
+Warning: Link of benchmark &quot;aha-mont64&quot; failed
+
+riscv64-unknown-elf-gcc: fatal error: no input files
+compilation terminated.
+
+In directory &quot;/home/harris/riscv-wally/addins/embench-iot/bd/src/aha-mont64&quot;
+Command was:
+riscv64-unknown-elf-gcc -o aha-mont64
+Warning: Compilation of crc_32.c from source directory /home/harris/riscv-wally/addins/embench-i
+ot/src/crc32 to binary directory /home/harris/riscv-wally/addins/embench-iot/bd/src/crc32 failed
+Command was:
+riscv64-unknown-elf-gcc -I/home/harris/riscv-wally/addins/embench-iot/support -I/home/harris/ris
+cv-wally/addins/embench-iot/config/riscv32/boards/ri5cyverilator -I/home/harris/riscv-wally/addi
+ns/embench-iot/config/riscv32/chips/generic -I/home/harris/riscv-wally/addins/embench-iot/config
+/riscv32 -DCPU_MHZ=1 -DWARMUP_HEAT=1 -o crc_32.o /home/harris/riscv-wally/addins/embench-iot/src
+/crc32/crc_32.c
+
+/opt/riscv/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-elf/11.1.0/../../../../riscv64-unknown-el
+f/bin/ld: /opt/riscv/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-elf/11.1.0/../../../../riscv64-
+unknown-elf/lib/crt0.o: in function `.L0 ':
+(.text+0x38): undefined reference to `main'
+/opt/riscv/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-elf/11.1.0/../../../../riscv64-unknown-el
+f/bin/ld: /tmp/ccQ4pL57.o: in function `.L3':
+crc_32.c:(.text+0x16): undefined reference to `rand_beebs'
+/opt/riscv/riscv-gnu-toolchain/lib/gcc/riscv64-unknown-elf/11.1.0/../../../../riscv64-unknown-el
+f/bin/ld: /tmp/ccQ4pL57.o: in function `benchmark_body':
+crc_32.c:(.text+0xd0): undefined reference to `srand_beebs'
+collect2: error: ld returned 1 exit status
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000171.html">[Embench] No Embench meeting in January 2022
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#172">[ date ]</a>
+              <a href="thread.html#172">[ thread ]</a>
+              <a href="subject.html#172">[ subject ]</a>
+              <a href="author.html#172">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

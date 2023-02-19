@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] Warm-up phase
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Warm-up%20phase&In-Reply-To=%3CDM6PR04MB54521A95C5096A76D2E1BB8CE05C9%40DM6PR04MB5452.namprd04.prod.outlook.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   
+   <LINK REL="Next"  HREF="000125.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] Warm-up phase</H1>
+    <B>Avishai Tvila</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Warm-up%20phase&In-Reply-To=%3CDM6PR04MB54521A95C5096A76D2E1BB8CE05C9%40DM6PR04MB5452.namprd04.prod.outlook.com%3E"
+       TITLE="[Embench] Warm-up phase">Avishai.Tvila at wdc.com
+       </A><BR>
+    <I>Sun May  2 12:37:51 CEST 2021</I>
+    <P><UL>
+        
+        <LI>Next message (by thread): <A HREF="000125.html">[Embench] Warm-up phase
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#124">[ date ]</a>
+              <a href="thread.html#124">[ thread ]</a>
+              <a href="subject.html#124">[ subject ]</a>
+              <a href="author.html#124">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>I'm wondering why we need the warm-up phase at all.
+It seems the impact of cold caches/predictors is insignificant.
+The impact of warm-up is highest when the whole data is fit in the cache, and the misses are only due to a cold cache.
+Therefore, the upper bound of warm-up gain per access is ((Miss-penalty)*(static data size)/(Dynamic accesses))*(base CPI)
+
+Warm-up has three parts:
+
+  1.  I$ - for Embench, the code size is up to 16KB, the number of dynamic instructions depends on clock frequency, but even for 10MHz, it's bigger than 80M instructions. Even if a missed penalty is 100s cycles, the impact is about 0.
+  2.  Branch Predictor - same as (1)
+  3.  D$ - data size is limited to 64K, assuming cache line is 32B, warming can save 2K misses. Assuming we have ~20% memory accesses, it's 2K out of 16M; even with a missed penalty of 300 cycles, it's only 0.03 cycles per memory access.
+
+Thoughts?
+
+Best,
+Ofer &amp; Avishai
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://lists.librecores.org/pipermail/embench/attachments/20210502/66d18389/attachment.htm">http://lists.librecores.org/pipermail/embench/attachments/20210502/66d18389/attachment.htm</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message (by thread): <A HREF="000125.html">[Embench] Warm-up phase
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#124">[ date ]</a>
+              <a href="thread.html#124">[ thread ]</a>
+              <a href="subject.html#124">[ subject ]</a>
+              <a href="author.html#124">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] Question on soft-float versus hard-float
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Question%20on%20soft-float%20versus%20hard-float&In-Reply-To=%3CCABiP1CwDfK4HieX-do00oqASSLNZUX_bP9UQDniJMmV2K6-yAw%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000061.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] Question on soft-float versus hard-float</H1>
+    <B>Brian Grayson</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Question%20on%20soft-float%20versus%20hard-float&In-Reply-To=%3CCABiP1CwDfK4HieX-do00oqASSLNZUX_bP9UQDniJMmV2K6-yAw%40mail.gmail.com%3E"
+       TITLE="[Embench] Question on soft-float versus hard-float">brian.grayson at sifive.com
+       </A><BR>
+    <I>Wed Jun 17 20:47:39 CEST 2020</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000061.html">[Embench] Notes from Embench call 15 June 2020
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#63">[ date ]</a>
+              <a href="thread.html#63">[ thread ]</a>
+              <a href="subject.html#63">[ subject ]</a>
+              <a href="author.html#63">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>The benchmark is intended for implementations without hardware floating
+point, but what is the proper thing to do on an implementation that has
+hardware floating point?
+
+One thing I've seen is, the benchmarks with a lot of FP, like nbody and
+minver, end up running very fast on machines with hardware FP, and are very
+susceptible to minor variances in timing.
+
+I can adjust for this on a per-benchmark basis by changing
+LOCAL_SCALE_FACTOR (as changing CPU_MHZ would affect all benchmarks, not
+just the FP ones), but then the relative scoring report is incorrect,
+because my LOCAL_SCALE_FACTOR is different from what the baseline run used.
+(In other words, if one doubles LOCAL_SCALE_FACTOR, one halves the obtained
+relative score compared to the baseline.)
+
+Thanks.
+
+Brian
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://lists.librecores.org/pipermail/embench/attachments/20200617/fe28467d/attachment.htm">http://lists.librecores.org/pipermail/embench/attachments/20200617/fe28467d/attachment.htm</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000061.html">[Embench] Notes from Embench call 15 June 2020
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#63">[ date ]</a>
+              <a href="thread.html#63">[ thread ]</a>
+              <a href="subject.html#63">[ subject ]</a>
+              <a href="author.html#63">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

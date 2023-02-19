@@ -1,0 +1,193 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] Notes from Monthly conference call 19 Aug 2019
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Notes%20from%20Monthly%20conference%20call%2019%20Aug%202019&In-Reply-To=%3Ca71cc97b-9f3b-14b8-3e61-e1b3c0173cac%40embecosm.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000003.html">
+   <LINK REL="Next"  HREF="000005.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] Notes from Monthly conference call 19 Aug 2019</H1>
+    <B>Jeremy Bennett</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Notes%20from%20Monthly%20conference%20call%2019%20Aug%202019&In-Reply-To=%3Ca71cc97b-9f3b-14b8-3e61-e1b3c0173cac%40embecosm.com%3E"
+       TITLE="[Embench] Notes from Monthly conference call 19 Aug 2019">jeremy.bennett at embecosm.com
+       </A><BR>
+    <I>Tue Aug 20 18:52:03 CEST 2019</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000003.html">[Embench] [Pull request] Python build system for Embench
+</A></li>
+        <LI>Next message (by thread): <A HREF="000005.html">[Embench] How to measure code size fairly
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#4">[ date ]</a>
+              <a href="thread.html#4">[ thread ]</a>
+              <a href="subject.html#4">[ subject ]</a>
+              <a href="author.html#4">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Hi all,
+
+Here are the notes from yesterday's monthly call. As agreed they are
+being distributed through the mailing list.
+
+Peter Torelli of EEMBC and Bill McSpadden of Seagate were welcomed as
+new participants.
+
+1. Sysadmin
+- -----------
+
+Noted that the mailing list sign up explicitly commits participants to
+following the FOSSi code of conduct.
+
+2. Build system
+- ---------------
+
+The new Python build system is now available as a pull request on the
+embecosm-iot repository:
+
+  <A HREF="https://github.com/embench/embench-iot/pull/9">https://github.com/embench/embench-iot/pull/9</A>
+
+Feedback from the community is encouraged. Jon Taylor of Arm noted the
+need for an &quot;empty&quot; benchmark to facilitate size measurement. Jon has
+also previously provided valuable input to the scripts.
+
+3. Website analytics
+- --------------------
+
+ACTION: Cesare Garlati (HexFive) was delegated to liaise with Stefan
+Wallentowitz and Philipp Wagner of FOSSi over appropriate integration
+of website analytics.
+
+4. Publicity
+- ------------
+
+Talks have been submitted to the RISC-V Summit (Speaker Dave
+Patterson, decision soon), Embedded World (Speaker Dave Patterson, to
+be reviewed in September) and ORConf (Speaker Jeremy Bennett). Jeremy
+Bennett will speak at the GNU Tools Cauldron in Montreal in September.
+The community is encouraged to seek speaking opportunities at other
+events.
+
+(post meeting note: The ORConf talk has been accepted, and will be
+presented in Bordeaux in late September).
+
+5. Update on benchmarks
+- -----------------------
+
+Jon Taylor has discussed the potential use of their crypto code as a
+benchmark with the mbed team, and it looks like it should be
+sufficiently portable. He will follow-up on this.
+
+A call has recently been made on the mailing list for help with a
+Bluetooth benchmark, but no take up yet.
+
+There has been no take up on developing Cesare Garlati's context
+switching benchmark. It was agreed that an Arm version would add
+greatly to credibility
+
+ACTION: Cesare Garlati to transfer the context switching benchmark
+framework repository to the Embench organization on GitHub
+
+(post meeting note: Transfer has been completed, with Cesare as Admin:
+<A HREF="https://github.com/embench/embench-context-latency">https://github.com/embench/embench-context-latency</A>)
+
+ACTION: Jeremy Bennett to approach Mark Corbin of Embecosm who has a
+background in Arm assembly code to see if he can provide a version for
+evaluation.
+
+6. Process and documentation
+- ----------------------------
+
+Jon Taylor is waiting formal approval from Arm legal. He and Dave
+Patterson will then work together on updated documentation.
+
+7. More data
+- ------------
+
+Now the build system is available, Jeremy Bennett will work on getting
+more data, particularly from physical hardware. Cesare Garlati will
+help with this work.
+
+Data from the rest of the community is encouraged.
+
+8. EEMBC
+- --------
+
+Peter Torelli summarized the work of EEMBC since its creation in 1997,
+and initiated a discussion on how Embench and EEMBC could work
+together. A number of ideas were considered, particularly the
+possibility of EEMBC bringing their expertise to the group and
+possibly providing a commercial service to validate Embench results.
+
+Peter will take the ideas back to the EEMBC committee and report back
+at the next meeting.
+
+9. Future meetings
+- ------------------
+
+It was agreed that the group would meet regularly by
+tele/videoconference on the third Thursday of each month
+8-10am California time. The teleconferencing details will remain the
+same for all future meetings.
+
+It was also agreed that going forward all agendas and notes and
+discussion arising would be published via the mailing list.
+
+
+Please let me know of any errors or omissions.
+
+
+Jeremy Bennett
+Embench vice chair and convener
+
+- -- 
+Tel: +44 (1590) 610184
+Cell: +44 (7970) 676050
+SkypeID: jeremybennett
+Twitter: @jeremypbennett
+Email: <A HREF="https://lists.librecores.org/listinfo/embench">jeremy.bennett at embecosm.com</A>
+Web: www.embecosm.com
+PGP key: 1024D/BEF58172FB4754E1 2009-03-20
+-----BEGIN PGP SIGNATURE-----
+
+iEYEARECAAYFAl1cJTAACgkQvvWBcvtHVOGPGwCdFQhVgjVYLX8N4D2WrrX61B+m
+YkUAniKerxU1BM5KL1XyZe9MuUwZd1er
+=mb90
+-----END PGP SIGNATURE-----
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000003.html">[Embench] [Pull request] Python build system for Embench
+</A></li>
+	<LI>Next message (by thread): <A HREF="000005.html">[Embench] How to measure code size fairly
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#4">[ date ]</a>
+              <a href="thread.html#4">[ thread ]</a>
+              <a href="subject.html#4">[ subject ]</a>
+              <a href="author.html#4">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

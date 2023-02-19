@@ -1,0 +1,256 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] Embench meeting/call 17 Feb 2020
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Embench%20meeting/call%2017%20Feb%202020&In-Reply-To=%3Cc1e55e1f-43d2-16a8-6674-22449c4623ae%40embecosm.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000035.html">
+   <LINK REL="Next"  HREF="000037.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] Embench meeting/call 17 Feb 2020</H1>
+    <B>Jeremy Bennett</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Embench%20meeting/call%2017%20Feb%202020&In-Reply-To=%3Cc1e55e1f-43d2-16a8-6674-22449c4623ae%40embecosm.com%3E"
+       TITLE="[Embench] Embench meeting/call 17 Feb 2020">jeremy.bennett at embecosm.com
+       </A><BR>
+    <I>Sun Feb 16 10:06:10 CET 2020</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000035.html">[Embench] Notes from Embench call 20 Jan 2020
+</A></li>
+        <LI>Next message (by thread): <A HREF="000037.html">[Embench] Embench 0.5 released
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#36">[ date ]</a>
+              <a href="thread.html#36">[ thread ]</a>
+              <a href="subject.html#36">[ subject ]</a>
+              <a href="author.html#36">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Hi all,
+
+A reminder that our next regular meeting of the Embench group will be
+on Monday, 17 February, 8-10am California time.
+
+This is our last meeting before the official launch of Embench 0.5 at
+Embedded World.
+
+We will meet using the same Zoom details as before. Please email me if
+you do not have them - I am reluctant to post details on an open
+mailing list.
+
+Agenda
+======
+
+1. Actions from previous meeting
+- --------------------------------
+
+ACTION: Jeremy Bennett to merge pull request 29 from Ola Jepsson.
+- - Complete
+
+ACTION: Jeremy Bennett to raise issue of better analytics with Stefan
+Wallentowitz at FOSSi.
+- - In progress.
+
+ACTION: Jeremy Bennett and Roger Shepherd to try to re-engage with EEMBC.
+- - Jeremy to meet with Peter Torelli at Embedded World
+
+ACTION: Dave Patterson to send Jeremy documentation to upload to the Wiki.
+- - Complete: documentation in process of being merged.
+
+ACTION: Dave Patterson to prepare a paper for HotChips in August 2020.
+- - In progress: To address after Embedded World (deadline 23 March)
+
+ACTION: Jon Taylor to advise when to submit proposal to speak at Arm
+TechCon in autumn 2020.
+- - Ongoing
+
+ACTION: Jeremy Bennett to investigate channels for press release for
+Embedded World. Dave Patterson to write text of press release.
+- - See below
+
+ACTION: Jeremy Bennett to complete work on Arm Cortex M4 data points
+as new baseline, for presentation at next meeting.
+- - Complete - see below
+
+2. GitHub pull requests
+- -----------------------
+
+The following pull requests have been merged:
+
+<A HREF="https://github.com/embench/embench-iot/pull/36">https://github.com/embench/embench-iot/pull/36</A>
+- - Fix calculation in relative computation
+- - Thanks to Luis Marques for the patch
+
+<A HREF="https://github.com/embench/embench-iot/pull/35">https://github.com/embench/embench-iot/pull/35</A>
+- - Provide option to control timeout when building benchmarks
+- - Thanks to Luis Marques for the patch
+
+<A HREF="https://github.com/embench/embench-iot/pull/34">https://github.com/embench/embench-iot/pull/34</A>
+- - Document the requirement for at last Python 3.6
+- - Thanks to J Monesti for the patch
+
+<A HREF="https://github.com/embench/embench-iot/pull/32">https://github.com/embench/embench-iot/pull/32</A>
+- - Correct some mistakes in README.md
+- - Thanks to Lyell Read for the patch
+
+<A HREF="https://github.com/embench/embench-iot/pull/29">https://github.com/embench/embench-iot/pull/29</A>
+- - Adds a default target
+- - Merge completes action from last month
+- - Thanks to Ola Jeppsson for this big patch
+
+The following pull request is outstanding:
+
+<A HREF="https://github.com/embench/embench-iot/pull/33">https://github.com/embench/embench-iot/pull/33</A>
+- - Support for Arm Cortex M4
+- - This work will be merged prior to Embedded World
+
+3. New GitHub issues
+- --------------------
+
+<A HREF="https://github.com/embench/embench-iot/issues/37">https://github.com/embench/embench-iot/issues/37</A>
+- - Problem with building RISC-V benchmarks (empty binaries)
+- - Needs diagnosis, but may be affected by recent changes
+- - Thanks to Lyell Read for raising the issue
+
+<A HREF="https://github.com/embench/embench-iot/issues/38">https://github.com/embench/embench-iot/issues/38</A>
+- - Avoiding full paths
+- - This highlights a weakness in documenting the scripts
+- - Thanks to Lyell Read for raising the issue
+
+4. Website analytics
+- --------------------
+
+Update from Cesare Garlati
+
+I have asked Stefan Wallentowitz to advise on how we can get better
+data for offline processing (action in progress from previous meeting).
+
+5. EEMBC process
+- ----------------
+
+Jeremy Bennett is to meet with Peter Torelli at Embedded World (action
+from previous meeting).
+
+6. Update on benchmarks
+- -----------------------
+
+Jeremy Bennett and Paolo Savini will present the new baseline results
+using the Cortex M4. These have been measured using a low cost
+STMicroelectronics Discovery board. The baseline also uses official
+releases of GCC (9.2) and binutils (2.32).
+
+These are not yet upstream, because we wish to provide results under
+embargo to the press. They will go live during the talk at Embedded
+World. If the meeting wishes, I shall present them under embargo
+during the call. All results will undergo review prior to completion
+of the press release.
+
+With a new baseline existing results will all be reworked. We are in
+the process of sanitizing our existing data, including preparation of
+a new, cleaner embench-iot-results repository.
+
+7. Process and documentation
+- ----------------------------
+
+Jon Taylor and Dave Patterson have prepared updated documentation,
+which is in the process of being incorporated into the repository.
+
+8. Publicity
+- ------------
+
+Embench was presented at the RISC-V London meetup hosted by the
+British Computer Society (video to appear in due course) and at the
+FOSDEM LLVM Developer's room. That latter talk looked at the value of
+Embench in compiler development - slides and videos:
+
+  <A HREF="https://fosdem.org/2020/schedule/event/llvm_benchmarking_embench/">https://fosdem.org/2020/schedule/event/llvm_benchmarking_embench/</A>
+
+The official launch of Embench will be at Embedded World, 25-27
+February. Unfortunately, due to Covid-19, this will be a much smaller
+meeting than usual, and there is some risk it may even be cancelled.
+
+Jeremy Bennett will be attending if it does go ahead (Embecosm GmbH is
+based in Nürnberg), and will present on behalf of the Embench group.
+The presentation will be prepared by Dave Patterson.
+
+Dave Patterson and Jeremy Bennett will prepare a press release this
+week, which will be shared under embargo with key journalists by
+Cesare Garlati.
+
+At our next meeting we shall review the launch and consider what we
+should like to present at Hot Chips.
+
+9. Next meeting
+- ---------------
+
+We meet regularly on the third Monday of each month 8-10am
+California time. Our future meetings will be
+- - Mon 16 Mar 2020
+- - Mon 20 Apr 2020
+- - Mon 18 May 2020
+- - Mon 15 Jun 2020
+- - Mon 20 Jul 2020
+- - Mon 17 Aug 2020
+- - Mon 21 Sep 2020
+- - Mon 19 Oct 2020
+- - Mon 16 Nov 2020
+- - Mon 21 Dec 2020
+
+At our next meeting, we shall consider whether monthly meetings are
+needed - we may want to drop to quarterly meetings, at least until
+closer to the next release.
+
+I've been created a calendar entry for our regular attendees,
+to provide automated reminders.
+
+10. AOB
+- -------
+
+Best wishes,
+
+
+Jeremy Bennett
+Vice chair
+
+-----BEGIN PGP SIGNATURE-----
+
+iF0EARECAB0WIQRASGDWqmhRZUfAaPW+9YFy+0dU4QUCXkkGAAAKCRC+9YFy+0dU
+4XuzAJ4h1Q+uCtStv1C3lsX1u0bmfNd75gCeM/BAsOb9YoWW/O/HcvxG4zBs/4Y=
+=zPt+
+-----END PGP SIGNATURE-----
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000035.html">[Embench] Notes from Embench call 20 Jan 2020
+</A></li>
+	<LI>Next message (by thread): <A HREF="000037.html">[Embench] Embench 0.5 released
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#36">[ date ]</a>
+              <a href="thread.html#36">[ thread ]</a>
+              <a href="subject.html#36">[ subject ]</a>
+              <a href="author.html#36">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

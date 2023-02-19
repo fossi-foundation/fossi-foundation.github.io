@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] interrupt latency - reference results
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20interrupt%20latency%20-%20reference%20results&In-Reply-To=%3C8b234e73-8354-1085-7cbe-88dcb69764d2%40wdc.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000117.html">
+   <LINK REL="Next"  HREF="000119.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] interrupt latency - reference results</H1>
+    <B>Ofer Shinaar</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20interrupt%20latency%20-%20reference%20results&In-Reply-To=%3C8b234e73-8354-1085-7cbe-88dcb69764d2%40wdc.com%3E"
+       TITLE="[Embench] interrupt latency - reference results">Ofer.Shinaar at wdc.com
+       </A><BR>
+    <I>Tue Apr 13 10:40:33 CEST 2021</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000117.html">[Embench] interrupt latency - reference results
+</A></li>
+        <LI>Next message (by thread): <A HREF="000119.html">[Embench] New metrics for Embench results - Speed/Rate
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#118">[ date ]</a>
+              <a href="thread.html#118">[ thread ]</a>
+              <a href="subject.html#118">[ subject ]</a>
+              <a href="author.html#118">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>On 12/04/2021 19:54, Jeremy Bennett wrote:
+
+On 01/04/2021 10:46, Ronen Haen wrote:
+
+
+Hi All,
+
+      With the embench-iot &lt;<A HREF="https://github.com/embench/embench-iot">https://github.com/embench/embench-iot</A>&gt;&lt;<A HREF="https://github.com/embench/embench-iot">https://github.com/embench/embench-iot</A>&gt;, all
+      new results are produced in reference to the results from Arm
+      Cortex M4 CPU.
+
+      However, with embench-rt
+      &lt;<A HREF="https://github.com/embench/embench-rt">https://github.com/embench/embench-rt</A>&gt;&lt;<A HREF="https://github.com/embench/embench-rt">https://github.com/embench/embench-rt</A>&gt;there are no reference
+      results yet.
+
+      How should we publish results for embench-rt
+      &lt;<A HREF="https://github.com/embench/embench-rt">https://github.com/embench/embench-rt</A>&gt;&lt;<A HREF="https://github.com/embench/embench-rt">https://github.com/embench/embench-rt</A>&gt;?
+
+
+
+Hi Ronen,
+
+A good question, and as project leads, we would look to you and Ofer to
+suggest the best approach.
+
+We chose Cortex M4 as the baseline for Embench IoT, because it was a
+processor widely available in a low-cost board.  I suggest a similar
+approach would be good for Embench RT.
+
+We can discuss this at next Monday's meeting.
+
+HTH,
+
+
+Jeremy
+
+Hi Jeremy,
+
+Since we don't have access to CM4 I think we need a mitigation solution.
+
+If someone on the Embench group can take the test and run it on CM4 we will be more than
+
+happy to help integrate it (if problems will pop out).
+
+In the meantime, I suggested that SweRV will be the reference. It runs on Nexys A7&lt;<A HREF="https://store.digilentinc.com/nexys-a7-fpga-trainer-board-recommended-for-ece-curriculum/">https://store.digilentinc.com/nexys-a7-fpga-trainer-board-recommended-for-ece-curriculum/</A>&gt; platform (not expansive)
+
+with full FW-Infrastructure support, open-source by WD/CHIPS-Alliance.
+
+
+I agree; lets put it on the agenda for the next meeting.
+
+
+Thanks,
+
+Ofer
+
+
+
+
+
+
+
+
+
+
+      Thanks,
+
+
+      Ronen
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--
+
+Ofer Shinaar
+Senior Manager, R&amp;D Engineering – Firmware &amp; Toolchain, CTO Group
+
+Western Digital®
+
+Israel, Migdal Tefen 24959, P.O Box 3
+Email: <A HREF="https://lists.librecores.org/listinfo/embench">Ofer.shinaar at wdc.com</A>&lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">Ofer.shinaar at wdc.com</A>&gt;
+Office: +972-4-9078783
+Mobile: +972-52-2836160
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://lists.librecores.org/pipermail/embench/attachments/20210413/0db32125/attachment.htm">http://lists.librecores.org/pipermail/embench/attachments/20210413/0db32125/attachment.htm</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000117.html">[Embench] interrupt latency - reference results
+</A></li>
+	<LI>Next message (by thread): <A HREF="000119.html">[Embench] New metrics for Embench results - Speed/Rate
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#118">[ date ]</a>
+              <a href="thread.html#118">[ thread ]</a>
+              <a href="subject.html#118">[ subject ]</a>
+              <a href="author.html#118">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

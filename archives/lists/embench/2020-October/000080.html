@@ -1,0 +1,418 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] Notes from Embench call 19 October 2020
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Notes%20from%20Embench%20call%2019%20October%202020&In-Reply-To=%3C056b668d-ae2a-abb4-a525-c7cbd86945dd%40embecosm.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000079.html">
+   <LINK REL="Next"  HREF="000081.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] Notes from Embench call 19 October 2020</H1>
+    <B>Jeremy Bennett</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Notes%20from%20Embench%20call%2019%20October%202020&In-Reply-To=%3C056b668d-ae2a-abb4-a525-c7cbd86945dd%40embecosm.com%3E"
+       TITLE="[Embench] Notes from Embench call 19 October 2020">jeremy.bennett at embecosm.com
+       </A><BR>
+    <I>Tue Oct 20 15:47:29 CEST 2020</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000079.html">[Embench] Embench meeting/call 19 October 2020
+</A></li>
+        <LI>Next message (by thread): <A HREF="000081.html">[Embench] LLVM 11.0.0 update
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#80">[ date ]</a>
+              <a href="thread.html#80">[ thread ]</a>
+              <a href="subject.html#80">[ subject ]</a>
+              <a href="author.html#80">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Hi all,
+
+Notes from yesterday's meeting.
+
+0. Welcome new participants
+===========================
+
+Peter Alexander, Southampton University
+Aaryman Bhattacharya, Southampton University
+Robert Chyla, IAR
+Peter Gielda, Antmicro
+Karol Gugala, Antmicro
+Matthew Johns, Southampton University
+Bryon Theobald, Southampton University
+
+1. Actions from previous meetings
+=================================
+
+ACTION: Jeremy Bennett, Stephan Wallentowitz to complete interview blog
+post on website.
+- - in progress
+
+ACTION: Jeremy Bennett to circulate new generic slide deck
+- - complete
+
+ACTION: David Patterson to prepare draft archive paper
+- - abstract prepared, more discussion, see agenda item 5
+
+ACTION: Jeremy to add tutorial example to reproduce baseline results
+in documentation.
+- - captured as GitHub issue 68
+- - in progress
+
+ACTION (ongoing): Roger Shepherd to provide Embench results for ST dev
+boards, Apple Macs and Raspberry Pi.
+- - in progress
+
+ACTION: Jeremy Bennett/Paolo Savini to attempt to get results for
+Atmel AVR using Arduino.
+- - in progress
+
+ACTION: Jeremy Bennett to explore alternatives to Google Docs for
+presentations
+- - Open Document Format version prepared
+- - hieroglyph version in progress
+
+ACTION (ongoing): Ray Simar to set class project to come up with new
+benchmarks based on the TinyML book.
+- - Ray to report progress in agenda item 4
+
+ACTION: Jeremy Bennett to update documentation to advise that Python
+minimum version 3.6 is required.
+- - in progress
+
+2. GitHub pull requests
+=======================
+
+- From embench-iot
+- ----------------
+
+None
+
+- From embench-iot-results
+- ------------------------
+
+None
+
+3. New GitHub issues
+====================
+
+- From embench-iot
+- ----------------
+
+<A HREF="https://github.com/embench/embench-iot/issues/95">https://github.com/embench/embench-iot/issues/95</A>
+- - Does Wikisort need to use double precision constants
+- - responses from Roger Shepherd and Jeremy Bennett
+- - thanks to user axiomlegend for raising this
+- - thanks to all who provided responses
+
+<A HREF="https://github.com/embench/embench-iot/issues/96">https://github.com/embench/embench-iot/issues/96</A>
+- - Explanation / Origin of benchmarks
+  (beebs.eu link broken, due to a failure to renew domain)
+- - website moved to <A HREF="https://beebs.mageec.org/">https://beebs.mageec.org/</A>
+- - marked as bug, assigned to Jeremy Bennett to fix links
+- - thanks to Nagendra Gulur for raising this
+
+<A HREF="https://github.com/embench/embench-iot/issues/97">https://github.com/embench/embench-iot/issues/97</A>
+- - Issue Running Embench
+- - advice provided by Roger Shepherd, Jeremy Bennett and Paolo Savini
+- - marked as an enhancement for documentation assigned to Paolo Savini
+- - thanks to George Onwubuya for raising this
+- - thanks to all who provided responses
+
+<A HREF="https://github.com/embench/embench-iot/issues/98">https://github.com/embench/embench-iot/issues/98</A>
+- - Help needed for Cortex-m55f
+- - initial advice from Jeremy Bennett
+- - asssigned to Paolo Savini for further advice
+- - thanks to user sheenagoel for raising this
+
+- From embench-iot-results
+- ------------------------
+
+None
+
+Thanks to all those who raised issues and provided responses.
+
+4. Update on benchmarks, including Embench 0.6
+==============================================
+
+Ray Sinar's class on benchmarking
+- ---------------------------------
+
+Ray Sinar is running classes at Rice University on Embench 0.6. Ray
+was unable to attend the call, his report was presented on his behalf
+by Jeremy Bennett as follows:
+
+DSP Embench:
+- - A team of 15 students, grads, and undergrads, has been assembled.
+- - Initial focus is the the DSP big three algorithms of FIR, IIR, and
+FFT.  We have an initial IIR up and running.  And we will expand the list.
+- - Initial work is using floating-point.
+- - Interested in running the benchmarks on hardware platforms of
+interest to the Embench team.
+  - What hardware would we want to recommend to my students?
+- - Would like to have Jeremy come speak to the class.
+  - We are very interested in his work on how to reproduce the
+baseline - Several students are very interested in continuing their
+work into the spring.
+  - I will be offering a special research project class on
+benchmarking, for credit, to carry this work forward.
+
+TinyML Embench:
+- - Have about 30 students, grads and undergrads, working on multiple
+projects from Pete Warden’s TinyML book.
+- - Pete Warden spoke to the students about current and future TinyML work.
+- - Will end up with at least three examples from Pete’s book.
+- - Reached out to Pete to find out his thoughts on the MLPerf inference
+benchmarks.  My thought is that these are still too big for a
+microcontroller benchmark, but I will defer to Pete.
+- - As above, several students are interested in continuing this work in
+the spring and I will fold them into my benchmarking research class.
+
+There was a discussion on the question of which hardware platform to use:
+- - for a baseline platform possibly Arm Cortex-M7
+  - good to stick to M class, since still embedded
+  - Arm A class is a different architecture
+- - for comparison
+  - could compare to Raspberry Pi
+  - what about RISC-V platforms
+    - RIOS, Alibaba, SiFive, MicroChip all developing suitable ones
+    - PolarFire (MicroChip) is available today
+    - SparkFun may have suitable plaforms
+
+Noted that RISC-V has an academic community. Contact Mark Himelstein
+(CTO, RISC-V International) for more details.
+
+Southampton University RISC-V AI ISA extension
+- ----------------------------------------------
+
+Peter Alexander, Aaryman Bhattacharya, Matthew Johns and Bryon
+Theobald, masters students at Southampton University joined the call.
+They are developing extensions to RISC-V to support AI/ML inference
+and training and plan to use TinyML as their benchmark. Ray's report
+expressed a welcome to collaborate
+
+Antmicro CPU testing with Embench
+- ---------------------------------
+
+Karol Gugula of Antmicro presented their work on automated CPU testing
+using Embench, as described in the blog post at:
+
+<A HREF="https://antmicro.com/blog/2020/09/automatic-cpu-testing-with-embench/">https://antmicro.com/blog/2020/09/automatic-cpu-testing-with-embench/</A>
+
+Questions:
+
+- - Q. All in simulation. How long does it take to run.
+  - A. SERV (bit serial minimalist RISC-V) is slowest and takes 1.5h
+on a typical PC.
+
+- - Q. Can you model interrupts
+  - A. Yes
+
+- - Q. Looks better than the IoT results repository, at least for
+softcores. Will then contribute to Embench.
+  - A. Probably, but the code needs more work before it is ready for this.
+
+- - Q. Can you get data for Arm models?
+  - A. You can integrate with any cores - not a technical limit. Might
+be licensing limit.
+
+- - Q. What next?
+  - A. exploration of different SoC components (types of flash,
+multiple clocks etc).
+
+- - Q. Can we use Amazon FPGAs in the cloud?
+  - A. Sounds like a good idea.
+
+ACTION: Mark Himelstein to arrange recorded presentation to wider
+RISC-V community with Karol Gugula.
+
+Karol's presentation is attached to these minutes.
+
+A reminder that we need volunteers to lead particular aspects of
+current and future efforts.
+
+5. Publicity
+============
+
+Recent talks
+- ------------
+
+3rd Workshop on RISC-V Activities held by Edacentrum, Germany. The
+talk will be looking at Embench within the context of the RISC-V
+Software Ecosystem
+
+VSDOpen. The talk considered Embench as an example of software that
+bridges into the hardware world as part of a talk on the history of
+open source software and hardware.
+
+Blog posts
+- ----------
+
+As noted in the previous item, Antmicro have published a blog post on
+automated CPU testing with Embench
+
+arXiv paper
+- -----------
+
+Following on from the suggestion of a reference arXiv paper on
+Embench, David Patterson has put together an abstract:
+
+<A HREF="https://docs.google.com/document/d/1Lb-g0NP6dRL-UbS_t8w_RfI7thFeqGMZVCSi9JhUq_0">https://docs.google.com/document/d/1Lb-g0NP6dRL-UbS_t8w_RfI7thFeqGMZVCSi9JhUq_0</A>
+
+ACTION: All to provide comments and input. We have data for soft cores
+in cycle accurate modeling and FPGA, but we need data on real ASIC
+cores (other than the baseline Cortex-M4 data).
+
+Interview blog post
+- -------------------
+
+Stefan Wallentowitz reported by email that the interview style
+blog post about Embench had been delayed due to the start of
+University term, but was in progress.
+
+Standard presentation
+- ---------------------
+
+Jeremy Bennett presented an updated version of the generic Embench
+presentation. This includes up to date data comparing RV32I, RV32IC,
+RV32IM and RV32IMC and a fuller historical record of LLVM performances
+(all prepared by Paolo Savini). It still lacks good data on ARC and
+AVR. The presentation is attached.
+
+New version, spell out ToT
+
+6. Next meeting
+===============
+
+We currently meet regularly on the third Monday of each month 8-9am
+California time. Our future meetings will be. Note that the Decmember
+date has been changed to avoid the week before Christmas.
+- - Mon 16 Nov 2020
+- - Mon 14 Dec 2020 (changed)
+
+The following dates are proposed for 2021
+
+- - Mon 11 Jan 2021 (week 2 to keep clear of Martin Luther King Jr day)
+- - Mon 15 Feb 2021
+- - Mon 15 Mar 2021
+- - Mon 19 Apr 2021
+- - Mon 17 May 2021
+- - Mon 21 Jun 2021
+- - Mon 19 Jul 2021
+- - Mon 16 Aug 2021
+- - Mon 21 Sep 2021
+- - Mon 18 Oct 2021
+- - Mon 15 Nov 2021
+- - Mon 13 Dec 2021 (week 2, to keep clear of Christmas)
+
+I've created a calendar entry for our regular attendees, to provide
+automated reminders. Please ask if you wish to be added to this.
+
+7. AOB
+======
+
+Robert Chyla is looking at Embench for trace benchmarking.
+
+Ofer talked about work on benchmarking interrupts/context switching.
+This is the other aspect of Embench, initiated by Cesare Garlati
+
+Question. Do we have a spec for what we are trying to achieve?
+
+Noted we have repository with Cesare Garlati's original work on GitHub
+
+Best wishes,
+
+
+Jeremy
+Vice Chair
+
+- -- 
+Cell: +44 (7970) 676050
+SkypeID: jeremybennett
+Twitter: @jeremypbennett
+Email: <A HREF="https://lists.librecores.org/listinfo/embench">jeremy.bennett at embecosm.com</A>
+Web: www.embecosm.com
+PGP key: 1024D/BEF58172FB4754E1 2009-03-20
+-----BEGIN PGP SIGNATURE-----
+
+iF0EARECAB0WIQRASGDWqmhRZUfAaPW+9YFy+0dU4QUCX47qbwAKCRC+9YFy+0dU
+4fpGAJ0WSr66t63MnN46Ho/YYbz+zXS4ygCfawyZKuIkm8wHdQ84QJeR+MNexq0=
+=Ks+q
+-----END PGP SIGNATURE-----
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Embench tester.pdf
+Type: application/pdf
+Size: 1124102 bytes
+Desc: not available
+URL: &lt;<A HREF="http://lists.librecores.org/pipermail/embench/attachments/20201020/25679504/attachment.pdf">http://lists.librecores.org/pipermail/embench/attachments/20201020/25679504/attachment.pdf</A>&gt;
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: embench-generic-oct-2020.odp
+Type: application/vnd.oasis.opendocument.presentation
+Size: 1246972 bytes
+Desc: not available
+URL: &lt;<A HREF="http://lists.librecores.org/pipermail/embench/attachments/20201020/25679504/attachment.odp">http://lists.librecores.org/pipermail/embench/attachments/20201020/25679504/attachment.odp</A>&gt;
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: embench-generic-oct-2020.pdf
+Type: application/pdf
+Size: 452920 bytes
+Desc: not available
+URL: &lt;<A HREF="http://lists.librecores.org/pipermail/embench/attachments/20201020/25679504/attachment-0001.pdf">http://lists.librecores.org/pipermail/embench/attachments/20201020/25679504/attachment-0001.pdf</A>&gt;
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Embench tester.pdf.sig
+Type: application/octet-stream
+Size: 95 bytes
+Desc: not available
+URL: &lt;<A HREF="http://lists.librecores.org/pipermail/embench/attachments/20201020/25679504/attachment.obj">http://lists.librecores.org/pipermail/embench/attachments/20201020/25679504/attachment.obj</A>&gt;
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: embench-generic-oct-2020.odp.sig
+Type: application/octet-stream
+Size: 95 bytes
+Desc: not available
+URL: &lt;<A HREF="http://lists.librecores.org/pipermail/embench/attachments/20201020/25679504/attachment-0001.obj">http://lists.librecores.org/pipermail/embench/attachments/20201020/25679504/attachment-0001.obj</A>&gt;
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: embench-generic-oct-2020.pdf.sig
+Type: application/octet-stream
+Size: 95 bytes
+Desc: not available
+URL: &lt;<A HREF="http://lists.librecores.org/pipermail/embench/attachments/20201020/25679504/attachment-0002.obj">http://lists.librecores.org/pipermail/embench/attachments/20201020/25679504/attachment-0002.obj</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000079.html">[Embench] Embench meeting/call 19 October 2020
+</A></li>
+	<LI>Next message (by thread): <A HREF="000081.html">[Embench] LLVM 11.0.0 update
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#80">[ date ]</a>
+              <a href="thread.html#80">[ thread ]</a>
+              <a href="subject.html#80">[ subject ]</a>
+              <a href="author.html#80">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

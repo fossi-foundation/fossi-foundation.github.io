@@ -1,0 +1,354 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] How to measure code size fairly
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20How%20to%20measure%20code%20size%20fairly&In-Reply-To=%3Cee5206b2-31f4-bb9a-ac0e-833e529d30d7%40wdc.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000011.html">
+   <LINK REL="Next"  HREF="000014.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] How to measure code size fairly</H1>
+    <B>Ofer Shinaar</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20How%20to%20measure%20code%20size%20fairly&In-Reply-To=%3Cee5206b2-31f4-bb9a-ac0e-833e529d30d7%40wdc.com%3E"
+       TITLE="[Embench] How to measure code size fairly">Ofer.Shinaar at wdc.com
+       </A><BR>
+    <I>Wed Sep  4 14:43:21 CEST 2019</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000011.html">[Embench] How to measure code size fairly
+</A></li>
+        <LI>Next message (by thread): <A HREF="000014.html">[Embench] How to measure code size fairly
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#12">[ date ]</a>
+              <a href="thread.html#12">[ thread ]</a>
+              <a href="subject.html#12">[ subject ]</a>
+              <a href="author.html#12">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>On 03-Sep-19 13:10, Jon Taylor wrote:
+
+Hi Jon,
+Regarding context switch you are right lets take this to different 
+thread, and we can correspond comments there.
+So for library usage, I dont think we should ignore it, on the opposite, 
+dont ignore it. Any test case is good.
+My point here is that a real embedded project for small memory budget 
+(like IoT) will not take benchmarks result for libraries as 
+rule-of-thumb that this ISA give better results then others, it might, 
+but its not for sure (we know that sometime companies tweak compiler or 
+core just to get good score for coremark, as an example).
+
+Those devices will usually preferred to have HW IPs that process those 
+algorithms, and have the mcu just control that.
+This mean, for example, that access to memories, loops, inlines and more 
+will effect the size more then lib usage.
+based on that I proposed my two options. The usage of RTOS is just 
+because it access the memory a lot and have various coding. But we can 
+add more... for example drivers are very real embedded usage: SPI, I2C, 
+UART, memory matrix operations, TCP/IP, etc....
+
+Thanks,
+Ofer
+
+
+&gt;<i> Hi Ofer,
+</I>&gt;<i>
+</I>&gt;<i> I take your point that the kernels may not be the dominant factor in an overall application size; but I'm still concerned that we shouldn't be ignoring library size, particularly when libraries may be the most significant fraction of a kernel. If it's a small fraction - then great, it doesn't matter overall anyway. But for tests (such as cubic) where it is a very large fraction, it seems odd to choose to ignore it.
+</I>&gt;<i>
+</I>&gt;<i> Having some more complete applications is potentially interesting, although the scope gets harder to strictly define to ensure comparisons are like-for-like. For instance you could also then consider aspects such as MPU/PMP reprogramming, and context switch timings may become more meaningful if you're measuring OS behaviour, rather than just the kernel of a context switch. But I think that's a whole other thread and we still need to get the basic elements (such as context switch kernel) in place first.
+</I>&gt;<i>
+</I>&gt;<i> Regards,
+</I>&gt;<i>
+</I>&gt;<i> Jon
+</I>&gt;<i>
+</I>&gt;&gt;<i> -----Original Message-----
+</I>&gt;&gt;<i> From: Ofer Shinaar &lt;<A HREF="https://lists.librecores.org/listinfo/embench">Ofer.Shinaar at wdc.com</A>&gt;
+</I>&gt;&gt;<i> Sent: 29 August 2019 16:42
+</I>&gt;&gt;<i> To: Jon Taylor &lt;<A HREF="https://lists.librecores.org/listinfo/embench">Jon.Taylor at arm.com</A>&gt;; <A HREF="https://lists.librecores.org/listinfo/embench">embench at lists.librecores.org</A>
+</I>&gt;&gt;<i> Cc: nd &lt;<A HREF="https://lists.librecores.org/listinfo/embench">nd at arm.com</A>&gt;
+</I>&gt;&gt;<i> Subject: RE: [Embench] How to measure code size fairly
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Hi Jon,
+</I>&gt;&gt;<i> I want to share my two cents regarding code size.
+</I>&gt;&gt;<i> Measuring code size is a different approach from checking performance for
+</I>&gt;&gt;<i> synthetic/none-synthetic benchmarks.
+</I>&gt;&gt;<i> While performance is tested over libs and applicative code (like crc, SHA,
+</I>&gt;&gt;<i> Fourier transform, etc...), checking size over those will be unreverent since
+</I>&gt;&gt;<i> usually embedded FW will have more &quot;control code&quot; then  &quot;library usage&quot;.
+</I>&gt;&gt;<i> For example, FW can use JPEG encoder and it will take 4kB of size in some
+</I>&gt;&gt;<i> target, but the overall code of the program will be 100 or 1000 bigger.
+</I>&gt;&gt;<i> Today IoT device are &quot;fighting&quot; over several bytes how we measure code size
+</I>&gt;&gt;<i> (we call small embedded devices IoT today just because it fits to the concept,
+</I>&gt;&gt;<i> but we can have big ones as well) so?
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Well, I think that practice comparison is one of the options. If we have a code
+</I>&gt;&gt;<i> that we spotted that have difference between ARM/RV/x86/Other we can
+</I>&gt;&gt;<i> use it as a &quot;test case&quot;.
+</I>&gt;&gt;<i> This code will have randomly C functionality  (loops, ifs, inline, etc...) Of
+</I>&gt;&gt;<i> course that this will be massively depend on the compiler but also on the ISA
+</I>&gt;&gt;<i> and ABI rules, we already spotted cases like this internally and we open
+</I>&gt;&gt;<i> source those test cases.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Another approach will be to use &quot;big FW applications&quot; which use a lot of
+</I>&gt;&gt;<i> randomly C functionality, like RTOS.
+</I>&gt;&gt;<i> For example we can examine what is the size of FreeRTOS with RV32IMC vs
+</I>&gt;&gt;<i> ARM (Thumb 2). This will be very interesting to small embedded devices that
+</I>&gt;&gt;<i> depend on RTOS, this can highlight how much one target is better/worst
+</I>&gt;&gt;<i> then the other, from size perspective.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Thanks,
+</I>&gt;&gt;<i> Ofer
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> -----Original Message-----
+</I>&gt;&gt;&gt;<i> From: Embench [mailto:<A HREF="https://lists.librecores.org/listinfo/embench">embench-bounces at lists.librecores.org</A>] On Behalf
+</I>&gt;&gt;&gt;<i> Of Jon Taylor
+</I>&gt;&gt;&gt;<i> Sent: Thursday, August 29, 2019 10:16
+</I>&gt;&gt;&gt;<i> To: <A HREF="https://lists.librecores.org/listinfo/embench">embench at lists.librecores.org</A>
+</I>&gt;&gt;&gt;<i> Cc: nd &lt;<A HREF="https://lists.librecores.org/listinfo/embench">nd at arm.com</A>&gt;
+</I>&gt;&gt;&gt;<i> Subject: Re: [Embench] How to measure code size fairly
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Thanks Jeremy.
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Firstly my opinion is that any code we're measuring the size or
+</I>&gt;&gt;&gt;<i> performance of needs to be functional. If an algorithm requires lots
+</I>&gt;&gt;&gt;<i> of maths library code (such as cubic), there is a benefit to having an
+</I>&gt;&gt;&gt;<i> optimised library available and that should be reflected in a
+</I>&gt;&gt;&gt;<i> benchmark score. This could also include allowing a library optimised
+</I>&gt;&gt;&gt;<i> for a processor with custom instruction extensions.  I'm really not
+</I>&gt;&gt;&gt;<i> sure what measuring the performance of something that can't be
+</I>&gt;&gt;&gt;<i> executed really tells us - for example &quot;cubic&quot; is about 1k of code
+</I>&gt;&gt;&gt;<i> with dummy libraries, but ~9k with libraries (Arm GCC, building - O2).
+</I>&gt;&gt;&gt;<i> We wouldn't measure the runtime without libraries, so why would
+</I>&gt;&gt;<i> measuring the size without libraries be considered valid?
+</I>&gt;&gt;&gt;<i> Having said that, I think it likely (particularly for benchmarks run
+</I>&gt;&gt;&gt;<i> on actual hardware), use of printf might be desirable for recording
+</I>&gt;&gt;&gt;<i> the runtime (eg via a UART, trace port or other mechanism), but
+</I>&gt;&gt;&gt;<i> measuring the size of the printf library is not helpful because it's
+</I>&gt;&gt;&gt;<i> effectively only for debug, not functional purposes.  Comparing code
+</I>&gt;&gt;&gt;<i> with and without printf, the print library adds ~20k to Arm code size,
+</I>&gt;&gt;&gt;<i> and ~60k to RISC-V; when many of the tests are a kb or two in size,
+</I>&gt;&gt;&gt;<i> this massively distorts the results. Having an empty test allows this
+</I>&gt;&gt;&gt;<i> to be discarded, since the printf would be in common code and thus
+</I>&gt;&gt;<i> compiled into the empty test too.
+</I>&gt;&gt;&gt;<i> I'm not sure I understand the point about needing a different dummy
+</I>&gt;&gt;&gt;<i> for each benchmark. My expectation is that a test consists of:
+</I>&gt;&gt;&gt;<i> &lt;bootcode&gt;
+</I>&gt;&gt;&gt;<i> &lt;test initialisation&gt;
+</I>&gt;&gt;&gt;<i> &lt;start timer&gt;
+</I>&gt;&gt;&gt;<i> &lt;test&gt;
+</I>&gt;&gt;&gt;<i> &lt;stop timer&gt;
+</I>&gt;&gt;&gt;<i> &lt;possible cleanup code&gt;
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> We want to discount everything that is not &lt;test&gt; - and an empty test
+</I>&gt;&gt;&gt;<i> would achieve this (assuming that we are happy counting library code
+</I>&gt;&gt;&gt;<i> that is required by the benchmarks). Everything outside of &lt;test&gt;
+</I>&gt;&gt;&gt;<i> should be common code across all of the tests, so only a single dummy
+</I>&gt;&gt;&gt;<i> is needed. I do think we need to allow for LTO being used as it can
+</I>&gt;&gt;&gt;<i> offer some significant size and performance benefits, but we should
+</I>&gt;&gt;&gt;<i> investigate whether it distorts the results significantly.
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Kind regards,
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Jon
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> -----Original Message-----
+</I>&gt;&gt;&gt;&gt;<i> From: Embench &lt;<A HREF="https://lists.librecores.org/listinfo/embench">embench-bounces at lists.librecores.org</A>&gt; On Behalf Of
+</I>&gt;&gt;&gt;&gt;<i> Jeremy Bennett
+</I>&gt;&gt;&gt;&gt;<i> Sent: 26 August 2019 19:36
+</I>&gt;&gt;&gt;&gt;<i> To: <A HREF="https://lists.librecores.org/listinfo/embench">embench at lists.librecores.org</A>
+</I>&gt;&gt;&gt;&gt;<i> Subject: [Embench] How to measure code size fairly
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> -----BEGIN PGP SIGNED MESSAGE-----
+</I>&gt;&gt;&gt;&gt;<i> Hash: SHA1
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Hi all,
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Jon Taylor from ARM has posed some useful questions about how
+</I>&gt;&gt;&gt;<i> Embench
+</I>&gt;&gt;&gt;&gt;<i> measures code size. This is a new thread to get input from the
+</I>&gt;&gt;<i> community.
+</I>&gt;&gt;&gt;&gt;<i> I think we can do better, and would welcome on advice on improved
+</I>&gt;&gt;&gt;&gt;<i> approaches.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Background
+</I>&gt;&gt;&gt;&gt;<i> - ----------
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> At present, the scripts measure size by building a benchmark with
+</I>&gt;&gt;&gt;&gt;<i> dummy libraries and dummy startup code. This minimizes the impact of
+</I>&gt;&gt;&gt;&gt;<i> such code
+</I>&gt;&gt;&gt;<i> on
+</I>&gt;&gt;&gt;&gt;<i> the measurement. Since libraries are not typically rebuilt with the
+</I>&gt;&gt;&gt;&gt;<i> same compiler options, they can provide a constant bias on each
+</I>&gt;&gt;&gt;&gt;<i> benchmark measurement.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> This is particularly the case with the relatively small benchmarks
+</I>&gt;&gt;&gt;&gt;<i> we have in Embench. We can see this if we compare ARM and RISC-V
+</I>&gt;&gt;&gt;&gt;<i> benchmarks out
+</I>&gt;&gt;&gt;<i> of
+</I>&gt;&gt;&gt;&gt;<i> the box. Most of the time ARM appears to be much larger, but this is
+</I>&gt;&gt;&gt;&gt;<i> because its startup code is much more general purpose than RISC-V,
+</I>&gt;&gt;&gt;&gt;<i> and adds 4Kbyte to the code size. Strip this out and ARM code comes
+</I>&gt;&gt;&gt;&gt;<i> out generally somewhat smaller than RISC-V.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Conversely in the few benchmarks that have floating point
+</I>&gt;&gt;&gt;&gt;<i> calculations,
+</I>&gt;&gt;&gt;<i> ARM
+</I>&gt;&gt;&gt;&gt;<i> does very well, due to its hand-optimized floating point library.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> By using dummy startup code and libraries, we can remove this bias.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> However...
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> The programs will not then execute, so there is no guarantee that
+</I>&gt;&gt;&gt;&gt;<i> the compiler has generated correct code. There is also much greater
+</I>&gt;&gt;&gt;&gt;<i> potential
+</I>&gt;&gt;&gt;<i> for
+</I>&gt;&gt;&gt;&gt;<i> global inter-procedural optimization (LTO) than would be the case
+</I>&gt;&gt;&gt;&gt;<i> with real libraries.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> I refer to this current approach as &quot;Option 0&quot;. Here are some other
+</I>&gt;&gt;&gt;&gt;<i> options which might be better.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Option 1: Just accept the bias
+</I>&gt;&gt;&gt;&gt;<i> - ------------------------------
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> We could just accept that the bias is there, and use size as measured.
+</I>&gt;&gt;&gt;&gt;<i> This option relies on very few assumptions about the target and tools.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> The problem with this, that with small programs, the bias is
+</I>&gt;&gt;&gt;&gt;<i> substantial and we lose a lot of insight. Instead of being able to
+</I>&gt;&gt;&gt;&gt;<i> see which architecture and compiler features are beneficial, we just
+</I>&gt;&gt;&gt;&gt;<i> measure start-up code and library design for the architecture.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Option 2: Have a dummy benchmark with no code to subtract
+</I>&gt;&gt;&gt;&gt;<i> - ---------------------------------------------------------
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> This would give us a good result, but with garbage collection of
+</I>&gt;&gt;&gt;&gt;<i> sections, modern tool chains only link in the code they actually use.
+</I>&gt;&gt;&gt;&gt;<i> So we would need a different dummy for each benchmark, potentially
+</I>&gt;&gt;&gt;<i> quite
+</I>&gt;&gt;&gt;&gt;<i> complex to construct. This gets even harder with LTO, potentially
+</I>&gt;&gt;&gt;&gt;<i> moving code in and out of libraries.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> This option starts to require more assumptions about the target and tools.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Option 3: Just count the size of the object files before linking
+</I>&gt;&gt;&gt;&gt;<i> - ----------------------------------------------------------------
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> This is relatively straightforward to do.  The problem is that it
+</I>&gt;&gt;&gt;&gt;<i> precludes any benchmarking of link time optimizations such as
+</I>&gt;&gt;&gt;&gt;<i> global-interprocedural optimization (LTO). Given the importance of
+</I>&gt;&gt;&gt;&gt;<i> such techniques, this significantly reduces the value of Embench to the
+</I>&gt;&gt;<i> compiler community.
+</I>&gt;&gt;&gt;&gt;<i> This option makes relatively few assumptions about the target
+</I>&gt;&gt;&gt;&gt;<i> architecture and tools.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Option 4: Subtract the size of the startup and library code
+</I>&gt;&gt;&gt;&gt;<i> - -----------------------------------------------------------
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> We can look at the compiled binary and subtract any code/data
+</I>&gt;&gt;&gt;&gt;<i> associated with libraries and startup.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> This would be compatible with link time optimizations, although with
+</I>&gt;&gt;&gt;&gt;<i> a measurement error if such optimizations migrate benchmark code
+</I>&gt;&gt;&gt;&gt;<i> to/from library code.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> This option makes assumptions about code and data layout. For
+</I>&gt;&gt;&gt;&gt;<i> example
+</I>&gt;&gt;&gt;<i> that
+</I>&gt;&gt;&gt;&gt;<i> a function starts at its label and ends at the label with the next
+</I>&gt;&gt;&gt;&gt;<i> highest address.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Option 5: Link but measure only benchmark code
+</I>&gt;&gt;&gt;&gt;<i> - ----------------------------------------------
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> This is a combination of options 3 and 4. We look at the benchmark
+</I>&gt;&gt;&gt;&gt;<i> code
+</I>&gt;&gt;&gt;<i> pre-
+</I>&gt;&gt;&gt;&gt;<i> linking to determine the symbols used in the benchmark code and data.
+</I>&gt;&gt;&gt;<i> We
+</I>&gt;&gt;&gt;&gt;<i> then link and only count the size of the symbols from the benchmark
+</I>&gt;&gt;<i> code.
+</I>&gt;&gt;&gt;&gt;<i> Also potentially vulnerable to error with link time optimizations,
+</I>&gt;&gt;&gt;&gt;<i> and makes all the same assumptions as options 3 and 4.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Option 6: Statistically eliminate the bias
+</I>&gt;&gt;&gt;&gt;<i> - ------------------------------------------
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> This uses the current option 0 and option 1, to provide a per
+</I>&gt;&gt;&gt;&gt;<i> benchmark estimate of startup and library code size. This still
+</I>&gt;&gt;&gt;&gt;<i> actually includes dummy code size, but potentially option 4 could we used
+</I>&gt;&gt;<i> to estimate this.
+</I>&gt;&gt;&gt;&gt;<i> This makes relatively few assumptions about target and tools (at
+</I>&gt;&gt;&gt;&gt;<i> least without option 4), but might be hard to explain to people.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Feedback very welcome.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Thanks,
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Jeremy
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> - --
+</I>&gt;&gt;&gt;&gt;<i> Tel: +44 (1590) 610184
+</I>&gt;&gt;&gt;&gt;<i> Cell: +44 (7970) 676050
+</I>&gt;&gt;&gt;&gt;<i> SkypeID: jeremybennett
+</I>&gt;&gt;&gt;&gt;<i> Twitter: @jeremypbennett
+</I>&gt;&gt;&gt;&gt;<i> Email: <A HREF="https://lists.librecores.org/listinfo/embench">jeremy.bennett at embecosm.com</A>
+</I>&gt;&gt;&gt;&gt;<i> Web: www.embecosm.com
+</I>&gt;&gt;&gt;&gt;<i> PGP key: 1024D/BEF58172FB4754E1 2009-03-20 -----BEGIN PGP
+</I>&gt;&gt;&gt;<i> SIGNATURE---
+</I>&gt;&gt;&gt;&gt;<i> --
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;<i> iEYEARECAAYFAl1kJnoACgkQvvWBcvtHVOHaFwCdHFYOoMHcsF2QL2fdXCpcg
+</I>&gt;&gt;&gt;&gt;<i> OAH
+</I>&gt;&gt;&gt;&gt;<i> +CIAnRS1iWUyEHbdwreisMGAW1ccyCZs
+</I>&gt;&gt;&gt;&gt;<i> =x6gL
+</I>&gt;&gt;&gt;&gt;<i> -----END PGP SIGNATURE-----
+</I>&gt;&gt;&gt;&gt;<i> --
+</I>&gt;&gt;&gt;&gt;<i> Embench mailing list
+</I>&gt;&gt;&gt;&gt;<i> <A HREF="https://lists.librecores.org/listinfo/embench">Embench at lists.librecores.org</A>
+</I>&gt;&gt;&gt;&gt;<i> <A HREF="https://lists.librecores.org/listinfo/embench">https://lists.librecores.org/listinfo/embench</A>
+</I>&gt;&gt;&gt;<i> --
+</I>&gt;&gt;&gt;<i> Embench mailing list
+</I>&gt;&gt;&gt;<i> <A HREF="https://lists.librecores.org/listinfo/embench">Embench at lists.librecores.org</A>
+</I>&gt;&gt;&gt;<i> <A HREF="https://lists.librecores.org/listinfo/embench">https://lists.librecores.org/listinfo/embench</A>
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000011.html">[Embench] How to measure code size fairly
+</A></li>
+	<LI>Next message (by thread): <A HREF="000014.html">[Embench] How to measure code size fairly
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#12">[ date ]</a>
+              <a href="thread.html#12">[ thread ]</a>
+              <a href="subject.html#12">[ subject ]</a>
+              <a href="author.html#12">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

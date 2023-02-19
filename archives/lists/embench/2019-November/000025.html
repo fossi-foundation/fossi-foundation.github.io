@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] 128-bit integer support in Embench (pull request #19)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20128-bit%20integer%20support%20in%20Embench%20%28pull%20request%20%2319%29&In-Reply-To=%3C9125d76f-5466-070d-6bbf-0f8bcdf0c786%40embecosm.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   
+   <LINK REL="Next"  HREF="000026.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] 128-bit integer support in Embench (pull request #19)</H1>
+    <B>Jeremy Bennett</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20128-bit%20integer%20support%20in%20Embench%20%28pull%20request%20%2319%29&In-Reply-To=%3C9125d76f-5466-070d-6bbf-0f8bcdf0c786%40embecosm.com%3E"
+       TITLE="[Embench] 128-bit integer support in Embench (pull request #19)">jeremy.bennett at embecosm.com
+       </A><BR>
+    <I>Sat Nov  2 19:19:53 CET 2019</I>
+    <P><UL>
+        
+        <LI>Next message (by thread): <A HREF="000026.html">[Embench] Issues with cubic benchmark
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#25">[ date ]</a>
+              <a href="thread.html#25">[ thread ]</a>
+              <a href="subject.html#25">[ subject ]</a>
+              <a href="author.html#25">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Hi all,
+
+We have a pull request to make use of 128bit integers if available for
+the 64 x 64 -&gt; 128 multiplication in aha-mont64.
+
+  <A HREF="https://github.com/embench/embench-iot/pull/19">https://github.com/embench/embench-iot/pull/19</A>
+
+On the whole we try to avoid polishing the benchmarks, to ensure as
+wide a diversity of coding practice as possible. However there is a
+case to be made that this would be the way to write this code if you
+have 128-bit integer support, and we do want the benchmarks to
+represent good programming practice.
+
+I'd appreciate input from the community on whether we should accept
+this pull request.
+
+Thanks,
+
+
+Jeremy
+
+- -- 
+Tel: +44 (1590) 610184
+Cell: +44 (7970) 676050
+SkypeID: jeremybennett
+Twitter: @jeremypbennett
+Email: <A HREF="https://lists.librecores.org/listinfo/embench">jeremy.bennett at embecosm.com</A>
+Web: www.embecosm.com
+PGP key: 1024D/BEF58172FB4754E1 2009-03-20
+-----BEGIN PGP SIGNATURE-----
+
+iEYEARECAAYFAl29yMgACgkQvvWBcvtHVOE5ZwCeIf1m6OUl/zKAMFVwpiBDkKoy
+wNgAnAiJ8hPpMJN3dU9ctqugzCT7+8jH
+=x8Ix
+-----END PGP SIGNATURE-----
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message (by thread): <A HREF="000026.html">[Embench] Issues with cubic benchmark
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#25">[ date ]</a>
+              <a href="thread.html#25">[ thread ]</a>
+              <a href="subject.html#25">[ subject ]</a>
+              <a href="author.html#25">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,212 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] Embench meeting/call 11 May 2020
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Embench%20meeting/call%2011%20May%202020&In-Reply-To=%3Ce7dddf81-3a2e-6315-0d16-3b57d441fc8b%40embecosm.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000047.html">
+   <LINK REL="Next"  HREF="000049.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] Embench meeting/call 11 May 2020</H1>
+    <B>Jeremy Bennett</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Embench%20meeting/call%2011%20May%202020&In-Reply-To=%3Ce7dddf81-3a2e-6315-0d16-3b57d441fc8b%40embecosm.com%3E"
+       TITLE="[Embench] Embench meeting/call 11 May 2020">jeremy.bennett at embecosm.com
+       </A><BR>
+    <I>Mon May 11 15:10:42 CEST 2020</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000047.html">[Embench] Sourcing the Embench reference board
+</A></li>
+        <LI>Next message (by thread): <A HREF="000049.html">[Embench] Notes from Embench call 11 May 2020
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#48">[ date ]</a>
+              <a href="thread.html#48">[ thread ]</a>
+              <a href="subject.html#48">[ subject ]</a>
+              <a href="author.html#48">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Hi all,
+
+Our next regular meeting of the Embench group will be today Monday, 11
+May, 8-10am California time.
+
+We will meet using the same Zoom details as before. Please email me if
+you do not have them - I am reluctant to post details on an open
+mailing list.
+
+Agenda
+======
+
+1. Actions from previous meeting
+- --------------------------------
+
+ACTION: Paolo Savini. Fix issue 51:
+- - Complete.
+
+ACTION: Paolo Savini. Fix issue 52
+- - Complete.
+
+Action: Paolo Savini/Jeremy Bennett. Get clean Embench 0.5 results in
+to results repository
+- - In progress.
+
+ACTION: Jeremy Bennett to publicise vendors of reference board on the
+mailing list and add more information in documentation.
+- - Mailing list notified.
+- - Documentation in progress.
+
+ACTION: Jeremy Bennett. Update London Meetup slides and make available
+to group.
+- - In progress.
+
+ACTION: All. Suggest benchmarks that could be used for a FP
+benchmark suite.
+- - Follow-up on meeting.
+
+ACTION: Jeremy Bennett. Revise calendar of 2020 meetings to allow for
+conferences and holidays.
+- - complete.
+
+2. GitHub pull requests
+- -----------------------
+
+There are no outstanding pull requests.
+
+3. New GitHub issues
+- --------------------
+
+Two issues have been raised.
+
+<A HREF="https://github.com/embench/embench-iot/issues/59">https://github.com/embench/embench-iot/issues/59</A>
+- - A request for clarity in documenting the use of CPU_MHZ
+- - Thanks to Tilak Girijeswar for raising this.
+
+<A HREF="https://github.com/embench/embench-iot/issues/60">https://github.com/embench/embench-iot/issues/60</A>
+- - A request to use stdint types throughout.
+- - This has been discussed and decided in the past
+- - The documentation should be updated to reflect this.
+- - Thanks to Tilak Girijeswar for raising this.
+
+The following issues have been closed
+
+<A HREF="https://github.com/embench/embench-iot/issues/31">https://github.com/embench/embench-iot/issues/31</A>
+- - explanation provided.
+
+<A HREF="https://github.com/embench/embench-iot/issues/40">https://github.com/embench/embench-iot/issues/40</A>
+- - bug fixed by patch from Paolo Savini
+
+<A HREF="https://github.com/embench/embench-iot/issues/47">https://github.com/embench/embench-iot/issues/47</A>
+- - explanation provided
+
+<A HREF="https://github.com/embench/embench-iot/issues/51">https://github.com/embench/embench-iot/issues/51</A>
+- - bug fixed by patch from Mark Hill
+
+<A HREF="https://github.com/embench/embench-iot/issues/52">https://github.com/embench/embench-iot/issues/52</A>
+- - bug fixed by same patch as for issue 40.
+
+<A HREF="https://github.com/embench/embench-iot/issues/53">https://github.com/embench/embench-iot/issues/53</A>
+- - explanation provided
+
+Thanks to all those who provided explanations and patches.
+
+4. Update on benchmarks
+- -----------------------
+
+Jeremy Bennett to report on status of results repository.
+
+5. Publicity
+- ------------
+
+David Patterson will update us on the status of our HotChips submission
+
+What is the plan for Arm TechCon this year?
+
+6. Embench 0.6
+- --------------
+
+At our last meeting we all took an action to consider new benchmarks
+that could be included in a floating-point Embench suite.
+- - BEEBS has some
+- - we should increase the platform size, to say 1MB
+- - can we add some machine-learning benchmarks.
+- - should we use Cortex M4 or M7 as baseline.
+
+In addition there was a desire for
+- - easier configuration
+- - extending the interrupt latency/context-switching benchmark
+- - having a saner way of measuring code size!
+
+Since that meeting, David Patterson has suggested some machine
+learning benchmarks that are appropriate. This is an opportunity for
+further discussion. In particular to find volunteers to lead
+particular aspects of the effort.
+
+7. Next meeting
+- ---------------
+
+We currently meet regularly on the third Monday of each month 8-10am
+California time. Our future meetings will be. Note that 2 dates have
+been changed to accommodate upcoming conferences/holidays.
+- - Mon 15 Jun 2020
+- - Mon 20 Jul 2020
+- - Mon 10 Aug 2020 (changed)
+- - Mon 21 Sep 2020
+- - Mon 19 Oct 2020
+- - Mon 16 Nov 2020
+- - Mon 14 Dec 2020 (changed)
+
+I've created a calendar entry for our regular attendees, to provide
+automated reminders. Please ask if you wish to be added to this.
+
+8. AOB
+- ------
+
+Best wishes,
+
+
+Jeremy Bennett
+Vice chair
+
+-----BEGIN PGP SIGNATURE-----
+
+iF0EARECAB0WIQRASGDWqmhRZUfAaPW+9YFy+0dU4QUCXrlO0QAKCRC+9YFy+0dU
+4dZmAJoCejhT/DBFcWptf1W/o9HTeClytACcCX6BK572iKhtryykN6yNYkMd468=
+=wPEQ
+-----END PGP SIGNATURE-----
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000047.html">[Embench] Sourcing the Embench reference board
+</A></li>
+	<LI>Next message (by thread): <A HREF="000049.html">[Embench] Notes from Embench call 11 May 2020
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#48">[ date ]</a>
+              <a href="thread.html#48">[ thread ]</a>
+              <a href="subject.html#48">[ subject ]</a>
+              <a href="author.html#48">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

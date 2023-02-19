@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] aha-mont64 unfairly penalises 64bit architectures
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20aha-mont64%20unfairly%20penalises%2064bit%20architectures&In-Reply-To=%3C20191022112926.59b86da1%40kryten.localdomain%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000023.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] aha-mont64 unfairly penalises 64bit architectures</H1>
+    <B>Anton Blanchard</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20aha-mont64%20unfairly%20penalises%2064bit%20architectures&In-Reply-To=%3C20191022112926.59b86da1%40kryten.localdomain%3E"
+       TITLE="[Embench] aha-mont64 unfairly penalises 64bit architectures">anton at ozlabs.org
+       </A><BR>
+    <I>Tue Oct 22 02:29:26 CEST 2019</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000023.html">[Embench] Issues with cubic benchmark
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#24">[ date ]</a>
+              <a href="thread.html#24">[ thread ]</a>
+              <a href="subject.html#24">[ subject ]</a>
+              <a href="author.html#24">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+aha-mont64 contains an open coded 64 x 64 -&gt; 128 bit multiplication:
+
+void
+mulul64 (uint64 u, uint64 v, uint64 * whi, uint64 * wlo)
+{
+  uint64 u0, u1, v0, v1, k, t;
+  uint64 w0, w1, w2;
+
+  u1 = u &gt;&gt; 32;
+  u0 = u &amp; 0xFFFFFFFF;
+  v1 = v &gt;&gt; 32;
+  v0 = v &amp; 0xFFFFFFFF;
+
+  t = u0 * v0;
+  w0 = t &amp; 0xFFFFFFFF;
+  k = t &gt;&gt; 32;
+
+  t = u1 * v0 + k;
+  w1 = t &amp; 0xFFFFFFFF;
+  w2 = t &gt;&gt; 32;
+
+  t = u0 * v1 + w1;
+  k = t &gt;&gt; 32;
+
+  *wlo = (t &lt;&lt; 32) + w0;
+  *whi = u1 * v1 + w2 + k;
+
+  return;
+}
+
+This is very sub optimal on 64 bit architectures where it could be done
+in 2 instructions. Potential fix:
+
+<A HREF="https://github.com/embench/embench-iot/pull/19">https://github.com/embench/embench-iot/pull/19</A>
+
+Thanks,
+Anton
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000023.html">[Embench] Issues with cubic benchmark
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#24">[ date ]</a>
+              <a href="thread.html#24">[ thread ]</a>
+              <a href="subject.html#24">[ subject ]</a>
+              <a href="author.html#24">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

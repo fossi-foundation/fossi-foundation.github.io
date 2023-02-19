@@ -1,0 +1,230 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] Notes from Embench call 11 May 2020
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Notes%20from%20Embench%20call%2011%20May%202020&In-Reply-To=%3Ca4de02a4-a0d7-79c3-1fd6-a0f218bffa16%40embecosm.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000048.html">
+   <LINK REL="Next"  HREF="000050.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] Notes from Embench call 11 May 2020</H1>
+    <B>Jeremy Bennett</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Notes%20from%20Embench%20call%2011%20May%202020&In-Reply-To=%3Ca4de02a4-a0d7-79c3-1fd6-a0f218bffa16%40embecosm.com%3E"
+       TITLE="[Embench] Notes from Embench call 11 May 2020">jeremy.bennett at embecosm.com
+       </A><BR>
+    <I>Mon May 18 19:19:04 CEST 2020</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000048.html">[Embench] Embench meeting/call 11 May 2020
+</A></li>
+        <LI>Next message (by thread): <A HREF="000050.html">[Embench] Fwd: Benchmark question
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#49">[ date ]</a>
+              <a href="thread.html#49">[ thread ]</a>
+              <a href="subject.html#49">[ subject ]</a>
+              <a href="author.html#49">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Hi all,
+
+These are the notes from last week's meeting, summarizing actions.
+
+3. New GitHub issues
+- --------------------
+
+Two issues have been raised.
+
+<A HREF="https://github.com/embench/embench-iot/issues/59">https://github.com/embench/embench-iot/issues/59</A>
+- - A request for clarity in documenting the use of CPU_MHZ
+- - Assigned to Paolo Savini to investigate.
+- - Thanks to Tilak Girijeswar for raising this.
+
+<A HREF="https://github.com/embench/embench-iot/issues/60">https://github.com/embench/embench-iot/issues/60</A>
+- - A request to use stdint types throughout.
+- - This has been discussed and decided in the past
+- - The documentation should be updated to reflect this.
+- - Assigned to Paolo Savini to resolve.
+- - Thanks to Tilak Girijeswar for raising this.
+
+The following issues have been closed
+
+<A HREF="https://github.com/embench/embench-iot/issues/31">https://github.com/embench/embench-iot/issues/31</A>
+- - explanation provided.
+
+<A HREF="https://github.com/embench/embench-iot/issues/40">https://github.com/embench/embench-iot/issues/40</A>
+- - bug fixed by patch from Paolo Savini
+
+<A HREF="https://github.com/embench/embench-iot/issues/47">https://github.com/embench/embench-iot/issues/47</A>
+- - explanation provided
+
+<A HREF="https://github.com/embench/embench-iot/issues/51">https://github.com/embench/embench-iot/issues/51</A>
+- - bug fixed by patch from Mark Hill
+
+<A HREF="https://github.com/embench/embench-iot/issues/52">https://github.com/embench/embench-iot/issues/52</A>
+- - bug fixed by same patch as for issue 40.
+
+<A HREF="https://github.com/embench/embench-iot/issues/53">https://github.com/embench/embench-iot/issues/53</A>
+- - explanation provided
+
+Thanks to all those who provided explanations and patches.
+
+4. Update on benchmarks
+- -----------------------
+
+Work is nearing completion on the embench-iot-results repository. Goal
+is to have this clean and ready to accept new submissions in the next
+few days.
+
+ACTION: Jeremy Bennett to complete work on the embench-iot-results
+respository.
+
+Paolo Savini presented a slide showing the impact of GCC 10.1 on
+Embench results for RISC-V and Arm Cortex-M4. Both cores have
+improved, although Arm has improved its execution speed slightly more
+than RISC-V.
+
+ACTION: Paolo Savini to distribute his slide.
+
+Jeremy Bennett has publicised current vendors of the reference board
+on the mailing list, but has yet to update the documentation.
+
+ACTION (continued): Jeremy Bennett to update the documentation with
+more details to make the board easier to find in future.
+
+5. Publicity
+- ------------
+
+Our paper is on standby for Hot Chips, which will be a virtual
+conference this year.
+
+We should consider submitting to Arm TechCon.
+
+ACTION: David Patterson/Jeremy Bennett. Chase up what is happening for
+Arm TechCon.
+
+[Post-meeting note: The call for papers has now come out, and David
+Patterson will draft a proposal]
+
+6. Embench 0.6
+- --------------
+
+General agreement that the new version must use the size of actual
+executables, not dummy libraries.
+
+Desire to add a floating-point suite, with up to 1MB program size
+
+General agreement that the MLPerf TinyML benchmark (250kB) would be a
+good candidate for this:
+<A HREF="https://github.com/tensorflow/tensorflow/tree/master/tensorflow/lite/micro/examples/person_detection">https://github.com/tensorflow/tensorflow/tree/master/tensorflow/lite/micro/examples/person_detection</A>
+
+There are several BEEBS benchmarks that might be suitable for a
+floating point benchmark.
+
+ACTION: Paolo Savini to explore suitable BEEBS floating point benchmarks.
+
+It was noted that GPS uses double precision floating point, including
+in IoT devices, so might be a source of suitable benchmarks.
+
+ACTION: Jeremy Bennett. Set up a shared Google doc for people to
+record suggestions.
+
+[Post-meeting note: This is now set up. Anyone may suggest edits:
+<A HREF="https://docs.google.com/document/d/1tC0LXZRYeyoSRTM9aXtapzx3sA00vfFcL9QjOxU3vzQ">https://docs.google.com/document/d/1tC0LXZRYeyoSRTM9aXtapzx3sA00vfFcL9QjOxU3vzQ</A>
+]
+
+The question was asked if there were graphics applications that might
+be suitable.
+
+ACTION: All. Reach out to friends in embedded computing for
+suggestions, including DSP suggestions.
+
+7. Future meetings
+- ------------------
+
+We currently meet regularly on the third Monday of each month 8-10am
+California time. Our future meetings will be. Note that 2 dates have
+been changed to accommodate upcoming conferences/holidays.
+- - Mon 15 Jun 2020
+- - Mon 20 Jul 2020
+- - Mon 10 Aug 2020 (changed)
+- - Mon 21 Sep 2020
+- - Mon 19 Oct 2020
+- - Mon 16 Nov 2020
+- - Mon 14 Dec 2020 (changed)
+
+I've created a calendar entry for our regular attendees, to provide
+automated reminders. Please ask if you wish to be added to this.
+
+8. AOB
+- ------
+
+Kyriakos Georgiou reported on progress with an Ada version of Embench,
+written in Ada/SPARK (hence no run-time errors)
+- - 13 benchmarks converted
+- - harder to do for library based benchmarks
+- - can compile for STM Discovery Board
+  - still WIP
+- - currently private due to Innovate UK restrictions
+  - will be made public in June
+- - have found bugs in the existing benchmarks!
+
+Nidal Faour reported that Western Digital have started open sourcing
+their enterprise build system
+- - complete in 5-6 weeks
+- - will replace the existing Python scripts.
+
+Best wishes,
+
+
+Jeremy
+
+- -- 
+Cell: +44 (7970) 676050
+SkypeID: jeremybennett
+Twitter: @jeremypbennett
+Email: <A HREF="https://lists.librecores.org/listinfo/embench">jeremy.bennett at embecosm.com</A>
+Web: www.embecosm.com
+PGP key: 1024D/BEF58172FB4754E1 2009-03-20
+-----BEGIN PGP SIGNATURE-----
+
+iF0EARECAB0WIQRASGDWqmhRZUfAaPW+9YFy+0dU4QUCXsLDgwAKCRC+9YFy+0dU
+4dnlAJ9xpfYkBu/h8ZUnkLUNjB35qt8R8gCghFMN8KqNh2AXNLE0fJobYfFuhRI=
+=BUyW
+-----END PGP SIGNATURE-----
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000048.html">[Embench] Embench meeting/call 11 May 2020
+</A></li>
+	<LI>Next message (by thread): <A HREF="000050.html">[Embench] Fwd: Benchmark question
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#49">[ date ]</a>
+              <a href="thread.html#49">[ thread ]</a>
+              <a href="subject.html#49">[ subject ]</a>
+              <a href="author.html#49">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

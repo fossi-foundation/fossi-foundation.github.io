@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] WD code size test cases to Embench
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20WD%20code%20size%20test%20cases%20to%20Embench&In-Reply-To=%3C6dacdee9-3444-0833-151c-1bbda385e38d%40embecosm.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000112.html">
+   <LINK REL="Next"  HREF="000114.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] WD code size test cases to Embench</H1>
+    <B>Jeremy Bennett</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20WD%20code%20size%20test%20cases%20to%20Embench&In-Reply-To=%3C6dacdee9-3444-0833-151c-1bbda385e38d%40embecosm.com%3E"
+       TITLE="[Embench] WD code size test cases to Embench">jeremy.bennett at embecosm.com
+       </A><BR>
+    <I>Sun Mar 21 11:56:12 CET 2021</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000112.html">[Embench] WD code size test cases to Embench
+</A></li>
+        <LI>Next message (by thread): <A HREF="000114.html">[Embench] Embench Digest, Vol 20, Issue 11
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#113">[ date ]</a>
+              <a href="thread.html#113">[ thread ]</a>
+              <a href="subject.html#113">[ subject ]</a>
+              <a href="author.html#113">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>On 21/03/2021 10:51, Nidal Faour wrote:
+&gt;<i> Hi everyone,
+</I>&gt;<i> 
+</I>&gt;<i> I will to start porting code size test cases created by WD to the
+</I>&gt;<i> Embench github.
+</I>&gt;<i> 
+</I>&gt;<i> I have some questions regarding the process:
+</I>&gt;<i> 
+</I>&gt;<i>  1. where do you think I should put these? Under which repository?
+</I>
+Hi Nidal,
+
+If they are candidates for Embench IoT 2.0, then they should be
+pull-requests against embench-iot. If they are candidates for Embench
+DSP, then please liaise with Ray Simar, but they should be in the
+embench-dsp repository.
+
+&gt;<i>  2. These test cases are meant for measuring code size only, therefore
+</I>&gt;<i>     they may or may not run in order to measure performance. How should
+</I>&gt;<i>     I deal with this?
+</I>
+You need to make them executable and self-checking. This is an important
+feature of Embench.
+
+They should be suitable for all architectures within the limitations of
+the particular benchmark suite. For example Embench IoT tests should
+work on architectures where int is 16-bits and there is at least 64kB of
+memory.
+
+HTH,
+
+
+Jeremy
+
+&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> 
+</I>&gt;<i> Best Regards,
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> 
+</I>&gt;<i> Best Regards,
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> 
+</I>&gt;<i> *Nidal Faour*
+</I>&gt;<i> 
+</I>&gt;<i> Staff Engineer, R&amp;D Engineering – Firmware &amp; Toolchain, CTO Group
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> 
+</I>&gt;<i> *Western Digital®*
+</I>&gt;<i> 
+</I>&gt;<i> Migdal Tefen 24959, P.O Box 3
+</I>&gt;<i> 
+</I>&gt;<i> Email: <A HREF="https://lists.librecores.org/listinfo/embench">nidal.faour at wdc.com</A> &lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">nidal.faour at wdc.com</A>&gt;**
+</I>&gt;<i> 
+</I>&gt;<i> Office: +972-4-9078756**
+</I>&gt;<i> 
+</I>&gt;<i> Mobile: +972-50-8867756**
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>
+
+-- 
+Cell: +44 (7970) 676050
+SkypeID: jeremybennett
+Twitter: @jeremypbennett
+Email: <A HREF="https://lists.librecores.org/listinfo/embench">jeremy.bennett at embecosm.com</A>
+Web: www.embecosm.com
+PGP key: 1024D/BEF58172FB4754E1 2009-03-20
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: OpenPGP_signature
+Type: application/pgp-signature
+Size: 203 bytes
+Desc: OpenPGP digital signature
+URL: &lt;<A HREF="http://lists.librecores.org/pipermail/embench/attachments/20210321/34c5928e/attachment.sig">http://lists.librecores.org/pipermail/embench/attachments/20210321/34c5928e/attachment.sig</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000112.html">[Embench] WD code size test cases to Embench
+</A></li>
+	<LI>Next message (by thread): <A HREF="000114.html">[Embench] Embench Digest, Vol 20, Issue 11
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#113">[ date ]</a>
+              <a href="thread.html#113">[ thread ]</a>
+              <a href="subject.html#113">[ subject ]</a>
+              <a href="author.html#113">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

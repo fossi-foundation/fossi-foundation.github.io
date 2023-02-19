@@ -1,0 +1,177 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] Fwd: Benchmark question
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Fwd%3A%20Benchmark%20question&In-Reply-To=%3C73ce2686-2b83-b665-fa7d-26d098ec7378%40embecosm.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000055.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] Fwd: Benchmark question</H1>
+    <B>Jeremy Bennett</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Fwd%3A%20Benchmark%20question&In-Reply-To=%3C73ce2686-2b83-b665-fa7d-26d098ec7378%40embecosm.com%3E"
+       TITLE="[Embench] Fwd: Benchmark question">jeremy.bennett at embecosm.com
+       </A><BR>
+    <I>Fri May 22 09:00:57 CEST 2020</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000055.html">[Embench] Benchmark question
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#53">[ date ]</a>
+              <a href="thread.html#53">[ thread ]</a>
+              <a href="subject.html#53">[ subject ]</a>
+              <a href="author.html#53">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+On 21/05/2020 16:27, David PATTERSON wrote:
+&gt;<i> Following up from request for floating point benchmarks for Embench
+</I>&gt;<i> 0.6.
+</I>&gt;<i>
+</I>&gt;<i> I presume I should follow up with an offer from BDTI for DSP
+</I>&gt;<i> benchmarks?
+</I>
+Hi Dave,
+
+This sounds a great opportunity. We have a floating point matrix
+multiplication kernel in BEEBS, and I think matrix inversion.
+
+Best wishes,
+
+
+Jeremy
+&gt;<i>
+</I>&gt;<i> Dave
+</I>&gt;<i>
+</I>&gt;<i> ---------- Forwarded message --------- From: *Jeff Bier*
+</I>&gt;<i> &lt;<A HREF="https://lists.librecores.org/listinfo/embench">bier at bdti.com</A> &lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">bier at bdti.com</A>&gt;&gt; Date: Thu, May 21, 2020 at
+</I>&gt;<i> 8:20 AM Subject: RE: Benchmark question To: <A HREF="https://lists.librecores.org/listinfo/embench">pattrsn at cs.berkeley.edu</A>
+</I>&gt;<i> &lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">pattrsn at cs.berkeley.edu</A>&gt; &lt;<A HREF="https://lists.librecores.org/listinfo/embench">pattrsn at cs.berkeley.edu</A>
+</I>&gt;<i> &lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">pattrsn at cs.berkeley.edu</A>&gt;&gt;
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Hi Dave,____
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Sorry for the slow response on this.  My dad has been in the
+</I>&gt;<i> hospital this week -- he’s doing OK, but conditions related to
+</I>&gt;<i> Covid-19 made things much more complicated.____
+</I>&gt;<i>
+</I>&gt;<i> __ __
+</I>&gt;<i>
+</I>&gt;<i> Regarding floating-point embedded benchmarks, here are some
+</I>&gt;<i> ideas…____
+</I>&gt;<i>
+</I>&gt;<i> * My company, BDTI, would be willing to open source BDTI could
+</I>&gt;<i> open source the C reference code for a subset of our floating-point
+</I>&gt;<i> DSP benchmarks.  If this is of interest, let’s talk.  (This could
+</I>&gt;<i> be at the function level, like FFTs and FIR filters, and/or at the
+</I>&gt;<i> task level, like an OFDM wireless receiver baseband.)____ *
+</I>&gt;<i> <A HREF="https://www.fourmilab.ch/fbench/___">https://www.fourmilab.ch/fbench/___</A>_ * Linear algebra libraries,
+</I>&gt;<i> e.g. matrix multiplication, matrix inversion.  (I don’t have a
+</I>&gt;<i> specific pointer, but I’m guessing there are open source libraries
+</I>&gt;<i> available.)____ * OpenCV is now C++, but earlier versions were C.
+</I>&gt;<i> (Some computer vision tasks are pixel-oriented and inherently
+</I>&gt;<i> integer, but others are geometric and more naturally
+</I>&gt;<i> float-based.)____ * Here’s an audio application in C, with all
+</I>&gt;<i> sorts of algorithms such as de-clipper, eq, reverb, etc.
+</I>&gt;<i> <A HREF="https://github.com/ePirat/Postfish.">https://github.com/ePirat/Postfish.</A>  (However it may be a bit
+</I>&gt;<i> challenging to extract individual algorithms from the entire
+</I>&gt;<i> framework…)____
+</I>&gt;<i>
+</I>&gt;<i> __ __
+</I>&gt;<i>
+</I>&gt;<i> I hope this helps.____
+</I>&gt;<i>
+</I>&gt;<i> __ __
+</I>&gt;<i>
+</I>&gt;<i> -jeff-____
+</I>&gt;<i>
+</I>&gt;<i> __ __
+</I>&gt;<i>
+</I>&gt;<i> *From:* David PATTERSON &lt;<A HREF="https://lists.librecores.org/listinfo/embench">pattrsn at cs.berkeley.edu</A>
+</I>&gt;<i> &lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">pattrsn at cs.berkeley.edu</A>&gt;&gt; *Sent:* Tuesday, May 12, 2020
+</I>&gt;<i> 7:53 AM *To:* Jeff Bier &lt;<A HREF="https://lists.librecores.org/listinfo/embench">bier at edge-ai-vision.com</A>
+</I>&gt;<i> &lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">bier at edge-ai-vision.com</A>&gt;&gt; *Subject:* Benchmark
+</I>&gt;<i> question____
+</I>&gt;<i>
+</I>&gt;<i> __ __
+</I>&gt;<i>
+</I>&gt;<i> The embedded benchmarking effort I'm involved in wants to branch
+</I>&gt;<i> out to floating point programs from integer programs, and allow a
+</I>&gt;<i> little larger programs (250 KB of data).____
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Do you have any suggestions?____
+</I>&gt;<i>
+</I>&gt;<i> __ __
+</I>&gt;<i>
+</I>&gt;<i> Ideally they we be open source C programs, including data
+</I>&gt;<i> sets.____
+</I>&gt;<i>
+</I>&gt;<i> __ __
+</I>&gt;<i>
+</I>&gt;<i> DSP apps should be fine. ____
+</I>&gt;<i>
+</I>&gt;<i> __ __
+</I>&gt;<i>
+</I>&gt;<i> If there was an existing such benchmark for DSP or some other area,
+</I>&gt;<i> and they had an open source license, we might be able to follow
+</I>&gt;<i> their lead.____
+</I>&gt;<i>
+</I>&gt;<i> __ __
+</I>&gt;<i>
+</I>&gt;<i> Best, Dave____
+</I>&gt;<i>
+</I>&gt;<i>
+</I>
+
+- -- 
+Cell: +44 (7970) 676050
+SkypeID: jeremybennett
+Twitter: @jeremypbennett
+Email: <A HREF="https://lists.librecores.org/listinfo/embench">jeremy.bennett at embecosm.com</A>
+Web: www.embecosm.com
+PGP key: 1024D/BEF58172FB4754E1 2009-03-20
+-----BEGIN PGP SIGNATURE-----
+
+iF0EARECAB0WIQRASGDWqmhRZUfAaPW+9YFy+0dU4QUCXsd4qAAKCRC+9YFy+0dU
+4Q45AKCL2Nw+KLaxJPwVmk1Trnvl40d+ggCfeydOi47XC7RfsO48/bY1Ho2/sEs=
+=GUNE
+-----END PGP SIGNATURE-----
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000055.html">[Embench] Benchmark question
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#53">[ date ]</a>
+              <a href="thread.html#53">[ thread ]</a>
+              <a href="subject.html#53">[ subject ]</a>
+              <a href="author.html#53">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

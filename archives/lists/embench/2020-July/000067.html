@@ -1,0 +1,239 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] New Embench FP suite repository
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20New%20Embench%20FP%20suite%20repository&In-Reply-To=%3Cad0c84d8-3d75-ba19-0da9-255a065b355d%40embecosm.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000065.html">
+   <LINK REL="Next"  HREF="000066.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] New Embench FP suite repository</H1>
+    <B>Jeremy Bennett</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20New%20Embench%20FP%20suite%20repository&In-Reply-To=%3Cad0c84d8-3d75-ba19-0da9-255a065b355d%40embecosm.com%3E"
+       TITLE="[Embench] New Embench FP suite repository">jeremy.bennett at embecosm.com
+       </A><BR>
+    <I>Wed Jul 22 20:47:02 CEST 2020</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000065.html">[Embench] Embench meeting/call 19 July 2020
+</A></li>
+        <LI>Next message (by thread): <A HREF="000066.html">[Embench] Notes from Embench call 20 July 2020
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#67">[ date ]</a>
+              <a href="thread.html#67">[ thread ]</a>
+              <a href="subject.html#67">[ subject ]</a>
+              <a href="author.html#67">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+On 22/07/2020 19:24, Ray Simar wrote:
+&gt;<i> Hi all,
+</I>&gt;<i>
+</I>&gt;<i> This all sounds great.  I wanted to ask about the long term
+</I>&gt;<i> architecture of the repository.  I can see that this repository
+</I>&gt;<i> might include a number of things.  For example, it would certainly
+</I>&gt;<i> have floating-point benchmarks and the necessary data to test
+</I>&gt;<i> them.
+</I>&gt;<i>
+</I>&gt;<i> But I wonder about other content.  For example, we might have adoc
+</I>&gt;<i> files to document the philosophy behind the benchmarks, rules for
+</I>&gt;<i> running them etc.  And, at some point there might be make files to
+</I>&gt;<i> build them etc., though I could see these residing elsewhere.
+</I>
+(moving to mailing list discussion)
+
+Hi Ray,
+
+For embench-iot we went down the python route, because we perceived
+that Makefile technology was not flexible enough for all the ways you
+might want to both build and run the benchmarks. The original BEEBS
+was makefile based, and really painful to use and maintain.
+
+There is a hope that we will move to a Western Digital platform for
+building and running everything.
+
+We have a documentation directory for embench-iot, and have generally
+stuck to MarkDown, since it seems so ubiquitous, and everyone knows
+how to use it. I have used Asciidoc - the RISC-V Foundation likes it,
+and it is supported by GitHub. The problem is it has something of a
+learning curve for new contributors. Plus the tool support for
+previewing before you commit is poor. But would be interesting to hear
+what others think.
+
+One thing we did establish was a strict discipline on git commit
+messages, following GNU ChangeLog principles. If this is to be a long
+term project, maintaining good records is essential - the embench-iot
+repo has examples.
+
+&gt;<i> Now, I know I am new to this effort, so I want to be sure I do
+</I>&gt;<i> things with the repository that are consistent with the long term
+</I>&gt;<i> vision.  We could begin to flesh out the repository with the stubs
+</I>&gt;<i> for this now.  My experience is that it is best to rought out some
+</I>&gt;<i> of this now, rather than later.  But, I’ll follow your lead on
+</I>&gt;<i> this.
+</I>
+Embench is stil quite new, so we are establishing how we do things.
+Input from the wider community is welcome, and you have the
+opportunity to try new things with the floating point Embench project.
+
+Best wishes,
+
+
+Jeremy
+
+&gt;<i>
+</I>&gt;<i> Thanks for the guidance!
+</I>&gt;<i>
+</I>&gt;<i> All the best, Ray
+</I>&gt;<i>
+</I>&gt;&gt;<i> On Jul 22, 2020, at 12:30 PM, Jeremy Bennett
+</I>&gt;&gt;<i> &lt;<A HREF="https://lists.librecores.org/listinfo/embench">jeremy.bennett at embecosm.com</A>
+</I>&gt;&gt;<i> &lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">jeremy.bennett at embecosm.com</A>&gt;&gt;
+</I>wrote:
+&gt;&gt;<i>
+</I>&gt;<i> On 22/07/2020 17:07, Ray Simar wrote:
+</I>&gt;&gt;&gt;&gt;<i> Sounds great!  I accepted the invitation to embench.  I’m
+</I>&gt;&gt;&gt;&gt;<i> also going
+</I>&gt;<i> to use this as an opportunity to try out some new (to me) GitHub
+</I>&gt;<i> tools.  This time I’ll be using sublime merge.  Any other
+</I>&gt;<i> recommendations are welcome.
+</I>&gt;<i>
+</I>&gt;<i> Hi Ray,
+</I>&gt;<i>
+</I>&gt;<i> I've set things up, so you can't commit direct to master, you have
+</I>&gt;<i> to submit a pull request.
+</I>&gt;<i>
+</I>&gt;<i> Recommended workflow is to fork the repository into your personal
+</I>&gt;<i> account, then submit pull requests to the embench repo from your
+</I>&gt;<i> personal fork. Even for your own work - you can approve your own
+</I>&gt;<i> pull request. That way the official repo does not get cluttered
+</I>&gt;<i> with a lot of development branches.
+</I>&gt;<i>
+</I>&gt;<i> There is an informal convention that you name your own work
+</I>&gt;<i> branches prefixed by your user name, and if it is fixing an issue,
+</I>&gt;<i> the issue number. For example raysimar-issue65-fix. That way the
+</I>&gt;<i> maintainer (which is you) can easily see for each pull request
+</I>&gt;<i> whose work it is and what it relates to.
+</I>&gt;<i>
+</I>&gt;<i> I'm a mid-level git user, but I have staff who are gurus, so if
+</I>&gt;<i> you run into problems, one way or another I can probably get an
+</I>&gt;<i> answer :-)
+</I>&gt;<i>
+</I>&gt;<i> Thanks very much for your support - great to have a new person
+</I>&gt;<i> driving part of the project. Let me know if I can help.
+</I>&gt;<i>
+</I>&gt;<i> Best wishes,
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Jeremy
+</I>&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> All the best, Ray
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> On Jul 21, 2020, at 11:03 AM, Jeremy Bennett
+</I>&gt;<i> &lt;<A HREF="https://lists.librecores.org/listinfo/embench">jeremy.bennett at embecosm.com</A> &lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">jeremy.bennett at embecosm.com</A>&gt;&gt;
+</I>&gt;<i> wrote:
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> On 20/07/2020 22:05, Ray Simar wrote:
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> Hi Jeremy,
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> Try raysimar for my GitHub handle.
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> FYI, I am usual a casual user of GitHub, so don’t be
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> afraid to give
+</I>&gt;&gt;&gt;&gt;<i> me pointer!
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Hi Ray,
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> You should have access as a maintainer of the repository.
+</I>&gt;&gt;&gt;&gt;<i> I've also made Paolo Savini a maintainer for convenience.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> General way of working is for you to create your own fork of
+</I>&gt;&gt;&gt;&gt;<i> the repository, make changes on a branch within your fork
+</I>&gt;&gt;&gt;&gt;<i> (typically including your id in the name of the branch), then
+</I>&gt;&gt;&gt;&gt;<i> submit a pull-request when you are ready to incorporate your
+</I>&gt;&gt;&gt;&gt;<i> commits into the main repository. You, Paolo or me can
+</I>&gt;&gt;&gt;&gt;<i> approve merge requests in the repo.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Best wishes,
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Jeremy
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> All the best, Ray
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> On Jul 20, 2020, at 11:47 AM, Jeremy Bennett
+</I>&gt;&gt;&gt;&gt;<i> &lt;<A HREF="https://lists.librecores.org/listinfo/embench">jeremy.bennett at embecosm.com</A>
+</I>&gt;&gt;&gt;&gt;<i> &lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">jeremy.bennett at embecosm.com</A>&gt;&gt; wrote:
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> Hi Ray,
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> I've created a new repository for the Embench floating
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> point benchmark suite.
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> <A HREF="https://github.com/embench/embench-fp">https://github.com/embench/embench-fp</A>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> Could you let me know your GitHub handle and I'll add
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> you as administrator.
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> Best wishes,
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> Jeremy
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>
+- -- 
+Cell: +44 (7970) 676050
+SkypeID: jeremybennett
+Twitter: @jeremypbennett
+Email: <A HREF="https://lists.librecores.org/listinfo/embench">jeremy.bennett at embecosm.com</A>
+Web: www.embecosm.com
+PGP key: 1024D/BEF58172FB4754E1 2009-03-20
+-----BEGIN PGP SIGNATURE-----
+
+iF0EARECAB0WIQRASGDWqmhRZUfAaPW+9YFy+0dU4QUCXxiJpAAKCRC+9YFy+0dU
+4euIAKCK3Xan9R7VQTY0o7OfX9gYxT3Q3wCdG+VHQBTp+C3QUVACgd0+fiB5FZM=
+=umVz
+-----END PGP SIGNATURE-----
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000065.html">[Embench] Embench meeting/call 19 July 2020
+</A></li>
+	<LI>Next message (by thread): <A HREF="000066.html">[Embench] Notes from Embench call 20 July 2020
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#67">[ date ]</a>
+              <a href="thread.html#67">[ thread ]</a>
+              <a href="subject.html#67">[ subject ]</a>
+              <a href="author.html#67">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

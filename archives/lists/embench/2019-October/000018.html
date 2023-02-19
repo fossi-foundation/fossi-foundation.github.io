@@ -1,0 +1,217 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] Floating point accuracy
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Floating%20point%20accuracy&In-Reply-To=%3Cc7276b22-3720-2c6a-bdb2-8fce32aac9ef%40embecosm.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000017.html">
+   <LINK REL="Next"  HREF="000019.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] Floating point accuracy</H1>
+    <B>Jeremy Bennett</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Floating%20point%20accuracy&In-Reply-To=%3Cc7276b22-3720-2c6a-bdb2-8fce32aac9ef%40embecosm.com%3E"
+       TITLE="[Embench] Floating point accuracy">jeremy.bennett at embecosm.com
+       </A><BR>
+    <I>Fri Oct  4 16:17:40 CEST 2019</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000017.html">[Embench] Floating point accuracy
+</A></li>
+        <LI>Next message (by thread): <A HREF="000019.html">[Embench] Floating point accuracy
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#18">[ date ]</a>
+              <a href="thread.html#18">[ thread ]</a>
+              <a href="subject.html#18">[ subject ]</a>
+              <a href="author.html#18">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+On 04/10/19 11:16, Jon Taylor wrote:
+&gt;<i> Relatedly, I’ve also discovered the nbody test fails when using
+</I>&gt;<i> Arm’s fast math library.
+</I>&gt;<i> 
+</I>&gt;<i> In the verification function, this performs explicit != tests
+</I>&gt;<i> against the expected values, rather than testing whether the fabs
+</I>&gt;<i> difference is within a certain range.
+</I>&gt;<i> 
+</I>&gt;<i> If I check the fabs error, it’s always &lt;1e-19.
+</I>&gt;<i> 
+</I>&gt;<i> It would be nice if we could find a value of acceptable FP error
+</I>&gt;<i> for all the FP tests and have a consistent checking mechanism for
+</I>&gt;<i> the results. The use of the fast-math library is part of the
+</I>&gt;<i> compiler flags, so will be recorded as part of the run.
+</I>
+Hi Jon,
+
+Thanks for pick this up. The code error was also picked up by another
+use in <A HREF="https://github.com/embench/embench-iot/pull/12.">https://github.com/embench/embench-iot/pull/12.</A> I've asked if
+he'd like to offer a generalized fix for all the floating point in the
+light of this discussion. I agree fabs is the solution. I'm not sure
+what the correct value is to use - you might hope there is a function
+to give you that value.
+
+Floating point usage is supposed to be minimal in this version of
+Embench, but you can't completely exclude it from real programs. But
+we should make it consistent and we shouldn't make it too harsh in its
+accuracy specifications. That can be for a floating point version of
+Embench in the future.
+
+Best wishes,
+
+
+Jeremy
+&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Regards,
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Jon
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> *From:*Embench &lt;<A HREF="https://lists.librecores.org/listinfo/embench">embench-bounces at lists.librecores.org</A>&gt; *On Behalf Of
+</I>&gt;<i> *Jon Taylor *Sent:* 02 October 2019 11:21 *To:*
+</I>&gt;<i> <A HREF="https://lists.librecores.org/listinfo/embench">embench at lists.librecores.org</A> *Cc:* nd &lt;<A HREF="https://lists.librecores.org/listinfo/embench">nd at arm.com</A>&gt; *Subject:*
+</I>&gt;<i> [Embench] Floating point accuracy
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> I’m still testing the performance of Embench on various Arm
+</I>&gt;<i> devices.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> During testing, I encountered the ST (stats) test failing. This
+</I>&gt;<i> performs various double precision floating point operations.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> When using Arm’s fast math library on a device with no hardware
+</I>&gt;<i> floating point support, the test fails.
+</I>&gt;<i> 
+</I>&gt;<i> (see 
+</I>&gt;<i> <A HREF="https://developer.arm.com/docs/dui0774/i/compiler-command-line-options/-ffast-math-fno-fast-math">https://developer.arm.com/docs/dui0774/i/compiler-command-line-options/-ffast-math-fno-fast-math</A>)
+</I>&gt;<i>
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> On debugging this further, this is due to a comparison mismatch in
+</I>&gt;<i> the verify_benchmark function.
+</I>&gt;<i> 
+</I>&gt;<i> If I modify the code with some debug printf statements:
+</I>&gt;<i> 
+</I>&gt;<i> printf (&quot;first check: %8.8e\n&quot;, fabs (expSumA - SumA));
+</I>&gt;<i> 
+</I>&gt;<i> printf (&quot;second check: %8.8e\n&quot;, fabs (expSumB - SumB));
+</I>&gt;<i> 
+</I>&gt;<i> printf (&quot;third check: %8.8e\n&quot;, fabs (expCoef - Coef));
+</I>&gt;<i> 
+</I>&gt;<i> printf (&quot;Coef %8.8e, expCoef %8.8e\n&quot;, Coef, expCoef);
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> return (fabs (expSumA - SumA) &lt; 1.0e13)
+</I>&gt;<i> 
+</I>&gt;<i> &amp;&amp; (fabs (expSumB - SumB) &lt; 1.0e-13) &amp;&amp; (fabs (expCoef - Coef) &lt; 
+</I>&gt;<i> 1.0e-17);
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> I see the following output:
+</I>&gt;<i> 
+</I>&gt;<i> first check: 0.00000000e+00
+</I>&gt;<i> 
+</I>&gt;<i> second check: 0.00000000e+00
+</I>&gt;<i> 
+</I>&gt;<i> third check: 2.22044605e-16
+</I>&gt;<i> 
+</I>&gt;<i> Coef 9.99900055e-01, expCoef 9.99900055e-01
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> (It also looks like there’s a code error here, since the first 
+</I>&gt;<i> comparison is &lt;1e13, the second is &lt;1e-13. Shouldn’t the first also
+</I>&gt;<i> be 1e-13?)
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> The third check result about causes the test to fail since the
+</I>&gt;<i> third comparison looks for an error of less than 1e-17. Is there a
+</I>&gt;<i> particular reason for a tighter threshold on the third check? In
+</I>&gt;<i> fact the absolute difference is less than 1e-17, it’s just that the
+</I>&gt;<i> comparison is done quickly and introduces some error. Can it be
+</I>&gt;<i> relaxed to 1e-13 to match the other comparisons? I don’t know where
+</I>&gt;<i> those numbers have been derived from.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Regards,
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Jon
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>
+
+- -- 
+Tel: +44 (1590) 610184
+Cell: +44 (7970) 676050
+SkypeID: jeremybennett
+Twitter: @jeremypbennett
+Email: <A HREF="https://lists.librecores.org/listinfo/embench">jeremy.bennett at embecosm.com</A>
+Web: www.embecosm.com
+PGP key: 1024D/BEF58172FB4754E1 2009-03-20
+-----BEGIN PGP SIGNATURE-----
+
+iEYEARECAAYFAl2XVH4ACgkQvvWBcvtHVOFpTQCgkTDU4qMRNbTaFqm+QeUhjjUj
+7oAAniINMTK8IBmiRTad8dvlKD4suzaq
+=zXSN
+-----END PGP SIGNATURE-----
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000017.html">[Embench] Floating point accuracy
+</A></li>
+	<LI>Next message (by thread): <A HREF="000019.html">[Embench] Floating point accuracy
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#18">[ date ]</a>
+              <a href="thread.html#18">[ thread ]</a>
+              <a href="subject.html#18">[ subject ]</a>
+              <a href="author.html#18">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

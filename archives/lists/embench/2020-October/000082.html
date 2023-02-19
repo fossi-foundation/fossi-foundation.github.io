@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] LLVM 11.0.0 update
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20LLVM%2011.0.0%20update&In-Reply-To=%3C634fda69-6a45-6550-e6e1-b7adc62a906e%40embecosm.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000081.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] LLVM 11.0.0 update</H1>
+    <B>Jeremy Bennett</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20LLVM%2011.0.0%20update&In-Reply-To=%3C634fda69-6a45-6550-e6e1-b7adc62a906e%40embecosm.com%3E"
+       TITLE="[Embench] LLVM 11.0.0 update">jeremy.bennett at embecosm.com
+       </A><BR>
+    <I>Thu Oct 22 18:45:06 CEST 2020</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000081.html">[Embench] LLVM 11.0.0 update
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#82">[ date ]</a>
+              <a href="thread.html#82">[ thread ]</a>
+              <a href="subject.html#82">[ subject ]</a>
+              <a href="author.html#82">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+On 22/10/2020 17:33, paolo wrote:
+&gt;<i> Hi all,
+</I>&gt;<i>
+</I>&gt;<i> as the new release of LLVM has been out for some days now I
+</I>&gt;<i> generated new benchmark results.
+</I>
+Hi Paolo,
+
+This is good news. The dreadful LLVM top-of-tree results presented on
+Monday, look to have been a transient aberation. with LLVM 11.0.0
+scoring 0.97 for code speed at -O2. Slightly better than GCC 10.2.0
+scoring 0.93.
+
+Best wishes,
+
+
+Jeremy
+
+&gt;<i>
+</I>&gt;<i> Here are the geomean relative (to the current baseline, see slide
+</I>&gt;<i> 7) results per optimization flag for RI5CY:
+</I>&gt;<i>
+</I>&gt;<i> Options               Geomean   +ve   -ve -------
+</I>&gt;<i> -------   ---    -- -O0                      0.43  0.23  0.16 -O1
+</I>&gt;<i> 0.87  0.33  0.24 -O2                      0.97  0.37  0.28 -O3
+</I>&gt;<i> 0.97  0.35  0.27 -O3 -finline-limit=50    0.97  0.35  0.27 -O3
+</I>&gt;<i> -funroll-loops       0.97  0.35  0.27 -Os                      0.88
+</I>&gt;<i> 0.34  0.25 -Os -msave-restore       0.87  0.33  0.24 -Oz
+</I>&gt;<i> 0.87  0.33  0.25 -Oz -msave-restore       0.86  0.33  0.25
+</I>&gt;<i>
+</I>&gt;<i> Size results ============
+</I>&gt;<i>
+</I>&gt;<i> Options               Geomean   +ve   -ve -------
+</I>&gt;<i> -------   ---    -- -O0                      2.65  0.82  0.63 -O1
+</I>&gt;<i> 1.24  0.24  0.21 -O2                      1.37  0.42  0.33 -O3
+</I>&gt;<i> 1.56  0.76  0.52 -O3 -finline-limit=50    1.56  0.76  0.52 -O3
+</I>&gt;<i> -funroll-loops       1.56  0.76  0.52 -Os                      1.23
+</I>&gt;<i> 0.28  0.23 -Os -msave-restore       1.14  0.28  0.23 -Oz
+</I>&gt;<i> 1.18  0.24  0.21 -Oz -msave-restore       1.09  0.23  0.20
+</I>&gt;<i>
+</I>&gt;<i> And here the same for ARM Cortex-M4:
+</I>&gt;<i>
+</I>&gt;<i> Speed results =============
+</I>&gt;<i>
+</I>&gt;<i> Options               Geomean   +ve   -ve -------
+</I>&gt;<i> -------   ---    -- -O0                      0.42  0.25  0.16 -O1
+</I>&gt;<i> 0.94  0.14  0.13 -O2                      1.04  0.13  0.12 -O3
+</I>&gt;<i> 1.05  0.17  0.16 -O3 -finline-limit=50    1.05  0.17  0.16 -O3
+</I>&gt;<i> -funroll-loops       1.05  0.17  0.16 -Os                      0.95
+</I>&gt;<i> 0.13  0.12 -Oz                      0.92  0.17  0.15
+</I>&gt;<i>
+</I>&gt;<i> Size results ============
+</I>&gt;<i>
+</I>&gt;<i> Options               Geomean   +ve   -ve -------
+</I>&gt;<i> -------   ---    -- -O0                      1.85  0.33  0.29 -O1
+</I>&gt;<i> 1.18  0.14  0.13 -O2                      2.04  1.22  0.77 -O3
+</I>&gt;<i> 2.18  1.59  0.92 -O3 -finline-limit=50    2.18  1.59  0.92 -O3
+</I>&gt;<i> -funroll-loops       2.18  1.59  0.92 -Os                      1.16
+</I>&gt;<i> 0.17  0.16 -Oz                      1.02  0.12  0.11
+</I>&gt;<i>
+</I>&gt;<i> You'll notice that the ARM has no results for the flag combination
+</I>&gt;<i> &quot;-Oz -msave-restore&quot;. That's only because ARM LLVM doesn't support
+</I>&gt;<i> the &quot;-msave-restore&quot; flag. This is now being specified in the
+</I>&gt;<i> slides as well.
+</I>&gt;<i>
+</I>&gt;<i> Also note that the top of tree speed result for RI5CY in silde 23
+</I>&gt;<i> of the Embench presentation showed during last meeting had a quite
+</I>&gt;<i> surprisingly worse geomean than LLVM 10.0.1.
+</I>&gt;<i>
+</I>&gt;<i> That was probably due to a lack of some optimization flags.
+</I>&gt;<i> Nevertheless the results from LLVM 11 (that follows the top of tree
+</I>&gt;<i> example of the slides) confirm that there is actually a slight
+</I>&gt;<i> decrease of speed optimization between LLVM 10.0.1 (a geomean of
+</I>&gt;<i> 0.98) and LLVM 11.0.0 (a goemean of 0.97) as we mentioned during
+</I>&gt;<i> the call.
+</I>&gt;<i>
+</I>&gt;<i> The slides are being currently reviewed and updated to integrate
+</I>&gt;<i> the LLVM 11 results.
+</I>&gt;<i>
+</I>&gt;<i> For any question/observation don't hesitate to reply.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Speak to you all soon.
+</I>&gt;<i>
+</I>&gt;<i> Best wishes,
+</I>&gt;<i>
+</I>&gt;<i> Paolo Savini
+</I>&gt;<i>
+</I>&gt;<i>
+</I>
+
+- -- 
+Cell: +44 (7970) 676050
+SkypeID: jeremybennett
+Twitter: @jeremypbennett
+Email: <A HREF="https://lists.librecores.org/listinfo/embench">jeremy.bennett at embecosm.com</A>
+Web: www.embecosm.com
+PGP key: 1024D/BEF58172FB4754E1 2009-03-20
+-----BEGIN PGP SIGNATURE-----
+
+iF0EARECAB0WIQRASGDWqmhRZUfAaPW+9YFy+0dU4QUCX5G3EQAKCRC+9YFy+0dU
+4UinAJ4hekp5GafLAlSUXZ18irLHpz8tqgCgkHbI0mrAoxJSDSbCaASu0VCs9/c=
+=Wona
+-----END PGP SIGNATURE-----
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000081.html">[Embench] LLVM 11.0.0 update
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#82">[ date ]</a>
+              <a href="thread.html#82">[ thread ]</a>
+              <a href="subject.html#82">[ subject ]</a>
+              <a href="author.html#82">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

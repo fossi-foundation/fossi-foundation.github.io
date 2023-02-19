@@ -1,0 +1,225 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] Floating point accuracy
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Floating%20point%20accuracy&In-Reply-To=%3Ce93f60ed-8cdb-e583-b885-2768596955dd%40embecosm.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000018.html">
+   <LINK REL="Next"  HREF="000020.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] Floating point accuracy</H1>
+    <B>Jeremy Bennett</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Floating%20point%20accuracy&In-Reply-To=%3Ce93f60ed-8cdb-e583-b885-2768596955dd%40embecosm.com%3E"
+       TITLE="[Embench] Floating point accuracy">jeremy.bennett at embecosm.com
+       </A><BR>
+    <I>Sat Oct 12 22:04:48 CEST 2019</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000018.html">[Embench] Floating point accuracy
+</A></li>
+        <LI>Next message (by thread): <A HREF="000020.html">[Embench] Embench meeting/call 16 Sep 2019
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#19">[ date ]</a>
+              <a href="thread.html#19">[ thread ]</a>
+              <a href="subject.html#19">[ subject ]</a>
+              <a href="author.html#19">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+On 04/10/19 07:17, Jeremy Bennett wrote:
+&gt;<i> On 04/10/19 11:16, Jon Taylor wrote:
+</I>&gt;&gt;<i> Relatedly, I’ve also discovered the nbody test fails when using 
+</I>&gt;&gt;<i> Arm’s fast math library.
+</I>
+&lt;snip&gt;
+
+&gt;<i> Thanks for pick this up. The code error was also picked up by
+</I>&gt;<i> another use in <A HREF="https://github.com/embench/embench-iot/pull/12.">https://github.com/embench/embench-iot/pull/12.</A> I've
+</I>&gt;<i> asked if he'd like to offer a generalized fix for all the floating
+</I>&gt;<i> point in the light of this discussion. I agree fabs is the
+</I>&gt;<i> solution. I'm not sure what the correct value is to use - you might
+</I>&gt;<i> hope there is a function to give you that value.
+</I>
+Hi Jon,
+
+User tsunekoh has provided a pull request to fix all the FP issues you
+picked up. Would you be able to review this pull request.
+
+<A HREF="https://github.com/embench/embench-iot/pull/14">https://github.com/embench/embench-iot/pull/14</A>
+
+At a first glance it looks good, but I'd appreciate your input.
+
+Thanks,
+
+
+Jeremy
+
+&gt;<i> 
+</I>&gt;<i> Floating point usage is supposed to be minimal in this version of 
+</I>&gt;<i> Embench, but you can't completely exclude it from real programs.
+</I>&gt;<i> But we should make it consistent and we shouldn't make it too harsh
+</I>&gt;<i> in its accuracy specifications. That can be for a floating point
+</I>&gt;<i> version of Embench in the future.
+</I>&gt;<i> 
+</I>&gt;<i> Best wishes,
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Jeremy
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;&gt;<i> Regards,
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;&gt;<i> Jon
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;&gt;<i> *From:*Embench &lt;<A HREF="https://lists.librecores.org/listinfo/embench">embench-bounces at lists.librecores.org</A>&gt; *On Behalf
+</I>&gt;&gt;<i> Of *Jon Taylor *Sent:* 02 October 2019 11:21 *To:* 
+</I>&gt;&gt;<i> <A HREF="https://lists.librecores.org/listinfo/embench">embench at lists.librecores.org</A> *Cc:* nd &lt;<A HREF="https://lists.librecores.org/listinfo/embench">nd at arm.com</A>&gt; *Subject:* 
+</I>&gt;&gt;<i> [Embench] Floating point accuracy
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;&gt;<i> I’m still testing the performance of Embench on various Arm 
+</I>&gt;&gt;<i> devices.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;&gt;<i> During testing, I encountered the ST (stats) test failing. This 
+</I>&gt;&gt;<i> performs various double precision floating point operations.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;&gt;<i> When using Arm’s fast math library on a device with no hardware 
+</I>&gt;&gt;<i> floating point support, the test fails.
+</I>&gt;<i> 
+</I>&gt;&gt;<i> (see 
+</I>&gt;&gt;<i> <A HREF="https://developer.arm.com/docs/dui0774/i/compiler-command-line-options/-ffast-math-fno-fast-math">https://developer.arm.com/docs/dui0774/i/compiler-command-line-options/-ffast-math-fno-fast-math</A>)
+</I>&gt;<i>
+</I>&gt;&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;&gt;<i> On debugging this further, this is due to a comparison mismatch
+</I>&gt;&gt;<i> in the verify_benchmark function.
+</I>&gt;<i> 
+</I>&gt;&gt;<i> If I modify the code with some debug printf statements:
+</I>&gt;<i> 
+</I>&gt;&gt;<i> printf (&quot;first check: %8.8e\n&quot;, fabs (expSumA - SumA));
+</I>&gt;<i> 
+</I>&gt;&gt;<i> printf (&quot;second check: %8.8e\n&quot;, fabs (expSumB - SumB));
+</I>&gt;<i> 
+</I>&gt;&gt;<i> printf (&quot;third check: %8.8e\n&quot;, fabs (expCoef - Coef));
+</I>&gt;<i> 
+</I>&gt;&gt;<i> printf (&quot;Coef %8.8e, expCoef %8.8e\n&quot;, Coef, expCoef);
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;&gt;<i> return (fabs (expSumA - SumA) &lt; 1.0e13)
+</I>&gt;<i> 
+</I>&gt;&gt;<i> &amp;&amp; (fabs (expSumB - SumB) &lt; 1.0e-13) &amp;&amp; (fabs (expCoef - Coef) &lt;
+</I>&gt;&gt;<i>  1.0e-17);
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;&gt;<i> I see the following output:
+</I>&gt;<i> 
+</I>&gt;&gt;<i> first check: 0.00000000e+00
+</I>&gt;<i> 
+</I>&gt;&gt;<i> second check: 0.00000000e+00
+</I>&gt;<i> 
+</I>&gt;&gt;<i> third check: 2.22044605e-16
+</I>&gt;<i> 
+</I>&gt;&gt;<i> Coef 9.99900055e-01, expCoef 9.99900055e-01
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;&gt;<i> (It also looks like there’s a code error here, since the first 
+</I>&gt;&gt;<i> comparison is &lt;1e13, the second is &lt;1e-13. Shouldn’t the first
+</I>&gt;&gt;<i> also be 1e-13?)
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;&gt;<i> The third check result about causes the test to fail since the 
+</I>&gt;&gt;<i> third comparison looks for an error of less than 1e-17. Is there
+</I>&gt;&gt;<i> a particular reason for a tighter threshold on the third check?
+</I>&gt;&gt;<i> In fact the absolute difference is less than 1e-17, it’s just
+</I>&gt;&gt;<i> that the comparison is done quickly and introduces some error.
+</I>&gt;&gt;<i> Can it be relaxed to 1e-13 to match the other comparisons? I
+</I>&gt;&gt;<i> don’t know where those numbers have been derived from.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;&gt;<i> Regards,
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;&gt;<i> Jon
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>
+- -- 
+Tel: +44 (1590) 610184
+Cell: +44 (7970) 676050
+SkypeID: jeremybennett
+Twitter: @jeremypbennett
+Email: <A HREF="https://lists.librecores.org/listinfo/embench">jeremy.bennett at embecosm.com</A>
+Web: www.embecosm.com
+PGP key: 1024D/BEF58172FB4754E1 2009-03-20
+-----BEGIN PGP SIGNATURE-----
+
+iEYEARECAAYFAl2iMd4ACgkQvvWBcvtHVOETUACfblOiY5lvB73/nxVXXREBEJRM
+g68AnjemRM+d8jjb2edY5//IgQEBLQCN
+=fPO0
+-----END PGP SIGNATURE-----
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000018.html">[Embench] Floating point accuracy
+</A></li>
+	<LI>Next message (by thread): <A HREF="000020.html">[Embench] Embench meeting/call 16 Sep 2019
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#19">[ date ]</a>
+              <a href="thread.html#19">[ thread ]</a>
+              <a href="subject.html#19">[ subject ]</a>
+              <a href="author.html#19">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] Compilation warnings
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Compilation%20warnings&In-Reply-To=%3CDB7PR08MB42178BBC9E1405470C5D9FFC93BB0%40DB7PR08MB4217.eurprd08.prod.outlook.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000014.html">
+   <LINK REL="Next"  HREF="000015.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] Compilation warnings</H1>
+    <B>Jon Taylor</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Compilation%20warnings&In-Reply-To=%3CDB7PR08MB42178BBC9E1405470C5D9FFC93BB0%40DB7PR08MB4217.eurprd08.prod.outlook.com%3E"
+       TITLE="[Embench] Compilation warnings">Jon.Taylor at arm.com
+       </A><BR>
+    <I>Thu Sep  5 10:30:25 CEST 2019</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000014.html">[Embench] How to measure code size fairly
+</A></li>
+        <LI>Next message (by thread): <A HREF="000015.html">[Embench] Embench meeting/call 16 Sep 2019
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#13">[ date ]</a>
+              <a href="thread.html#13">[ thread ]</a>
+              <a href="subject.html#13">[ subject ]</a>
+              <a href="author.html#13">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>I've been porting the tests to the Arm compiler with a view to starting some runs on real hardware.
+
+However many of the tests generate warnings.
+
+Some are relatively harmless such as unused variables:
+src/nbody/nbody.c(168): warning: unused variable 'res' [-Wunused-variable]
+  int  res = benchmark_body (heat);
+
+src/cubic/basicmath_small.c(30): warning: unused variable 'exp_res0' [-Wunused-variable]
+  static double exp_res0[3] = {2.0, 6.0, 2.5};
+
+but others are more concerning as they could introduce inconsistencies across different platforms/architectures.
+src/nbody/nbody.c(262): warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+          if (solar_bodies[i].v[j] != expected[i].v[j])
+              ~~~~~~~~~~~~~~~~~~~~ ^  ~~~~~~~~~~~~~~~~
+Wikisort has a couple of float - int implicit conversions:
+src/wikisort/libwikisort.c(903): warning: implicit conversion turns floating-point number into integer: 'double' to 'long' [-Wfloat-conversion]
+  return total - index + rand_beebs () * 1.0 / RAND_MAX * 5 - 2.5;
+src/wikisort/libwikisort.c(909): warning: implicit conversion turns floating-point number into integer: 'double' to 'long' [-Wfloat-conversion]
+  return index + rand_beebs () * 1.0 / RAND_MAX * 5 - 2.5;
+
+There are also ones about implicit size conversion:
+src/cubic/libcubic.c(42): warning: implicit conversion increases floating-point precision: 'double' to 'long double' [-Wdouble-promotion]
+      x[0] = -2.0 * sqrt ((double) Q) * cos (theta / 3.0) - a1 / 3.0;
+
+or signed-ness
+src/edn/libedn.c(366): warning: implicit conversion changes signedness: 'unsigned short' to 'short' [-Wsign-conversion]
+          a[i] = in_a[i];
+               ~ ^~~~~~~
+I've only listed a few examples, but most of the tests have similar warnings.
+
+Before I look at creating a patch that might fix these, I thought I'd see how other people on the mailing list feel about whether they need to be fixed.
+
+Regards,
+
+Jon
+
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://lists.librecores.org/pipermail/embench/attachments/20190905/1f42dd8f/attachment.htm">http://lists.librecores.org/pipermail/embench/attachments/20190905/1f42dd8f/attachment.htm</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000014.html">[Embench] How to measure code size fairly
+</A></li>
+	<LI>Next message (by thread): <A HREF="000015.html">[Embench] Embench meeting/call 16 Sep 2019
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#13">[ date ]</a>
+              <a href="thread.html#13">[ thread ]</a>
+              <a href="subject.html#13">[ subject ]</a>
+              <a href="author.html#13">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

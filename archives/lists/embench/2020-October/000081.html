@@ -1,0 +1,163 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] LLVM 11.0.0 update
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20LLVM%2011.0.0%20update&In-Reply-To=%3Ce3fd2a00-5d5a-e856-38ec-4a6ffb41155a%40embecosm.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000080.html">
+   <LINK REL="Next"  HREF="000082.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] LLVM 11.0.0 update</H1>
+    <B>paolo</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20LLVM%2011.0.0%20update&In-Reply-To=%3Ce3fd2a00-5d5a-e856-38ec-4a6ffb41155a%40embecosm.com%3E"
+       TITLE="[Embench] LLVM 11.0.0 update">paolo.savini at embecosm.com
+       </A><BR>
+    <I>Thu Oct 22 18:33:48 CEST 2020</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000080.html">[Embench] Notes from Embench call 19 October 2020
+</A></li>
+        <LI>Next message (by thread): <A HREF="000082.html">[Embench] LLVM 11.0.0 update
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#81">[ date ]</a>
+              <a href="thread.html#81">[ thread ]</a>
+              <a href="subject.html#81">[ subject ]</a>
+              <a href="author.html#81">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi all,
+
+as the new release of LLVM has been out for some days now I generated
+new benchmark results.
+
+Here are the geomean relative (to the current baseline, see slide 7)
+results per optimization flag for RI5CY:
+
+Options               Geomean   +ve   -ve
+-------               -------   ---    --
+-O0                      0.43  0.23  0.16
+-O1                      0.87  0.33  0.24
+-O2                      0.97  0.37  0.28
+-O3                      0.97  0.35  0.27
+-O3 -finline-limit=50    0.97  0.35  0.27
+-O3 -funroll-loops       0.97  0.35  0.27
+-Os                      0.88  0.34  0.25
+-Os -msave-restore       0.87  0.33  0.24
+-Oz                      0.87  0.33  0.25
+-Oz -msave-restore       0.86  0.33  0.25
+
+Size results
+============
+
+Options               Geomean   +ve   -ve
+-------               -------   ---    --
+-O0                      2.65  0.82  0.63
+-O1                      1.24  0.24  0.21
+-O2                      1.37  0.42  0.33
+-O3                      1.56  0.76  0.52
+-O3 -finline-limit=50    1.56  0.76  0.52
+-O3 -funroll-loops       1.56  0.76  0.52
+-Os                      1.23  0.28  0.23
+-Os -msave-restore       1.14  0.28  0.23
+-Oz                      1.18  0.24  0.21
+-Oz -msave-restore       1.09  0.23  0.20
+
+And here the same for ARM Cortex-M4:
+
+Speed results
+=============
+
+Options               Geomean   +ve   -ve
+-------               -------   ---    --
+-O0                      0.42  0.25  0.16
+-O1                      0.94  0.14  0.13
+-O2                      1.04  0.13  0.12
+-O3                      1.05  0.17  0.16
+-O3 -finline-limit=50    1.05  0.17  0.16
+-O3 -funroll-loops       1.05  0.17  0.16
+-Os                      0.95  0.13  0.12
+-Oz                      0.92  0.17  0.15
+
+Size results
+============
+
+Options               Geomean   +ve   -ve
+-------               -------   ---    --
+-O0                      1.85  0.33  0.29
+-O1                      1.18  0.14  0.13
+-O2                      2.04  1.22  0.77
+-O3                      2.18  1.59  0.92
+-O3 -finline-limit=50    2.18  1.59  0.92
+-O3 -funroll-loops       2.18  1.59  0.92
+-Os                      1.16  0.17  0.16
+-Oz                      1.02  0.12  0.11
+
+You'll notice that the ARM has no results for the flag combination &quot;-Oz
+-msave-restore&quot;. That's only because ARM LLVM doesn't support the
+&quot;-msave-restore&quot; flag. This is now being specified in the slides as well.
+
+Also note that the top of tree speed result for RI5CY in silde 23 of the
+Embench presentation showed during last meeting had a quite surprisingly
+worse geomean than LLVM 10.0.1.
+
+That was probably due to a lack of some optimization flags. Nevertheless
+the results from LLVM 11 (that follows the top of tree example of the
+slides) confirm that there is actually a slight decrease of speed
+optimization between LLVM 10.0.1 (a geomean of 0.98) and LLVM 11.0.0 (a
+goemean of 0.97) as we mentioned during the call.
+
+The slides are being currently reviewed and updated to integrate the
+LLVM 11 results.
+
+For any question/observation don't hesitate to reply.
+
+
+Speak to you all soon.
+
+Best wishes,
+
+Paolo Savini
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://lists.librecores.org/pipermail/embench/attachments/20201022/9e6c63c3/attachment.htm">http://lists.librecores.org/pipermail/embench/attachments/20201022/9e6c63c3/attachment.htm</A>&gt;
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 833 bytes
+Desc: OpenPGP digital signature
+URL: &lt;<A HREF="http://lists.librecores.org/pipermail/embench/attachments/20201022/9e6c63c3/attachment.sig">http://lists.librecores.org/pipermail/embench/attachments/20201022/9e6c63c3/attachment.sig</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000080.html">[Embench] Notes from Embench call 19 October 2020
+</A></li>
+	<LI>Next message (by thread): <A HREF="000082.html">[Embench] LLVM 11.0.0 update
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#81">[ date ]</a>
+              <a href="thread.html#81">[ thread ]</a>
+              <a href="subject.html#81">[ subject ]</a>
+              <a href="author.html#81">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

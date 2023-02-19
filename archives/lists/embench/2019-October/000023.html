@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] Issues with cubic benchmark
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Issues%20with%20cubic%20benchmark&In-Reply-To=%3C20191022111910.41f1ce40%40kryten.localdomain%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000022.html">
+   <LINK REL="Next"  HREF="000024.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] Issues with cubic benchmark</H1>
+    <B>Anton Blanchard</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Issues%20with%20cubic%20benchmark&In-Reply-To=%3C20191022111910.41f1ce40%40kryten.localdomain%3E"
+       TITLE="[Embench] Issues with cubic benchmark">anton at ozlabs.org
+       </A><BR>
+    <I>Tue Oct 22 02:19:10 CEST 2019</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000022.html">[Embench] Issues with cubic benchmark
+</A></li>
+        <LI>Next message (by thread): <A HREF="000024.html">[Embench] aha-mont64 unfairly penalises 64bit architectures
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#23">[ date ]</a>
+              <a href="thread.html#23">[ thread ]</a>
+              <a href="subject.html#23">[ subject ]</a>
+              <a href="author.html#23">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+&gt;<i> Cubic uses long double which is not standardized. On x86-64 it
+</I>&gt;<i> provides only 80 bits of precision, but on other architectures it
+</I>&gt;<i> provides either 64 bits or 128 bits of precision.
+</I>&gt;<i> 
+</I>&gt;<i> This not only means that we aren't computing the same results, but we
+</I>&gt;<i> are also unfairly penalising architectures that use a 128 bit long
+</I>&gt;<i> double. Those architectures often have a software emulation library
+</I>&gt;<i> for 128 bit floating point arithmetic. It was also pointed out to me
+</I>&gt;<i> that the benchmark isn't consistently using long double - it's using
+</I>&gt;<i> double versions of the transcendental functions.
+</I>&gt;<i> 
+</I>&gt;<i> I would suggest using double everywhere so that all architectures are
+</I>&gt;<i> doing identical computations.
+</I>
+A potential fix:
+
+<A HREF="https://github.com/embench/embench-iot/pull/18">https://github.com/embench/embench-iot/pull/18</A>
+
+Thanks,
+Anton
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000022.html">[Embench] Issues with cubic benchmark
+</A></li>
+	<LI>Next message (by thread): <A HREF="000024.html">[Embench] aha-mont64 unfairly penalises 64bit architectures
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#23">[ date ]</a>
+              <a href="thread.html#23">[ thread ]</a>
+              <a href="subject.html#23">[ subject ]</a>
+              <a href="author.html#23">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

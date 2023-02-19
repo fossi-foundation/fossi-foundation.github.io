@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] Fwd: &quot;Embench&quot;ing open source FPGA soft cores
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Fwd%3A%20%22Embench%22ing%20open%20source%20FPGA%20soft%20cores&In-Reply-To=%3C8d14763c-b02a-4984-589a-d03b5250f2c6%40embecosm.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000076.html">
+   <LINK REL="Next"  HREF="000077.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] Fwd: &quot;Embench&quot;ing open source FPGA soft cores</H1>
+    <B>Jeremy Bennett</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20Fwd%3A%20%22Embench%22ing%20open%20source%20FPGA%20soft%20cores&In-Reply-To=%3C8d14763c-b02a-4984-589a-d03b5250f2c6%40embecosm.com%3E"
+       TITLE="[Embench] Fwd: &quot;Embench&quot;ing open source FPGA soft cores">jeremy.bennett at embecosm.com
+       </A><BR>
+    <I>Sun Oct 18 18:10:47 CEST 2020</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000076.html">[Embench] Fwd: &quot;Embench&quot;ing open source FPGA soft cores
+</A></li>
+        <LI>Next message (by thread): <A HREF="000077.html">[Embench] Notes from Embench call 21 September 2020
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#78">[ date ]</a>
+              <a href="thread.html#78">[ thread ]</a>
+              <a href="subject.html#78">[ subject ]</a>
+              <a href="author.html#78">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+On 15/10/2020 04:57, David Patterson wrote:
+&gt;<i> Anyone want to comment on this?
+</I>
+Hi Dave,
+
+This is very interesting.
+
+I have hacked together my own scripts for running lots of Embench
+benchmarks over the last year. This looks to do it in a much more
+organized way, so might be a useful contribution to the work of Embench.
+
+Very interesting to see they have results for OpenRISC (mor1kx core),
+POWER (microwatt) and lm32, which broadens the range of platforms
+substantially.
+
+I'll ping Tim an email and see if he can join our meeting tomorrow -
+unfortunately rather last minute, so will depend on whether he looks
+at his email at a weekend or early in the morning.
+
+Best wishes,
+
+
+Jeremy
+
+&gt;<i> Dave
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> ---------- Forwarded message --------- From: *Tim 'mithro' Ansell*
+</I>&gt;<i> &lt;<A HREF="https://lists.librecores.org/listinfo/embench">tansell at google.com</A> &lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">tansell at google.com</A>&gt;&gt; Date: Wed, Oct 14,
+</I>&gt;<i> 2020 at 3:20 PM Subject: &quot;Embench&quot;ing open source FPGA soft cores
+</I>&gt;<i> To: David Patterson &lt;<A HREF="https://lists.librecores.org/listinfo/embench">davidpatterson at google.com</A>
+</I>&gt;<i> &lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">davidpatterson at google.com</A>&gt;&gt;
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Hi Dave!
+</I>&gt;<i>
+</I>&gt;<i> I thought you might get a kick out of this.
+</I>&gt;<i>
+</I>&gt;<i> We have been working with Antmicro to enable automatically running
+</I>&gt;<i> Embench on all the soft CPU cores that our SoC builder supports so
+</I>&gt;<i> that we can track the changing performance over time. They wrote up
+</I>&gt;<i> this work at
+</I>&gt;<i> <A HREF="https://antmicro.com/blog/2020/09/automatic-cpu-testing-with-embench/">https://antmicro.com/blog/2020/09/automatic-cpu-testing-with-embench/</A>
+</I>&gt;<i>
+</I>&gt;<i>  The code is at <A HREF="https://github.com/antmicro/embench-tester">https://github.com/antmicro/embench-tester</A> The
+</I>&gt;<i> results are at <A HREF="https://antmicro.github.io/embench-tester/">https://antmicro.github.io/embench-tester/</A>
+</I>&gt;<i>
+</I>&gt;<i> The automated tests are running inside Verilator but we also have
+</I>&gt;<i> support for running on real hardware. This has already shown a
+</I>&gt;<i> bunch of simple silly performances bottlenecks that can be easily
+</I>&gt;<i> fixed.
+</I>&gt;<i>
+</I>&gt;<i> As this work stabilizes, do you think donating this work to the
+</I>&gt;<i> FOSSi Foundation's embench group would make sense?
+</I>&gt;<i>
+</I>&gt;<i> Hope you are doing well!
+</I>&gt;<i>
+</I>&gt;<i> Tim 'mithro' Ansell
+</I>&gt;<i>
+</I>
+
+- -- 
+Cell: +44 (7970) 676050
+SkypeID: jeremybennett
+Twitter: @jeremypbennett
+Email: <A HREF="https://lists.librecores.org/listinfo/embench">jeremy.bennett at embecosm.com</A>
+Web: www.embecosm.com
+PGP key: 1024D/BEF58172FB4754E1 2009-03-20
+-----BEGIN PGP SIGNATURE-----
+
+iF0EARECAB0WIQRASGDWqmhRZUfAaPW+9YFy+0dU4QUCX4xpBgAKCRC+9YFy+0dU
+4ajCAJ93Su5CPuWaB9CIvG3RTguUrn31YQCeNCZ84Uokd9tTnBxZ7vUHdlpSmcc=
+=sV7t
+-----END PGP SIGNATURE-----
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000076.html">[Embench] Fwd: &quot;Embench&quot;ing open source FPGA soft cores
+</A></li>
+	<LI>Next message (by thread): <A HREF="000077.html">[Embench] Notes from Embench call 21 September 2020
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#78">[ date ]</a>
+              <a href="thread.html#78">[ thread ]</a>
+              <a href="subject.html#78">[ subject ]</a>
+              <a href="author.html#78">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>

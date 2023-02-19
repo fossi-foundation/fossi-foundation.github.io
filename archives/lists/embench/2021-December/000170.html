@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Embench] code-size micro-benchmarks
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20code-size%20micro-benchmarks&In-Reply-To=%3CMN2PR04MB6973CFFD55A01658ABEA96CE83759%40MN2PR04MB6973.namprd04.prod.outlook.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="000168.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Embench] code-size micro-benchmarks</H1>
+    <B>Pavel Tikhonov</B> 
+    <A HREF="mailto:embench%40lists.librecores.org?Subject=Re%3A%20%5BEmbench%5D%20code-size%20micro-benchmarks&In-Reply-To=%3CMN2PR04MB6973CFFD55A01658ABEA96CE83759%40MN2PR04MB6973.namprd04.prod.outlook.com%3E"
+       TITLE="[Embench] code-size micro-benchmarks">pavel.tikhonov at wdc.com
+       </A><BR>
+    <I>Tue Dec 14 08:54:20 CET 2021</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="000168.html">[Embench] Minutes for Embench meeting on 15 November 2021
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#170">[ date ]</a>
+              <a href="thread.html#170">[ thread ]</a>
+              <a href="subject.html#170">[ subject ]</a>
+              <a href="author.html#170">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi All,
+
+Following the meeting on 13/12/2021, here are the notes of code-size benchmarks proposal:
+
+
+# Code-size compiler micro-benchmarks
+
+## Motivation/History
+When porting code to run on a RISCV cores, expectedly, code-size raised as the biggest issue.
+And after comparing it with legacy target assembly code, a few compiler's &quot;missed opportunities&quot; were identified.
+Each of the &quot;missed opportunities&quot; was reduced to a short test case.
+These test cases can be used to assess compiler results in terms of code-size.
+
+## Audience/Users
+- Compiler/tools developers who are interested in investigating the compiler generated assembly from the code-size perspective.
+- Product developers willing to change their toolchain/compiler.
+
+## Repository structure
+```
+code_density_test_cases:
+     ├── src                                     &lt;-- source code of the test cases
+          ├── test_case1                         &lt;-- a specific test case 1
+              ├── test_case1.c                   &lt;-- test case 1 source code
+              ├── readme.md                      &lt;-- an explanation on what this test case exemplifies
+              ├── ....                           &lt;-- more .c/.h files if the test requires.
+          ├── test_case2                         &lt;-- a specific test case 2
+          ├── test_case3                         &lt;-- a specific test case 3
+          ├── ....                               &lt;-- more test cases
+     ├── main.c                                  &lt;-- an executable file that should be run automatically by embench test-suit
+     ├── results                                 &lt;-- know results per platform
+     ├── readme.md                               &lt;-- a readme file that explains how to add new test-cases, build and run tests.
+```
+
+## Assessment methodology
+Currently, the main way to assess the compilation results is by investigating text sizes and assembly dumps.
+The purpose of this investigation is to define whether it is an ISA limitation or compiler's missed opportunity.
+
+In addition, it is possible to come up with a numeric score, as done for embench-iot. Not a geometric mean of
+text section sizes, but maybe just a sum. Also, the results can be presented as bar-chart per micro-benchmark
+referencing the standard target.
+
+The tests should run and be self-checking for correctness.
+
+## Usage
+  - Adding a new test-case:
+    As in embench-iot
+
+
+Happy holidays
+
+Pavel Tikhonov
+R&amp;D Engineering - Firmware &amp; Toolchain, CTO Group
+
+Western Digital(r)
+Israel, Migdal Tefen 24959, P.O Box 3
+Email: <A HREF="https://lists.librecores.org/listinfo/embench">pavel.tikhonov at wdc.com</A>&lt;mailto:<A HREF="https://lists.librecores.org/listinfo/embench">pavel.tikhonov at wdc.com</A>&gt;
+Office: +972-4-9078716
+Mobile: +972-54-2232029
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="http://lists.librecores.org/pipermail/embench/attachments/20211214/88f25693/attachment.htm">http://lists.librecores.org/pipermail/embench/attachments/20211214/88f25693/attachment.htm</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="000168.html">[Embench] Minutes for Embench meeting on 15 November 2021
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#170">[ date ]</a>
+              <a href="thread.html#170">[ thread ]</a>
+              <a href="subject.html#170">[ subject ]</a>
+              <a href="author.html#170">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.librecores.org/listinfo/embench">More information about the Embench
+mailing list</a><br>
+</body></html>
