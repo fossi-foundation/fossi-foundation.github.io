@@ -557,45 +557,187 @@ Get a head start on the workshop and a taste of what is going on:
 		<p>
 		</p>
 
-<!--
 		<h4>
-                  <a name="chipyard" href="#chipyard"></a>Chipyard: Open-Source SoC Design, Simulation, and Implementation Environment</h4>
+                  <a name="prototypes" href="#prototypes"></a>Quality of Life with Virtual Prototypes - Open Source Tools in the Ecosystem of the RISC-V VP</h4>
 		<p>
-		  Chipyard is an open-source SoC design, simulation, and implementation
-		  environment for specialized compute systems.  Chipyard contains
-		  processor cores (Rocket, BOOM), accelerators (Hwacha, Gemmini,
-		  SHA3), memory systems, and additional peripherals and tooling
-		  to let users build full featured RISC-V SoCs with everything
-		  from MMIO-mapped peripherals to custom accelerators by leveraging
-		  the Chisel HDL, Rocket Chip SoC generator, and other open-source
-		  projects. Components are integrated through a composable
-		  configuration system, enabling the design of a wide range of SoCs.
-		</p>
-		<p>
-		  Through the use of integrated FIRRTL transformations, Chipyard
-		  supports and integrates multiple concurrent flows of agile
-		  hardware development, including software RTL simulation,
-		  FPGA-accelerated simulation (FireSim), automated VLSI flows
-		  (Hammer), and software workload generation for bare-metal and
-		  Linux-based systems, enabling SoC design using agile teams.
+		  This presentation will talk about the open source ecosystem
+		  around the RISC-V Virtual Prototype (VP) and how to apply
+		  virtual prototyping techniques to boost the design process.
+		  Besides architecture level modeling tools like the VP itself,
+		  there will be introductions into an off-chip environment GUI,
+		  a Hardware-in-the-Loop system for physical peripherals, as
+		  well as several software and (virtual) hardware verification
+		  tools. The focus of the talk will be on understanding the
+		  principles and decreasing the distance of the average
+		  designer to these academic sounding tools; to improve both
+		  the flexibility in design space exploration and the quality
+		  of the end product.
 		</p>
 
-		<h6>Presenter: Alon Amid</h6>
+		<h6>Presenter: Pascal Pieper</h6>
 		<p>
 		</p>
 
 		<h4>
-                  <a name="blackparrot" href="#blackparrot"></a>BlackParrot: An Agile Open Source RISC-V Multicore for Accelerator SoCs</h4>
+                  <a name="waveform" href="#waveform"></a>Online Waveform viewer. Why do we need one?</h4>
 		<p>
-		  BlackParrot is a Linux-capable, cache-coherent RISC-V multicore,
-		  designed for efficiency and ease of use. In this talk, we will
-		  provide an architectural overview of BlackParrot, focusing on
-		  the design principles and development process as well as the
-		  software and hardware ecosystems surrounding the core. We will
-		  also discuss the project roadmap and our plans to engage the
-		  open-source community. Last, we will demonstrate a multithreaded
-		  RISC-V program running on top of Linux on a multicore BlackParrot
-		  FPGA implementation.
+		  Waveform viewer is a very important UI tool for Digital IC
+		  designer second only to text editor. With the exception of
+		  GTKwave, most waveform viewers are bundled with proprietary
+		  simulators. GitHub / Lab, CI / CD, remote simulation runs –
+		  modern HDL design and verification is moving to the cloud.
+		  VCDrom is a waveform viewer that requires zero install time
+		  to view simulation results using WebGL and modern browser
+		  tech. It can be embedded in VSCode, Electron apps and other
+		  web applications. WaveQL is the waveform query language that
+		  helps organize a signal list, formats, markers, transactions
+		  and other view elements.
+		</p>
+
+		<h6>Presenter: Aliaksei Chapyzhenka</h6>
+		<p>
+		</p>
+
+		<h4>
+                  <a name="systemrdl" href="#systemrdl"></a>Open tools for an open standard: Control/status register automation using SystemRDL</h4>
+		<p>
+		  We've all had the harrowing experience of hand-coding our
+		  register file RTL, manually updating the documentation, and
+		  then painstakingly transcribing it to software header files.
+		  What could possibly go wrong? If only we could automate this!
+		  Fortunately there is a growing ecosystem of
+		  highly-customizable open-source tools centered around
+		  SystemRDL - a register description design-entry language
+		  <a href="https://www.accellera.org/downloads/standards/systemrdl">published by Accellera</a>.
+		  SystemRDL lets you describe countless types of registers
+		  containing various access policies, counters, interrupts, and
+		  other commonly used CSR constructs. Using this language, you
+		  can build an information-rich single source of truth for all
+		  your register automation needs. This presentation will
+		  introduce a set of open-source tools developed specifically
+		  around SystemRDL. At the core is the <a href="https://systemrdl-compiler.readthedocs.io">SystemRDL compiler front-end</a>
+		  that handles the RDL language processing and provides an
+		  intuitive Python API for register automation developers. Also
+		  featured is the toolchain called <a href="https://peakrdl.readthedocs.io">PeakRDL</a>,
+		  which uses this compiler to generate
+		  <a href="https://peakrdl.readthedocs.io/en/latest/gallery.html">various outputs</a>
+		  such as rich HTML documentation, UVM register models,
+		  IP-XACT, as well as fully synthesizable SystemVerilog RTL.
+		  --- Alex is a principal FPGA/ASIC design engineer at SpaceX.
+		  This <a href="https://github.com/SystemRDL">collection of open-source SystemRDL tools</a>
+		  started as a hobby project that "got slightly out of hand."
+		</p>
+
+		<h6>Presenter: Alex Mykyta</h6>
+		<p>
+		</p>
+
+		<h4>
+                  <a name="openroad" href="#openroad"></a>OpenROAD - Turning Designs into Optimized Silicon</h4>
+		<p>
+		  OpenROAD is a modern open-source tool that automates physical
+		  implementation of optimized chips. You will see the steps to
+		  produce a chip. Learn how users, from beginners to experts,
+		  can use get involved with using or developing OpenROAD. This
+		  project has been used in numerous tape outs from older 180nm
+		  processes down to advanced 12nm designs. Building an
+		  ecosystem of academic, hobbyist, and proprietary users is our
+		  goal. (https://github.com/The-OpenROAD-Project/OpenROAD)
+		</p>
+
+		<h6>Presenter: Matt Liberty</h6>
+		<p>
+		</p>
+
+		<h4>
+                  <a name="simcommand" href="#simcommand"></a>SimCommand: A High-Performance RTL Testbench API with Fork/Join Support</h4>
+		<p>
+		  Simulation threads in RTL testbenches are essential for
+		  writing modular, scalable, and reusable verification IPs.
+		  Ideally one could write testbenches in a general-purpose
+		  programming language, instead of SystemVerilog, to take
+		  advantage of the language's standard library, package
+		  managers, testing frameworks, and IDE support. Existing RTL
+		  testbench libraries that support the fork/join construct
+		  suffer significant performance penalties caused by the
+		  implementation of fork/join in the host language. We propose
+		  an RTL testbench API implemented in Scala that enables high
+		  performance fork/join using continuations, and outperforms
+		  cocotb and chiseltest. Source code:
+		  https://github.com/vighneshiyer/simcommand
+		</p>
+
+		<h6>Presenter: Vighnesh Iyer</h6>
+		<p>
+		</p>
+
+		<h4>
+                  <a name="circt" href="#circt"></a>CIRCT: Open Source Circuit IR Compilers and Tools</h4>
+		<p>
+		  The CIRCT project applies MLIR and the LLVM development
+		  methodology to the domain of hardware design tools. Many of
+		  us dream of having reusable infrastructure that is modular,
+		  uses library-based design techniques, is more consistent, and
+		  builds on the best practices in compiler infrastructure and
+		  compiler design techniques. This talk will introduce the
+		  CIRCT project, explain its current and upcoming capabilities,
+		  and frame how CIRCT can benefit the broader open source
+		  silicon ecosystem.
+		</p>
+
+		<h6>Presenter: Mike Urbach</h6>
+		<p>
+		</p>
+
+		<h4>
+                  <a name="omniextend" href="#omniextend"></a>OmniXtend: coherent scaleout over commodity fabrics</h4>
+		<p>
+		  OmniXtend is a protocol to transmit TileLink messages over
+		  Ethernet. The aim of the protocol is to create very large
+		  fully coherent heterogeneous systems. We present an
+		  Apache 2.0-licensed implementation of an OmniXtend 1.0.3 and
+		  1.1 memory endpoint in hardware. Available at
+		  https://github.com/westerndigitalcorporation/OmnixtendEndpoint
+		</p>
+
+		<h6>Presenter: Dejan Vucinic</h6>
+		<p>
+		</p>
+
+		<h4>
+                  <a name="bsgtag" href="#bsgtag"></a>bsg_tag: A minimal open-source ASIC configuration bus</h4>
+		<p>
+		  Digital designs often contain a large number of configuration
+		  registers needed to bring up the chip. These may represent
+		  clock sources, resets, enable bits, global id settings, IP
+		  modes, or other static configuration. To avoid bootstrapping
+		  problems, it's necessary to be able to control these
+		  registers from outside of the chip itself. For reset and
+		  bringup procedures, designs require precise and robust
+		  sequencing. However, GPIOs can be extremely expensive in
+		  terms of area (especially on small designs in an MPW run), so
+		  controlling these registers must be done with as few pins as
+		  possible. Complex designs can have hundreds or thousands of
+		  configuration bits, so there needs to be a higher level
+		  protocol which can scale from this minimal number of actual
+		  I/Os. We present bsg_tag, which is a decentralized
+		  source-synchronous bus and protocol layer for ASIC
+		  configuration. bsg_tag creates a powerful abstraction where
+		  with a few pins, you can reach inside your chip at high
+		  bandwidth and set any register while the chip is running, no
+		  matter what clock domain that register is in. From this
+		  abstraction, we can build many more powerful mechanisms.
+		  Unlike other standard configuration methodologies, bsg_tag is
+		  non-invasive, requiring minimal RTL changes and integrates
+		  seamlessly into existing IP blocks. bsg_tag is fast, robust
+		  and gracefully handles synchronized crossing into local clock
+		  domains. bsg_tag is battle-tested has been used in many
+		  academic and commercial tapeouts, usually being the first
+		  functionality tested in a bringup procedure. This talk will
+		  discuss the physical and protocol layers of bsg_tag, as well
+		  as and demo software infrastructure built up for simple
+		  interactive debugging. Come learn how to simplify bringup of
+		  your next SoC!
 		</p>
 
 		<h6>Presenter: Dan Petrisko</h6>
@@ -603,132 +745,95 @@ Get a head start on the workshop and a taste of what is going on:
 		</p>
 
 		<h4>
-                  <a name="chips" href="#chips"></a>CHIPS Alliance: building the open source hardware and tooling ecosystem for ASIC/FPGA design</h4>
+                  <a name="ucsc" href="#ucsc"></a>A UCSC Professor's path through Open-Source Hardware</h4>
 		<p>
-		  The CHIPS Alliance develops high-quality, open source hardware
-		  designs relevant to ASIC and FPGA, together with the open
-		  source tooling needed to enable innovation in related workflows
-		  by allowing anyone in the open digital design community to
-		  reuse and build on top of the Alliance's output.
-		</p>
-		<p>
-		  By creating an open and collaborative environment, CHIPS Alliance
-		  shares resources to lower the cost of development, allowing
-		  companies and individuals to work together to develop open
-		  source CPUs, various peripherals, interconnects, and complex
-		  IP blocks. CHIPS Alliance is open to all organizations who are
-		  interested in collaborating on open source hardware or software
-		  tools to accelerate the creation of more efficient and innovative
-		  chip designs.
+		  Talk about the challenges and opportunities of embracing open-source hardware projects as a University of California professor.
 		</p>
 
-		<h6>Presenter: Michael Gielda</h6>
+		<h6>Presenter: Jose Renau</h6>
 		<p>
 		</p>
 
 		<h4>
-                  <a name="openram" href="#openram"></a>OpenRAM: The Path to Real Silicon</h4>
+                  <a name="coverage" href="#coverage"></a>SystemVerilog-Style Constraints and Functional Coverage in Python</h4>
 		<p>
-		  The year 2020 is the year that OpenRAM will have a number of
-		  tape-outs. This presentation is going to go over the evolution
-		  of OpenRAM in the last year considering real processes and
-		  technologies and how this impacts the design.
+		  While SystemVerilog is the most widely-used language for
+		  creating functional verification testbench environments, many
+		  different language are used as well. In the past decade or
+		  so, Python has risen in popularity as a verification
+		  language. The open-source Python ecosystem for functional
+		  verification provides many of the expected elements of any
+		  other functional verification flow, such as libraries for
+		  connecting Python to simulators, frameworks for structuring
+		  testbench environments, and bus functional models for
+		  specific protocols. However, until recently, the it did not
+		  provide support for specifying data-randomization constraints
+		  and functional coverage metrics in a way that SystemVerilog
+		  users would find familiar. This presentation will introduce
+		  PyVSC, an open-source Python library for modeling
+		  SystemVerilog-style data randomization constraints and
+		  functional coverage metrics in Python. It will describe the
+		  constraint and coverage features that can be modeled with
+		  PyVSC, and describe how PyVSC leverages existing SMT solvers
+		  to generate random data from complex sets of constraints. It
+		  will describe how functional coverage data collected by PyVSC
+		  can be exported to support manipulation by external flows and
+		  toolchains. 
 		</p>
 
-		<h6>Presenter: Matt Guthaus</h6>
-		<p>
-		</p>
-
-		<h4>
-                  <a name="bluespec" href="#bluespec"></a>"bsc", the Bluespec Open Source Compiler</h4>
-		<p>
-		  Bluespec has recently released 'bsc', a mature compiler for
-		  the HLHDLs (High Level HDL) BSV/BH.  There are several large
-		  RISC-V-centric open source projects on GitHub, written in BSV.
-		  In this talk we'll provide a quick introduction to BSV, and a
-		  demonstration of building and running one of those RISC-V
-		  systems using bsc.
-		</p>
-
-		<h6>Presenter: Rishiyur Nikhil</h6>
-		<p>
-		</p>
-
-		<h4>
-                  <a name="serv" href="#serv"></a>Bit by bit: How to fit more cores in a cheaper FPGA board</h4>
-		<p>
-		  RISC-V was designed to have a small base ISA with any extra
-		  features to be specified as ISA extensions. This allows to
-		  build very small cores. But how small can they get?
-		</p>
-		<p>
-		  This presentation will take a look at the joy and challenges, the
-		  ideas and raw numbers of SERV, by some metrics the world's smallest
-		  RISC-V implementation capable of running Zephyr OS. Sit back and
-		  listen to how a bit serial CPU works, what it's good for and how
-		  many cores that can be squeezed into different popular FPGA boards
-		</p>
-
-		<h6>Presenter: Olof Kindgren</h6>
+		<h6>Presenter: Matthew Ballance</h6>
 		<p>
 		</p>
 
 		<h4>
-                  <a name="fichte" href="#fichte"></a>Fichte: A Tool for Fast RTL-Based Design Space Exploration of RISC-V Multicore Processors</h4>
+                  <a name="hammer" href="#hammer"></a>Hammer: A Modular and Reusable Physical Design Flow Tool</h4>
 		<p>
-		  In this work, we introduce a platform for register-transfer
-		  level (RTL) architecture design space exploration. The platform
-		  is an open-source, parameterized, synthesizable set of RTL
-		  modules for designing RISC-V based single and multi-core
-		  architecture systems. The platform is designed with a high degree
-		  of modularity. It provides highly-parameterized, composable RTL
-		  modules for fast and accurate exploration of different RISC-V
-		  based core complexities, multi-level caching and memory
-		  organizations, system topologies, router architectures, and
-		  routing schemes. The platform can be used for both RTL simulation
-		  and FPGA based emulation. The hardware modules are implemented
-		  in synthesizable Verilog using no vendor-specific blocks. The
-		  platform supports a myriad of RISC-V architectures, ranging
-		  from a simple single cycle processor to a multi-core SoC with
-		  a complex memory hierarchy and a network-on-chip. The modules
-		  are designed to support incremental additions and modifications.
-		  The interfaces between components are particularly designed to
-		  allow parts of the processor such as whole cache modules, cores
-		  or individual pipeline stages, to be modified or replaced without
-		  impacting the rest of the system. The platform allows designers
-		  to quickly instantiate complete working RISC-V multi-core systems
-		  with synthesizable RTL and make targeted modifications to fit their needs.
+		  Process technology scaling and hardware architecture
+		  specialization have vastly increased the need for chip design
+		  space exploration, while optimizing for power, performance,
+		  and area. Hammer is an open-source, reusable physical design
+		  flow generator that reduces design effort and increases
+		  portability by enforcing a separation among design-, tool-,
+		  and process technology-specific concerns via a modular
+		  software architecture. In this talk, we will outline Hammer's
+		  structure and highlight recent extensions that support both
+		  physical chip designers and hardware architects evaluating
+		  the merit and feasibility of their proposed designs. An
+		  evaluation of chip designs in process technologies ranging
+		  from 130nm down to 12nm across a series of RISC-V-based chips
+		  shows how Hammer-generated flows are reusable and enable
+		  efficient optimization for diverse applications. We will then
+		  highlight a fully-open-source RTL-to-GDS case study: using
+		  Hammer to implement a tapeout-ready Chipyard-generated RISC-V
+		  SoC in the Skywater 130nm process using the open-source EDA
+		  tools Yosys and OpenROAD.
 		</p>
 
-		<h6>Presenter: Michel A. Kinsy</h6>
+		<h6>Presenter: Nayiri Krzysztofowicz</h6>
 		<p>
 		</p>
 
 		<h4>
-                  <a name="vintage" href="#vintage"></a>Preserving the past: Latest work on emulating vintage chips through die-analysis</h4>
+                  <a name="openhw" href="#openhw"></a>Open-Source HW Commercial Adoption</h4>
 		<p>
-		  Large scale integrated circuits have been around for about 50
-		  years and have touched every corner of our lives. Many circuit
-		  designs, especially those related to home computers or video
-		  game consoles, have great historical value. Unfortunately
-		  hardware designs are difficult to preserve, as they can be
-		  hidden inside custom microchips.
-		</p>
-		<p>
-		  This presentation will give a high-level overview of the process
-		  and challenges faced converting a physical chip into Verilog.
-		  Much has been accomplished since presenting at last year's
-		  Latchup. Many more chips have been added to the conversion
-		  pipeline. I'll show off new tools such as a revamped transistor
-		  level simulator and methods to automatically highlight chips
-		  using ML. Finally, we'll look at future goals of the project,
-		  such as more complex logic designs.
+		  Open-Source HW Commercial Adoption This talk will provide a
+		  brief overview of Open-Source HW activity across the
+		  industry, barriers to adoption of Open-Source HW and
+		  challenges associated with SoC design. Lessons learned
+		  related to the OpenHW Group Governance model and adoption of
+		  CORE-V Family of open source RISC-V cores will also be
+		  presented. The CORE-V family is an OpenHW Group project to
+		  develop, deploy, and execute pre-silicon functional
+		  verification and SoC based development kits of the CORE-V
+		  family of open-source RISC-V cores. Written in SystemVerilog,
+		  CORE-V open-source IP cores match the quality of IP offered
+		  by established commercial providers and are verified with
+		  state-of-the-art, auditable flows. 
 		</p>
 
-		<h6>Presenter: Cole Johnson</h6>
+		<h6>Presenter: Rick O'Connor</h6>
 		<p>
 		</p>
-    -->
 
 	      </div>
             </div>
