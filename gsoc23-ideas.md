@@ -572,69 +572,6 @@ will function as the kernel dispatch layer.
 
 *Mentors:* [Theodore Omtzigt](mailto:theo@stillwater-sc.com)
 
-
-### RISC-V core benchmarks using SiliconCompiler
-
-[SiliconCompiler](https://github.com/siliconcompiler/siliconcompiler) is an
-open-source build framework for chip design that automates translation from
-source code to silicon. For this project, we would like to use SiliconCompiler
-to compile a handful of open-source RISC-V cores to open technology targets like
-FreePDK45 or Skywater130, and document optimal performance and area for each.
-
-In order to demonstrate SiliconCompiler's flexibility, we would like to pick an
-interesting range of cores implemented in different HDLs. Some cores we are
-considering include:
-
-- [PicoRV32](https://github.com/YosysHQ/picorv32) (Verilog)
-- [Ibex](https://github.com/lowrisc/ibex) (SystemVerilog)
-- [VexRiscv](https://github.com/SpinalHDL/VexRiscv) (SpinalHDL)
-- [RISC-V Mini](https://github.com/ucb-bar/riscv-mini) (Chisel)
-- [Flute](https://github.com/bluespec/Flute) (Bluespec)
-
-However, we are open to suggestions from our mentee!
-
-The expected outcome of this project is to pick 3-6 cores and write a
-SiliconCompiler build script for each one (with tuned build parameters), and
-then publish the build scripts along with layout screenshots and benchmarking
-results. In addition, this project may entail contributing back any changes to
-SiliconCompiler needed to complete the task. In particular, this project will
-likely involve work on tool drivers for any non-Verilog frontends used.
-
-*Skill Level:* Intermediate
-
-*Duration:* 175 hours (3 cores) or 350 hours (6 cores)
-
-*Language/tools:* Python, Yosys, OpenROAD, Verilog, other HDLs depending on cores chosen
-
-*Mentors:* [Noah Moroze](mailto:noah@zeroasic.com), [Will Ransohoff](mailto:will@zeroasic.com)
-
-### Interactive SiliconCompiler design summaries
-
-SiliconCompiler produces automated reports for its designs, and one format
-that we are testing is a browser-based visualization of a job's results.
-This lets users view a small preview of the GDS result, alongside various metrics
-reported by each task in the physical design flow.
-
-We would like to improve the way that this data is presented, and add more information
-from the SiliconCompiler job manifests. This would be a great project for someone
-interested in frontend development and/or data visualization!
-
-[This is what our reports currently look like.](https://user-images.githubusercontent.com/5217539/162544399-3c83d667-35b4-4013-b373-ae42c00c4ad6.png) We have a few improvements in mind, but we would also welcome suggestions:
-
-- Past Results: SiliconCompiler retains metrics from past builds, which we would like to display.
-- Data Visualization: We would like to explore options beyond simple tables for visualizing metrics within and across job runs.
-- Input Parameters: In addition to a job's results, we would like to include the values of configurable inputs in our reports.
-- Modal Dialogs: There is some content which we would like to display in 'hover-over' modals, rather than linking to it.
-- "Flowgraph" Visualization: SiliconCompiler can generate diagrams describing which tasks ran over the course of a job, and we would like to include those in our reports.
-
-*Skill Level:* Beginner
-
-*Duration:* 175 hours
-
-*Language/tools:* Python (+Jinja), JS, HTML/CSS
-
-*Mentors:* [Will Ransohoff](mailto:will@zeroasic.com)
-
 ### Enhancing the Sootty Terminal-based Graphical Waveform Viewer
 
 [Sootty](https://github.com/Ben1152000/sootty) is a terminal-based waveform viewer that can be used to display the contents of a VCD file. It is written in Python in order to leverage the read-eval-print loop to enable interactive hardware debugging. It also provides a textual query language that lets the user search a waveform for interesting events to assist in debugging.  
