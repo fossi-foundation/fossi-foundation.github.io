@@ -294,19 +294,6 @@ There will the opportunity to engage with students at Rice University who are al
 
 *Language/Tools:* C, embedded platforms on which to evaluate the benchmarks.
 
-### Adding Language Servers (VHDL/Verilog/SV) to TerosHDL
-
-*Details:* TerosHDL (https://terostechnology.github.io/) is an open source IDE for FPGA/ASIC development based in VSCode. It includes support for VHDL, Verilog and SystemVerilog.
-One of the most important features in a code editor is related to “go to definition”, linting… Currently TerosHDL supports those features partially. Tha main idea of this project is to integrate open source HDL language servers (Verible LSP, GHDL LSP, rusthdl…) in TerosHDL and provide all their capabilities. The language servers should work on Windows, Linux and Mac operating systems. Also create an interface for the plugin that allows users to enable/disable each feature independently.
-
-*Skill level:* Beginner
-
-*Duration:* 175h
-
-*Language/Tool:* Javascript, NodeJS
-
-*Mentor:* [Carlos Alberto Ruiz](mailto:carlosruiznaranjo@gmail.com), [Ismael Pérez](mailto:ismaelprojo@gmail.com)
-
 ### Improve Test Coverage of the Moore HDL Compiler
 
 [Moore](https://github.com/fabianschuiki/moore) is a compiler for SystemVerilog and VHDL hardware designs. Its goal is world domination by finally moving the burden of implementing SV and VHDL out of tools like synthesizers and simulators and into a separate frontend, very much like what Clang and LLVM did for the software world. In contrast to other projects that focus on specific use cases such as synthesis or netlists processing, Moore strives to support the entirety of the SV and VHDL languages. As output the compiler produces [LLHD IR](https://llhd.io/), a simple intermediate representation that is able to capture the semantics of today's hardware description languages *including* their behavioral, verification, and testing features. (See also the [LLHD paper](https://arxiv.org/pdf/2004.03494) from PLDI 2020 for details.)
