@@ -404,31 +404,6 @@ The project goal is to port the [riscv32-Code-density-test-bench](https://github
 
 *Language/Tools:* C, embedded platforms on which to evaluate the benchmarks.
 
-### Create your own LibreCores, or contribute to an existing one
-
-*Details:* Our main goal is to grow the community around open source silicon
-designs. LibreCores are IP cores, but they are free and open. While
-there are many projects you can contribute too, you may have your own
-great idea for a LibreCore. All projects start small, and we see this
-is a great chance to bring forward new ideas and start building new
-tiny bits and pieces that enable free and open source chips.
-
-We are happy to mentor you with your own idea, but it is important
-that it is re-usable and contains everything needed for simple and
-flexible integration, like testbenches, the required software drivers
-etc. So, it is important that you discuss a proposal intensively.
-
-*Skill level:* All
-
-*Duration:* ~175 or ~350 hrs.
-
-*Language/Tool:* Verilog, VHDL, Chisel, TL-Verilog, ...
-
-*Mentor:* We will find the mentor with you,
- [LibreCores GSoC team](mailto:gsoc@fossi-foundation.org)
- 
- 
- 
 ### Klayout ASAP7 DRC and LVS decks
 
 ASAP7 PDK is a 7-nm predictive process design kit (PDK) c, developed by Arizona State University in collaboration with ARM Ltd. for academic use. The PDK is realistic, based on current assumptions for the 7-nm technology node. Currently, there is an effort to port ASAP7 to OpenLane. To complete the port, ASA7 technology files must be ported to physical verification tools used by OpenLane.
