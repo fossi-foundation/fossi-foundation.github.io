@@ -196,21 +196,6 @@ SMP.
 
 *Mentor:* [Stafford Horne](mailto:shorne@gmail.com)
 
-### The World's smallest AI processor
-
-The prize winning bit-serial [SERV core](https://github.com/olofk/serv), created by Olof Kindgren, is the world's smallest RISC-V processor. In this project, we propose combining SERV with the miinimal AI instruction set extension developed under the AVA project (https://github.com/AI-Vector-Accelerator). This could for example use the CFU-LI interface.
-
-The goal would be to demonstrate the world's smallest processor optimized for AI inference.
-
-*Skill level:* Intermediate (particularly FPGA synthesis using Yosys)
-
-*Project length:* medium
-
-*Mentors:* [Jeremy Bennett](https://github.com/jeremybennett) ([email](mailto:jeremy.bennett@embecosm.com)) and [Olof Kindgren](https://github.com/olofk) ([email](mailto:olof@fossi-foundation.org))
-
-*Language/Tools:* Verilog/SystemVerilog, RISC-V, Yosys open source tool suite
-
-
 ### Other TL-Verilog-Related Projects
 
 If you are interested in the TL-Verilog ecosystem, you might also consider any of these [TL-Verilog project ideas](https://github.com/stevehoover/TL-V_Projects). All would make excellent GSoC projects and mentors can be identified.
@@ -357,17 +342,6 @@ In this project, we propose extending the core-v-mini-mcu to support all the Ope
 *Mentors:* [Davide Schiavone](https://github.com/davideschiavone) ([email](mailto:davide@openhwgroup.org)) and Veronia Bahaa ([email](mailto:veronia.iskandar@mailbox.tu-dresden.de))
 
 *Language/Tools:* SystemVerilog, RISC-V, C, Verilator
-
-### Javascript library for FuseSoC core files
-*Details:* FuseSoC core description files are a language-agnostic description of an IP core. So far, the only implementations for working with core description files are written in Python (e.g. FuseSoC). A javascript library would make it easier to parse interesting information from the core description files and present on websites.
-
-*Skill level:* beginner-intermediate
-
-*Project length:* medium
-
-*Language/Tools:* JavaScript. Python knowledge is useful for looking at the current implementation
-
-*Mentors:* [Olof Kindgren](mailto:olof.kindgren@gmail.com)
 
 ### Conda packages for Open Silicon tooling
 
