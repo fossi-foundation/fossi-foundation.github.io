@@ -835,6 +835,220 @@ Get a head start on the workshop and a taste of what is going on:
 		<p>
 		</p>
 
+		<h4>
+                  <a name="filament" href="#filament"></a>Fearless Hardware Design</h4>
+		<p>
+		  Effective hardware design requires a developer to understand
+		  the temporal and structural constraints of hardware: Questions
+		  such as "What is the latency of a module?" and "How often can
+		  be reused?" need to be answered before a user can figure out
+		  how to integrate a module into their system. While these
+		  constraints are fundamental to hardware design, they are not
+		  explicitly represented in the existing HDLs or modern
+		  alternatives like Chisel. This talk presents Filament, a
+		  low-level HDL with a type system that expresses temporal
+		  constraints and checks them to ensure that hardware modules
+		  can be composed efficiently and correctly. Similar to modern
+		  systems languages like Rust, Filament uses a type system to
+		  enable developers to fearlessly design complex pipelined
+		  hardware and be certain that the resulting hardware is fast
+		  and efficient.
+		</p>
+
+		<h6>Presenter: Rachit Nigam</h6>
+		<p>
+		</p>
+
+		<h4>
+                  <a name="chisel" href="#chisel"></a>Accelerating Chisel Development</h4>
+		<p>
+		  For over a decade, Chisel has made designers more productive
+		  through the power of parametrizable generators. Chisel 3
+		  introduced the FIRRTL compiler and a period of measured
+		  development with strong backwards compatibility guarantees.
+		  While the many users of Chisel across academia and industry
+		  show the success of this approach, there is a growing need for
+		  Chisel to move beyond its historical focus on designer
+		  productivity. The Chisel developers are taking a more holistic
+		  view of the design process to better capture the needs of
+		  other stakeholders including verification and physical design.
+		  To this end, we are introducing a new compiler built in CIRCT
+		  and a faster development process.
+		</p>
+
+		<h6>Presenter: Jack Koenig</h6>
+		<p>
+		</p>
+
+		<h4>
+                  <a name="sourcerer" href="#sourcerer"></a>So You Want to be an Open Sourcerer?</h4>
+		<p>
+		  How accessible are the tools to non-experts?
+		</p>
+		<p>
+		  This talk will discuss experiences from a class using the open
+		  source hardware tools: Simulation, Verification, IP,
+		  Synthesis, and Implementation. The obvious benefits of
+		  switching are numerous (cost, ease of installation,
+		  introspection), and are matched by the potential pitfalls (No
+		  technical support, per-user customizations, too much
+		  introspection). In this talk I will attempt to answer two
+		  questions: What should open-source-curious instructors
+		  consider when designing, or re-designing a course? And, what
+		  does this experience mean for hardware design for non-experts?
+		</p>
+		<p>
+		  This talk will relay experiences of teaching a upper-division
+		  undergraduate course using open source design tools, good,
+		  bad, and pleasantly surprising. 
+		  The title is inspired by a combination of Open “Sourcery”, and
+		  a young adult series regarding “Wizardry"" as a balance
+		  between good and evil.
+		</p>
+
+		<h6>Presenter: Dustin Richmond</h6>
+		<p>
+		</p>
+
+		<h4>
+                  <a name="scott" href="#scott"></a>TBA</h4>
+		<p>
+		  TBA
+		</p>
+
+		<h6>Presenter: Scott Beamer</h6>
+		<p>
+		</p>
+
+		<h4>
+                  <a name="matt" href="#matt"></a>TBA</h4>
+		<p>
+		  TBA
+		</p>
+
+		<h6>Presenter: Matt Guthaus</h6>
+		<p>
+		</p>
+
+		<h4>
+                  <a name="sagar" href="#sagar"></a>TBA</h4>
+		<p>
+		  TBA
+		</p>
+
+		<h6>Presenter: Sagar Karandikar</h6>
+		<p>
+		</p>
+
+		<h4>
+                  <a name="1bit" href="#1bit"></a>A radically simple 1-bit single-die "supercomputer"</h4>
+		<p>
+		  Investigating the feasibility and attractiveness of a 1-bit
+		  SIMD computer implemented in SKY130. The architecture is a
+		  radically simplified version of the Connection Machines CM1.		  
+		</p>
+
+		<h6>Presenter: James Bowman</h6>
+		<p>
+		</p>
+
+		<h4>
+                  <a name="codebase" href="#codebase"></a>All Your OSS Codebase Are Belong To Us</h4>
+		<p>
+		  The accessibility of open source EDA (Electronic Design
+		  Automation) tools is a topic of interest for many individuals
+		  in the industry. While these tools are freely available to
+		  anyone, using them can often prove challenging due to a
+		  variety of reasons. These may include limited operating
+		  system support, complex installation processes, dependencies
+		  on other tools, inconsistent versioning schemes, and more. In
+		  contrast, commercial EDA tools typically integrate many small
+		  tools seamlessly, making them easier to use. This
+		  presentation aims to explore potential solutions to improve
+		  the accessibility of open source EDA tools. To achieve this
+		  goal, we propose a cloud-based platform that can be used by
+		  tool creators and users alike. This platform would enable
+		  collaboration, making it easier to integrate different tools
+		  and ensure that they work together seamlessly. By doing so,
+		  we hope to nullify the installation process and make open
+		  source EDA tools more accessible to a wider audience. We will
+		  discuss the pros and cons of different approaches to
+		  improving accessibility, such as containerization using Docker
+		  or one-size-fits-all installers. Ultimately, we believe that a
+		  common cloud-based platform will enable tool creators and
+		  users to work together more effectively, improving the
+		  accessibility of open source EDA tools for everyone.
+		</p>
+
+		<h6>Presenter: Oron Port</h6>
+		<p>
+		</p>
+
+		<h4>
+                  <a name="pipeline" href="#pipeline"></a>A Modular Approach to Variable Pipeline Depth Designs</h4>
+		<p>
+		  Designing pipelined circuits with optimal performance requires
+		  a careful balancing of trade-offs between latency, throughput,
+		  power, and hazards. However, achieving this balance is
+		  challenging as it involves a complex interaction between these
+		  factors. We propose a modular approach to variable pipeline
+		  depth designs that decouples hazards, stage grouping, pipeline
+		  depth, and logic by separating designs into three separate
+		  layers. By separating these factors, our approach enables
+		  easier modification of the pipeline depth without affecting
+		  hazard detection and resolution logic and vice versa. This
+		  modularity makes it easier to optimize the design for
+		  different performance metrics, and it provides a clear
+		  separation of concerns that simplifies design and verification.
+		</p>
+
+		<h6>Presenter: Peter Herrmann</h6>
+		<p>
+		</p>
+
+		<h4>
+                  <a name="realtime" href="#realtime"></a>Open-source Hardware for Real-Time Applications</h4>
+		<p>
+		  Many IoT and edge applications increasingly have real-time
+		  constraints. In this talk, we describe a simple custom open
+		  platform built for running a Real-Time Operating System
+		  (RTOS). This platform includes support for interrupt-based
+		  programming, multithreading, and dynamic memory allocation,
+		  enabling applications that require multiple complex and
+		  time-sensitive tasks. The platform is also designed to be
+		  easily customized and integrated with application-specific
+		  hardware acceleration techniques. Finally, we will describe
+		  our implementation of the approach to an aerial drone
+		  application, that includes navigation, control, and vision
+		  focused hardware acceleration. 
+		</p>
+
+		<h6>Presenter: Francisco Wilken</h6>
+		<p>
+		</p>
+
+		<h4>
+                  <a name="robotics" href="#robotics"></a>An open-source robotics applications interface</h4>
+		<p>
+		  Robotics and autonomous systems are at the core of a wide
+		  range of emerging applications and industries. Systems
+		  designers may include a variety of control and sensing
+		  peripherals into custom system-on-chip designs. Integrating
+		  diverse peripherals may be challenging for domain experts,
+		  especially when optimizing for real-time constraints. We
+		  propose a system interface and standard template for building
+		  custom SoCs for robotics applications. The interface intends
+		  to simplify the development of integrating custom I/O for
+		  robotics applications. Moreover, the interface integrates
+		  common control kernels (i.e. S-curve generator, stepper motor
+		  driver) that can be gainfully offloaded from the general
+		  purpose processing system.
+		</p>
+
+		<h6>Presenter: Nikita Klimov</h6>
+		<p>
+		</p>
+
 	      </div>
             </div>
 	  </div>
