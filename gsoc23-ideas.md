@@ -598,3 +598,15 @@ The project will entail replacing the X11 and optional OpenGL dependencies on si
 
 *Mentors:* [Stefan Wallentowitz](mailto:stefan.wallentowitz@hm.edu)
 
+### Enhancing OpenPiton+Ariane SoC With an Open-Source Advanced Interrupt Architecture (AIA) 
+
+The Platform Level Interrupt Controller (PLIC) is the de facto interrupt controller in RISC-V systems. However, the specification has intrinsic limitations regarding scalability and feature richness, e.g., it lacks support for Message Signal Interrupts (MSI) and virtualization. The RISC-V Advanced Interrupt Architecture (AIA) is the new reference specification for interrupt handling. RISC-V International has just ratified the AIA specification. This project aims to integrate an (in-house) open-source AIA IP into the OpenPiton+Ariane platform and conduct an in-depth evaluation of the performance and suitability for general-purpose, multithreaded, manycore processors.
+
+*Skill level:* Intermediate
+
+*Duration:* 350 hours
+
+*Language/Tools:* Verilog, SystemVerilog, RISC-V
+
+*Mentor:* [Sandro Pinto](mailto:sandro.pinto@dei.uminho.pt), [Jonathan Balkind](mailto:jbalkind@ucsb.edu)
+
