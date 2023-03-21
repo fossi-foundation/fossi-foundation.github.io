@@ -3,9 +3,11 @@ title: Latch-Up 2023 Schedule
 layout: default
 ---
 
-| | **Friday**
-| -------- || :------------------------- | :--------------
-|        || |
+|         ||  |
+|---------------------------------------
+|         | **Friday**
+|---------------------------------------
+|         ||  |
 | 13:00  || *Conference Welcome*                                                                                  |
 | 13:30  || [FireSim: A Scalable Platform for FPGA-Accelerated Simulation, Debugging, and Profiling of RTL Designs](#firesim) | Sagar Karandikar
 | 14:00  || [bsg_tag: A minimal open-source ASIC configuration bus](#bsgtag)                                                 | Dan Petrisko
@@ -60,7 +62,7 @@ layout: default
 | 10:00 || [OpenROAD - Turning Designs into Optimized Silicon](#openroad)                               | Matt Liberty
 | 10:30 || *Break*                                                                        |
 | 11:00 || [Online Waveform viewer. Why do we need one?](#waveform)                                     | Aliaksei Chapyzhenka
-| 11:30 || [Space - Opportunities, Challenges for Open Source Community](#space)                     | CHINH LE
+| 11:30 || [Space - Opportunities, Challenges for Open Source Community](#space)                     | Chinh Le
 | 12:00 || [Fearless Hardware Design](#fearless)                                                        | Rachit Nigam
 | 12:30 || *Conference close*                                                              |
 
