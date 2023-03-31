@@ -706,11 +706,16 @@ Get a head start on the workshop and a taste of what is going on:
                   <a name="omniextend" href="#omniextend"></a>OmniXtend: coherent scaleout over commodity fabrics</h4>
 		<p>
 		  OmniXtend is a protocol to transmit TileLink messages over
-		  Ethernet. The aim of the protocol is to create very large
-		  fully coherent heterogeneous systems. We present an
-		  Apache 2.0-licensed implementation of an OmniXtend 1.0.3 and
-		  1.1 memory endpoint in hardware. Available at
-		  https://github.com/westerndigitalcorporation/OmnixtendEndpoint
+		  Ethernet. The aim of the protocol is to enable the creation of
+		  very large, fully coherent heterogeneous systems using
+		  commodity fabrics with no IP restrictions. We present two
+		  hardware implementations of OmniXtend protocol endpoints, both
+		  licensed under Apache 2.0 and FPGA-proven. First, a
+		  disaggregated main memory endpoint, i.e. lowest point of
+		  coherence, compliant with OmniXtend 1.0.3 and 1.1, available
+		  at <a href="https://github.com/westerndigitalcorporation/OmnixtendEndpoint">https://github.com/westerndigitalcorporation/OmnixtendEndpoint</a>.
+		  Second, an OpenPiton-to-OmniXtend translation unit integrated
+		  into CVA6, available at <a href="https://github.com/lewiz-support/OmniXtend_RemoteAgent_RISC-V">https://github.com/lewiz-support/OmniXtend_RemoteAgent_RISC-V</a>. Together these provide a complete off-the-shelf solution to multi-socket RISC-V with disaggregated main memory, and a wonderful starting point for development of coherent accelerators or novel caching hierarchies.
 		</p>
 
 		<h6>Presenter: Dejan Vucinic</h6>
