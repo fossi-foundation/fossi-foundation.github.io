@@ -92,7 +92,7 @@ layout: default
 ||||
 | <a id="buildit"></a>If You Build It, Who Will Come? |To maximize an open-source hardware project's utility, it is worth understanding its user community and how they use it. In this talk, I will reflect on experiences on how things such as automation, documentation, and support can effect a project's use, and when to recognize the community is different than you expected, and it is time to pivot. These concerns are especially important when the project has limited development resources. | Scott Beamer | Saturday | 8:55 |
 ||||
-| <a id="another"></a>Yet Another UCSC Professor’s path through Open-Source Hardware | | Matt Guthaus              | Saturday | 9:20  |
+| <a id="another"></a>Yet Another UCSC Professor’s path through Open-Source Hardware | This talk discusses one Professor's pathway from a new user to full professor and what they learned about open source software and hardware along the way. A key takeaway is to embrace the community by working together, staying positive, and sharing the mentorship of potential new contributors. | Matt Guthaus              | Saturday | 9:20  |
 ||||
 | <a id="tapeout"></a>Tapeout-in-a-Semester: The Organization of Berkeley's Tapeout Course | Over the past ~5 years, UC Berkeley has taught a practical project-based course on the tapeout process to undergraduate students. This talk will discuss the structure of the Spring 2022 offering of the course, from the perspective of a course TA. | Jery Zhao | Saturday | 9:45 |
 ||||
