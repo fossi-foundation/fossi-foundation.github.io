@@ -14,7 +14,7 @@ of charge to the extent possible as a way to lower the barrier of entry.
 
 In addition to the events organized by FOSSI Foundation we also participate in
 other events. Whenever there is an event around open source silicon, there's
-a good chance someone from FOSSi Foundation will be there. And if we are there,
+a good chance someone from the FOSSi Foundation will be there. And if we are there,
 we are happy to talk to you.
 
 ## Upcoming events
