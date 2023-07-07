@@ -36,7 +36,19 @@ Throughout this project, I hope to gain a firmer understanding of TCL scripting 
 
 Mentored by Tim Edwards, Mohamed Shalan, and Cary R
 
-When you design a digital circuit, you want to make sure that all timings are correct, even post-layout. Therefore, the gate level netlist is annotated with delays extracted from the layout. The file format that contains these delay and timing information is called Standard Delay Format (SDF). Icarus Verilogs' SDF implementation has shortcomings in the following categories: 1. Wire / Interconnect delays 2. Conditional path delays 3. Timing checks Work needs to be done on these categories, all while supporting related bugs as we more completely test gate level simulations. With the work proposed here, I would like to improve Icarus' SDF support to simulate SDF back-annotated timing simulations for the open SKY130 PDK. The deliverables for this project are: 1. Implementing the SDF `INTERCONNECT` feature 2. Writing tests for the regression suite 3. Example of a SDF back-annotated timing simulation using the SKY130 PDK
+When you design a digital circuit, you want to make sure that all timings are correct, even post-layout. Therefore, the gate level netlist is annotated with delays extracted from the layout. The file format that contains these delay and timing information is called Standard Delay Format (SDF). Icarus Verilogs' SDF implementation has shortcomings in the following categories: 
+
+1. Wire / Interconnect delays
+2. Conditional path delays
+3. Timing checks
+
+Work needs to be done on these categories, all while supporting related bugs as we more completely test gate level simulations. With the work proposed here, I would like to improve Icarus' SDF support to simulate SDF back-annotated timing simulations for the open SKY130 PDK. The deliverables for this project are:
+
+1. Implementing the SDF `INTERCONNECT` feature
+2. Writing tests for the regression suite
+3. Example of a SDF back-annotated timing simulation using the SKY130 PDK
+
+Weekly posts can be found on his [blog](https://mole99.uber.space/).
 
 ### Enhancing OpenPiton+Ariane SoC With an Open-Source Advanced Interrupt Architecture (Kinza Qamar Zaman)
 
