@@ -30,7 +30,7 @@ The Makerchip platform has added custom visualization support for circuit simula
 
 Mentored by Tim Edwards and Stefan Wallentowitz
 
-Throughout this project, I hope to gain a firmer understanding of TCL scripting and the backend working of parameterized devices and hopefully make some new ones too these devices are used many times while using magic to makes our work easier. this project will help me in a deeper understanding of how each command in the command line works in magic and how we can make some changes in its scripts to make it to improve user inference. In terms of the project, the goal is to work in scripts to draw devices like LDNMOS, LDPMOS, bipolar transistors, photodiodes, Avalanche Diode, etc as well as fixing a few devices that are known to draw incorrectly for some parameter values.
+Throughout this project, I hope to gain a firmer understanding of TCL scripting and the backend working of parameterized devices and hopefully make some new ones too these devices are used many times while using magic to makes our work easier. This project will help me in a deeper understanding of how each command in the command line works in magic and how we can make some changes in its scripts to make it to improve user inference. In terms of the project, the goal is to work in scripts to draw devices like LDNMOS, LDPMOS, bipolar transistors, photodiodes, Avalanche Diode, etc as well as fixing a few devices that are known to draw incorrectly for some parameter values.
 
 ### Improving SDF support in Icarus Verilog (Leo Moser)
 
