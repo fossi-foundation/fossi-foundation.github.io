@@ -19,62 +19,59 @@ we are happy to talk to you.
 
 ## Upcoming events
 
-We hope to see you at some of our future events!
+We hope to see you at some of our future [events](https://fossi-foundation.org/events)!
+
+## Past events
+
+### ORConf 2023
+* September 15-17, 2023
+* Munich, Germany
+* [More information](https://orconf.org)
 
 ### Latch-Up Santa Barbara
 * March 31-April 2, 2023
 * Santa Barbara CA, USA
-* [More information](http://latchup.io)
+* [More information](https://www-archive.fossi-foundation.org/latchup/2023/)
 
-## Past events
-
-### FOSSi Dial-Up:  Tim Ansell - Fully open source manufacturable PDK for a 130nm process
-* June 30 2020
+### FOSSi Dial-Up:  Series of online talks about open source silicon and communities
+* 2020-2021
 * Online
-* [More information](https://fossi-foundation.org/dial-up/)
-
-### ORConf 2020
-* Fall 2020
-* tbd
-* [More information](https://orconf.org)
-* **Cancelled**
+* [More information](https://www-archive.fossi-foundation.org/dial-up/)
 
 ### LatchUp 2020
 * April 11-12 2020
 * Cambridge MA, USA
-* [More information](https://fossi-foundation.org/latchup/)
 * **Cancelled**
 
 ### FOSSistanbul
 * March 13-15 2020
 * Istanbul, Turkey
-* [More information](https://fossi-foundation.org/fossistanbul)
 * **Cancelled**
 
 ### ORConf 2019
 * September 27-29 2019
 * Bordeaux, France
-* [More information](https://orconf.org)
+* [More information](https://orconf.org/2019)
 
 ### FOSSi @ WOSH
 * June 13-14, 2019
 * Zürich, Switzerland
-* [More information](https://fossi-foundation.org/wosh)
+* [More information](https://www-archive.fossi-foundation.org/wosh)
 
 ### Latch-Up
 * May 4-5, 2019
 * Portland OR, USA
-* [More information](http://latchup.io)
+* [More information](https://www-archive.fossi-foundation.org/latchup/2023/)
 
 ### FOSSi Fiesta San Jose
 * October 14, 2018
 * San Jose CA, USA
-* [More information](https://fossi-foundation.org/fossi-fiesta-2018-10-14)
+* [More information](https://www-archive.fossi-foundation.org/fossi-fiesta-2018-10-14)
 
 ### ORConf 2018
 * September 21-23, 2018
 * Gdansk, Poland
-* [More information](https://orconf.org)
+* [More information](https://orconf.org/2018)
 
 ### ORConf 2017
 * September 8-10, 2017
@@ -84,7 +81,7 @@ We hope to see you at some of our future events!
 ### Open Source Silicon with RISC-V
 * March 23, 2017
 * Munich, Germany
-* [More information](https://fossi-foundation.org/riscv-munich)
+* [More information](https://www-archive.fossi-foundation.org/riscv-munich)
 
 ### ORConf 2016
 * October 7-9, 2016
